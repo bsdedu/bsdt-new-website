@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader } from "../ui-elements/Card";
 import { RevealSection } from "../ui-elements/RevealSection";
@@ -91,12 +92,9 @@ const diplomaPrograms: Program[] = [{
   color: "from-bsd-gray/15 to-bsd-gray/5",
   duration: "1 year"
 }];
-const commonFeatures = [{
-  icon: <Box className="w-6 h-6 text-bsd-orange" />,
-  title: "Innovation Lab Access",
-  description: "All programs include access to our state-of-the-art innovation labs equipped with the latest technologies for prototyping and experimentation.",
-  color: "from-bsd-orange/15 to-white"
-}];
+
+// Removed commonFeatures array that contained Innovation Lab Access
+
 export const ProgramsSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState("undergraduate");
   return <section id="programs" className="relative py-[20px] my-0">
@@ -186,24 +184,6 @@ export const ProgramsSection: React.FC = () => {
               </Carousel>
             </TabsContent>
           </Tabs>
-        </RevealSection>
-
-        <RevealSection delay={200}>
-          <div className="mt-8 max-w-2xl mx-auto">
-            <Card>
-              <CardContent className="pt-6">
-                {commonFeatures.map(feature => <div key={feature.title} className="flex items-start gap-4">
-                    <div className={cn("w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0", "bg-gradient-to-br", feature.color)}>
-                      {feature.icon}
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-bsd-gray">{feature.title}</h3>
-                      <p className="text-foreground/70 mt-2">{feature.description}</p>
-                    </div>
-                  </div>)}
-              </CardContent>
-            </Card>
-          </div>
         </RevealSection>
 
         <RevealSection delay={300}>

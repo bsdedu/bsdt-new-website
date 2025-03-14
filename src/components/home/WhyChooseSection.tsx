@@ -2,7 +2,7 @@
 import React from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
-import { GraduationCap, Handshake, Globe, Users, BookOpen } from "lucide-react";
+import { GraduationCap, Handshake, Globe, Users, BookOpen, Box } from "lucide-react";
 import { Card, CardHeader, CardContent } from "../ui-elements/Card";
 
 interface FeatureCardProps {
@@ -53,6 +53,11 @@ export const WhyChooseSection: React.FC = () => {
       icon: <Globe className="w-6 h-6 text-bsd-orange" />,
       title: "Global Exposure & Industry Tie-Ups",
       description: "Collaborations with top brands, study tours, and international guest lectures."
+    },
+    {
+      icon: <Box className="w-6 h-6 text-bsd-orange" />,
+      title: "Innovation Lab Access",
+      description: "All programs include access to our state-of-the-art innovation labs equipped with the latest technologies for prototyping and experimentation."
     }
   ];
 
