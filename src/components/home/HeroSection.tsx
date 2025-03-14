@@ -27,7 +27,7 @@ export const HeroSection: React.FC = () => {
   
   const imageDescriptions = [
     "Students celebrating at BSDT annual showcase event",
-    "Faculty mentoring students on design projects",
+    "International Mentors engaging with students on design projects",
     "Innovative learning at BSDT"
   ];
   
