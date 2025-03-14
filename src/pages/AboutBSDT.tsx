@@ -4,6 +4,33 @@ import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
 import { RevealSection } from '../components/ui-elements/RevealSection';
 import { motion } from "framer-motion";
+import { 
+  Book, 
+  Award, 
+  Lightbulb,
+  GraduationCap, 
+  Globe, 
+  Leaf, 
+  Users, 
+  PenTool, 
+  CheckCircle, 
+  BrainCircuit, 
+  Play,
+  BadgeCheck,
+  Building,
+  BookOpen,
+  Handshake
+} from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import { 
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious
+} from "@/components/ui/carousel";
+import { Card, CardContent, CardHeader } from '../components/ui-elements/Card';
 
 const AboutBSDT = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -24,7 +51,7 @@ const AboutBSDT = () => {
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-bold text-bsd-gray mb-6">About BSDT</h1>
               <p className="text-lg md:text-xl text-bsd-gray/80 mb-8">
-                Discover the story, mission, and vision that drives Bangalore School of Design & Technology
+                India's pioneer in Design and Technology education, bridging creativity and innovation
               </p>
             </div>
           </div>
@@ -32,11 +59,115 @@ const AboutBSDT = () => {
           <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
         </section>
 
+        {/* Introduction Section */}
+        <RevealSection>
+          <div className="container mx-auto px-6 md:px-8 py-12">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <Badge variant="bsdOrange" className="mb-4">About Us</Badge>
+                <h2 className="text-3xl font-bold text-bsd-gray mb-6">Bangalore School of Design & Technology</h2>
+                <p className="text-bsd-gray/80 mb-4">
+                  Bangalore School of Design & Technology (BSDT) is India's pioneer in Design and Tech education, bridging the gap between creativity and innovation. Our programs span Interior Design, Interior Architecture, Graphic Design, Brand Strategy, UI/UX, Design Thinking, Furniture Design, Digital Architecture, Product Design, and Media Studies.
+                </p>
+                <p className="text-bsd-gray/80 mb-4">
+                  BSDT has been a catalyst for student success across creative and technological industries. As an institution under BSD Educational Trust, BSDT is committed to fostering a new generation of designers and tech innovators who can shape the future through meaningful, responsible, and cutting-edge solutions.
+                </p>
+              </div>
+              <div className="relative">
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, delay: 0.2 }}
+                  className="rounded-lg overflow-hidden shadow-xl"
+                >
+                  <img 
+                    src="/lovable-uploads/9ff3e25b-a93f-40fb-87ff-cd765e063b61.png" 
+                    alt="BSDT Campus" 
+                    className="w-full h-auto rounded-lg"
+                  />
+                </motion.div>
+                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-bsd-orange rounded-full opacity-20 z-0"></div>
+              </div>
+            </div>
+          </div>
+        </RevealSection>
+
+        {/* Mission, Vision & Values Section */}
+        <RevealSection>
+          <div className="bg-gray-50 py-16">
+            <div className="container mx-auto px-6 md:px-8">
+              <div className="text-center mb-12">
+                <Badge variant="bsdOrange" className="mb-3">Our Foundation</Badge>
+                <h2 className="text-3xl font-bold text-bsd-gray">Mission, Vision & Core Values</h2>
+              </div>
+              
+              <div className="grid md:grid-cols-3 gap-8 mb-16">
+                {/* Mission Card */}
+                <Card isHoverable className="text-center h-full">
+                  <CardHeader>
+                    <div className="mx-auto w-16 h-16 bg-bsd-orange/10 rounded-full flex items-center justify-center mb-4">
+                      <BookOpen className="h-8 w-8 text-bsd-orange" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-bsd-gray">Our Mission</h3>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-bsd-gray/80">
+                      BSDT prepares aspiring designers and working professionals to be leaders in the field by providing an immersive education that integrates expert faculty, innovative methodologies, and strong industry partnerships.
+                    </p>
+                  </CardContent>
+                </Card>
+                
+                {/* Vision Card */}
+                <Card isHoverable className="text-center h-full">
+                  <CardHeader>
+                    <div className="mx-auto w-16 h-16 bg-bsd-orange/10 rounded-full flex items-center justify-center mb-4">
+                      <Lightbulb className="h-8 w-8 text-bsd-orange" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-bsd-gray">Our Vision</h3>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-bsd-gray/80">
+                      To be a global leader in Design and Tech education, shaping the future of industries through transformative curricula, strategic collaborations, and graduates who make a lasting impact.
+                    </p>
+                  </CardContent>
+                </Card>
+                
+                {/* Core Values Card */}
+                <Card isHoverable className="h-full">
+                  <CardHeader>
+                    <div className="mx-auto w-16 h-16 bg-bsd-orange/10 rounded-full flex items-center justify-center mb-4">
+                      <Award className="h-8 w-8 text-bsd-orange" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-bsd-gray text-center">Core Values</h3>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3">
+                      {[
+                        { icon: <BrainCircuit className="h-5 w-5" />, text: "Innovation & Technology" },
+                        { icon: <PenTool className="h-5 w-5" />, text: "Creativity & Collaboration" },
+                        { icon: <Leaf className="h-5 w-5" />, text: "Sustainability & Responsibility" },
+                        { icon: <Book className="h-5 w-5" />, text: "Experiential Learning" },
+                        { icon: <Globe className="h-5 w-5" />, text: "Global Perspective" }
+                      ].map((value, index) => (
+                        <li key={index} className="flex items-start space-x-3">
+                          <div className="text-bsd-orange mt-0.5">{value.icon}</div>
+                          <span className="text-bsd-gray/80">{value.text}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </RevealSection>
+
         {/* Our Story Section */}
         <RevealSection>
           <div className="container mx-auto px-6 md:px-8 py-16">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
+                <Badge variant="bsdOrange" className="mb-3">Our Journey</Badge>
                 <h2 className="text-3xl font-bold text-bsd-gray mb-6">Our Story</h2>
                 <p className="text-bsd-gray/80 mb-4">
                   Founded in 2018, Bangalore School of Design & Technology (BSDT) emerged from a vision to bridge the gap between traditional education and the rapidly evolving demands of the design and technology industries.
@@ -110,6 +241,228 @@ const AboutBSDT = () => {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </RevealSection>
+
+        {/* Academic & Industry Partnerships */}
+        <RevealSection>
+          <div className="container mx-auto px-6 md:px-8 py-16">
+            <div className="text-center mb-12">
+              <Badge variant="bsdOrange" className="mb-3">Collaborations</Badge>
+              <h2 className="text-3xl font-bold text-bsd-gray mb-4">Academic & Industry Partnerships</h2>
+              <p className="text-bsd-gray/80 max-w-3xl mx-auto">
+                At BSDT, we believe in the power of collaboration to shape the future of Design & Tech education. 
+                Our affiliations and partnerships ensure our students receive globally recognized credentials, 
+                cutting-edge knowledge, and real-world exposure.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-12 mb-16">
+              {/* Academic Affiliations */}
+              <div>
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-bsd-orange/20 flex items-center justify-center rounded-full mr-4">
+                    <Building className="h-6 w-6 text-bsd-orange" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-bsd-gray">Academic Affiliations</h3>
+                </div>
+                
+                <Card isHoverable className="mb-6">
+                  <CardContent className="pt-6">
+                    <div className="flex items-start">
+                      <div className="mr-4 flex-shrink-0">
+                        <img src="/lovable-uploads/8b983b3f-fd59-44d3-b5cc-152eeffe62cd.png" alt="BNU Logo" className="w-16 h-16 object-contain" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-bsd-gray mb-2">Bengaluru North University (BNU)</h4>
+                        <p className="text-bsd-gray/80">
+                          BSDT is affiliated with Bengaluru North University, ensuring our degree programs meet the highest academic standards. 
+                          This affiliation provides students with government-recognized qualifications.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+                
+                <Card isHoverable>
+                  <CardContent className="pt-6">
+                    <div className="flex items-start">
+                      <div className="mr-4 flex-shrink-0">
+                        <img src="/lovable-uploads/8b983b3f-fd59-44d3-b5cc-152eeffe62cd.png" alt="Mysore University Logo" className="w-16 h-16 object-contain" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-bsd-gray mb-2">Mysore University – via Cresta BSD</h4>
+                        <p className="text-bsd-gray/80">
+                          BSDT's specialized Bachelor of Design (B.Des) programs receive recognition from Mysore University 
+                          through our partnership with Cresta School of Management, Science & Arts.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+              
+              {/* Academic Partnerships */}
+              <div>
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-bsd-orange/20 flex items-center justify-center rounded-full mr-4">
+                    <Handshake className="h-6 w-6 text-bsd-orange" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-bsd-gray">Academic Partnerships</h3>
+                </div>
+                
+                <Card isHoverable className="mb-6">
+                  <CardContent className="pt-6">
+                    <div className="flex items-start">
+                      <div className="mr-4 flex-shrink-0">
+                        <img src="/lovable-uploads/8b983b3f-fd59-44d3-b5cc-152eeffe62cd.png" alt="Cresta BSD Logo" className="w-16 h-16 object-contain" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-bsd-gray mb-2">Cresta School of Management, Science & Arts</h4>
+                        <p className="text-bsd-gray/80">
+                          Our collaboration with Cresta BSD allows students to pursue specialized B.Des programs 
+                          recognized by Mysore University, integrating business acumen with design thinking.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+                
+                <Card isHoverable>
+                  <CardContent className="pt-6">
+                    <div className="flex items-start">
+                      <div className="mr-4 flex-shrink-0">
+                        <img src="/lovable-uploads/8b983b3f-fd59-44d3-b5cc-152eeffe62cd.png" alt="École Conte Logo" className="w-16 h-16 object-contain" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-bsd-gray mb-2">College De Paris – École Conte</h4>
+                        <p className="text-bsd-gray/80">
+                          Our international academic partnership with École Conte, part of College De Paris, 
+                          offers international faculty, student exchange programs, and exposure to global design trends.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+            
+            {/* Industry Partnerships */}
+            <div className="mb-16">
+              <div className="flex items-center justify-center mb-8">
+                <div className="w-12 h-12 bg-bsd-orange/20 flex items-center justify-center rounded-full mr-4">
+                  <Building className="h-6 w-6 text-bsd-orange" />
+                </div>
+                <h3 className="text-2xl font-semibold text-bsd-gray">Industry Partnerships</h3>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <Card isHoverable>
+                  <CardContent className="pt-6">
+                    <div className="flex items-start">
+                      <div className="mr-4 flex-shrink-0">
+                        <img src="/lovable-uploads/8b983b3f-fd59-44d3-b5cc-152eeffe62cd.png" alt="IIID Logo" className="w-16 h-16 object-contain" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-bsd-gray mb-2">Indian Institute of Interior Designers (IIID)</h4>
+                        <p className="text-bsd-gray/80">
+                          BSDT is a proud partner of IIID, India's leading professional body for interior designers, 
+                          providing students with access to industry experts and networking opportunities.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+                
+                <Card isHoverable>
+                  <CardContent className="pt-6">
+                    <div className="flex items-start">
+                      <div className="mr-4 flex-shrink-0">
+                        <img src="/lovable-uploads/8b983b3f-fd59-44d3-b5cc-152eeffe62cd.png" alt="ADI Logo" className="w-16 h-16 object-contain" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-bsd-gray mb-2">Association of Designers of India (ADI)</h4>
+                        <p className="text-bsd-gray/80">
+                          As a recognized member of ADI, BSDT aligns its curriculum with emerging industry trends 
+                          and professional standards, providing mentorship and industry-driven projects.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+            
+            {/* Why Our Partnerships Matter */}
+            <div>
+              <h3 className="text-2xl font-semibold text-bsd-gray mb-6 text-center">Why Our Partnerships Matter</h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {[
+                  { 
+                    icon: <GraduationCap className="h-6 w-6" />, 
+                    title: "Recognized Degrees", 
+                    description: "Accredited by Bengaluru North University and Mysore University" 
+                  },
+                  { 
+                    icon: <Globe className="h-6 w-6" />, 
+                    title: "Global Exposure", 
+                    description: "Access to international faculty, exchange programs, and networking events" 
+                  },
+                  { 
+                    icon: <Handshake className="h-6 w-6" />, 
+                    title: "Industry Integration", 
+                    description: "Direct engagement with professional associations and mentorship from experts" 
+                  },
+                  { 
+                    icon: <Award className="h-6 w-6" />, 
+                    title: "Career Advancement", 
+                    description: "Internship and placement opportunities with leading design firms" 
+                  }
+                ].map((item, index) => (
+                  <Card key={index} isHoverable className="text-center">
+                    <CardContent className="pt-6">
+                      <div className="mx-auto w-12 h-12 bg-bsd-orange/10 rounded-full flex items-center justify-center mb-4">
+                        <div className="text-bsd-orange">{item.icon}</div>
+                      </div>
+                      <h4 className="text-lg font-semibold text-bsd-gray mb-2">{item.title}</h4>
+                      <p className="text-bsd-gray/80 text-sm">{item.description}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+            
+            {/* Logo Carousel */}
+            <div className="mt-16">
+              <h3 className="text-2xl font-semibold text-bsd-gray mb-8 text-center">Our Esteemed Partners</h3>
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                className="w-full max-w-5xl mx-auto"
+              >
+                <CarouselContent>
+                  {Array.from({ length: 6 }).map((_, index) => (
+                    <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/4">
+                      <div className="p-1">
+                        <Card className="border-0 shadow-none">
+                          <CardContent className="flex items-center justify-center p-6">
+                            <img 
+                              src={`/lovable-uploads/8b983b3f-fd59-44d3-b5cc-152eeffe62cd.png`} 
+                              alt={`Partner logo ${index + 1}`} 
+                              className="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                            />
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
             </div>
           </div>
         </RevealSection>
