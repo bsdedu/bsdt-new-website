@@ -11,6 +11,7 @@ import { ContactSection } from '../components/home/ContactSection';
 import { EnquiryFormSection } from '../components/home/EnquiryFormSection';
 import { TestimonialsSection } from '../components/home/TestimonialsSection';
 import { UpcomingEventsSection } from '../components/home/UpcomingEventsSection';
+import { CollaborationsSection } from '../components/home/CollaborationsSection';
 
 const Index = () => {
   useEffect(() => {
@@ -46,6 +47,7 @@ const Index = () => {
         <UpcomingEventsSection />
         <WhyChooseSection />
         <TestimonialsSection />
+        <CollaborationsSection />
         <EnquiryFormSection />
         <AboutSection />
         <GallerySection />
