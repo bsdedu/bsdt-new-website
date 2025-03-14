@@ -18,7 +18,7 @@ export const Card: React.FC<CardProps> = ({
       className={cn(
         "rounded-2xl overflow-hidden bg-white shadow-sm border border-border/40",
         "transition-all duration-300 ease-out",
-        isHoverable && "hover:shadow-md hover:-translate-y-1",
+        isHoverable && "hover:shadow-md hover:-translate-y-1 hover:border-bsd-orange/20",
         className
       )}
     >

@@ -4,17 +4,18 @@ import { RevealSection } from "../ui-elements/RevealSection";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Badge } from "@/components/ui/badge";
 
 export const ContactSection: React.FC = () => {
   return (
-    <section id="contact" className="py-24 bg-muted/50 relative">
+    <section id="contact" className="py-24 bg-bsd-light-gray relative">
       <div className="container mx-auto px-6 md:px-8">
         <RevealSection>
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="chip bg-black/5 border border-black/10 text-foreground/70 mb-4">
+            <Badge variant="bsdOrange" className="mb-4">
               Get in Touch
-            </span>
-            <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight">
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight text-bsd-gray">
               Contact Us
             </h2>
             <p className="mt-4 text-foreground/70">
@@ -27,11 +28,11 @@ export const ContactSection: React.FC = () => {
           {/* Contact Form */}
           <RevealSection direction="right">
             <div className="bg-white rounded-2xl shadow-sm border border-border/40 p-8">
-              <h3 className="text-xl font-semibold mb-6">Send Us a Message</h3>
+              <h3 className="text-xl font-semibold mb-6 text-bsd-gray">Send Us a Message</h3>
               <form className="space-y-5">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium text-foreground/70">
+                    <label htmlFor="name" className="text-sm font-medium text-bsd-gray/80">
                       Full Name
                     </label>
                     <input
@@ -39,14 +40,14 @@ export const ContactSection: React.FC = () => {
                       id="name"
                       placeholder="Your name"
                       className={cn(
-                        "w-full px-4 py-3 rounded-lg bg-muted/30 border border-border/30",
-                        "focus:outline-none focus:ring-2 focus:ring-foreground/10 focus:border-transparent",
+                        "w-full px-4 py-3 rounded-lg bg-bsd-light-gray border border-border/30",
+                        "focus:outline-none focus:ring-2 focus:ring-bsd-orange/20 focus:border-transparent",
                         "transition-all duration-200"
                       )}
                     />
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium text-foreground/70">
+                    <label htmlFor="email" className="text-sm font-medium text-bsd-gray/80">
                       Email Address
                     </label>
                     <input
@@ -54,8 +55,8 @@ export const ContactSection: React.FC = () => {
                       id="email"
                       placeholder="Your email"
                       className={cn(
-                        "w-full px-4 py-3 rounded-lg bg-muted/30 border border-border/30",
-                        "focus:outline-none focus:ring-2 focus:ring-foreground/10 focus:border-transparent",
+                        "w-full px-4 py-3 rounded-lg bg-bsd-light-gray border border-border/30",
+                        "focus:outline-none focus:ring-2 focus:ring-bsd-orange/20 focus:border-transparent",
                         "transition-all duration-200"
                       )}
                     />
@@ -63,7 +64,7 @@ export const ContactSection: React.FC = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="subject" className="text-sm font-medium text-foreground/70">
+                  <label htmlFor="subject" className="text-sm font-medium text-bsd-gray/80">
                     Subject
                   </label>
                   <input
@@ -71,15 +72,15 @@ export const ContactSection: React.FC = () => {
                     id="subject"
                     placeholder="How can we help you?"
                     className={cn(
-                      "w-full px-4 py-3 rounded-lg bg-muted/30 border border-border/30",
-                      "focus:outline-none focus:ring-2 focus:ring-foreground/10 focus:border-transparent",
+                      "w-full px-4 py-3 rounded-lg bg-bsd-light-gray border border-border/30",
+                      "focus:outline-none focus:ring-2 focus:ring-bsd-orange/20 focus:border-transparent",
                       "transition-all duration-200"
                     )}
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium text-foreground/70">
+                  <label htmlFor="message" className="text-sm font-medium text-bsd-gray/80">
                     Message
                   </label>
                   <textarea
@@ -87,8 +88,8 @@ export const ContactSection: React.FC = () => {
                     rows={5}
                     placeholder="Your message"
                     className={cn(
-                      "w-full px-4 py-3 rounded-lg bg-muted/30 border border-border/30",
-                      "focus:outline-none focus:ring-2 focus:ring-foreground/10 focus:border-transparent",
+                      "w-full px-4 py-3 rounded-lg bg-bsd-light-gray border border-border/30",
+                      "focus:outline-none focus:ring-2 focus:ring-bsd-orange/20 focus:border-transparent",
                       "transition-all duration-200 resize-none"
                     )}
                   ></textarea>
@@ -107,27 +108,27 @@ export const ContactSection: React.FC = () => {
           <RevealSection direction="left">
             <div className="space-y-8">
               <div className="bg-white rounded-2xl shadow-sm border border-border/40 p-8">
-                <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
+                <h3 className="text-xl font-semibold mb-6 text-bsd-gray">Contact Information</h3>
                 <div className="space-y-6">
                   <ContactInfoItem
-                    icon={<MapPin className="w-5 h-5" />}
+                    icon={<MapPin className="w-5 h-5 text-bsd-orange" />}
                     title="Address"
                     content="123 Design Street, Tech City, 123456, India"
                   />
                   <ContactInfoItem
-                    icon={<Phone className="w-5 h-5" />}
+                    icon={<Phone className="w-5 h-5 text-bsd-orange" />}
                     title="Phone"
                     content="+91 98765 43210"
                     link="tel:+919876543210"
                   />
                   <ContactInfoItem
-                    icon={<Mail className="w-5 h-5" />}
+                    icon={<Mail className="w-5 h-5 text-bsd-orange" />}
                     title="Email"
                     content="info@bsd.edu.in"
                     link="mailto:info@bsd.edu.in"
                   />
                   <ContactInfoItem
-                    icon={<Clock className="w-5 h-5" />}
+                    icon={<Clock className="w-5 h-5 text-bsd-orange" />}
                     title="Office Hours"
                     content="Monday - Friday: 9AM - 5PM"
                   />
@@ -135,16 +136,16 @@ export const ContactSection: React.FC = () => {
               </div>
 
               <div className="bg-white rounded-2xl shadow-sm border border-border/40 p-8">
-                <h3 className="text-xl font-semibold mb-6">Campus Map</h3>
-                <div className="aspect-video bg-muted/30 rounded-lg flex items-center justify-center">
-                  <p className="text-sm text-foreground/60">
+                <h3 className="text-xl font-semibold mb-6 text-bsd-gray">Campus Map</h3>
+                <div className="aspect-video bg-bsd-light-gray rounded-lg flex items-center justify-center">
+                  <p className="text-sm text-bsd-gray/60">
                     Map Placeholder
                   </p>
                 </div>
                 <div className="mt-6">
                   <a
                     href="#"
-                    className="text-sm font-medium inline-flex items-center"
+                    className="text-sm font-medium inline-flex items-center text-bsd-orange hover:text-bsd-orange/80 transition-colors"
                   >
                     <span className="border-b border-current transition-all duration-300 hover:pb-1">
                       View Directions
@@ -173,16 +174,16 @@ const ContactInfoItem: React.FC<ContactInfoItemProps> = ({ icon, title, content,
 
   return (
     <div className="flex items-start space-x-4">
-      <div className="w-10 h-10 rounded-full bg-muted/50 flex items-center justify-center flex-shrink-0">
+      <div className="w-10 h-10 rounded-full bg-bsd-light-gray flex items-center justify-center flex-shrink-0">
         {icon}
       </div>
       <div>
-        <h4 className="text-sm font-medium text-foreground/70">{title}</h4>
+        <h4 className="text-sm font-medium text-bsd-gray/70">{title}</h4>
         <ContentComponent
           {...linkProps}
           className={cn(
             "text-foreground mt-1",
-            link && "hover:text-foreground/70 transition-colors"
+            link && "hover:text-bsd-orange transition-colors"
           )}
         >
           {content}

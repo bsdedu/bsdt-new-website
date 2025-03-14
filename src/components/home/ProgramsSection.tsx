@@ -4,37 +4,38 @@ import { Card, CardContent, CardHeader } from "../ui-elements/Card";
 import { RevealSection } from "../ui-elements/RevealSection";
 import { Palette, Code, Cpu, PenTool, Building2 } from "lucide-react";
 import { cn } from '@/lib/utils';
+import { Badge } from '@/components/ui/badge';
 
 const programs = [
   { 
-    icon: <Palette className="w-6 h-6" />,
+    icon: <Palette className="w-6 h-6 text-bsd-orange" />,
     title: "Graphic Design",
     description: "Learn to create compelling visual messages through typography, imagery, color and form.",
-    color: "from-blue-50 to-indigo-50"
+    color: "from-bsd-orange/10 to-bsd-orange/5"
   },
   { 
-    icon: <Code className="w-6 h-6" />,
+    icon: <Code className="w-6 h-6 text-bsd-orange" />,
     title: "Web Development",
     description: "Master the art and technology of creating intuitive and responsive web experiences.",
-    color: "from-green-50 to-emerald-50"
+    color: "from-bsd-gray/10 to-bsd-gray/5"
   },
   { 
-    icon: <Cpu className="w-6 h-6" />,
+    icon: <Cpu className="w-6 h-6 text-bsd-orange" />,
     title: "Technology",
     description: "Explore emerging technologies that are reshaping industries and human experiences.",
-    color: "from-purple-50 to-violet-50"
+    color: "from-bsd-orange/10 to-bsd-gray/5"
   },
   { 
-    icon: <PenTool className="w-6 h-6" />,
+    icon: <PenTool className="w-6 h-6 text-bsd-orange" />,
     title: "UI/UX Design",
     description: "Design digital experiences that are intuitive, accessible and delightful for users.",
-    color: "from-orange-50 to-amber-50"
+    color: "from-bsd-gray/10 to-bsd-orange/5"
   },
   { 
-    icon: <Building2 className="w-6 h-6" />,
+    icon: <Building2 className="w-6 h-6 text-bsd-orange" />,
     title: "Architecture",
     description: "Learn to shape physical spaces that blend form, function and environmental sustainability.",
-    color: "from-teal-50 to-cyan-50"
+    color: "from-bsd-light-gray to-white"
   },
 ];
 
@@ -44,10 +45,10 @@ export const ProgramsSection: React.FC = () => {
       <div className="container mx-auto px-6 md:px-8">
         <RevealSection>
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="chip bg-black/5 border border-black/10 text-foreground/70 mb-4">
+            <Badge variant="bsdOrange" className="mb-4">
               Educational Programs
-            </span>
-            <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight">
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight text-bsd-gray">
               Cutting-edge Programs for Future Creators
             </h2>
             <p className="mt-4 text-foreground/70">
@@ -68,7 +69,7 @@ export const ProgramsSection: React.FC = () => {
                   )}>
                     {program.icon}
                   </div>
-                  <h3 className="text-xl font-semibold">{program.title}</h3>
+                  <h3 className="text-xl font-semibold text-bsd-gray">{program.title}</h3>
                 </CardHeader>
                 <CardContent>
                   <p className="text-foreground/70">{program.description}</p>
@@ -82,7 +83,7 @@ export const ProgramsSection: React.FC = () => {
           <div className="mt-16 text-center">
             <a 
               href="#" 
-              className="inline-flex items-center text-sm font-medium"
+              className="inline-flex items-center text-sm font-medium text-bsd-orange hover:text-bsd-orange/80 transition-colors"
             >
               <span className="border-b border-current transition-all duration-300 hover:pb-1">
                 View All Programs

@@ -66,7 +66,11 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom theme colors
+				'bsd-orange': '#F28500',
+				'bsd-gray': '#36554F',
+				'bsd-light-gray': '#F1F1F1',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

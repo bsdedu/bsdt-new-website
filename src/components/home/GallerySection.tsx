@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { cn } from "@/lib/utils";
+import { Badge } from "@/components/ui/badge";
 
 // Placeholder for gallery images
 const galleryItems = [
@@ -27,10 +28,10 @@ export const GallerySection: React.FC = () => {
       <div className="container mx-auto px-6 md:px-8">
         <RevealSection>
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="chip bg-black/5 border border-black/10 text-foreground/70 mb-4">
+            <Badge variant="bsdOrange" className="mb-4">
               Gallery
-            </span>
-            <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight">
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight text-bsd-gray">
               Showcasing Our Creative Environment
             </h2>
             <p className="mt-4 text-foreground/70">
@@ -48,8 +49,8 @@ export const GallerySection: React.FC = () => {
                 className={cn(
                   "px-4 py-2 rounded-full text-sm transition-all duration-300",
                   activeCategory === category
-                    ? "bg-foreground text-background shadow-sm"
-                    : "bg-background hover:bg-muted/50 text-foreground/70 hover:text-foreground"
+                    ? "bg-bsd-orange text-white shadow-sm"
+                    : "bg-bsd-light-gray hover:bg-bsd-orange/20 text-bsd-gray hover:text-bsd-gray"
                 )}
               >
                 {category}
@@ -62,16 +63,16 @@ export const GallerySection: React.FC = () => {
           {filteredItems.map((item, index) => (
             <RevealSection key={index} delay={index * 80}>
               <div className="group relative aspect-square overflow-hidden rounded-2xl shadow-sm border border-border/50">
-                <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-white transition-transform duration-500 group-hover:scale-105"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-bsd-light-gray to-white transition-transform duration-500 group-hover:scale-105"></div>
                 
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center p-6">
-                    <p className="text-sm text-foreground/60 mb-2">{item.placeholder}</p>
-                    <div className="w-12 h-0.5 bg-foreground/10 mx-auto"></div>
+                    <p className="text-sm text-bsd-gray/80 mb-2">{item.placeholder}</p>
+                    <div className="w-12 h-0.5 bg-bsd-orange/30 mx-auto"></div>
                   </div>
                 </div>
                 
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/50 to-transparent opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-bsd-gray/80 to-transparent opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
                   <p className="text-white text-sm">{item.category}</p>
                 </div>
               </div>
@@ -83,7 +84,7 @@ export const GallerySection: React.FC = () => {
           <div className="mt-16 text-center">
             <a 
               href="#" 
-              className="inline-flex items-center text-sm font-medium"
+              className="inline-flex items-center text-sm font-medium text-bsd-orange hover:text-bsd-orange/80 transition-colors"
             >
               <span className="border-b border-current transition-all duration-300 hover:pb-1">
                 View Full Gallery

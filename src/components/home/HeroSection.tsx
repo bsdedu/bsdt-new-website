@@ -1,8 +1,11 @@
+
 import React, { useEffect, useState } from 'react';
 import { cn } from "@/lib/utils";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
 import { ArrowDown } from "lucide-react";
 import { RevealSection } from "../ui-elements/RevealSection";
+import { Badge } from "@/components/ui/badge";
+
 export const HeroSection: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
@@ -20,12 +23,12 @@ export const HeroSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           <div className="space-y-6 max-w-2xl">
             <div className={cn("transition-all duration-700 transform", isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10")}>
-              <div className="inline-block mb-4">
-                <span className="chip bg-black/5 border border-black/10 text-foreground/70">Admissions Open for 2025-26</span>
-              </div>
+              <Badge variant="bsdOrange" className="mb-4">
+                Admissions Open for 2025-26
+              </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight leading-tight">
                 <span className="text-gradient block">Design Your Future</span>
-                <span className="block mt-2">Innovate with Technology</span>
+                <span className="block mt-2 text-bsd-orange">Innovate with Technology</span>
               </h1>
               <p className="mt-6 text-lg text-foreground/70 max-w-xl">
                 Join a community of designers, innovators, and technologists who are shaping the future through creativity and technical excellence.
@@ -42,10 +45,10 @@ export const HeroSection: React.FC = () => {
             </div>
 
             <div className={cn("pt-12 transition-all duration-700 delay-500", isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10")}>
-              <p className="text-sm text-foreground/50 mb-2">Recognized By</p>
+              <p className="text-sm text-bsd-gray mb-2">Recognized By</p>
               <div className="flex flex-wrap items-center gap-8">
-                {[1, 2, 3, 4].map(i => <div key={i} className="h-8 w-20 bg-foreground/5 rounded-md flex items-center justify-center">
-                    <span className="text-xs text-foreground/40">Partner {i}</span>
+                {[1, 2, 3, 4].map(i => <div key={i} className="h-8 w-20 bg-bsd-light-gray rounded-md flex items-center justify-center">
+                    <span className="text-xs text-bsd-gray/60">Partner {i}</span>
                   </div>)}
               </div>
             </div>
@@ -56,10 +59,10 @@ export const HeroSection: React.FC = () => {
               <img src="/lovable-uploads/e48b8c13-052e-4d80-ada8-db3eaf003d21.png" alt="Students collaborating at BSD Design & Tech College" className="absolute inset-0 w-full h-full object-cover" />
               
               {/* Image overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-black/20 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-bsd-gray/30 to-transparent"></div>
               
               {/* Caption overlay */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/60 to-transparent text-white">
+              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-bsd-gray/60 to-transparent text-white">
                 <p className="text-sm font-medium">Collaborative learning at BSD Design & Tech College</p>
               </div>
             </div>
@@ -75,13 +78,13 @@ export const HeroSection: React.FC = () => {
             </RevealSection>
             
             {/* Decorative elements */}
-            <div className="absolute -top-6 -right-6 w-20 h-20 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full blur-xl"></div>
-            <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-gradient-to-r from-yellow-100 to-pink-100 rounded-full blur-xl"></div>
+            <div className="absolute -top-6 -right-6 w-20 h-20 bg-bsd-orange/10 rounded-full blur-xl"></div>
+            <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-bsd-gray/10 rounded-full blur-xl"></div>
           </div>
         </div>
 
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-          <a href="#programs" className="flex flex-col items-center justify-center text-foreground/50 hover:text-foreground transition-colors">
+          <a href="#programs" className="flex flex-col items-center justify-center text-bsd-gray/60 hover:text-bsd-orange transition-colors">
             <span className="text-sm mb-2">Scroll Down</span>
             <ArrowDown className="w-4 h-4 animate-bounce" />
           </a>

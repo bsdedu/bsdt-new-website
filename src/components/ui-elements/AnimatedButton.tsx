@@ -16,7 +16,7 @@ const AnimatedButton = React.forwardRef<HTMLButtonElement, AnimatedButtonProps>(
         ref={ref}
         className={cn(
           "relative overflow-hidden group transition-all duration-300 ease-out",
-          "before:absolute before:inset-0 before:-z-10 before:translate-y-full before:bg-foreground/5 before:transition-transform before:duration-300",
+          "before:absolute before:inset-0 before:-z-10 before:translate-y-full before:bg-bsd-gray before:transition-transform before:duration-300",
           "hover:before:translate-y-0",
           className
         )}
