@@ -78,13 +78,6 @@ export const HeroSection: React.FC = () => {
                     className="h-12 object-contain"
                   />
                 </div>
-                <div className="h-16 flex items-center justify-center">
-                  <img 
-                    src="/lovable-uploads/4f3de368-ac90-4b0b-b38f-45580d4df068.png" 
-                    alt="École Bleue Global Design Logo" 
-                    className="h-16 object-contain"
-                  />
-                </div>
               </div>
             </div>
           </div>
