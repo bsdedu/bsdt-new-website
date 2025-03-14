@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { cn } from "@/lib/utils";
@@ -14,55 +13,17 @@ import { Card } from "../ui-elements/Card";
 import { Play } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-// Gallery items with both images and videos
-const galleryItems = [
-  { 
-    type: "image",
-    category: "Sports Events", 
-    image: "/lovable-uploads/fb6e3221-85ce-4641-97b4-0be26d1e5f1b.png",
-    caption: "Football team celebration with faculty members"
-  },
-  { 
-    type: "video",
-    category: "Campus Tour", 
-    videoId: "dQw4w9WgXcQ", // Example YouTube video ID
-    thumbnail: "/lovable-uploads/c72be9c4-87fc-415a-a4fb-8e3db30e45cf.png",
-    caption: "Virtual tour of our campus facilities"
-  },
-  { 
-    type: "image",
-    category: "Campus Life", 
-    image: "/lovable-uploads/17f4f011-541d-4476-bbb2-0a9bbc508f0a.png",
-    caption: "Students enjoying campus activities"
-  },
-  { 
-    type: "video",
-    category: "Student Interviews", 
-    videoId: "jNQXAC9IVRw", // Example YouTube video ID
-    thumbnail: "/lovable-uploads/9fcd3f44-3088-4f3c-a35c-176f9392e127.png",
-    caption: "Student testimonials and experiences"
-  },
-  { 
-    type: "image",
-    category: "Student Work", 
-    image: "/lovable-uploads/3baec177-d6ff-4f52-8cb8-1d0ba1fcdaa7.png",
-    caption: "Design exhibition walkthrough"
-  },
-  { 
-    type: "image",
-    category: "Events", 
-    image: "/lovable-uploads/6e8f285e-a6c2-4dba-9059-ca5b191bd897.png",
-    caption: "Live music performance at campus event"
-  },
-  { 
-    type: "image",
-    category: "Sports Events", 
-    image: "/lovable-uploads/fb4bedc7-ed6b-470b-82fe-e714ed5d7d6a.png",
-    caption: "Team huddle during sports day"
-  }
-];
+// Empty gallery items array
+const galleryItems: {
+  type: "image" | "video";
+  category: string;
+  image?: string;
+  videoId?: string;
+  thumbnail?: string;
+  caption: string;
+}[] = [];
 
-// Updated categories including new video categories
+// Keep the categories for tab structure
 const categories = ["All", "Sports Events", "Campus Life", "Student Work", "Events", "Campus Tour", "Student Interviews"];
 
 export const GallerySection: React.FC = () => {
@@ -73,11 +34,6 @@ export const GallerySection: React.FC = () => {
   const filteredItems = activeCategory === "All" 
     ? galleryItems 
     : galleryItems.filter(item => item.category === activeCategory);
-
-  // For mobile view, show a carousel
-  const isMobileView = () => {
-    return window.innerWidth < 768;
-  };
 
   const handleVideoClick = (videoId: string) => {
     setSelectedVideo(videoId);
@@ -119,10 +75,17 @@ export const GallerySection: React.FC = () => {
             </TabsList>
             
             <TabsContent value={activeCategory} className="mt-0">
-              {/* Mobile View: Carousel */}
+              {/* Mobile View: Carousel - Keep structure but no items */}
               <div className="md:hidden">
                 <Carousel className="w-full">
                   <CarouselContent>
+                    {filteredItems.length === 0 && (
+                      <CarouselItem>
+                        <div className="flex items-center justify-center p-8 border border-dashed border-gray-300 rounded-lg h-64">
+                          <p className="text-gray-500">No content available. Please upload new images.</p>
+                        </div>
+                      </CarouselItem>
+                    )}
                     {filteredItems.map((item, index) => (
                       <CarouselItem key={index}>
                         <RevealSection delay={index * 80}>
@@ -168,8 +131,13 @@ export const GallerySection: React.FC = () => {
                 </Carousel>
               </div>
 
-              {/* Desktop View: Grid */}
+              {/* Desktop View: Grid - Keep structure but no items */}
               <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filteredItems.length === 0 && (
+                  <div className="col-span-full flex items-center justify-center p-16 border border-dashed border-gray-300 rounded-lg">
+                    <p className="text-gray-500">No content available. Please upload new images and videos for this section.</p>
+                  </div>
+                )}
                 {filteredItems.map((item, index) => (
                   <RevealSection key={index} delay={index * 80}>
                     <div 
