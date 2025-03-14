@@ -528,8 +528,8 @@ const ProgramInteriorDesign = () => {
                         <Check className="w-4 h-4 text-bsd-orange" />
                       </div>
                       <div className="ml-3">
-                        <h4 className="font-medium text-bsd-gray">Entrance Test</h4>
-                        <p className="text-sm text-foreground/70">BSDT Design Aptitude Test (DAT) focusing on creative thinking, spatial ability, and analytical skills</p>
+                        <h4 className="font-medium text-bsd-gray">Selection Process</h4>
+                        <p className="text-sm text-foreground/70">Direct admission based on academic performance and personal interview</p>
                       </div>
                     </li>
                     
@@ -538,8 +538,8 @@ const ProgramInteriorDesign = () => {
                         <Check className="w-4 h-4 text-bsd-orange" />
                       </div>
                       <div className="ml-3">
-                        <h4 className="font-medium text-bsd-gray">Portfolio (Optional)</h4>
-                        <p className="text-sm text-foreground/70">A portfolio of creative work is recommended but not mandatory</p>
+                        <h4 className="font-medium text-bsd-gray">Portfolio (Recommended)</h4>
+                        <p className="text-sm text-foreground/70">A portfolio of creative work is recommended to showcase your design aptitude and potential</p>
                       </div>
                     </li>
                   </ul>
@@ -572,8 +572,8 @@ const ProgramInteriorDesign = () => {
                       <li className="flex">
                         <div className="w-8 h-8 rounded-full bg-bsd-orange flex items-center justify-center text-white font-medium flex-shrink-0">3</div>
                         <div className="ml-3">
-                          <h4 className="font-medium text-bsd-gray">Entrance Test</h4>
-                          <p className="text-sm text-foreground/70">Register for and appear in the BSDT Design Aptitude Test (DAT)</p>
+                          <h4 className="font-medium text-bsd-gray">Document Submission</h4>
+                          <p className="text-sm text-foreground/70">Submit required academic documents and portfolio (if available)</p>
                         </div>
                       </li>
                       
@@ -581,7 +581,7 @@ const ProgramInteriorDesign = () => {
                         <div className="w-8 h-8 rounded-full bg-bsd-orange flex items-center justify-center text-white font-medium flex-shrink-0">4</div>
                         <div className="ml-3">
                           <h4 className="font-medium text-bsd-gray">Personal Interview</h4>
-                          <p className="text-sm text-foreground/70">Shortlisted candidates will be called for a personal interview</p>
+                          <p className="text-sm text-foreground/70">Appear for a personal interview to discuss your background, interests, and portfolio</p>
                         </div>
                       </li>
                       
@@ -669,9 +669,9 @@ const ProgramInteriorDesign = () => {
                 </AccordionItem>
                 
                 <AccordionItem value="item-6">
-                  <AccordionTrigger>What placement support does BSDT provide?</AccordionTrigger>
+                  <AccordionTrigger>Is there an entrance exam for admission?</AccordionTrigger>
                   <AccordionContent>
-                    BSDT has a dedicated Placement Cell that assists students with internships and job placements. We organize regular campus recruitment drives, portfolio reviews, and industry networking events. Our placement rate for the Interior Design program has consistently been above 95% over the past five years.
+                    No, there is no entrance exam. Our admission process is based on a review of your past academic performance and a personal interview. If you have a portfolio of creative work, we encourage you to present it during the interview as it helps us better understand your aptitude and potential.
                   </AccordionContent>
                 </AccordionItem>
                 
