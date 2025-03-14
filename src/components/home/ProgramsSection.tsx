@@ -99,7 +99,7 @@ const commonFeatures = [{
 }];
 export const ProgramsSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState("undergraduate");
-  return <section id="programs" className="relative py-12">
+  return <section id="programs" className="relative py-[20px] my-0">
       <div className="container mx-auto px-6 md:px-8">
         <RevealSection>
           <div className="text-center max-w-2xl mx-auto mb-10">
