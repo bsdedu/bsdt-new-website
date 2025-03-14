@@ -4,11 +4,16 @@ import { cn } from "@/lib/utils";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
 import { ArrowDown } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { 
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext
+} from "@/components/ui/carousel";
 
 export const HeroSection: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [activeImageIndex, setActiveImageIndex] = useState(0);
   
   // Images for the student showcase carousel
   const studentImages = [
@@ -25,14 +30,7 @@ export const HeroSection: React.FC = () => {
   
   useEffect(() => {
     setIsLoaded(true);
-    
-    // Auto-rotate images
-    const interval = setInterval(() => {
-      setActiveImageIndex(prev => (prev + 1) % studentImages.length);
-    }, 5000);
-    
-    return () => clearInterval(interval);
-  }, [studentImages.length]);
+  }, []);
   
   return <section className="relative min-h-screen flex items-center overflow-hidden pt-24 pb-16">
       {/* Background Elements with Images */}
@@ -105,49 +103,32 @@ export const HeroSection: React.FC = () => {
           </div>
 
           <div className={cn("relative transition-all duration-1000 delay-300", isLoaded ? "opacity-100 scale-100" : "opacity-0 scale-95")}>
-            {/* Image Carousel */}
+            {/* Using Carousel component for better image display */}
             <div className="relative overflow-hidden rounded-2xl shadow-xl">
-              <div className="relative w-full">
-                {studentImages.map((image, index) => (
-                  <div 
-                    key={index}
-                    className={cn(
-                      "absolute inset-0 w-full transition-opacity duration-1000",
-                      index === activeImageIndex ? "opacity-100 z-10" : "opacity-0 z-0"
-                    )}
-                  >
-                    <AspectRatio ratio={4/3} className="w-full">
-                      <img 
-                        src={image} 
-                        alt={imageDescriptions[index]}
-                        className="absolute inset-0 w-full h-full object-cover"
-                      />
-                    </AspectRatio>
-                    
-                    {/* Caption overlay */}
-                    <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 bg-gradient-to-t from-bsd-gray/70 to-transparent text-white">
-                      <p className="text-lg md:text-xl font-medium drop-shadow-md">{imageDescriptions[index]}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              
-              {/* Image navigation dots */}
-              <div className="absolute bottom-20 left-0 right-0 z-20 flex justify-center gap-2">
-                {studentImages.map((_, index) => (
-                  <button
-                    key={index}
-                    className={cn(
-                      "w-2 h-2 rounded-full transition-all",
-                      index === activeImageIndex 
-                        ? "bg-white scale-125" 
-                        : "bg-white/50 hover:bg-white/80"
-                    )}
-                    onClick={() => setActiveImageIndex(index)}
-                    aria-label={`View image ${index + 1}`}
-                  />
-                ))}
-              </div>
+              <Carousel className="w-full" opts={{ loop: true, duration: 50 }} autoPlay>
+                <CarouselContent>
+                  {studentImages.map((image, index) => (
+                    <CarouselItem key={index}>
+                      <div className="relative">
+                        <div className="aspect-[4/3] w-full">
+                          <img 
+                            src={image} 
+                            alt={imageDescriptions[index]}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        
+                        {/* Caption overlay */}
+                        <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 bg-gradient-to-t from-bsd-gray/80 to-transparent text-white">
+                          <p className="text-lg md:text-xl font-medium drop-shadow-md">{imageDescriptions[index]}</p>
+                        </div>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="left-4 bg-white/80 hover:bg-white text-foreground" />
+                <CarouselNext className="right-4 bg-white/80 hover:bg-white text-foreground" />
+              </Carousel>
             </div>
             
             {/* Decorative elements */}
