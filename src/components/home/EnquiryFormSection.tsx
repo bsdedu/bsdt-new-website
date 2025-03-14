@@ -146,7 +146,7 @@ export const EnquiryFormSection: React.FC<{ programSpecific?: boolean }> = ({ pr
               <div className="p-6 md:p-8">
                 <h3 className="text-xl font-semibold mb-6 text-bsd-gray flex items-center">
                   <BookOpen className="w-5 h-5 mr-2 text-bsd-orange" />
-                  Enquire Now
+                  Enquire Now & Get Brochure
                 </h3>
                 
                 <Form {...form}>
