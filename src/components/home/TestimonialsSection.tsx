@@ -41,25 +41,25 @@ export const TestimonialsSection: React.FC = () => {
     {
       id: "1",
       name: "Radhika",
-      course: "Interior Design",
+      course: "Professional Diploma in LD",
       videoId: "tNYpgfevzwc"
     },
     {
       id: "2",
       name: "Monika",
-      course: "Fashion Design",
+      course: "Professional Diploma in Interior Design",
       videoId: "Vxo4Sbdbx_8"
     },
     {
       id: "3",
       name: "Ojo",
-      course: "Graphic Design",
+      course: "BVA Interior Spatial Design",
       videoId: "LvDmudablZI"
     },
     {
       id: "4",
       name: "Suhas",
-      course: "Interior Design",
+      course: "BVA Interior Spatial Design",
       videoId: "nVuZT2jaaNM"
     }
   ];
