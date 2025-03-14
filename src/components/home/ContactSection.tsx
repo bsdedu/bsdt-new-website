@@ -2,7 +2,6 @@
 import React from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
-import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input"; 
 import { Textarea } from "@/components/ui/textarea";
@@ -11,10 +10,10 @@ import { Send } from "lucide-react";
 
 export const ContactSection: React.FC = () => {
   return (
-    <section id="contact" className="py-16 bg-bsd-light-gray relative">
+    <section id="contact" className="py-12 bg-bsd-light-gray relative">
       <div className="container mx-auto px-6 md:px-8 max-w-4xl">
         <RevealSection>
-          <div className="text-center mb-8">
+          <div className="text-center mb-6">
             <Badge variant="bsdOrange" className="mb-2">
               Get in Touch
             </Badge>
@@ -51,15 +50,34 @@ export const ContactSection: React.FC = () => {
                 </div>
               </div>
 
-              <div>
-                <Label htmlFor="subject" className="text-bsd-gray/80">
-                  Subject
-                </Label>
-                <Input
-                  id="subject"
-                  placeholder="How can we help you?"
-                  className="bg-bsd-light-gray border-border/30 focus:ring-bsd-orange/20"
-                />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <Label htmlFor="phone" className="text-bsd-gray/80">
+                    Phone Number
+                  </Label>
+                  <Input
+                    id="phone"
+                    placeholder="Your phone number"
+                    className="bg-bsd-light-gray border-border/30 focus:ring-bsd-orange/20"
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="course" className="text-bsd-gray/80">
+                    Course Interested
+                  </Label>
+                  <select
+                    id="course"
+                    className="flex h-10 w-full rounded-md border border-input bg-bsd-light-gray px-3 py-2 text-base ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                  >
+                    <option value="">Select a course</option>
+                    <option value="UG Interior Design">UG Interior Design</option>
+                    <option value="UG Fashion Design">UG Fashion Design</option>
+                    <option value="P.Diploma Interior Design">P.Diploma Interior Design</option>
+                    <option value="P.Diploma Graphic Design">P.Diploma Graphic Design + UI & UX</option>
+                    <option value="P.Diploma UI UX">P.Diploma UI & UX</option>
+                    <option value="PG.Diploma Landscape Design">PG.Diploma Landscape Design</option>
+                  </select>
+                </div>
               </div>
 
               <div>
