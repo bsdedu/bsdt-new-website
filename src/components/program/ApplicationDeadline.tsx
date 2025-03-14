@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import { CalendarDays, Clock } from 'lucide-react';
-import { addDays, format, differenceInDays, differenceInHours, differenceInMinutes, isAfter } from 'date-fns';
+import { format, differenceInDays, differenceInHours, differenceInMinutes, isAfter } from 'date-fns';
 
 export const ApplicationDeadline = () => {
   const [deadline, setDeadline] = useState(new Date());
