@@ -19,25 +19,25 @@ export const StudentWorksGallery: React.FC = () => {
     { id: "print", name: "Print & Editorial" },
   ];
   
-  // Sample project data - in a real app this would come from a database
+  // Sample project data with updated and more relevant images
   const projects = {
     branding: [
-      { id: 1, title: "Eco-friendly Brand Identity", student: "Priya Sharma", year: "2023", image: "https://images.unsplash.com/photo-1616469829941-c7200edec809?w=800&auto=format&fit=crop" },
-      { id: 2, title: "Tech Startup Branding", student: "Arjun Mehta", year: "2023", image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&auto=format&fit=crop" },
-      { id: 3, title: "Restaurant Chain Rebrand", student: "Meera Patel", year: "2022", image: "https://images.unsplash.com/photo-1576483353872-42d9b8d50e4f?w=800&auto=format&fit=crop" },
-      { id: 4, title: "Artisanal Coffee Branding", student: "Vikram Reddy", year: "2022", image: "https://images.unsplash.com/photo-1547592180-85f173990554?w=800&auto=format&fit=crop" },
+      { id: 1, title: "Eco-friendly Brand Identity", student: "Priya Sharma", year: "2023", image: "https://images.unsplash.com/photo-1635405574926-925006d0f9ac?w=800&auto=format&fit=crop" },
+      { id: 2, title: "Tech Startup Branding", student: "Arjun Mehta", year: "2023", image: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=800&auto=format&fit=crop" },
+      { id: 3, title: "Restaurant Chain Rebrand", student: "Meera Patel", year: "2022", image: "https://images.unsplash.com/photo-1583329622965-9fa10abbdc10?w=800&auto=format&fit=crop" },
+      { id: 4, title: "Artisanal Coffee Branding", student: "Vikram Reddy", year: "2022", image: "https://images.unsplash.com/photo-1581075143443-2fb3714ce96b?w=800&auto=format&fit=crop" },
     ],
     digital: [
       { id: 1, title: "Mobile App UI Design", student: "Kiran Kumar", year: "2023", image: "https://images.unsplash.com/photo-1551739440-5dd934d3a94a?w=800&auto=format&fit=crop" },
-      { id: 2, title: "E-commerce Website Redesign", student: "Aisha Khan", year: "2023", image: "https://images.unsplash.com/photo-1523726491678-bf852e717f6a?w=800&auto=format&fit=crop" },
-      { id: 3, title: "Social Media Campaign", student: "Rahul Joshi", year: "2022", image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&auto=format&fit=crop" },
+      { id: 2, title: "E-commerce Website Redesign", student: "Aisha Khan", year: "2023", image: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=800&auto=format&fit=crop" },
+      { id: 3, title: "Social Media Campaign", student: "Rahul Joshi", year: "2022", image: "https://images.unsplash.com/photo-1560157368-946d9c8f7cb8?w=800&auto=format&fit=crop" },
       { id: 4, title: "Interactive Infographics", student: "Divya Menon", year: "2022", image: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=800&auto=format&fit=crop" },
     ],
     print: [
-      { id: 1, title: "Magazine Layout Design", student: "Sanjay Varma", year: "2023", image: "https://images.unsplash.com/photo-1583329622965-9fa10abbdc10?w=800&auto=format&fit=crop" },
-      { id: 2, title: "Annual Report Design", student: "Ananya Desai", year: "2023", image: "https://images.unsplash.com/photo-1597424216809-3ba9a1a8e20c?w=800&auto=format&fit=crop" },
+      { id: 1, title: "Magazine Layout Design", student: "Sanjay Varma", year: "2023", image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop" },
+      { id: 2, title: "Annual Report Design", student: "Ananya Desai", year: "2023", image: "https://images.unsplash.com/photo-1594897030264-ab7d87efc473?w=800&auto=format&fit=crop" },
       { id: 3, title: "Book Cover Series", student: "Rohan Murthy", year: "2022", image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=800&auto=format&fit=crop" },
-      { id: 4, title: "Packaging Design Collection", student: "Neha Gupta", year: "2022", image: "https://images.unsplash.com/photo-1585866473523-9133debf69b4?w=800&auto=format&fit=crop" },
+      { id: 4, title: "Packaging Design Collection", student: "Neha Gupta", year: "2022", image: "https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?w=800&auto=format&fit=crop" },
     ],
   };
 
@@ -51,7 +51,7 @@ export const StudentWorksGallery: React.FC = () => {
               Award-Winning Student Works
             </h2>
             <p className="mt-4 text-foreground/70">
-              Explore outstanding projects created by our talented students, showcasing their creativity, technical skills, and design thinking.
+              Explore outstanding graphic design projects created by our talented students, showcasing their creativity, technical skills, and design thinking.
             </p>
           </div>
         </RevealSection>
