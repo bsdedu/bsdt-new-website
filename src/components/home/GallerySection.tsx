@@ -10,51 +10,64 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { Card } from "../ui-elements/Card";
+import { Play } from "lucide-react";
 
-// Gallery images with real content
+// Gallery items with both images and videos
 const galleryItems = [
   { 
+    type: "image",
     category: "Sports Events", 
     image: "/lovable-uploads/fb6e3221-85ce-4641-97b4-0be26d1e5f1b.png",
     caption: "Football team celebration with faculty members"
   },
   { 
-    category: "Sports Events", 
-    image: "/lovable-uploads/c72be9c4-87fc-415a-a4fb-8e3db30e45cf.png",
-    caption: "Basketball match between students"
+    type: "video",
+    category: "Campus Tour", 
+    videoId: "dQw4w9WgXcQ", // Example YouTube video ID
+    thumbnail: "/lovable-uploads/c72be9c4-87fc-415a-a4fb-8e3db30e45cf.png",
+    caption: "Virtual tour of our campus facilities"
   },
   { 
+    type: "image",
     category: "Campus Life", 
     image: "/lovable-uploads/17f4f011-541d-4476-bbb2-0a9bbc508f0a.png",
     caption: "Students enjoying campus activities"
   },
   { 
-    category: "Campus Life", 
-    image: "/lovable-uploads/9fcd3f44-3088-4f3c-a35c-176f9392e127.png",
-    caption: "Students relaxing between classes"
+    type: "video",
+    category: "Student Interviews", 
+    videoId: "jNQXAC9IVRw", // Example YouTube video ID
+    thumbnail: "/lovable-uploads/9fcd3f44-3088-4f3c-a35c-176f9392e127.png",
+    caption: "Student testimonials and experiences"
   },
   { 
+    type: "image",
     category: "Student Work", 
     image: "/lovable-uploads/3baec177-d6ff-4f52-8cb8-1d0ba1fcdaa7.png",
     caption: "Design exhibition walkthrough"
   },
   { 
+    type: "image",
     category: "Events", 
     image: "/lovable-uploads/6e8f285e-a6c2-4dba-9059-ca5b191bd897.png",
     caption: "Live music performance at campus event"
   },
   { 
+    type: "image",
     category: "Sports Events", 
     image: "/lovable-uploads/fb4bedc7-ed6b-470b-82fe-e714ed5d7d6a.png",
     caption: "Team huddle during sports day"
   }
 ];
 
-const categories = ["All", "Sports Events", "Campus Life", "Student Work", "Events"];
+// Updated categories including new video categories
+const categories = ["All", "Sports Events", "Campus Life", "Student Work", "Events", "Campus Tour", "Student Interviews"];
 
 export const GallerySection: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState("All");
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
 
   const filteredItems = activeCategory === "All" 
     ? galleryItems 
@@ -63,6 +76,14 @@ export const GallerySection: React.FC = () => {
   // For mobile view, show a carousel
   const isMobileView = () => {
     return window.innerWidth < 768;
+  };
+
+  const handleVideoClick = (videoId: string) => {
+    setSelectedVideo(videoId);
+  };
+
+  const closeVideoModal = () => {
+    setSelectedVideo(null);
   };
 
   return (
@@ -109,11 +130,29 @@ export const GallerySection: React.FC = () => {
                 <CarouselItem key={index}>
                   <RevealSection delay={index * 80}>
                     <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-                      <img 
-                        src={item.image} 
-                        alt={item.caption} 
-                        className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
-                      />
+                      {item.type === "image" ? (
+                        <img 
+                          src={item.image} 
+                          alt={item.caption} 
+                          className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
+                        />
+                      ) : (
+                        <div 
+                          className="relative w-full h-full cursor-pointer"
+                          onClick={() => handleVideoClick(item.videoId)}
+                        >
+                          <img 
+                            src={item.thumbnail} 
+                            alt={item.caption} 
+                            className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
+                          />
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="bg-bsd-orange/90 rounded-full p-4 shadow-lg">
+                              <Play className="h-8 w-8 text-white" />
+                            </div>
+                          </div>
+                        </div>
+                      )}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-100">
                         <div className="absolute bottom-0 left-0 right-0 p-4">
                           <span className="inline-block px-2 py-1 text-xs bg-bsd-orange/80 text-white rounded-full mb-2">
@@ -141,15 +180,33 @@ export const GallerySection: React.FC = () => {
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
-                <img 
-                  src={item.image} 
-                  alt={item.caption} 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+                {item.type === "image" ? (
+                  <img 
+                    src={item.image} 
+                    alt={item.caption} 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                ) : (
+                  <div 
+                    className="relative w-full h-full cursor-pointer"
+                    onClick={() => handleVideoClick(item.videoId)}
+                  >
+                    <img 
+                      src={item.thumbnail} 
+                      alt={item.caption} 
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="bg-bsd-orange/90 rounded-full p-4 shadow-lg transform transition-transform duration-300 group-hover:scale-110">
+                        <Play className="h-8 w-8 text-white" />
+                      </div>
+                    </div>
+                  </div>
+                )}
                 
                 <div className={cn(
                   "absolute inset-0 bg-gradient-to-t from-black/70 to-transparent transition-opacity duration-300",
-                  hoveredIndex === index ? "opacity-100" : "opacity-0"
+                  hoveredIndex === index || item.type === "video" ? "opacity-100" : "opacity-0"
                 )}>
                   <div className="absolute bottom-0 left-0 right-0 p-4">
                     <span className="inline-block px-2 py-1 text-xs bg-bsd-orange/80 text-white rounded-full mb-2">
@@ -176,6 +233,28 @@ export const GallerySection: React.FC = () => {
           </div>
         </RevealSection>
       </div>
+
+      {/* YouTube Video Modal */}
+      {selectedVideo && (
+        <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4" onClick={closeVideoModal}>
+          <div className="relative w-full max-w-4xl aspect-video" onClick={e => e.stopPropagation()}>
+            <iframe 
+              className="w-full h-full rounded-lg shadow-2xl"
+              src={`https://www.youtube.com/embed/${selectedVideo}?autoplay=1`}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+            <button 
+              className="absolute -top-10 right-0 text-white hover:text-bsd-orange"
+              onClick={closeVideoModal}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
