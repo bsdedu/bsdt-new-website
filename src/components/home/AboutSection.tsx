@@ -23,7 +23,7 @@ export const AboutSection: React.FC = () => {
               <Badge variant="bsdOrange">Campus Life</Badge>
               <h3 className="text-2xl md:text-3xl font-display font-bold text-bsd-gray flex items-center gap-2">
                 <Play className="w-6 h-6 text-bsd-orange" /> 
-                Experience BSD Campus Life
+                Experience BSDT Campus Life
               </h3>
               <p className="text-foreground/70">Take a virtual tour of our vibrant campus and see what makes BSD the perfect place for your creative journey.</p>
             </div>
