@@ -9,6 +9,7 @@ import { WhyChooseSection } from '../components/home/WhyChooseSection';
 import { GallerySection } from '../components/home/GallerySection';
 import { ContactSection } from '../components/home/ContactSection';
 import { EnquiryFormSection } from '../components/home/EnquiryFormSection';
+import { TestimonialsSection } from '../components/home/TestimonialsSection';
 
 const Index = () => {
   useEffect(() => {
@@ -42,6 +43,7 @@ const Index = () => {
         <HeroSection />
         <ProgramsSection />
         <WhyChooseSection />
+        <TestimonialsSection />
         <EnquiryFormSection />
         <AboutSection />
         <GallerySection />
