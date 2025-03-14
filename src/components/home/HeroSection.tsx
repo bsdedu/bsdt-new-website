@@ -62,7 +62,14 @@ export const HeroSection: React.FC = () => {
                     className="h-16 object-contain"
                   />
                 </div>
-                {[3, 4].map(i => <div key={i} className="h-10 w-24 bg-bsd-light-gray rounded-md flex items-center justify-center">
+                <div className="h-16 flex items-center justify-center">
+                  <img 
+                    src="/lovable-uploads/f284706f-8b61-4bc4-a155-140c043df786.png" 
+                    alt="College de Paris Logo" 
+                    className="h-16 object-contain"
+                  />
+                </div>
+                {[4].map(i => <div key={i} className="h-10 w-24 bg-bsd-light-gray rounded-md flex items-center justify-center">
                     <span className="text-xs text-bsd-gray/60">Partner {i}</span>
                   </div>)}
               </div>
