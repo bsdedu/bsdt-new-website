@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { cn } from "@/lib/utils";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
 import { ArrowDown } from "lucide-react";
@@ -9,11 +9,14 @@ import {
   CarouselContent,
   CarouselItem,
   CarouselPrevious,
-  CarouselNext
+  CarouselNext,
+  type CarouselApi
 } from "@/components/ui/carousel";
 
 export const HeroSection: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [api, setApi] = useState<CarouselApi>();
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
   
   // Images for the student showcase carousel
   const studentImages = [
@@ -28,8 +31,51 @@ export const HeroSection: React.FC = () => {
     "Innovative learning at BSDT"
   ];
   
+  // Handle auto-play functionality manually
+  const startAutoPlay = useCallback(() => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    
+    intervalRef.current = setInterval(() => {
+      if (api) {
+        api.scrollNext();
+      }
+    }, 5000);
+  }, [api]);
+  
+  // Setup auto-play when the carousel api is available
+  useEffect(() => {
+    if (!api) return;
+    
+    startAutoPlay();
+    
+    // Add event listeners to pause/resume auto-play on user interaction
+    api.on("pointerDown", () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    });
+    
+    api.on("pointerUp", () => {
+      startAutoPlay();
+    });
+    
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, [api, startAutoPlay]);
+  
   useEffect(() => {
     setIsLoaded(true);
+    
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
   }, []);
   
   return <section className="relative min-h-screen flex items-center overflow-hidden pt-24 pb-16">
@@ -105,7 +151,7 @@ export const HeroSection: React.FC = () => {
           <div className={cn("relative transition-all duration-1000 delay-300", isLoaded ? "opacity-100 scale-100" : "opacity-0 scale-95")}>
             {/* Using Carousel component for better image display */}
             <div className="relative overflow-hidden rounded-2xl shadow-xl">
-              <Carousel className="w-full" opts={{ loop: true, duration: 50 }} autoPlay>
+              <Carousel className="w-full" opts={{ loop: true, duration: 50 }} setApi={setApi}>
                 <CarouselContent>
                   {studentImages.map((image, index) => (
                     <CarouselItem key={index}>
