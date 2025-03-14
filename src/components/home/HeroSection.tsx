@@ -64,7 +64,7 @@ export const HeroSection: React.FC = () => {
               
               {/* Caption overlay */}
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-bsd-gray/60 to-transparent text-white">
-                <p className="text-sm font-medium">Innovative learning at BSD Design & Tech College</p>
+                <p className="text-base md:text-lg font-bold">Innovative learning at BSD Design & Tech College</p>
               </div>
             </div>
             
