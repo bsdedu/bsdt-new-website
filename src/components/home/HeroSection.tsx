@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { cn } from "@/lib/utils";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
@@ -69,9 +68,20 @@ export const HeroSection: React.FC = () => {
                     className="h-16 object-contain"
                   />
                 </div>
-                {[4].map(i => <div key={i} className="h-10 w-24 bg-bsd-light-gray rounded-md flex items-center justify-center">
-                    <span className="text-xs text-bsd-gray/60">Partner {i}</span>
-                  </div>)}
+                <div className="h-16 flex items-center justify-center">
+                  <img 
+                    src="/lovable-uploads/c1b6a8e1-981e-4ce5-b0b1-cab0978b0556.png" 
+                    alt="CRESTA Logo" 
+                    className="h-16 object-contain"
+                  />
+                </div>
+                <div className="h-16 flex items-center justify-center">
+                  <img 
+                    src="/lovable-uploads/4f3de368-ac90-4b0b-b38f-45580d4df068.png" 
+                    alt="École Bleue Global Design Logo" 
+                    className="h-16 object-contain"
+                  />
+                </div>
               </div>
             </div>
           </div>
