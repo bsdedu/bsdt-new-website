@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { cn } from "@/lib/utils";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -80,8 +81,8 @@ export const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300 sticky", 
-      isScrolled ? "py-3 glassmorphism shadow-sm" : "py-6 bg-transparent")}>
+    <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300", 
+      isScrolled ? "py-2 glassmorphism shadow-sm" : "py-3 bg-transparent")}>
       <div className="container mx-auto px-6 md:px-8">
         <div className="flex items-center justify-between">
           {/* Logo as homepage link with increased size */}
@@ -89,7 +90,7 @@ export const Navbar: React.FC = () => {
             <img 
               src="/lovable-uploads/15af7636-fa32-410b-9b74-b4e58b0fa90b.png" 
               alt="Bangalore School of Design & Technology Logo" 
-              className="h-12 md:h-16 object-fill" 
+              className="h-14 md:h-18 object-fill" 
             />
           </a>
 
