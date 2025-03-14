@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { cn } from "@/lib/utils";
@@ -10,8 +11,9 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card } from "../ui-elements/Card";
-import { Play } from "lucide-react";
+import { Play, GalleryHorizontal } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
 // Import testimonials data to use for Student Interviews
 import { testimonials } from './TestimonialsSection';
@@ -188,10 +190,29 @@ export const GallerySection: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState("All");
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+  const [expandedCategories, setExpandedCategories] = useState<string[]>(["Sports Events"]);
 
+  // Group items by category for the "All" tab
+  const groupedItems = allGalleryItems.reduce((acc, item) => {
+    if (!acc[item.category]) {
+      acc[item.category] = [];
+    }
+    acc[item.category].push(item);
+    return acc;
+  }, {} as Record<string, typeof allGalleryItems>);
+
+  // Filter items for non-All tabs
   const filteredItems = activeCategory === "All" 
-    ? allGalleryItems 
+    ? [] // We'll handle the "All" tab differently 
     : allGalleryItems.filter(item => item.category === activeCategory);
+
+  const toggleCategory = (category: string) => {
+    setExpandedCategories(prev => 
+      prev.includes(category) 
+        ? prev.filter(c => c !== category) 
+        : [...prev, category]
+    );
+  };
 
   const handleVideoClick = (videoId: string) => {
     setSelectedVideo(videoId);
@@ -199,6 +220,108 @@ export const GallerySection: React.FC = () => {
 
   const closeVideoModal = () => {
     setSelectedVideo(null);
+  };
+
+  // Helper function to render gallery items in a grid or carousel
+  const renderGalleryItems = (items: typeof allGalleryItems, isMobile = false) => {
+    if (items.length === 0) {
+      return (
+        <div className="flex items-center justify-center p-8 border border-dashed border-gray-300 rounded-lg h-64">
+          <p className="text-gray-500">No content available. Please upload new images.</p>
+        </div>
+      );
+    }
+
+    if (isMobile) {
+      return (
+        <Carousel className="w-full">
+          <CarouselContent>
+            {items.map((item, index) => (
+              <CarouselItem key={index}>
+                <div className="p-1">
+                  <Card isHoverable className="overflow-hidden">
+                    <div className="relative aspect-video overflow-hidden">
+                      {item.type === "image" ? (
+                        <img 
+                          src={item.image} 
+                          alt={item.caption} 
+                          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                        />
+                      ) : (
+                        <>
+                          <img 
+                            src={item.thumbnail} 
+                            alt={item.caption} 
+                            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                          />
+                          <div 
+                            className="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer group"
+                            onClick={() => item.videoId && handleVideoClick(item.videoId)}
+                          >
+                            <div className="bg-white/90 rounded-full p-3 transition-transform duration-300 group-hover:scale-110">
+                              <Play className="h-8 w-8 text-bsd-orange" fill="currentColor" />
+                            </div>
+                          </div>
+                        </>
+                      )}
+                    </div>
+                    <div className="p-4">
+                      <p className="text-sm text-gray-600">{item.caption}</p>
+                    </div>
+                  </Card>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="left-2 bg-white/80" />
+          <CarouselNext className="right-2 bg-white/80" />
+        </Carousel>
+      );
+    }
+
+    return (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {items.map((item, index) => (
+          <div 
+            key={index} 
+            className="group relative"
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            <Card isHoverable className="overflow-hidden h-full">
+              <div className="relative aspect-video overflow-hidden">
+                {item.type === "image" ? (
+                  <img 
+                    src={item.image} 
+                    alt={item.caption} 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                ) : (
+                  <>
+                    <img 
+                      src={item.thumbnail} 
+                      alt={item.caption} 
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div 
+                      className="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer"
+                      onClick={() => item.videoId && handleVideoClick(item.videoId)}
+                    >
+                      <div className="bg-white/90 rounded-full p-3 transition-transform duration-300 group-hover:scale-110">
+                        <Play className="h-8 w-8 text-bsd-orange" fill="currentColor" />
+                      </div>
+                    </div>
+                  </>
+                )}
+              </div>
+              <div className="p-4">
+                <p className="text-sm text-gray-600">{item.caption}</p>
+              </div>
+            </Card>
+          </div>
+        ))}
+      </div>
+    );
   };
 
   return (
@@ -232,120 +355,55 @@ export const GallerySection: React.FC = () => {
               ))}
             </TabsList>
             
+            {/* Content for All tab - Categories in collapsible sections */}
+            <TabsContent value="All" className="mt-0">
+              {/* Mobile View */}
+              <div className="md:hidden space-y-6">
+                {Object.keys(groupedItems).map((category) => (
+                  <Collapsible key={category} className="border rounded-lg shadow-sm mb-4" open={expandedCategories.includes(category)}>
+                    <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-gray-50 hover:bg-gray-100 rounded-t-lg" 
+                      onClick={() => toggleCategory(category)}>
+                      <div className="flex items-center gap-2">
+                        <GalleryHorizontal className="h-5 w-5 text-bsd-orange" />
+                        <h3 className="text-lg font-medium">{category}</h3>
+                      </div>
+                      <span className="text-bsd-orange">
+                        {expandedCategories.includes(category) ? '−' : '+'}
+                      </span>
+                    </CollapsibleTrigger>
+                    <CollapsibleContent className="p-4">
+                      {renderGalleryItems(groupedItems[category], true)}
+                    </CollapsibleContent>
+                  </Collapsible>
+                ))}
+              </div>
+
+              {/* Desktop View */}
+              <div className="hidden md:block space-y-12">
+                {Object.keys(groupedItems).map((category) => (
+                  <div key={category} className="mb-10">
+                    <div className="flex items-center gap-2 mb-4 border-b pb-2">
+                      <GalleryHorizontal className="h-5 w-5 text-bsd-orange" />
+                      <h3 className="text-xl font-semibold text-bsd-gray">{category}</h3>
+                    </div>
+                    {renderGalleryItems(groupedItems[category])}
+                  </div>
+                ))}
+              </div>
+            </TabsContent>
+            
+            {/* Content for specific category tabs */}
             <TabsContent value={activeCategory} className="mt-0">
-              {filteredItems.length > 0 ? (
+              {activeCategory !== "All" && (
                 <>
                   {/* Mobile View: Carousel */}
                   <div className="md:hidden">
-                    <Carousel className="w-full">
-                      <CarouselContent>
-                        {filteredItems.map((item, index) => (
-                          <CarouselItem key={index}>
-                            <div className="p-1">
-                              <Card isHoverable className="overflow-hidden">
-                                <div className="relative aspect-video overflow-hidden">
-                                  {item.type === "image" ? (
-                                    <img 
-                                      src={item.image} 
-                                      alt={item.caption} 
-                                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                                    />
-                                  ) : (
-                                    <>
-                                      <img 
-                                        src={item.thumbnail} 
-                                        alt={item.caption} 
-                                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                                      />
-                                      <div 
-                                        className="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer group"
-                                        onClick={() => item.videoId && handleVideoClick(item.videoId)}
-                                      >
-                                        <div className="bg-white/90 rounded-full p-3 transition-transform duration-300 group-hover:scale-110">
-                                          <Play className="h-8 w-8 text-bsd-orange" fill="currentColor" />
-                                        </div>
-                                      </div>
-                                    </>
-                                  )}
-                                </div>
-                                <div className="p-4">
-                                  <p className="text-sm text-gray-600">{item.caption}</p>
-                                </div>
-                              </Card>
-                            </div>
-                          </CarouselItem>
-                        ))}
-                      </CarouselContent>
-                      <CarouselPrevious className="left-2 bg-white/80" />
-                      <CarouselNext className="right-2 bg-white/80" />
-                    </Carousel>
+                    {renderGalleryItems(filteredItems, true)}
                   </div>
 
                   {/* Desktop View: Grid */}
-                  <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {filteredItems.map((item, index) => (
-                      <div 
-                        key={index} 
-                        className="group relative"
-                        onMouseEnter={() => setHoveredIndex(index)}
-                        onMouseLeave={() => setHoveredIndex(null)}
-                      >
-                        <Card isHoverable className="overflow-hidden h-full">
-                          <div className="relative aspect-video overflow-hidden">
-                            {item.type === "image" ? (
-                              <img 
-                                src={item.image} 
-                                alt={item.caption} 
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                              />
-                            ) : (
-                              <>
-                                <img 
-                                  src={item.thumbnail} 
-                                  alt={item.caption} 
-                                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                />
-                                <div 
-                                  className="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer"
-                                  onClick={() => item.videoId && handleVideoClick(item.videoId)}
-                                >
-                                  <div className="bg-white/90 rounded-full p-3 transition-transform duration-300 group-hover:scale-110">
-                                    <Play className="h-8 w-8 text-bsd-orange" fill="currentColor" />
-                                  </div>
-                                </div>
-                              </>
-                            )}
-                          </div>
-                          <div className="p-4">
-                            <p className="text-sm text-gray-600">{item.caption}</p>
-                          </div>
-                        </Card>
-                      </div>
-                    ))}
-                  </div>
-                </>
-              ) : (
-                <>
-                  {/* Mobile View: Carousel - Show empty state */}
-                  <div className="md:hidden">
-                    <Carousel className="w-full">
-                      <CarouselContent>
-                        <CarouselItem>
-                          <div className="flex items-center justify-center p-8 border border-dashed border-gray-300 rounded-lg h-64">
-                            <p className="text-gray-500">No content available. Please upload new images.</p>
-                          </div>
-                        </CarouselItem>
-                      </CarouselContent>
-                      <CarouselPrevious className="left-2 bg-white/80" />
-                      <CarouselNext className="right-2 bg-white/80" />
-                    </Carousel>
-                  </div>
-
-                  {/* Desktop View: Grid - Show empty state */}
-                  <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div className="col-span-full flex items-center justify-center p-16 border border-dashed border-gray-300 rounded-lg">
-                      <p className="text-gray-500">No content available. Please upload new images and videos for this section.</p>
-                    </div>
+                  <div className="hidden md:block">
+                    {renderGalleryItems(filteredItems)}
                   </div>
                 </>
               )}
