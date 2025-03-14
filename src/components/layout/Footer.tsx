@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
           {/* Column 1: About */}
           <div className="space-y-6">
             <h3 className="text-xl font-display font-bold tracking-tight">
-              BSD <span className="text-bsd-orange">T</span>
+              Bangalore School of Design & <span className="text-bsd-orange">Technology</span>
             </h3>
             <p className="text-sm text-white/80 max-w-xs">Empowering future designers and technologists with cutting-edge education and innovation since 2017.</p>
             <div className="flex space-x-4">
@@ -94,7 +94,7 @@ export const Footer: React.FC = () => {
         <div className="mt-16 pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-white/60">
-              © {new Date().getFullYear()} BSD Design & Tech. All rights reserved.
+              © {new Date().getFullYear()} Bangalore School of Design & Technology. All rights reserved.
             </p>
             <div className="mt-4 md:mt-0 flex space-x-6">
               <a href="#" className="text-xs text-white/60 hover:text-white/80 transition-colors">
