@@ -179,9 +179,11 @@ export const EnquiryFormSection: React.FC = () => {
                       />
                     </div>
                     
-                    <AnimatedButton type="submit" className="w-full" withArrow>
-                      <Send className="w-4 h-4 mr-1" /> Submit Enquiry
-                    </AnimatedButton>
+                    <div className="flex justify-end">
+                      <AnimatedButton type="submit" withArrow>
+                        <Send className="w-4 h-4 mr-1" /> Submit Enquiry
+                      </AnimatedButton>
+                    </div>
                   </form>
                 </Form>
               </div>
