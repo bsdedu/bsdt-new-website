@@ -7,7 +7,12 @@ interface RevealSectionProps {
   className?: string;
   delay?: number;
   direction?: 'up' | 'down' | 'left' | 'right' | 'none';
+  distance?: number; // New: customize animation distance
+  duration?: number; // New: customize animation duration
+  easing?: 'ease-in' | 'ease-out' | 'ease-in-out' | 'linear'; // New: customize easing
   threshold?: number;
+  once?: boolean; // New: option to trigger animation only once
+  scale?: boolean; // New: add scale effect
 }
 
 const RevealSection: React.FC<RevealSectionProps> = ({
@@ -15,20 +20,35 @@ const RevealSection: React.FC<RevealSectionProps> = ({
   className,
   delay = 0,
   direction = 'up',
+  distance = 40,
+  duration = 700,
+  easing = 'ease-out',
   threshold = 0.1,
+  once = true,
+  scale = false,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   const getInitialTransform = () => {
+    const transforms = [];
+    
+    // Direction transform
     switch (direction) {
-      case 'up': return 'translateY(40px)';
-      case 'down': return 'translateY(-40px)';
-      case 'left': return 'translateX(40px)';
-      case 'right': return 'translateX(-40px)';
-      case 'none': return 'none';
-      default: return 'translateY(40px)';
+      case 'up': transforms.push(`translateY(${distance}px)`); break;
+      case 'down': transforms.push(`translateY(-${distance}px)`); break;
+      case 'left': transforms.push(`translateX(${distance}px)`); break;
+      case 'right': transforms.push(`translateX(-${distance}px)`); break;
+      case 'none': break;
+      default: transforms.push(`translateY(${distance}px)`);
     }
+    
+    // Scale transform
+    if (scale) {
+      transforms.push('scale(0.95)');
+    }
+    
+    return transforms.join(' ');
   };
 
   useEffect(() => {
@@ -38,7 +58,11 @@ const RevealSection: React.FC<RevealSectionProps> = ({
           setTimeout(() => {
             setIsVisible(true);
           }, delay);
-          observer.unobserve(entry.target);
+          if (once) {
+            observer.unobserve(entry.target);
+          }
+        } else if (!once) {
+          setIsVisible(false);
         }
       },
       { threshold }
@@ -54,16 +78,17 @@ const RevealSection: React.FC<RevealSectionProps> = ({
         observer.unobserve(currentRef);
       }
     };
-  }, [delay, threshold]);
+  }, [delay, threshold, once]);
 
   return (
     <div
       ref={sectionRef}
-      className={cn("transition-all duration-700 ease-out", className)}
+      className={cn(`transition-all ease-${easing}`, className)}
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? 'none' : getInitialTransform(),
         transitionDelay: `${delay}ms`,
+        transitionDuration: `${duration}ms`,
       }}
     >
       {children}
