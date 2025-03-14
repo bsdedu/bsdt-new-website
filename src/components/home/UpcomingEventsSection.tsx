@@ -3,9 +3,9 @@ import React from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "../ui-elements/Card";
-import { AnimatedButton } from "../ui-elements/AnimatedButton";
-import { Calendar } from "lucide-react";
 import { Button } from "../ui/button";
+import { Calendar } from "lucide-react";
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 interface Event {
   id: string;
@@ -62,45 +62,48 @@ export const UpcomingEventsSection: React.FC = () => {
         </RevealSection>
 
         <RevealSection delay={200}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {upcomingEvents.map((event) => (
               <Card 
                 key={event.id} 
                 isHoverable 
                 className={`overflow-hidden ${event.featured ? 'border-bsd-orange/20 shadow' : ''}`}
               >
-                <div className="relative h-64 sm:h-80 md:h-96 overflow-hidden">
-                  <img 
-                    src={event.imageSrc} 
-                    alt={event.title} 
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
-                    <div className="flex items-center gap-2 text-white mb-2">
-                      <Calendar className="w-4 h-4" />
-                      <span className="text-sm font-medium">{event.date} | {event.time}</span>
-                    </div>
-                    <h3 className="text-xl md:text-2xl font-semibold text-white">{event.title}</h3>
-                    <Badge 
-                      variant={event.type === 'open-day' ? 'bsdOrange' : 'secondary'} 
-                      className="mt-2 w-fit"
-                    >
-                      {event.type === 'open-day' ? 'Open Day' : 'Webinar'}
-                    </Badge>
+                <div className="md:flex">
+                  <div className="md:w-1/2">
+                    <AspectRatio ratio={4/5} className="h-full">
+                      <img 
+                        src={event.imageSrc} 
+                        alt={event.title} 
+                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                      />
+                    </AspectRatio>
+                  </div>
+                  <div className="md:w-1/2">
+                    <CardContent className="p-6">
+                      <div className="flex items-center gap-2 text-bsd-gray/80 mb-3">
+                        <Calendar className="w-4 h-4" />
+                        <span className="text-sm font-medium">{event.date}</span>
+                      </div>
+                      <p className="text-sm text-bsd-gray/80 mb-3">{event.time}</p>
+                      
+                      <h3 className="text-xl font-semibold text-bsd-gray mb-3">{event.title}</h3>
+                      
+                      <Badge 
+                        variant={event.type === 'open-day' ? 'bsdOrange' : 'secondary'} 
+                        className="mb-4 w-fit"
+                      >
+                        {event.type === 'open-day' ? 'Open Day' : 'Webinar'}
+                      </Badge>
+                      
+                      <p className="text-bsd-gray/80 text-sm mb-6">{event.description}</p>
+                      
+                      <Button className="w-full bg-bsd-orange hover:bg-bsd-orange/90 text-white">
+                        Register Now
+                      </Button>
+                    </CardContent>
                   </div>
                 </div>
-                
-                <CardContent className="p-6">
-                  <p className="text-bsd-gray/80 mb-6">{event.description}</p>
-                  <div className="flex justify-between items-center">
-                    <AnimatedButton>
-                      Register Now
-                    </AnimatedButton>
-                    <Button variant="ghost" className="text-bsd-gray hover:text-bsd-orange">
-                      Learn More
-                    </Button>
-                  </div>
-                </CardContent>
               </Card>
             ))}
           </div>
