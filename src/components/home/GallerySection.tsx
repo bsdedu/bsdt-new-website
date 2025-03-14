@@ -13,7 +13,7 @@ import { Card } from "../ui-elements/Card";
 import { Play } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-// Empty gallery items array - explicitly initialized as empty
+// Gallery items array with the sports events images
 const galleryItems: {
   type: "image" | "video";
   category: string;
@@ -21,7 +21,44 @@ const galleryItems: {
   videoId?: string;
   thumbnail?: string;
   caption: string;
-}[] = [];
+}[] = [
+  {
+    type: "image",
+    category: "Sports Events",
+    image: "/lovable-uploads/270f0f33-e625-4067-987a-39682c51de31.png",
+    caption: "Football match on campus with students playing in yellow and blue jerseys"
+  },
+  {
+    type: "image",
+    category: "Sports Events",
+    image: "/lovable-uploads/1cdeaa2b-5009-4a7d-b2fa-a912996acf79.png",
+    caption: "Golden Claws team resting by the sidelines during a sports event"
+  },
+  {
+    type: "image",
+    category: "Sports Events",
+    image: "/lovable-uploads/9ff3e25b-a93f-40fb-87ff-cd765e063b61.png",
+    caption: "Sports team celebration with students and faculty after a victory"
+  },
+  {
+    type: "image",
+    category: "Sports Events",
+    image: "/lovable-uploads/c0c5b503-eeb4-4331-ae7e-38ef5d9f2675.png",
+    caption: "Basketball practice in the enclosed court with Crimson Blades players"
+  },
+  {
+    type: "image",
+    category: "Sports Events",
+    image: "/lovable-uploads/c9727b90-962e-4b3e-be56-d9c05c7ddcbb.png",
+    caption: "Students posing after a sports competition with medals"
+  },
+  {
+    type: "image",
+    category: "Sports Events",
+    image: "/lovable-uploads/275a175a-0d92-43ee-b13d-136f76aa4f00.png",
+    caption: "Basketball match between students in the outdoor court"
+  }
+];
 
 // Keep the categories for tab structure
 const categories = ["All", "Sports Events", "Campus Life", "Student Work", "Events", "Campus Tour", "Student Interviews"];
@@ -75,27 +112,122 @@ export const GallerySection: React.FC = () => {
             </TabsList>
             
             <TabsContent value={activeCategory} className="mt-0">
-              {/* Mobile View: Carousel - Show empty state */}
-              <div className="md:hidden">
-                <Carousel className="w-full">
-                  <CarouselContent>
-                    <CarouselItem>
-                      <div className="flex items-center justify-center p-8 border border-dashed border-gray-300 rounded-lg h-64">
-                        <p className="text-gray-500">No content available. Please upload new images.</p>
-                      </div>
-                    </CarouselItem>
-                  </CarouselContent>
-                  <CarouselPrevious className="left-2 bg-white/80" />
-                  <CarouselNext className="right-2 bg-white/80" />
-                </Carousel>
-              </div>
+              {filteredItems.length > 0 ? (
+                <>
+                  {/* Mobile View: Carousel */}
+                  <div className="md:hidden">
+                    <Carousel className="w-full">
+                      <CarouselContent>
+                        {filteredItems.map((item, index) => (
+                          <CarouselItem key={index}>
+                            <div className="p-1">
+                              <Card isHoverable className="overflow-hidden">
+                                <div className="relative aspect-video overflow-hidden">
+                                  {item.type === "image" ? (
+                                    <img 
+                                      src={item.image} 
+                                      alt={item.caption} 
+                                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                                    />
+                                  ) : (
+                                    <>
+                                      <img 
+                                        src={item.thumbnail} 
+                                        alt={item.caption} 
+                                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                                      />
+                                      <div 
+                                        className="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer group"
+                                        onClick={() => item.videoId && handleVideoClick(item.videoId)}
+                                      >
+                                        <div className="bg-white/90 rounded-full p-3 transition-transform duration-300 group-hover:scale-110">
+                                          <Play className="h-8 w-8 text-bsd-orange" fill="currentColor" />
+                                        </div>
+                                      </div>
+                                    </>
+                                  )}
+                                </div>
+                                <div className="p-4">
+                                  <p className="text-sm text-gray-600">{item.caption}</p>
+                                </div>
+                              </Card>
+                            </div>
+                          </CarouselItem>
+                        ))}
+                      </CarouselContent>
+                      <CarouselPrevious className="left-2 bg-white/80" />
+                      <CarouselNext className="right-2 bg-white/80" />
+                    </Carousel>
+                  </div>
 
-              {/* Desktop View: Grid - Show empty state */}
-              <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="col-span-full flex items-center justify-center p-16 border border-dashed border-gray-300 rounded-lg">
-                  <p className="text-gray-500">No content available. Please upload new images and videos for this section.</p>
-                </div>
-              </div>
+                  {/* Desktop View: Grid */}
+                  <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {filteredItems.map((item, index) => (
+                      <div 
+                        key={index} 
+                        className="group relative"
+                        onMouseEnter={() => setHoveredIndex(index)}
+                        onMouseLeave={() => setHoveredIndex(null)}
+                      >
+                        <Card isHoverable className="overflow-hidden h-full">
+                          <div className="relative aspect-video overflow-hidden">
+                            {item.type === "image" ? (
+                              <img 
+                                src={item.image} 
+                                alt={item.caption} 
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                              />
+                            ) : (
+                              <>
+                                <img 
+                                  src={item.thumbnail} 
+                                  alt={item.caption} 
+                                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
+                                <div 
+                                  className="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer"
+                                  onClick={() => item.videoId && handleVideoClick(item.videoId)}
+                                >
+                                  <div className="bg-white/90 rounded-full p-3 transition-transform duration-300 group-hover:scale-110">
+                                    <Play className="h-8 w-8 text-bsd-orange" fill="currentColor" />
+                                  </div>
+                                </div>
+                              </>
+                            )}
+                          </div>
+                          <div className="p-4">
+                            <p className="text-sm text-gray-600">{item.caption}</p>
+                          </div>
+                        </Card>
+                      </div>
+                    ))}
+                  </div>
+                </>
+              ) : (
+                <>
+                  {/* Mobile View: Carousel - Show empty state */}
+                  <div className="md:hidden">
+                    <Carousel className="w-full">
+                      <CarouselContent>
+                        <CarouselItem>
+                          <div className="flex items-center justify-center p-8 border border-dashed border-gray-300 rounded-lg h-64">
+                            <p className="text-gray-500">No content available. Please upload new images.</p>
+                          </div>
+                        </CarouselItem>
+                      </CarouselContent>
+                      <CarouselPrevious className="left-2 bg-white/80" />
+                      <CarouselNext className="right-2 bg-white/80" />
+                    </Carousel>
+                  </div>
+
+                  {/* Desktop View: Grid - Show empty state */}
+                  <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="col-span-full flex items-center justify-center p-16 border border-dashed border-gray-300 rounded-lg">
+                      <p className="text-gray-500">No content available. Please upload new images and videos for this section.</p>
+                    </div>
+                  </div>
+                </>
+              )}
             </TabsContent>
           </Tabs>
         </RevealSection>
