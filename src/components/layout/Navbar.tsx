@@ -17,11 +17,6 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 // Main navigation structure with nested menus
 const navStructure = [
   {
-    name: 'Home',
-    href: '#',
-    type: 'link'
-  },
-  {
     name: 'About',
     href: '#about',
     type: 'dropdown',
@@ -95,7 +90,8 @@ export const Navbar: React.FC = () => {
       isScrolled ? "py-4 glassmorphism shadow-sm" : "py-8 bg-transparent")}>
       <div className="container mx-auto px-6 md:px-8">
         <div className="flex items-center justify-between">
-          <a href="#" className="flex items-center">
+          {/* Logo as homepage link */}
+          <a href="/" className="flex items-center">
             <img 
               src="/lovable-uploads/15af7636-fa32-410b-9b74-b4e58b0fa90b.png" 
               alt="Bangalore School of Design & Technology Logo" 
