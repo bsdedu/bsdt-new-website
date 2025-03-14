@@ -11,16 +11,48 @@ import {
   CarouselNext, 
   CarouselPrevious 
 } from "@/components/ui/carousel";
+import { useLocation } from 'react-router-dom';
 
 export const StudentWorksGallery: React.FC = () => {
-  const projectCategories = [
-    { id: "branding", name: "Branding Projects" },
-    { id: "digital", name: "Digital Design" },
-    { id: "print", name: "Print & Editorial" },
-  ];
+  const location = useLocation();
+  const isInteriorDesignProgram = location.pathname.includes('interior-design');
   
-  // Updated project data with more topic-relevant images
-  const projects = {
+  // Categories based on program type
+  const projectCategories = isInteriorDesignProgram 
+    ? [
+        { id: "residential", name: "Residential Spaces" },
+        { id: "commercial", name: "Commercial Projects" },
+        { id: "conceptual", name: "Conceptual Designs" },
+      ]
+    : [
+        { id: "branding", name: "Branding Projects" },
+        { id: "digital", name: "Digital Design" },
+        { id: "print", name: "Print & Editorial" },
+      ];
+  
+  // Program-specific projects data
+  const interiorProjects = {
+    residential: [
+      { id: 1, title: "Modern Apartment Redesign", student: "Anika Patel", year: "2023", image: "https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&auto=format&fit=crop" },
+      { id: 2, title: "Minimalist Villa Interior", student: "Raj Sharma", year: "2023", image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&auto=format&fit=crop" },
+      { id: 3, title: "Urban Loft Conversion", student: "Priya Malhotra", year: "2022", image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&auto=format&fit=crop" },
+      { id: 4, title: "Contemporary Home Design", student: "Arjun Kapoor", year: "2022", image: "https://images.unsplash.com/photo-1600585153490-76fb20a32601?w=800&auto=format&fit=crop" },
+    ],
+    commercial: [
+      { id: 1, title: "Boutique Hotel Lobby", student: "Neha Reddy", year: "2023", image: "https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?w=800&auto=format&fit=crop" },
+      { id: 2, title: "Corporate Office Design", student: "Vikram Singh", year: "2023", image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&auto=format&fit=crop" },
+      { id: 3, title: "Retail Store Concept", student: "Maya Joshi", year: "2022", image: "https://images.unsplash.com/photo-1604014237800-1c9102c219da?w=800&auto=format&fit=crop" },
+      { id: 4, title: "Restaurant Interior Design", student: "Karan Mehta", year: "2022", image: "https://images.unsplash.com/photo-1537640538966-79f369143f8f?w=800&auto=format&fit=crop" },
+    ],
+    conceptual: [
+      { id: 1, title: "Sustainable Living Space", student: "Divya Sharma", year: "2023", image: "https://images.unsplash.com/photo-1600585154526-990dced4db3d?w=800&auto=format&fit=crop" },
+      { id: 2, title: "Future Home Concept", student: "Rohan Kumar", year: "2023", image: "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=800&auto=format&fit=crop" },
+      { id: 3, title: "Biophilic Design Study", student: "Ananya Desai", year: "2022", image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&auto=format&fit=crop" },
+      { id: 4, title: "Adaptive Reuse Project", student: "Sanjay Varma", year: "2022", image: "https://images.unsplash.com/photo-1600563438938-a9a27216b4f5?w=800&auto=format&fit=crop" },
+    ],
+  };
+  
+  const graphicProjects = {
     branding: [
       { id: 1, title: "Eco-friendly Brand Identity", student: "Priya Sharma", year: "2023", image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&auto=format&fit=crop" },
       { id: 2, title: "Tech Startup Branding", student: "Arjun Mehta", year: "2023", image: "https://images.unsplash.com/photo-1520333789090-1afc82db536a?w=800&auto=format&fit=crop" },
@@ -40,6 +72,12 @@ export const StudentWorksGallery: React.FC = () => {
       { id: 4, title: "Packaging Design Collection", student: "Neha Gupta", year: "2022", image: "https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?w=800&auto=format&fit=crop" },
     ],
   };
+  
+  // Choose projects based on program type
+  const projects = isInteriorDesignProgram ? interiorProjects : graphicProjects;
+  
+  // Choose default tab based on program type
+  const defaultTabValue = isInteriorDesignProgram ? "residential" : "branding";
 
   return (
     <section className="py-16 bg-bsd-light-gray">
@@ -51,13 +89,15 @@ export const StudentWorksGallery: React.FC = () => {
               Award-Winning Student Works
             </h2>
             <p className="mt-4 text-foreground/70">
-              Explore outstanding graphic design projects created by our talented students, showcasing their creativity, technical skills, and design thinking.
+              {isInteriorDesignProgram 
+                ? "Explore outstanding interior design projects created by our talented students, showcasing their creativity, technical skills, and spatial thinking."
+                : "Explore outstanding graphic design projects created by our talented students, showcasing their creativity, technical skills, and design thinking."}
             </p>
           </div>
         </RevealSection>
 
         <RevealSection delay={100}>
-          <Tabs defaultValue="branding" className="w-full">
+          <Tabs defaultValue={defaultTabValue} className="w-full">
             <div className="flex justify-center mb-8">
               <TabsList className="grid grid-cols-3 w-full max-w-2xl">
                 {projectCategories.map(category => (
