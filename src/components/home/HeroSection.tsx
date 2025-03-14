@@ -60,7 +60,7 @@ export const HeroSection: React.FC = () => {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-20"></div>
       </div>
 
-      <div className="container mx-auto px-6 md:px-8">
+      <div className="container mx-auto px-6 md:px-8 py-[30px]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           <div className="space-y-4 max-w-2xl">
             <div className={cn("transition-all duration-700 transform", isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10")}>
