@@ -21,6 +21,24 @@ interface Testimonial {
 export const TestimonialsSection: React.FC = () => {
   const testimonials: Testimonial[] = [
     {
+      id: "5",
+      name: "Ambika Bharadwaj",
+      course: "2nd Semester Dual Bachelors Interior Architecture",
+      videoId: "NPUpGuVxiyQ"
+    },
+    {
+      id: "6",
+      name: "Rose Tanwar",
+      course: "2nd Semester B.Sc Interior Design",
+      videoId: "DVcocyw-FBI"
+    },
+    {
+      id: "7",
+      name: "Sahana B.S.",
+      course: "B.Sc Final Year Interior Design",
+      videoId: "4E7edmlMGRU"
+    },
+    {
       id: "1",
       name: "Radhika",
       course: "Interior Design",
