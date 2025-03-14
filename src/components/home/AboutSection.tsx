@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
@@ -89,16 +90,16 @@ export const AboutSection: React.FC = () => {
         <RevealSection delay={200}>
           <div className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8">
             {[{
-            number: "15+",
+            number: "8+",
             label: "Years of Excellence"
           }, {
-            number: "500+",
+            number: "200+",
             label: "Industry Partners"
           }, {
-            number: "5000+",
+            number: "500+",
             label: "Alumni Network"
           }, {
-            number: "50+",
+            number: "10+",
             label: "Awards & Recognitions"
           }].map((stat, index) => <div key={index} className="text-center">
                 <div className="text-4xl font-display font-bold text-bsd-orange">{stat.number}</div>
