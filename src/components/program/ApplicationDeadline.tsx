@@ -1,43 +1,28 @@
 
 import React from 'react';
 import { Badge } from "@/components/ui/badge";
-import { Calendar, Clock } from "lucide-react";
+import { Clock } from "lucide-react";
 
-interface ApplicationDeadlineProps {
-  lastDate: string;
-  startDate: string;
-  seatsAvailable: number;
-}
-
-export const ApplicationDeadline: React.FC<ApplicationDeadlineProps> = ({
-  lastDate,
-  startDate,
-  seatsAvailable
-}) => {
+export const ApplicationDeadline: React.FC = () => {
+  // Fixed deadline information instead of dynamic calculation
+  const formattedDeadline = "August 15, 2025";
+  const daysRemaining = 45; // Static value to avoid the infinite loop issue
+  
   return (
-    <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
-      <div className="flex items-center">
-        <Badge variant="outline" className="bg-white text-bsd-orange border-bsd-orange px-3 py-1.5">
-          Application Open
-        </Badge>
-        <div className="ml-auto flex items-center gap-4">
-          <div className="flex items-center text-sm">
-            <Calendar className="w-4 h-4 mr-1.5 text-bsd-orange" />
-            <span>Last Date: {lastDate}</span>
-          </div>
-          <div className="flex items-center text-sm">
-            <Clock className="w-4 h-4 mr-1.5 text-bsd-orange" />
-            <span>Starts: {startDate}</span>
-          </div>
-        </div>
+    <div className="flex flex-col md:flex-row items-center gap-3 bg-bsd-orange/10 rounded-xl p-4 mt-4">
+      <Badge variant="bsdOrange" className="font-semibold text-base px-3 py-1.5">
+        Application Deadline
+      </Badge>
+      
+      <div className="flex items-center gap-2 text-bsd-gray">
+        <Clock className="w-5 h-5 text-bsd-orange" />
+        <span className="font-medium">{formattedDeadline}</span>
       </div>
-      <div className="mt-3 flex items-center justify-between">
-        <div className="text-sm text-foreground/70">
-          <span className="font-semibold text-bsd-gray">{seatsAvailable}</span> seats available for upcoming batch
-        </div>
-        <button className="bg-bsd-orange hover:bg-bsd-orange/90 text-white text-sm font-medium py-1.5 px-4 rounded transition-colors">
-          Apply Now
-        </button>
+      
+      <div className="flex items-center gap-1 ml-auto">
+        <span className="text-bsd-gray">Only</span>
+        <span className="font-bold text-xl text-bsd-orange">{daysRemaining}</span>
+        <span className="text-bsd-gray">days left to apply</span>
       </div>
     </div>
   );

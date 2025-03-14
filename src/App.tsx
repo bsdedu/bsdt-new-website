@@ -11,7 +11,6 @@ import AboutBSDT from "./pages/AboutBSDT";
 import LeadershipGovernance from "./pages/LeadershipGovernance";
 import ProgramInteriorDesign from "./pages/ProgramInteriorDesign";
 import ProgramGraphicDesign from "./pages/ProgramGraphicDesign";
-import ProgramAnimationGameDesign from "./pages/ProgramAnimationGameDesign";
 
 const queryClient = new QueryClient();
 
@@ -28,7 +27,6 @@ const App = () => (
             <Route path="/leadership-governance" element={<LeadershipGovernance />} />
             <Route path="/programs/bsc-interior-design" element={<ProgramInteriorDesign />} />
             <Route path="/programs/bva-graphic-design" element={<ProgramGraphicDesign />} />
-            <Route path="/programs/bva-animation-game-design" element={<ProgramAnimationGameDesign />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
