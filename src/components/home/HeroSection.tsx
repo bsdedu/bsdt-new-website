@@ -48,7 +48,14 @@ export const HeroSection: React.FC = () => {
             <div className={cn("pt-12 transition-all duration-700 delay-500", isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10")}>
               <p className="text-sm text-bsd-gray mb-2">Recognized By</p>
               <div className="flex flex-wrap items-center gap-8">
-                {[1, 2, 3, 4].map(i => <div key={i} className="h-8 w-20 bg-bsd-light-gray rounded-md flex items-center justify-center">
+                <div className="h-16 flex items-center justify-center">
+                  <img 
+                    src="/lovable-uploads/b6c8d2f5-ebe8-45b6-98da-bacea2355570.png" 
+                    alt="Bengaluru North University Logo" 
+                    className="h-16 object-contain"
+                  />
+                </div>
+                {[2, 3, 4].map(i => <div key={i} className="h-10 w-24 bg-bsd-light-gray rounded-md flex items-center justify-center">
                     <span className="text-xs text-bsd-gray/60">Partner {i}</span>
                   </div>)}
               </div>
@@ -64,7 +71,7 @@ export const HeroSection: React.FC = () => {
               
               {/* Caption overlay */}
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-bsd-gray/60 to-transparent text-white">
-                <p className="text-base md:text-lg font-bold">Innovative learning at BSD Design & Tech College</p>
+                <p className="text-xl md:text-2xl font-bold">Innovative learning at BSD Design & Tech College</p>
               </div>
             </div>
             
