@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -75,7 +74,11 @@ const ProgramGraphicDesign = () => {
                 </div>
                 
                 {/* Application Deadline Component */}
-                <ApplicationDeadline />
+                <ApplicationDeadline 
+                  lastDate="May 31, 2024" 
+                  startDate="June 15, 2024" 
+                  seatsAvailable={80}
+                />
               </div>
             </RevealSection>
 
@@ -608,128 +611,4 @@ const ProgramGraphicDesign = () => {
           </RevealSection>
 
           <RevealSection delay={100}>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-              <div className="relative rounded-2xl overflow-hidden h-[500px]">
-                <img 
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop" 
-                  alt="BSD Studio" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent">
-                  <div className="absolute bottom-0 left-0 p-8">
-                    <h3 className="text-white text-2xl font-bold mb-2">BSD Studio</h3>
-                    <p className="text-white/80">Students collaborating on client branding projects</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-bsd-gray">From Classroom to Client Projects</h3>
-                <p className="text-foreground/70">
-                  The BSD Studio is our in-house design agency that takes on real commercial projects. What makes BSDT unique is that students work alongside faculty and industry professionals on actual client briefs, gaining invaluable hands-on experience.
-                </p>
-                
-                <div className="space-y-4 pt-2">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-4 h-4 text-bsd-orange" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-bsd-gray">Professional Client Experience</h4>
-                      <p className="text-sm text-foreground/70">Work on branding, advertising, and digital projects for real companies</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-4 h-4 text-bsd-orange" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-bsd-gray">Guided by Industry Leaders</h4>
-                      <p className="text-sm text-foreground/70">Learn professional workflows and client management from experienced designers</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-4 h-4 text-bsd-orange" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-bsd-gray">Portfolio of Published Work</h4>
-                      <p className="text-sm text-foreground/70">Graduate with actual commercial projects in your professional portfolio</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-4 h-4 text-bsd-orange" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-bsd-gray">Industry Connections</h4>
-                      <p className="text-sm text-foreground/70">Build relationships with potential employers before graduation</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="pt-4">
-                  <AnimatedButton asChild>
-                    <a href="#enquiry-form" className="hover:no-underline">Apply Now</a>
-                  </AnimatedButton>
-                </div>
-              </div>
-            </div>
-          </RevealSection>
-        </div>
-      </section>
-
-      {/* Eligibility & Admission Section */}
-      <section className="py-16 bg-bsd-light-gray">
-        <div className="container mx-auto px-6 md:px-8">
-          <RevealSection>
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <Badge variant="bsdOrange" className="mb-4">ADMISSIONS</Badge>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
-                Eligibility & Application Process
-              </h2>
-              <p className="mt-4 text-foreground/70">
-                Join our BVA Graphic & Communication Design program and embark on a journey to become a creative professional who shapes visual culture.
-              </p>
-            </div>
-          </RevealSection>
-
-          <RevealSection delay={100}>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-              <Card>
-                <CardHeader>
-                  <h3 className="text-xl font-semibold text-bsd-gray">Eligibility Criteria</h3>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-4">
-                    <li className="flex items-start">
-                      <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <Check className="w-4 h-4 text-bsd-orange" />
-                      </div>
-                      <div className="ml-3">
-                        <h4 className="font-medium text-bsd-gray">Academic Qualification</h4>
-                        <p className="text-sm text-foreground/70">10+2 (Higher Secondary) or equivalent with a minimum of 50% aggregate marks from any recognized board</p>
-                      </div>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-          </RevealSection>
-        </div>
-      </section>
-
-      {/* Enquiry Form Section with id for scroll target */}
-      <div id="enquiry-form">
-        <EnquiryFormSection />
-      </div>
-      
-      <Footer />
-    </>
-  );
-};
-
-export default ProgramGraphicDesign;
+            <

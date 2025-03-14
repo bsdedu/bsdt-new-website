@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -75,7 +74,11 @@ const ProgramInteriorDesign = () => {
                 </div>
                 
                 {/* Application Deadline Component */}
-                <ApplicationDeadline />
+                <ApplicationDeadline 
+                  lastDate="May 31, 2024" 
+                  startDate="June 15, 2024" 
+                  seatsAvailable={60}
+                />
               </div>
             </RevealSection>
 
@@ -615,26 +618,4 @@ const ProgramInteriorDesign = () => {
                         <Check className="w-4 h-4 text-bsd-orange" />
                       </div>
                       <div className="ml-3">
-                        <h4 className="font-medium text-bsd-gray">Academic Qualification</h4>
-                        <p className="text-sm text-foreground/70">10+2 (Higher Secondary) or equivalent with a minimum of 50% aggregate marks from any recognized board</p>
-                      </div>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-          </RevealSection>
-        </div>
-      </section>
-
-      {/* Enquiry Form Section with id for scroll target */}
-      <div id="enquiry-form">
-        <EnquiryFormSection />
-      </div>
-      
-      <Footer />
-    </>
-  );
-};
-
-export default ProgramInteriorDesign;
+                        <h4 className="font-medium text-bs
