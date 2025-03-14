@@ -4,6 +4,7 @@ import { RevealSection } from "../ui-elements/RevealSection";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
 import { CheckCircle, BrainCircuit } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 export const AboutSection: React.FC = () => {
   return (
@@ -18,14 +19,16 @@ export const AboutSection: React.FC = () => {
       <div className="container mx-auto px-6 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <RevealSection direction="right">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-border/30">
-              <div className="absolute inset-0 bg-gradient-to-br from-bsd-orange/10 to-bsd-gray/10"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center p-6">
-                  <p className="text-sm text-foreground/60 mb-4">Campus Life Placeholder</p>
-                  <div className="w-16 h-1 bg-bsd-orange/20 mx-auto"></div>
-                </div>
-              </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-xl border border-border/30">
+              <AspectRatio ratio={16/9}>
+                <iframe 
+                  src="https://www.youtube.com/embed/bWy4EH-B3tw" 
+                  title="BSDT Campus Life Video"
+                  className="w-full h-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowFullScreen
+                ></iframe>
+              </AspectRatio>
 
               {/* Image decoration */}
               <div className="absolute -top-6 -right-6 w-32 h-32 bg-bsd-orange/10 rounded-full blur-xl opacity-60"></div>
