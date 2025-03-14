@@ -4,6 +4,7 @@ import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "../ui-elements/Card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { useLocation } from 'react-router-dom';
 
 type FacultyMember = {
   name: string;
@@ -13,7 +14,16 @@ type FacultyMember = {
 };
 
 export const FacultySection: React.FC = () => {
-  const facultyMembers: FacultyMember[] = [
+  const location = useLocation();
+  const programPath = location.pathname;
+  
+  // Determine which program is active
+  const isInteriorDesignProgram = programPath.includes('interior-design');
+  const isGraphicDesignProgram = programPath.includes('graphic-design');
+  const isAnimationGameDesignProgram = programPath.includes('animation-game-design');
+  
+  // Interior Design Faculty
+  const interiorFaculty: FacultyMember[] = [
     {
       name: "Dipti Dineshwar",
       role: "Senior Design Faculty",
@@ -33,6 +43,64 @@ export const FacultySection: React.FC = () => {
       imageUrl: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?fit=crop&w=300&h=300",
     },
   ];
+  
+  // Graphic Design Faculty
+  const graphicFaculty: FacultyMember[] = [
+    {
+      name: "Ravi Desai",
+      role: "Head of Graphic Design",
+      bio: "A veteran graphic designer with over 15 years of experience working with major brands in India and abroad. Ravi specializes in brand identity design and has won multiple national design awards. He holds a Master's degree from NID and has previously taught at leading design institutes.",
+      imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=300&h=300",
+    },
+    {
+      name: "Neha Sharma",
+      role: "UI/UX Design Faculty",
+      bio: "A digital design specialist with extensive experience in user interface and experience design for tech companies. Neha has worked with startups and established firms, bringing real-world insights to her teaching. She holds a degree from IDC, IIT Bombay and various UX certifications.",
+      imageUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?fit=crop&w=300&h=300",
+    },
+    {
+      name: "Arun Patel",
+      role: "Typography & Editorial Design Faculty",
+      bio: "A typography expert and editorial designer who has worked with leading publishing houses. Arun brings his passion for print and digital typography to the classroom. With a background in both traditional and contemporary design practices, he bridges classic design principles with modern techniques.",
+      imageUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?fit=crop&w=300&h=300",
+    },
+  ];
+  
+  // Animation and Game Design Faculty
+  const animationFaculty: FacultyMember[] = [
+    {
+      name: "Vikram Malhotra",
+      role: "Head of Animation Department",
+      bio: "An accomplished animator with 12+ years of experience at major studios including Pixar and DreamWorks. Vikram has contributed to award-winning films and holds an MFA in Animation from Savannah College of Art and Design. His expertise spans traditional and digital animation techniques.",
+      imageUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?fit=crop&w=300&h=300",
+    },
+    {
+      name: "Ananya Menon",
+      role: "Game Design & Development Faculty",
+      bio: "A game designer with experience at Ubisoft and Electronic Arts, Ananya brings industry best practices to the classroom. She has worked on AAA titles and indie games, with expertise in game mechanics, level design, and Unity/Unreal Engine development. She holds a degree from DigiPen Institute of Technology.",
+      imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?fit=crop&w=300&h=300",
+    },
+    {
+      name: "Rohan Kapoor",
+      role: "VFX & 3D Modeling Specialist",
+      bio: "A visual effects artist with credits in Bollywood and international productions. Rohan specializes in 3D modeling, texturing, and compositing with expertise in industry-standard software like Maya, ZBrush, and Houdini. He has previously worked at Prime Focus and holds a degree from FTII Pune.",
+      imageUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?fit=crop&w=300&h=300",
+    },
+  ];
+  
+  // Select faculty based on program
+  let facultyMembers: FacultyMember[] = [];
+  
+  if (isInteriorDesignProgram) {
+    facultyMembers = interiorFaculty;
+  } else if (isGraphicDesignProgram) {
+    facultyMembers = graphicFaculty;
+  } else if (isAnimationGameDesignProgram) {
+    facultyMembers = animationFaculty;
+  } else {
+    // Default to interior faculty if no match
+    facultyMembers = interiorFaculty;
+  }
 
   return (
     <section className="py-16 bg-white">

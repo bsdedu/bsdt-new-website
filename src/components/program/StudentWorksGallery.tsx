@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
@@ -15,20 +14,35 @@ import { useLocation } from 'react-router-dom';
 
 export const StudentWorksGallery: React.FC = () => {
   const location = useLocation();
-  const isInteriorDesignProgram = location.pathname.includes('interior-design');
+  const programPath = location.pathname;
+  
+  // Determine which program is active
+  const isInteriorDesignProgram = programPath.includes('interior-design');
+  const isGraphicDesignProgram = programPath.includes('graphic-design');
+  const isAnimationGameDesignProgram = programPath.includes('animation-game-design');
   
   // Categories based on program type
-  const projectCategories = isInteriorDesignProgram 
-    ? [
-        { id: "residential", name: "Residential Spaces" },
-        { id: "commercial", name: "Commercial Projects" },
-        { id: "conceptual", name: "Conceptual Designs" },
-      ]
-    : [
-        { id: "branding", name: "Branding Projects" },
-        { id: "digital", name: "Digital Design" },
-        { id: "print", name: "Print & Editorial" },
-      ];
+  let projectCategories = [];
+  
+  if (isInteriorDesignProgram) {
+    projectCategories = [
+      { id: "residential", name: "Residential Spaces" },
+      { id: "commercial", name: "Commercial Projects" },
+      { id: "conceptual", name: "Conceptual Designs" },
+    ];
+  } else if (isGraphicDesignProgram) {
+    projectCategories = [
+      { id: "branding", name: "Branding Projects" },
+      { id: "digital", name: "Digital Design" },
+      { id: "print", name: "Print & Editorial" },
+    ];
+  } else if (isAnimationGameDesignProgram) {
+    projectCategories = [
+      { id: "3danimation", name: "3D Animation" },
+      { id: "gamedesign", name: "Game Design" },
+      { id: "vfx", name: "VFX & Compositing" },
+    ];
+  }
   
   // Program-specific projects data
   const interiorProjects = {
@@ -73,11 +87,45 @@ export const StudentWorksGallery: React.FC = () => {
     ],
   };
   
-  // Choose projects based on program type
-  const projects = isInteriorDesignProgram ? interiorProjects : graphicProjects;
+  const animationProjects = {
+    "3danimation": [
+      { id: 1, title: "Animated Short Film", student: "Aryan Sharma", year: "2023", image: "https://images.unsplash.com/photo-1600244283510-23cf9cfc7fbb?w=800&auto=format&fit=crop" },
+      { id: 2, title: "Character Animation Reel", student: "Neha Singh", year: "2023", image: "https://images.unsplash.com/photo-1507457379470-08b800bebc67?w=800&auto=format&fit=crop" },
+      { id: 3, title: "Animated Commercial", student: "Rajiv Kumar", year: "2022", image: "https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=800&auto=format&fit=crop" },
+      { id: 4, title: "3D Character Design", student: "Priya Agarwal", year: "2022", image: "https://images.unsplash.com/photo-1580721716958-66025aa1d82d?w=800&auto=format&fit=crop" },
+    ],
+    "gamedesign": [
+      { id: 1, title: "Adventure Game Prototype", student: "Vikram Rao", year: "2023", image: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=800&auto=format&fit=crop" },
+      { id: 2, title: "Mobile Game UI Design", student: "Anita Reddy", year: "2023", image: "https://images.unsplash.com/photo-1614294148960-9aa740632a87?w=800&auto=format&fit=crop" },
+      { id: 3, title: "Game Environment Design", student: "Karan Shah", year: "2022", image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&auto=format&fit=crop" },
+      { id: 4, title: "Game Character Modeling", student: "Maya Mehta", year: "2022", image: "https://images.unsplash.com/photo-1566577739112-5180d4bf9390?w=800&auto=format&fit=crop" },
+    ],
+    vfx: [
+      { id: 1, title: "Visual Effects Composition", student: "Arun Patel", year: "2023", image: "https://images.unsplash.com/photo-1626379801357-537572de4ad6?w=800&auto=format&fit=crop" },
+      { id: 2, title: "Digital Compositing Project", student: "Leela Gupta", year: "2023", image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&auto=format&fit=crop" },
+      { id: 3, title: "Motion Graphics Portfolio", student: "Dhruv Malhotra", year: "2022", image: "https://images.unsplash.com/photo-1561059510-d8f1de631204?w=800&auto=format&fit=crop" },
+      { id: 4, title: "Special Effects Reel", student: "Reshma Kapoor", year: "2022", image: "https://images.unsplash.com/photo-1594022078633-47323a1e671e?w=800&auto=format&fit=crop" },
+    ],
+  };
   
-  // Choose default tab based on program type
-  const defaultTabValue = isInteriorDesignProgram ? "residential" : "branding";
+  // Choose projects and default tab based on program type
+  let projects = {};
+  let defaultTabValue = "";
+  let showcaseDescription = "";
+  
+  if (isInteriorDesignProgram) {
+    projects = interiorProjects;
+    defaultTabValue = "residential";
+    showcaseDescription = "Explore outstanding interior design projects created by our talented students, showcasing their creativity, technical skills, and spatial thinking.";
+  } else if (isGraphicDesignProgram) {
+    projects = graphicProjects;
+    defaultTabValue = "branding";
+    showcaseDescription = "Explore outstanding graphic design projects created by our talented students, showcasing their creativity, technical skills, and design thinking.";
+  } else if (isAnimationGameDesignProgram) {
+    projects = animationProjects;
+    defaultTabValue = "3danimation";
+    showcaseDescription = "Explore outstanding animation and game design projects created by our talented students, showcasing their creativity, technical expertise, and storytelling abilities.";
+  }
 
   return (
     <section className="py-16 bg-bsd-light-gray">
@@ -89,9 +137,7 @@ export const StudentWorksGallery: React.FC = () => {
               Award-Winning Student Works
             </h2>
             <p className="mt-4 text-foreground/70">
-              {isInteriorDesignProgram 
-                ? "Explore outstanding interior design projects created by our talented students, showcasing their creativity, technical skills, and spatial thinking."
-                : "Explore outstanding graphic design projects created by our talented students, showcasing their creativity, technical skills, and design thinking."}
+              {showcaseDescription}
             </p>
           </div>
         </RevealSection>
