@@ -1,19 +1,19 @@
-
 import React from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
 import { GraduationCap, Handshake, Globe, Users, BookOpen, Box } from "lucide-react";
 import { Card, CardHeader, CardContent } from "../ui-elements/Card";
-
 interface FeatureCardProps {
   icon: React.ReactNode;
   title: string;
   description: string;
 }
-
-const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description }) => {
-  return (
-    <Card isHoverable className="h-full">
+const FeatureCard: React.FC<FeatureCardProps> = ({
+  icon,
+  title,
+  description
+}) => {
+  return <Card isHoverable className="h-full">
       <CardHeader className="">
         <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-4">
           {icon}
@@ -23,46 +23,35 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description }) =
       <CardContent className="">
         <p className="text-foreground/70">{description}</p>
       </CardContent>
-    </Card>
-  );
+    </Card>;
 };
-
 export const WhyChooseSection: React.FC = () => {
-  const features = [
-    {
-      icon: <GraduationCap className="w-6 h-6 text-bsd-orange" />,
-      title: "Future-Ready Curriculum",
-      description: "Programs aligned with industry trends, integrating AI, IoT, and emerging technologies."
-    },
-    {
-      icon: <BookOpen className="w-6 h-6 text-bsd-orange" />,
-      title: "Hands-on Learning Approach",
-      description: "Live projects, design studios and workshops ensure practical exposure."
-    },
-    {
-      icon: <Handshake className="w-6 h-6 text-bsd-orange" />,
-      title: "Internships & Placement Assistance",
-      description: "Strong industry network for internships, job placements, and career mentoring with on-campus drives."
-    },
-    {
-      icon: <Users className="w-6 h-6 text-bsd-orange" />,
-      title: "Student-Centric Learning Environment",
-      description: "Small class sizes, interactive sessions, and a focus on individual growth."
-    },
-    {
-      icon: <Globe className="w-6 h-6 text-bsd-orange" />,
-      title: "Global Exposure & Industry Tie-Ups",
-      description: "Collaborations with top brands, study tours, and international guest lectures."
-    },
-    {
-      icon: <Box className="w-6 h-6 text-bsd-orange" />,
-      title: "Innovation Lab Access",
-      description: "All programs include access to our state-of-the-art innovation labs equipped with the latest technologies for prototyping and experimentation."
-    }
-  ];
-
-  return (
-    <section id="why-choose" className="py-16 bg-white relative overflow-hidden">
+  const features = [{
+    icon: <GraduationCap className="w-6 h-6 text-bsd-orange" />,
+    title: "Future-Ready Curriculum",
+    description: "Programs aligned with industry trends, integrating AI, IoT, and emerging technologies."
+  }, {
+    icon: <BookOpen className="w-6 h-6 text-bsd-orange" />,
+    title: "Hands-on Learning Approach",
+    description: "Live projects, design studios and workshops ensure practical exposure."
+  }, {
+    icon: <Handshake className="w-6 h-6 text-bsd-orange" />,
+    title: "Internships & Placement Assistance",
+    description: "Strong industry network for internships, job placements, and career mentoring with on-campus drives."
+  }, {
+    icon: <Users className="w-6 h-6 text-bsd-orange" />,
+    title: "Student-Centric Learning Environment",
+    description: "Small class sizes, interactive sessions, and a focus on individual growth."
+  }, {
+    icon: <Globe className="w-6 h-6 text-bsd-orange" />,
+    title: "Global Exposure & Industry Tie-Ups",
+    description: "Collaborations with top brands, study tours, and international guest lectures."
+  }, {
+    icon: <Box className="w-6 h-6 text-bsd-orange" />,
+    title: "Innovation Lab Access",
+    description: "All programs include access to our state-of-the-art innovation labs equipped with the latest technologies for prototyping and experimentation."
+  }];
+  return <section id="why-choose" className="bg-white relative overflow-hidden py-[30px]">
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-radial from-white to-transparent opacity-70"></div>
@@ -85,18 +74,11 @@ export const WhyChooseSection: React.FC = () => {
 
         <RevealSection delay={100}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature, index) => (
-              <RevealSection key={index} delay={index * 100}>
-                <FeatureCard
-                  icon={feature.icon}
-                  title={feature.title}
-                  description={feature.description}
-                />
-              </RevealSection>
-            ))}
+            {features.map((feature, index) => <RevealSection key={index} delay={index * 100}>
+                <FeatureCard icon={feature.icon} title={feature.title} description={feature.description} />
+              </RevealSection>)}
           </div>
         </RevealSection>
       </div>
-    </section>
-  );
+    </section>;
 };
