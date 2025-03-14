@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Navbar } from '../components/layout/Navbar';
@@ -669,31 +668,3 @@ const ProgramAnimationGameDesign: React.FC = () => {
                         <span className="text-bsd-orange mr-2">•</span>
                         <span><strong>Phone:</strong> +91 80 4611 3399</span>
                       </li>
-                      <li className="flex items-start">
-                        <span className="text-bsd-orange mr-2">•</span>
-                        <span><strong>WhatsApp:</strong> +91 91131 91131</span>
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  <div className="mt-8">
-                    <button className="w-full bg-bsd-orange hover:bg-bsd-orange/90 text-white font-medium py-3 px-6 rounded-lg transition-colors">
-                      Request Information
-                    </button>
-                    <button className="w-full mt-3 border border-bsd-orange text-bsd-orange hover:bg-bsd-orange/10 font-medium py-3 px-6 rounded-lg transition-colors">
-                      Apply Now
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </RevealSection>
-        </div>
-      </section>
-
-      <Footer />
-    </>
-  );
-};
-
-export default ProgramAnimationGameDesign;

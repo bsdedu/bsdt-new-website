@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
@@ -22,7 +23,7 @@ export const StudentWorksGallery: React.FC = () => {
   const isAnimationGameDesignProgram = programPath.includes('animation-game-design');
   
   // Categories based on program type
-  let projectCategories = [];
+  let projectCategories: { id: string; name: string }[] = [];
   
   if (isInteriorDesignProgram) {
     projectCategories = [
@@ -94,7 +95,7 @@ export const StudentWorksGallery: React.FC = () => {
       { id: 3, title: "Animated Commercial", student: "Rajiv Kumar", year: "2022", image: "https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=800&auto=format&fit=crop" },
       { id: 4, title: "3D Character Design", student: "Priya Agarwal", year: "2022", image: "https://images.unsplash.com/photo-1580721716958-66025aa1d82d?w=800&auto=format&fit=crop" },
     ],
-    "gamedesign": [
+    gamedesign: [
       { id: 1, title: "Adventure Game Prototype", student: "Vikram Rao", year: "2023", image: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=800&auto=format&fit=crop" },
       { id: 2, title: "Mobile Game UI Design", student: "Anita Reddy", year: "2023", image: "https://images.unsplash.com/photo-1614294148960-9aa740632a87?w=800&auto=format&fit=crop" },
       { id: 3, title: "Game Environment Design", student: "Karan Shah", year: "2022", image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&auto=format&fit=crop" },
@@ -109,9 +110,9 @@ export const StudentWorksGallery: React.FC = () => {
   };
   
   // Choose projects and default tab based on program type
-  let projects = {};
-  let defaultTabValue = "";
-  let showcaseDescription = "";
+  let projects: Record<string, any[]> = {};
+  let defaultTabValue: string = "";
+  let showcaseDescription: string = "";
   
   if (isInteriorDesignProgram) {
     projects = interiorProjects;
