@@ -6,7 +6,6 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input"; 
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Send } from "lucide-react";
 
 export const ContactSection: React.FC = () => {
   return (
@@ -92,10 +91,11 @@ export const ContactSection: React.FC = () => {
                 />
               </div>
 
-              <AnimatedButton type="submit" className="w-full md:w-auto md:float-right flex items-center">
-                <span>Send Message</span>
-                <Send className="h-4 w-4 ml-2" />
-              </AnimatedButton>
+              <div className="flex justify-center">
+                <AnimatedButton type="submit" className="w-full md:w-auto">
+                  <span>Send Message</span>
+                </AnimatedButton>
+              </div>
             </form>
           </div>
         </RevealSection>
