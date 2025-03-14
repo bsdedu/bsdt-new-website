@@ -4,6 +4,11 @@ import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
 import { RevealSection } from '../components/ui-elements/RevealSection';
 import { Separator } from '@/components/ui/separator';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Card, CardContent, CardHeader } from '@/components/ui-elements/Card';
+import { UserIcon, GraduationCap, Users, Shield, Award, Flag, Briefcase, HandshakeIcon } from 'lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 const LeadershipGovernance = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -13,84 +18,149 @@ const LeadershipGovernance = () => {
     setTimeout(() => setIsLoaded(true), 100);
   }, []);
 
-  // Leadership team data
+  // Leadership team data - updated with new content
   const leadershipTeam = [
     {
-      name: "Dr. Arun Kumar",
-      position: "Founder & Chairman",
-      bio: "Dr. Kumar brings over 25 years of experience in design education and industry practice. Prior to founding BSDT, he served as the Head of Design at a leading multinational corporation and held faculty positions at prestigious design institutions.",
+      name: "Dineshwar S",
+      position: "Chairman",
+      bio: "A seasoned design professional with over 30 years of experience, Dineshwar S is the guiding force behind BSDT's academic and industry-driven vision. As Co-founder of BSD Educational Trust and Chairman of BSDT, he ensures that the institution remains cutting-edge, globally competitive, and deeply rooted in design excellence.",
       image: "/lovable-uploads/e0344460-76de-492d-b4fc-2b7557c96db5.png"
     },
     {
-      name: "Prof. Meera Nair",
-      position: "Academic Director",
-      bio: "Prof. Nair oversees academic affairs and curriculum development. With a PhD in Design Education and extensive teaching experience, she ensures BSDT's educational offerings remain cutting-edge and aligned with industry needs.",
+      name: "Praveen Nandakumar",
+      position: "Co-Chairman",
+      bio: "As Co-Chairman of BSDT, Praveen Nandakumar is the driving force behind its vision and expansion. He leads the institution across academics, strategy, operations, marketing, and industry collaborations, ensuring BSDT remains at the forefront of design and technology education.",
       image: "/lovable-uploads/b0bd1350-1b3d-44a7-a043-b876650c169d.png"
     },
     {
-      name: "Mr. Suresh Patel",
-      position: "Chief Technology Officer",
-      bio: "Mr. Patel leads BSDT's technology initiatives and digital transformation efforts. His background in both technology development and design thinking helps bridge these disciplines across our programs.",
+      name: "Karthik Nandakumar",
+      position: "Secretary & Treasurer",
+      bio: "Karthik Nandakumar oversees BSDT's daily operations, financial planning, and long-term strategy. With a Master's in Finance & Management from the University of Exeter, he ensures efficient resource allocation, institutional growth, and operational excellence.",
       image: "/lovable-uploads/7d078e54-32f9-4dcf-9af6-9717145d71b7.png"
     },
     {
-      name: "Dr. Lakshmi Subramanian",
-      position: "Director of Research",
-      bio: "Dr. Subramanian drives BSDT's research agenda, fostering innovation and academic excellence. Her work has been published in leading international journals and she maintains strong connections with research institutions worldwide.",
+      name: "Ar. Preethi Dineshwar",
+      position: "Director of Academics",
+      bio: "An accomplished architect and academician, Ar. Preethi Dineshwar has been at BSDT since its inception. With over 25 years of experience in architecture and nearly a decade in education, she plays a pivotal role in curriculum development, faculty mentorship, and student engagement.",
       image: "/lovable-uploads/cf7871df-3c22-4504-ae9f-824fd6ec7804.png"
+    },
+    {
+      name: "Sharan Desai",
+      position: "Principal",
+      bio: "A specialist in Urban Design & City Planning, Sharan Desai is committed to fostering design innovation that impacts society. His leadership in academic excellence, events, and industry collaborations strengthens BSDT's position as a premier institution in Design & Tech education.",
+      image: "/lovable-uploads/9c2c1fa3-d5a1-4a00-964d-96697da1bbeb.png"
     }
   ];
 
-  // Advisory board data
-  const advisoryBoard = [
+  // Academic Council data
+  const academicCouncil = [
     {
-      name: "Mr. Vikram Mehta",
-      position: "CEO, DesignFirst Solutions",
-      expertise: "Product Design & Innovation"
+      name: "Mr Sharan Desai",
+      position: "Chairperson"
     },
     {
-      name: "Ms. Ananya Singh",
-      position: "Creative Director, Global Design Co.",
-      expertise: "Visual Communication & Branding"
+      name: "Ar Preethi Dineshwar",
+      position: "Member"
     },
     {
-      name: "Dr. Rajiv Menon",
-      position: "Former Dean, National Institute of Design",
-      expertise: "Design Education & Policy"
+      name: "Ar Dipti Dineshwar",
+      position: "Member"
     },
     {
-      name: "Ms. Priya Narayan",
-      position: "Founder, Tech Innovators Hub",
-      expertise: "Technology Integration & Entrepreneurship"
+      name: "Mr Ritesh L",
+      position: "Member"
     },
     {
-      name: "Mr. Thomas Chen",
-      position: "Global UX Lead, TechGiant Inc.",
-      expertise: "User Experience & Digital Products"
+      name: "Ar Adhitha Raja Varma",
+      position: "Member"
     }
   ];
 
-  // Governance structure data
-  const governanceStructure = [
+  // Board of Governing Council data
+  const governingCouncil = [
     {
-      name: "Board of Trustees",
-      description: "The highest governing body of BSDT, responsible for strategic direction, major policy decisions, and institutional oversight."
+      name: "Ar S Dineshwar",
+      position: "Chairman"
     },
     {
-      name: "Executive Committee",
-      description: "Handles operational management and implementation of policies set by the Board of Trustees."
+      name: "Mr. Praveen Kumar Nandakumar",
+      position: "Co-Chairman"
     },
     {
-      name: "Academic Council",
-      description: "Oversees curriculum development, academic standards, and faculty affairs to ensure educational excellence."
+      name: "Mr. Sharan Desai",
+      position: "Principal & Ex-officio Member"
     },
     {
-      name: "Student Affairs Committee",
-      description: "Focuses on student welfare, extracurricular activities, and campus life enhancement."
+      name: "Ar Preethi Dineshwar",
+      position: "Director – Academics"
     },
     {
-      name: "Industry Advisory Panel",
-      description: "Provides insights on industry trends and helps align academic programs with market needs."
+      name: "Mr. Karthik Nandakumar",
+      position: "Secretary"
+    },
+    {
+      name: "Ar Dipti Dineshwar",
+      position: "Head Academics"
+    },
+    {
+      name: "Mrs. Monisha Reddy T",
+      position: "Head Marketing"
+    },
+    {
+      name: "Mrs. Mamata Satishkumar Mudnoor",
+      position: "Head HR & Administration"
+    },
+    {
+      name: "Ar Aditha Varma Raja",
+      position: "Asst Professor"
+    },
+    {
+      name: "Advocate N Jaiprakash Rao",
+      position: "Member"
+    },
+    {
+      name: "Advocate Veena Jayaprakash",
+      position: "Member"
+    },
+    {
+      name: "Mr. Prathapan Manickam",
+      position: "Member from Industry"
+    },
+    {
+      name: "Mr. Manjunath",
+      position: "(Ex Syndicate member), Bangalore University"
+    },
+    {
+      name: "Dr Dilip Krishna",
+      position: "Syndicate Member (BNU Appointed Member)"
+    },
+    {
+      name: "Mr Aravind R Chanjeri",
+      position: "Member of Vidyavishak Parishad (BNU Appointed Member)"
+    }
+  ];
+
+  // Core Values Section - Updated
+  const coreValues = [
+    {
+      icon: <Award className="h-8 w-8 text-bsd-orange" />,
+      title: "Excellence",
+      description: "We strive for the highest standards in education, research, and administration."
+    },
+    {
+      icon: <UserIcon className="h-8 w-8 text-bsd-orange" />,
+      title: "Integrity",
+      description: "We uphold the highest ethical standards in all our actions and decisions."
+    },
+    {
+      icon: <Users className="h-8 w-8 text-bsd-orange" />,
+      title: "Inclusivity",
+      description: "We create an environment where diverse perspectives are valued and welcomed."
+    },
+    {
+      icon: <Flag className="h-8 w-8 text-bsd-orange" />,
+      title: "Leadership",
+      description: "We develop leaders who will make positive impacts in their communities and professions."
     }
   ];
 
@@ -113,120 +183,193 @@ const LeadershipGovernance = () => {
           <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
         </section>
 
-        {/* Leadership Team Section */}
+        {/* Leadership Team Section - Updated with new content */}
         <RevealSection>
           <div className="container mx-auto px-6 md:px-8 py-16">
-            <h2 className="text-3xl font-bold text-bsd-gray mb-12 text-center">Our Leadership Team</h2>
+            <div className="flex items-center gap-3 mb-8">
+              <Briefcase className="h-6 w-6 text-bsd-orange" />
+              <h2 className="text-3xl font-bold text-bsd-gray">Our Leadership Team</h2>
+            </div>
             
             <div className="grid md:grid-cols-2 gap-x-8 gap-y-12">
               {leadershipTeam.map((leader, index) => (
-                <div key={index} className="flex flex-col md:flex-row gap-6 items-start">
-                  <div className="w-full md:w-1/3">
-                    <div className="rounded-lg overflow-hidden">
-                      <img 
-                        src={leader.image} 
-                        alt={leader.name} 
-                        className="w-full h-auto aspect-square object-cover"
-                      />
+                <Card key={index} isHoverable className="overflow-hidden border-0">
+                  <div className="flex flex-col md:flex-row gap-6 p-6">
+                    <div className="w-full md:w-1/3">
+                      <div className="rounded-lg overflow-hidden">
+                        <img 
+                          src={leader.image} 
+                          alt={leader.name} 
+                          className="w-full h-auto aspect-square object-cover"
+                        />
+                      </div>
+                    </div>
+                    <div className="w-full md:w-2/3">
+                      <h3 className="text-xl font-semibold text-bsd-gray">{leader.name}</h3>
+                      <p className="text-bsd-orange font-medium mb-3">{leader.position}</p>
+                      <p className="text-bsd-gray/80">{leader.bio}</p>
                     </div>
                   </div>
-                  <div className="w-full md:w-2/3">
-                    <h3 className="text-xl font-semibold text-bsd-gray">{leader.name}</h3>
-                    <p className="text-bsd-orange font-medium mb-3">{leader.position}</p>
-                    <p className="text-bsd-gray/80">{leader.bio}</p>
-                  </div>
-                </div>
+                </Card>
               ))}
             </div>
           </div>
         </RevealSection>
 
-        {/* Governance Structure Section */}
+        {/* Governing Bodies Tabs Section */}
         <RevealSection>
           <div className="bg-gray-50 py-16">
             <div className="container mx-auto px-6 md:px-8">
-              <h2 className="text-3xl font-bold text-bsd-gray mb-12 text-center">Governance Structure</h2>
-              
-              <div className="max-w-3xl mx-auto">
-                {governanceStructure.map((item, index) => (
-                  <div key={index}>
-                    <div className="py-4">
-                      <h3 className="text-xl font-semibold text-bsd-gray mb-2">{item.name}</h3>
-                      <p className="text-bsd-gray/80">{item.description}</p>
-                    </div>
-                    {index < governanceStructure.length - 1 && <Separator />}
-                  </div>
-                ))}
+              <div className="flex items-center gap-3 mb-12">
+                <Shield className="h-6 w-6 text-bsd-orange" />
+                <h2 className="text-3xl font-bold text-bsd-gray">Governing Bodies & Councils</h2>
               </div>
-            </div>
-          </div>
-        </RevealSection>
-
-        {/* Advisory Board Section */}
-        <RevealSection>
-          <div className="container mx-auto px-6 md:px-8 py-16">
-            <h2 className="text-3xl font-bold text-bsd-gray mb-12 text-center">Advisory Board</h2>
-            
-            <div className="grid md:grid-cols-3 gap-6">
-              {advisoryBoard.map((advisor, index) => (
-                <div key={index} className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <h3 className="text-xl font-semibold text-bsd-gray">{advisor.name}</h3>
-                  <p className="text-bsd-orange mb-3">{advisor.position}</p>
-                  <div className="inline-block bg-bsd-orange/10 px-3 py-1 rounded-full text-sm text-bsd-orange">
-                    {advisor.expertise}
-                  </div>
-                </div>
-              ))}
+              
+              <div className="flex flex-col items-center">
+                <Tabs defaultValue="governing" className="w-full max-w-4xl">
+                  <TabsList className="w-full grid grid-cols-2 mb-8">
+                    <TabsTrigger value="governing" className="text-base">Board of Governing Council</TabsTrigger>
+                    <TabsTrigger value="academic" className="text-base">Academic Council</TabsTrigger>
+                  </TabsList>
+                  
+                  <TabsContent value="governing" className="w-full">
+                    <p className="text-bsd-gray/80 mb-8 max-w-3xl">
+                      Our Board of Governing Council carries our mission forward by supporting an institution where collaboration, discovery, rigorous scholarship and creativity infuse everything we do. This team guides the strategic planning of the university with a core commitment to providing exceptional service to students, faculty, and staff.
+                    </p>
+                    <div className="grid md:grid-cols-3 gap-4">
+                      {governingCouncil.map((member, index) => (
+                        <Card key={index} isHoverable className="border-0">
+                          <CardHeader>
+                            <div className="flex items-center gap-3 mb-1">
+                              <Avatar className="h-10 w-10 bg-bsd-orange/10">
+                                <AvatarFallback className="text-bsd-orange">
+                                  {member.name.split(' ').map(n => n[0]).join('')}
+                                </AvatarFallback>
+                              </Avatar>
+                              <div>
+                                <h3 className="font-semibold text-bsd-gray">{member.name}</h3>
+                                <p className="text-sm text-bsd-gray/70">{member.position}</p>
+                              </div>
+                            </div>
+                          </CardHeader>
+                        </Card>
+                      ))}
+                    </div>
+                  </TabsContent>
+                  
+                  <TabsContent value="academic" className="w-full">
+                    <p className="text-bsd-gray/80 mb-8 max-w-3xl">
+                      Since our foundation, we have always been a nontraditional institution that challenges the status quo. Our academic leaders meet regularly to explore and examine how the institution can continue to grow and fulfill its mission as a creative, innovative, and socially engaged institution.
+                    </p>
+                    <div className="grid md:grid-cols-3 gap-4">
+                      {academicCouncil.map((member, index) => (
+                        <Card key={index} isHoverable className="border-0">
+                          <CardHeader>
+                            <div className="flex items-center gap-3 mb-1">
+                              <Avatar className="h-10 w-10 bg-bsd-orange/10">
+                                <AvatarFallback className="text-bsd-orange">
+                                  {member.name.split(' ').map(n => n[0]).join('')}
+                                </AvatarFallback>
+                              </Avatar>
+                              <div>
+                                <h3 className="font-semibold text-bsd-gray">{member.name}</h3>
+                                <p className="text-sm text-bsd-gray/70">{member.position}</p>
+                              </div>
+                            </div>
+                          </CardHeader>
+                        </Card>
+                      ))}
+                    </div>
+                  </TabsContent>
+                </Tabs>
+              </div>
             </div>
           </div>
         </RevealSection>
 
         {/* Core Values Section */}
         <RevealSection>
-          <div className="bg-bsd-orange/10 py-16">
+          <div className="container mx-auto px-6 md:px-8 py-16">
+            <div className="flex items-center gap-3 mb-12">
+              <GraduationCap className="h-6 w-6 text-bsd-orange" />
+              <h2 className="text-3xl font-bold text-bsd-gray">Our Guiding Principles</h2>
+            </div>
+            
+            <div className="grid md:grid-cols-4 gap-6">
+              {coreValues.map((value, index) => (
+                <Card key={index} isHoverable className="border-0">
+                  <CardContent className="p-6">
+                    <div className="w-16 h-16 bg-bsd-orange/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      {value.icon}
+                    </div>
+                    <h3 className="text-lg font-semibold text-bsd-gray mb-2 text-center">{value.title}</h3>
+                    <p className="text-bsd-gray/80 text-center">{value.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </RevealSection>
+
+        {/* Governance FAQs Section */}
+        <RevealSection>
+          <div className="bg-bsd-orange/5 py-16">
             <div className="container mx-auto px-6 md:px-8">
-              <h2 className="text-3xl font-bold text-bsd-gray mb-12 text-center">Our Guiding Principles</h2>
+              <div className="flex items-center gap-3 mb-12">
+                <HandshakeIcon className="h-6 w-6 text-bsd-orange" />
+                <h2 className="text-3xl font-bold text-bsd-gray">Governance Framework</h2>
+              </div>
               
-              <div className="grid md:grid-cols-4 gap-6">
-                <div className="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
-                  <div className="w-16 h-16 bg-bsd-orange/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-bsd-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray mb-2">Integrity</h3>
-                  <p className="text-bsd-gray/80">We uphold the highest ethical standards in all our actions and decisions.</p>
-                </div>
-                
-                <div className="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
-                  <div className="w-16 h-16 bg-bsd-orange/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-bsd-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray mb-2">Innovation</h3>
-                  <p className="text-bsd-gray/80">We foster creativity and embrace change to stay at the forefront of education.</p>
-                </div>
-                
-                <div className="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
-                  <div className="w-16 h-16 bg-bsd-orange/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-bsd-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray mb-2">Inclusivity</h3>
-                  <p className="text-bsd-gray/80">We create an environment where diverse perspectives are valued and welcomed.</p>
-                </div>
-                
-                <div className="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
-                  <div className="w-16 h-16 bg-bsd-orange/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-bsd-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray mb-2">Excellence</h3>
-                  <p className="text-bsd-gray/80">We strive for the highest standards in education, research, and administration.</p>
-                </div>
+              <div className="max-w-3xl mx-auto">
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="item-1">
+                    <AccordionTrigger className="text-lg font-medium">Decision Making Process</AccordionTrigger>
+                    <AccordionContent>
+                      <p className="text-bsd-gray/80 mb-4">
+                        At BSDT, our decision-making process is transparent and inclusive. Strategic decisions go through a structured process involving relevant stakeholders, ensuring that all perspectives are considered.
+                      </p>
+                      <p className="text-bsd-gray/80">
+                        Governance committees meet regularly to review policies, academic standards, and institutional initiatives, ensuring alignment with our mission and vision.
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
+                  
+                  <AccordionItem value="item-2">
+                    <AccordionTrigger className="text-lg font-medium">Quality Assurance</AccordionTrigger>
+                    <AccordionContent>
+                      <p className="text-bsd-gray/80 mb-4">
+                        Our quality assurance framework ensures rigorous standards in education, research, and administration. Regular internal and external audits help maintain excellence in all aspects of our operations.
+                      </p>
+                      <p className="text-bsd-gray/80">
+                        Faculty and staff undergo continuous professional development to stay at the forefront of their fields, ensuring that our students receive the highest quality education.
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
+                  
+                  <AccordionItem value="item-3">
+                    <AccordionTrigger className="text-lg font-medium">Community Engagement</AccordionTrigger>
+                    <AccordionContent>
+                      <p className="text-bsd-gray/80 mb-4">
+                        BSDT actively engages with the broader community through various initiatives, including public lectures, exhibitions, and collaborative projects with local organizations.
+                      </p>
+                      <p className="text-bsd-gray/80">
+                        Our students and faculty are encouraged to participate in community service and social impact projects, applying their skills and knowledge to address real-world challenges.
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
+                  
+                  <AccordionItem value="item-4">
+                    <AccordionTrigger className="text-lg font-medium">Ethical Framework</AccordionTrigger>
+                    <AccordionContent>
+                      <p className="text-bsd-gray/80 mb-4">
+                        BSDT is committed to maintaining the highest ethical standards in all aspects of our operations. Our code of conduct guides the behavior of students, faculty, and staff, ensuring integrity and professionalism.
+                      </p>
+                      <p className="text-bsd-gray/80">
+                        We have established robust policies and procedures to address ethical issues, including academic integrity, research ethics, and professional conduct.
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
               </div>
             </div>
           </div>
