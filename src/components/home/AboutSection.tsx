@@ -2,7 +2,7 @@
 import React from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, BrainCircuit } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 export const AboutSection: React.FC = () => {
@@ -65,6 +65,39 @@ export const AboutSection: React.FC = () => {
             </div>
           </RevealSection>
         </div>
+
+        {/* AI integration section */}
+        <RevealSection delay={100}>
+          <div className="mt-20 bg-white rounded-2xl shadow-sm border border-border/40 p-8">
+            <div className="flex flex-col md:flex-row gap-8 items-center">
+              <div className="md:w-1/4 flex justify-center">
+                <div className="w-24 h-24 rounded-full bg-bsd-orange/10 flex items-center justify-center">
+                  <BrainCircuit className="w-12 h-12 text-bsd-orange" />
+                </div>
+              </div>
+              <div className="md:w-3/4">
+                <Badge variant="bsdOrange" className="mb-3">AI-Enhanced Learning</Badge>
+                <h3 className="text-2xl font-display font-bold text-bsd-gray mb-4">Leveraging AI in Our Teaching Approach</h3>
+                <p className="text-foreground/70 mb-6">
+                  At BSD, we integrate cutting-edge AI technologies across our curriculum to enhance student learning, foster innovation, and prepare graduates for the AI-driven future of design and technology industries.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {[
+                    "AI-powered personalized learning paths",
+                    "Generative design tools in all courses",
+                    "Real-world AI implementation projects",
+                    "Industry partnerships with AI leaders"
+                  ].map((feature, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-bsd-orange mt-0.5 flex-shrink-0" />
+                      <span className="text-foreground/70">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </RevealSection>
 
         {/* Key stats */}
         <RevealSection delay={200}>
