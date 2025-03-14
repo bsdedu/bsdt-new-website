@@ -6,12 +6,16 @@ interface CardProps {
   children: React.ReactNode;
   className?: string;
   isHoverable?: boolean;
+  onMouseEnter?: React.MouseEventHandler<HTMLDivElement>;
+  onMouseLeave?: React.MouseEventHandler<HTMLDivElement>;
 }
 
 export const Card: React.FC<CardProps> = ({
   children,
   className,
   isHoverable = false,
+  onMouseEnter,
+  onMouseLeave,
 }) => {
   return (
     <div
@@ -21,6 +25,8 @@ export const Card: React.FC<CardProps> = ({
         isHoverable && "hover:shadow-md hover:-translate-y-1 hover:border-bsd-orange/20",
         className
       )}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       {children}
     </div>
