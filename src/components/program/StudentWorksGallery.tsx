@@ -7,30 +7,30 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export const StudentWorksGallery: React.FC = () => {
   const projectCategories = [
-    { id: "residential", name: "Residential Designs" },
-    { id: "commercial", name: "Commercial Spaces" },
-    { id: "thesis", name: "Thesis Projects" },
+    { id: "branding", name: "Branding Projects" },
+    { id: "digital", name: "Digital Design" },
+    { id: "print", name: "Print & Editorial" },
   ];
   
   // Sample project data - in a real app this would come from a database
   const projects = {
-    residential: [
-      { id: 1, title: "Modern Apartment Redesign", student: "Akshay Sharma", year: "2023", image: "https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&auto=format&fit=crop" },
-      { id: 2, title: "Villa Interior Concept", student: "Priya Patel", year: "2023", image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop" },
-      { id: 3, title: "Minimalist Home Design", student: "Rohan Murthy", year: "2022", image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&auto=format&fit=crop" },
-      { id: 4, title: "Contemporary Living Space", student: "Isha Gupta", year: "2022", image: "https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=800&auto=format&fit=crop" },
+    branding: [
+      { id: 1, title: "Eco-friendly Brand Identity", student: "Priya Sharma", year: "2023", image: "https://images.unsplash.com/photo-1616469829941-c7200edec809?w=800&auto=format&fit=crop" },
+      { id: 2, title: "Tech Startup Branding", student: "Arjun Mehta", year: "2023", image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&auto=format&fit=crop" },
+      { id: 3, title: "Restaurant Chain Rebrand", student: "Meera Patel", year: "2022", image: "https://images.unsplash.com/photo-1576483353872-42d9b8d50e4f?w=800&auto=format&fit=crop" },
+      { id: 4, title: "Artisanal Coffee Branding", student: "Vikram Reddy", year: "2022", image: "https://images.unsplash.com/photo-1547592180-85f173990554?w=800&auto=format&fit=crop" },
     ],
-    commercial: [
-      { id: 1, title: "Boutique Hotel Lobby", student: "Vikram Reddy", year: "2023", image: "https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?w=800&auto=format&fit=crop" },
-      { id: 2, title: "Organic Cafe Design", student: "Divya Menon", year: "2023", image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop" },
-      { id: 3, title: "Co-working Space Concept", student: "Ajay Kumar", year: "2022", image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&auto=format&fit=crop" },
-      { id: 4, title: "Retail Store Design", student: "Shreya Kapoor", year: "2022", image: "https://images.unsplash.com/photo-1555529771-7888783a18d3?w=800&auto=format&fit=crop" },
+    digital: [
+      { id: 1, title: "Mobile App UI Design", student: "Kiran Kumar", year: "2023", image: "https://images.unsplash.com/photo-1551739440-5dd934d3a94a?w=800&auto=format&fit=crop" },
+      { id: 2, title: "E-commerce Website Redesign", student: "Aisha Khan", year: "2023", image: "https://images.unsplash.com/photo-1523726491678-bf852e717f6a?w=800&auto=format&fit=crop" },
+      { id: 3, title: "Social Media Campaign", student: "Rahul Joshi", year: "2022", image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&auto=format&fit=crop" },
+      { id: 4, title: "Interactive Infographics", student: "Divya Menon", year: "2022", image: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=800&auto=format&fit=crop" },
     ],
-    thesis: [
-      { id: 1, title: "Sustainable Urban Housing", student: "Nisha Verma", year: "2023", image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop" },
-      { id: 2, title: "Adaptive Reuse of Industrial Spaces", student: "Arjun Desai", year: "2023", image: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&auto=format&fit=crop" },
-      { id: 3, title: "Biophilic Design in Healthcare", student: "Tanvi Shah", year: "2022", image: "https://images.unsplash.com/photo-1542089363-bba089ffaa25?w=800&auto=format&fit=crop" },
-      { id: 4, title: "Smart Home Innovations", student: "Karan Singh", year: "2022", image: "https://images.unsplash.com/photo-1560448204-61dc36dc98c8?w=800&auto=format&fit=crop" },
+    print: [
+      { id: 1, title: "Magazine Layout Design", student: "Sanjay Varma", year: "2023", image: "https://images.unsplash.com/photo-1583329622965-9fa10abbdc10?w=800&auto=format&fit=crop" },
+      { id: 2, title: "Annual Report Design", student: "Ananya Desai", year: "2023", image: "https://images.unsplash.com/photo-1597424216809-3ba9a1a8e20c?w=800&auto=format&fit=crop" },
+      { id: 3, title: "Book Cover Series", student: "Rohan Murthy", year: "2022", image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=800&auto=format&fit=crop" },
+      { id: 4, title: "Packaging Design Collection", student: "Neha Gupta", year: "2022", image: "https://images.unsplash.com/photo-1585866473523-9133debf69b4?w=800&auto=format&fit=crop" },
     ],
   };
 
@@ -50,7 +50,7 @@ export const StudentWorksGallery: React.FC = () => {
         </RevealSection>
 
         <RevealSection delay={100}>
-          <Tabs defaultValue="residential" className="w-full">
+          <Tabs defaultValue="branding" className="w-full">
             <div className="flex justify-center mb-8">
               <TabsList className="grid grid-cols-3 w-full max-w-2xl">
                 {projectCategories.map(category => (
