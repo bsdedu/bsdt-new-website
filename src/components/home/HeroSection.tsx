@@ -25,6 +25,17 @@ export const HeroSection: React.FC = () => {
     }, 5000);
   }, [api]);
 
+  // Function to handle smooth scrolling to sections
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop - 80, // Offset for header
+        behavior: 'smooth',
+      });
+    }
+  };
+
   // Setup auto-play when the carousel api is available
   useEffect(() => {
     if (!api) return;
@@ -78,10 +89,17 @@ export const HeroSection: React.FC = () => {
             </div>
 
             <div className={cn("flex flex-wrap gap-4 pt-4 transition-all duration-700 delay-300", isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10")}>
-              <AnimatedButton size="lg">
+              <AnimatedButton 
+                size="lg" 
+                onClick={() => scrollToSection('programs')}
+              >
                 Explore Programs
               </AnimatedButton>
-              <AnimatedButton variant="outline" size="lg">
+              <AnimatedButton 
+                variant="outline" 
+                size="lg" 
+                onClick={() => scrollToSection('gallery')}
+              >
                 Take a Virtual Tour
               </AnimatedButton>
             </div>
