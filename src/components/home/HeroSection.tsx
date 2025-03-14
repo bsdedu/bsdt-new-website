@@ -1,17 +1,14 @@
-
 import React, { useEffect, useState } from 'react';
 import { cn } from "@/lib/utils";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
 import { ArrowDown } from "lucide-react";
+import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
-
 export const HeroSection: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-  
   useEffect(() => {
     setIsLoaded(true);
   }, []);
-  
   return <section className="relative min-h-screen flex items-center overflow-hidden pt-24 pb-16">
       {/* Background Elements with Images */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
@@ -28,7 +25,7 @@ export const HeroSection: React.FC = () => {
                 Admissions Open for 2025-26
               </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight leading-tight">
-                <span className="text-gradient block my-0 py-[4px]">Design Your Future</span>
+                <span className="text-gradient block">Design Your Future</span>
                 <span className="block mt-2 text-bsd-orange">Innovate with Technology</span>
               </h1>
               <p className="mt-6 text-lg text-foreground/70 max-w-xl">
@@ -46,54 +43,37 @@ export const HeroSection: React.FC = () => {
             </div>
 
             <div className={cn("pt-12 transition-all duration-700 delay-500", isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10")}>
-              <p className="text-sm text-bsd-gray mb-2">Affiliations & Academic Partnerships</p>
-              <div className="flex items-center gap-6 lg:gap-10 w-full overflow-x-auto pb-3 no-scrollbar">
-                <div className="flex flex-col items-center justify-center flex-shrink-0">
-                  <img 
-                    src="/lovable-uploads/b6c8d2f5-ebe8-45b6-98da-bacea2355570.png" 
-                    alt="Bengaluru North University Logo" 
-                    className="h-12 object-contain"
-                  />
-                  <p className="text-xs text-bsd-gray mt-1">Bengaluru North University</p>
-                </div>
-                <div className="flex flex-col items-center justify-center flex-shrink-0">
-                  <img 
-                    src="/lovable-uploads/afbe5d7f-0f77-458a-a6ab-59ecf5a77828.png" 
-                    alt="University of Mysore Logo" 
-                    className="h-12 object-contain"
-                  />
-                  <p className="text-xs text-bsd-gray mt-1">University of Mysore</p>
-                </div>
-                <div className="flex-shrink-0 flex items-center justify-center">
-                  <img 
-                    src="/lovable-uploads/f284706f-8b61-4bc4-a155-140c043df786.png" 
-                    alt="College de Paris Logo" 
-                    className="h-10 object-contain"
-                  />
-                </div>
-                <div className="flex-shrink-0 flex items-center justify-center">
-                  <img 
-                    src="/lovable-uploads/c1b6a8e1-981e-4ce5-b0b1-cab0978b0556.png" 
-                    alt="CRESTA Logo" 
-                    className="h-8 object-contain"
-                  />
-                </div>
+              <p className="text-sm text-bsd-gray mb-2 mx-0 py-0">Recognized By</p>
+              <div className="flex flex-wrap items-center gap-8">
+                {[1, 2, 3, 4].map(i => <div key={i} className="h-8 w-20 bg-bsd-light-gray rounded-md flex items-center justify-center">
+                    <span className="text-xs text-bsd-gray/60">Partner {i}</span>
+                  </div>)}
               </div>
             </div>
           </div>
 
           <div className={cn("relative transition-all duration-1000 delay-300", isLoaded ? "opacity-100 scale-100" : "opacity-0 scale-95")}>
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border/30 shadow-xl">
-              <img src="/lovable-uploads/e48b8c13-052e-4d80-ada8-db3eaf003d21.png" alt="Students at BSD Design & Tech College" className="absolute inset-0 w-full h-full object-cover" />
+              <img src="/lovable-uploads/e48b8c13-052e-4d80-ada8-db3eaf003d21.png" alt="Students collaborating at BSD Design & Tech College" className="absolute inset-0 w-full h-full object-cover" />
               
               {/* Image overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-tr from-bsd-gray/30 to-transparent"></div>
               
               {/* Caption overlay */}
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-bsd-gray/60 to-transparent text-white">
-                <p className="text-xl md:text-2xl font-bold">Innovative learning at BSDT</p>
+                <p className="text-sm font-medium">Collaborative learning at BSD Design & Tech College</p>
               </div>
             </div>
+            
+            {/* Student project image decorative element */}
+            <RevealSection direction="left" delay={600} className="absolute -bottom-12 -right-12 w-32 h-32 rounded-xl overflow-hidden border-4 border-white shadow-lg z-10">
+              <img src="/lovable-uploads/e0344460-76de-492d-b4fc-2b7557c96db5.png" alt="Student project" className="w-full h-full object-cover" />
+            </RevealSection>
+            
+            {/* Design discussion image decorative element */}
+            <RevealSection direction="up" delay={800} className="absolute -top-8 -left-8 w-24 h-24 rounded-full overflow-hidden border-4 border-white shadow-lg z-10">
+              <img src="/lovable-uploads/131f247b-d139-4d13-9a35-257c01ccdb84.png" alt="Design discussion" className="w-full h-full object-cover" />
+            </RevealSection>
             
             {/* Decorative elements */}
             <div className="absolute -top-6 -right-6 w-20 h-20 bg-bsd-orange/10 rounded-full blur-xl"></div>
