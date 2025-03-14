@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
@@ -179,7 +178,7 @@ export const EnquiryFormSection: React.FC = () => {
                       />
                     </div>
                     
-                    <AnimatedButton type="submit" className="w-full" withArrow>
+                    <AnimatedButton type="submit" className="w-full">
                       <Send className="w-4 h-4 mr-1" /> Submit Enquiry
                     </AnimatedButton>
                   </form>

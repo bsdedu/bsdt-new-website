@@ -2,15 +2,13 @@
 import React from 'react';
 import { cn } from "@/lib/utils";
 import { Button, ButtonProps } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 
 interface AnimatedButtonProps extends ButtonProps {
-  withArrow?: boolean;
   delay?: number;
 }
 
 const AnimatedButton = React.forwardRef<HTMLButtonElement, AnimatedButtonProps>(
-  ({ className, children, withArrow = false, delay = 0, ...props }, ref) => {
+  ({ className, children, delay = 0, ...props }, ref) => {
     return (
       <Button
         ref={ref}
@@ -25,14 +23,9 @@ const AnimatedButton = React.forwardRef<HTMLButtonElement, AnimatedButtonProps>(
         }}
         {...props}
       >
-        <span className="group-hover:mr-2 transition-all duration-300">
+        <span className="transition-all duration-300">
           {children}
         </span>
-        {withArrow && (
-          <ArrowRight 
-            className="w-4 h-4 inline-block opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" 
-          />
-        )}
       </Button>
     );
   }
