@@ -2,7 +2,6 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { cn } from "@/lib/utils";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
-import { ArrowDown } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext, type CarouselApi } from "@/components/ui/carousel";
 export const HeroSection: React.FC = () => {
@@ -138,13 +137,6 @@ export const HeroSection: React.FC = () => {
             <div className="absolute -top-6 -right-6 w-20 h-20 bg-bsd-orange/10 rounded-full blur-xl"></div>
             <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-bsd-gray/10 rounded-full blur-xl"></div>
           </div>
-        </div>
-
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-          <a href="#programs" className="flex flex-col items-center justify-center text-bsd-gray/60 hover:text-bsd-orange transition-colors">
-            <span className="text-sm mb-2">Scroll Down</span>
-            <ArrowDown className="w-4 h-4 animate-bounce" />
-          </a>
         </div>
       </div>
     </section>;
