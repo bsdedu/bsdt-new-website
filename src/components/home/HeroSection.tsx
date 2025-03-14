@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext, type CarouselApi } from "@/components/ui/carousel";
+
 export const HeroSection: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [api, setApi] = useState<CarouselApi>();
@@ -27,12 +28,16 @@ export const HeroSection: React.FC = () => {
 
   // Function to handle smooth scrolling to sections
   const scrollToSection = (sectionId: string) => {
+    console.log(`Attempting to scroll to #${sectionId}`);
     const section = document.getElementById(sectionId);
     if (section) {
+      console.log(`Found section #${sectionId}, scrolling to it`);
       window.scrollTo({
         top: section.offsetTop - 80, // Offset for header
         behavior: 'smooth',
       });
+    } else {
+      console.log(`Section #${sectionId} not found`);
     }
   };
 
@@ -56,6 +61,7 @@ export const HeroSection: React.FC = () => {
       }
     };
   }, [api, startAutoPlay]);
+  
   useEffect(() => {
     setIsLoaded(true);
     return () => {
@@ -64,6 +70,7 @@ export const HeroSection: React.FC = () => {
       }
     };
   }, []);
+  
   return <section className="relative min-h-screen flex items-center overflow-hidden pt-10 pb-30 py-0">
       {/* Background Elements with Images */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
