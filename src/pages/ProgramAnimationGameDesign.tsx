@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -12,7 +11,6 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Check, BookOpen, Calendar, GraduationCap, Award, BriefcaseBusiness, Building2, Lightbulb, Users, Gamepad, Monitor, Film } from "lucide-react";
 import { Link } from "react-router-dom";
 import { EnquiryFormSection } from "@/components/home/EnquiryFormSection";
-import { ApplicationDeadline } from "@/components/program/ApplicationDeadline";
 import { FacultySection } from "@/components/program/FacultySection";
 import { StudentWorksGallery } from "@/components/program/StudentWorksGallery";
 
@@ -73,13 +71,6 @@ const ProgramAnimationGameDesign = () => {
                     <span>Next Batch: June 2024</span>
                   </div>
                 </div>
-                
-                {/* Application Deadline Component */}
-                <ApplicationDeadline 
-                  lastDate="August 15, 2025" 
-                  startDate="January 15, 2025" 
-                  seatsAvailable={60}
-                />
               </div>
             </RevealSection>
 
@@ -625,52 +616,3 @@ const ProgramAnimationGameDesign = () => {
 
       {/* Eligibility & Admission Section */}
       <section className="py-16 bg-bsd-light-gray">
-        <div className="container mx-auto px-6 md:px-8">
-          <RevealSection>
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <Badge variant="bsdOrange" className="mb-4">ADMISSIONS</Badge>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
-                Eligibility & Application Process
-              </h2>
-              <p className="mt-4 text-foreground/70">
-                Join our BVA Animation & Game Design program and start your journey toward a creative and fulfilling career in the animation and gaming industry.
-              </p>
-            </div>
-          </RevealSection>
-
-          <RevealSection delay={100}>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-              <Card>
-                <CardHeader>
-                  <h3 className="text-xl font-semibold text-bsd-gray">Eligibility Criteria</h3>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-4">
-                    <li className="flex items-start">
-                      <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <Check className="w-4 h-4 text-bsd-orange" />
-                      </div>
-                      <div className="ml-3">
-                        <h4 className="font-medium text-bsd-gray">Academic Qualification</h4>
-                        <p className="text-sm text-foreground/70">10+2 (Higher Secondary) or equivalent with a minimum of 50% aggregate marks from any recognized board</p>
-                      </div>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-          </RevealSection>
-        </div>
-      </section>
-
-      {/* Enquiry Form Section with id for scroll target */}
-      <div id="enquiry-form">
-        <EnquiryFormSection />
-      </div>
-      
-      <Footer />
-    </>
-  );
-};
-
-export default ProgramAnimationGameDesign;
