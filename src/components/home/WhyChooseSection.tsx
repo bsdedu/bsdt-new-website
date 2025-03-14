@@ -3,7 +3,7 @@ import React from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
 import { GraduationCap, Handshake, Globe, Users, BookOpen } from "lucide-react";
-import { Card } from "../ui-elements/Card";
+import { Card, CardHeader, CardContent } from "../ui-elements/Card";
 
 interface FeatureCardProps {
   icon: React.ReactNode;
@@ -14,13 +14,13 @@ interface FeatureCardProps {
 const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description }) => {
   return (
     <Card isHoverable className="h-full">
-      <CardHeader>
+      <CardHeader className="">
         <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-4">
           {icon}
         </div>
         <h3 className="text-xl font-bold text-bsd-gray mb-2">{title}</h3>
       </CardHeader>
-      <CardContent>
+      <CardContent className="">
         <p className="text-foreground/70">{description}</p>
       </CardContent>
     </Card>
@@ -95,15 +95,3 @@ export const WhyChooseSection: React.FC = () => {
     </section>
   );
 };
-
-const CardHeader = ({ children, className }) => (
-  <div className={`p-6 ${className}`}>
-    {children}
-  </div>
-);
-
-const CardContent = ({ children, className }) => (
-  <div className={`px-6 pb-6 pt-0 ${className}`}>
-    {children}
-  </div>
-);
