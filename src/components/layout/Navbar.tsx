@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { cn } from "@/lib/utils";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -60,11 +59,6 @@ const navStructure = [
       { name: 'Events & Activities', href: '#events' },
       { name: 'Accommodation', href: '#accommodation' }
     ]
-  },
-  {
-    name: 'Gallery',
-    href: '#gallery',
-    type: 'link'
   },
   {
     name: 'Contact',
