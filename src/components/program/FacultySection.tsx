@@ -3,6 +3,7 @@ import React from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "../ui-elements/Card";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 type FacultyMember = {
   name: string;
@@ -51,15 +52,19 @@ export const FacultySection: React.FC = () => {
         <RevealSection delay={100}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {facultyMembers.map((faculty, index) => (
-              <Card key={index} className="overflow-hidden border-0 shadow-md transition-all duration-300 hover:shadow-xl">
-                <div className="aspect-square w-full overflow-hidden">
-                  <img 
-                    src={faculty.imageUrl} 
-                    alt={faculty.name} 
-                    className="w-full h-full object-cover"
-                  />
+              <Card key={index} className="overflow-hidden border-0 shadow-md transition-all duration-300 hover:shadow-xl text-center p-6">
+                <div className="flex justify-center mb-4">
+                  <Avatar className="h-32 w-32 border-4 border-bsd-orange/20">
+                    <AvatarImage 
+                      src={faculty.imageUrl} 
+                      alt={faculty.name} 
+                    />
+                    <AvatarFallback className="text-2xl font-medium">
+                      {faculty.name.split(' ').map(n => n[0]).join('')}
+                    </AvatarFallback>
+                  </Avatar>
                 </div>
-                <CardContent className="p-6">
+                <CardContent className="p-0">
                   <h3 className="text-xl font-bold text-bsd-gray">{faculty.name}</h3>
                   <p className="text-bsd-orange font-medium mb-3">{faculty.role}</p>
                   <p className="text-foreground/70 text-sm">{faculty.bio}</p>
