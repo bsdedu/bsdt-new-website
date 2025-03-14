@@ -46,7 +46,7 @@ export const HeroSection: React.FC = () => {
             </div>
 
             <div className={cn("pt-12 transition-all duration-700 delay-500", isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10")}>
-              <p className="text-sm text-bsd-gray mb-2">Recognized By</p>
+              <p className="text-sm text-bsd-gray mb-2">Affiliation & Academic Partnerships</p>
               <div className="flex flex-wrap items-center gap-8">
                 <div className="h-16 flex items-center justify-center">
                   <img 
