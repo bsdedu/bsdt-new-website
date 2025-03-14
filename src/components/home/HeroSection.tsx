@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { cn } from "@/lib/utils";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
@@ -53,7 +54,7 @@ export const HeroSection: React.FC = () => {
       }
     };
   }, []);
-  return <section className="relative min-h-screen flex items-center overflow-hidden pt-24 pb-16 py-[30px]">
+  return <section className="relative min-h-screen flex items-center overflow-hidden pt-24 pb-5">
       {/* Background Elements with Images */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-white/80 z-10"></div>
