@@ -3,10 +3,20 @@ import React from 'react';
 import { Badge } from "@/components/ui/badge";
 import { Clock } from "lucide-react";
 
-export const ApplicationDeadline: React.FC = () => {
-  // Fixed deadline information instead of dynamic calculation
-  const formattedDeadline = "August 15, 2025";
-  const daysRemaining = 45; // Static value to avoid the infinite loop issue
+export type ApplicationDeadlineProps = {
+  lastDate: string;
+  startDate: string;
+  seatsAvailable: number;
+};
+
+export const ApplicationDeadline: React.FC<ApplicationDeadlineProps> = ({ 
+  lastDate, 
+  startDate, 
+  seatsAvailable 
+}) => {
+  // Fixed deadline information to avoid the infinite loop issue
+  const formattedDeadline = lastDate;
+  const daysRemaining = 45; // Static value to avoid infinite loop
   
   return (
     <div className="flex flex-col md:flex-row items-center gap-3 bg-bsd-orange/10 rounded-xl p-4 mt-4">
