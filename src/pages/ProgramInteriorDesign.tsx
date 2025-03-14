@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -8,7 +9,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader } from "@/components/ui-elements/Card";
 import { AnimatedButton } from "@/components/ui-elements/AnimatedButton";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Check, BookOpen, Calendar, GraduationCap, Award, BriefcaseBusiness, Building2, Lightbulb, Users, Palette, Ruler, Sofa, Download } from "lucide-react";
+import { Check, BookOpen, Calendar, GraduationCap, Award, BriefcaseBusiness, Building2, Lightbulb, Users, Palette, Ruler, Sofa } from "lucide-react";
 import { Link } from "react-router-dom";
 import { EnquiryFormSection } from "@/components/home/EnquiryFormSection";
 import { ApplicationDeadline } from "@/components/program/ApplicationDeadline";
@@ -615,4 +616,25 @@ const ProgramInteriorDesign = () => {
                       </div>
                       <div className="ml-3">
                         <h4 className="font-medium text-bsd-gray">Academic Qualification</h4>
-                        <p className="text-sm text-foreground/70">10+2 (Higher Secondary) or equivalent with a minimum of 50% aggregate
+                        <p className="text-sm text-foreground/70">10+2 (Higher Secondary) or equivalent with a minimum of 50% aggregate marks from any recognized board</p>
+                      </div>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </RevealSection>
+        </div>
+      </section>
+
+      {/* Enquiry Form Section with id for scroll target */}
+      <div id="enquiry-form">
+        <EnquiryFormSection />
+      </div>
+      
+      <Footer />
+    </>
+  );
+};
+
+export default ProgramInteriorDesign;
