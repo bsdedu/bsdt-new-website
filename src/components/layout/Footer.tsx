@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { cn } from "@/lib/utils";
-import { Facebook, Instagram, Linkedin, Twitter, Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Youtube, Mail, Phone, MapPin, Clock } from "lucide-react";
+
 export const Footer: React.FC = () => {
   return <footer className="bg-bsd-gray text-white py-16">
       <div className="container mx-auto px-6 md:px-8">
@@ -12,10 +14,10 @@ export const Footer: React.FC = () => {
             </h3>
             <p className="text-sm text-white/80 max-w-xs">Empowering future designers and technologists with cutting-edge education and innovation since 2017.</p>
             <div className="flex space-x-4">
-              <SocialLink href="#" icon={<Facebook className="w-4 h-4" />} />
-              <SocialLink href="#" icon={<Instagram className="w-4 h-4" />} />
-              <SocialLink href="#" icon={<Twitter className="w-4 h-4" />} />
-              <SocialLink href="#" icon={<Linkedin className="w-4 h-4" />} />
+              <SocialLink href="https://www.facebook.com/bsid.co" icon={<Facebook className="w-4 h-4" />} />
+              <SocialLink href="https://www.instagram.com/bangaloreschoolofdesignandtech" icon={<Instagram className="w-4 h-4" />} />
+              <SocialLink href="https://www.linkedin.com/company/bangalore-school-of-design" icon={<Linkedin className="w-4 h-4" />} />
+              <SocialLink href="http://www.youtube.com/@bangaloreschoolofdesignandtech" icon={<Youtube className="w-4 h-4" />} />
             </div>
           </div>
 
@@ -110,6 +112,7 @@ export const Footer: React.FC = () => {
       </div>
     </footer>;
 };
+
 const SocialLink: React.FC<{
   href: string;
   icon: React.ReactNode;
