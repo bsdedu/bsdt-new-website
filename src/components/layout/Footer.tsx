@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { Facebook, Instagram, Linkedin, Youtube, Mail, Phone, MapPin, Clock } from "lucide-react";
 
 export const Footer: React.FC = () => {
-  return <footer className="bg-bsd-gray text-white py-16">
+  return <footer className="bg-[#333333] text-white py-16">
       <div className="container mx-auto px-6 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Column 1: About */}
