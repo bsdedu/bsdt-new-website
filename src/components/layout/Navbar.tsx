@@ -13,6 +13,7 @@ import {
   navigationMenuTriggerStyle
 } from "@/components/ui/navigation-menu";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { Link } from 'react-router-dom';
 
 // Main navigation structure with nested menus
 const navStructure = [
@@ -21,9 +22,9 @@ const navStructure = [
     href: '#about',
     type: 'dropdown',
     items: [
-      { name: 'About BSD', href: '#about' },
+      { name: 'About BSD', href: '/about-bsdt' },
+      { name: 'Leadership & Governance', href: '/leadership-governance' },
       { name: 'Vision & Mission', href: '#vision-mission' },
-      { name: 'Leadership', href: '#leadership' },
       { name: 'Infrastructure', href: '#infrastructure' },
       { name: 'Campus', href: '#campus' }
     ]
@@ -86,13 +87,13 @@ export const Navbar: React.FC = () => {
       <div className="container mx-auto px-6 md:px-8">
         <div className="flex items-center justify-between">
           {/* Logo as homepage link with increased size */}
-          <a href="/" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img 
               src="/lovable-uploads/15af7636-fa32-410b-9b74-b4e58b0fa90b.png" 
               alt="Bangalore School of Design & Technology Logo" 
               className="h-14 md:h-18 object-fill" 
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
@@ -123,16 +124,25 @@ export const Navbar: React.FC = () => {
                           {item.name}
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
-                          <ul className="grid w-[200px] gap-1 p-2">
+                          <ul className="grid w-[250px] gap-1 p-2">
                             {item.items?.map((subItem) => (
                               <li key={subItem.name}>
                                 <NavigationMenuLink asChild>
-                                  <a
-                                    href={subItem.href}
-                                    className="block select-none rounded-md p-2 text-sm leading-none text-bsd-gray hover:bg-accent hover:text-bsd-orange"
-                                  >
-                                    {subItem.name}
-                                  </a>
+                                  {subItem.href.startsWith('/') ? (
+                                    <Link
+                                      to={subItem.href}
+                                      className="block select-none rounded-md p-2 text-sm leading-none text-bsd-gray hover:bg-accent hover:text-bsd-orange"
+                                    >
+                                      {subItem.name}
+                                    </Link>
+                                  ) : (
+                                    <a
+                                      href={subItem.href}
+                                      className="block select-none rounded-md p-2 text-sm leading-none text-bsd-gray hover:bg-accent hover:text-bsd-orange"
+                                    >
+                                      {subItem.name}
+                                    </a>
+                                  )}
                                 </NavigationMenuLink>
                               </li>
                             ))}
@@ -191,13 +201,23 @@ export const Navbar: React.FC = () => {
                     <DropdownMenuContent>
                       {item.items?.map((subItem) => (
                         <DropdownMenuItem key={subItem.name} asChild>
-                          <a 
-                            href={subItem.href} 
-                            className="w-full cursor-pointer"
-                            onClick={() => setIsMenuOpen(false)}
-                          >
-                            {subItem.name}
-                          </a>
+                          {subItem.href.startsWith('/') ? (
+                            <Link 
+                              to={subItem.href} 
+                              className="w-full cursor-pointer"
+                              onClick={() => setIsMenuOpen(false)}
+                            >
+                              {subItem.name}
+                            </Link>
+                          ) : (
+                            <a 
+                              href={subItem.href} 
+                              className="w-full cursor-pointer"
+                              onClick={() => setIsMenuOpen(false)}
+                            >
+                              {subItem.name}
+                            </a>
+                          )}
                         </DropdownMenuItem>
                       ))}
                     </DropdownMenuContent>
