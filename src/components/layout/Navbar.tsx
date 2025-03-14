@@ -80,16 +80,16 @@ export const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300", 
-      isScrolled ? "py-4 glassmorphism shadow-sm" : "py-8 bg-transparent")}>
+    <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300 sticky", 
+      isScrolled ? "py-3 glassmorphism shadow-sm" : "py-6 bg-transparent")}>
       <div className="container mx-auto px-6 md:px-8">
         <div className="flex items-center justify-between">
-          {/* Logo as homepage link */}
+          {/* Logo as homepage link with increased size */}
           <a href="/" className="flex items-center">
             <img 
               src="/lovable-uploads/15af7636-fa32-410b-9b74-b4e58b0fa90b.png" 
               alt="Bangalore School of Design & Technology Logo" 
-              className="h-10 md:h-12 object-fill" 
+              className="h-12 md:h-16 object-fill" 
             />
           </a>
 
