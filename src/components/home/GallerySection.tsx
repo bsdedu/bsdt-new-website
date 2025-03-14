@@ -192,14 +192,15 @@ export const GallerySection: React.FC = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
   const [expandedCategories, setExpandedCategories] = useState<string[]>(["Sports Events"]);
 
-  // Group items by category for the "All" tab
-  const groupedItems = allGalleryItems.reduce((acc, item) => {
-    if (!acc[item.category]) {
-      acc[item.category] = [];
+  // Group items by category and take only the first item from each category for the "All" tab
+  const previewItems: Record<string, typeof allGalleryItems[0]> = {};
+  
+  // Get one representative item from each category
+  allGalleryItems.forEach(item => {
+    if (!previewItems[item.category]) {
+      previewItems[item.category] = item;
     }
-    acc[item.category].push(item);
-    return acc;
-  }, {} as Record<string, typeof allGalleryItems>);
+  });
 
   // Filter items for non-All tabs
   const filteredItems = activeCategory === "All" 
@@ -355,11 +356,11 @@ export const GallerySection: React.FC = () => {
               ))}
             </TabsList>
             
-            {/* Content for All tab - Categories in collapsible sections */}
+            {/* Content for All tab - One item per category */}
             <TabsContent value="All" className="mt-0">
               {/* Mobile View */}
               <div className="md:hidden space-y-6">
-                {Object.keys(groupedItems).map((category) => (
+                {Object.keys(previewItems).map((category) => (
                   <Collapsible key={category} className="border rounded-lg shadow-sm mb-4" open={expandedCategories.includes(category)}>
                     <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-gray-50 hover:bg-gray-100 rounded-t-lg" 
                       onClick={() => toggleCategory(category)}>
@@ -372,7 +373,7 @@ export const GallerySection: React.FC = () => {
                       </span>
                     </CollapsibleTrigger>
                     <CollapsibleContent className="p-4">
-                      {renderGalleryItems(groupedItems[category], true)}
+                      {renderGalleryItems([previewItems[category]], true)}
                     </CollapsibleContent>
                   </Collapsible>
                 ))}
@@ -380,13 +381,13 @@ export const GallerySection: React.FC = () => {
 
               {/* Desktop View */}
               <div className="hidden md:block space-y-12">
-                {Object.keys(groupedItems).map((category) => (
+                {Object.keys(previewItems).map((category) => (
                   <div key={category} className="mb-10">
                     <div className="flex items-center gap-2 mb-4 border-b pb-2">
                       <GalleryHorizontal className="h-5 w-5 text-bsd-orange" />
                       <h3 className="text-xl font-semibold text-bsd-gray">{category}</h3>
                     </div>
-                    {renderGalleryItems(groupedItems[category])}
+                    {renderGalleryItems([previewItems[category]])}
                   </div>
                 ))}
               </div>
