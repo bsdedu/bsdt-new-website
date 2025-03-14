@@ -64,18 +64,18 @@ export const Footer: React.FC = () => {
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-bsd-orange mt-0.5" />
-                <span className="text-sm text-white/80">123 Design Street, Tech City, 123456, India</span>
+                <span className="text-sm text-white/80">No.4/3, Opposite B.D.S Nagar, Devanna Compound, K.Narayanapura, Kothanur Post, Bangalore – 560077</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-bsd-orange" />
-                <a href="tel:+919876543210" className="text-sm text-white/80 hover:text-white transition-colors">
-                  +91 98765 43210
+                <a href="tel:+919620202871" className="text-sm text-white/80 hover:text-white transition-colors">
+                  +91 9620202871 | +91 9845779000
                 </a>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-bsd-orange" />
-                <a href="mailto:info@bsd.edu.in" className="text-sm text-white/80 hover:text-white transition-colors">
-                  info@bsd.edu.in
+                <a href="mailto:enquiry@bsd.edu.in" className="text-sm text-white/80 hover:text-white transition-colors">
+                  enquiry@bsd.edu.in
                 </a>
               </li>
             </ul>
