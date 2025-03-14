@@ -103,12 +103,16 @@ export const HeroSection: React.FC = () => {
             </div>
 
             <div className={cn("flex flex-wrap gap-4 pt-4 transition-all duration-700 delay-300", isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10")}>
-              <AnimatedButton size="lg">
-                Explore Programs
-              </AnimatedButton>
-              <AnimatedButton variant="outline" size="lg">
-                Take a Virtual Tour
-              </AnimatedButton>
+              <a href="#programs" className="inline-block">
+                <AnimatedButton size="lg">
+                  Explore Programs
+                </AnimatedButton>
+              </a>
+              <a href="#about" className="inline-block">
+                <AnimatedButton variant="outline" size="lg">
+                  Take a Virtual Tour
+                </AnimatedButton>
+              </a>
             </div>
 
             <div className={cn("pt-8 transition-all duration-700 delay-500", isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10")}>
