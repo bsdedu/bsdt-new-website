@@ -22,7 +22,7 @@ export const HeroSection: React.FC = () => {
 
       <div className="container mx-auto px-6 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-          <div className="space-y-6 max-w-2xl">
+          <div className="space-y-4 max-w-2xl">
             <div className={cn("transition-all duration-700 transform", isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10")}>
               <Badge variant="bsdOrange" className="mb-4">
                 Admissions Open for 2025-26
@@ -45,7 +45,7 @@ export const HeroSection: React.FC = () => {
               </AnimatedButton>
             </div>
 
-            <div className={cn("pt-12 transition-all duration-700 delay-500", isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10")}>
+            <div className={cn("pt-8 transition-all duration-700 delay-500", isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10")}>
               <p className="text-sm text-bsd-gray mb-2">Affiliations & Academic Partnerships</p>
               <div className="flex items-center gap-6 lg:gap-10 w-full overflow-x-auto pb-3 no-scrollbar">
                 <div className="flex flex-col items-center justify-center flex-shrink-0">
@@ -110,3 +110,4 @@ export const HeroSection: React.FC = () => {
       </div>
     </section>;
 };
+
