@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -12,6 +11,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Check, BookOpen, Calendar, GraduationCap, Award, BriefcaseBusiness, Building2, Lightbulb, Users, Palette, Ruler, Sofa } from "lucide-react";
 import { Link } from "react-router-dom";
 import { EnquiryFormSection } from "@/components/home/EnquiryFormSection";
+import { ApplicationDeadline } from "@/components/program/ApplicationDeadline";
+import { FacultySection } from "@/components/program/FacultySection";
+import { StudentWorksGallery } from "@/components/program/StudentWorksGallery";
 
 const ProgramInteriorDesign = () => {
   return (
@@ -44,7 +46,7 @@ const ProgramInteriorDesign = () => {
                 </p>
                 <div className="flex flex-wrap gap-4 pt-4">
                   <AnimatedButton asChild>
-                    <a href="#apply-now" className="hover:no-underline">Apply Now</a>
+                    <a href="#enquiry-form" className="hover:no-underline">Apply Now</a>
                   </AnimatedButton>
                   <Link to="/admissions" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md h-10 px-4 py-2 text-sm border border-input bg-background hover:bg-accent hover:text-accent-foreground transition-colors">
                     Learn About Admissions
@@ -65,6 +67,9 @@ const ProgramInteriorDesign = () => {
                     <span>Next Batch: June 2024</span>
                   </div>
                 </div>
+                
+                {/* Application Deadline Component */}
+                <ApplicationDeadline />
               </div>
             </RevealSection>
 
@@ -480,6 +485,102 @@ const ProgramInteriorDesign = () => {
         </div>
       </section>
 
+      {/* Student Works Gallery */}
+      <StudentWorksGallery />
+
+      {/* Faculty Section */}
+      <FacultySection />
+      
+      {/* BSD Studio Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6 md:px-8">
+          <RevealSection>
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <Badge variant="bsdOrange" className="mb-4">UNIQUE ADVANTAGE</Badge>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
+                BSD Studio: Learn by Doing
+              </h2>
+              <p className="mt-4 text-foreground/70">
+                Experience real-world design projects in our in-house professional design studio.
+              </p>
+            </div>
+          </RevealSection>
+
+          <RevealSection delay={100}>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+              <div className="relative rounded-2xl overflow-hidden h-[500px]">
+                <img 
+                  src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&auto=format&fit=crop" 
+                  alt="BSD Studio" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent">
+                  <div className="absolute bottom-0 left-0 p-8">
+                    <h3 className="text-white text-2xl font-bold mb-2">BSD Studio</h3>
+                    <p className="text-white/80">Students working on real commercial projects</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="space-y-6">
+                <h3 className="text-2xl font-bold text-bsd-gray">A Unique Learning Experience</h3>
+                <p className="text-foreground/70">
+                  BSD Studio is our in-house design center that takes on real commercial projects. What makes BSDT unique is that no other design college in India offers students this level of hands-on experience with actual client projects.
+                </p>
+                
+                <div className="space-y-4 pt-2">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-4 h-4 text-bsd-orange" />
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-bsd-gray">Work on Real Client Projects</h4>
+                      <p className="text-sm text-foreground/70">Experience the entire design process from client briefing to final execution</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-4 h-4 text-bsd-orange" />
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-bsd-gray">Mentorship from Practicing Professionals</h4>
+                      <p className="text-sm text-foreground/70">Learn directly from industry experts working on current projects</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-4 h-4 text-bsd-orange" />
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-bsd-gray">Build a Professional Portfolio</h4>
+                      <p className="text-sm text-foreground/70">Graduate with actual commercial projects in your portfolio</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-4 h-4 text-bsd-orange" />
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-bsd-gray">Network with Industry Clients</h4>
+                      <p className="text-sm text-foreground/70">Develop connections with potential employers while still studying</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="pt-4">
+                  <AnimatedButton asChild>
+                    <a href="#enquiry-form" className="hover:no-underline">Apply Now</a>
+                  </AnimatedButton>
+                </div>
+              </div>
+            </div>
+          </RevealSection>
+        </div>
+      </section>
+
       {/* Eligibility & Admission Section */}
       <section className="py-16 bg-bsd-light-gray">
         <div className="container mx-auto px-6 md:px-8">
@@ -514,187 +615,4 @@ const ProgramInteriorDesign = () => {
                     </li>
                     
                     <li className="flex items-start">
-                      <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <Check className="w-4 h-4 text-bsd-orange" />
-                      </div>
-                      <div className="ml-3">
-                        <h4 className="font-medium text-bsd-gray">Subject Requirements</h4>
-                        <p className="text-sm text-foreground/70">No specific subject requirements, though Physics, Mathematics, or Art subjects are beneficial</p>
-                      </div>
-                    </li>
-                    
-                    <li className="flex items-start">
-                      <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <Check className="w-4 h-4 text-bsd-orange" />
-                      </div>
-                      <div className="ml-3">
-                        <h4 className="font-medium text-bsd-gray">Selection Process</h4>
-                        <p className="text-sm text-foreground/70">Direct admission based on academic performance and personal interview</p>
-                      </div>
-                    </li>
-                    
-                    <li className="flex items-start">
-                      <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <Check className="w-4 h-4 text-bsd-orange" />
-                      </div>
-                      <div className="ml-3">
-                        <h4 className="font-medium text-bsd-gray">Portfolio (Recommended)</h4>
-                        <p className="text-sm text-foreground/70">A portfolio of creative work is recommended to showcase your design aptitude and potential</p>
-                      </div>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <h3 className="text-xl font-semibold text-bsd-gray">Application Process</h3>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-6">
-                    <ol className="space-y-4">
-                      <li className="flex">
-                        <div className="w-8 h-8 rounded-full bg-bsd-orange flex items-center justify-center text-white font-medium flex-shrink-0">1</div>
-                        <div className="ml-3">
-                          <h4 className="font-medium text-bsd-gray">Online Application</h4>
-                          <p className="text-sm text-foreground/70">Complete the online application form with personal and academic details</p>
-                        </div>
-                      </li>
-                      
-                      <li className="flex">
-                        <div className="w-8 h-8 rounded-full bg-bsd-orange flex items-center justify-center text-white font-medium flex-shrink-0">2</div>
-                        <div className="ml-3">
-                          <h4 className="font-medium text-bsd-gray">Application Fee</h4>
-                          <p className="text-sm text-foreground/70">Pay the non-refundable application fee of ₹1,000</p>
-                        </div>
-                      </li>
-                      
-                      <li className="flex">
-                        <div className="w-8 h-8 rounded-full bg-bsd-orange flex items-center justify-center text-white font-medium flex-shrink-0">3</div>
-                        <div className="ml-3">
-                          <h4 className="font-medium text-bsd-gray">Document Submission</h4>
-                          <p className="text-sm text-foreground/70">Submit required academic documents and portfolio (if available)</p>
-                        </div>
-                      </li>
-                      
-                      <li className="flex">
-                        <div className="w-8 h-8 rounded-full bg-bsd-orange flex items-center justify-center text-white font-medium flex-shrink-0">4</div>
-                        <div className="ml-3">
-                          <h4 className="font-medium text-bsd-gray">Personal Interview</h4>
-                          <p className="text-sm text-foreground/70">Appear for a personal interview to discuss your background, interests, and portfolio</p>
-                        </div>
-                      </li>
-                      
-                      <li className="flex">
-                        <div className="w-8 h-8 rounded-full bg-bsd-orange flex items-center justify-center text-white font-medium flex-shrink-0">5</div>
-                        <div className="ml-3">
-                          <h4 className="font-medium text-bsd-gray">Admission Offer</h4>
-                          <p className="text-sm text-foreground/70">Selected candidates will receive an admission offer letter</p>
-                        </div>
-                      </li>
-                      
-                      <li className="flex">
-                        <div className="w-8 h-8 rounded-full bg-bsd-orange flex items-center justify-center text-white font-medium flex-shrink-0">6</div>
-                        <div className="ml-3">
-                          <h4 className="font-medium text-bsd-gray">Fee Payment</h4>
-                          <p className="text-sm text-foreground/70">Confirm your admission by paying the first installment of fees</p>
-                        </div>
-                      </li>
-                    </ol>
-                    
-                    <div className="pt-4">
-                      <AnimatedButton asChild className="w-full">
-                        <a href="#apply-now" className="hover:no-underline">Begin Application Process</a>
-                      </AnimatedButton>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </RevealSection>
-        </div>
-      </section>
-
-      {/* FAQs Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6 md:px-8">
-          <RevealSection>
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <Badge variant="bsdOrange" className="mb-4">FREQUENTLY ASKED QUESTIONS</Badge>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
-                Common Questions About the Program
-              </h2>
-              <p className="mt-4 text-foreground/70">
-                Find answers to frequently asked questions about our B.Sc Interior Design program.
-              </p>
-            </div>
-          </RevealSection>
-
-          <RevealSection delay={100}>
-            <div className="max-w-3xl mx-auto">
-              <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="item-1">
-                  <AccordionTrigger>What is the duration of the B.Sc Interior Design program?</AccordionTrigger>
-                  <AccordionContent>
-                    The B.Sc Interior Design is a 3-year full-time undergraduate program divided into 6 semesters. Each semester focuses on different aspects of interior design, from foundation principles to advanced applications.
-                  </AccordionContent>
-                </AccordionItem>
-                
-                <AccordionItem value="item-2">
-                  <AccordionTrigger>Is the program recognized by any professional bodies?</AccordionTrigger>
-                  <AccordionContent>
-                    Yes, the program is affiliated with Bengaluru North University and is recognized by the Indian Institute of Interior Designers (IIID). This ensures that graduates receive a nationally recognized qualification and can become members of professional design associations.
-                  </AccordionContent>
-                </AccordionItem>
-                
-                <AccordionItem value="item-3">
-                  <AccordionTrigger>What software skills will I learn during the program?</AccordionTrigger>
-                  <AccordionContent>
-                    Throughout the program, you will gain proficiency in industry-standard software including AutoCAD, SketchUp, Revit, 3ds Max, Adobe Photoshop, Illustrator, and InDesign. These tools are essential for modern interior design practice.
-                  </AccordionContent>
-                </AccordionItem>
-                
-                <AccordionItem value="item-4">
-                  <AccordionTrigger>Are there internship opportunities during the program?</AccordionTrigger>
-                  <AccordionContent>
-                    Yes, internships are an integral part of the curriculum. We have partnerships with leading design firms, architectural practices, and interior contractors who offer internship opportunities to our students. These typically take place during the summer break after the fourth semester.
-                  </AccordionContent>
-                </AccordionItem>
-                
-                <AccordionItem value="item-5">
-                  <AccordionTrigger>What are the fee payment options available?</AccordionTrigger>
-                  <AccordionContent>
-                    The program fee can be paid in full or in semester-wise installments. We also offer scholarships based on merit and need. Additionally, students can explore education loan options from our partner banks with preferential interest rates.
-                  </AccordionContent>
-                </AccordionItem>
-                
-                <AccordionItem value="item-6">
-                  <AccordionTrigger>Is there an entrance exam for admission?</AccordionTrigger>
-                  <AccordionContent>
-                    No, there is no entrance exam. Our admission process is based on a review of your past academic performance and a personal interview. If you have a portfolio of creative work, we encourage you to present it during the interview as it helps us better understand your aptitude and potential.
-                  </AccordionContent>
-                </AccordionItem>
-                
-                <AccordionItem value="item-7">
-                  <AccordionTrigger>Can I pursue further studies after completing this program?</AccordionTrigger>
-                  <AccordionContent>
-                    Absolutely! Graduates of our B.Sc Interior Design program can pursue postgraduate studies in specialized areas such as Furniture Design, Lighting Design, Exhibition Design, Sustainable Design, or Interior Architecture. Many of our alumni have secured admissions in prestigious design schools in India and abroad.
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-            </div>
-          </RevealSection>
-        </div>
-      </section>
-
-      {/* Enquiry Section */}
-      <div id="apply-now">
-        <EnquiryFormSection />
-      </div>
-
-      <Footer />
-    </>
-  );
-};
-
-export default ProgramInteriorDesign;
+                      <div className="w-8 h-8 rounded-full bg-bsd-orange/

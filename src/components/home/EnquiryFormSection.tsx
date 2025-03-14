@@ -1,7 +1,8 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, BookOpen } from "lucide-react";
+import { ArrowRight, BookOpen, Download, Lock } from "lucide-react";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
 import { Input } from "@/components/ui/input";
 import { Card } from "../ui-elements/Card";
@@ -10,6 +11,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useToast } from "@/hooks/use-toast";
+
 const formSchema = z.object({
   name: z.string().min(2, {
     message: "Name is required"
@@ -24,28 +26,40 @@ const formSchema = z.object({
     message: "Please select a course of interest"
   })
 });
-export const EnquiryFormSection: React.FC = () => {
-  const {
-    toast
-  } = useToast();
+
+export const EnquiryFormSection: React.FC<{ programSpecific?: boolean }> = ({ programSpecific = false }) => {
+  const { toast } = useToast();
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
       email: "",
       phone: "",
-      course: ""
+      course: programSpecific ? "UG Interior Design" : "",
     }
   });
+
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
+    setFormSubmitted(true);
     toast({
       title: "Enquiry Submitted",
       description: "Thank you for your interest! Our team will contact you shortly."
     });
-    form.reset();
   }
-  return <section className="py-16 bg-bsd-light-gray relative overflow-hidden md:py-[50px]">
+
+  const handleDownloadBrochure = () => {
+    // In a real application, this would download an actual PDF
+    // For now, we'll just show a toast message
+    toast({
+      title: "Brochure Downloaded",
+      description: "The program brochure with fee details has been downloaded."
+    });
+  };
+
+  return <section className="py-16 bg-bsd-light-gray relative overflow-hidden md:py-[50px]" id="enquiry-form">
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-radial from-white to-transparent opacity-70"></div>
@@ -95,6 +109,32 @@ export const EnquiryFormSection: React.FC = () => {
                     <h4 className="font-medium text-bsd-gray">Personal Counseling</h4>
                     <p className="text-sm text-foreground/70">Get personalized guidance from our academic counselors</p>
                   </div>
+                </div>
+              </div>
+              
+              {/* Brochure Download Section */}
+              <div className="mt-6 p-5 border border-dashed border-bsd-orange/30 rounded-xl bg-white/50">
+                <div className="flex items-center">
+                  {formSubmitted ? (
+                    <>
+                      <Download className="w-8 h-8 text-bsd-orange flex-shrink-0" />
+                      <div className="ml-4">
+                        <h4 className="font-medium text-bsd-gray">Program Brochure with Fee Details</h4>
+                        <p className="text-sm text-foreground/70 mb-2">Complete information about the program, curriculum, and fee structure</p>
+                        <AnimatedButton size="sm" onClick={handleDownloadBrochure}>
+                          <Download className="w-4 h-4 mr-2" /> Download Now
+                        </AnimatedButton>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <Lock className="w-8 h-8 text-bsd-gray/40 flex-shrink-0" />
+                      <div className="ml-4">
+                        <h4 className="font-medium text-bsd-gray">Program Brochure with Fee Details</h4>
+                        <p className="text-sm text-foreground/70">Submit the enquiry form to unlock the detailed program brochure with fee structure</p>
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
             </div>
