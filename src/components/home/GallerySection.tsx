@@ -22,6 +22,7 @@ const galleryItems: {
   thumbnail?: string;
   caption: string;
 }[] = [
+  // Sports Events images
   {
     type: "image",
     category: "Sports Events",
@@ -57,6 +58,50 @@ const galleryItems: {
     category: "Sports Events",
     image: "/lovable-uploads/275a175a-0d92-43ee-b13d-136f76aa4f00.png",
     caption: "Basketball match between students in the outdoor court"
+  },
+  
+  // Campus Life images
+  {
+    type: "image",
+    category: "Campus Life",
+    image: "/lovable-uploads/cdcb8556-cfb5-4124-be04-f0f32a8ce017.png",
+    caption: "Students working together on a sculpture project in the studio space"
+  },
+  {
+    type: "image",
+    category: "Campus Life",
+    image: "/lovable-uploads/752c7065-abd8-4827-a55b-d3af73684dbf.png",
+    caption: "Design presentation with students reviewing a project poster"
+  },
+  {
+    type: "image",
+    category: "Campus Life",
+    image: "/lovable-uploads/b0bd1350-1b3d-44a7-a043-b876650c169d.png",
+    caption: "Student using VR headset for an immersive learning experience"
+  },
+  {
+    type: "image",
+    category: "Campus Life",
+    image: "/lovable-uploads/a14f6c87-51d9-46f6-a691-d097e9dd9d7a.png",
+    caption: "Student exploring virtual reality technology in the design lab"
+  },
+  {
+    type: "image",
+    category: "Campus Life",
+    image: "/lovable-uploads/cfb45146-ec9d-434c-9b60-ee146c328146.png",
+    caption: "Student focusing on detailed art project with painting supplies"
+  },
+  {
+    type: "image",
+    category: "Campus Life",
+    image: "/lovable-uploads/e5c57c3a-3200-49fc-a10d-80ac615c7c0d.png",
+    caption: "Students collaborating on architecture models in the design studio"
+  },
+  {
+    type: "image",
+    category: "Campus Life",
+    image: "/lovable-uploads/7d078e54-32f9-4dcf-9af6-9717145d71b7.png",
+    caption: "Faculty explaining architectural concepts during a corridor exhibition"
   }
 ];
 
@@ -64,6 +109,7 @@ const galleryItems: {
 const categories = ["All", "Sports Events", "Campus Life", "Student Work", "Events", "Campus Tour", "Student Interviews"];
 
 export const GallerySection: React.FC = () => {
+  // ... keep existing code (useState hooks and handlers)
   const [activeCategory, setActiveCategory] = useState("All");
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
