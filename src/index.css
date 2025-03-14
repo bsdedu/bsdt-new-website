@@ -114,6 +114,16 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
   }
   
+  /* Hide scrollbar but maintain scrolling functionality */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
+  }
+  
   /* Ensure images don't break layout */
   img {
     max-width: 100%;
