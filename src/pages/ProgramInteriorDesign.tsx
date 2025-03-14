@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -615,4 +616,184 @@ const ProgramInteriorDesign = () => {
                     </li>
                     
                     <li className="flex items-start">
-                      <div className="w-8 h-8 rounded-full bg-bsd-orange/
+                      <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="w-4 h-4 text-bsd-orange" />
+                      </div>
+                      <div className="ml-3">
+                        <h4 className="font-medium text-bsd-gray">Subject Requirements</h4>
+                        <p className="text-sm text-foreground/70">No specific subject requirements, but a background in Physics, Mathematics, or Art is beneficial</p>
+                      </div>
+                    </li>
+                    
+                    <li className="flex items-start">
+                      <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="w-4 h-4 text-bsd-orange" />
+                      </div>
+                      <div className="ml-3">
+                        <h4 className="font-medium text-bsd-gray">Portfolio (Optional)</h4>
+                        <p className="text-sm text-foreground/70">A portfolio of creative work is not mandatory but can strengthen your application</p>
+                      </div>
+                    </li>
+                    
+                    <li className="flex items-start">
+                      <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="w-4 h-4 text-bsd-orange" />
+                      </div>
+                      <div className="ml-3">
+                        <h4 className="font-medium text-bsd-gray">Entrance Test</h4>
+                        <p className="text-sm text-foreground/70">Qualifying the BSDT Design Aptitude Test (BSDT-DAT) or equivalent design entrance exams</p>
+                      </div>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+              
+              <Card>
+                <CardHeader>
+                  <h3 className="text-xl font-semibold text-bsd-gray">Application Process</h3>
+                </CardHeader>
+                <CardContent>
+                  <ol className="space-y-4 list-decimal list-inside">
+                    <li className="pl-2">
+                      <h4 className="font-medium text-bsd-gray inline">Online Application</h4>
+                      <p className="text-sm text-foreground/70 mt-1">Complete the online application form on our admissions portal with personal and academic details</p>
+                    </li>
+                    
+                    <li className="pl-2">
+                      <h4 className="font-medium text-bsd-gray inline">Entrance Examination</h4>
+                      <p className="text-sm text-foreground/70 mt-1">Register and appear for the BSDT-DAT or submit scores from other recognized design entrance tests</p>
+                    </li>
+                    
+                    <li className="pl-2">
+                      <h4 className="font-medium text-bsd-gray inline">Document Submission</h4>
+                      <p className="text-sm text-foreground/70 mt-1">Upload required documents including academic transcripts, ID proof, and photographs</p>
+                    </li>
+                    
+                    <li className="pl-2">
+                      <h4 className="font-medium text-bsd-gray inline">Interview Round</h4>
+                      <p className="text-sm text-foreground/70 mt-1">Shortlisted candidates will be invited for a personal interview to assess aptitude and interest</p>
+                    </li>
+                    
+                    <li className="pl-2">
+                      <h4 className="font-medium text-bsd-gray inline">Admission Offer</h4>
+                      <p className="text-sm text-foreground/70 mt-1">Successful candidates will receive an admission offer letter with fee details</p>
+                    </li>
+                    
+                    <li className="pl-2">
+                      <h4 className="font-medium text-bsd-gray inline">Fee Payment & Enrollment</h4>
+                      <p className="text-sm text-foreground/70 mt-1">Confirm your admission by paying the fee and completing the enrollment process</p>
+                    </li>
+                  </ol>
+                  
+                  <div className="mt-6 pt-6 border-t border-border">
+                    <h4 className="font-medium text-bsd-gray mb-3">Important Dates</h4>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
+                        <p className="text-sm font-medium">Applications Open</p>
+                        <p className="text-sm text-foreground/70">January 15, 2025</p>
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium">Early Application Deadline</p>
+                        <p className="text-sm text-foreground/70">March 30, 2025</p>
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium">Regular Application Deadline</p>
+                        <p className="text-sm text-foreground/70">June 30, 2025</p>
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium">Final Application Deadline</p>
+                        <p className="text-sm text-foreground/70">August 15, 2025</p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+            
+            <div className="text-center mt-12">
+              <AnimatedButton asChild size="lg">
+                <a href="#enquiry-form" className="hover:no-underline">Start Your Application</a>
+              </AnimatedButton>
+            </div>
+          </RevealSection>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6 md:px-8">
+          <RevealSection>
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <Badge variant="bsdOrange" className="mb-4">FREQUENTLY ASKED QUESTIONS</Badge>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
+                Common Questions About Our Interior Design Program
+              </h2>
+            </div>
+          </RevealSection>
+
+          <RevealSection delay={100}>
+            <div className="max-w-3xl mx-auto">
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger className="text-left">What is the fee structure for the B.Sc Interior Design program?</AccordionTrigger>
+                  <AccordionContent>
+                    The fee for the B.Sc Interior Design program is ₹1,75,000 per year (₹5,25,000 for the full 3-year program). This includes tuition, access to labs and studios, and basic materials. Additional costs may apply for specialized materials, field trips, and international study tours.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-2">
+                  <AccordionTrigger className="text-left">Are there any scholarships available for this program?</AccordionTrigger>
+                  <AccordionContent>
+                    Yes, BSDT offers merit-based scholarships of up to 50% tuition waiver for exceptional academic performance. We also provide need-based financial aid and special scholarships for students from underrepresented backgrounds. Additionally, we assist students in applying for government scholarships and education loans.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-3">
+                  <AccordionTrigger className="text-left">Do I need prior experience in design to apply?</AccordionTrigger>
+                  <AccordionContent>
+                    No prior design experience is required. Our curriculum is designed to start with the fundamentals and gradually build up to advanced concepts. However, a natural creative inclination, spatial awareness, and interest in the built environment are beneficial.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-4">
+                  <AccordionTrigger className="text-left">What software will I learn during the program?</AccordionTrigger>
+                  <AccordionContent>
+                    You will gain proficiency in industry-standard software including AutoCAD, SketchUp, Revit, 3ds Max, Adobe Photoshop, Illustrator, and InDesign. Our curriculum also includes introduction to newer technologies like BIM (Building Information Modeling) and VR/AR applications in interior design.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-5">
+                  <AccordionTrigger className="text-left">Are internships mandatory in this program?</AccordionTrigger>
+                  <AccordionContent>
+                    Yes, an 8-week professional internship is a mandatory component of the curriculum, typically completed during the summer break after the second year. BSDT has partnerships with leading design firms, ensuring quality internship placements for all students.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-6">
+                  <AccordionTrigger className="text-left">What are the career prospects after completing this program?</AccordionTrigger>
+                  <AccordionContent>
+                    Graduates can pursue careers as interior designers, space planners, design consultants, furniture designers, exhibition designers, retail designers, or visualization specialists. They can work with architecture firms, interior design studios, real estate developers, hospitality groups, retail chains, or start their own design practice.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-7">
+                  <AccordionTrigger className="text-left">Is there any opportunity for international exposure?</AccordionTrigger>
+                  <AccordionContent>
+                    Yes, BSDT has student exchange programs with design schools in Europe and Asia. We also organize annual international study tours to important design destinations. Additionally, we regularly host workshops and masterclasses by international design professionals.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          </RevealSection>
+        </div>
+      </section>
+
+      {/* Enquiry Form Section */}
+      <EnquiryFormSection />
+      
+      <Footer />
+    </>
+  );
+};
+
+export default ProgramInteriorDesign;
