@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { cn } from "@/lib/utils";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
@@ -72,7 +73,7 @@ export const HeroSection: React.FC = () => {
                   <img 
                     src="/lovable-uploads/c1b6a8e1-981e-4ce5-b0b1-cab0978b0556.png" 
                     alt="CRESTA Logo" 
-                    className="h-16 object-contain"
+                    className="h-12 object-contain"
                   />
                 </div>
                 <div className="h-16 flex items-center justify-center">
