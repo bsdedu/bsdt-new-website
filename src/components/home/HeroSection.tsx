@@ -48,19 +48,21 @@ export const HeroSection: React.FC = () => {
             <div className={cn("pt-12 transition-all duration-700 delay-500", isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10")}>
               <p className="text-sm text-bsd-gray mb-2">Affiliations & Academic Partnerships</p>
               <div className="flex flex-wrap items-center gap-8">
-                <div className="h-16 flex items-center justify-center">
+                <div className="h-24 flex flex-col items-center justify-center">
                   <img 
                     src="/lovable-uploads/b6c8d2f5-ebe8-45b6-98da-bacea2355570.png" 
                     alt="Bengaluru North University Logo" 
                     className="h-16 object-contain"
                   />
+                  <p className="text-xs text-bsd-gray mt-1">Bengaluru North University</p>
                 </div>
-                <div className="h-16 flex items-center justify-center">
+                <div className="h-24 flex flex-col items-center justify-center">
                   <img 
                     src="/lovable-uploads/afbe5d7f-0f77-458a-a6ab-59ecf5a77828.png" 
                     alt="University of Mysore Logo" 
                     className="h-16 object-contain"
                   />
+                  <p className="text-xs text-bsd-gray mt-1">University of Mysore</p>
                 </div>
                 <div className="h-16 flex items-center justify-center">
                   <img 
