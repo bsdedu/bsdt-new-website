@@ -1,14 +1,11 @@
-
 import React from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
 import { CheckCircle, BrainCircuit, Play } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-
 export const AboutSection: React.FC = () => {
-  return (
-    <section id="about" className="py-24 bg-bsd-light-gray relative overflow-hidden">
+  return <section id="about" className="py-24 bg-bsd-light-gray relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-radial from-white to-transparent opacity-70"></div>
@@ -28,14 +25,8 @@ export const AboutSection: React.FC = () => {
               <p className="text-foreground/70">Take a virtual tour of our vibrant campus and see what makes BSD the perfect place for your creative journey.</p>
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-xl border border-border/30 mt-4">
-              <AspectRatio ratio={16/9}>
-                <iframe 
-                  src="https://www.youtube.com/embed/bWy4EH-B3tw" 
-                  title="BSDT Campus Life Video"
-                  className="w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                  allowFullScreen
-                ></iframe>
+              <AspectRatio ratio={16 / 9}>
+                <iframe src="https://www.youtube.com/embed/bWy4EH-B3tw" title="BSDT Campus Life Video" className="w-full h-full" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
               </AspectRatio>
 
               {/* Image decoration */}
@@ -52,22 +43,13 @@ export const AboutSection: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight text-bsd-gray">
                 A Legacy of Excellence in Design & Technology Education
               </h2>
-              <p className="text-foreground/70">
-                For over 15 years, BSD has been at the forefront of design and technology education in India. Our innovative curriculum, industry partnerships, and state-of-the-art facilities create an environment where creativity and technical skills flourish.
-              </p>
+              <p className="text-foreground/70">For over 8 years, BSDT has been at the forefront of design and technology education in India. Our innovative curriculum, industry partnerships, and state-of-the-art facilities create an environment where creativity and technical skills flourish.</p>
 
               <div className="space-y-3 pt-2">
-                {[
-                  "Industry-experienced faculty",
-                  "State-of-the-art labs and studios",
-                  "Strong industry connections",
-                  "Hands-on project-based learning",
-                ].map((item, index) => (
-                  <div key={index} className="flex items-start space-x-3">
+                {["Industry-experienced faculty", "State-of-the-art labs and studios", "Strong industry connections", "Hands-on project-based learning"].map((item, index) => <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-bsd-orange mt-0.5 flex-shrink-0" />
                     <span className="text-foreground/70">{item}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
 
               <div className="pt-4">
@@ -93,17 +75,10 @@ export const AboutSection: React.FC = () => {
                   At BSD, we integrate cutting-edge AI technologies across our curriculum to enhance student learning, foster innovation, and prepare graduates for the AI-driven future of design and technology industries.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {[
-                    "AI-powered personalized learning paths",
-                    "Generative design tools in all courses",
-                    "Real-world AI implementation projects",
-                    "Industry partnerships with AI leaders"
-                  ].map((feature, index) => (
-                    <div key={index} className="flex items-start space-x-3">
+                  {["AI-powered personalized learning paths", "Generative design tools in all courses", "Real-world AI implementation projects", "Industry partnerships with AI leaders"].map((feature, index) => <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="w-5 h-5 text-bsd-orange mt-0.5 flex-shrink-0" />
                       <span className="text-foreground/70">{feature}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </div>
             </div>
@@ -113,20 +88,24 @@ export const AboutSection: React.FC = () => {
         {/* Key stats */}
         <RevealSection delay={200}>
           <div className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { number: "15+", label: "Years of Excellence" },
-              { number: "500+", label: "Industry Partners" },
-              { number: "5000+", label: "Alumni Network" },
-              { number: "50+", label: "Awards & Recognitions" },
-            ].map((stat, index) => (
-              <div key={index} className="text-center">
+            {[{
+            number: "15+",
+            label: "Years of Excellence"
+          }, {
+            number: "500+",
+            label: "Industry Partners"
+          }, {
+            number: "5000+",
+            label: "Alumni Network"
+          }, {
+            number: "50+",
+            label: "Awards & Recognitions"
+          }].map((stat, index) => <div key={index} className="text-center">
                 <div className="text-4xl font-display font-bold text-bsd-orange">{stat.number}</div>
                 <div className="text-sm text-bsd-gray mt-2">{stat.label}</div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </RevealSection>
       </div>
-    </section>
-  );
+    </section>;
 };
