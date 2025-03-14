@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
@@ -6,7 +5,7 @@ import { CheckCircle, BrainCircuit, Play } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 export const AboutSection: React.FC = () => {
-  return <section id="about" className="py-24 bg-bsd-light-gray relative overflow-hidden">
+  return <section id="about" className="bg-bsd-light-gray relative overflow-hidden py-0">
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-radial from-white to-transparent opacity-70"></div>
