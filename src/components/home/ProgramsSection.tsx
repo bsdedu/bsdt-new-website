@@ -2,7 +2,7 @@
 import React from 'react';
 import { Card, CardContent, CardHeader } from "../ui-elements/Card";
 import { RevealSection } from "../ui-elements/RevealSection";
-import { PenTool, Code, Gamepad, Cpu, Building2, LayoutDashboard, Monitor, Cube } from "lucide-react";
+import { PenTool, Code, Gamepad, Cpu, Building2, LayoutDashboard, Monitor, Box } from "lucide-react";
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 
@@ -61,7 +61,7 @@ const programs = [
     addons: "Data Analytics & Cyber Security"
   },
   { 
-    icon: <Cube className="w-6 h-6 text-bsd-orange" />,
+    icon: <Box className="w-6 h-6 text-bsd-orange" />,
     title: "Innovation Lab Access",
     description: "All programs include access to our state-of-the-art innovation labs equipped with the latest technologies for prototyping and experimentation.",
     color: "from-bsd-orange/15 to-white",
