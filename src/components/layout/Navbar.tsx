@@ -35,9 +35,11 @@ export const Navbar: React.FC = () => {
       <div className="container mx-auto px-6 md:px-8">
         <div className="flex items-center justify-between">
           <a href="#" className="flex items-center">
-            <span className="text-xl md:text-2xl font-display font-bold tracking-tight">
-              BSD <span className="text-muted-foreground">Design & Tech</span>
-            </span>
+            <img 
+              src="/lovable-uploads/15af7636-fa32-410b-9b74-b4e58b0fa90b.png" 
+              alt="Bangalore School of Design & Technology Logo" 
+              className="h-10 md:h-12"
+            />
           </a>
 
           {/* Desktop Navigation */}
