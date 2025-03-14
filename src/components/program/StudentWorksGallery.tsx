@@ -4,6 +4,13 @@ import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "../ui-elements/Card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { 
+  Carousel, 
+  CarouselContent, 
+  CarouselItem, 
+  CarouselNext, 
+  CarouselPrevious 
+} from "@/components/ui/carousel";
 
 export const StudentWorksGallery: React.FC = () => {
   const projectCategories = [
@@ -63,25 +70,39 @@ export const StudentWorksGallery: React.FC = () => {
             
             {Object.entries(projects).map(([category, categoryProjects]) => (
               <TabsContent key={category} value={category} className="mt-0">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                  {categoryProjects.map(project => (
-                    <Card key={project.id} className="overflow-hidden border-0 shadow-md transition-all duration-300 hover:shadow-xl">
-                      <div className="aspect-[4/3] w-full overflow-hidden">
-                        <img 
-                          src={project.image} 
-                          alt={project.title} 
-                          className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                        />
-                      </div>
-                      <div className="p-4">
-                        <h3 className="font-medium text-bsd-gray">{project.title}</h3>
-                        <div className="flex justify-between items-center mt-1">
-                          <p className="text-sm text-foreground/70">{project.student}</p>
-                          <Badge variant="outline" className="text-xs">{project.year}</Badge>
-                        </div>
-                      </div>
-                    </Card>
-                  ))}
+                <div className="relative px-4 md:px-10">
+                  <Carousel 
+                    opts={{
+                      align: "start",
+                      loop: true,
+                    }}
+                    className="w-full"
+                  >
+                    <CarouselContent>
+                      {categoryProjects.map(project => (
+                        <CarouselItem key={project.id} className="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 pl-4">
+                          <Card className="overflow-hidden border-0 shadow-md transition-all duration-300 hover:shadow-xl h-full">
+                            <div className="aspect-[4/3] w-full overflow-hidden">
+                              <img 
+                                src={project.image} 
+                                alt={project.title} 
+                                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                              />
+                            </div>
+                            <div className="p-4">
+                              <h3 className="font-medium text-bsd-gray">{project.title}</h3>
+                              <div className="flex justify-between items-center mt-1">
+                                <p className="text-sm text-foreground/70">{project.student}</p>
+                                <Badge variant="outline" className="text-xs">{project.year}</Badge>
+                              </div>
+                            </div>
+                          </Card>
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="left-1 md:left-0" />
+                    <CarouselNext className="right-1 md:right-0" />
+                  </Carousel>
                 </div>
               </TabsContent>
             ))}
