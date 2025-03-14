@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { cn } from "@/lib/utils";
@@ -13,6 +12,9 @@ import {
 import { Card } from "../ui-elements/Card";
 import { Play } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+// Import testimonials data to use for Student Interviews
+import { testimonials } from './TestimonialsSection';
 
 // Gallery items array with the sports events images
 const galleryItems: {
@@ -61,7 +63,7 @@ const galleryItems: {
     caption: "Basketball match between students in the outdoor court"
   },
   
-  // Campus Life images
+  // Campus Life images (existing)
   {
     type: "image",
     category: "Campus Life",
@@ -105,6 +107,38 @@ const galleryItems: {
     caption: "Faculty explaining architectural concepts during a corridor exhibition"
   },
   
+  // New Campus Life images
+  {
+    type: "image",
+    category: "Campus Life",
+    image: "/lovable-uploads/326dbcf6-d2e7-4a16-b000-bbee15c0156c.png",
+    caption: "Students chatting on the staircase with vibrant geometric wall art in the background"
+  },
+  {
+    type: "image",
+    category: "Campus Life",
+    image: "/lovable-uploads/7f0d8281-1217-4666-99bc-deef062d59fc.png",
+    caption: "Group of students having a discussion session in the campus courtyard"
+  },
+  {
+    type: "image",
+    category: "Campus Life",
+    image: "/lovable-uploads/cf7871df-3c22-4504-ae9f-824fd6ec7804.png",
+    caption: "Faculty explaining architectural design concepts to attentive students in the corridor"
+  },
+  {
+    type: "image",
+    category: "Campus Life",
+    image: "/lovable-uploads/5aa8966b-7287-46b3-9b20-024ae41e5048.png",
+    caption: "Student proudly displaying her geometric model structure with campus exhibition in background"
+  },
+  {
+    type: "image",
+    category: "Campus Life",
+    image: "/lovable-uploads/cd3d39f9-b653-4797-bdd2-ac99084ae0ec.png",
+    caption: "Live music performance at campus event with visual projection and enthusiastic audience"
+  },
+  
   // Student Work images
   {
     type: "image",
@@ -135,18 +169,29 @@ const galleryItems: {
   }
 ];
 
-// Keep the categories for tab structure
-const categories = ["All", "Sports Events", "Campus Life", "Student Work", "Events", "Campus Tour", "Student Interviews"];
+// Student Interview videos from testimonials
+const studentInterviewItems = testimonials.map(testimonial => ({
+  type: "video" as const,
+  category: "Student Interviews",
+  videoId: testimonial.videoId,
+  thumbnail: `https://img.youtube.com/vi/${testimonial.videoId}/maxresdefault.jpg`,
+  caption: `${testimonial.name} - ${testimonial.course}`
+}));
+
+// Combine the gallery items with student interviews
+const allGalleryItems = [...galleryItems, ...studentInterviewItems];
+
+// Keep the categories for tab structure (removed Events and Campus Tour)
+const categories = ["All", "Sports Events", "Campus Life", "Student Work", "Student Interviews"];
 
 export const GallerySection: React.FC = () => {
-  // ... keep existing code (useState hooks and handlers)
   const [activeCategory, setActiveCategory] = useState("All");
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
 
   const filteredItems = activeCategory === "All" 
-    ? galleryItems 
-    : galleryItems.filter(item => item.category === activeCategory);
+    ? allGalleryItems 
+    : allGalleryItems.filter(item => item.category === activeCategory);
 
   const handleVideoClick = (videoId: string) => {
     setSelectedVideo(videoId);

@@ -1,51 +1,55 @@
+
 import React, { useState } from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "../ui-elements/Card";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
-interface Testimonial {
+
+export interface Testimonial {
   id: string;
   name: string;
   course: string;
   videoId: string;
 }
+
+export const testimonials: Testimonial[] = [{
+  id: "5",
+  name: "Ambika Bharadwaj",
+  course: "2nd Semester Dual Bachelors Interior Architecture",
+  videoId: "NPUpGuVxiyQ"
+}, {
+  id: "6",
+  name: "Rose Tanwar",
+  course: "2nd Semester B.Sc Interior Design",
+  videoId: "DVcocyw-FBI"
+}, {
+  id: "7",
+  name: "Sahana B.S.",
+  course: "B.Sc Final Year Interior Design",
+  videoId: "4E7edmlMGRU"
+}, {
+  id: "1",
+  name: "Radhika",
+  course: "Professional Diploma in LD",
+  videoId: "tNYpgfevzwc"
+}, {
+  id: "2",
+  name: "Monika",
+  course: "Professional Diploma in Interior Design",
+  videoId: "Vxo4Sbdbx_8"
+}, {
+  id: "3",
+  name: "Ojo",
+  course: "BVA Interior Spatial Design",
+  videoId: "LvDmudablZI"
+}, {
+  id: "4",
+  name: "Suhas",
+  course: "BVA Interior Spatial Design",
+  videoId: "nVuZT2jaaNM"
+}];
+
 export const TestimonialsSection: React.FC = () => {
-  const testimonials: Testimonial[] = [{
-    id: "5",
-    name: "Ambika Bharadwaj",
-    course: "2nd Semester Dual Bachelors Interior Architecture",
-    videoId: "NPUpGuVxiyQ"
-  }, {
-    id: "6",
-    name: "Rose Tanwar",
-    course: "2nd Semester B.Sc Interior Design",
-    videoId: "DVcocyw-FBI"
-  }, {
-    id: "7",
-    name: "Sahana B.S.",
-    course: "B.Sc Final Year Interior Design",
-    videoId: "4E7edmlMGRU"
-  }, {
-    id: "1",
-    name: "Radhika",
-    course: "Professional Diploma in LD",
-    videoId: "tNYpgfevzwc"
-  }, {
-    id: "2",
-    name: "Monika",
-    course: "Professional Diploma in Interior Design",
-    videoId: "Vxo4Sbdbx_8"
-  }, {
-    id: "3",
-    name: "Ojo",
-    course: "BVA Interior Spatial Design",
-    videoId: "LvDmudablZI"
-  }, {
-    id: "4",
-    name: "Suhas",
-    course: "BVA Interior Spatial Design",
-    videoId: "nVuZT2jaaNM"
-  }];
   return <section id="testimonials" className="bg-white py-[30px]">
       <div className="container mx-auto px-6 md:px-8 max-w-6xl">
         <RevealSection>
