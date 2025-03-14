@@ -5,6 +5,7 @@ import { Footer } from '../components/layout/Footer';
 import { HeroSection } from '../components/home/HeroSection';
 import { ProgramsSection } from '../components/home/ProgramsSection';
 import { AboutSection } from '../components/home/AboutSection';
+import { WhyChooseSection } from '../components/home/WhyChooseSection';
 import { GallerySection } from '../components/home/GallerySection';
 import { ContactSection } from '../components/home/ContactSection';
 
@@ -39,6 +40,7 @@ const Index = () => {
       <main>
         <HeroSection />
         <ProgramsSection />
+        <WhyChooseSection />
         <AboutSection />
         <GallerySection />
         <ContactSection />
