@@ -14,10 +14,15 @@ export const HeroSection: React.FC = () => {
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-24 pb-16">
-      {/* Background Elements */}
-      <div className="absolute inset-0 -z-10 opacity-20">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-gradient-to-r from-blue-300 to-purple-300 blur-3xl animate-image-glow"></div>
-        <div className="absolute top-1/2 right-1/4 w-96 h-96 rounded-full bg-gradient-to-r from-yellow-200 to-pink-200 blur-3xl animate-image-glow" style={{ animationDelay: '1s' }}></div>
+      {/* Background Elements with Images */}
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-white/80 z-10"></div>
+        <img 
+          src="/lovable-uploads/e48b8c13-052e-4d80-ada8-db3eaf003d21.png" 
+          alt="Background pattern" 
+          className="absolute w-full h-full object-cover opacity-10 blur-sm"
+        />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-20"></div>
       </div>
 
       <div className="container mx-auto px-6 md:px-8">
