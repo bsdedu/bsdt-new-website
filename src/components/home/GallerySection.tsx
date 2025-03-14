@@ -3,25 +3,67 @@ import React, { useState } from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
+import { 
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
-// Placeholder for gallery images
+// Gallery images with real content
 const galleryItems = [
-  { category: "Design Projects", placeholder: "Design Project" },
-  { category: "Campus Life", placeholder: "Campus Event" },
-  { category: "Student Work", placeholder: "Student Portfolio" },
-  { category: "Facilities", placeholder: "Design Studio" },
-  { category: "Events", placeholder: "Industry Workshop" },
-  { category: "Exhibitions", placeholder: "Student Exhibition" },
+  { 
+    category: "Sports Events", 
+    image: "/lovable-uploads/fb6e3221-85ce-4641-97b4-0be26d1e5f1b.png",
+    caption: "Football team celebration with faculty members"
+  },
+  { 
+    category: "Sports Events", 
+    image: "/lovable-uploads/c72be9c4-87fc-415a-a4fb-8e3db30e45cf.png",
+    caption: "Basketball match between students"
+  },
+  { 
+    category: "Campus Life", 
+    image: "/lovable-uploads/17f4f011-541d-4476-bbb2-0a9bbc508f0a.png",
+    caption: "Students enjoying campus activities"
+  },
+  { 
+    category: "Campus Life", 
+    image: "/lovable-uploads/9fcd3f44-3088-4f3c-a35c-176f9392e127.png",
+    caption: "Students relaxing between classes"
+  },
+  { 
+    category: "Student Work", 
+    image: "/lovable-uploads/3baec177-d6ff-4f52-8cb8-1d0ba1fcdaa7.png",
+    caption: "Design exhibition walkthrough"
+  },
+  { 
+    category: "Events", 
+    image: "/lovable-uploads/6e8f285e-a6c2-4dba-9059-ca5b191bd897.png",
+    caption: "Live music performance at campus event"
+  },
+  { 
+    category: "Sports Events", 
+    image: "/lovable-uploads/fb4bedc7-ed6b-470b-82fe-e714ed5d7d6a.png",
+    caption: "Team huddle during sports day"
+  }
 ];
 
-const categories = ["All", "Design Projects", "Campus Life", "Student Work", "Facilities", "Events"];
+const categories = ["All", "Sports Events", "Campus Life", "Student Work", "Events"];
 
 export const GallerySection: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const filteredItems = activeCategory === "All" 
     ? galleryItems 
     : galleryItems.filter(item => item.category === activeCategory);
+
+  // For mobile view, show a carousel
+  const isMobileView = () => {
+    return window.innerWidth < 768;
+  };
 
   return (
     <section id="gallery" className="py-24 relative overflow-hidden">
@@ -29,13 +71,13 @@ export const GallerySection: React.FC = () => {
         <RevealSection>
           <div className="text-center max-w-2xl mx-auto mb-16">
             <Badge variant="bsdOrange" className="mb-4">
-              Gallery
+              Campus Life
             </Badge>
             <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight text-bsd-gray">
-              Showcasing Our Creative Environment
+              Experience Our Vibrant Campus
             </h2>
             <p className="mt-4 text-foreground/70">
-              Explore our vibrant campus life, student projects, and creative spaces that foster innovation and design excellence.
+              From sports events to creative showcases, our campus life offers a perfect blend of academics and extracurricular activities.
             </p>
           </div>
         </RevealSection>
@@ -59,21 +101,62 @@ export const GallerySection: React.FC = () => {
           </div>
         </RevealSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Mobile View: Carousel */}
+        <div className="md:hidden">
+          <Carousel className="w-full">
+            <CarouselContent>
+              {filteredItems.map((item, index) => (
+                <CarouselItem key={index}>
+                  <RevealSection delay={index * 80}>
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+                      <img 
+                        src={item.image} 
+                        alt={item.caption} 
+                        className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-100">
+                        <div className="absolute bottom-0 left-0 right-0 p-4">
+                          <span className="inline-block px-2 py-1 text-xs bg-bsd-orange/80 text-white rounded-full mb-2">
+                            {item.category}
+                          </span>
+                          <p className="text-white text-sm font-medium">{item.caption}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </RevealSection>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-2 bg-white/80" />
+            <CarouselNext className="right-2 bg-white/80" />
+          </Carousel>
+        </div>
+
+        {/* Desktop View: Grid */}
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredItems.map((item, index) => (
             <RevealSection key={index} delay={index * 80}>
-              <div className="group relative aspect-square overflow-hidden rounded-2xl shadow-sm border border-border/50">
-                <div className="absolute inset-0 bg-gradient-to-br from-bsd-light-gray to-white transition-transform duration-500 group-hover:scale-105"></div>
+              <div 
+                className="group relative aspect-[4/3] overflow-hidden rounded-2xl shadow-sm border border-border/50"
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
+                <img 
+                  src={item.image} 
+                  alt={item.caption} 
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
                 
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center p-6">
-                    <p className="text-sm text-bsd-gray/80 mb-2">{item.placeholder}</p>
-                    <div className="w-12 h-0.5 bg-bsd-orange/30 mx-auto"></div>
+                <div className={cn(
+                  "absolute inset-0 bg-gradient-to-t from-black/70 to-transparent transition-opacity duration-300",
+                  hoveredIndex === index ? "opacity-100" : "opacity-0"
+                )}>
+                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <span className="inline-block px-2 py-1 text-xs bg-bsd-orange/80 text-white rounded-full mb-2">
+                      {item.category}
+                    </span>
+                    <p className="text-white text-sm font-medium">{item.caption}</p>
                   </div>
-                </div>
-                
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-bsd-gray/80 to-transparent opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                  <p className="text-white text-sm">{item.category}</p>
                 </div>
               </div>
             </RevealSection>
