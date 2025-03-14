@@ -18,8 +18,12 @@ type NavItemProps = {
   item: {
     name: string;
     href: string;
-    type: 'dropdown' | 'link';
+    type: 'dropdown' | 'link' | 'megamenu';
     items?: SubItem[];
+    categories?: {
+      title: string;
+      items: SubItem[];
+    }[];
   };
 };
 
@@ -40,6 +44,50 @@ export const NavItem: React.FC<NavItemProps> = ({ item }) => {
       </NavigationMenuItem>
     );
   } 
+  
+  if (item.type === 'megamenu' && item.categories) {
+    return (
+      <NavigationMenuItem>
+        <NavigationMenuTrigger 
+          className="bg-transparent text-bsd-gray hover:text-bsd-orange hover:bg-transparent focus:bg-transparent"
+        >
+          {item.name}
+        </NavigationMenuTrigger>
+        <NavigationMenuContent>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 w-[800px] max-w-screen-lg">
+            {item.categories.map((category, index) => (
+              <div key={index} className="space-y-3">
+                <h3 className="text-sm font-bold text-bsd-gray border-b pb-1">{category.title}</h3>
+                <ul className="space-y-2">
+                  {category.items.map((subItem) => (
+                    <li key={subItem.name}>
+                      <NavigationMenuLink asChild>
+                        {subItem.href.startsWith('/') ? (
+                          <Link
+                            to={subItem.href}
+                            className="block select-none rounded-md py-1.5 text-sm leading-none text-bsd-gray hover:text-bsd-orange"
+                          >
+                            {subItem.name}
+                          </Link>
+                        ) : (
+                          <a
+                            href={subItem.href}
+                            className="block select-none rounded-md py-1.5 text-sm leading-none text-bsd-gray hover:text-bsd-orange"
+                          >
+                            {subItem.name}
+                          </a>
+                        )}
+                      </NavigationMenuLink>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </NavigationMenuContent>
+      </NavigationMenuItem>
+    );
+  }
   
   return (
     <NavigationMenuItem>
