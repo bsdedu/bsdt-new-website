@@ -356,40 +356,98 @@ export const GallerySection: React.FC = () => {
               ))}
             </TabsList>
             
-            {/* Content for All tab - One item per category */}
+            {/* Content for All tab - One item per category in a single row */}
             <TabsContent value="All" className="mt-0">
-              {/* Mobile View */}
-              <div className="md:hidden space-y-6">
-                {Object.keys(previewItems).map((category) => (
-                  <Collapsible key={category} className="border rounded-lg shadow-sm mb-4" open={expandedCategories.includes(category)}>
-                    <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-gray-50 hover:bg-gray-100 rounded-t-lg" 
-                      onClick={() => toggleCategory(category)}>
-                      <div className="flex items-center gap-2">
-                        <GalleryHorizontal className="h-5 w-5 text-bsd-orange" />
-                        <h3 className="text-lg font-medium">{category}</h3>
-                      </div>
-                      <span className="text-bsd-orange">
-                        {expandedCategories.includes(category) ? '−' : '+'}
-                      </span>
-                    </CollapsibleTrigger>
-                    <CollapsibleContent className="p-4">
-                      {renderGalleryItems([previewItems[category]], true)}
-                    </CollapsibleContent>
-                  </Collapsible>
-                ))}
+              {/* Mobile View - Carousel */}
+              <div className="md:hidden">
+                <Carousel className="w-full">
+                  <CarouselContent>
+                    {Object.entries(previewItems).map(([category, item], index) => (
+                      <CarouselItem key={index}>
+                        <div className="p-1">
+                          <Card isHoverable className="overflow-hidden">
+                            <div className="relative aspect-video overflow-hidden">
+                              {item.type === "image" ? (
+                                <img 
+                                  src={item.image} 
+                                  alt={item.caption} 
+                                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                                />
+                              ) : (
+                                <>
+                                  <img 
+                                    src={item.thumbnail} 
+                                    alt={item.caption} 
+                                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                                  />
+                                  <div 
+                                    className="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer group"
+                                    onClick={() => item.videoId && handleVideoClick(item.videoId)}
+                                  >
+                                    <div className="bg-white/90 rounded-full p-3 transition-transform duration-300 group-hover:scale-110">
+                                      <Play className="h-8 w-8 text-bsd-orange" fill="currentColor" />
+                                    </div>
+                                  </div>
+                                </>
+                              )}
+                            </div>
+                            <div className="p-4">
+                              <h4 className="font-medium text-bsd-gray mb-1">{category}</h4>
+                              <p className="text-sm text-gray-600">{item.caption}</p>
+                            </div>
+                          </Card>
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="left-2 bg-white/80" />
+                  <CarouselNext className="right-2 bg-white/80" />
+                </Carousel>
               </div>
 
-              {/* Desktop View */}
-              <div className="hidden md:block space-y-12">
-                {Object.keys(previewItems).map((category) => (
-                  <div key={category} className="mb-10">
-                    <div className="flex items-center gap-2 mb-4 border-b pb-2">
-                      <GalleryHorizontal className="h-5 w-5 text-bsd-orange" />
-                      <h3 className="text-xl font-semibold text-bsd-gray">{category}</h3>
+              {/* Desktop View - Grid */}
+              <div className="hidden md:block">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {Object.entries(previewItems).map(([category, item], index) => (
+                    <div key={index} className="group relative">
+                      <Card isHoverable className="overflow-hidden h-full">
+                        <div className="relative aspect-video overflow-hidden">
+                          {item.type === "image" ? (
+                            <img 
+                              src={item.image} 
+                              alt={item.caption} 
+                              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            />
+                          ) : (
+                            <>
+                              <img 
+                                src={item.thumbnail} 
+                                alt={item.caption} 
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                              />
+                              <div 
+                                className="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer"
+                                onClick={() => item.videoId && handleVideoClick(item.videoId)}
+                              >
+                                <div className="bg-white/90 rounded-full p-3 transition-transform duration-300 group-hover:scale-110">
+                                  <Play className="h-8 w-8 text-bsd-orange" fill="currentColor" />
+                                </div>
+                              </div>
+                            </>
+                          )}
+                          <div className="absolute top-3 left-3">
+                            <Badge variant="bsdOrange" className="bg-bsd-orange/90 text-white px-2 py-1 text-xs">
+                              {category}
+                            </Badge>
+                          </div>
+                        </div>
+                        <div className="p-4">
+                          <p className="text-sm text-gray-600">{item.caption}</p>
+                        </div>
+                      </Card>
                     </div>
-                    {renderGalleryItems([previewItems[category]])}
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </TabsContent>
             
