@@ -29,7 +29,7 @@ export const UpcomingEventsSection: React.FC = () => {
       time: "09:30 AM - 4:00 PM",
       description: "Experience our creative campus, meet faculty and students, explore accommodations, engage with design experts, and join hands-on workshops at our Open Day!",
       imageSrc: "/lovable-uploads/741db2ef-80d9-44dd-b7f0-cb1942734763.png",
-      registerLink: "/register-open-day",
+      registerLink: "https://bit.ly/3Fl6VkJ",
       featured: true
     },
     {
@@ -93,9 +93,11 @@ export const UpcomingEventsSection: React.FC = () => {
                 <CardContent className="p-6">
                   <p className="text-bsd-gray/80 mb-6">{event.description}</p>
                   <div className="flex justify-between items-center">
-                    <AnimatedButton>
-                      Register Now
-                    </AnimatedButton>
+                    <a href={event.registerLink} target="_blank" rel="noopener noreferrer">
+                      <AnimatedButton>
+                        Register Now
+                      </AnimatedButton>
+                    </a>
                     <Button variant="ghost" className="text-bsd-gray hover:text-bsd-orange">
                       Learn More
                     </Button>
