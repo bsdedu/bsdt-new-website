@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -619,3 +620,36 @@ const ProgramGraphicDesign = () => {
 
           <RevealSection delay={100}>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+              <Card>
+                <CardHeader>
+                  <h3 className="text-xl font-semibold text-bsd-gray">Eligibility Criteria</h3>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-4">
+                    <li className="flex items-start">
+                      <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="w-4 h-4 text-bsd-orange" />
+                      </div>
+                      <div className="ml-3">
+                        <h4 className="font-medium text-bsd-gray">Academic Qualification</h4>
+                        <p className="text-sm text-foreground/70">10+2 (Higher Secondary) or equivalent with a minimum of 50% aggregate marks from any recognized board</p>
+                      </div>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </RevealSection>
+        </div>
+      </section>
+
+      {/* Enquiry Form Section */}
+      <EnquiryFormSection />
+      
+      {/* Footer */}
+      <Footer />
+    </>
+  );
+};
+
+export default ProgramGraphicDesign;

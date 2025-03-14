@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -618,3 +619,17 @@ const ProgramInteriorDesign = () => {
                 </CardContent>
               </Card>
             </div>
+          </RevealSection>
+        </div>
+      </section>
+
+      {/* Enquiry Form Section */}
+      <EnquiryFormSection />
+      
+      {/* Footer */}
+      <Footer />
+    </>
+  );
+};
+
+export default ProgramInteriorDesign;
