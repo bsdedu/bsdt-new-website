@@ -2,13 +2,24 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader } from "../ui-elements/Card";
 import { RevealSection } from "../ui-elements/RevealSection";
-import { PenTool, Code, Gamepad, Cpu, Building2, LayoutDashboard, Monitor, Box, GraduationCap, BookOpen } from "lucide-react";
+import { PenTool, Code, Gamepad, Cpu, Building2, LayoutDashboard, Monitor, Box, GraduationCap, BookOpen, Book } from "lucide-react";
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
-const undergraduatePrograms = [
+// Define the program type to properly handle the optional 'addons' property
+type Program = {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  color: string;
+  duration: string;
+  isFeatured?: boolean;
+  addons?: string;
+};
+
+const undergraduatePrograms: Program[] = [
   {
     icon: <Building2 className="w-6 h-6 text-bsd-orange" />,
     title: "B.Des in Architectural Construction Design",
@@ -64,41 +75,34 @@ const undergraduatePrograms = [
   }
 ];
 
-const diplomaPrograms = [
+const diplomaPrograms: Program[] = [
   {
-    icon: <GraduationCap className="w-6 h-6 text-bsd-orange" />,
-    title: "Professional Diploma in UX/UI Design",
-    description: "A 1-year professional diploma focused on designing user-centered digital experiences with industry-standard tools and methodologies.",
-    color: "from-bsd-orange/20 to-bsd-orange/5",
-    isFeatured: true,
-    duration: "1 year"
-  },
-  {
-    icon: <Code className="w-6 h-6 text-bsd-orange" />,
-    title: "Professional Diploma in Web Development",
-    description: "A 1-year program covering front-end and back-end development skills with modern frameworks and responsive design principles.",
+    icon: <PenTool className="w-6 h-6 text-bsd-orange" />,
+    title: "P. Diploma in Interior Design",
+    description: "A professional diploma program focused on teaching interior design principles, space planning, and material selection for various environments.",
     color: "from-bsd-orange/20 to-bsd-orange/5",
     isFeatured: true,
     duration: "1 year"
   },
   {
     icon: <Monitor className="w-6 h-6 text-bsd-orange" />,
-    title: "Professional Diploma in Digital Marketing",
-    description: "A 6-month program teaching SEO, content strategy, social media marketing, and analytics for digital marketing professionals.",
-    color: "from-bsd-gray/15 to-bsd-gray/5",
-    duration: "6 months"
+    title: "P. Diploma in Graphic Design + UI & UX",
+    description: "An integrated program combining graphic design fundamentals with user interface and experience design principles for digital platforms.",
+    color: "from-bsd-orange/20 to-bsd-orange/5",
+    isFeatured: true,
+    duration: "1 year"
   },
   {
-    icon: <BookOpen className="w-6 h-6 text-bsd-orange" />,
-    title: "Professional Diploma in Design Thinking",
-    description: "A 6-month program focused on human-centered design methodologies to solve complex problems through creative thinking.",
+    icon: <LayoutDashboard className="w-6 h-6 text-bsd-orange" />,
+    title: "P. Diploma in UI & UX",
+    description: "A specialized program teaching user interface and experience design methodologies, prototyping, and usability testing for digital products.",
     color: "from-bsd-gray/15 to-bsd-gray/5",
     duration: "6 months"
   },
   {
     icon: <Building2 className="w-6 h-6 text-bsd-orange" />,
-    title: "Professional Diploma in Interior Styling",
-    description: "A 1-year program teaching professional interior styling techniques, materials selection, and spatial arrangement.",
+    title: "PG. Diploma in Landscape Design",
+    description: "A postgraduate diploma program focused on sustainable landscape design, environmental planning, and outdoor space development.",
     color: "from-bsd-gray/15 to-bsd-gray/5",
     duration: "1 year"
   }
