@@ -1,11 +1,9 @@
-
 import React, { useEffect, useState } from 'react';
 import { cn } from "@/lib/utils";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
 import { ArrowDown } from "lucide-react";
 import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
-
 export const HeroSection: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
@@ -27,7 +25,7 @@ export const HeroSection: React.FC = () => {
                 Admissions Open for 2025-26
               </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight leading-tight">
-                <span className="text-gradient block">Design Your Future</span>
+                <span className="text-gradient block my-0 py-[4px]">Design Your Future</span>
                 <span className="block mt-2 text-bsd-orange">Innovate with Technology</span>
               </h1>
               <p className="mt-6 text-lg text-foreground/70 max-w-xl">
