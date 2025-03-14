@@ -13,7 +13,7 @@ export const AboutSection: React.FC = () => {
         <div className="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-bsd-gray/5 blur-3xl opacity-60"></div>
       </div>
 
-      <div className="container mx-auto px-6 md:px-8">
+      <div className="container mx-auto px-6 md:px-8 my-[20px]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <RevealSection direction="right">
             <div className="space-y-4 mb-2">
