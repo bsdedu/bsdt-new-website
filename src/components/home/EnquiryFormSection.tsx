@@ -1,7 +1,8 @@
+
 import React from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, BookOpen, Send } from "lucide-react";
+import { ArrowRight, BookOpen } from "lucide-react";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
 import { Input } from "@/components/ui/input";
 import { Card } from "../ui-elements/Card";
@@ -179,7 +180,7 @@ export const EnquiryFormSection: React.FC = () => {
                     </div>
                     
                     <AnimatedButton type="submit" className="w-full">
-                      <Send className="w-4 h-4 mr-1" /> Submit Enquiry
+                      Submit Enquiry
                     </AnimatedButton>
                   </form>
                 </Form>
