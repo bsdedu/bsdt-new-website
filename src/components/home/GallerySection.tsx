@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/carousel";
 import { Card } from "../ui-elements/Card";
 import { Play } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 // Gallery items with both images and videos
 const galleryItems = [
@@ -104,37 +105,83 @@ export const GallerySection: React.FC = () => {
         </RevealSection>
 
         <RevealSection delay={100}>
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {categories.map((category, index) => (
-              <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={cn(
-                  "px-4 py-2 rounded-full text-sm transition-all duration-300",
-                  activeCategory === category
-                    ? "bg-bsd-orange text-white shadow-sm"
-                    : "bg-bsd-light-gray hover:bg-bsd-orange/20 text-bsd-gray hover:text-bsd-gray"
-                )}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </RevealSection>
+          <Tabs defaultValue="All" className="w-full" onValueChange={setActiveCategory}>
+            <TabsList className="flex flex-wrap justify-center gap-1 mb-12 bg-transparent h-auto p-1">
+              {categories.map((category) => (
+                <TabsTrigger 
+                  key={category} 
+                  value={category}
+                  className="px-4 py-2 rounded-full text-sm data-[state=active]:bg-bsd-orange data-[state=active]:text-white data-[state=active]:shadow-sm data-[state=inactive]:bg-bsd-light-gray data-[state=inactive]:text-bsd-gray hover:bg-bsd-orange/20"
+                >
+                  {category}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+            
+            <TabsContent value={activeCategory} className="mt-0">
+              {/* Mobile View: Carousel */}
+              <div className="md:hidden">
+                <Carousel className="w-full">
+                  <CarouselContent>
+                    {filteredItems.map((item, index) => (
+                      <CarouselItem key={index}>
+                        <RevealSection delay={index * 80}>
+                          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+                            {item.type === "image" ? (
+                              <img 
+                                src={item.image} 
+                                alt={item.caption} 
+                                className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
+                              />
+                            ) : (
+                              <div 
+                                className="relative w-full h-full cursor-pointer"
+                                onClick={() => handleVideoClick(item.videoId)}
+                              >
+                                <img 
+                                  src={item.thumbnail} 
+                                  alt={item.caption} 
+                                  className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
+                                />
+                                <div className="absolute inset-0 flex items-center justify-center">
+                                  <div className="bg-bsd-orange/90 rounded-full p-4 shadow-lg">
+                                    <Play className="h-8 w-8 text-white" />
+                                  </div>
+                                </div>
+                              </div>
+                            )}
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-100">
+                              <div className="absolute bottom-0 left-0 right-0 p-4">
+                                <span className="inline-block px-2 py-1 text-xs bg-bsd-orange/80 text-white rounded-full mb-2">
+                                  {item.category}
+                                </span>
+                                <p className="text-white text-sm font-medium">{item.caption}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </RevealSection>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="left-2 bg-white/80" />
+                  <CarouselNext className="right-2 bg-white/80" />
+                </Carousel>
+              </div>
 
-        {/* Mobile View: Carousel */}
-        <div className="md:hidden">
-          <Carousel className="w-full">
-            <CarouselContent>
-              {filteredItems.map((item, index) => (
-                <CarouselItem key={index}>
-                  <RevealSection delay={index * 80}>
-                    <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              {/* Desktop View: Grid */}
+              <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filteredItems.map((item, index) => (
+                  <RevealSection key={index} delay={index * 80}>
+                    <div 
+                      className="group relative aspect-[4/3] overflow-hidden rounded-2xl shadow-sm border border-border/50"
+                      onMouseEnter={() => setHoveredIndex(index)}
+                      onMouseLeave={() => setHoveredIndex(null)}
+                    >
                       {item.type === "image" ? (
                         <img 
                           src={item.image} 
                           alt={item.caption} 
-                          className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                       ) : (
                         <div 
@@ -144,16 +191,20 @@ export const GallerySection: React.FC = () => {
                           <img 
                             src={item.thumbnail} 
                             alt={item.caption} 
-                            className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                           />
                           <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="bg-bsd-orange/90 rounded-full p-4 shadow-lg">
+                            <div className="bg-bsd-orange/90 rounded-full p-4 shadow-lg transform transition-transform duration-300 group-hover:scale-110">
                               <Play className="h-8 w-8 text-white" />
                             </div>
                           </div>
                         </div>
                       )}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-100">
+                      
+                      <div className={cn(
+                        "absolute inset-0 bg-gradient-to-t from-black/70 to-transparent transition-opacity duration-300",
+                        hoveredIndex === index || item.type === "video" ? "opacity-100" : "opacity-0"
+                      )}>
                         <div className="absolute bottom-0 left-0 right-0 p-4">
                           <span className="inline-block px-2 py-1 text-xs bg-bsd-orange/80 text-white rounded-full mb-2">
                             {item.category}
@@ -163,62 +214,11 @@ export const GallerySection: React.FC = () => {
                       </div>
                     </div>
                   </RevealSection>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="left-2 bg-white/80" />
-            <CarouselNext className="right-2 bg-white/80" />
-          </Carousel>
-        </div>
-
-        {/* Desktop View: Grid */}
-        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredItems.map((item, index) => (
-            <RevealSection key={index} delay={index * 80}>
-              <div 
-                className="group relative aspect-[4/3] overflow-hidden rounded-2xl shadow-sm border border-border/50"
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
-              >
-                {item.type === "image" ? (
-                  <img 
-                    src={item.image} 
-                    alt={item.caption} 
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                ) : (
-                  <div 
-                    className="relative w-full h-full cursor-pointer"
-                    onClick={() => handleVideoClick(item.videoId)}
-                  >
-                    <img 
-                      src={item.thumbnail} 
-                      alt={item.caption} 
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="bg-bsd-orange/90 rounded-full p-4 shadow-lg transform transition-transform duration-300 group-hover:scale-110">
-                        <Play className="h-8 w-8 text-white" />
-                      </div>
-                    </div>
-                  </div>
-                )}
-                
-                <div className={cn(
-                  "absolute inset-0 bg-gradient-to-t from-black/70 to-transparent transition-opacity duration-300",
-                  hoveredIndex === index || item.type === "video" ? "opacity-100" : "opacity-0"
-                )}>
-                  <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <span className="inline-block px-2 py-1 text-xs bg-bsd-orange/80 text-white rounded-full mb-2">
-                      {item.category}
-                    </span>
-                    <p className="text-white text-sm font-medium">{item.caption}</p>
-                  </div>
-                </div>
+                ))}
               </div>
-            </RevealSection>
-          ))}
-        </div>
+            </TabsContent>
+          </Tabs>
+        </RevealSection>
 
         <RevealSection delay={300}>
           <div className="mt-16 text-center">
