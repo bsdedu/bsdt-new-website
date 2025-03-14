@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
@@ -6,7 +5,6 @@ import { Card, CardContent } from "../ui-elements/Card";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
 import { Calendar } from "lucide-react";
 import { Button } from "../ui/button";
-
 interface Event {
   id: string;
   title: string;
@@ -18,34 +16,28 @@ interface Event {
   registerLink: string;
   featured?: boolean;
 }
-
 export const UpcomingEventsSection: React.FC = () => {
-  const upcomingEvents: Event[] = [
-    {
-      id: "1",
-      title: "Open Day 2025",
-      type: "open-day",
-      date: "29th March, 2025",
-      time: "09:30 AM - 4:00 PM",
-      description: "Experience our creative campus, meet faculty and students, explore accommodations, engage with design experts, and join hands-on workshops at our Open Day!",
-      imageSrc: "/lovable-uploads/741db2ef-80d9-44dd-b7f0-cb1942734763.png",
-      registerLink: "https://bit.ly/3Fl6VkJ",
-      featured: true
-    },
-    {
-      id: "2",
-      title: "Designing Tomorrow: The Opportunities in Architecture & Interior Design",
-      type: "webinar",
-      date: "5th April, 2025",
-      time: "11:00 AM onwards",
-      description: "Join our expert panel with Neha N Achar (Architect, AtkinsRealis) and Ar. Bhavna R (Assistant Professor) as they discuss career opportunities in design.",
-      imageSrc: "/lovable-uploads/5798432f-82b3-43e6-a5be-03af3cc31ea4.png",
-      registerLink: "/register-webinar"
-    }
-  ];
-
-  return (
-    <section id="events" className="py-16 bg-[#F6F6F7]">
+  const upcomingEvents: Event[] = [{
+    id: "1",
+    title: "Open Day 2025",
+    type: "open-day",
+    date: "29th March, 2025",
+    time: "09:30 AM - 4:00 PM",
+    description: "Experience our creative campus, meet faculty and students, explore accommodations, engage with design experts, and join hands-on workshops at our Open Day!",
+    imageSrc: "/lovable-uploads/741db2ef-80d9-44dd-b7f0-cb1942734763.png",
+    registerLink: "https://bit.ly/3Fl6VkJ",
+    featured: true
+  }, {
+    id: "2",
+    title: "Designing Tomorrow: The Opportunities in Architecture & Interior Design",
+    type: "webinar",
+    date: "5th April, 2025",
+    time: "11:00 AM onwards",
+    description: "Join our expert panel with Neha N Achar (Architect, AtkinsRealis) and Ar. Bhavna R (Assistant Professor) as they discuss career opportunities in design.",
+    imageSrc: "/lovable-uploads/5798432f-82b3-43e6-a5be-03af3cc31ea4.png",
+    registerLink: "/register-webinar"
+  }];
+  return <section id="events" className="bg-[#F6F6F7] py-[30px]">
       <div className="container mx-auto px-6 md:px-8 max-w-6xl">
         <RevealSection>
           <div className="text-center mb-12">
@@ -63,28 +55,16 @@ export const UpcomingEventsSection: React.FC = () => {
 
         <RevealSection delay={200}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {upcomingEvents.map((event) => (
-              <Card 
-                key={event.id} 
-                isHoverable 
-                className={`overflow-hidden ${event.featured ? 'border-bsd-orange/20 shadow' : ''}`}
-              >
+            {upcomingEvents.map(event => <Card key={event.id} isHoverable className={`overflow-hidden ${event.featured ? 'border-bsd-orange/20 shadow' : ''}`}>
                 <div className="relative h-64 sm:h-80 md:h-96 overflow-hidden">
-                  <img 
-                    src={event.imageSrc} 
-                    alt={event.title} 
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                  />
+                  <img src={event.imageSrc} alt={event.title} className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
                     <div className="flex items-center gap-2 text-white mb-2">
                       <Calendar className="w-4 h-4" />
                       <span className="text-sm font-medium">{event.date} | {event.time}</span>
                     </div>
                     <h3 className="text-xl md:text-2xl font-semibold text-white">{event.title}</h3>
-                    <Badge 
-                      variant={event.type === 'open-day' ? 'bsdOrange' : 'secondary'} 
-                      className="mt-2 w-fit"
-                    >
+                    <Badge variant={event.type === 'open-day' ? 'bsdOrange' : 'secondary'} className="mt-2 w-fit">
                       {event.type === 'open-day' ? 'Open Day' : 'Webinar'}
                     </Badge>
                   </div>
@@ -103,8 +83,7 @@ export const UpcomingEventsSection: React.FC = () => {
                     </Button>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
 
           <div className="flex justify-center mt-12">
@@ -114,6 +93,5 @@ export const UpcomingEventsSection: React.FC = () => {
           </div>
         </RevealSection>
       </div>
-    </section>
-  );
+    </section>;
 };
