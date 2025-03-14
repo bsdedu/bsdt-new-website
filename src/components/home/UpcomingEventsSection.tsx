@@ -4,7 +4,7 @@ import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "../ui-elements/Card";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
-import { Calendar, ExternalLink } from "lucide-react";
+import { Calendar } from "lucide-react";
 import { Button } from "../ui/button";
 
 interface Event {
@@ -94,7 +94,7 @@ export const UpcomingEventsSection: React.FC = () => {
                   <p className="text-bsd-gray/80 mb-6">{event.description}</p>
                   <div className="flex justify-between items-center">
                     <AnimatedButton>
-                      Register Now <ExternalLink className="w-4 h-4" />
+                      Register Now
                     </AnimatedButton>
                     <Button variant="ghost" className="text-bsd-gray hover:text-bsd-orange">
                       Learn More
