@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -65,7 +64,7 @@ const ProgramInteriorDesign = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <BookOpen className="w-4 h-4 text-bsd-orange" />
-                    <span>Next Batch: June 2025</span>
+                    <span>Next Batch: June 2024</span>
                   </div>
                 </div>
                 
@@ -614,21 +613,6 @@ const ProgramInteriorDesign = () => {
                         <p className="text-sm text-foreground/70">10+2 (Higher Secondary) or equivalent with a minimum of 50% aggregate marks from any recognized board</p>
                       </div>
                     </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-          </RevealSection>
-        </div>
-      </section>
-
-      {/* Enquiry Form Section */}
-      <EnquiryFormSection id="enquiry-form" />
-
-      {/* Footer */}
-      <Footer />
-    </>
-  );
-};
-
-export default ProgramInteriorDesign;
+                    
+                    <li className="flex items-start">
+                      <div className="w-8 h-8 rounded-full bg-bsd-orange/

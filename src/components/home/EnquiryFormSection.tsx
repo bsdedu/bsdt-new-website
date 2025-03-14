@@ -27,15 +27,7 @@ const formSchema = z.object({
   })
 });
 
-interface EnquiryFormSectionProps {
-  programSpecific?: boolean;
-  id?: string;
-}
-
-export const EnquiryFormSection: React.FC<EnquiryFormSectionProps> = ({ 
-  programSpecific = false,
-  id
-}) => {
+export const EnquiryFormSection: React.FC<{ programSpecific?: boolean }> = ({ programSpecific = false }) => {
   const { toast } = useToast();
   const [formSubmitted, setFormSubmitted] = useState(false);
   
@@ -67,8 +59,7 @@ export const EnquiryFormSection: React.FC<EnquiryFormSectionProps> = ({
     });
   };
 
-  return (
-    <section className="py-16 bg-bsd-light-gray relative overflow-hidden md:py-[50px]" id={id}>
+  return <section className="py-16 bg-bsd-light-gray relative overflow-hidden md:py-[50px]" id="enquiry-form">
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-radial from-white to-transparent opacity-70"></div>
@@ -222,6 +213,5 @@ export const EnquiryFormSection: React.FC<EnquiryFormSectionProps> = ({
           </RevealSection>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
