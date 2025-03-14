@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -613,6 +614,21 @@ const ProgramInteriorDesign = () => {
                         <p className="text-sm text-foreground/70">10+2 (Higher Secondary) or equivalent with a minimum of 50% aggregate marks from any recognized board</p>
                       </div>
                     </li>
-                    
-                    <li className="flex items-start">
-                      <div className="w-8 h-8 rounded-full bg-bsd-orange/
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </RevealSection>
+        </div>
+      </section>
+
+      {/* Enquiry Form Section */}
+      <EnquiryFormSection id="enquiry-form" />
+
+      {/* Footer */}
+      <Footer />
+    </>
+  );
+};
+
+export default ProgramInteriorDesign;
