@@ -19,10 +19,7 @@ export const navStructure: NavStructure[] = [
     type: 'dropdown',
     items: [
       { name: 'About BSD', href: '/about-bsdt' },
-      { name: 'Leadership & Governance', href: '/leadership-governance' },
-      { name: 'Vision & Mission', href: '#vision-mission' },
-      { name: 'Infrastructure', href: '#infrastructure' },
-      { name: 'Campus', href: '#campus' }
+      { name: 'Leadership & Governance', href: '/leadership-governance' }
     ]
   },
   {
