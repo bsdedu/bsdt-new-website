@@ -2,7 +2,7 @@
 import React from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
-import { CheckCircle, BrainCircuit } from "lucide-react";
+import { CheckCircle, BrainCircuit, Play } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
@@ -19,7 +19,15 @@ export const AboutSection: React.FC = () => {
       <div className="container mx-auto px-6 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <RevealSection direction="right">
-            <div className="relative rounded-2xl overflow-hidden shadow-xl border border-border/30">
+            <div className="space-y-4 mb-2">
+              <Badge variant="bsdOrange">Campus Life</Badge>
+              <h3 className="text-2xl md:text-3xl font-display font-bold text-bsd-gray flex items-center gap-2">
+                <Play className="w-6 h-6 text-bsd-orange" /> 
+                Experience BSD Campus Life
+              </h3>
+              <p className="text-foreground/70">Take a virtual tour of our vibrant campus and see what makes BSD the perfect place for your creative journey.</p>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-xl border border-border/30 mt-4">
               <AspectRatio ratio={16/9}>
                 <iframe 
                   src="https://www.youtube.com/embed/bWy4EH-B3tw" 
