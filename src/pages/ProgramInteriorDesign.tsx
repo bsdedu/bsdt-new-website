@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -33,6 +34,7 @@ const ProgramInteriorDesign = () => {
           <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-bsd-gray/5 blur-3xl"></div>
         </div>
 
+        <div className="container mx-auto px-6 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <RevealSection>
               <div className="space-y-6">
@@ -616,3 +618,24 @@ const ProgramInteriorDesign = () => {
                       <div className="ml-3">
                         <h4 className="font-medium text-bsd-gray">Academic Qualification</h4>
                         <p className="text-sm text-foreground/70">10+2 (Higher Secondary) or equivalent with a minimum of 50% aggregate marks from any recognized board</p>
+                      </div>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </RevealSection>
+        </div>
+      </section>
+
+      {/* Enquiry Form Section with id for scroll target */}
+      <div id="enquiry-form">
+        <EnquiryFormSection />
+      </div>
+      
+      <Footer />
+    </>
+  );
+};
+
+export default ProgramInteriorDesign;
