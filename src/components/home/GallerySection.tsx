@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { cn } from "@/lib/utils";
@@ -102,6 +103,35 @@ const galleryItems: {
     category: "Campus Life",
     image: "/lovable-uploads/7d078e54-32f9-4dcf-9af6-9717145d71b7.png",
     caption: "Faculty explaining architectural concepts during a corridor exhibition"
+  },
+  
+  // Student Work images
+  {
+    type: "image",
+    category: "Student Work",
+    image: "/lovable-uploads/8428c2d9-4558-45fb-a678-619ad02f979b.png",
+    caption: "Miniature architectural model with wooden chairs and natural materials"
+  },
+  {
+    type: "image",
+    category: "Student Work",
+    image: "/lovable-uploads/56b5b272-5d55-41f6-b960-9e4ad3058430.png",
+    caption: "Interior design student model of a garage workshop with detailed components"
+  },
+  {
+    type: "image",
+    category: "Student Work",
+    image: "/lovable-uploads/307e4b93-21bc-4e6b-9ee4-096750278ace.png",
+    caption: "Scale model of a bistro terrace with wooden tables and railings"
+  },
+  
+  // Student Work video
+  {
+    type: "video",
+    category: "Student Work",
+    videoId: "y9iyA-KGkAo",
+    thumbnail: "https://img.youtube.com/vi/y9iyA-KGkAo/maxresdefault.jpg",
+    caption: "Graphic Design Students Showcase Reel"
   }
 ];
 
