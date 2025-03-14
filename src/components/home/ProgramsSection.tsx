@@ -2,61 +2,69 @@
 import React from 'react';
 import { Card, CardContent, CardHeader } from "../ui-elements/Card";
 import { RevealSection } from "../ui-elements/RevealSection";
-import { Palette, Code, Cpu, PenTool, Building2, BrainCircuit, Bot, Sparkles } from "lucide-react";
+import { PenTool, Code, Gamepad, Cpu, Building2, LayoutDashboard, Monitor, Cube } from "lucide-react";
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 
 const programs = [
   { 
-    icon: <BrainCircuit className="w-6 h-6 text-bsd-orange" />,
-    title: "AI & Machine Learning",
-    description: "Explore cutting-edge AI technologies and learn how to leverage machine learning in design and creative problem-solving.",
+    icon: <Building2 className="w-6 h-6 text-bsd-orange" />,
+    title: "B.Des in Architectural Construction Design",
+    description: "A 4-year program focusing on innovative architectural design principles, integrating sustainable practices with cutting-edge computational design tools.",
     color: "from-bsd-orange/20 to-bsd-orange/5",
-    isFeatured: true
+    isFeatured: true,
+    duration: "4 years"
   },
   { 
-    icon: <Palette className="w-6 h-6 text-bsd-orange" />,
-    title: "Graphic Design",
-    description: "Learn to create compelling visual messages through typography, imagery, color and form with AI-enhanced tools.",
-    color: "from-bsd-orange/10 to-bsd-orange/5"
-  },
-  { 
-    icon: <Code className="w-6 h-6 text-bsd-orange" />,
-    title: "Web Development",
-    description: "Master the art and technology of creating intuitive and responsive web experiences with modern frameworks and AI assistance.",
-    color: "from-bsd-gray/10 to-bsd-gray/5"
-  },
-  { 
-    icon: <Bot className="w-6 h-6 text-bsd-orange" />,
-    title: "AI-Powered Design",
-    description: "Learn to integrate AI tools in your creative workflow to enhance productivity and explore new design possibilities.",
-    color: "from-bsd-gray/20 to-bsd-gray/5",
-    isFeatured: true
-  },
-  { 
-    icon: <Cpu className="w-6 h-6 text-bsd-orange" />,
-    title: "Emerging Technologies",
-    description: "Explore AI, VR/AR, and other emerging technologies that are reshaping industries and human experiences.",
-    color: "from-bsd-orange/10 to-bsd-gray/5"
+    icon: <LayoutDashboard className="w-6 h-6 text-bsd-orange" />,
+    title: "B.Des in Interaction & Experience Design",
+    description: "A 4-year program teaching students to create intuitive digital interfaces and meaningful user experiences using advanced UX methodologies and AI tools.",
+    color: "from-bsd-orange/20 to-bsd-orange/5",
+    isFeatured: true,
+    duration: "4 years"
   },
   { 
     icon: <PenTool className="w-6 h-6 text-bsd-orange" />,
-    title: "UI/UX Design",
-    description: "Design digital experiences that are intuitive, accessible and delightful for users, enhanced by AI-driven insights.",
-    color: "from-bsd-gray/10 to-bsd-orange/5"
+    title: "Bachelors in Interior Design",
+    description: "A 3-year program that combines aesthetic principles with functional design to create compelling and sustainable interior spaces.",
+    color: "from-bsd-gray/15 to-bsd-gray/5",
+    duration: "3 years"
   },
   { 
-    icon: <Building2 className="w-6 h-6 text-bsd-orange" />,
-    title: "Architecture",
-    description: "Learn to shape physical spaces that blend form, function and environmental sustainability with AI modeling tools.",
-    color: "from-bsd-light-gray to-white"
+    icon: <Monitor className="w-6 h-6 text-bsd-orange" />,
+    title: "Bachelors in Graphic & Communication Design",
+    description: "A 4-year program teaching visual storytelling, brand identity, and digital media design using industry-standard tools and AI-assisted workflows.",
+    color: "from-bsd-gray/15 to-bsd-gray/5",
+    duration: "4 years"
   },
   { 
-    icon: <Sparkles className="w-6 h-6 text-bsd-orange" />,
-    title: "Generative Design",
-    description: "Master the art of creating with AI-powered generative systems to produce innovative designs across multiple disciplines.",
+    icon: <Gamepad className="w-6 h-6 text-bsd-orange" />,
+    title: "Bachelors in Animation & Game Design",
+    description: "A 4-year program where students master 2D/3D animation, game mechanics, and interactive storytelling using cutting-edge technologies.",
+    color: "from-bsd-gray/15 to-bsd-gray/5",
+    duration: "4 years"
+  },
+  { 
+    icon: <Code className="w-6 h-6 text-bsd-orange" />,
+    title: "Bachelors in Computer Applications",
+    description: "A 3-year program with specializations in UI/UX and AI/ML, preparing students to develop innovative applications and interfaces.",
+    color: "from-bsd-gray/15 to-bsd-gray/5",
+    duration: "3 years",
+    addons: "UI/UX & AI/ML"
+  },
+  { 
+    icon: <Cpu className="w-6 h-6 text-bsd-orange" />,
+    title: "Bachelors in Computer Science",
+    description: "A 3-year program with specializations in Data Analytics and Cyber Security, equipping students with skills to address evolving technological challenges.",
+    color: "from-bsd-gray/15 to-bsd-gray/5",
+    duration: "3 years",
+    addons: "Data Analytics & Cyber Security"
+  },
+  { 
+    icon: <Cube className="w-6 h-6 text-bsd-orange" />,
+    title: "Innovation Lab Access",
+    description: "All programs include access to our state-of-the-art innovation labs equipped with the latest technologies for prototyping and experimentation.",
     color: "from-bsd-orange/15 to-white",
-    isFeatured: true
   },
 ];
 
@@ -67,13 +75,13 @@ export const ProgramsSection: React.FC = () => {
         <RevealSection>
           <div className="text-center max-w-2xl mx-auto mb-16">
             <Badge variant="bsdOrange" className="mb-4">
-              AI-Powered Educational Programs
+              Future-Ready Educational Programs
             </Badge>
             <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight text-bsd-gray">
               Cutting-edge Programs for Future Creators
             </h2>
             <p className="mt-4 text-foreground/70">
-              Our specialized programs integrate AI technologies to equip students with the skills and knowledge required to excel in today's rapidly evolving design and technology landscape.
+              Our specialized programs integrate the latest technologies and industry practices to equip students with the skills required to excel in today's rapidly evolving design and technology landscape.
             </p>
           </div>
         </RevealSection>
@@ -90,10 +98,16 @@ export const ProgramsSection: React.FC = () => {
                   )}>
                     {program.icon}
                   </div>
-                  <div className="flex items-center gap-2">
+                  <div className="flex flex-wrap items-start gap-2">
                     <h3 className="text-xl font-semibold text-bsd-gray">{program.title}</h3>
                     {program.isFeatured && <Badge variant="bsdOrange" className="text-[10px]">Featured</Badge>}
+                    {program.duration && <Badge variant="outline" className="text-[10px] bg-white/50">{program.duration}</Badge>}
                   </div>
+                  {program.addons && (
+                    <p className="text-sm text-bsd-orange font-medium mt-1">
+                      Specializations: {program.addons}
+                    </p>
+                  )}
                 </CardHeader>
                 <CardContent>
                   <p className="text-foreground/70">{program.description}</p>
@@ -110,7 +124,7 @@ export const ProgramsSection: React.FC = () => {
               className="inline-flex items-center text-sm font-medium text-bsd-orange hover:text-bsd-orange/80 transition-colors"
             >
               <span className="border-b border-current transition-all duration-300 hover:pb-1">
-                View All AI-Enhanced Programs
+                View All Programs & Admission Details
               </span>
             </a>
           </div>
