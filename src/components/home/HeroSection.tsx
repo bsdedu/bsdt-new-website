@@ -98,7 +98,7 @@ export const HeroSection: React.FC = () => {
               <AnimatedButton 
                 variant="outline" 
                 size="lg" 
-                onClick={() => scrollToSection('gallery')}
+                onClick={() => scrollToSection('campus-life')}
               >
                 Take a Virtual Tour
               </AnimatedButton>

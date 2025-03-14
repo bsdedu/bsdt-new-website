@@ -66,7 +66,7 @@ export const GallerySection: React.FC = () => {
   };
 
   return (
-    <section id="gallery" className="py-24 relative overflow-hidden">
+    <section id="campus-life" className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-6 md:px-8">
         <RevealSection>
           <div className="text-center max-w-2xl mx-auto mb-16">
