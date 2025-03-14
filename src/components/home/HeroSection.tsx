@@ -4,13 +4,35 @@ import { cn } from "@/lib/utils";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
 import { ArrowDown } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 export const HeroSection: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+  
+  // Images for the student showcase carousel
+  const studentImages = [
+    "/lovable-uploads/fc9c4875-4b4b-44a9-b8ad-3eb5db1ed2cc.png",
+    "/lovable-uploads/0ae77c0c-8ef4-404c-abf0-bb90598dfbf4.png",
+    "/lovable-uploads/e48b8c13-052e-4d80-ada8-db3eaf003d21.png"
+  ];
+  
+  const imageDescriptions = [
+    "Students celebrating at BSDT annual showcase event",
+    "Faculty mentoring students on design projects",
+    "Innovative learning at BSDT"
+  ];
   
   useEffect(() => {
     setIsLoaded(true);
-  }, []);
+    
+    // Auto-rotate images
+    const interval = setInterval(() => {
+      setActiveImageIndex(prev => (prev + 1) % studentImages.length);
+    }, 5000);
+    
+    return () => clearInterval(interval);
+  }, [studentImages.length]);
   
   return <section className="relative min-h-screen flex items-center overflow-hidden pt-24 pb-16">
       {/* Background Elements with Images */}
@@ -83,15 +105,48 @@ export const HeroSection: React.FC = () => {
           </div>
 
           <div className={cn("relative transition-all duration-1000 delay-300", isLoaded ? "opacity-100 scale-100" : "opacity-0 scale-95")}>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border/30 shadow-xl">
-              <img src="/lovable-uploads/e48b8c13-052e-4d80-ada8-db3eaf003d21.png" alt="Students at BSD Design & Tech College" className="absolute inset-0 w-full h-full object-cover" />
+            {/* Image Carousel */}
+            <div className="relative overflow-hidden rounded-2xl shadow-xl">
+              <div className="relative w-full">
+                {studentImages.map((image, index) => (
+                  <div 
+                    key={index}
+                    className={cn(
+                      "absolute inset-0 w-full transition-opacity duration-1000",
+                      index === activeImageIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+                    )}
+                  >
+                    <AspectRatio ratio={4/3} className="w-full">
+                      <img 
+                        src={image} 
+                        alt={imageDescriptions[index]}
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
+                    </AspectRatio>
+                    
+                    {/* Caption overlay */}
+                    <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 bg-gradient-to-t from-bsd-gray/70 to-transparent text-white">
+                      <p className="text-lg md:text-xl font-medium drop-shadow-md">{imageDescriptions[index]}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
               
-              {/* Image overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-bsd-gray/30 to-transparent"></div>
-              
-              {/* Caption overlay */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-bsd-gray/60 to-transparent text-white">
-                <p className="text-xl md:text-2xl font-bold">Innovative learning at BSDT</p>
+              {/* Image navigation dots */}
+              <div className="absolute bottom-20 left-0 right-0 z-20 flex justify-center gap-2">
+                {studentImages.map((_, index) => (
+                  <button
+                    key={index}
+                    className={cn(
+                      "w-2 h-2 rounded-full transition-all",
+                      index === activeImageIndex 
+                        ? "bg-white scale-125" 
+                        : "bg-white/50 hover:bg-white/80"
+                    )}
+                    onClick={() => setActiveImageIndex(index)}
+                    aria-label={`View image ${index + 1}`}
+                  />
+                ))}
               </div>
             </div>
             
