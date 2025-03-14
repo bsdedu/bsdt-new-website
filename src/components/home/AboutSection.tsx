@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
@@ -53,7 +54,9 @@ export const AboutSection: React.FC = () => {
               </div>
 
               <div className="pt-4">
-                <AnimatedButton withArrow>Learn More About Us</AnimatedButton>
+                <AnimatedButton>
+                  Learn More About Us
+                </AnimatedButton>
               </div>
             </div>
           </RevealSection>

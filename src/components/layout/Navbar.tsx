@@ -149,7 +149,7 @@ export const Navbar: React.FC = () => {
                 })}
               </NavigationMenuList>
             </NavigationMenu>
-            <AnimatedButton size="sm" withArrow className="bg-bsd-orange text-white hover:bg-bsd-orange/90">
+            <AnimatedButton size="sm" className="bg-bsd-orange text-white hover:bg-bsd-orange/90">
               Apply Now
             </AnimatedButton>
           </div>
@@ -212,7 +212,7 @@ export const Navbar: React.FC = () => {
             }
           })}
           <li className="pt-3">
-            <AnimatedButton className="w-full bg-bsd-orange text-white hover:bg-bsd-orange/90" withArrow>
+            <AnimatedButton className="w-full bg-bsd-orange text-white hover:bg-bsd-orange/90">
               Apply Now
             </AnimatedButton>
           </li>

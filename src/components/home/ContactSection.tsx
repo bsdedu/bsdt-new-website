@@ -96,7 +96,7 @@ export const ContactSection: React.FC = () => {
                 </div>
 
                 <div>
-                  <AnimatedButton type="submit" className="w-full" withArrow>
+                  <AnimatedButton type="submit" className="w-full">
                     Send Message
                   </AnimatedButton>
                 </div>
