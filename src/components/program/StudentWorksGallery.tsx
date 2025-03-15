@@ -1,188 +1,102 @@
 
-import React from 'react';
-import { RevealSection } from "../ui-elements/RevealSection";
+import React, { useState } from 'react';
+import { RevealSection } from '../ui-elements/RevealSection';
 import { Badge } from "@/components/ui/badge";
-import { Card } from "../ui-elements/Card";
+import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { 
-  Carousel, 
-  CarouselContent, 
-  CarouselItem, 
-  CarouselNext, 
-  CarouselPrevious 
-} from "@/components/ui/carousel";
-import { useLocation } from 'react-router-dom';
 
-export const StudentWorksGallery: React.FC = () => {
-  const location = useLocation();
-  const isInteriorDesignProgram = location.pathname.includes('interior-design');
-  const isAnimationGameDesignProgram = location.pathname.includes('animation-game-design');
-  
-  // Categories based on program type
-  const projectCategories = isInteriorDesignProgram 
-    ? [
-        { id: "residential", name: "Residential Spaces" },
-        { id: "commercial", name: "Commercial Projects" },
-        { id: "conceptual", name: "Conceptual Designs" },
-      ]
-    : isAnimationGameDesignProgram
-    ? [
-        { id: "animation", name: "Animation Projects" },
-        { id: "characters", name: "Character Design" },
-        { id: "games", name: "Game Development" },
-      ]
-    : [
-        { id: "branding", name: "Branding Projects" },
-        { id: "digital", name: "Digital Design" },
-        { id: "print", name: "Print & Editorial" },
-      ];
-  
-  // Program-specific projects data
-  const interiorProjects = {
-    residential: [
-      { id: 1, title: "Modern Apartment Redesign", student: "Anika Patel", year: "2023", image: "https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&auto=format&fit=crop" },
-      { id: 2, title: "Minimalist Villa Interior", student: "Raj Sharma", year: "2023", image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&auto=format&fit=crop" },
-      { id: 3, title: "Urban Loft Conversion", student: "Priya Malhotra", year: "2022", image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&auto=format&fit=crop" },
-      { id: 4, title: "Contemporary Home Design", student: "Arjun Kapoor", year: "2022", image: "https://images.unsplash.com/photo-1600585153490-76fb20a32601?w=800&auto=format&fit=crop" },
-    ],
-    commercial: [
-      { id: 1, title: "Boutique Hotel Lobby", student: "Neha Reddy", year: "2023", image: "https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?w=800&auto=format&fit=crop" },
-      { id: 2, title: "Corporate Office Design", student: "Vikram Singh", year: "2023", image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&auto=format&fit=crop" },
-      { id: 3, title: "Retail Store Concept", student: "Maya Joshi", year: "2022", image: "https://images.unsplash.com/photo-1604014237800-1c9102c219da?w=800&auto=format&fit=crop" },
-      { id: 4, title: "Restaurant Interior Design", student: "Karan Mehta", year: "2022", image: "https://images.unsplash.com/photo-1537640538966-79f369143f8f?w=800&auto=format&fit=crop" },
-    ],
-    conceptual: [
-      { id: 1, title: "Sustainable Living Space", student: "Divya Sharma", year: "2023", image: "https://images.unsplash.com/photo-1600585154526-990dced4db3d?w=800&auto=format&fit=crop" },
-      { id: 2, title: "Future Home Concept", student: "Rohan Kumar", year: "2023", image: "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=800&auto=format&fit=crop" },
-      { id: 3, title: "Biophilic Design Study", student: "Ananya Desai", year: "2022", image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&auto=format&fit=crop" },
-      { id: 4, title: "Adaptive Reuse Project", student: "Sanjay Varma", year: "2022", image: "https://images.unsplash.com/photo-1600563438938-a9a27216b4f5?w=800&auto=format&fit=crop" },
-    ],
-  };
-  
-  const graphicProjects = {
-    branding: [
-      { id: 1, title: "Eco-friendly Brand Identity", student: "Priya Sharma", year: "2023", image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&auto=format&fit=crop" },
-      { id: 2, title: "Tech Startup Branding", student: "Arjun Mehta", year: "2023", image: "https://images.unsplash.com/photo-1520333789090-1afc82db536a?w=800&auto=format&fit=crop" },
-      { id: 3, title: "Restaurant Chain Rebrand", student: "Meera Patel", year: "2022", image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop" },
-      { id: 4, title: "Artisanal Coffee Branding", student: "Vikram Reddy", year: "2022", image: "https://images.unsplash.com/photo-1579438428425-67f2a4d83827?w=800&auto=format&fit=crop" },
-    ],
-    digital: [
-      { id: 1, title: "Mobile App UI Design", student: "Kiran Kumar", year: "2023", image: "https://images.unsplash.com/photo-1616469829941-c7200edec809?w=800&auto=format&fit=crop" },
-      { id: 2, title: "E-commerce Website Redesign", student: "Aisha Khan", year: "2023", image: "https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?w=800&auto=format&fit=crop" },
-      { id: 3, title: "Social Media Campaign", student: "Rahul Joshi", year: "2022", image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&auto=format&fit=crop" },
-      { id: 4, title: "Interactive Infographics", student: "Divya Menon", year: "2022", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop" },
-    ],
-    print: [
-      { id: 1, title: "Magazine Layout Design", student: "Sanjay Varma", year: "2023", image: "https://images.unsplash.com/photo-1576615278693-f8e095e37e01?w=800&auto=format&fit=crop" },
-      { id: 2, title: "Annual Report Design", student: "Ananya Desai", year: "2023", image: "https://images.unsplash.com/photo-1593588332594-094065ab5d19?w=800&auto=format&fit=crop" },
-      { id: 3, title: "Book Cover Series", student: "Rohan Murthy", year: "2022", image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=800&auto=format&fit=crop" },
-      { id: 4, title: "Packaging Design Collection", student: "Neha Gupta", year: "2022", image: "https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?w=800&auto=format&fit=crop" },
-    ],
-  };
-  
-  // Animation & Game Design specific projects
-  const animationGameProjects = {
-    animation: [
-      { id: 1, title: "Dreamscape Short Film", student: "Aarav Singh", year: "2023", image: "https://images.unsplash.com/photo-1487887235947-a955ef187fcc?w=800&auto=format&fit=crop" },
-      { id: 2, title: "Animated Music Video", student: "Isha Patel", year: "2023", image: "https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=800&auto=format&fit=crop" },
-      { id: 3, title: "Stylized Character Animation", student: "Dev Kapoor", year: "2022", image: "https://images.unsplash.com/photo-1634157703702-3c124b455499?w=800&auto=format&fit=crop" },
-      { id: 4, title: "Animated Brand Commercial", student: "Nisha Reddy", year: "2022", image: "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=800&auto=format&fit=crop" },
-    ],
-    characters: [
-      { id: 1, title: "Fantasy Character Collection", student: "Rohan Verma", year: "2023", image: "https://images.unsplash.com/photo-1566577739112-5180d4bf9390?w=800&auto=format&fit=crop" },
-      { id: 2, title: "Sci-Fi Character Designs", student: "Aanya Sharma", year: "2023", image: "https://images.unsplash.com/photo-1546776310-eef45dd6d63c?w=800&auto=format&fit=crop" },
-      { id: 3, title: "Anthropomorphic Characters", student: "Vivek Kumar", year: "2022", image: "https://images.unsplash.com/photo-1608889476561-6242cfdbf622?w=800&auto=format&fit=crop" },
-      { id: 4, title: "Creature Design Portfolio", student: "Maya Gupta", year: "2022", image: "https://images.unsplash.com/photo-1618336753974-aae8e04506aa?w=800&auto=format&fit=crop" },
-    ],
-    games: [
-      { id: 1, title: "Mobile Puzzle Game", student: "Arjun Nair", year: "2023", image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&auto=format&fit=crop" },
-      { id: 2, title: "VR Experience Design", student: "Sanvi Joshi", year: "2023", image: "https://images.unsplash.com/photo-1559813233-30a238e16dc4?w=800&auto=format&fit=crop" },
-      { id: 3, title: "Interactive Narrative Game", student: "Kabir Malhotra", year: "2022", image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&auto=format&fit=crop" },
-      { id: 4, title: "Game Environment Design", student: "Tara Menon", year: "2022", image: "https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=800&auto=format&fit=crop" },
-    ],
-  };
-  
-  // Choose projects based on program type
-  const projects = isInteriorDesignProgram 
-    ? interiorProjects 
-    : isAnimationGameDesignProgram
-    ? animationGameProjects
-    : graphicProjects;
-  
-  // Choose default tab based on program type
-  const defaultTabValue = isInteriorDesignProgram 
-    ? "residential" 
-    : isAnimationGameDesignProgram
-    ? "animation"
-    : "branding";
+interface Project {
+  title: string;
+  description: string;
+  imageUrl: string;
+  category: string;
+}
 
+interface StudentWorksGalleryProps {
+  title: string;
+  subtitle: string;
+  projects: Project[];
+}
+
+export const StudentWorksGallery: React.FC<StudentWorksGalleryProps> = ({
+  title = "Student Works Gallery",
+  subtitle = "Explore the creative projects developed by our talented students",
+  projects = []
+}) => {
+  const [visibleProjects, setVisibleProjects] = useState(6);
+  
+  // Extract unique categories
+  const categories = ['All', ...new Set(projects.map(project => project.category))];
+  
+  // Filter projects by category
+  const filterProjects = (category: string) => {
+    return category === 'All' 
+      ? projects 
+      : projects.filter(project => project.category === category);
+  };
+  
   return (
-    <section className="py-16 bg-bsd-light-gray">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-6 md:px-8">
         <RevealSection>
           <div className="text-center max-w-3xl mx-auto mb-12">
             <Badge variant="bsdOrange" className="mb-4">STUDENT SHOWCASE</Badge>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
-              Award-Winning Student Works
+              {title}
             </h2>
             <p className="mt-4 text-foreground/70">
-              {isInteriorDesignProgram 
-                ? "Explore outstanding interior design projects created by our talented students, showcasing their creativity, technical skills, and spatial thinking."
-                : isAnimationGameDesignProgram
-                ? "Explore outstanding animation and game design projects created by our talented students, showcasing their creativity, technical skills, and narrative abilities."
-                : "Explore outstanding graphic design projects created by our talented students, showcasing their creativity, technical skills, and design thinking."}
+              {subtitle}
             </p>
           </div>
         </RevealSection>
-
+        
         <RevealSection delay={100}>
-          <Tabs defaultValue={defaultTabValue} className="w-full">
+          <Tabs defaultValue="All" className="max-w-6xl mx-auto">
             <div className="flex justify-center mb-8">
-              <TabsList className="grid grid-cols-3 w-full max-w-2xl">
-                {projectCategories.map(category => (
-                  <TabsTrigger key={category.id} value={category.id}>
-                    {category.name}
+              <TabsList>
+                {categories.map((category) => (
+                  <TabsTrigger key={category} value={category}>
+                    {category}
                   </TabsTrigger>
                 ))}
               </TabsList>
             </div>
             
-            {Object.entries(projects).map(([category, categoryProjects]) => (
-              <TabsContent key={category} value={category} className="mt-0">
-                <div className="relative px-4 md:px-10">
-                  <Carousel 
-                    opts={{
-                      align: "start",
-                      loop: true,
-                    }}
-                    className="w-full"
-                  >
-                    <CarouselContent>
-                      {categoryProjects.map(project => (
-                        <CarouselItem key={project.id} className="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 pl-4">
-                          <Card className="overflow-hidden border-0 shadow-md transition-all duration-300 hover:shadow-xl h-full">
-                            <div className="aspect-[4/3] w-full overflow-hidden">
-                              <img 
-                                src={project.image} 
-                                alt={project.title} 
-                                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                              />
-                            </div>
-                            <div className="p-4">
-                              <h3 className="font-medium text-bsd-gray">{project.title}</h3>
-                              <div className="flex justify-between items-center mt-1">
-                                <p className="text-sm text-foreground/70">{project.student}</p>
-                                <Badge variant="outline" className="text-xs">{project.year}</Badge>
-                              </div>
-                            </div>
-                          </Card>
-                        </CarouselItem>
-                      ))}
-                    </CarouselContent>
-                    <CarouselPrevious className="left-1 md:left-0" />
-                    <CarouselNext className="right-1 md:right-0" />
-                  </Carousel>
+            {categories.map((category) => (
+              <TabsContent key={category} value={category}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {filterProjects(category).slice(0, visibleProjects).map((project, index) => (
+                    <div 
+                      key={index} 
+                      className="group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
+                    >
+                      <div className="relative overflow-hidden aspect-video">
+                        <img 
+                          src={project.imageUrl} 
+                          alt={project.title} 
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
+                      </div>
+                      <div className="p-4">
+                        <Badge variant="outline" className="mb-2">{project.category}</Badge>
+                        <h3 className="font-bold text-lg text-bsd-gray mb-2">{project.title}</h3>
+                        <p className="text-sm text-foreground/70">{project.description}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
+                
+                {filterProjects(category).length > visibleProjects && (
+                  <div className="text-center mt-8">
+                    <Button 
+                      variant="outline" 
+                      className="border-bsd-orange text-bsd-orange hover:bg-bsd-orange/10"
+                      onClick={() => setVisibleProjects(prev => prev + 6)}
+                    >
+                      Load More Projects
+                    </Button>
+                  </div>
+                )}
               </TabsContent>
             ))}
           </Tabs>

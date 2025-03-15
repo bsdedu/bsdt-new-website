@@ -7,10 +7,12 @@ import { RevealSection } from "@/components/ui-elements/RevealSection";
 
 interface EligibilitySectionProps {
   programName?: string;
+  requirements?: string[];
 }
 
 export const EligibilitySection: React.FC<EligibilitySectionProps> = ({ 
-  programName = "BVA Animation & Game Design" 
+  programName = "BVA Animation & Game Design",
+  requirements
 }) => {
   return (
     <section className="py-16 bg-bsd-light-gray">
@@ -22,7 +24,7 @@ export const EligibilitySection: React.FC<EligibilitySectionProps> = ({
               Eligibility & Application Process
             </h2>
             <p className="mt-4 text-foreground/70">
-              Join our {programName} program and start your journey toward a creative and fulfilling career in animation and game development.
+              Join our {programName} program and start your journey toward a creative and fulfilling career.
             </p>
           </div>
         </RevealSection>
@@ -35,35 +37,50 @@ export const EligibilitySection: React.FC<EligibilitySectionProps> = ({
               </CardHeader>
               <CardContent>
                 <ul className="space-y-4">
-                  <li className="flex items-start">
-                    <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-4 h-4 text-bsd-orange" />
-                    </div>
-                    <div className="ml-3">
-                      <h4 className="font-medium text-bsd-gray">Academic Qualification</h4>
-                      <p className="text-sm text-foreground/70">10+2 (Higher Secondary) or equivalent with a minimum of 50% aggregate marks from any recognized board</p>
-                    </div>
-                  </li>
-                  
-                  <li className="flex items-start">
-                    <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-4 h-4 text-bsd-orange" />
-                    </div>
-                    <div className="ml-3">
-                      <h4 className="font-medium text-bsd-gray">Age Requirements</h4>
-                      <p className="text-sm text-foreground/70">Minimum 17 years of age as of July 31st of the admission year</p>
-                    </div>
-                  </li>
-                  
-                  <li className="flex items-start">
-                    <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-4 h-4 text-bsd-orange" />
-                    </div>
-                    <div className="ml-3">
-                      <h4 className="font-medium text-bsd-gray">Portfolio (Recommended)</h4>
-                      <p className="text-sm text-foreground/70">A portfolio of creative work demonstrating your interest in art, design, or digital media is recommended but not mandatory</p>
-                    </div>
-                  </li>
+                  {requirements ? (
+                    requirements.map((requirement, index) => (
+                      <li key={index} className="flex items-start">
+                        <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Check className="w-4 h-4 text-bsd-orange" />
+                        </div>
+                        <div className="ml-3">
+                          <p className="text-sm text-foreground/70">{requirement}</p>
+                        </div>
+                      </li>
+                    ))
+                  ) : (
+                    <>
+                      <li className="flex items-start">
+                        <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Check className="w-4 h-4 text-bsd-orange" />
+                        </div>
+                        <div className="ml-3">
+                          <h4 className="font-medium text-bsd-gray">Academic Qualification</h4>
+                          <p className="text-sm text-foreground/70">10+2 (Higher Secondary) or equivalent with a minimum of 50% aggregate marks from any recognized board</p>
+                        </div>
+                      </li>
+                      
+                      <li className="flex items-start">
+                        <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Check className="w-4 h-4 text-bsd-orange" />
+                        </div>
+                        <div className="ml-3">
+                          <h4 className="font-medium text-bsd-gray">Age Requirements</h4>
+                          <p className="text-sm text-foreground/70">Minimum 17 years of age as of July 31st of the admission year</p>
+                        </div>
+                      </li>
+                      
+                      <li className="flex items-start">
+                        <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Check className="w-4 h-4 text-bsd-orange" />
+                        </div>
+                        <div className="ml-3">
+                          <h4 className="font-medium text-bsd-gray">Portfolio (Recommended)</h4>
+                          <p className="text-sm text-foreground/70">A portfolio of creative work demonstrating your interest in art, design, or digital media is recommended but not mandatory</p>
+                        </div>
+                      </li>
+                    </>
+                  )}
                 </ul>
               </CardContent>
             </Card>
