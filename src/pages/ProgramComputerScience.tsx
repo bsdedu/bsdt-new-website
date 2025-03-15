@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -527,7 +526,36 @@ const ProgramComputerScience = () => {
       </section>
 
       {/* Student Works Gallery */}
-      <StudentWorksGallery />
+      <StudentWorksGallery 
+  title="Computer Science Student Projects"
+  subtitle="Explore innovative projects in data analytics and cyber security from our computer science students"
+  projects={[
+    {
+      title: "Network Security Analysis Tool",
+      description: "Tool for identifying and visualizing network vulnerabilities and potential threats",
+      imageUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?fit=crop&w=600&h=400",
+      category: "Cyber Security"
+    },
+    {
+      title: "Predictive Analytics Dashboard",
+      description: "Interactive visualization platform for business intelligence and forecasting",
+      imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?fit=crop&w=600&h=400",
+      category: "Data Analytics"
+    },
+    {
+      title: "Intrusion Detection System",
+      description: "Real-time monitoring system that identifies suspicious patterns in network traffic",
+      imageUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3?fit=crop&w=600&h=400",
+      category: "Cyber Security"
+    },
+    {
+      title: "Consumer Behavior Analysis Platform",
+      description: "Big data solution that processes and analyzes customer interaction patterns",
+      imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?fit=crop&w=600&h=400",
+      category: "Data Analytics"
+    }
+  ]}
+/>
 
       {/* Faculty Section */}
       <FacultySection />
@@ -582,94 +610,4 @@ const ProgramComputerScience = () => {
                   
                   <div className="flex items-start space-x-3">
                     <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-4 h-4 text-bsd-orange" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-bsd-gray">Mentorship from Industry Professionals</h4>
-                      <p className="text-sm text-foreground/70">Learn directly from experienced data scientists and security experts</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-4 h-4 text-bsd-orange" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-bsd-gray">Build a Professional Portfolio</h4>
-                      <p className="text-sm text-foreground/70">Graduate with a portfolio of actual industry projects</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-4 h-4 text-bsd-orange" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-bsd-gray">Network with Industry Partners</h4>
-                      <p className="text-sm text-foreground/70">Develop connections with potential employers while still studying</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="pt-4">
-                  <AnimatedButton asChild>
-                    <a href="#enquiry-form" className="hover:no-underline">Apply Now</a>
-                  </AnimatedButton>
-                </div>
-              </div>
-            </div>
-          </RevealSection>
-        </div>
-      </section>
-
-      {/* Eligibility & Admission Section */}
-      <section className="py-16 bg-bsd-light-gray">
-        <div className="container mx-auto px-6 md:px-8">
-          <RevealSection>
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <Badge variant="bsdOrange" className="mb-4">ADMISSIONS</Badge>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
-                Eligibility & Application Process
-              </h2>
-              <p className="mt-4 text-foreground/70">
-                Join our B.Sc Computer Science program and start your journey toward a successful career in data analytics or cyber security.
-              </p>
-            </div>
-          </RevealSection>
-
-          <RevealSection delay={100}>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-              <Card>
-                <CardHeader>
-                  <h3 className="text-xl font-semibold text-bsd-gray">Eligibility Criteria</h3>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-4">
-                    <li className="flex items-start">
-                      <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <Check className="w-4 h-4 text-bsd-orange" />
-                      </div>
-                      <div className="ml-3">
-                        <h4 className="font-medium text-bsd-gray">Academic Qualification</h4>
-                        <p className="text-sm text-foreground/70">10+2 (Higher Secondary) or equivalent with a minimum of 50% aggregate marks from any recognized board with Mathematics as a subject</p>
-                      </div>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-          </RevealSection>
-        </div>
-      </section>
-
-      {/* Enquiry Form Section with id for scroll target */}
-      <div id="enquiry-form">
-        <EnquiryFormSection />
-      </div>
-      
-      <Footer />
-    </>
-  );
-};
-
-export default ProgramComputerScience;
+                      <Check className="w-4 h

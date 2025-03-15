@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -9,9 +8,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader } from "@/components/ui-elements/Card";
 import { AnimatedButton } from "@/components/ui-elements/AnimatedButton";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Check, BookOpen, Calendar, GraduationCap, Award, BriefcaseBusiness, Building2, Lightbulb, Users, Palette, Ruler, PenTool } from "lucide-react";
+import { Check, BookOpen, Calendar, GraduationCap, Award, BriefcaseBusiness, Building2, Lightbulb, Users, Paintbrush2, LayoutDashboard } from "lucide-react";
 import { Link } from "react-router-dom";
 import { EnquiryFormSection } from "@/components/home/EnquiryFormSection";
+import { ApplicationDeadline } from "@/components/program/ApplicationDeadline";
 import { FacultySection } from "@/components/program/FacultySection";
 import { StudentWorksGallery } from "@/components/program/StudentWorksGallery";
 
@@ -19,8 +19,8 @@ const ProgramGraphicDesign = () => {
   return (
     <>
       <Helmet>
-        <title>BVA Graphic Design | BSDT</title>
-        <meta name="description" content="Learn Graphic Design with a Bachelor of Visual Arts degree program at Bangalore School of Design & Technology (BSDT). Gain professional skills in visual communication, branding, typography and more." />
+        <title>B.Sc Graphic Design | BSDT</title>
+        <meta name="description" content="Study Graphic Design with a B.Sc degree program at Bangalore School of Design & Technology (BSDT). Learn visual communication, branding, and digital design." />
       </Helmet>
 
       <Navbar />
@@ -37,12 +37,12 @@ const ProgramGraphicDesign = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <RevealSection>
               <div className="space-y-6">
-                <Badge variant="bsdOrange" className="mb-2">4-YEAR UNDERGRADUATE PROGRAM</Badge>
+                <Badge variant="bsdOrange" className="mb-2">3-YEAR UNDERGRADUATE PROGRAM</Badge>
                 <h1 className="text-4xl md:text-5xl font-display font-bold text-bsd-gray leading-tight">
-                  BVA Graphic Design
+                  B.Sc Graphic Design
                 </h1>
                 <p className="text-lg text-foreground/80">
-                  Master visual communication, branding, typography, and digital design with our comprehensive Graphic Design program. Learn from industry experts and build a successful career in design.
+                  Develop your creative skills in visual communication, branding, and digital design with our comprehensive Graphic Design program.
                 </p>
                 <div className="flex flex-wrap gap-4 pt-4">
                   <AnimatedButton asChild>
@@ -61,7 +61,7 @@ const ProgramGraphicDesign = () => {
                 <div className="flex flex-wrap gap-x-8 gap-y-4 pt-4 text-sm text-foreground/70">
                   <div className="flex items-center gap-2">
                     <Calendar className="w-4 h-4 text-bsd-orange" />
-                    <span>4 Years Duration</span>
+                    <span>3 Years Duration</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <GraduationCap className="w-4 h-4 text-bsd-orange" />
@@ -72,19 +72,26 @@ const ProgramGraphicDesign = () => {
                     <span>Next Batch: June 2024</span>
                   </div>
                 </div>
+                
+                {/* Application Deadline Component */}
+                <ApplicationDeadline 
+                  lastDate="August 15, 2024" 
+                  startDate="January 15, 2024" 
+                  seatsAvailable={60}
+                />
               </div>
             </RevealSection>
 
             <RevealSection direction="left">
               <div className="relative rounded-2xl overflow-hidden shadow-lg h-[400px]">
                 <img 
-                  src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80" 
+                  src="https://images.unsplash.com/photo-1518770660439-464ef5284de3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80" 
                   alt="Graphic Design Studio" 
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
                   <div className="absolute bottom-0 left-0 p-6">
-                    <p className="text-white font-medium text-lg">Master branding, typography, digital design and more</p>
+                    <p className="text-white font-medium text-lg">Master Visual Communication and Digital Design</p>
                   </div>
                 </div>
               </div>
@@ -99,7 +106,7 @@ const ProgramGraphicDesign = () => {
                   <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-3">
                     <Users className="w-6 h-6 text-bsd-orange" />
                   </div>
-                  <h3 className="text-3xl font-bold text-bsd-gray">80+</h3>
+                  <h3 className="text-3xl font-bold text-bsd-gray">60+</h3>
                   <p className="text-sm text-foreground/70">Annual Intake</p>
                 </CardContent>
               </Card>
@@ -109,7 +116,7 @@ const ProgramGraphicDesign = () => {
                   <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-3">
                     <BriefcaseBusiness className="w-6 h-6 text-bsd-orange" />
                   </div>
-                  <h3 className="text-3xl font-bold text-bsd-gray">90%</h3>
+                  <h3 className="text-3xl font-bold text-bsd-gray">95%</h3>
                   <p className="text-sm text-foreground/70">Placement Rate</p>
                 </CardContent>
               </Card>
@@ -129,7 +136,7 @@ const ProgramGraphicDesign = () => {
                   <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-3">
                     <Building2 className="w-6 h-6 text-bsd-orange" />
                   </div>
-                  <h3 className="text-3xl font-bold text-bsd-gray">20+</h3>
+                  <h3 className="text-3xl font-bold text-bsd-gray">40+</h3>
                   <p className="text-sm text-foreground/70">Industry Partners</p>
                 </CardContent>
               </Card>
@@ -148,7 +155,7 @@ const ProgramGraphicDesign = () => {
                 Comprehensive Graphic Design Education
               </h2>
               <p className="mt-4 text-foreground/70">
-                Our BVA in Graphic Design program combines artistic creativity with technical skills, preparing you to excel in the dynamic world of visual communication and digital media.
+                Our B.Sc Graphic Design program combines design principles with the latest digital tools, preparing you to excel in the creative industry.
               </p>
             </div>
           </RevealSection>
@@ -172,7 +179,7 @@ const ProgramGraphicDesign = () => {
                     <CardContent>
                       <div className="space-y-6">
                         <p className="text-foreground/70">
-                          The BVA Graphic Design program is a 4-year full-time undergraduate course divided into 8 semesters, each focusing on different aspects of graphic design.
+                          The B.Sc Graphic Design program is a 3-year full-time undergraduate course divided into 6 semesters, with core design subjects and specialized electives.
                         </p>
                         
                         <div className="space-y-4">
@@ -184,19 +191,19 @@ const ProgramGraphicDesign = () => {
                             </li>
                             <li className="flex items-start">
                               <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Drawing & Illustration</span>
-                            </li>
-                            <li className="flex items-start">
-                              <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
                               <span>Typography Fundamentals</span>
                             </li>
                             <li className="flex items-start">
                               <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Introduction to Digital Design Tools</span>
+                              <span>Digital Illustration</span>
+                            </li>
+                            <li className="flex items-start">
+                              <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                              <span>Introduction to Graphic Design Software</span>
                             </li>
                           </ul>
 
-                          <h4 className="font-medium text-bsd-gray">Second Year: Specialization</h4>
+                          <h4 className="font-medium text-bsd-gray">Second Year: Core Concepts</h4>
                           <ul className="space-y-2">
                             <li className="flex items-start">
                               <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
@@ -204,23 +211,27 @@ const ProgramGraphicDesign = () => {
                             </li>
                             <li className="flex items-start">
                               <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Layout & Publication Design</span>
+                              <span>Layout Design & Editorial Graphics</span>
                             </li>
                             <li className="flex items-start">
                               <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Web Design & User Interface (UI)</span>
+                              <span>Web Design Fundamentals</span>
                             </li>
                             <li className="flex items-start">
                               <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Motion Graphics & Animation</span>
+                              <span>Motion Graphics</span>
                             </li>
                           </ul>
 
-                          <h4 className="font-medium text-bsd-gray">Third Year: Advanced Techniques</h4>
+                          <h4 className="font-medium text-bsd-gray">Third Year: Specialization</h4>
                           <ul className="space-y-2">
                             <li className="flex items-start">
                               <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Advanced Typography & Type Design</span>
+                              <span>Advanced Branding Strategies</span>
+                            </li>
+                            <li className="flex items-start">
+                              <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                              <span>UI/UX Design for Web & Mobile</span>
                             </li>
                             <li className="flex items-start">
                               <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
@@ -228,31 +239,7 @@ const ProgramGraphicDesign = () => {
                             </li>
                             <li className="flex items-start">
                               <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>User Experience (UX) Design</span>
-                            </li>
-                            <li className="flex items-start">
-                              <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Advertising & Marketing Design</span>
-                            </li>
-                          </ul>
-
-                          <h4 className="font-medium text-bsd-gray">Fourth Year: Professional Practice</h4>
-                          <ul className="space-y-2">
-                            <li className="flex items-start">
-                              <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Design Strategy & Management</span>
-                            </li>
-                            <li className="flex items-start">
-                              <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Portfolio Development</span>
-                            </li>
-                            <li className="flex items-start">
-                              <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Capstone Project</span>
-                            </li>
-                            <li className="flex items-start">
-                              <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Professional Practice & Industry Internship</span>
+                              <span>Advertising Design</span>
                             </li>
                           </ul>
                         </div>
@@ -268,21 +255,21 @@ const ProgramGraphicDesign = () => {
                       <ul className="space-y-4">
                         <li className="flex items-start">
                           <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <Palette className="w-4 h-4 text-bsd-orange" />
+                            <Paintbrush2 className="w-4 h-4 text-bsd-orange" />
                           </div>
                           <div className="ml-3">
-                            <h4 className="font-medium text-bsd-gray">Creative Design Studios</h4>
-                            <p className="text-sm text-foreground/70">Dedicated studios for graphic design, illustration, and digital media</p>
+                            <h4 className="font-medium text-bsd-gray">Creative Studio Environment</h4>
+                            <p className="text-sm text-foreground/70">Work in a collaborative studio setting that fosters creativity and innovation</p>
                           </div>
                         </li>
                         
                         <li className="flex items-start">
                           <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <PenTool className="w-4 h-4 text-bsd-orange" />
+                            <LayoutDashboard className="w-4 h-4 text-bsd-orange" />
                           </div>
                           <div className="ml-3">
-                            <h4 className="font-medium text-bsd-gray">Professional Software Training</h4>
-                            <p className="text-sm text-foreground/70">Adobe Creative Suite, Figma, Sketch, and other industry-standard tools</p>
+                            <h4 className="font-medium text-bsd-gray">Industry-Standard Software</h4>
+                            <p className="text-sm text-foreground/70">Gain hands-on experience with Adobe Creative Suite and other leading design tools</p>
                           </div>
                         </li>
                         
@@ -291,8 +278,8 @@ const ProgramGraphicDesign = () => {
                             <Users className="w-4 h-4 text-bsd-orange" />
                           </div>
                           <div className="ml-3">
-                            <h4 className="font-medium text-bsd-gray">Industry Expert Faculty</h4>
-                            <p className="text-sm text-foreground/70">Learn from practicing designers and creative directors</p>
+                            <h4 className="font-medium text-bsd-gray">Expert Faculty</h4>
+                            <p className="text-sm text-foreground/70">Learn from experienced design professionals and industry experts</p>
                           </div>
                         </li>
                         
@@ -302,17 +289,7 @@ const ProgramGraphicDesign = () => {
                           </div>
                           <div className="ml-3">
                             <h4 className="font-medium text-bsd-gray">Industry Internships</h4>
-                            <p className="text-sm text-foreground/70">Guaranteed internship placements with leading design agencies and brands</p>
-                          </div>
-                        </li>
-                        
-                        <li className="flex items-start">
-                          <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <Ruler className="w-4 h-4 text-bsd-orange" />
-                          </div>
-                          <div className="ml-3">
-                            <h4 className="font-medium text-bsd-gray">Printmaking & Production Lab</h4>
-                            <p className="text-sm text-foreground/70">Access to printmaking equipment and production facilities</p>
+                            <p className="text-sm text-foreground/70">Gain real-world experience through internships with leading design agencies and brands</p>
                           </div>
                         </li>
                         
@@ -322,7 +299,7 @@ const ProgramGraphicDesign = () => {
                           </div>
                           <div className="ml-3">
                             <h4 className="font-medium text-bsd-gray">Portfolio Development</h4>
-                            <p className="text-sm text-foreground/70">Dedicated sessions for building a professional portfolio</p>
+                            <p className="text-sm text-foreground/70">Build a professional portfolio showcasing your best design work</p>
                           </div>
                         </li>
                       </ul>
@@ -347,15 +324,15 @@ const ProgramGraphicDesign = () => {
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Knowledge of typography, color theory, and layout techniques</span>
+                            <span>Knowledge of typography, color theory, and layout design</span>
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Awareness of historical, cultural, and contemporary design trends</span>
+                            <span>Understanding of branding, advertising, and marketing concepts</span>
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Familiarity with design software and digital media tools</span>
+                            <span>Familiarity with industry-standard design software and tools</span>
                           </li>
                         </ul>
                       </div>
@@ -365,19 +342,19 @@ const ProgramGraphicDesign = () => {
                         <ul className="space-y-2">
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Proficiency in visual communication and storytelling</span>
+                            <span>Proficiency in creating visual designs for various media</span>
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Ability to create effective designs for print and digital media</span>
+                            <span>Ability to develop brand identities and marketing campaigns</span>
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Expertise in branding, identity design, and advertising</span>
+                            <span>Expertise in using design software such as Adobe Creative Suite</span>
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Competence in web design, UI/UX, and motion graphics</span>
+                            <span>Competence in project management and problem-solving</span>
                           </li>
                         </ul>
                       </div>
@@ -387,19 +364,19 @@ const ProgramGraphicDesign = () => {
                         <ul className="space-y-2 grid grid-cols-1 md:grid-cols-2 gap-4">
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Portfolio development and personal branding skills</span>
+                            <span>Portfolio development showcasing design projects</span>
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Understanding of professional ethics and business practices</span>
+                            <span>Understanding of design industry ethics and professional practices</span>
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Ability to work collaboratively in multidisciplinary teams</span>
+                            <span>Ability to work in cross-functional creative teams</span>
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Critical thinking and problem-solving capabilities</span>
+                            <span>Critical thinking and creative problem-solving</span>
                           </li>
                         </ul>
                       </div>
@@ -416,33 +393,11 @@ const ProgramGraphicDesign = () => {
                   <CardContent>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       <div className="space-y-4">
-                        <h4 className="font-medium text-bsd-gray">Design Agencies</h4>
+                        <h4 className="font-medium text-bsd-gray">Design Roles</h4>
                         <ul className="space-y-2">
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
                             <span>Graphic Designer</span>
-                          </li>
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Art Director</span>
-                          </li>
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Creative Director</span>
-                          </li>
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Brand Strategist</span>
-                          </li>
-                        </ul>
-                      </div>
-                      
-                      <div className="space-y-4">
-                        <h4 className="font-medium text-bsd-gray">In-House Design Teams</h4>
-                        <ul className="space-y-2">
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Marketing Designer</span>
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
@@ -454,29 +409,59 @@ const ProgramGraphicDesign = () => {
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Social Media Designer</span>
+                            <span>Brand Identity Designer</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Packaging Designer</span>
                           </li>
                         </ul>
                       </div>
                       
                       <div className="space-y-4">
-                        <h4 className="font-medium text-bsd-gray">Entrepreneurial Paths</h4>
+                        <h4 className="font-medium text-bsd-gray">Creative Industry</h4>
                         <ul className="space-y-2">
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Freelance Designer</span>
+                            <span>Advertising Art Director</span>
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Design Studio Owner</span>
+                            <span>Marketing Specialist</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Social Media Manager</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Content Creator</span>
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
                             <span>Illustrator</span>
                           </li>
+                        </ul>
+                      </div>
+                      
+                      <div className="space-y-4">
+                        <h4 className="font-medium text-bsd-gray">Freelance & Entrepreneurship</h4>
+                        <ul className="space-y-2">
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Design Blogger/Influencer</span>
+                            <span>Freelance Graphic Designer</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Design Consultant</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Creative Director</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Design Studio Owner</span>
                           </li>
                         </ul>
                       </div>
@@ -490,12 +475,12 @@ const ProgramGraphicDesign = () => {
                           <p className="text-sm text-foreground/70">Average Starting Salary</p>
                         </div>
                         <div className="text-center p-4">
-                          <h5 className="text-3xl font-bold text-bsd-orange">18%</h5>
-                          <p className="text-sm text-foreground/70">Industry Growth Rate</p>
+                          <h5 className="text-3xl font-bold text-bsd-orange">25%</h5>
+                          <p className="text-sm text-foreground/70">Design Industry Growth Rate</p>
                         </div>
                         <div className="text-center p-4">
-                          <h5 className="text-3xl font-bold text-bsd-orange">70K+</h5>
-                          <p className="text-sm text-foreground/70">New Jobs by 2028</p>
+                          <h5 className="text-3xl font-bold text-bsd-orange">1.5M+</h5>
+                          <p className="text-sm text-foreground/70">Global Design Job Openings</p>
                         </div>
                       </div>
                     </div>
@@ -508,7 +493,38 @@ const ProgramGraphicDesign = () => {
       </section>
 
       {/* Student Works Gallery */}
-      <StudentWorksGallery />
+      
+<StudentWorksGallery 
+  title="Graphic Design Student Projects"
+  subtitle="Explore the creative works and design solutions from our graphic design students"
+  projects={[
+    {
+      title: "Brand Identity System",
+      description: "Complete brand identity including logo, typography, and application guidelines",
+      imageUrl: "https://images.unsplash.com/photo-1545670723-196ed0954986?fit=crop&w=600&h=400",
+      category: "Branding"
+    },
+    {
+      title: "Editorial Design",
+      description: "Magazine layout and typographic design showcasing visual hierarchy",
+      imageUrl: "https://images.unsplash.com/photo-1574492543179-135638a28ecf?fit=crop&w=600&h=400",
+      category: "Editorial"
+    },
+    {
+      title: "Packaging Design",
+      description: "Sustainable packaging solution with innovative structural design",
+      imageUrl: "https://images.unsplash.com/photo-1541613569553-332a2574a508?fit=crop&w=600&h=400",
+      category: "Packaging"
+    },
+    {
+      title: "Digital Illustration Series",
+      description: "Set of conceptual illustrations for social awareness campaign",
+      imageUrl: "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?fit=crop&w=600&h=400",
+      category: "Illustration"
+    }
+  ]}
+/>
+
 
       {/* Faculty Section */}
       <FacultySection />
@@ -520,10 +536,10 @@ const ProgramGraphicDesign = () => {
             <div className="text-center max-w-3xl mx-auto mb-12">
               <Badge variant="bsdOrange" className="mb-4">UNIQUE ADVANTAGE</Badge>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
-                Design Studio: Learn by Doing
+                Design Studio: Hands-on Learning
               </h2>
               <p className="mt-4 text-foreground/70">
-                Experience real-world design projects in our in-house professional design studio.
+                Experience real-world design challenges in our state-of-the-art design studio.
               </p>
             </div>
           </RevealSection>
@@ -532,14 +548,14 @@ const ProgramGraphicDesign = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
               <div className="relative rounded-2xl overflow-hidden h-[500px]">
                 <img 
-                  src="https://images.unsplash.com/photo-1588702577941-9886530463e8?w=800&auto=format&fit=crop" 
+                  src="https://images.unsplash.com/photo-1586773860418-d372a6344c94?w=800&auto=format&fit=crop" 
                   alt="Design Studio" 
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent">
                   <div className="absolute bottom-0 left-0 p-8">
                     <h3 className="text-white text-2xl font-bold mb-2">Design Studio</h3>
-                    <p className="text-white/80">Students working on real commercial projects</p>
+                    <p className="text-white/80">Students working on collaborative design projects</p>
                   </div>
                 </div>
               </div>
@@ -547,7 +563,7 @@ const ProgramGraphicDesign = () => {
               <div className="space-y-6">
                 <h3 className="text-2xl font-bold text-bsd-gray">A Unique Learning Experience</h3>
                 <p className="text-foreground/70">
-                  Our in-house design studio takes on real commercial projects, providing students with hands-on experience and mentorship from industry professionals.
+                  Our Design Studio provides students with access to professional-grade equipment and software used in the industry. Students work on real client projects, gaining valuable practical experience.
                 </p>
                 
                 <div className="space-y-4 pt-2">
@@ -557,7 +573,7 @@ const ProgramGraphicDesign = () => {
                     </div>
                     <div>
                       <h4 className="font-medium text-bsd-gray">Work on Real Client Projects</h4>
-                      <p className="text-sm text-foreground/70">Experience the entire design process from client briefing to final execution</p>
+                      <p className="text-sm text-foreground/70">Experience the entire design process from concept to delivery</p>
                     </div>
                   </div>
                   
@@ -566,8 +582,8 @@ const ProgramGraphicDesign = () => {
                       <Check className="w-4 h-4 text-bsd-orange" />
                     </div>
                     <div>
-                      <h4 className="font-medium text-bsd-gray">Mentorship from Practicing Professionals</h4>
-                      <p className="text-sm text-foreground/70">Learn directly from industry experts working on current projects</p>
+                      <h4 className="font-medium text-bsd-gray">Mentorship from Industry Professionals</h4>
+                      <p className="text-sm text-foreground/70">Learn directly from experienced designers and creative directors</p>
                     </div>
                   </div>
                   
@@ -577,7 +593,7 @@ const ProgramGraphicDesign = () => {
                     </div>
                     <div>
                       <h4 className="font-medium text-bsd-gray">Build a Professional Portfolio</h4>
-                      <p className="text-sm text-foreground/70">Graduate with actual commercial projects in your portfolio</p>
+                      <p className="text-sm text-foreground/70">Graduate with a portfolio of actual client projects</p>
                     </div>
                   </div>
                   
@@ -586,7 +602,7 @@ const ProgramGraphicDesign = () => {
                       <Check className="w-4 h-4 text-bsd-orange" />
                     </div>
                     <div>
-                      <h4 className="font-medium text-bsd-gray">Network with Industry Clients</h4>
+                      <h4 className="font-medium text-bsd-gray">Network with Industry Partners</h4>
                       <p className="text-sm text-foreground/70">Develop connections with potential employers while still studying</p>
                     </div>
                   </div>
@@ -607,49 +623,4 @@ const ProgramGraphicDesign = () => {
       <section className="py-16 bg-bsd-light-gray">
         <div className="container mx-auto px-6 md:px-8">
           <RevealSection>
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <Badge variant="bsdOrange" className="mb-4">ADMISSIONS</Badge>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
-                Eligibility & Application Process
-              </h2>
-              <p className="mt-4 text-foreground/70">
-                Join our BVA Graphic Design program and start your journey toward a creative and fulfilling career in design.
-              </p>
-            </div>
-          </RevealSection>
-
-          <RevealSection delay={100}>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-              <Card>
-                <CardHeader>
-                  <h3 className="text-xl font-semibold text-bsd-gray">Eligibility Criteria</h3>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-4">
-                    <li className="flex items-start">
-                      <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <Check className="w-4 h-4 text-bsd-orange" />
-                      </div>
-                      <div className="ml-3">
-                        <h4 className="font-medium text-bsd-gray">Academic Qualification</h4>
-                        <p className="text-sm text-foreground/70">10+2 (Higher Secondary) or equivalent with a minimum of 50% aggregate marks from any recognized board</p>
-                      </div>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-          </RevealSection>
-        </div>
-      </section>
-
-      {/* Enquiry Form Section */}
-      <EnquiryFormSection />
-      
-      {/* Footer */}
-      <Footer />
-    </>
-  );
-};
-
-export default ProgramGraphicDesign;
+            <div className="

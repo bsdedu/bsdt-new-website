@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -9,9 +8,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader } from "@/components/ui-elements/Card";
 import { AnimatedButton } from "@/components/ui-elements/AnimatedButton";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Check, BookOpen, Calendar, GraduationCap, Award, BriefcaseBusiness, Building2, Lightbulb, Users, Palette, Ruler, Sofa } from "lucide-react";
+import { Check, BookOpen, Calendar, GraduationCap, Award, BriefcaseBusiness, Building2, Lightbulb, Users, Ruler2, PaintBrush } from "lucide-react";
 import { Link } from "react-router-dom";
 import { EnquiryFormSection } from "@/components/home/EnquiryFormSection";
+import { ApplicationDeadline } from "@/components/program/ApplicationDeadline";
 import { FacultySection } from "@/components/program/FacultySection";
 import { StudentWorksGallery } from "@/components/program/StudentWorksGallery";
 
@@ -20,7 +20,7 @@ const ProgramInteriorDesign = () => {
     <>
       <Helmet>
         <title>B.Sc Interior Design | BSDT</title>
-        <meta name="description" content="Learn Interior Design with a B.Sc degree program at Bangalore School of Design & Technology (BSDT). Gain professional skills in design, space planning, materials and more." />
+        <meta name="description" content="Transform spaces with a B.Sc degree in Interior Design at Bangalore School of Design & Technology (BSDT). Learn from industry experts and create innovative designs." />
       </Helmet>
 
       <Navbar />
@@ -42,7 +42,7 @@ const ProgramInteriorDesign = () => {
                   B.Sc Interior Design
                 </h1>
                 <p className="text-lg text-foreground/80">
-                  Transform spaces and create functional, aesthetically pleasing environments with our comprehensive Interior Design program. Learn from industry experts and build a successful career in interior design.
+                  Transform your passion for design into a rewarding career. Learn to create innovative and functional spaces with our comprehensive Interior Design program.
                 </p>
                 <div className="flex flex-wrap gap-4 pt-4">
                   <AnimatedButton asChild>
@@ -72,19 +72,26 @@ const ProgramInteriorDesign = () => {
                     <span>Next Batch: June 2024</span>
                   </div>
                 </div>
+                
+                {/* Application Deadline Component */}
+                <ApplicationDeadline 
+                  lastDate="August 15, 2024" 
+                  startDate="January 15, 2024" 
+                  seatsAvailable={60}
+                />
               </div>
             </RevealSection>
 
             <RevealSection direction="left">
               <div className="relative rounded-2xl overflow-hidden shadow-lg h-[400px]">
                 <img 
-                  src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80" 
+                  src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
                   alt="Interior Design Studio" 
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
                   <div className="absolute bottom-0 left-0 p-6">
-                    <p className="text-white font-medium text-lg">Learn design principles, space planning, materials, and more</p>
+                    <p className="text-white font-medium text-lg">Design Your Future in Interior Design</p>
                   </div>
                 </div>
               </div>
@@ -99,7 +106,7 @@ const ProgramInteriorDesign = () => {
                   <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-3">
                     <Users className="w-6 h-6 text-bsd-orange" />
                   </div>
-                  <h3 className="text-3xl font-bold text-bsd-gray">100+</h3>
+                  <h3 className="text-3xl font-bold text-bsd-gray">60+</h3>
                   <p className="text-sm text-foreground/70">Annual Intake</p>
                 </CardContent>
               </Card>
@@ -129,7 +136,7 @@ const ProgramInteriorDesign = () => {
                   <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-3">
                     <Building2 className="w-6 h-6 text-bsd-orange" />
                   </div>
-                  <h3 className="text-3xl font-bold text-bsd-gray">30+</h3>
+                  <h3 className="text-3xl font-bold text-bsd-gray">40+</h3>
                   <p className="text-sm text-foreground/70">Industry Partners</p>
                 </CardContent>
               </Card>
@@ -145,10 +152,10 @@ const ProgramInteriorDesign = () => {
             <div className="text-center max-w-3xl mx-auto mb-12">
               <Badge variant="bsdOrange" className="mb-4">PROGRAM OVERVIEW</Badge>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
-                Comprehensive Interior Design Education
+                Transforming Spaces, Shaping Futures
               </h2>
               <p className="mt-4 text-foreground/70">
-                Our B.Sc in Interior Design program combines theoretical knowledge with practical skills, preparing you to excel in the dynamic world of interior design and architecture.
+                Our B.Sc Interior Design program combines creative vision with technical skills, preparing you to design innovative and functional spaces that enhance the quality of life.
               </p>
             </div>
           </RevealSection>
@@ -172,7 +179,7 @@ const ProgramInteriorDesign = () => {
                     <CardContent>
                       <div className="space-y-6">
                         <p className="text-foreground/70">
-                          The B.Sc Interior Design program is a 3-year full-time undergraduate course divided into 6 semesters, each focusing on different aspects of interior design.
+                          The B.Sc Interior Design program is a 3-year full-time undergraduate course divided into 6 semesters, with core design subjects and specialized electives.
                         </p>
                         
                         <div className="space-y-4">
@@ -180,59 +187,59 @@ const ProgramInteriorDesign = () => {
                           <ul className="space-y-2">
                             <li className="flex items-start">
                               <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Design Fundamentals & Elements of Design</span>
+                              <span>Design Principles and Elements</span>
                             </li>
                             <li className="flex items-start">
                               <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Drawing & Visualization Techniques</span>
+                              <span>Graphics and Visualization</span>
                             </li>
                             <li className="flex items-start">
                               <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>History of Architecture & Design</span>
+                              <span>History of Interiors</span>
                             </li>
                             <li className="flex items-start">
                               <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Basic Construction & Materials</span>
-                            </li>
-                          </ul>
-
-                          <h4 className="font-medium text-bsd-gray">Second Year: Specialization</h4>
-                          <ul className="space-y-2">
-                            <li className="flex items-start">
-                              <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Interior Design Studio (Residential & Commercial)</span>
-                            </li>
-                            <li className="flex items-start">
-                              <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Material Studies & Furniture Design</span>
-                            </li>
-                            <li className="flex items-start">
-                              <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Computer-Aided Design & Building Information Modeling</span>
-                            </li>
-                            <li className="flex items-start">
-                              <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Lighting & Acoustics</span>
+                              <span>Materials and Construction</span>
                             </li>
                           </ul>
 
-                          <h4 className="font-medium text-bsd-gray">Third Year: Advanced Applications</h4>
+                          <h4 className="font-medium text-bsd-gray">Second Year: Core Concepts</h4>
                           <ul className="space-y-2">
                             <li className="flex items-start">
                               <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Advanced Interior Design Projects</span>
+                              <span>Space Planning and Ergonomics</span>
                             </li>
                             <li className="flex items-start">
                               <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Professional Practice & Project Management</span>
+                              <span>Lighting Design</span>
                             </li>
                             <li className="flex items-start">
                               <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Sustainable Design & Environmental Systems</span>
+                              <span>Furniture Design</span>
                             </li>
                             <li className="flex items-start">
                               <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Final Dissertation & Portfolio Development</span>
+                              <span>Sustainable Design</span>
+                            </li>
+                          </ul>
+
+                          <h4 className="font-medium text-bsd-gray">Third Year: Specialization</h4>
+                          <ul className="space-y-2">
+                            <li className="flex items-start">
+                              <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                              <span>Residential Design</span>
+                            </li>
+                            <li className="flex items-start">
+                              <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                              <span>Commercial Design</span>
+                            </li>
+                            <li className="flex items-start">
+                              <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                              <span>Healthcare Design</span>
+                            </li>
+                            <li className="flex items-start">
+                              <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                              <span>Hospitality Design</span>
                             </li>
                           </ul>
                         </div>
@@ -248,21 +255,21 @@ const ProgramInteriorDesign = () => {
                       <ul className="space-y-4">
                         <li className="flex items-start">
                           <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <Palette className="w-4 h-4 text-bsd-orange" />
+                            <Ruler2 className="w-4 h-4 text-bsd-orange" />
                           </div>
                           <div className="ml-3">
-                            <h4 className="font-medium text-bsd-gray">Hands-on Studio Experience</h4>
-                            <p className="text-sm text-foreground/70">Dedicated design studios with industry-standard equipment</p>
+                            <h4 className="font-medium text-bsd-gray">Studio-Based Learning</h4>
+                            <p className="text-sm text-foreground/70">Hands-on experience in design studios</p>
                           </div>
                         </li>
                         
                         <li className="flex items-start">
                           <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <Ruler className="w-4 h-4 text-bsd-orange" />
+                            <PaintBrush className="w-4 h-4 text-bsd-orange" />
                           </div>
                           <div className="ml-3">
-                            <h4 className="font-medium text-bsd-gray">Professional Software Training</h4>
-                            <p className="text-sm text-foreground/70">AutoCAD, SketchUp, Revit, 3ds Max, and more</p>
+                            <h4 className="font-medium text-bsd-gray">Industry Exposure</h4>
+                            <p className="text-sm text-foreground/70">Internships with leading design firms</p>
                           </div>
                         </li>
                         
@@ -271,8 +278,8 @@ const ProgramInteriorDesign = () => {
                             <Users className="w-4 h-4 text-bsd-orange" />
                           </div>
                           <div className="ml-3">
-                            <h4 className="font-medium text-bsd-gray">Industry Expert Faculty</h4>
-                            <p className="text-sm text-foreground/70">Learn from practicing designers and architects</p>
+                            <h4 className="font-medium text-bsd-gray">Expert Faculty</h4>
+                            <p className="text-sm text-foreground/70">Learn from experienced design professionals</p>
                           </div>
                         </li>
                         
@@ -281,18 +288,8 @@ const ProgramInteriorDesign = () => {
                             <BriefcaseBusiness className="w-4 h-4 text-bsd-orange" />
                           </div>
                           <div className="ml-3">
-                            <h4 className="font-medium text-bsd-gray">Industry Internships</h4>
-                            <p className="text-sm text-foreground/70">Guaranteed internship placements with leading firms</p>
-                          </div>
-                        </li>
-                        
-                        <li className="flex items-start">
-                          <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <Sofa className="w-4 h-4 text-bsd-orange" />
-                          </div>
-                          <div className="ml-3">
-                            <h4 className="font-medium text-bsd-gray">Material Library</h4>
-                            <p className="text-sm text-foreground/70">Extensive collection of materials and finishes to explore</p>
+                            <h4 className="font-medium text-bsd-gray">Career-Focused Curriculum</h4>
+                            <p className="text-sm text-foreground/70">Develop skills for a successful design career</p>
                           </div>
                         </li>
                         
@@ -301,8 +298,8 @@ const ProgramInteriorDesign = () => {
                             <Lightbulb className="w-4 h-4 text-bsd-orange" />
                           </div>
                           <div className="ml-3">
-                            <h4 className="font-medium text-bsd-gray">Portfolio Development</h4>
-                            <p className="text-sm text-foreground/70">Dedicated sessions for building a professional portfolio</p>
+                            <h4 className="font-medium text-bsd-gray">Design Innovation</h4>
+                            <p className="text-sm text-foreground/70">Explore the latest trends and technologies</p>
                           </div>
                         </li>
                       </ul>
@@ -323,19 +320,15 @@ const ProgramInteriorDesign = () => {
                         <ul className="space-y-2">
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Comprehensive understanding of interior design principles and elements</span>
+                            <span>Understand design principles and history</span>
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Knowledge of materials, finishes, construction methods, and building systems</span>
+                            <span>Knowledge of materials and construction</span>
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Awareness of historical, cultural, and contemporary design influences</span>
-                          </li>
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Familiarity with building codes, regulations, and accessibility standards</span>
+                            <span>Awareness of sustainable design practices</span>
                           </li>
                         </ul>
                       </div>
@@ -345,19 +338,15 @@ const ProgramInteriorDesign = () => {
                         <ul className="space-y-2">
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Proficiency in manual and digital visualization techniques</span>
+                            <span>Create design concepts and solutions</span>
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Ability to develop creative design solutions for diverse spaces</span>
+                            <span>Develop technical drawings and specifications</span>
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Expertise in space planning, furniture layouts, and ergonomics</span>
-                          </li>
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Competence in project management and client communication</span>
+                            <span>Communicate design ideas effectively</span>
                           </li>
                         </ul>
                       </div>
@@ -367,19 +356,19 @@ const ProgramInteriorDesign = () => {
                         <ul className="space-y-2 grid grid-cols-1 md:grid-cols-2 gap-4">
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Portfolio development and personal branding skills</span>
+                            <span>Build a professional design portfolio</span>
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Understanding of professional ethics and business practices</span>
+                            <span>Understand ethical and professional practices</span>
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Ability to work collaboratively in multidisciplinary teams</span>
+                            <span>Collaborate in design teams</span>
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Critical thinking and problem-solving capabilities</span>
+                            <span>Critical thinking and problem-solving</span>
                           </li>
                         </ul>
                       </div>
@@ -396,7 +385,7 @@ const ProgramInteriorDesign = () => {
                   <CardContent>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       <div className="space-y-4">
-                        <h4 className="font-medium text-bsd-gray">Design Firms</h4>
+                        <h4 className="font-medium text-bsd-gray">Design Roles</h4>
                         <ul className="space-y-2">
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
@@ -408,55 +397,43 @@ const ProgramInteriorDesign = () => {
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Design Consultant</span>
-                          </li>
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Project Coordinator</span>
+                            <span>Furniture Designer</span>
                           </li>
                         </ul>
                       </div>
                       
                       <div className="space-y-4">
-                        <h4 className="font-medium text-bsd-gray">Specialized Sectors</h4>
+                        <h4 className="font-medium text-bsd-gray">Specialized Fields</h4>
                         <ul className="space-y-2">
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Hospitality Designer</span>
+                            <span>Residential Design</span>
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Retail Designer</span>
+                            <span>Commercial Design</span>
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Healthcare Designer</span>
-                          </li>
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Exhibition Designer</span>
+                            <span>Hospitality Design</span>
                           </li>
                         </ul>
                       </div>
                       
                       <div className="space-y-4">
-                        <h4 className="font-medium text-bsd-gray">Entrepreneurial Paths</h4>
+                        <h4 className="font-medium text-bsd-gray">Related Industries</h4>
                         <ul className="space-y-2">
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Freelance Designer</span>
+                            <span>Architectural Firms</span>
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Design Studio Owner</span>
+                            <span>Design Consultancies</span>
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Product Designer</span>
-                          </li>
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Design Blogger/Influencer</span>
+                            <span>Real Estate Development</span>
                           </li>
                         </ul>
                       </div>
@@ -466,16 +443,16 @@ const ProgramInteriorDesign = () => {
                       <h4 className="font-medium text-bsd-gray mb-4">Industry Insights</h4>
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div className="text-center p-4">
-                          <h5 className="text-3xl font-bold text-bsd-orange">₹3-8L</h5>
+                          <h5 className="text-3xl font-bold text-bsd-orange">₹3-10L</h5>
                           <p className="text-sm text-foreground/70">Average Starting Salary</p>
                         </div>
                         <div className="text-center p-4">
-                          <h5 className="text-3xl font-bold text-bsd-orange">22%</h5>
+                          <h5 className="text-3xl font-bold text-bsd-orange">20%</h5>
                           <p className="text-sm text-foreground/70">Industry Growth Rate</p>
                         </div>
                         <div className="text-center p-4">
-                          <h5 className="text-3xl font-bold text-bsd-orange">8.5L+</h5>
-                          <p className="text-sm text-foreground/70">Jobs by 2025</p>
+                          <h5 className="text-3xl font-bold text-bsd-orange">1M+</h5>
+                          <p className="text-sm text-foreground/70">Global Design Job Openings</p>
                         </div>
                       </div>
                     </div>
@@ -488,100 +465,40 @@ const ProgramInteriorDesign = () => {
       </section>
 
       {/* Student Works Gallery */}
-      <StudentWorksGallery />
+      
+      <StudentWorksGallery 
+  title="Interior Design Student Projects"
+  subtitle="Explore the innovative and creative interior design work from our talented students"
+  projects={[
+    {
+      title: "Contemporary Home Redesign",
+      description: "Complete interior transformation of a residential space focusing on functionality and aesthetics",
+      imageUrl: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?fit=crop&w=600&h=400",
+      category: "Residential"
+    },
+    {
+      title: "Sustainable Office Space",
+      description: "Eco-friendly commercial interior with biophilic design elements and sustainable materials",
+      imageUrl: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?fit=crop&w=600&h=400",
+      category: "Commercial"
+    },
+    {
+      title: "Restaurant Interior Concept",
+      description: "Immersive dining experience design with custom furniture and lighting solutions",
+      imageUrl: "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?fit=crop&w=600&h=400",
+      category: "Hospitality"
+    },
+    {
+      title: "Small Space Solutions",
+      description: "Innovative design for compact urban living with multifunctional furniture",
+      imageUrl: "https://images.unsplash.com/photo-1567016432779-094069958ea5?fit=crop&w=600&h=400",
+      category: "Residential"
+    }
+  ]}
+/>
 
       {/* Faculty Section */}
       <FacultySection />
-      
-      {/* BSD Studio Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6 md:px-8">
-          <RevealSection>
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <Badge variant="bsdOrange" className="mb-4">UNIQUE ADVANTAGE</Badge>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
-                BSD Studio: Learn by Doing
-              </h2>
-              <p className="mt-4 text-foreground/70">
-                Experience real-world design projects in our in-house professional design studio.
-              </p>
-            </div>
-          </RevealSection>
-
-          <RevealSection delay={100}>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-              <div className="relative rounded-2xl overflow-hidden h-[500px]">
-                <img 
-                  src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&auto=format&fit=crop" 
-                  alt="BSD Studio" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent">
-                  <div className="absolute bottom-0 left-0 p-8">
-                    <h3 className="text-white text-2xl font-bold mb-2">BSD Studio</h3>
-                    <p className="text-white/80">Students working on real commercial projects</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-bsd-gray">A Unique Learning Experience</h3>
-                <p className="text-foreground/70">
-                  BSD Studio is our in-house design center that takes on real commercial projects. What makes BSDT unique is that no other design college in India offers students this level of hands-on experience with actual client projects.
-                </p>
-                
-                <div className="space-y-4 pt-2">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-4 h-4 text-bsd-orange" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-bsd-gray">Work on Real Client Projects</h4>
-                      <p className="text-sm text-foreground/70">Experience the entire design process from client briefing to final execution</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-4 h-4 text-bsd-orange" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-bsd-gray">Mentorship from Practicing Professionals</h4>
-                      <p className="text-sm text-foreground/70">Learn directly from industry experts working on current projects</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-4 h-4 text-bsd-orange" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-bsd-gray">Build a Professional Portfolio</h4>
-                      <p className="text-sm text-foreground/70">Graduate with actual commercial projects in your portfolio</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-4 h-4 text-bsd-orange" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-bsd-gray">Network with Industry Clients</h4>
-                      <p className="text-sm text-foreground/70">Develop connections with potential employers while still studying</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="pt-4">
-                  <AnimatedButton asChild>
-                    <a href="#enquiry-form" className="hover:no-underline">Apply Now</a>
-                  </AnimatedButton>
-                </div>
-              </div>
-            </div>
-          </RevealSection>
-        </div>
-      </section>
 
       {/* Eligibility & Admission Section */}
       <section className="py-16 bg-bsd-light-gray">
@@ -593,7 +510,7 @@ const ProgramInteriorDesign = () => {
                 Eligibility & Application Process
               </h2>
               <p className="mt-4 text-foreground/70">
-                Join our B.Sc Interior Design program and start your journey toward a creative and fulfilling career in interior design.
+                Join our B.Sc Interior Design program and start your journey toward a creative and rewarding career.
               </p>
             </div>
           </RevealSection>
@@ -615,7 +532,48 @@ const ProgramInteriorDesign = () => {
                         <p className="text-sm text-foreground/70">10+2 (Higher Secondary) or equivalent with a minimum of 50% aggregate marks from any recognized board</p>
                       </div>
                     </li>
+                    <li className="flex items-start">
+                      <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="w-4 h-4 text-bsd-orange" />
+                      </div>
+                      <div className="ml-3">
+                        <h4 className="font-medium text-bsd-gray">Creative Aptitude</h4>
+                        <p className="text-sm text-foreground/70">Demonstrated interest or aptitude in design and creativity</p>
+                      </div>
+                    </li>
                   </ul>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <h3 className="text-xl font-semibold text-bsd-gray">Application Process</h3>
+                </CardHeader>
+                <CardContent>
+                  <ol className="space-y-4 list-decimal list-inside">
+                    <li className="pl-2">
+                      <span className="font-medium text-bsd-gray">Online Application:</span>
+                      <p className="text-sm text-foreground/70 mt-1">Complete the online application form and pay the application fee.</p>
+                    </li>
+                    <li className="pl-2">
+                      <span className="font-medium text-bsd-gray">Design Portfolio:</span>
+                      <p className="text-sm text-foreground/70 mt-1">Submit a portfolio showcasing your creative work (optional but recommended).</p>
+                    </li>
+                    <li className="pl-2">
+                      <span className="font-medium text-bsd-gray">Personal Interview:</span>
+                      <p className="text-sm text-foreground/70 mt-1">Shortlisted candidates are invited for a personal interview to assess their motivation and design aptitude.</p>
+                    </li>
+                    <li className="pl-2">
+                      <span className="font-medium text-bsd-gray">Final Selection:</span>
+                      <p className="text-sm text-foreground/70 mt-1">Admission offers are made based on academic records, portfolio (if submitted), and interview performance.</p>
+                    </li>
+                  </ol>
+
+                  <div className="mt-6">
+                    <AnimatedButton asChild>
+                      <a href="#enquiry-form" className="hover:no-underline">Apply Now</a>
+                    </AnimatedButton>
+                  </div>
                 </CardContent>
               </Card>
             </div>
@@ -623,10 +581,11 @@ const ProgramInteriorDesign = () => {
         </div>
       </section>
 
-      {/* Enquiry Form Section */}
-      <EnquiryFormSection />
+      {/* Enquiry Form Section with id for scroll target */}
+      <div id="enquiry-form">
+        <EnquiryFormSection />
+      </div>
       
-      {/* Footer */}
       <Footer />
     </>
   );
