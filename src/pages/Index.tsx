@@ -13,7 +13,6 @@ import { TestimonialsSection } from '../components/home/TestimonialsSection';
 import { UpcomingEventsSection } from '../components/home/UpcomingEventsSection';
 import { CollaborationsSection } from '../components/home/CollaborationsSection';
 import { InfoGraphicsSection } from '../components/home/InfoGraphicsSection';
-import { DynamicBackground } from '@/components/ui-elements/DynamicBackground';
 
 const Index = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -66,38 +65,31 @@ const Index = () => {
       <Navbar />
       
       <main>
-        {/* Dynamic background with blobs instead of static elements */}
-        <DynamicBackground 
-          type="blobs" 
-          className="fixed inset-0 -z-50 overflow-hidden pointer-events-none"
-          colors={['bg-bsd-orange/10', 'bg-bsd-gray/10']}
-        />
+        {/* Background parallax elements */}
+        <div className="fixed inset-0 -z-50 overflow-hidden pointer-events-none">
+          <div 
+            className="absolute top-0 right-0 w-96 h-96 rounded-full bg-bsd-orange/5 blur-3xl opacity-60" 
+            style={getParallaxStyle(-0.05)}
+          />
+          <div 
+            className="absolute bottom-1/4 left-0 w-80 h-80 rounded-full bg-bsd-gray/5 blur-3xl opacity-60"
+            style={getParallaxStyle(0.08)}
+          />
+          <div 
+            className="absolute top-1/3 left-1/4 w-64 h-64 rounded-full bg-bsd-orange/10 blur-3xl opacity-30"
+            style={getParallaxStyle(0.12)}
+          />
+        </div>
         
         <HeroSection />
-        
-        <DynamicBackground type="gradient" className="py-16">
-          <ProgramsSection />
-        </DynamicBackground>
-        
+        <ProgramsSection />
         <InfoGraphicsSection />
-        
-        <DynamicBackground type="particles" className="py-16">
-          <UpcomingEventsSection />
-        </DynamicBackground>
-        
+        <UpcomingEventsSection />
         <WhyChooseSection />
-        
-        <DynamicBackground type="gradient" className="py-16">
-          <TestimonialsSection />
-        </DynamicBackground>
-        
+        <TestimonialsSection />
         <CollaborationsSection />
         <EnquiryFormSection />
-        
-        <DynamicBackground type="waves" className="py-16">
-          <AboutSection />
-        </DynamicBackground>
-        
+        <AboutSection />
         <GallerySection />
         <ContactSection />
       </main>
