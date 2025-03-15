@@ -16,6 +16,7 @@ import { useLocation } from 'react-router-dom';
 export const StudentWorksGallery: React.FC = () => {
   const location = useLocation();
   const isInteriorDesignProgram = location.pathname.includes('interior-design');
+  const isAnimationGameDesignProgram = location.pathname.includes('animation-game-design');
   
   // Categories based on program type
   const projectCategories = isInteriorDesignProgram 
@@ -23,6 +24,12 @@ export const StudentWorksGallery: React.FC = () => {
         { id: "residential", name: "Residential Spaces" },
         { id: "commercial", name: "Commercial Projects" },
         { id: "conceptual", name: "Conceptual Designs" },
+      ]
+    : isAnimationGameDesignProgram
+    ? [
+        { id: "animation", name: "Animation Projects" },
+        { id: "characters", name: "Character Design" },
+        { id: "games", name: "Game Development" },
       ]
     : [
         { id: "branding", name: "Branding Projects" },
@@ -73,11 +80,41 @@ export const StudentWorksGallery: React.FC = () => {
     ],
   };
   
+  // Animation & Game Design specific projects
+  const animationGameProjects = {
+    animation: [
+      { id: 1, title: "Dreamscape Short Film", student: "Aarav Singh", year: "2023", image: "https://images.unsplash.com/photo-1487887235947-a955ef187fcc?w=800&auto=format&fit=crop" },
+      { id: 2, title: "Animated Music Video", student: "Isha Patel", year: "2023", image: "https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=800&auto=format&fit=crop" },
+      { id: 3, title: "Stylized Character Animation", student: "Dev Kapoor", year: "2022", image: "https://images.unsplash.com/photo-1634157703702-3c124b455499?w=800&auto=format&fit=crop" },
+      { id: 4, title: "Animated Brand Commercial", student: "Nisha Reddy", year: "2022", image: "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=800&auto=format&fit=crop" },
+    ],
+    characters: [
+      { id: 1, title: "Fantasy Character Collection", student: "Rohan Verma", year: "2023", image: "https://images.unsplash.com/photo-1566577739112-5180d4bf9390?w=800&auto=format&fit=crop" },
+      { id: 2, title: "Sci-Fi Character Designs", student: "Aanya Sharma", year: "2023", image: "https://images.unsplash.com/photo-1546776310-eef45dd6d63c?w=800&auto=format&fit=crop" },
+      { id: 3, title: "Anthropomorphic Characters", student: "Vivek Kumar", year: "2022", image: "https://images.unsplash.com/photo-1608889476561-6242cfdbf622?w=800&auto=format&fit=crop" },
+      { id: 4, title: "Creature Design Portfolio", student: "Maya Gupta", year: "2022", image: "https://images.unsplash.com/photo-1618336753974-aae8e04506aa?w=800&auto=format&fit=crop" },
+    ],
+    games: [
+      { id: 1, title: "Mobile Puzzle Game", student: "Arjun Nair", year: "2023", image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&auto=format&fit=crop" },
+      { id: 2, title: "VR Experience Design", student: "Sanvi Joshi", year: "2023", image: "https://images.unsplash.com/photo-1559813233-30a238e16dc4?w=800&auto=format&fit=crop" },
+      { id: 3, title: "Interactive Narrative Game", student: "Kabir Malhotra", year: "2022", image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&auto=format&fit=crop" },
+      { id: 4, title: "Game Environment Design", student: "Tara Menon", year: "2022", image: "https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=800&auto=format&fit=crop" },
+    ],
+  };
+  
   // Choose projects based on program type
-  const projects = isInteriorDesignProgram ? interiorProjects : graphicProjects;
+  const projects = isInteriorDesignProgram 
+    ? interiorProjects 
+    : isAnimationGameDesignProgram
+    ? animationGameProjects
+    : graphicProjects;
   
   // Choose default tab based on program type
-  const defaultTabValue = isInteriorDesignProgram ? "residential" : "branding";
+  const defaultTabValue = isInteriorDesignProgram 
+    ? "residential" 
+    : isAnimationGameDesignProgram
+    ? "animation"
+    : "branding";
 
   return (
     <section className="py-16 bg-bsd-light-gray">
@@ -91,6 +128,8 @@ export const StudentWorksGallery: React.FC = () => {
             <p className="mt-4 text-foreground/70">
               {isInteriorDesignProgram 
                 ? "Explore outstanding interior design projects created by our talented students, showcasing their creativity, technical skills, and spatial thinking."
+                : isAnimationGameDesignProgram
+                ? "Explore outstanding animation and game design projects created by our talented students, showcasing their creativity, technical skills, and narrative abilities."
                 : "Explore outstanding graphic design projects created by our talented students, showcasing their creativity, technical skills, and design thinking."}
             </p>
           </div>

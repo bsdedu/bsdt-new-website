@@ -4,6 +4,7 @@ import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "../ui-elements/Card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { useLocation } from 'react-router-dom';
 
 type FacultyMember = {
   name: string;
@@ -13,26 +14,51 @@ type FacultyMember = {
 };
 
 export const FacultySection: React.FC = () => {
-  const facultyMembers: FacultyMember[] = [
-    {
-      name: "Dipti Dineshwar",
-      role: "Senior Design Faculty",
-      bio: "An architect from BMS School of Architecture with experience in Bangalore and Jaipur. Dipti leads academic programs at BSD, helping students develop design skills through workshops and projects. She specializes in design theory and architectural history, with a Harvard certification in 'The Architectural Imagination'.",
-      imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?fit=crop&w=300&h=300",
-    },
-    {
-      name: "Jainy Steve George",
-      role: "Lead Faculty",
-      bio: "An architect graduate from Manipal School of Architecture with international experience. Jainy has worked on architectural projects in Bahrain and Bangalore, including residential and commercial designs. She has contributed to the Ministry of Education in Bahrain and commercial projects in Saudi Arabia.",
-      imageUrl: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?fit=crop&w=300&h=300",
-    },
-    {
-      name: "Aditha Verma Raj",
-      role: "Senior Design Faculty",
-      bio: "An architecture graduate from Thiagarajar School of Architecture with over eight years of professional experience in hotels, commercial buildings, and luxury villas. Currently a senior architect at Design Studio, Aditha has been with BSDT since its inception, mentoring students and providing industry-relevant guidance.",
-      imageUrl: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?fit=crop&w=300&h=300",
-    },
-  ];
+  const location = useLocation();
+  const isAnimationProgram = location.pathname.includes('animation-game-design');
+  
+  // Different faculty members based on program type
+  const facultyMembers: FacultyMember[] = isAnimationProgram 
+    ? [
+      {
+        name: "Dr. Anil Prakash",
+        role: "Head of Animation Department",
+        bio: "Ph.D. in Animation & Visual Effects from Savannah College of Art and Design. 12+ years of experience in 3D animation and visual effects with credits on international film productions. Previously worked with Dreamworks Animation and led projects at Technicolor India.",
+        imageUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?fit=crop&w=300&h=300",
+      },
+      {
+        name: "Prof. Meera Desai",
+        role: "Game Design Faculty",
+        bio: "MFA in Game Design from NYU Tisch School of the Arts. Veteran game designer with experience at Ubisoft and Electronic Arts. Has developed multiple award-winning mobile and console games, specializing in game mechanics, level design, and interactive storytelling.",
+        imageUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?fit=crop&w=300&h=300",
+      },
+      {
+        name: "Rohit Sharma",
+        role: "Character Animation Specialist",
+        bio: "Graduate of Vancouver Film School's Animation Program with specialization in character animation. 8+ years of industry experience in character rigging and animation. Has worked on animated features for Disney and Sony Pictures Animation, bringing characters to life through compelling motion.",
+        imageUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?fit=crop&w=300&h=300",
+      },
+    ]
+    : [
+      {
+        name: "Dipti Dineshwar",
+        role: "Senior Design Faculty",
+        bio: "An architect from BMS School of Architecture with experience in Bangalore and Jaipur. Dipti leads academic programs at BSD, helping students develop design skills through workshops and projects. She specializes in design theory and architectural history, with a Harvard certification in 'The Architectural Imagination'.",
+        imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?fit=crop&w=300&h=300",
+      },
+      {
+        name: "Jainy Steve George",
+        role: "Lead Faculty",
+        bio: "An architect graduate from Manipal School of Architecture with international experience. Jainy has worked on architectural projects in Bahrain and Bangalore, including residential and commercial designs. She has contributed to the Ministry of Education in Bahrain and commercial projects in Saudi Arabia.",
+        imageUrl: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?fit=crop&w=300&h=300",
+      },
+      {
+        name: "Aditha Verma Raj",
+        role: "Senior Design Faculty",
+        bio: "An architecture graduate from Thiagarajar School of Architecture with over eight years of professional experience in hotels, commercial buildings, and luxury villas. Currently a senior architect at Design Studio, Aditha has been with BSDT since its inception, mentoring students and providing industry-relevant guidance.",
+        imageUrl: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?fit=crop&w=300&h=300",
+      },
+    ];
 
   return (
     <section className="py-16 bg-white">

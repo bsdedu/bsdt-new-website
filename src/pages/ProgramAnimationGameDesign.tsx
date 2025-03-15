@@ -74,7 +74,7 @@ const ProgramAnimationGameDesign = () => {
             <RevealSection direction="left">
               <div className="relative rounded-2xl overflow-hidden shadow-lg h-[400px]">
                 <img 
-                  src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80" 
+                  src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1160&q=80" 
                   alt="Animation and Game Design Studio" 
                   className="w-full h-full object-cover"
                 />
