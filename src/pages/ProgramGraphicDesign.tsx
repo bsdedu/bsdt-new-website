@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -431,38 +432,36 @@ const ProgramGraphicDesign = () => {
       </section>
 
       {/* Student Works Gallery */}
-      
-<StudentWorksGallery 
-  title="Graphic Design Student Projects"
-  subtitle="Explore the creative works and design solutions from our graphic design students"
-  projects={[
-    {
-      title: "Brand Identity System",
-      description: "Complete brand identity including logo, typography, and application guidelines",
-      imageUrl: "https://images.unsplash.com/photo-1545670723-196ed0954986?fit=crop&w=600&h=400",
-      category: "Branding"
-    },
-    {
-      title: "Editorial Design",
-      description: "Magazine layout and typographic design showcasing visual hierarchy",
-      imageUrl: "https://images.unsplash.com/photo-1574492543179-135638a28ecf?fit=crop&w=600&h=400",
-      category: "Editorial"
-    },
-    {
-      title: "Packaging Design",
-      description: "Sustainable packaging solution with innovative structural design",
-      imageUrl: "https://images.unsplash.com/photo-1541613569553-332a2574a508?fit=crop&w=600&h=400",
-      category: "Packaging"
-    },
-    {
-      title: "Digital Illustration Series",
-      description: "Set of conceptual illustrations for social awareness campaign",
-      imageUrl: "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?fit=crop&w=600&h=400",
-      category: "Illustration"
-    }
-  ]}
-/>
-
+      <StudentWorksGallery 
+        title="Graphic Design Student Projects"
+        subtitle="Explore the creative works and design solutions from our graphic design students"
+        projects={[
+          {
+            title: "Brand Identity System",
+            description: "Complete brand identity including logo, typography, and application guidelines",
+            imageUrl: "https://images.unsplash.com/photo-1545670723-196ed0954986?fit=crop&w=600&h=400",
+            category: "Branding"
+          },
+          {
+            title: "Editorial Design",
+            description: "Magazine layout and typographic design showcasing visual hierarchy",
+            imageUrl: "https://images.unsplash.com/photo-1574492543179-135638a28ecf?fit=crop&w=600&h=400",
+            category: "Editorial"
+          },
+          {
+            title: "Packaging Design",
+            description: "Sustainable packaging solution with innovative structural design",
+            imageUrl: "https://images.unsplash.com/photo-1541613569553-332a2574a508?fit=crop&w=600&h=400",
+            category: "Packaging"
+          },
+          {
+            title: "Digital Illustration Series",
+            description: "Set of conceptual illustrations for social awareness campaign",
+            imageUrl: "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?fit=crop&w=600&h=400",
+            category: "Illustration"
+          }
+        ]}
+      />
 
       {/* Faculty Section */}
       <FacultySection />
@@ -650,4 +649,24 @@ const ProgramGraphicDesign = () => {
       <section className="py-16 bg-bsd-light-gray" id="enquiry-form">
         <div className="container mx-auto px-6 md:px-8">
           <RevealSection>
-            <div className="text-center max-w-3xl mx-auto mb-
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <Badge variant="bsdOrange" className="mb-4">APPLY NOW</Badge>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
+                Begin Your Creative Journey
+              </h2>
+              <p className="mt-4 text-foreground/70">
+                Take the first step toward your career in graphic design by submitting an enquiry below.
+              </p>
+            </div>
+          </RevealSection>
+          
+          <EnquiryFormSection />
+        </div>
+      </section>
+
+      <Footer />
+    </>
+  );
+};
+
+export default ProgramGraphicDesign;
