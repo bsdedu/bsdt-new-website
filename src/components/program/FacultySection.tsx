@@ -16,10 +16,13 @@ type FacultyMember = {
 export const FacultySection: React.FC = () => {
   const location = useLocation();
   const isAnimationProgram = location.pathname.includes('animation-game-design');
+  const isComputerScienceProgram = location.pathname.includes('bsc-cs-analytics-security');
   
   // Different faculty members based on program type
-  const facultyMembers: FacultyMember[] = isAnimationProgram 
-    ? [
+  let facultyMembers: FacultyMember[] = [];
+  
+  if (isAnimationProgram) {
+    facultyMembers = [
       {
         name: "Dr. Anil Prakash",
         role: "Head of Animation Department",
@@ -38,8 +41,30 @@ export const FacultySection: React.FC = () => {
         bio: "Graduate of Vancouver Film School's Animation Program with specialization in character animation. 8+ years of industry experience in character rigging and animation. Has worked on animated features for Disney and Sony Pictures Animation, bringing characters to life through compelling motion.",
         imageUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?fit=crop&w=300&h=300",
       },
-    ]
-    : [
+    ];
+  } else if (isComputerScienceProgram) {
+    facultyMembers = [
+      {
+        name: "Dr. Priya Sharma",
+        role: "Head of Computer Science Department",
+        bio: "Ph.D. in Computer Science from IIT Delhi with specialization in Machine Learning and AI. 15+ years of academic and research experience with contributions to numerous international journals. Previously led AI research teams at IBM Research and Microsoft Research India.",
+        imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?fit=crop&w=300&h=300",
+      },
+      {
+        name: "Prof. Rajiv Mehta",
+        role: "Cyber Security Specialist",
+        bio: "M.Tech in Information Security from IIIT Hyderabad and CISSP certified. 12+ years of industry experience in cyber security, having worked with major financial institutions and government agencies on critical infrastructure security. Former security consultant at Deloitte and Ernst & Young.",
+        imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=300&h=300",
+      },
+      {
+        name: "Dr. Ananya Gupta",
+        role: "Data Analytics Faculty",
+        bio: "Ph.D. in Statistical Computing from Carnegie Mellon University. Expert in Big Data technologies and predictive analytics with extensive experience in both academic research and industry applications. Has published research on data mining techniques and led data science teams at Amazon and Flipkart.",
+        imageUrl: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?fit=crop&w=300&h=300",
+      },
+    ];
+  } else {
+    facultyMembers = [
       {
         name: "Dipti Dineshwar",
         role: "Senior Design Faculty",
@@ -59,6 +84,7 @@ export const FacultySection: React.FC = () => {
         imageUrl: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?fit=crop&w=300&h=300",
       },
     ];
+  }
 
   return (
     <section className="py-16 bg-white">

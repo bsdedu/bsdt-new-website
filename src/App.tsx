@@ -12,6 +12,7 @@ import LeadershipGovernance from "./pages/LeadershipGovernance";
 import ProgramInteriorDesign from "./pages/ProgramInteriorDesign";
 import ProgramGraphicDesign from "./pages/ProgramGraphicDesign";
 import ProgramAnimationGameDesign from "./pages/ProgramAnimationGameDesign";
+import ProgramComputerScience from "./pages/ProgramComputerScience";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
             <Route path="/programs/bsc-interior-design" element={<ProgramInteriorDesign />} />
             <Route path="/programs/bva-graphic-design" element={<ProgramGraphicDesign />} />
             <Route path="/programs/bva-animation-game-design" element={<ProgramAnimationGameDesign />} />
+            <Route path="/programs/bsc-cs-analytics-security" element={<ProgramComputerScience />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
