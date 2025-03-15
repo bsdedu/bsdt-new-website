@@ -15,6 +15,7 @@ import { StudentWorksGallery } from "@/components/program/StudentWorksGallery";
 import { AnimationCurriculumSection } from "@/components/program/AnimationCurriculumSection";
 import { AnimationStudioSection } from "@/components/program/AnimationStudioSection";
 import { EligibilitySection } from "@/components/program/EligibilitySection";
+import { DynamicBackground } from "@/components/ui-elements/DynamicBackground";
 
 const ProgramAnimationGameDesign = () => {
   return (
@@ -26,14 +27,8 @@ const ProgramAnimationGameDesign = () => {
 
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="relative pt-20 md:pt-28 pb-16 md:pb-20 overflow-hidden bg-bsd-light-gray">
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-radial from-white to-transparent opacity-70"></div>
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-bsd-orange/5 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-bsd-gray/5 blur-3xl"></div>
-        </div>
-
+      {/* Hero Section with dynamic background */}
+      <DynamicBackground type="blobs" className="pt-20 md:pt-28 pb-16 md:pb-20 overflow-hidden bg-bsd-light-gray">
         <div className="container mx-auto px-6 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <RevealSection>
@@ -92,12 +87,12 @@ const ProgramAnimationGameDesign = () => {
             </RevealSection>
           </div>
 
-          {/* Quick stats */}
+          {/* Quick stats with animated cards */}
           <RevealSection delay={200}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
-              <Card className="border-0 bg-white/80 backdrop-blur">
+              <Card className="border-0 bg-white/80 backdrop-blur group hover:bg-white/90 transition-all duration-300">
                 <CardContent className="p-6 flex flex-col items-center text-center">
-                  <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-3">
+                  <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
                     <Users className="w-6 h-6 text-bsd-orange" />
                   </div>
                   <h3 className="text-3xl font-bold text-bsd-gray">60+</h3>
@@ -105,9 +100,9 @@ const ProgramAnimationGameDesign = () => {
                 </CardContent>
               </Card>
               
-              <Card className="border-0 bg-white/80 backdrop-blur">
+              <Card className="border-0 bg-white/80 backdrop-blur group hover:bg-white/90 transition-all duration-300">
                 <CardContent className="p-6 flex flex-col items-center text-center">
-                  <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-3">
+                  <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
                     <BriefcaseBusiness className="w-6 h-6 text-bsd-orange" />
                   </div>
                   <h3 className="text-3xl font-bold text-bsd-gray">92%</h3>
@@ -115,9 +110,9 @@ const ProgramAnimationGameDesign = () => {
                 </CardContent>
               </Card>
               
-              <Card className="border-0 bg-white/80 backdrop-blur">
+              <Card className="border-0 bg-white/80 backdrop-blur group hover:bg-white/90 transition-all duration-300">
                 <CardContent className="p-6 flex flex-col items-center text-center">
-                  <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-3">
+                  <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
                     <Award className="w-6 h-6 text-bsd-orange" />
                   </div>
                   <h3 className="text-3xl font-bold text-bsd-gray">15+</h3>
@@ -125,9 +120,9 @@ const ProgramAnimationGameDesign = () => {
                 </CardContent>
               </Card>
               
-              <Card className="border-0 bg-white/80 backdrop-blur">
+              <Card className="border-0 bg-white/80 backdrop-blur group hover:bg-white/90 transition-all duration-300">
                 <CardContent className="p-6 flex flex-col items-center text-center">
-                  <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-3">
+                  <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
                     <Building2 className="w-6 h-6 text-bsd-orange" />
                   </div>
                   <h3 className="text-3xl font-bold text-bsd-gray">25+</h3>
@@ -137,25 +132,33 @@ const ProgramAnimationGameDesign = () => {
             </div>
           </RevealSection>
         </div>
-      </section>
+      </DynamicBackground>
 
-      {/* Program Overview */}
-      <AnimationCurriculumSection />
+      {/* Program Overview with particles background */}
+      <DynamicBackground type="particles">
+        <AnimationCurriculumSection />
+      </DynamicBackground>
 
       {/* Student Works Gallery */}
       <StudentWorksGallery />
 
-      {/* Faculty Section */}
-      <FacultySection />
+      {/* Faculty Section with gradient background */}
+      <DynamicBackground type="gradient">
+        <FacultySection />
+      </DynamicBackground>
       
       {/* BSD Studio Section */}
-      <AnimationStudioSection />
+      <DynamicBackground type="waves">
+        <AnimationStudioSection />
+      </DynamicBackground>
 
       {/* Eligibility & Admission Section */}
       <EligibilitySection />
 
       {/* Enquiry Form Section */}
-      <EnquiryFormSection />
+      <DynamicBackground type="blobs" colors={['bg-bsd-gray/10', 'bg-bsd-orange/10']}>
+        <EnquiryFormSection />
+      </DynamicBackground>
       
       {/* Footer */}
       <Footer />
