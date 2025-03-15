@@ -14,6 +14,8 @@ import { EnquiryFormSection } from "@/components/home/EnquiryFormSection";
 import { ApplicationDeadline } from "@/components/program/ApplicationDeadline";
 import { FacultySection } from "@/components/program/FacultySection";
 import { StudentWorksGallery } from "@/components/program/StudentWorksGallery";
+import { ProgramHero } from "@/components/program/ProgramHero";
+import { CareerOutcomes } from "@/components/program/CareerOutcomes";
 
 const ProgramGraphicDesign = () => {
   return (
@@ -26,81 +28,17 @@ const ProgramGraphicDesign = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-20 md:pt-28 pb-16 md:pb-20 overflow-hidden bg-bsd-light-gray">
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-radial from-white to-transparent opacity-70"></div>
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-bsd-orange/5 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-bsd-gray/5 blur-3xl"></div>
-        </div>
+      <ProgramHero 
+        title="B.Sc Graphic Design"
+        subtitle="Develop your creative skills in visual communication, branding, and digital design with our comprehensive Graphic Design program."
+        backgroundImage="/lovable-uploads/95442d0d-92a2-407b-8bf3-691152ab5174.png"
+      />
 
+      {/* Quick stats */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-6 md:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-            <RevealSection>
-              <div className="space-y-6">
-                <Badge variant="bsdOrange" className="mb-2">3-YEAR UNDERGRADUATE PROGRAM</Badge>
-                <h1 className="text-4xl md:text-5xl font-display font-bold text-bsd-gray leading-tight">
-                  B.Sc Graphic Design
-                </h1>
-                <p className="text-lg text-foreground/80">
-                  Develop your creative skills in visual communication, branding, and digital design with our comprehensive Graphic Design program.
-                </p>
-                <div className="flex flex-wrap gap-4 pt-4">
-                  <AnimatedButton asChild>
-                    <a href="#enquiry-form" className="hover:no-underline">Apply Now</a>
-                  </AnimatedButton>
-                  <AnimatedButton variant="outline" asChild>
-                    <a href="#enquiry-form" className="hover:no-underline">
-                      Download Brochure
-                    </a>
-                  </AnimatedButton>
-                  <Link to="/admissions" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md h-10 px-4 py-2 text-sm border border-input bg-background hover:bg-accent hover:text-accent-foreground transition-colors">
-                    Learn About Admissions
-                  </Link>
-                </div>
-
-                <div className="flex flex-wrap gap-x-8 gap-y-4 pt-4 text-sm text-foreground/70">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4 text-bsd-orange" />
-                    <span>3 Years Duration</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <GraduationCap className="w-4 h-4 text-bsd-orange" />
-                    <span>Bengaluru North University</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <BookOpen className="w-4 h-4 text-bsd-orange" />
-                    <span>Next Batch: June 2024</span>
-                  </div>
-                </div>
-                
-                {/* Application Deadline Component */}
-                <ApplicationDeadline 
-                  lastDate="August 15, 2024" 
-                  startDate="January 15, 2024" 
-                  seatsAvailable={60}
-                />
-              </div>
-            </RevealSection>
-
-            <RevealSection direction="left">
-              <div className="relative rounded-2xl overflow-hidden shadow-lg h-[400px]">
-                <img 
-                  src="https://images.unsplash.com/photo-1518770660439-464ef5284de3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80" 
-                  alt="Graphic Design Studio" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                  <div className="absolute bottom-0 left-0 p-6">
-                    <p className="text-white font-medium text-lg">Master Visual Communication and Digital Design</p>
-                  </div>
-                </div>
-              </div>
-            </RevealSection>
-          </div>
-
-          {/* Quick stats */}
           <RevealSection delay={200}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
               <Card className="border-0 bg-white/80 backdrop-blur">
                 <CardContent className="p-6 flex flex-col items-center text-center">
                   <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-3">
@@ -623,4 +561,93 @@ const ProgramGraphicDesign = () => {
       <section className="py-16 bg-bsd-light-gray">
         <div className="container mx-auto px-6 md:px-8">
           <RevealSection>
-            <div className="
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <Badge variant="bsdOrange" className="mb-4">ELIGIBILITY & ADMISSION</Badge>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
+                Join Our Graphic Design Program
+              </h2>
+              <p className="mt-4 text-foreground/70">
+                Find out if you meet the eligibility criteria and learn about our admission process.
+              </p>
+            </div>
+          </RevealSection>
+
+          <RevealSection delay={100}>
+            <Accordion type="single" collapsible className="w-full max-w-4xl mx-auto">
+              <AccordionItem value="eligibility">
+                <AccordionTrigger>Eligibility Criteria</AccordionTrigger>
+                <AccordionContent>
+                  <ul className="list-disc pl-5 text-foreground/70">
+                    <li>Completed 10+2 or equivalent from a recognized board</li>
+                    <li>Minimum 50% aggregate marks in any stream</li>
+                    <li>Creative aptitude and interest in design</li>
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="admissionProcess">
+                <AccordionTrigger>Admission Process</AccordionTrigger>
+                <AccordionContent>
+                  <ul className="list-decimal pl-5 text-foreground/70">
+                    <li>Fill out the online application form</li>
+                    <li>Submit required documents (mark sheets, ID proof, etc.)</li>
+                    <li>Attend a personal interview</li>
+                    <li>Merit-based selection</li>
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="feesAndScholarships">
+                <AccordionTrigger>Fees & Scholarships</AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-foreground/70">
+                    Detailed fee structure and scholarship options are available on the admissions page.
+                  </p>
+                  <AnimatedButton asChild>
+                    <Link to="/admissions" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md h-10 px-4 py-2 text-sm border border-input bg-background hover:bg-accent hover:text-accent-foreground transition-colors">
+                      Learn More
+                    </Link>
+                  </AnimatedButton>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </RevealSection>
+        </div>
+      </section>
+
+      {/* Career Outcomes */}
+      <CareerOutcomes
+        title="Career Opportunities in Graphic Design"
+        careers={[
+          {
+            title: "Graphic Designer",
+            description: "Create visual concepts for various media including branding, marketing materials, websites, and publications."
+          },
+          {
+            title: "UI/UX Designer",
+            description: "Design user interfaces and experiences for websites, mobile apps, and digital products."
+          },
+          {
+            title: "Art Director",
+            description: "Oversee visual style and creative direction for design projects and marketing campaigns."
+          },
+          {
+            title: "Brand Identity Designer",
+            description: "Develop comprehensive brand identities including logos, typography, and visual guidelines."
+          },
+          {
+            title: "Packaging Designer",
+            description: "Create innovative packaging solutions that combine functionality with visual appeal."
+          },
+          {
+            title: "Motion Graphic Designer",
+            description: "Design animated graphics for web, video, television, and other digital platforms."
+          }
+        ]}
+      />
+
+      {/* Application form section */}
+      <section className="py-16 bg-bsd-light-gray" id="enquiry-form">
+        <div className="container mx-auto px-6 md:px-8">
+          <RevealSection>
+            <div className="text-center max-w-3xl mx-auto mb-

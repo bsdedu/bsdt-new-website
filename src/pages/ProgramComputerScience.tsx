@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -14,6 +15,8 @@ import { EnquiryFormSection } from "@/components/home/EnquiryFormSection";
 import { ApplicationDeadline } from "@/components/program/ApplicationDeadline";
 import { FacultySection } from "@/components/program/FacultySection";
 import { StudentWorksGallery } from "@/components/program/StudentWorksGallery";
+import { ProgramHero } from "@/components/program/ProgramHero";
+import { CareerOutcomes } from "@/components/program/CareerOutcomes";
 
 const ProgramComputerScience = () => {
   return (
@@ -26,81 +29,17 @@ const ProgramComputerScience = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-20 md:pt-28 pb-16 md:pb-20 overflow-hidden bg-bsd-light-gray">
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-radial from-white to-transparent opacity-70"></div>
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-bsd-orange/5 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-bsd-gray/5 blur-3xl"></div>
-        </div>
+      <ProgramHero 
+        title="B.Sc Computer Science"
+        subtitle="Specialize in Data Analytics or Cyber Security with our comprehensive Computer Science program. Build the skills needed to address evolving technological challenges in today's digital world."
+        backgroundImage="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+      />
 
+      {/* Quick stats */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-6 md:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-            <RevealSection>
-              <div className="space-y-6">
-                <Badge variant="bsdOrange" className="mb-2">3-YEAR UNDERGRADUATE PROGRAM</Badge>
-                <h1 className="text-4xl md:text-5xl font-display font-bold text-bsd-gray leading-tight">
-                  B.Sc Computer Science
-                </h1>
-                <p className="text-lg text-foreground/80">
-                  Specialize in Data Analytics or Cyber Security with our comprehensive Computer Science program. Build the skills needed to address evolving technological challenges in today's digital world.
-                </p>
-                <div className="flex flex-wrap gap-4 pt-4">
-                  <AnimatedButton asChild>
-                    <a href="#enquiry-form" className="hover:no-underline">Apply Now</a>
-                  </AnimatedButton>
-                  <AnimatedButton variant="outline" asChild>
-                    <a href="#enquiry-form" className="hover:no-underline">
-                      Download Brochure
-                    </a>
-                  </AnimatedButton>
-                  <Link to="/admissions" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md h-10 px-4 py-2 text-sm border border-input bg-background hover:bg-accent hover:text-accent-foreground transition-colors">
-                    Learn About Admissions
-                  </Link>
-                </div>
-
-                <div className="flex flex-wrap gap-x-8 gap-y-4 pt-4 text-sm text-foreground/70">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4 text-bsd-orange" />
-                    <span>3 Years Duration</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <GraduationCap className="w-4 h-4 text-bsd-orange" />
-                    <span>Bengaluru North University</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <BookOpen className="w-4 h-4 text-bsd-orange" />
-                    <span>Next Batch: June 2024</span>
-                  </div>
-                </div>
-                
-                {/* Application Deadline Component */}
-                <ApplicationDeadline 
-                  lastDate="August 15, 2025" 
-                  startDate="January 15, 2025" 
-                  seatsAvailable={60}
-                />
-              </div>
-            </RevealSection>
-
-            <RevealSection direction="left">
-              <div className="relative rounded-2xl overflow-hidden shadow-lg h-[400px]">
-                <img 
-                  src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80" 
-                  alt="Computer Science Lab" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                  <div className="absolute bottom-0 left-0 p-6">
-                    <p className="text-white font-medium text-lg">Specialize in Data Analytics or Cyber Security</p>
-                  </div>
-                </div>
-              </div>
-            </RevealSection>
-          </div>
-
-          {/* Quick stats */}
           <RevealSection delay={200}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
               <Card className="border-0 bg-white/80 backdrop-blur">
                 <CardContent className="p-6 flex flex-col items-center text-center">
                   <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-3">
@@ -527,35 +466,35 @@ const ProgramComputerScience = () => {
 
       {/* Student Works Gallery */}
       <StudentWorksGallery 
-  title="Computer Science Student Projects"
-  subtitle="Explore innovative projects in data analytics and cyber security from our computer science students"
-  projects={[
-    {
-      title: "Network Security Analysis Tool",
-      description: "Tool for identifying and visualizing network vulnerabilities and potential threats",
-      imageUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?fit=crop&w=600&h=400",
-      category: "Cyber Security"
-    },
-    {
-      title: "Predictive Analytics Dashboard",
-      description: "Interactive visualization platform for business intelligence and forecasting",
-      imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?fit=crop&w=600&h=400",
-      category: "Data Analytics"
-    },
-    {
-      title: "Intrusion Detection System",
-      description: "Real-time monitoring system that identifies suspicious patterns in network traffic",
-      imageUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3?fit=crop&w=600&h=400",
-      category: "Cyber Security"
-    },
-    {
-      title: "Consumer Behavior Analysis Platform",
-      description: "Big data solution that processes and analyzes customer interaction patterns",
-      imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?fit=crop&w=600&h=400",
-      category: "Data Analytics"
-    }
-  ]}
-/>
+        title="Computer Science Student Projects"
+        subtitle="Explore innovative projects in data analytics and cyber security from our computer science students"
+        projects={[
+          {
+            title: "Network Security Analysis Tool",
+            description: "Tool for identifying and visualizing network vulnerabilities and potential threats",
+            imageUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?fit=crop&w=600&h=400",
+            category: "Cyber Security"
+          },
+          {
+            title: "Predictive Analytics Dashboard",
+            description: "Interactive visualization platform for business intelligence and forecasting",
+            imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?fit=crop&w=600&h=400",
+            category: "Data Analytics"
+          },
+          {
+            title: "Intrusion Detection System",
+            description: "Real-time monitoring system that identifies suspicious patterns in network traffic",
+            imageUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3?fit=crop&w=600&h=400",
+            category: "Cyber Security"
+          },
+          {
+            title: "Consumer Behavior Analysis Platform",
+            description: "Big data solution that processes and analyzes customer interaction patterns",
+            imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?fit=crop&w=600&h=400",
+            category: "Data Analytics"
+          }
+        ]}
+      />
 
       {/* Faculty Section */}
       <FacultySection />
@@ -610,4 +549,98 @@ const ProgramComputerScience = () => {
                   
                   <div className="flex items-start space-x-3">
                     <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-4 h
+                      <Check className="w-4 h-4 text-bsd-orange" />
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-bsd-gray">Mentorship from Industry Professionals</h4>
+                      <p className="text-sm text-foreground/70">Learn directly from experienced data scientists and security experts</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-4 h-4 text-bsd-orange" />
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-bsd-gray">Build a Technical Portfolio</h4>
+                      <p className="text-sm text-foreground/70">Graduate with a portfolio of actual industry projects</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-4 h-4 text-bsd-orange" />
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-bsd-gray">Network with Industry Partners</h4>
+                      <p className="text-sm text-foreground/70">Develop connections with potential employers while still studying</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="pt-4">
+                  <AnimatedButton asChild>
+                    <a href="#enquiry-form" className="hover:no-underline">Apply Now</a>
+                  </AnimatedButton>
+                </div>
+              </div>
+            </div>
+          </RevealSection>
+        </div>
+      </section>
+
+      {/* Career Outcomes */}
+      <CareerOutcomes
+        title="Career Opportunities in Computer Science"
+        careers={[
+          {
+            title: "Data Analyst",
+            description: "Analyze complex data sets to identify patterns and insights that help businesses make better decisions."
+          },
+          {
+            title: "Security Analyst",
+            description: "Monitor networks for security breaches and implement measures to protect an organization's IT infrastructure."
+          },
+          {
+            title: "Software Developer",
+            description: "Design and build applications for various platforms using programming languages and development tools."
+          },
+          {
+            title: "Database Administrator",
+            description: "Manage and organize a company's database systems to ensure data integrity, security, and availability."
+          },
+          {
+            title: "Systems Analyst",
+            description: "Study an organization's computer systems and procedures, designing solutions to help operate more efficiently."
+          },
+          {
+            title: "Machine Learning Engineer",
+            description: "Develop systems and applications that utilize machine learning algorithms and artificial intelligence."
+          }
+        ]}
+      />
+
+      {/* Application form section */}
+      <section className="py-16 bg-bsd-light-gray" id="enquiry-form">
+        <div className="container mx-auto px-6 md:px-8">
+          <RevealSection>
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <Badge variant="bsdOrange" className="mb-4">APPLY NOW</Badge>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
+                Begin Your Journey in Computer Science
+              </h2>
+              <p className="mt-4 text-foreground/70">
+                Take the first step toward a rewarding career in data analytics or cyber security.
+              </p>
+            </div>
+          </RevealSection>
+          <EnquiryFormSection />
+        </div>
+      </section>
+
+      <Footer />
+    </>
+  );
+};
+
+export default ProgramComputerScience;
