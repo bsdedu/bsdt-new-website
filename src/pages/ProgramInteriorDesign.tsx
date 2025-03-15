@@ -1,26 +1,28 @@
 import React from 'react';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { Helmet } from 'react-helmet-async';
-import { RevealSection } from "@/components/ui-elements/RevealSection";
-import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent, CardHeader } from "@/components/ui-elements/Card";
-import { AnimatedButton } from "@/components/ui-elements/AnimatedButton";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Check, BookOpen, Calendar, GraduationCap, Award, BriefcaseBusiness, Building2, Lightbulb, Users, Ruler2, PaintBrush } from "lucide-react";
-import { Link } from "react-router-dom";
 import { EnquiryFormSection } from "@/components/home/EnquiryFormSection";
-import { ApplicationDeadline } from "@/components/program/ApplicationDeadline";
-import { FacultySection } from "@/components/program/FacultySection";
+import { ProgramHero } from "@/components/program/ProgramHero";
+import { CareerOutcomes } from "@/components/program/CareerOutcomes";
 import { StudentWorksGallery } from "@/components/program/StudentWorksGallery";
+import { FacultySection } from "@/components/program/FacultySection";
+import { AnimatedButton } from "@/components/ui-elements/AnimatedButton";
+import { Badge } from "@/components/ui/badge";
+import { RevealSection } from "@/components/ui-elements/RevealSection";
+import { Check, BookOpen, Calendar, GraduationCap, Award, BriefcaseBusiness, Building2, Lightbulb, Users, Shield, Ruler, Paintbrush } from "lucide-react";
+
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ApplicationDeadline } from "@/components/program/ApplicationDeadline";
 
 const ProgramInteriorDesign = () => {
+  const programName = "B.Sc. Interior Design";
+
   return (
     <>
       <Helmet>
-        <title>B.Sc Interior Design | BSDT</title>
-        <meta name="description" content="Transform spaces with a B.Sc degree in Interior Design at Bangalore School of Design & Technology (BSDT). Learn from industry experts and create innovative designs." />
+        <title>{programName} | Bangalore School of Design & Technology</title>
+        <meta name="description" content="Study B.Sc. Interior Design at Bangalore School of Design & Technology. Develop skills in space planning, design principles, and sustainable design practices." />
       </Helmet>
 
       <Navbar />
@@ -39,10 +41,10 @@ const ProgramInteriorDesign = () => {
               <div className="space-y-6">
                 <Badge variant="bsdOrange" className="mb-2">3-YEAR UNDERGRADUATE PROGRAM</Badge>
                 <h1 className="text-4xl md:text-5xl font-display font-bold text-bsd-gray leading-tight">
-                  B.Sc Interior Design
+                  {programName}
                 </h1>
                 <p className="text-lg text-foreground/80">
-                  Transform your passion for design into a rewarding career. Learn to create innovative and functional spaces with our comprehensive Interior Design program.
+                  A comprehensive program developing skills in space planning, design principles, and sustainable design practices.
                 </p>
                 <div className="flex flex-wrap gap-4 pt-4">
                   <AnimatedButton asChild>
@@ -72,26 +74,26 @@ const ProgramInteriorDesign = () => {
                     <span>Next Batch: June 2024</span>
                   </div>
                 </div>
-                
+
                 {/* Application Deadline Component */}
-                <ApplicationDeadline 
-                  lastDate="August 15, 2024" 
-                  startDate="January 15, 2024" 
-                  seatsAvailable={60}
+                <ApplicationDeadline
+                  lastDate="August 15, 2024"
+                  startDate="January 15, 2024"
+                  seatsAvailable={40}
                 />
               </div>
             </RevealSection>
 
             <RevealSection direction="left">
               <div className="relative rounded-2xl overflow-hidden shadow-lg h-[400px]">
-                <img 
-                  src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
-                  alt="Interior Design Studio" 
+                <img
+                  src="/lovable-uploads/09999799-e964-4091-894d-699959382af0.png"
+                  alt="B.Sc. Interior Design Program"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
                   <div className="absolute bottom-0 left-0 p-6">
-                    <p className="text-white font-medium text-lg">Design Your Future in Interior Design</p>
+                    <p className="text-white font-medium text-lg">Transform Spaces with Creative Design</p>
                   </div>
                 </div>
               </div>
@@ -101,45 +103,45 @@ const ProgramInteriorDesign = () => {
           {/* Quick stats */}
           <RevealSection delay={200}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
-              <Card className="border-0 bg-white/80 backdrop-blur">
-                <CardContent className="p-6 flex flex-col items-center text-center">
+              <div className="border-0 bg-white/80 backdrop-blur rounded-2xl overflow-hidden shadow-sm">
+                <div className="p-6 flex flex-col items-center text-center">
                   <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-3">
                     <Users className="w-6 h-6 text-bsd-orange" />
                   </div>
-                  <h3 className="text-3xl font-bold text-bsd-gray">60+</h3>
+                  <h3 className="text-3xl font-bold text-bsd-gray">40+</h3>
                   <p className="text-sm text-foreground/70">Annual Intake</p>
-                </CardContent>
-              </Card>
-              
-              <Card className="border-0 bg-white/80 backdrop-blur">
-                <CardContent className="p-6 flex flex-col items-center text-center">
+                </div>
+              </div>
+
+              <div className="border-0 bg-white/80 backdrop-blur rounded-2xl overflow-hidden shadow-sm">
+                <div className="p-6 flex flex-col items-center text-center">
                   <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-3">
                     <BriefcaseBusiness className="w-6 h-6 text-bsd-orange" />
                   </div>
-                  <h3 className="text-3xl font-bold text-bsd-gray">95%</h3>
+                  <h3 className="text-3xl font-bold text-bsd-gray">90%</h3>
                   <p className="text-sm text-foreground/70">Placement Rate</p>
-                </CardContent>
-              </Card>
-              
-              <Card className="border-0 bg-white/80 backdrop-blur">
-                <CardContent className="p-6 flex flex-col items-center text-center">
+                </div>
+              </div>
+
+              <div className="border-0 bg-white/80 backdrop-blur rounded-2xl overflow-hidden shadow-sm">
+                <div className="p-6 flex flex-col items-center text-center">
                   <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-3">
                     <Award className="w-6 h-6 text-bsd-orange" />
                   </div>
-                  <h3 className="text-3xl font-bold text-bsd-gray">15+</h3>
+                  <h3 className="text-3xl font-bold text-bsd-gray">10+</h3>
                   <p className="text-sm text-foreground/70">Years Experience</p>
-                </CardContent>
-              </Card>
-              
-              <Card className="border-0 bg-white/80 backdrop-blur">
-                <CardContent className="p-6 flex flex-col items-center text-center">
+                </div>
+              </div>
+
+              <div className="border-0 bg-white/80 backdrop-blur rounded-2xl overflow-hidden shadow-sm">
+                <div className="p-6 flex flex-col items-center text-center">
                   <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-3">
                     <Building2 className="w-6 h-6 text-bsd-orange" />
                   </div>
-                  <h3 className="text-3xl font-bold text-bsd-gray">40+</h3>
+                  <h3 className="text-3xl font-bold text-bsd-gray">30+</h3>
                   <p className="text-sm text-foreground/70">Industry Partners</p>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             </div>
           </RevealSection>
         </div>
@@ -155,353 +157,215 @@ const ProgramInteriorDesign = () => {
                 Transforming Spaces, Shaping Futures
               </h2>
               <p className="mt-4 text-foreground/70">
-                Our B.Sc Interior Design program combines creative vision with technical skills, preparing you to design innovative and functional spaces that enhance the quality of life.
+                Our B.Sc. Interior Design program is designed to equip you with the creative and technical skills needed to excel in the dynamic field of interior design.
               </p>
             </div>
           </RevealSection>
 
           <RevealSection delay={100}>
-            <Tabs defaultValue="curriculum" className="w-full">
-              <div className="flex justify-center mb-8">
-                <TabsList className="grid grid-cols-3 w-full max-w-2xl">
-                  <TabsTrigger value="curriculum">Curriculum</TabsTrigger>
-                  <TabsTrigger value="outcomes">Learning Outcomes</TabsTrigger>
-                  <TabsTrigger value="career">Career Opportunities</TabsTrigger>
-                </TabsList>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+              <div>
+                <h3 className="text-2xl font-semibold text-bsd-gray mb-6">Curriculum Highlights</h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Space Planning and Layout Design</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Design Principles and Elements</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Sustainable Design Practices</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                    <span>3D Modeling and Visualization</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Materials and Finishes</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Lighting Design</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Furniture Design</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Building Systems and Codes</span>
+                  </li>
+                </ul>
               </div>
-              
-              <TabsContent value="curriculum" className="mt-0">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <Card className="col-span-1 md:col-span-2">
-                    <CardHeader>
-                      <h3 className="text-xl font-semibold text-bsd-gray">Program Structure</h3>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-6">
-                        <p className="text-foreground/70">
-                          The B.Sc Interior Design program is a 3-year full-time undergraduate course divided into 6 semesters, with core design subjects and specialized electives.
-                        </p>
-                        
-                        <div className="space-y-4">
-                          <h4 className="font-medium text-bsd-gray">First Year: Foundation</h4>
-                          <ul className="space-y-2">
-                            <li className="flex items-start">
-                              <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Design Principles and Elements</span>
-                            </li>
-                            <li className="flex items-start">
-                              <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Graphics and Visualization</span>
-                            </li>
-                            <li className="flex items-start">
-                              <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>History of Interiors</span>
-                            </li>
-                            <li className="flex items-start">
-                              <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Materials and Construction</span>
-                            </li>
-                          </ul>
 
-                          <h4 className="font-medium text-bsd-gray">Second Year: Core Concepts</h4>
-                          <ul className="space-y-2">
-                            <li className="flex items-start">
-                              <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Space Planning and Ergonomics</span>
-                            </li>
-                            <li className="flex items-start">
-                              <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Lighting Design</span>
-                            </li>
-                            <li className="flex items-start">
-                              <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Furniture Design</span>
-                            </li>
-                            <li className="flex items-start">
-                              <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Sustainable Design</span>
-                            </li>
-                          </ul>
-
-                          <h4 className="font-medium text-bsd-gray">Third Year: Specialization</h4>
-                          <ul className="space-y-2">
-                            <li className="flex items-start">
-                              <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Residential Design</span>
-                            </li>
-                            <li className="flex items-start">
-                              <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Commercial Design</span>
-                            </li>
-                            <li className="flex items-start">
-                              <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Healthcare Design</span>
-                            </li>
-                            <li className="flex items-start">
-                              <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                              <span>Hospitality Design</span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="bg-bsd-orange/5 border-bsd-orange/20">
-                    <CardHeader>
-                      <h3 className="text-xl font-semibold text-bsd-gray">Program Highlights</h3>
-                    </CardHeader>
-                    <CardContent>
-                      <ul className="space-y-4">
-                        <li className="flex items-start">
-                          <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <Ruler2 className="w-4 h-4 text-bsd-orange" />
-                          </div>
-                          <div className="ml-3">
-                            <h4 className="font-medium text-bsd-gray">Studio-Based Learning</h4>
-                            <p className="text-sm text-foreground/70">Hands-on experience in design studios</p>
-                          </div>
-                        </li>
-                        
-                        <li className="flex items-start">
-                          <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <PaintBrush className="w-4 h-4 text-bsd-orange" />
-                          </div>
-                          <div className="ml-3">
-                            <h4 className="font-medium text-bsd-gray">Industry Exposure</h4>
-                            <p className="text-sm text-foreground/70">Internships with leading design firms</p>
-                          </div>
-                        </li>
-                        
-                        <li className="flex items-start">
-                          <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <Users className="w-4 h-4 text-bsd-orange" />
-                          </div>
-                          <div className="ml-3">
-                            <h4 className="font-medium text-bsd-gray">Expert Faculty</h4>
-                            <p className="text-sm text-foreground/70">Learn from experienced design professionals</p>
-                          </div>
-                        </li>
-                        
-                        <li className="flex items-start">
-                          <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <BriefcaseBusiness className="w-4 h-4 text-bsd-orange" />
-                          </div>
-                          <div className="ml-3">
-                            <h4 className="font-medium text-bsd-gray">Career-Focused Curriculum</h4>
-                            <p className="text-sm text-foreground/70">Develop skills for a successful design career</p>
-                          </div>
-                        </li>
-                        
-                        <li className="flex items-start">
-                          <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <Lightbulb className="w-4 h-4 text-bsd-orange" />
-                          </div>
-                          <div className="ml-3">
-                            <h4 className="font-medium text-bsd-gray">Design Innovation</h4>
-                            <p className="text-sm text-foreground/70">Explore the latest trends and technologies</p>
-                          </div>
-                        </li>
-                      </ul>
-                    </CardContent>
-                  </Card>
-                </div>
-              </TabsContent>
-              
-              <TabsContent value="outcomes" className="mt-0">
-                <Card>
-                  <CardHeader>
-                    <h3 className="text-xl font-semibold text-bsd-gray">Program Learning Outcomes</h3>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="space-y-4">
-                        <h4 className="font-medium text-bsd-gray">Knowledge & Understanding</h4>
-                        <ul className="space-y-2">
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Understand design principles and history</span>
-                          </li>
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Knowledge of materials and construction</span>
-                          </li>
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Awareness of sustainable design practices</span>
-                          </li>
-                        </ul>
-                      </div>
-                      
-                      <div className="space-y-4">
-                        <h4 className="font-medium text-bsd-gray">Skills & Abilities</h4>
-                        <ul className="space-y-2">
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Create design concepts and solutions</span>
-                          </li>
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Develop technical drawings and specifications</span>
-                          </li>
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Communicate design ideas effectively</span>
-                          </li>
-                        </ul>
-                      </div>
-                      
-                      <div className="space-y-4 md:col-span-2">
-                        <h4 className="font-medium text-bsd-gray">Professional Development</h4>
-                        <ul className="space-y-2 grid grid-cols-1 md:grid-cols-2 gap-4">
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Build a professional design portfolio</span>
-                          </li>
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Understand ethical and professional practices</span>
-                          </li>
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Collaborate in design teams</span>
-                          </li>
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Critical thinking and problem-solving</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </TabsContent>
-              
-              <TabsContent value="career" className="mt-0">
-                <Card>
-                  <CardHeader>
-                    <h3 className="text-xl font-semibold text-bsd-gray">Career Opportunities</h3>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                      <div className="space-y-4">
-                        <h4 className="font-medium text-bsd-gray">Design Roles</h4>
-                        <ul className="space-y-2">
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Interior Designer</span>
-                          </li>
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Space Planner</span>
-                          </li>
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Furniture Designer</span>
-                          </li>
-                        </ul>
-                      </div>
-                      
-                      <div className="space-y-4">
-                        <h4 className="font-medium text-bsd-gray">Specialized Fields</h4>
-                        <ul className="space-y-2">
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Residential Design</span>
-                          </li>
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Commercial Design</span>
-                          </li>
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Hospitality Design</span>
-                          </li>
-                        </ul>
-                      </div>
-                      
-                      <div className="space-y-4">
-                        <h4 className="font-medium text-bsd-gray">Related Industries</h4>
-                        <ul className="space-y-2">
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Architectural Firms</span>
-                          </li>
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Design Consultancies</span>
-                          </li>
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Real Estate Development</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    
-                    <div className="mt-8 p-6 bg-bsd-light-gray rounded-xl">
-                      <h4 className="font-medium text-bsd-gray mb-4">Industry Insights</h4>
-                      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="text-center p-4">
-                          <h5 className="text-3xl font-bold text-bsd-orange">₹3-10L</h5>
-                          <p className="text-sm text-foreground/70">Average Starting Salary</p>
-                        </div>
-                        <div className="text-center p-4">
-                          <h5 className="text-3xl font-bold text-bsd-orange">20%</h5>
-                          <p className="text-sm text-foreground/70">Industry Growth Rate</p>
-                        </div>
-                        <div className="text-center p-4">
-                          <h5 className="text-3xl font-bold text-bsd-orange">1M+</h5>
-                          <p className="text-sm text-foreground/70">Global Design Job Openings</p>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </TabsContent>
-            </Tabs>
+              <div>
+                <h3 className="text-2xl font-semibold text-bsd-gray mb-6">Program Benefits</h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Hands-on studio projects</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Industry-experienced faculty</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Internship opportunities</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Career guidance and placement assistance</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Access to design software and resources</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Networking opportunities with industry professionals</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Portfolio development</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </RevealSection>
         </div>
       </section>
 
+      {/* Career Outcomes Section */}
+      <CareerOutcomes
+        title="Career Opportunities"
+        subtitle="Graduates of our B.Sc. Interior Design program can pursue a variety of exciting career paths in the field of interior design."
+        careers={[
+          "Interior Designer",
+          "Space Planner",
+          "Design Consultant",
+          "3D Visualizer",
+          "Furniture Designer",
+          "Lighting Designer",
+          "Project Manager",
+          "Sustainable Design Specialist"
+        ]}
+      />
+
       {/* Student Works Gallery */}
-      
-      <StudentWorksGallery 
-  title="Interior Design Student Projects"
-  subtitle="Explore the innovative and creative interior design work from our talented students"
-  projects={[
-    {
-      title: "Contemporary Home Redesign",
-      description: "Complete interior transformation of a residential space focusing on functionality and aesthetics",
-      imageUrl: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?fit=crop&w=600&h=400",
-      category: "Residential"
-    },
-    {
-      title: "Sustainable Office Space",
-      description: "Eco-friendly commercial interior with biophilic design elements and sustainable materials",
-      imageUrl: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?fit=crop&w=600&h=400",
-      category: "Commercial"
-    },
-    {
-      title: "Restaurant Interior Concept",
-      description: "Immersive dining experience design with custom furniture and lighting solutions",
-      imageUrl: "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?fit=crop&w=600&h=400",
-      category: "Hospitality"
-    },
-    {
-      title: "Small Space Solutions",
-      description: "Innovative design for compact urban living with multifunctional furniture",
-      imageUrl: "https://images.unsplash.com/photo-1567016432779-094069958ea5?fit=crop&w=600&h=400",
-      category: "Residential"
-    }
-  ]}
-/>
+      <StudentWorksGallery
+        title="Interior Design Student Projects"
+        subtitle="Explore the innovative and creative projects designed by our talented interior design students."
+        projects={[
+          {
+            title: "Modern Living Room Design",
+            description: "A contemporary living room design with a focus on comfort and style.",
+            imageUrl: "https://images.unsplash.com/photo-1567016546063-3334bb652e6b?fit=crop&w=600&h=400",
+            category: "Residential Design"
+          },
+          {
+            title: "Sustainable Office Space",
+            description: "An eco-friendly office space design with sustainable materials and energy-efficient lighting.",
+            imageUrl: "https://images.unsplash.com/photo-1519710164239-da1231503ef4?fit=crop&w=600&h=400",
+            category: "Commercial Design"
+          },
+          {
+            title: "Cozy Bedroom Retreat",
+            description: "A relaxing bedroom design with soft colors and natural textures.",
+            imageUrl: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?fit=crop&w=600&h=400",
+            category: "Residential Design"
+          },
+          {
+            title: "Innovative Restaurant Interior",
+            description: "A unique restaurant interior design with creative lighting and furniture arrangements.",
+            imageUrl: "https://images.unsplash.com/photo-1521017432531-fbd92d768814?fit=crop&w=600&h=400",
+            category: "Commercial Design"
+          },
+          {
+            title: "Minimalist Kitchen Design",
+            description: "A clean and functional kitchen design with minimalist aesthetics.",
+            imageUrl: "https://images.unsplash.com/photo-1543328694-c9428680a587?fit=crop&w=600&h=400",
+            category: "Residential Design"
+          },
+          {
+            title: "Creative Workspace Design",
+            description: "An inspiring workspace design with ergonomic furniture and creative decor.",
+            imageUrl: "https://images.unsplash.com/photo-1505031441968-73a14026ea15?fit=crop&w=600&h=400",
+            category: "Commercial Design"
+          }
+        ]}
+      />
 
       {/* Faculty Section */}
       <FacultySection />
 
-      {/* Eligibility & Admission Section */}
+      {/* Interior Design Facilities Section */}
       <section className="py-16 bg-bsd-light-gray">
+        <div className="container mx-auto px-6 md:px-8">
+          <RevealSection>
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <Badge variant="bsdOrange" className="mb-4">FACILITIES</Badge>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
+                State-of-the-Art Design Studios
+              </h2>
+              <p className="mt-4 text-foreground/70">
+                Our campus features modern design studios equipped with the latest tools and technologies to support your creative journey.
+              </p>
+            </div>
+          </RevealSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+            <RevealSection delay={100}>
+              <div className="rounded-2xl overflow-hidden bg-white shadow-sm border border-border/40 transition-all duration-300 ease-out hover:shadow-md hover:-translate-y-1 hover:border-bsd-orange/20">
+                <div className="p-6">
+                  <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-4">
+                    <Ruler className="w-6 h-6 text-bsd-orange" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-bsd-gray mb-2">Design Studio</h3>
+                  <p className="text-foreground/70">
+                    Spacious studio with drafting tables, ergonomic chairs, and natural lighting for hands-on design work.
+                  </p>
+                </div>
+              </div>
+            </RevealSection>
+
+            <RevealSection delay={200}>
+              <div className="rounded-2xl overflow-hidden bg-white shadow-sm border border-border/40 transition-all duration-300 ease-out hover:shadow-md hover:-translate-y-1 hover:border-bsd-orange/20">
+                <div className="p-6">
+                  <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-4">
+                    <Paintbrush className="w-6 h-6 text-bsd-orange" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-bsd-gray mb-2">Materials Library</h3>
+                  <p className="text-foreground/70">
+                    Extensive collection of fabric swatches, material samples, and finish options for creating mood boards and material palettes.
+                  </p>
+                </div>
+              </div>
+            </RevealSection>
+
+            <RevealSection delay={300}>
+              <div className="rounded-2xl overflow-hidden bg-white shadow-sm border border-border/40 transition-all duration-300 ease-out hover:shadow-md hover:-translate-y-1 hover:border-bsd-orange/20">
+                <div className="p-6">
+                  <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-4">
+                    <Cpu className="w-6 h-6 text-bsd-orange" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-bsd-gray mb-2">Digital Design Lab</h3>
+                  <p className="text-foreground/70">
+                    High-performance computers with industry-standard design software for 3D modeling, rendering, and visualization.
+                  </p>
+                </div>
+              </div>
+            </RevealSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Eligibility & Admission Section */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-6 md:px-8">
           <RevealSection>
             <div className="text-center max-w-3xl mx-auto mb-12">
@@ -510,26 +374,24 @@ const ProgramInteriorDesign = () => {
                 Eligibility & Application Process
               </h2>
               <p className="mt-4 text-foreground/70">
-                Join our B.Sc Interior Design program and start your journey toward a creative and rewarding career.
+                Join our B.Sc. Interior Design program and start your journey toward a rewarding career in interior design.
               </p>
             </div>
           </RevealSection>
 
           <RevealSection delay={100}>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-              <Card>
-                <CardHeader>
+              <div className="rounded-2xl overflow-hidden bg-white shadow-sm border border-border/40 transition-all duration-300 ease-out hover:shadow-md hover:-translate-y-1 hover:border-bsd-orange/20">
+                <div className="p-6">
                   <h3 className="text-xl font-semibold text-bsd-gray">Eligibility Criteria</h3>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-4">
+                  <ul className="space-y-4 mt-4">
                     <li className="flex items-start">
                       <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                         <Check className="w-4 h-4 text-bsd-orange" />
                       </div>
                       <div className="ml-3">
                         <h4 className="font-medium text-bsd-gray">Academic Qualification</h4>
-                        <p className="text-sm text-foreground/70">10+2 (Higher Secondary) or equivalent with a minimum of 50% aggregate marks from any recognized board</p>
+                        <p className="text-sm text-foreground/70">10+2 (Higher Secondary) or equivalent with a minimum of 50% aggregate marks from any recognized board.</p>
                       </div>
                     </li>
                     <li className="flex items-start">
@@ -537,35 +399,33 @@ const ProgramInteriorDesign = () => {
                         <Check className="w-4 h-4 text-bsd-orange" />
                       </div>
                       <div className="ml-3">
-                        <h4 className="font-medium text-bsd-gray">Creative Aptitude</h4>
-                        <p className="text-sm text-foreground/70">Demonstrated interest or aptitude in design and creativity</p>
+                        <h4 className="font-medium text-bsd-gray">Selection Process</h4>
+                        <p className="text-sm text-foreground/70">Selection through BSDT Entrance Test and Personal Interview. Students with creative portfolios will be given preference.</p>
                       </div>
                     </li>
                   </ul>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
 
-              <Card>
-                <CardHeader>
+              <div className="rounded-2xl overflow-hidden bg-white shadow-sm border border-border/40 transition-all duration-300 ease-out hover:shadow-md hover:-translate-y-1 hover:border-bsd-orange/20">
+                <div className="p-6">
                   <h3 className="text-xl font-semibold text-bsd-gray">Application Process</h3>
-                </CardHeader>
-                <CardContent>
-                  <ol className="space-y-4 list-decimal list-inside">
+                  <ol className="space-y-4 list-decimal list-inside mt-4">
                     <li className="pl-2">
                       <span className="font-medium text-bsd-gray">Online Application:</span>
                       <p className="text-sm text-foreground/70 mt-1">Complete the online application form and pay the application fee.</p>
                     </li>
                     <li className="pl-2">
-                      <span className="font-medium text-bsd-gray">Design Portfolio:</span>
-                      <p className="text-sm text-foreground/70 mt-1">Submit a portfolio showcasing your creative work (optional but recommended).</p>
+                      <span className="font-medium text-bsd-gray">Entrance Examination:</span>
+                      <p className="text-sm text-foreground/70 mt-1">Take the BSDT entrance test which assesses aptitude, logical reasoning, and design knowledge.</p>
                     </li>
                     <li className="pl-2">
                       <span className="font-medium text-bsd-gray">Personal Interview:</span>
-                      <p className="text-sm text-foreground/70 mt-1">Shortlisted candidates are invited for a personal interview to assess their motivation and design aptitude.</p>
+                      <p className="text-sm text-foreground/70 mt-1">Shortlisted candidates are invited for a personal interview to assess their motivation and career goals.</p>
                     </li>
                     <li className="pl-2">
                       <span className="font-medium text-bsd-gray">Final Selection:</span>
-                      <p className="text-sm text-foreground/70 mt-1">Admission offers are made based on academic records, portfolio (if submitted), and interview performance.</p>
+                      <p className="text-sm text-foreground/70 mt-1">Admission offers are made based on entrance test performance, interview, and academic records.</p>
                     </li>
                   </ol>
 
@@ -574,8 +434,8 @@ const ProgramInteriorDesign = () => {
                       <a href="#enquiry-form" className="hover:no-underline">Apply Now</a>
                     </AnimatedButton>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             </div>
           </RevealSection>
         </div>
@@ -585,7 +445,7 @@ const ProgramInteriorDesign = () => {
       <div id="enquiry-form">
         <EnquiryFormSection />
       </div>
-      
+
       <Footer />
     </>
   );
