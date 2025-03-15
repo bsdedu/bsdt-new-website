@@ -13,6 +13,7 @@ import ProgramInteriorDesign from "./pages/ProgramInteriorDesign";
 import ProgramGraphicDesign from "./pages/ProgramGraphicDesign";
 import ProgramAnimationGameDesign from "./pages/ProgramAnimationGameDesign";
 import ProgramComputerScience from "./pages/ProgramComputerScience";
+import ProgramBCA from "./pages/ProgramBCA";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
             <Route path="/programs/bva-graphic-design" element={<ProgramGraphicDesign />} />
             <Route path="/programs/bva-animation-game-design" element={<ProgramAnimationGameDesign />} />
             <Route path="/programs/bsc-cs-analytics-security" element={<ProgramComputerScience />} />
+            <Route path="/programs/bca-uiux-aiml" element={<ProgramBCA />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

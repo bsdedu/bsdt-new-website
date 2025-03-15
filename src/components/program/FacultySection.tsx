@@ -17,6 +17,7 @@ export const FacultySection: React.FC = () => {
   const location = useLocation();
   const isAnimationProgram = location.pathname.includes('animation-game-design');
   const isComputerScienceProgram = location.pathname.includes('bsc-cs-analytics-security');
+  const isBCAProgram = location.pathname.includes('bca-uiux-aiml');
   
   // Different faculty members based on program type
   let facultyMembers: FacultyMember[] = [];
@@ -61,6 +62,27 @@ export const FacultySection: React.FC = () => {
         role: "Data Analytics Faculty",
         bio: "Ph.D. in Statistical Computing from Carnegie Mellon University. Expert in Big Data technologies and predictive analytics with extensive experience in both academic research and industry applications. Has published research on data mining techniques and led data science teams at Amazon and Flipkart.",
         imageUrl: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?fit=crop&w=300&h=300",
+      },
+    ];
+  } else if (isBCAProgram) {
+    facultyMembers = [
+      {
+        name: "Dr. Vikram Patel",
+        role: "Head of BCA Department",
+        bio: "Ph.D. in Human-Computer Interaction from Georgia Tech. 10+ years of experience in UI/UX research and teaching. Previously worked as a UX lead at Google and has published extensively on user-centered design methodologies. Specializes in accessibility and inclusive design.",
+        imageUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?fit=crop&w=300&h=300",
+      },
+      {
+        name: "Prof. Neha Gupta",
+        role: "UI/UX Design Faculty",
+        bio: "Master's in Interaction Design from NID Ahmedabad with expertise in design thinking and user research. Has worked with multiple startups and established companies as a design consultant. Her focus areas include mobile interfaces, service design, and design systems.",
+        imageUrl: "https://images.unsplash.com/photo-1580489944761-15a19d654956?fit=crop&w=300&h=300",
+      },
+      {
+        name: "Dr. Arjun Krishnan",
+        role: "AI & ML Specialist",
+        bio: "Ph.D. in Machine Learning from MIT with specialization in natural language processing. Has led AI research projects at Microsoft Research and contributed to open-source machine learning libraries. Author of several papers on neural networks and reinforcement learning.",
+        imageUrl: "https://images.unsplash.com/photo-1531891437562-4301cf35b7e4?fit=crop&w=300&h=300",
       },
     ];
   } else {
