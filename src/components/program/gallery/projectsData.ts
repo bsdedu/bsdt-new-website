@@ -1,3 +1,4 @@
+
 import { ProjectCategory, ProjectCollection } from './types';
 
 // Categories based on program type
@@ -146,7 +147,7 @@ export const bcaProjects: ProjectCollection = {
   ],
   webapps: [
     { id: 1, title: "Fitness Tracking App", student: "Vivek Nair", year: "2023", image: "/lovable-uploads/4d6b6f53-ef13-4f6a-82f1-34bc6295f8f6.png" },
-    { id: 2, title: "Recipe Sharing Platform", student: "Maya Desai", year: "2023", image: "/lovable-uploads/b6c8d2f5-ebe8-45b6-98da-bacea2355570.png" },
+    { id: 2, title: "Recipe Sharing Platform", student: "Maya Desai", year: "2023", image: "/lovable-uploads/5919811e-235d-43d1-8543-1b04dfd3112a.png" },
     { id: 3, title: "Student Collaboration Tool", student: "Rohit Malhotra", year: "2022", image: "/lovable-uploads/1cdeaa2b-5009-4a7d-b2fa-a912996acf79.png" },
     { id: 4, title: "Inventory Management System", student: "Ankit Shah", year: "2022", image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=800&auto=format&fit=crop" },
   ],
