@@ -21,7 +21,7 @@ export const HeroSection: React.FC = () => {
             <div className="space-y-6">
               <Badge variant="bsdOrange" className="mb-2">3-YEAR UNDERGRADUATE PROGRAM</Badge>
               <h1 className="text-4xl md:text-5xl font-display font-bold text-bsd-gray leading-tight">
-                BCA in UI/UX Design & AI/ML
+                BCA with UI/UX Design or AI/ML
               </h1>
               <p className="text-lg text-foreground/80">
                 Discover the perfect blend of technology and creativity. Master UI/UX design principles or dive into AI/ML algorithms to build future-ready applications and interfaces that transform user experiences.

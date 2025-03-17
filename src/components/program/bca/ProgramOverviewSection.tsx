@@ -20,7 +20,7 @@ export const ProgramOverviewSection: React.FC = () => {
               Technology Meets Creativity
             </h2>
             <p className="mt-4 text-foreground/70">
-              Our BCA program with dual specializations in UI/UX Design and AI/ML prepares students to excel in the rapidly evolving tech landscape, combining strong technical foundations with creative design thinking.
+              Our BCA program with specializations in UI/UX Design or AI/ML prepares students to excel in the rapidly evolving tech landscape, combining strong technical foundations with creative design thinking.
             </p>
           </div>
         </RevealSection>
@@ -45,11 +45,11 @@ export const ProgramOverviewSection: React.FC = () => {
                   <CardContent>
                     <div className="space-y-6">
                       <p className="text-foreground/70">
-                        The BCA program is a 3-year full-time undergraduate course divided into 6 semesters. Students choose their specialization at the end of the first year, with focused courses on either UI/UX Design or AI/ML in the second and third years.
+                        The BCA program is a 3-year full-time undergraduate course divided into 6 semesters. Students choose their specialization in the third year, focusing on either UI/UX Design or AI/ML.
                       </p>
                       
                       <div className="space-y-4">
-                        <h4 className="font-medium text-bsd-gray">First Year: Fundamentals</h4>
+                        <h4 className="font-medium text-bsd-gray">First & Second Year: Core Computer Applications</h4>
                         <ul className="space-y-2">
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
@@ -67,9 +67,25 @@ export const ProgramOverviewSection: React.FC = () => {
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
                             <span>Database Management Systems</span>
                           </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Object-Oriented Programming</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Software Engineering Principles</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Computer Networks</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Operating Systems</span>
+                          </li>
                         </ul>
 
-                        <h4 className="font-medium text-bsd-gray">Second Year: Specialization Core</h4>
+                        <h4 className="font-medium text-bsd-gray">Third Year: Specialization (Choose One)</h4>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                           <div>
                             <h5 className="font-medium text-bsd-orange mb-2">UI/UX Design Track</h5>
@@ -89,6 +105,22 @@ export const ProgramOverviewSection: React.FC = () => {
                               <li className="flex items-start">
                                 <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
                                 <span>Front-end Development</span>
+                              </li>
+                              <li className="flex items-start">
+                                <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                                <span>Advanced UI Frameworks</span>
+                              </li>
+                              <li className="flex items-start">
+                                <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                                <span>UX Testing & Analytics</span>
+                              </li>
+                              <li className="flex items-start">
+                                <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                                <span>Responsive Design Systems</span>
+                              </li>
+                              <li className="flex items-start">
+                                <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                                <span>UI/UX Capstone Project</span>
                               </li>
                             </ul>
                           </div>
@@ -111,36 +143,6 @@ export const ProgramOverviewSection: React.FC = () => {
                                 <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
                                 <span>Data Visualization</span>
                               </li>
-                            </ul>
-                          </div>
-                        </div>
-
-                        <h4 className="font-medium text-bsd-gray">Third Year: Advanced Applications</h4>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                          <div>
-                            <h5 className="font-medium text-bsd-orange mb-2">UI/UX Design Track</h5>
-                            <ul className="space-y-2">
-                              <li className="flex items-start">
-                                <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                                <span>Advanced UI Frameworks</span>
-                              </li>
-                              <li className="flex items-start">
-                                <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                                <span>UX Testing & Analytics</span>
-                              </li>
-                              <li className="flex items-start">
-                                <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                                <span>Responsive Design Systems</span>
-                              </li>
-                              <li className="flex items-start">
-                                <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                                <span>UI/UX Capstone Project</span>
-                              </li>
-                            </ul>
-                          </div>
-                          <div>
-                            <h5 className="font-medium text-bsd-orange mb-2">AI/ML Track</h5>
-                            <ul className="space-y-2">
                               <li className="flex items-start">
                                 <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
                                 <span>Deep Learning & Neural Networks</span>
@@ -176,8 +178,8 @@ export const ProgramOverviewSection: React.FC = () => {
                           <Code className="w-4 h-4 text-bsd-orange" />
                         </div>
                         <div className="ml-3">
-                          <h4 className="font-medium text-bsd-gray">Dual Specialization</h4>
-                          <p className="text-sm text-foreground/70">Focus on either UI/UX Design or AI/ML pathways</p>
+                          <h4 className="font-medium text-bsd-gray">Specialization Options</h4>
+                          <p className="text-sm text-foreground/70">Choose between UI/UX Design or AI/ML pathways</p>
                         </div>
                       </li>
                       
