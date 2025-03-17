@@ -18,15 +18,6 @@ export type NavStructure = {
 // Main navigation structure with nested menus
 export const navStructure: NavStructure[] = [
   {
-    name: 'About',
-    href: '#about',
-    type: 'dropdown',
-    items: [
-      { name: 'About BSDT', href: '/about-bsdt' },
-      { name: 'Leadership & Governance', href: '/leadership-governance' }
-    ]
-  },
-  {
     name: 'Programs',
     href: '#programs',
     type: 'megamenu',
@@ -78,6 +69,15 @@ export const navStructure: NavStructure[] = [
       { name: 'Sports Facility', href: '/campus-life/sports-facility' },
       { name: 'Events & Activities', href: '/campus-life/events-activities' },
       { name: 'Hostel & Transport', href: '/campus-life/hostel-transport' }
+    ]
+  },
+  {
+    name: 'About',
+    href: '#about',
+    type: 'dropdown',
+    items: [
+      { name: 'About BSDT', href: '/about-bsdt' },
+      { name: 'Leadership & Governance', href: '/leadership-governance' }
     ]
   },
   {
