@@ -59,7 +59,7 @@ export const CustomFacultySection: React.FC = () => {
                     <img src="/lovable-uploads/3e1b6482-f28a-4680-9931-2f728b80d0eb.png" alt="Shyni K C" className="w-full h-full object-cover" />
                   </div>
                   <h3 className="text-lg font-semibold text-bsd-gray">Shyni K C</h3>
-                  <p className="text-sm text-bsd-orange">Assistant Professor, Computer Applications</p>
+                  <p className="text-sm text-bsd-orange">Faculty, Computer Applications</p>
                   <p className="mt-4 text-sm text-foreground/70">
                     An experienced educator with 18 years of teaching experience, Shyni holds a Master's in Computer Applications and a Bachelor's in Mathematics. Her strong foundation in computational thinking and problem-solving drives her passion for mathematics and computer science education, empowering students with critical thinking skills relevant to the evolving tech industry.
                   </p>
