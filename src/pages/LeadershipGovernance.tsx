@@ -106,8 +106,8 @@ const LeadershipGovernance = () => {
       position: "Head Marketing"
     },
     {
-      name: "Mrs. Mamata Satishkumar Mudnoor",
-      position: "Head HR & Administration"
+      name: "Mr. Vinod Kumar",
+      position: "Head HR & Administrator"
     },
     {
       name: "Ar Aditha Varma Raja",
