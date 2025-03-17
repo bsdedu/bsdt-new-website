@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Cpu, Database, Shield } from "lucide-react";
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
