@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
@@ -30,8 +29,8 @@ export const ProgramOverviewSection: React.FC = () => {
             <div className="flex justify-center mb-8">
               <TabsList className="grid grid-cols-4 w-full max-w-3xl">
                 <TabsTrigger value="curriculum">Curriculum</TabsTrigger>
-                <TabsTrigger value="outcomes">Learning Outcomes</TabsTrigger>
                 <TabsTrigger value="software">Software & AI Tools</TabsTrigger>
+                <TabsTrigger value="outcomes">Learning Outcomes</TabsTrigger>
                 <TabsTrigger value="career">Career Opportunities</TabsTrigger>
               </TabsList>
             </div>
@@ -204,12 +203,12 @@ export const ProgramOverviewSection: React.FC = () => {
               </div>
             </TabsContent>
             
-            <TabsContent value="outcomes" className="mt-0">
-              <LearningOutcomesTab />
-            </TabsContent>
-            
             <TabsContent value="software" className="mt-0">
               <SoftwareToolsTab />
+            </TabsContent>
+            
+            <TabsContent value="outcomes" className="mt-0">
+              <LearningOutcomesTab />
             </TabsContent>
             
             <TabsContent value="career" className="mt-0">
