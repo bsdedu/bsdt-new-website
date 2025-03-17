@@ -13,7 +13,6 @@ import { TestimonialsSection } from '../components/home/TestimonialsSection';
 import { UpcomingEventsSection } from '../components/home/UpcomingEventsSection';
 import { CollaborationsSection } from '../components/home/CollaborationsSection';
 import { InfoGraphicsSection } from '../components/home/InfoGraphicsSection';
-import { PlacementSupportSection } from '../components/home/PlacementSupportSection';
 
 const Index = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -87,7 +86,6 @@ const Index = () => {
         <InfoGraphicsSection />
         <UpcomingEventsSection />
         <WhyChooseSection />
-        <PlacementSupportSection />
         <TestimonialsSection />
         <CollaborationsSection />
         <EnquiryFormSection />
