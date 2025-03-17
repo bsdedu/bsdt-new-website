@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -9,7 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader } from "@/components/ui-elements/Card";
 import { AnimatedButton } from "@/components/ui-elements/AnimatedButton";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Check, BookOpen, Calendar, GraduationCap, Award, BriefcaseBusiness, Building2, Lightbulb, Users, Palette, Ruler, Sofa, Monitor, Code, Laptop, Bot, Cpu, Layers, PenTool } from "lucide-react";
+import { Check, BookOpen, Calendar, GraduationCap, Award, BriefcaseBusiness, Building2, Lightbulb, Users, Palette, Ruler, Sofa, Monitor, Code, Laptop, Bot, Cpu, Layers, PenTool, BrainCircuit } from "lucide-react";
 import { Link } from "react-router-dom";
 import { EnquiryFormSection } from "@/components/home/EnquiryFormSection";
 import { FacultySection } from "@/components/program/FacultySection";
@@ -96,13 +95,13 @@ const ProgramInteriorDesign = () => {
               <Card className="border-0 bg-white/80 backdrop-blur">
                 <CardContent className="p-6 flex flex-col items-center text-center">
                   <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-3">
-                    <Users className="w-6 h-6 text-bsd-orange" />
+                    <BrainCircuit className="w-6 h-6 text-bsd-orange" />
                   </div>
-                  <h3 className="text-3xl font-bold text-bsd-gray">100+</h3>
-                  <p className="text-sm text-foreground/70">Annual Intake</p>
+                  <h3 className="text-3xl font-bold text-bsd-gray">AI+</h3>
+                  <p className="text-sm text-foreground/70">AI Empowered Curriculum</p>
                 </CardContent>
               </Card>
-              
+          
               <Card className="border-0 bg-white/80 backdrop-blur">
                 <CardContent className="p-6 flex flex-col items-center text-center">
                   <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-3">
@@ -112,7 +111,7 @@ const ProgramInteriorDesign = () => {
                   <p className="text-sm text-foreground/70">Placement Rate</p>
                 </CardContent>
               </Card>
-              
+          
               <Card className="border-0 bg-white/80 backdrop-blur">
                 <CardContent className="p-6 flex flex-col items-center text-center">
                   <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-3">
@@ -122,7 +121,7 @@ const ProgramInteriorDesign = () => {
                   <p className="text-sm text-foreground/70">Years Experience</p>
                 </CardContent>
               </Card>
-              
+          
               <Card className="border-0 bg-white/80 backdrop-blur">
                 <CardContent className="p-6 flex flex-col items-center text-center">
                   <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-3">
@@ -616,14 +615,3 @@ const ProgramInteriorDesign = () => {
       <StudentWorksGallery />
 
       {/* Faculty Section */}
-      <FacultySection />
-
-      {/* Enquiry Form Section */}
-      <EnquiryFormSection />
-
-      <Footer />
-    </>
-  );
-};
-
-export default ProgramInteriorDesign;
