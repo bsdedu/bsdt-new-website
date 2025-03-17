@@ -11,6 +11,7 @@ import AboutBSDT from "./pages/AboutBSDT";
 import LeadershipGovernance from "./pages/LeadershipGovernance";
 import ProgramInteriorDesign from "./pages/ProgramInteriorDesign";
 import ProgramGraphicDesign from "./pages/ProgramGraphicDesign";
+import ProgramAnimationGameDesign from "./pages/ProgramAnimationGameDesign";
 import ApplicationProcess from "./pages/admissions/ApplicationProcess";
 import FeesScholarships from "./pages/admissions/FeesScholarships";
 import ScheduleVisit from "./pages/admissions/ScheduleVisit";
@@ -35,6 +36,7 @@ const App = () => (
             <Route path="/leadership-governance" element={<LeadershipGovernance />} />
             <Route path="/programs/bsc-interior-design" element={<ProgramInteriorDesign />} />
             <Route path="/programs/bva-graphic-design" element={<ProgramGraphicDesign />} />
+            <Route path="/programs/bva-animation-game-design" element={<ProgramAnimationGameDesign />} />
             
             {/* Admissions Routes */}
             <Route path="/admissions/application-process" element={<ApplicationProcess />} />
