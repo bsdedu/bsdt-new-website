@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Card, CardContent } from "@/components/ui-elements/Card";
+import { Badge } from "@/components/ui/badge";
 import { Sparkles, Palette, Bot, BrainCircuit, Lightbulb, Shapes, Laptop, Rocket } from "lucide-react";
 
 export const AIEmpoweredSection: React.FC = () => {
@@ -47,11 +49,5 @@ export const AIEmpoweredSection: React.FC = () => {
     }
   ];
 
-  return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-6 md:px-8">
-        
-      </div>
-    </section>
-  );
+  return null; // Return null to render nothing
 };
