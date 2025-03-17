@@ -1,4 +1,3 @@
-
 import { ProjectCategory, ProjectCollection } from './types';
 
 // Categories based on program type
@@ -95,7 +94,7 @@ export const animationProjects: ProjectCollection = {
     { id: 4, title: "Motion Graphics Showreel", student: "Meera Joshi", year: "2022", image: "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=800&auto=format&fit=crop" },
   ],
   game: [
-    { id: 1, title: "Adventure Game Prototype", student: "Vikram Reddy", year: "2023", image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&auto=format&fit=crop" },
+    { id: 1, title: "Adventure Game Prototype", student: "Vikram Reddy", year: "2023", image: "/lovable-uploads/bd166343-0db2-4cf7-b8cf-209cc56641bc.png" },
     { id: 2, title: "Mobile Game UI Design", student: "Ananya Gupta", year: "2023", image: "https://images.unsplash.com/photo-1580234811497-9df7fd2f357e?w=800&auto=format&fit=crop" },
     { id: 3, title: "2D Platformer Game", student: "Karan Mehta", year: "2022", image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&auto=format&fit=crop" },
     { id: 4, title: "VR Experience Design", student: "Tanya Kapoor", year: "2022", image: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?w=800&auto=format&fit=crop" },
