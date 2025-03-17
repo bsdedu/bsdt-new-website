@@ -13,6 +13,7 @@ import ProgramInteriorDesign from "./pages/ProgramInteriorDesign";
 import ProgramGraphicDesign from "./pages/ProgramGraphicDesign";
 import ProgramAnimationGameDesign from "./pages/ProgramAnimationGameDesign";
 import ProgramBCA from "./pages/ProgramBCA";
+import ProgramBScCS from "./pages/ProgramBScCS";
 import ApplicationProcess from "./pages/admissions/ApplicationProcess";
 import FeesScholarships from "./pages/admissions/FeesScholarships";
 import ScheduleVisit from "./pages/admissions/ScheduleVisit";
@@ -39,6 +40,7 @@ const App = () => (
             <Route path="/programs/bva-graphic-design" element={<ProgramGraphicDesign />} />
             <Route path="/programs/bva-animation-game-design" element={<ProgramAnimationGameDesign />} />
             <Route path="/programs/bca-uiux-aiml" element={<ProgramBCA />} />
+            <Route path="/programs/bsc-cs-analytics-security" element={<ProgramBScCS />} />
             
             {/* Admissions Routes */}
             <Route path="/admissions/application-process" element={<ApplicationProcess />} />
