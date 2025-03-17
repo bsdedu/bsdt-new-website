@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -67,7 +66,7 @@ const ProgramInteriorDesign = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <BookOpen className="w-4 h-4 text-bsd-orange" />
-                    <span>Next Batch: June 2024</span>
+                    <span>Next Batch: June 2025</span>
                   </div>
                 </div>
                 
@@ -628,10 +627,3 @@ const ProgramInteriorDesign = () => {
       <div id="enquiry-form">
         <EnquiryFormSection />
       </div>
-
-      <Footer />
-    </>
-  );
-};
-
-export default ProgramInteriorDesign;
