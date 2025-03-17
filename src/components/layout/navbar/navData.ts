@@ -59,10 +59,13 @@ export const navStructure: NavStructure[] = [
     href: '#admissions',
     type: 'dropdown',
     items: [
-      { name: 'Application Process', href: '#application-process' },
-      { name: 'Eligibility', href: '#eligibility' },
-      { name: 'Fees & Scholarships', href: '#fees-scholarships' },
-      { name: 'FAQs', href: '#faqs' }
+      { name: 'Application Process', href: '/admissions/application-process' },
+      { name: 'Fees & Scholarships', href: '/admissions/fees-scholarships' },
+      { name: 'Schedule a Campus Visit', href: '/admissions/schedule-visit' },
+      { name: 'Faculty', href: '/admissions/faculty' },
+      { name: 'Studio BSD', href: '/admissions/studio-bsd' },
+      { name: 'We Go Beyond Curriculum', href: '/admissions/beyond-curriculum' },
+      { name: 'FAQs', href: '/admissions/faqs' }
     ]
   },
   {

@@ -11,6 +11,13 @@ import AboutBSDT from "./pages/AboutBSDT";
 import LeadershipGovernance from "./pages/LeadershipGovernance";
 import ProgramInteriorDesign from "./pages/ProgramInteriorDesign";
 import ProgramGraphicDesign from "./pages/ProgramGraphicDesign";
+import ApplicationProcess from "./pages/admissions/ApplicationProcess";
+import FeesScholarships from "./pages/admissions/FeesScholarships";
+import ScheduleVisit from "./pages/admissions/ScheduleVisit";
+import Faculty from "./pages/admissions/Faculty";
+import StudioBSD from "./pages/admissions/StudioBSD";
+import BeyondCurriculum from "./pages/admissions/BeyondCurriculum";
+import FAQs from "./pages/admissions/FAQs";
 import { FloatingCallCTA } from "./components/ui-elements/FloatingCallCTA";
 
 const queryClient = new QueryClient();
@@ -28,6 +35,16 @@ const App = () => (
             <Route path="/leadership-governance" element={<LeadershipGovernance />} />
             <Route path="/programs/bsc-interior-design" element={<ProgramInteriorDesign />} />
             <Route path="/programs/bva-graphic-design" element={<ProgramGraphicDesign />} />
+            
+            {/* Admissions Routes */}
+            <Route path="/admissions/application-process" element={<ApplicationProcess />} />
+            <Route path="/admissions/fees-scholarships" element={<FeesScholarships />} />
+            <Route path="/admissions/schedule-visit" element={<ScheduleVisit />} />
+            <Route path="/admissions/faculty" element={<Faculty />} />
+            <Route path="/admissions/studio-bsd" element={<StudioBSD />} />
+            <Route path="/admissions/beyond-curriculum" element={<BeyondCurriculum />} />
+            <Route path="/admissions/faqs" element={<FAQs />} />
+            
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
