@@ -4,7 +4,6 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Helmet } from 'react-helmet-async';
 import { EnquiryFormSection } from "@/components/home/EnquiryFormSection";
-import { StudentWorksGallery } from "@/components/program/StudentWorksGallery";
 import { HeroSection } from "@/components/program/bsc-cs/HeroSection";
 import { ProgramOverviewSection } from "@/components/program/bsc-cs/ProgramOverviewSection";
 import { CustomFacultySection } from "@/components/program/bsc-cs/CustomFacultySection";
@@ -22,7 +21,6 @@ const ProgramBScCS = () => {
 
       <HeroSection />
       <ProgramOverviewSection />
-      <StudentWorksGallery />
       <CustomFacultySection />
       <StudioSection />
       <EnquiryFormSection />
