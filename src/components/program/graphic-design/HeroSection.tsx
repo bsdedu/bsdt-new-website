@@ -1,10 +1,9 @@
-
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui-elements/Card";
 import { AnimatedButton } from "@/components/ui-elements/AnimatedButton";
-import { Calendar, GraduationCap, BookOpen, Users, BriefcaseBusiness, Award, Building2 } from "lucide-react";
+import { Calendar, GraduationCap, BookOpen, Users, BriefcaseBusiness, Award, Building2, BrainCircuit } from "lucide-react";
 
 export const HeroSection: React.FC = () => {
   return (
@@ -76,7 +75,7 @@ export const HeroSection: React.FC = () => {
             <Card className="border-0 bg-white/80 backdrop-blur">
               <CardContent className="p-6 flex flex-col items-center text-center">
                 <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-3">
-                  <Users className="w-6 h-6 text-bsd-orange" />
+                  <BrainCircuit className="w-6 h-6 text-bsd-orange" />
                 </div>
                 <h3 className="text-3xl font-bold text-bsd-gray">AI Empowered</h3>
                 <p className="text-sm text-foreground/70">Curriculum</p>
