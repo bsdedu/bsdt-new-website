@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Card, CardContent } from "@/components/ui-elements/Card";
@@ -51,21 +50,7 @@ export const AIEmpoweredSection: React.FC = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-6 md:px-8">
-        <RevealSection delay={100}>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {aiFeatures.map((feature, index) => (
-              <Card key={index} className="border border-muted/30 bg-white shadow-sm hover:shadow-md transition-shadow">
-                <CardContent className="p-6">
-                  <div className="w-14 h-14 flex items-center justify-center rounded-lg bg-bsd-orange/10 mb-4">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-bsd-gray mb-2">{feature.title}</h3>
-                  <p className="text-foreground/70">{feature.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </RevealSection>
+        
       </div>
     </section>
   );
