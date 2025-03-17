@@ -47,14 +47,14 @@ export const NavItem: React.FC<NavItemProps> = ({ item }) => {
   
   if (item.type === 'megamenu' && item.categories) {
     return (
-      <NavigationMenuItem>
+      <NavigationMenuItem className="relative">
         <NavigationMenuTrigger 
           className="bg-transparent text-bsd-gray hover:text-bsd-orange hover:bg-transparent focus:bg-transparent"
         >
           {item.name}
         </NavigationMenuTrigger>
-        <NavigationMenuContent>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 w-[800px] max-w-screen-lg">
+        <NavigationMenuContent className="absolute left-0 top-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 w-[800px] max-w-screen-lg bg-white shadow-lg rounded-md">
             {item.categories.map((category, index) => (
               <div key={index} className="space-y-3">
                 <h3 className="text-sm font-bold text-bsd-gray border-b pb-1">{category.title}</h3>
@@ -90,14 +90,14 @@ export const NavItem: React.FC<NavItemProps> = ({ item }) => {
   }
   
   return (
-    <NavigationMenuItem>
+    <NavigationMenuItem className="relative">
       <NavigationMenuTrigger 
         className="bg-transparent text-bsd-gray hover:text-bsd-orange hover:bg-transparent focus:bg-transparent"
       >
         {item.name}
       </NavigationMenuTrigger>
-      <NavigationMenuContent>
-        <ul className="grid w-[250px] gap-1 p-2">
+      <NavigationMenuContent className="absolute left-0 top-full">
+        <ul className="grid w-[250px] gap-1 p-2 bg-white shadow-lg rounded-md">
           {item.items?.map((subItem) => (
             <li key={subItem.name}>
               <NavigationMenuLink asChild>
