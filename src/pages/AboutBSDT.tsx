@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
@@ -252,7 +253,7 @@ const AboutBSDT = () => {
                   <CardContent className="pt-6">
                     <div className="flex items-start">
                       <div className="mr-4 flex-shrink-0">
-                        <img src="/lovable-uploads/8b983b3f-fd59-44d3-b5cc-152eeffe62cd.png" alt="BNU Logo" className="w-16 h-16 object-contain" />
+                        <img src="/lovable-uploads/294f5e6e-f3dc-462d-b5e0-13a1bf147bf7.png" alt="BNU Logo" className="w-16 h-16 object-contain" />
                       </div>
                       <div>
                         <h4 className="text-lg font-semibold text-bsd-gray mb-2">Bengaluru North University (BNU)</h4>
@@ -420,7 +421,11 @@ const AboutBSDT = () => {
                       <div className="p-1">
                         <Card className="border-0 shadow-none">
                           <CardContent className="flex items-center justify-center p-6">
-                            <img src={`/lovable-uploads/8b983b3f-fd59-44d3-b5cc-152eeffe62cd.png`} alt={`Partner logo ${index + 1}`} className="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                            <img 
+                              src={index === 0 ? "/lovable-uploads/294f5e6e-f3dc-462d-b5e0-13a1bf147bf7.png" : `/lovable-uploads/8b983b3f-fd59-44d3-b5cc-152eeffe62cd.png`} 
+                              alt={`Partner logo ${index + 1}`} 
+                              className="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" 
+                            />
                           </CardContent>
                         </Card>
                       </div>
