@@ -26,12 +26,12 @@ export const CustomFacultySection: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="/lovable-uploads/84bf2665-5492-457f-8295-f739efb5d307.png" alt="Priya Sharma" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/b6181cce-9876-49c8-a669-98e38baf6bfa.png" alt="Arun Murugesan" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Priya Sharma</h3>
-                  <p className="text-sm text-bsd-orange">Lead Faculty, UX/UI Design</p>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Arun Murugesan</h3>
+                  <p className="text-sm text-bsd-orange">Program Head, UI/UX Design</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    With over 12 years of experience in UX/UI design at companies like Microsoft and Flipkart, Priya brings extensive knowledge of user-centered design methodologies. Her expertise in designing for e-commerce and financial applications provides students with insights into creating effective digital experiences across different sectors.
+                    With 12+ years in UX design, Arun leads the HCI department at BSD. He has worked with MNCs like SAP and Cisco, and currently heads the UX group at Rupeek Fintech. He previously founded DTALE design studio, leading a team that worked on 50+ projects across e-commerce, fintech, healthcare, and IoT sectors.
                   </p>
                 </div>
               </CardContent>
