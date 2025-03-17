@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
@@ -68,6 +67,7 @@ export const InfoGraphicsSection: React.FC = () => {
   }, []);
 
   return (
+    
     <section id="insights" className="py-[30px]">
       <div className="container mx-auto px-6 md:px-8">
         <RevealSection>
@@ -146,7 +146,7 @@ export const InfoGraphicsSection: React.FC = () => {
                     <div className="flex justify-between items-center">
                       <div className="flex items-center">
                         <div className="w-8 h-8 rounded-full flex items-center justify-center mr-2" style={{ backgroundColor: `${career.color}20` }}>
-                          <div className="text-[${career.color}]">
+                          <div style={{ color: career.color }}>
                             {career.icon}
                           </div>
                         </div>
@@ -158,11 +158,11 @@ export const InfoGraphicsSection: React.FC = () => {
                       value={animate ? career.growth : 0} 
                       className="h-2 transition-all duration-1500 ease-out"
                       style={{ 
-                        backgroundColor: `${career.color}20`,
+                        backgroundColor: `${career.color}20`
                       }}
                       indicatorClassName="bg-gradient-to-r" 
                       indicatorStyle={{ 
-                        backgroundColor: career.color,
+                        backgroundColor: career.color 
                       }}
                     />
                   </div>
@@ -202,6 +202,7 @@ export const InfoGraphicsSection: React.FC = () => {
                 </ResponsiveContainer>
               </div>
             </div>
+            
             <div className="relative">
               <div className="bg-gradient-to-br from-bsd-orange/10 to-bsd-gray/5 rounded-2xl p-6 md:p-8">
                 <div className="flex items-center mb-6">
