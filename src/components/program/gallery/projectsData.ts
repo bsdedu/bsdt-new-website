@@ -134,8 +134,8 @@ export const animationProjects: ProjectCollection = {
 // BCA projects
 export const bcaProjects: ProjectCollection = {
   uiux: [
-    { id: 1, title: "Banking App Redesign", student: "Nisha Kapoor", year: "2023", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop" },
-    { id: 2, title: "Travel Booking Platform", student: "Rohan Verma", year: "2023", image: "https://images.unsplash.com/photo-1616469829941-c7200edec809?w=800&auto=format&fit=crop" },
+    { id: 1, title: "Banking App Redesign", student: "Nisha Kapoor", year: "2023", image: "/lovable-uploads/31995f41-69f4-448b-a48c-ac1cbf3d59ea.png" },
+    { id: 2, title: "Travel Booking Platform", student: "Rohan Verma", year: "2023", image: "/lovable-uploads/4041b097-648e-4871-bba1-a42cfb069280.png" },
     { id: 3, title: "Health Monitoring Dashboard", student: "Priya Gupta", year: "2022", image: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=800&auto=format&fit=crop" },
     { id: 4, title: "E-learning Interface System", student: "Aryan Singh", year: "2022", image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&auto=format&fit=crop" },
   ],
