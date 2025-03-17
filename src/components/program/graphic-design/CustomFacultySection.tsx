@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
@@ -23,12 +24,12 @@ export const CustomFacultySection: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&auto=format&fit=crop" alt="Aasritha Upadhyayula" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/469b16b9-1a86-4abc-926f-fecba15128d3.png" alt="Lakshmi Gopalakrishna" className="w-full h-full object-cover" />
                   </div>
                   <h3 className="text-lg font-semibold text-bsd-gray">Lakshmi Gopalakrishna</h3>
                   <p className="text-sm text-bsd-orange">Faculty, Graphic Design</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    With over 15 years of experience in brand strategy and visual identity development, Aasritha has led design teams at top agencies and worked with global clients. She brings a wealth of practical industry knowledge and contemporary design perspectives to the program.
+                    A professionally trained educator with a passion for art since childhood, Lakshmi worked with Disney as a 2D animator before transitioning to education. At BSDT, she guides students in developing creative expression through fundamentals of drawing, color theory, and art history while conducting workshops that encourage exploration beyond the curriculum.
                   </p>
                 </div>
               </CardContent>
@@ -38,7 +39,7 @@ export const CustomFacultySection: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1556157382-97eda2f9e5d2?w=300&auto=format&fit=crop" alt="Yogesh Praveen" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/8c654396-817b-41ba-9b58-67f6362d40ca.png" alt="Yogesh Praveen" className="w-full h-full object-cover" />
                   </div>
                   <h3 className="text-lg font-semibold text-bsd-gray">Yogesh Praveen</h3>
                   <p className="text-sm text-bsd-orange">Senior Faculty, Digital Design</p>
@@ -53,7 +54,7 @@ export const CustomFacultySection: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=300&auto=format&fit=crop" alt="Amalan" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/af5130bc-a7bc-4348-8951-861078594741.png" alt="Amalan" className="w-full h-full object-cover" />
                   </div>
                   <h3 className="text-lg font-semibold text-bsd-gray">Amalan</h3>
                   <p className="text-sm text-bsd-orange">Faculty</p>
