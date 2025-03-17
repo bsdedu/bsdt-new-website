@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -54,9 +53,6 @@ const ProgramInteriorDesign = () => {
                       Download Brochure
                     </a>
                   </AnimatedButton>
-                  <Link to="/admissions" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md h-10 px-4 py-2 text-sm border border-input bg-background hover:bg-accent hover:text-accent-foreground transition-colors">
-                    Learn About Admissions
-                  </Link>
                 </div>
 
                 <div className="flex flex-wrap gap-x-8 gap-y-4 pt-4 text-sm text-foreground/70">
@@ -631,10 +627,3 @@ const ProgramInteriorDesign = () => {
       <div id="enquiry-form">
         <EnquiryFormSection />
       </div>
-      
-      <Footer />
-    </>
-  );
-};
-
-export default ProgramInteriorDesign;
