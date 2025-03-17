@@ -101,7 +101,7 @@ export const animationProjects: ProjectCollection = {
     { id: 4, title: "VR Experience Design", student: "Tanya Kapoor", year: "2022", image: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?w=800&auto=format&fit=crop" },
   ],
   character: [
-    { id: 1, title: "Fantasy Character Design", student: "Rahul Verma", year: "2023", image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&auto=format&fit=crop" },
+    { id: 1, title: "Fantasy Character Design", student: "Rahul Verma", year: "2023", image: "/lovable-uploads/a595961e-d33b-4b0c-b044-3587eb6bea13.png" },
     { id: 2, title: "Game Avatar Collection", student: "Sanjana Patel", year: "2023", image: "https://images.unsplash.com/photo-1634029466991-43a9d8635376?w=800&auto=format&fit=crop" },
     { id: 3, title: "Stylized Character Models", student: "Aditya Raj", year: "2022", image: "https://images.unsplash.com/photo-1601987177651-8edfe6c20009?w=800&auto=format&fit=crop" },
     { id: 4, title: "Concept Art Series", student: "Nisha Kamdar", year: "2022", image: "https://images.unsplash.com/photo-1518331647614-7a1f04cd34cf?w=800&auto=format&fit=crop" },
