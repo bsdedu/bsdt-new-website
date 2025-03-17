@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -12,7 +11,6 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Check, BookOpen, Calendar, GraduationCap, Award, BriefcaseBusiness, Building2, Lightbulb, Users, Palette, Ruler, Sofa } from "lucide-react";
 import { Link } from "react-router-dom";
 import { EnquiryFormSection } from "@/components/home/EnquiryFormSection";
-import { ApplicationDeadline } from "@/components/program/ApplicationDeadline";
 import { FacultySection } from "@/components/program/FacultySection";
 import { StudentWorksGallery } from "@/components/program/StudentWorksGallery";
 
@@ -71,8 +69,7 @@ const ProgramInteriorDesign = () => {
                   </div>
                 </div>
                 
-                {/* Application Deadline Component */}
-                <ApplicationDeadline />
+                {/* Application Deadline Component removed */}
               </div>
             </RevealSection>
 
@@ -634,4 +631,4 @@ const ProgramInteriorDesign = () => {
   );
 };
 
-export default ProgramInteriorDesign;
+export default Program
