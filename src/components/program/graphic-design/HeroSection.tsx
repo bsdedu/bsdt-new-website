@@ -4,10 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui-elements/Card";
 import { AnimatedButton } from "@/components/ui-elements/AnimatedButton";
 import { Calendar, GraduationCap, BookOpen, Users, BriefcaseBusiness, Award, Building2, BrainCircuit } from "lucide-react";
-
 export const HeroSection: React.FC = () => {
-  return (
-    <section className="relative pt-20 md:pt-28 pb-16 md:pb-20 overflow-hidden bg-bsd-light-gray">
+  return <section className="relative pt-20 md:pt-28 pb-16 md:pb-20 overflow-hidden bg-bsd-light-gray">
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-radial from-white to-transparent opacity-70"></div>
         <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-bsd-orange/5 blur-3xl"></div>
@@ -55,11 +53,7 @@ export const HeroSection: React.FC = () => {
 
           <RevealSection direction="left">
             <div className="relative rounded-2xl overflow-hidden shadow-lg h-[400px]">
-              <img 
-                src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80" 
-                alt="Graphic Design Studio" 
-                className="w-full h-full object-cover"
-              />
+              <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80" alt="Graphic Design Studio" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
                 <div className="absolute bottom-0 left-0 p-6">
                   <p className="text-white font-medium text-lg">Visual storytelling, branding, and digital design expertise</p>
@@ -77,8 +71,8 @@ export const HeroSection: React.FC = () => {
                 <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-3">
                   <BrainCircuit className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-3xl font-bold text-bsd-gray">AI Empowered</h3>
-                <p className="text-sm text-foreground/70">Curriculum</p>
+                <h3 className="text-3xl font-bold text-bsd-gray">AI+</h3>
+                <p className="text-sm text-foreground/70">Ai Empowered Curriculum</p>
               </CardContent>
             </Card>
             
@@ -114,6 +108,5 @@ export const HeroSection: React.FC = () => {
           </div>
         </RevealSection>
       </div>
-    </section>
-  );
+    </section>;
 };
