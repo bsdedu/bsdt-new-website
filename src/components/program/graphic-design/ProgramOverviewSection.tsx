@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui-elements/Card";
 import { Check, Palette, Monitor, Users, BriefcaseBusiness, PenTool, Layout } from "lucide-react";
 import { LearningOutcomesTab } from "./LearningOutcomesTab";
 import { CareerOpportunitiesTab } from "./CareerOpportunitiesTab";
+import { SoftwareToolsTab } from "./SoftwareToolsTab";
 
 export const ProgramOverviewSection: React.FC = () => {
   return (
@@ -27,9 +28,10 @@ export const ProgramOverviewSection: React.FC = () => {
         <RevealSection delay={100}>
           <Tabs defaultValue="curriculum" className="w-full">
             <div className="flex justify-center mb-8">
-              <TabsList className="grid grid-cols-3 w-full max-w-2xl">
+              <TabsList className="grid grid-cols-4 w-full max-w-3xl">
                 <TabsTrigger value="curriculum">Curriculum</TabsTrigger>
                 <TabsTrigger value="outcomes">Learning Outcomes</TabsTrigger>
+                <TabsTrigger value="software">Software & AI Tools</TabsTrigger>
                 <TabsTrigger value="career">Career Opportunities</TabsTrigger>
               </TabsList>
             </div>
@@ -204,6 +206,10 @@ export const ProgramOverviewSection: React.FC = () => {
             
             <TabsContent value="outcomes" className="mt-0">
               <LearningOutcomesTab />
+            </TabsContent>
+            
+            <TabsContent value="software" className="mt-0">
+              <SoftwareToolsTab />
             </TabsContent>
             
             <TabsContent value="career" className="mt-0">
