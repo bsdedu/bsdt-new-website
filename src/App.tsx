@@ -15,6 +15,7 @@ import ProgramAnimationGameDesign from "./pages/ProgramAnimationGameDesign";
 import ProgramBCA from "./pages/ProgramBCA";
 import ProgramBScCS from "./pages/ProgramBScCS";
 import ProgramInteractionExperience from "./pages/ProgramInteractionExperience";
+import ProgramArchitecturalDesign from "./pages/ProgramArchitecturalDesign";
 import ApplicationProcess from "./pages/admissions/ApplicationProcess";
 import FeesScholarships from "./pages/admissions/FeesScholarships";
 import ScheduleVisit from "./pages/admissions/ScheduleVisit";
@@ -43,6 +44,7 @@ const App = () => (
             <Route path="/programs/bca-uiux-aiml" element={<ProgramBCA />} />
             <Route path="/programs/bsc-cs-analytics-security" element={<ProgramBScCS />} />
             <Route path="/programs/bdes-interaction-experience" element={<ProgramInteractionExperience />} />
+            <Route path="/programs/bdes-architectural-design" element={<ProgramArchitecturalDesign />} />
             
             {/* Admissions Routes */}
             <Route path="/admissions/application-process" element={<ApplicationProcess />} />
