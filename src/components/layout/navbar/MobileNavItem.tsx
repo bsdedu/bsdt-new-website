@@ -84,7 +84,7 @@ export const MobileNavItem: React.FC<MobileNavItemProps> = ({ item, onItemClick 
                       {subItem.href.startsWith('/') ? (
                         <Link
                           to={subItem.href}
-                          className="block py-1 text-sm text-bsd-gray hover:text-bsd-orange"
+                          className="block py-1 text-sm text-bsd-gray hover:text-bsd-orange hover:bg-transparent"
                           onClick={onItemClick}
                         >
                           {subItem.name}
@@ -92,7 +92,7 @@ export const MobileNavItem: React.FC<MobileNavItemProps> = ({ item, onItemClick 
                       ) : (
                         <a
                           href={subItem.href}
-                          className="block py-1 text-sm text-bsd-gray hover:text-bsd-orange"
+                          className="block py-1 text-sm text-bsd-gray hover:text-bsd-orange hover:bg-transparent"
                           onClick={onItemClick}
                         >
                           {subItem.name}
@@ -126,7 +126,7 @@ export const MobileNavItem: React.FC<MobileNavItemProps> = ({ item, onItemClick 
               {subItem.href.startsWith('/') ? (
                 <Link
                   to={subItem.href}
-                  className="block py-1 text-sm text-bsd-gray hover:text-bsd-orange"
+                  className="block py-1 text-sm text-bsd-gray hover:text-bsd-orange hover:bg-transparent"
                   onClick={onItemClick}
                 >
                   {subItem.name}
@@ -134,7 +134,7 @@ export const MobileNavItem: React.FC<MobileNavItemProps> = ({ item, onItemClick 
               ) : (
                 <a
                   href={subItem.href}
-                  className="block py-1 text-sm text-bsd-gray hover:text-bsd-orange"
+                  className="block py-1 text-sm text-bsd-gray hover:text-bsd-orange hover:bg-transparent"
                   onClick={onItemClick}
                 >
                   {subItem.name}

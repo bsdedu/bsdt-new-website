@@ -104,14 +104,14 @@ export const NavItem: React.FC<NavItemProps> = ({ item }) => {
                 {subItem.href.startsWith('/') ? (
                   <Link
                     to={subItem.href}
-                    className="block select-none rounded-md p-2 text-sm leading-none text-bsd-gray hover:bg-accent hover:text-bsd-orange"
+                    className="block select-none rounded-md p-2 text-sm leading-none text-bsd-gray hover:text-bsd-orange hover:bg-bsd-light-gray"
                   >
                     {subItem.name}
                   </Link>
                 ) : (
                   <a
                     href={subItem.href}
-                    className="block select-none rounded-md p-2 text-sm leading-none text-bsd-gray hover:bg-accent hover:text-bsd-orange"
+                    className="block select-none rounded-md p-2 text-sm leading-none text-bsd-gray hover:text-bsd-orange hover:bg-bsd-light-gray"
                   >
                     {subItem.name}
                   </a>

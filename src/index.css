@@ -26,8 +26,8 @@
     --muted: 0 0% 95%;
     --muted-foreground: 165 21% 18%;
 
-    --accent: 29 100% 48%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 0 0% 95%; /* Changed from orange to light grey for better contrast */
+    --accent-foreground: 165 21% 27%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -129,5 +129,10 @@
     max-width: 100%;
     height: auto;
     display: block;
+  }
+
+  /* Navigation menu hover styles */
+  .nav-item-hover {
+    @apply hover:text-bsd-orange hover:bg-bsd-light-gray;
   }
 }
