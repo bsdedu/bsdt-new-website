@@ -164,6 +164,8 @@ const ProgramGraphicDesign = () => {
                 </TabsList>
               </div>
               
+              {/* Tabs content section */}
+              
               <TabsContent value="curriculum" className="mt-0">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <Card className="col-span-1 md:col-span-2">
@@ -608,4 +610,4 @@ const ProgramGraphicDesign = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
               <div className="relative rounded-2xl overflow-hidden h-[500px]">
                 <img 
-                  src="https://images.unsplash.com/photo-
+                  src="https://images
