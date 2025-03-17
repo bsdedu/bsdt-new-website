@@ -1,3 +1,4 @@
+
 import { ProjectCategory, ProjectCollection } from './types';
 
 // Categories based on program type
@@ -89,7 +90,7 @@ export const graphicProjects: ProjectCollection = {
 export const animationProjects: ProjectCollection = {
   animation: [
     { id: 1, title: "Fantasy World Animation", student: "Arjun Kumar", year: "2023", image: "/lovable-uploads/412105e5-1bdd-40a1-9059-91164700052e.png" },
-    { id: 2, title: "Animated Short Film", student: "Priya Singh", year: "2023", image: "https://images.unsplash.com/photo-1572177215132-5d7c8191f55f?w=800&auto=format&fit=crop" },
+    { id: 2, title: "Animated Short Film", student: "Priya Singh", year: "2023", image: "/lovable-uploads/7e4fdef1-7a95-4c6d-8fbd-c6e393f9b15a.png" },
     { id: 3, title: "3D Character Animation", student: "Rohit Sharma", year: "2022", image: "/lovable-uploads/aa851f87-c841-4f88-b250-cd459e9ef035.png" },
     { id: 4, title: "Motion Graphics Showreel", student: "Meera Joshi", year: "2022", image: "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=800&auto=format&fit=crop" },
   ],
