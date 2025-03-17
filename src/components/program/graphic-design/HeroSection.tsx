@@ -4,7 +4,6 @@ import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui-elements/Card";
 import { AnimatedButton } from "@/components/ui-elements/AnimatedButton";
-import { Link } from "react-router-dom";
 import { Calendar, GraduationCap, BookOpen, Users, BriefcaseBusiness, Award, Building2 } from "lucide-react";
 
 export const HeroSection: React.FC = () => {
@@ -36,9 +35,6 @@ export const HeroSection: React.FC = () => {
                     Download Brochure
                   </a>
                 </AnimatedButton>
-                <Link to="/admissions" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md h-10 px-4 py-2 text-sm border border-input bg-background hover:bg-accent hover:text-accent-foreground transition-colors">
-                  Learn About Admissions
-                </Link>
               </div>
 
               <div className="flex flex-wrap gap-x-8 gap-y-4 pt-4 text-sm text-foreground/70">
@@ -52,7 +48,7 @@ export const HeroSection: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <BookOpen className="w-4 h-4 text-bsd-orange" />
-                  <span>Next Batch: June 2024</span>
+                  <span>Next Batch: June 2025</span>
                 </div>
               </div>
             </div>
@@ -82,8 +78,8 @@ export const HeroSection: React.FC = () => {
                 <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-3">
                   <Users className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-3xl font-bold text-bsd-gray">120+</h3>
-                <p className="text-sm text-foreground/70">Annual Intake</p>
+                <h3 className="text-3xl font-bold text-bsd-gray">AI Empowered</h3>
+                <p className="text-sm text-foreground/70">Curriculum</p>
               </CardContent>
             </Card>
             
