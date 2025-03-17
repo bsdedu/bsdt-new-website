@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
@@ -17,7 +16,8 @@ import {
   Home,
   Paintbrush,
   ExternalLink,
-  Info
+  Info,
+  Send
 } from "lucide-react";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
 import { Card, CardContent } from "../ui-elements/Card";
@@ -26,10 +26,23 @@ import { Progress } from "@/components/ui/progress";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Cell } from 'recharts';
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { useToast } from "@/hooks/use-toast";
 
 export const InfoGraphicsSection: React.FC = () => {
   const [animate, setAnimate] = useState(false);
   const [chartData, setChartData] = useState<any[]>([]);
+  const { toast } = useToast();
+  
+  // Form state
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    interest: '',
+    message: ''
+  });
 
   // Stats to display
   const stats = [
@@ -66,6 +79,29 @@ export const InfoGraphicsSection: React.FC = () => {
       if (section) observer.unobserve(section);
     };
   }, []);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+    toast({
+      title: "Thank you for your interest!",
+      description: "We'll get back to you shortly with more information."
+    });
+    setFormData({
+      name: '',
+      email: '',
+      interest: '',
+      message: ''
+    });
+  };
 
   return (
     <section id="insights" className="py-[30px]">
@@ -246,16 +282,87 @@ export const InfoGraphicsSection: React.FC = () => {
           </div>
         </RevealSection>
 
-        {/* Call to Action */}
+        {/* Call to Action with Form */}
         <RevealSection delay={300}>
           <div className="text-center mt-8">
-            <AnimatedButton 
-              size="lg" 
-              className="bg-bsd-orange text-white hover:bg-bsd-orange/90"
-              hoverEffect="glow"
-            >
-              Schedule a Career Counseling Session
-            </AnimatedButton>
+            <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-sm p-6 border border-bsd-orange/10">
+              <h3 className="text-xl font-semibold text-bsd-gray mb-4">
+                Interested in Learning More?
+              </h3>
+              <p className="text-foreground/70 mb-6">
+                Fill out this quick form and our team will send you detailed information about our programs.
+              </p>
+              
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <Label htmlFor="name" className="text-bsd-gray/80">Your Name</Label>
+                    <Input 
+                      id="name" 
+                      name="name" 
+                      value={formData.name} 
+                      onChange={handleInputChange} 
+                      placeholder="Enter your name" 
+                      required 
+                      className="bg-bsd-light-gray/50"
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="email" className="text-bsd-gray/80">Email Address</Label>
+                    <Input 
+                      id="email" 
+                      name="email" 
+                      type="email" 
+                      value={formData.email} 
+                      onChange={handleInputChange}
+                      placeholder="Enter your email" 
+                      required
+                      className="bg-bsd-light-gray/50"
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <Label htmlFor="interest" className="text-bsd-gray/80">Area of Interest</Label>
+                  <select 
+                    id="interest" 
+                    name="interest" 
+                    value={formData.interest} 
+                    onChange={handleInputChange} 
+                    className="flex h-10 w-full rounded-md border border-input bg-bsd-light-gray/50 px-3 py-2 text-base ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                    required
+                  >
+                    <option value="">Select your interest</option>
+                    <option value="UX/UI Design">UX/UI Design</option>
+                    <option value="Interior Design">Interior Design</option>
+                    <option value="Game Design">Game Design</option>
+                    <option value="Architectural Design">Architectural Design</option>
+                    <option value="Graphic Design">Graphic Design</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <Label htmlFor="message" className="text-bsd-gray/80">Message (Optional)</Label>
+                  <Textarea 
+                    id="message" 
+                    name="message" 
+                    value={formData.message} 
+                    onChange={handleInputChange} 
+                    placeholder="Any specific questions or requirements?" 
+                    className="bg-bsd-light-gray/50 min-h-[100px]"
+                  />
+                </div>
+                
+                <AnimatedButton 
+                  type="submit" 
+                  className="bg-bsd-orange text-white hover:bg-bsd-orange/90"
+                  hoverEffect="glow"
+                >
+                  <Send className="w-4 h-4" />
+                  <span>Send Request</span>
+                </AnimatedButton>
+              </form>
+            </div>
           </div>
         </RevealSection>
       </div>
