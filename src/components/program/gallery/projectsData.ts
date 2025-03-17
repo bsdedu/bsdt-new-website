@@ -139,7 +139,7 @@ export const bcaProjects: ProjectCollection = {
     { id: 4, title: "E-learning Interface System", student: "Aryan Singh", year: "2022", image: "/lovable-uploads/421595da-1bb2-4ae1-bce7-73fea0d2aa48.png" },
   ],
   aiml: [
-    { id: 1, title: "Crop Disease Detection Model", student: "Anjali Sharma", year: "2023", image: "https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?w=800&auto=format&fit=crop" },
+    { id: 1, title: "Crop Disease Detection Model", student: "Anjali Sharma", year: "2023", image: "/lovable-uploads/d963d458-2ed1-457a-9f75-c3e543b8b0be.png" },
     { id: 2, title: "Sentiment Analysis Tool", student: "Kunal Joshi", year: "2023", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop" },
     { id: 3, title: "Traffic Prediction System", student: "Varun Kumar", year: "2022", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop" },
     { id: 4, title: "Healthcare Data Analysis", student: "Meera Reddy", year: "2022", image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop" },
