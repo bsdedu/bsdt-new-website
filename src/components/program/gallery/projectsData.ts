@@ -5,6 +5,7 @@ import { ProjectCategory, ProjectCollection } from './types';
 export const getProjectCategories = (programPath: string): ProjectCategory[] => {
   const isInteriorDesignProgram = programPath.includes('interior-design');
   const isAnimationGameProgram = programPath.includes('animation-game-design');
+  const isBcaProgram = programPath.includes('bca-uiux-aiml');
   
   if (isInteriorDesignProgram) {
     return [
@@ -17,6 +18,12 @@ export const getProjectCategories = (programPath: string): ProjectCategory[] => 
       { id: "animation", name: "3D Animation" },
       { id: "game", name: "Game Design" },
       { id: "character", name: "Character Design" },
+    ];
+  } else if (isBcaProgram) {
+    return [
+      { id: "uiux", name: "UI/UX Design" },
+      { id: "aiml", name: "AI & ML Projects" },
+      { id: "webapps", name: "Web & Mobile Apps" },
     ];
   } else {
     // Default to graphic design
@@ -54,7 +61,10 @@ export const interiorProjects: ProjectCollection = {
   print: [],
   animation: [],
   game: [],
-  character: []
+  character: [],
+  uiux: [],
+  aiml: [],
+  webapps: []
 };
 
 // Graphic Design projects
@@ -83,7 +93,10 @@ export const graphicProjects: ProjectCollection = {
   conceptual: [],
   animation: [],
   game: [],
-  character: []
+  character: [],
+  uiux: [],
+  aiml: [],
+  webapps: []
 };
 
 // Animation & Game Design projects
@@ -112,7 +125,42 @@ export const animationProjects: ProjectCollection = {
   print: [],
   residential: [],
   commercial: [],
-  conceptual: []
+  conceptual: [],
+  uiux: [],
+  aiml: [],
+  webapps: []
+};
+
+// BCA projects
+export const bcaProjects: ProjectCollection = {
+  uiux: [
+    { id: 1, title: "Banking App Redesign", student: "Nisha Kapoor", year: "2023", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop" },
+    { id: 2, title: "Travel Booking Platform", student: "Rohan Verma", year: "2023", image: "https://images.unsplash.com/photo-1616469829941-c7200edec809?w=800&auto=format&fit=crop" },
+    { id: 3, title: "Health Monitoring Dashboard", student: "Priya Gupta", year: "2022", image: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=800&auto=format&fit=crop" },
+    { id: 4, title: "E-learning Interface System", student: "Aryan Singh", year: "2022", image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&auto=format&fit=crop" },
+  ],
+  aiml: [
+    { id: 1, title: "Crop Disease Detection Model", student: "Anjali Sharma", year: "2023", image: "https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?w=800&auto=format&fit=crop" },
+    { id: 2, title: "Sentiment Analysis Tool", student: "Kunal Joshi", year: "2023", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop" },
+    { id: 3, title: "Traffic Prediction System", student: "Varun Kumar", year: "2022", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop" },
+    { id: 4, title: "Healthcare Data Analysis", student: "Meera Reddy", year: "2022", image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop" },
+  ],
+  webapps: [
+    { id: 1, title: "Fitness Tracking App", student: "Vivek Nair", year: "2023", image: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=800&auto=format&fit=crop" },
+    { id: 2, title: "Recipe Sharing Platform", student: "Maya Desai", year: "2023", image: "https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?w=800&auto=format&fit=crop" },
+    { id: 3, title: "Student Collaboration Tool", student: "Rohit Malhotra", year: "2022", image: "https://images.unsplash.com/photo-1600267165477-6d4cc741b379?w=800&auto=format&fit=crop" },
+    { id: 4, title: "Inventory Management System", student: "Ankit Shah", year: "2022", image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=800&auto=format&fit=crop" },
+  ],
+  // Add empty arrays for other categories for type consistency
+  branding: [],
+  digital: [],
+  print: [],
+  residential: [],
+  commercial: [],
+  conceptual: [],
+  animation: [],
+  game: [],
+  character: []
 };
 
 export const getProjectsForProgram = (programPath: string): ProjectCollection => {
@@ -120,7 +168,9 @@ export const getProjectsForProgram = (programPath: string): ProjectCollection =>
     return interiorProjects;
   } else if (programPath.includes('animation-game-design')) {
     return animationProjects;
-  } 
+  } else if (programPath.includes('bca-uiux-aiml')) {
+    return bcaProjects;
+  }
   // Default to graphic design projects
   return graphicProjects;
 };
@@ -130,6 +180,8 @@ export const getDefaultTabValue = (programPath: string): string => {
     return "residential";
   } else if (programPath.includes('animation-game-design')) {
     return "animation";
+  } else if (programPath.includes('bca-uiux-aiml')) {
+    return "uiux";
   }
   // Default to graphic design
   return "branding";
