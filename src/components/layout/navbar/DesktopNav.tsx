@@ -13,7 +13,7 @@ export const DesktopNav: React.FC<DesktopNavProps> = ({ navStructure }) => {
   return (
     <div className="hidden md:flex items-center space-x-6">
       <NavigationMenu className="relative">
-        <NavigationMenuList className="space-x-2">
+        <NavigationMenuList className="space-x-2 flex">
           {navStructure.map((item) => (
             <NavItem key={item.name} item={item} />
           ))}
