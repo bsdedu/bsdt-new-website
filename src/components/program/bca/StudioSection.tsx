@@ -23,7 +23,7 @@ export const StudioSection: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div className="relative rounded-2xl overflow-hidden h-[500px]">
               <img 
-                src="https://images.unsplash.com/photo-1581094794329-c8112a89f12e?w=800&auto=format&fit=crop" 
+                src="/lovable-uploads/0e947797-ead2-4db4-93ab-40264c0000e5.png" 
                 alt="Tech Lab" 
                 className="w-full h-full object-cover"
               />
