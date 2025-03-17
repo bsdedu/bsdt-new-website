@@ -343,7 +343,7 @@ const AboutBSDT = () => {
                   <CardContent className="pt-6">
                     <div className="flex items-start">
                       <div className="mr-4 flex-shrink-0">
-                        <img src="/lovable-uploads/8b983b3f-fd59-44d3-b5cc-152eeffe62cd.png" alt="IIID Logo" className="w-16 h-16 object-contain" />
+                        <img src="/lovable-uploads/69a68aef-de64-4767-9726-f0cd1fdf07c2.png" alt="IIID Logo" className="w-16 h-16 object-contain" />
                       </div>
                       <div>
                         <h4 className="text-lg font-semibold text-bsd-gray mb-2">Indian Institute of Interior Designers (IIID)</h4>
@@ -360,7 +360,7 @@ const AboutBSDT = () => {
                   <CardContent className="pt-6">
                     <div className="flex items-start">
                       <div className="mr-4 flex-shrink-0">
-                        <img src="/lovable-uploads/8b983b3f-fd59-44d3-b5cc-152eeffe62cd.png" alt="ADI Logo" className="w-16 h-16 object-contain" />
+                        <img src="/lovable-uploads/938cccc7-6337-481e-861d-5cedb08cafd7.png" alt="ADI Logo" className="w-16 h-16 object-contain" />
                       </div>
                       <div>
                         <h4 className="text-lg font-semibold text-bsd-gray mb-2">Association of Designers of India (ADI)</h4>
@@ -426,6 +426,8 @@ const AboutBSDT = () => {
                                   index === 1 ? "/lovable-uploads/97b89cbf-3490-4189-ab5a-1029c18072ef.png" :
                                   index === 2 ? "/lovable-uploads/0ca4c838-d02a-47df-a1ad-43d00ef48c8f.png" :
                                   index === 3 ? "/lovable-uploads/8c54bc32-e626-4a4b-ba4a-e75e84612ca8.png" :
+                                  index === 4 ? "/lovable-uploads/69a68aef-de64-4767-9726-f0cd1fdf07c2.png" :
+                                  index === 5 ? "/lovable-uploads/938cccc7-6337-481e-861d-5cedb08cafd7.png" :
                                   `/lovable-uploads/8b983b3f-fd59-44d3-b5cc-152eeffe62cd.png`} 
                               alt={`Partner logo ${index + 1}`} 
                               className="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" 
