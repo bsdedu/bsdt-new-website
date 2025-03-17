@@ -11,6 +11,7 @@ import AboutBSDT from "./pages/AboutBSDT";
 import LeadershipGovernance from "./pages/LeadershipGovernance";
 import ProgramInteriorDesign from "./pages/ProgramInteriorDesign";
 import ProgramGraphicDesign from "./pages/ProgramGraphicDesign";
+import { FloatingCallCTA } from "./components/ui-elements/FloatingCallCTA";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <FloatingCallCTA />
         </BrowserRouter>
       </TooltipProvider>
     </HelmetProvider>
