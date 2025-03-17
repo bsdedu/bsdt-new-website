@@ -1,3 +1,4 @@
+
 import { ProjectCategory, ProjectCollection } from './types';
 
 // Categories based on program type
@@ -102,7 +103,7 @@ export const animationProjects: ProjectCollection = {
   character: [
     { id: 1, title: "Fantasy Character Design", student: "Rahul Verma", year: "2023", image: "/lovable-uploads/a595961e-d33b-4b0c-b044-3587eb6bea13.png" },
     { id: 2, title: "Game Avatar Collection", student: "Sanjana Patel", year: "2023", image: "/lovable-uploads/4c8b3b7b-db32-48d5-af5a-b34c4f832998.png" },
-    { id: 3, title: "Stylized Character Models", student: "Aditya Raj", year: "2022", image: "https://images.unsplash.com/photo-1601987177651-8edfe6c20009?w=800&auto=format&fit=crop" },
+    { id: 3, title: "Stylized Character Models", student: "Aditya Raj", year: "2022", image: "/lovable-uploads/95bc9670-3561-40b6-94a6-f9ae10b7769a.png" },
     { id: 4, title: "Concept Art Series", student: "Nisha Kamdar", year: "2022", image: "https://images.unsplash.com/photo-1518331647614-7a1f04cd34cf?w=800&auto=format&fit=crop" },
   ],
   // Add empty arrays for other categories for type consistency
