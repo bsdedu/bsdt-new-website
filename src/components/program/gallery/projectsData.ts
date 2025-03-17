@@ -1,3 +1,4 @@
+
 import { ProjectCategory, ProjectCollection } from './types';
 
 // Categories based on program type
@@ -141,7 +142,7 @@ export const bcaProjects: ProjectCollection = {
   aiml: [
     { id: 1, title: "Crop Disease Detection Model", student: "Anjali Sharma", year: "2023", image: "/lovable-uploads/d963d458-2ed1-457a-9f75-c3e543b8b0be.png" },
     { id: 2, title: "Sentiment Analysis Tool", student: "Kunal Joshi", year: "2023", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop" },
-    { id: 3, title: "Traffic Prediction System", student: "Varun Kumar", year: "2022", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop" },
+    { id: 3, title: "Traffic Prediction System", student: "Varun Kumar", year: "2022", image: "/lovable-uploads/99873356-7514-41ed-a11f-1a752dc9ab4b.png" },
     { id: 4, title: "Healthcare Data Analysis", student: "Meera Reddy", year: "2022", image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop" },
   ],
   webapps: [
