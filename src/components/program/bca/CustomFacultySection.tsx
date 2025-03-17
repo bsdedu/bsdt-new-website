@@ -26,12 +26,12 @@ export const CustomFacultySection: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400&auto=format&fit=crop" alt="Rajesh Kumar" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/ba42a875-3428-489e-84f5-b44223159d85.png" alt="Harish Narayan" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Dr. Rajesh Kumar</h3>
-                  <p className="text-sm text-bsd-orange">Faculty, AI & Machine Learning</p>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Harish Narayan</h3>
+                  <p className="text-sm text-bsd-orange">Faculty, UI/UX Design & Product Management</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    With a Ph.D. in Machine Learning and 8 years of experience at leading tech companies, Dr. Kumar specializes in neural networks and computer vision. He has published numerous research papers and holds patents in AI applications.
+                    A skilled product manager specializing in UI/UX and collaboration tools. With a post-graduate degree in Management from Great Lakes Institute and a bachelor's in Instrumentation Technology from M S Ramaiah Institute, his expertise in user experience and metrics has led to significant contributions in the tech industry.
                   </p>
                 </div>
               </CardContent>
@@ -41,12 +41,12 @@ export const CustomFacultySection: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&auto=format&fit=crop" alt="Priya Singh" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/121fd226-ad55-481d-b095-79c9e4765b16.png" alt="J. Sheeba Selvapattu" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Priya Singh</h3>
-                  <p className="text-sm text-bsd-orange">Senior Faculty, UI/UX Design</p>
+                  <h3 className="text-lg font-semibold text-bsd-gray">J. Sheeba Selvapattu</h3>
+                  <p className="text-sm text-bsd-orange">Faculty, Computer Science & Cybersecurity</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    A former lead designer at a major tech giant, Priya brings a wealth of experience in user-centered design methodologies. Her expertise in creating intuitive digital experiences across platforms guides students in developing empathetic design solutions.
+                    With a Master's in Information Technology and currently pursuing a Ph.D. in Computer Science, Sheeba brings 4.5 years of experience as a researcher and academician. Her expertise in cybersecurity, cloud computing, and programming languages like Python and Java, along with several Scopus-indexed research publications, enriches the learning experience.
                   </p>
                 </div>
               </CardContent>
@@ -56,12 +56,12 @@ export const CustomFacultySection: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=400&auto=format&fit=crop" alt="Vikram Mehta" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/3e1b6482-f28a-4680-9931-2f728b80d0eb.png" alt="Shyni K C" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Prof. Vikram Mehta</h3>
-                  <p className="text-sm text-bsd-orange">Faculty, Programming & Software Development</p>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Shyni K C</h3>
+                  <p className="text-sm text-bsd-orange">Assistant Professor, Computer Applications</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    A software architect with experience across multiple startups and enterprises, Prof. Mehta specializes in modern software development practices. His practical approach to teaching programming fundamentals ensures students develop strong coding foundations.
+                    An experienced educator with 18 years of teaching experience, Shyni holds a Master's in Computer Applications and a Bachelor's in Mathematics. Her strong foundation in computational thinking and problem-solving drives her passion for mathematics and computer science education, empowering students with critical thinking skills relevant to the evolving tech industry.
                   </p>
                 </div>
               </CardContent>
