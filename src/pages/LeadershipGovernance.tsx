@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
@@ -18,37 +17,37 @@ const LeadershipGovernance = () => {
     setTimeout(() => setIsLoaded(true), 100);
   }, []);
 
-  // Leadership team data - updated with new content
+  // Leadership team data - updated with new images
   const leadershipTeam = [
     {
       name: "Dineshwar S",
       position: "Chairman",
       bio: "A seasoned design professional with over 30 years of experience, Dineshwar S is the guiding force behind BSDT's academic and industry-driven vision. As Co-founder of BSD Educational Trust and Chairman of BSDT, he ensures that the institution remains cutting-edge, globally competitive, and deeply rooted in design excellence.",
-      image: "/lovable-uploads/e0344460-76de-492d-b4fc-2b7557c96db5.png"
+      image: "/lovable-uploads/5d5629b1-de30-46f9-8bef-ebefcac909c5.png"
     },
     {
       name: "Praveen Nandakumar",
       position: "Co-Chairman",
       bio: "As Co-Chairman of BSDT, Praveen Nandakumar is the driving force behind its vision and expansion. He leads the institution across academics, strategy, operations, marketing, and industry collaborations, ensuring BSDT remains at the forefront of design and technology education.",
-      image: "/lovable-uploads/b0bd1350-1b3d-44a7-a043-b876650c169d.png"
+      image: "/lovable-uploads/d1e69b3a-6ece-40bb-ba92-363b7d0f3758.png"
     },
     {
       name: "Karthik Nandakumar",
       position: "Secretary & Treasurer",
       bio: "Karthik Nandakumar oversees BSDT's daily operations, financial planning, and long-term strategy. With a Master's in Finance & Management from the University of Exeter, he ensures efficient resource allocation, institutional growth, and operational excellence.",
-      image: "/lovable-uploads/7d078e54-32f9-4dcf-9af6-9717145d71b7.png"
+      image: "/lovable-uploads/66c6a931-8ba1-4c13-8f59-bcb925328891.png"
     },
     {
       name: "Ar. Preethi Dineshwar",
       position: "Director of Academics",
       bio: "An accomplished architect and academician, Ar. Preethi Dineshwar has been at BSDT since its inception. With over 25 years of experience in architecture and nearly a decade in education, she plays a pivotal role in curriculum development, faculty mentorship, and student engagement.",
-      image: "/lovable-uploads/cf7871df-3c22-4504-ae9f-824fd6ec7804.png"
+      image: "/lovable-uploads/0d8d1a0c-c39b-4ddf-baa2-5736fc824c3d.png"
     },
     {
       name: "Sharan Desai",
       position: "Principal",
       bio: "A specialist in Urban Design & City Planning, Sharan Desai is committed to fostering design innovation that impacts society. His leadership in academic excellence, events, and industry collaborations strengthens BSDT's position as a premier institution in Design & Tech education.",
-      image: "/lovable-uploads/9c2c1fa3-d5a1-4a00-964d-96697da1bbeb.png"
+      image: "/lovable-uploads/4683ed3e-a48d-4e31-a73d-8ad155b2ae4f.png"
     }
   ];
 
@@ -183,7 +182,7 @@ const LeadershipGovernance = () => {
           <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
         </section>
 
-        {/* Leadership Team Section - Updated with new content */}
+        {/* Leadership Team Section - Updated with new images */}
         <RevealSection>
           <div className="container mx-auto px-6 md:px-8 py-16">
             <div className="flex items-center gap-3 mb-8">
