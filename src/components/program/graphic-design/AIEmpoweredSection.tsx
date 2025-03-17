@@ -2,7 +2,7 @@
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Card, CardContent } from "@/components/ui-elements/Card";
-import { Sparkles, Palette, Robot, BrainCircuit, Lightbulb, Shapes, Laptop, Rocket } from "lucide-react";
+import { Sparkles, Palette, Bot, BrainCircuit, Lightbulb, Shapes, Laptop, Rocket } from "lucide-react";
 
 export const AIEmpoweredSection: React.FC = () => {
   const aiFeatures = [
@@ -22,7 +22,7 @@ export const AIEmpoweredSection: React.FC = () => {
       description: "Automate repetitive design tasks while focusing on high-value creative decision making."
     },
     {
-      icon: <Robot className="w-7 h-7 text-bsd-orange" />,
+      icon: <Bot className="w-7 h-7 text-bsd-orange" />,
       title: "AI Collaboration",
       description: "Develop skills to effectively collaborate with AI as a creative partner in design processes."
     },
