@@ -45,6 +45,7 @@ const App = () => (
             <Route path="/programs/bsc-cs-analytics-security" element={<ProgramBScCS />} />
             <Route path="/programs/bdes-interaction-experience" element={<ProgramInteractionExperience />} />
             <Route path="/programs/bdes-architectural-design" element={<ProgramArchitecturalDesign />} />
+            <Route path="/programs/bdes-architectural-construction" element={<ProgramArchitecturalDesign />} />
             
             {/* Admissions Routes */}
             <Route path="/admissions/application-process" element={<ApplicationProcess />} />
