@@ -100,5 +100,82 @@ export const facultyMembers: FacultyMember[] = [
     qualifications: "Ph.D. in Management, MBA from IIM",
     specialization: "Strategic Management, Organizational Behavior, Innovation Management",
     achievements: "Published research in top-tier journals, Consulting experience with Fortune 500 companies"
+  },
+  {
+    id: 10,
+    name: "Dr. Deepa Rajan",
+    role: "Faculty, Business Management",
+    bio: "Dr. Deepa has 12+ years of experience in teaching business administration and entrepreneurship. Her research focuses on sustainable business practices and startup ecosystems in emerging markets.",
+    imageUrl: "/lovable-uploads/e717df8a-d41c-41e2-aead-5ec816cebd6e.png",
+    department: 'Management',
+    qualifications: "Ph.D. in Business Administration, MBA",
+    specialization: "Entrepreneurship, Strategic Management, Sustainable Business",
+    achievements: "Published author with multiple research papers on entrepreneurship"
+  },
+  {
+    id: 11,
+    name: "Dr. Prashant Kumar",
+    role: "Faculty, Data Science",
+    bio: "A data science expert with industry and academic experience in machine learning and artificial intelligence applications. Dr. Prashant has contributed to several high-impact projects in both corporate and research settings.",
+    imageUrl: "/lovable-uploads/8b983b3f-fd59-44d3-b5cc-152eeffe62cd.png",
+    department: 'Technology',
+    qualifications: "Ph.D. in Computer Science, M.Tech in AI",
+    specialization: "Machine Learning, Data Analytics, AI Applications",
+    achievements: "Patents in AI technology, Industry consultant for tech startups"
+  },
+  {
+    id: 12,
+    name: "Kiran Kamath",
+    role: "Faculty, Interior Design",
+    bio: "With a background in interior architecture and sustainable design practices, Kiran brings practical insights from residential and commercial projects to the classroom. Her teaching emphasizes the integration of aesthetics with functionality.",
+    imageUrl: "/lovable-uploads/9c2c1fa3-d5a1-4a00-964d-96697da1bbeb.png",
+    department: 'Design',
+    qualifications: "M.Des in Interior Architecture, B.Des",
+    specialization: "Sustainable Design, Residential Spaces, Commercial Interiors",
+    achievements: "Award-winning interior design projects, LEED certification"
+  },
+  {
+    id: 13,
+    name: "Vijay Shankar",
+    role: "Faculty, Animation & VFX",
+    bio: "A veteran in the animation industry with credits in national and international productions, Vijay specializes in character animation and visual effects. His industry connections provide students with practical opportunities and placements.",
+    imageUrl: "/lovable-uploads/9ff3e25b-a93f-40fb-87ff-cd765e063b61.png",
+    department: 'Design',
+    qualifications: "Diploma in Advanced Animation, B.Des in Digital Arts",
+    specialization: "3D Animation, Visual Effects, Character Design",
+    achievements: "Animation credits in internationally released films, Industry mentor"
+  },
+  {
+    id: 14,
+    name: "Radhika Menon",
+    role: "Faculty, Graphic Design",
+    bio: "A practicing graphic designer with expertise in branding, typography, and publication design. Radhika has worked with leading advertising agencies and maintains an active freelance practice alongside teaching.",
+    imageUrl: "/lovable-uploads/af5130bc-a7bc-4348-8951-861078594741.png",
+    department: 'Design',
+    qualifications: "M.Des in Visual Communication, B.F.A",
+    specialization: "Typography, Branding, Publication Design",
+    achievements: "National design awards, International design exhibitions"
+  },
+  {
+    id: 15,
+    name: "Dr. Sunil Patel",
+    role: "Faculty, Architectural Engineering",
+    bio: "With expertise in structural engineering and sustainable architecture, Dr. Sunil combines technical knowledge with design sensibility. His research focuses on innovative building materials and construction technologies.",
+    imageUrl: "/lovable-uploads/dc95fbd7-f3b3-4377-8214-c2506a6e8829.png",
+    department: 'Architecture',
+    qualifications: "Ph.D. in Architectural Engineering, B.Arch",
+    specialization: "Structural Design, Sustainable Materials, Green Building",
+    achievements: "GRIHA evaluator, Research grants in sustainable construction"
+  },
+  {
+    id: 16,
+    name: "Meera Krishnan",
+    role: "Faculty, Interaction Design",
+    bio: "A UX researcher and interaction designer with experience in tech companies and design consultancies. Meera brings human-centered design methodologies to the classroom, with a focus on accessible and inclusive design.",
+    imageUrl: "/lovable-uploads/c9727b90-962e-4b3e-be56-d9c05c7ddcbb.png",
+    department: 'Design',
+    qualifications: "M.Des in Interaction Design, B.Des",
+    specialization: "User Experience, Accessibility, Interactive Systems",
+    achievements: "Patents in interface design, Published research on inclusive design"
   }
 ];
