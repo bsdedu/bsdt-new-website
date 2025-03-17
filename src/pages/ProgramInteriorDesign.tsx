@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -615,3 +616,14 @@ const ProgramInteriorDesign = () => {
       <StudentWorksGallery />
 
       {/* Faculty Section */}
+      <FacultySection />
+
+      {/* Enquiry Form Section */}
+      <EnquiryFormSection />
+
+      <Footer />
+    </>
+  );
+};
+
+export default ProgramInteriorDesign;
