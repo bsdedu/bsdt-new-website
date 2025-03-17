@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent, CardHeader } from "@/components/ui-elements/Card";
-import { Brush, PenTool, Smartphone, Play, Film, Sparkles, Wand2, Box, Package, Image, Layout, MousePointer, Code } from "lucide-react";
+import { Brush, PenTool, Smartphone, Layout, MousePointer, Code } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
 export const SoftwareToolsTab: React.FC = () => {
@@ -48,26 +48,10 @@ export const SoftwareToolsTab: React.FC = () => {
               
               <div className="p-4 bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center mb-2">
-                  <Smartphone className="w-5 h-5 text-bsd-orange mr-2" />
-                  <h5 className="font-medium">InVision Studio</h5>
-                </div>
-                <p className="text-sm text-foreground/70">Screen design and interactive prototyping</p>
-              </div>
-              
-              <div className="p-4 bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                <div className="flex items-center mb-2">
-                  <Image className="w-5 h-5 text-bsd-orange mr-2" />
+                  <Brush className="w-5 h-5 text-bsd-orange mr-2" />
                   <h5 className="font-medium">Adobe Photoshop</h5>
                 </div>
-                <p className="text-sm text-foreground/70">Raster graphics and image editing</p>
-              </div>
-              
-              <div className="p-4 bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                <div className="flex items-center mb-2">
-                  <PenTool className="w-5 h-5 text-bsd-orange mr-2" />
-                  <h5 className="font-medium">Adobe Illustrator</h5>
-                </div>
-                <p className="text-sm text-foreground/70">Vector graphics for icon and logo design</p>
+                <p className="text-sm text-foreground/70">Image editing and digital asset creation</p>
               </div>
             </div>
           </div>
@@ -78,31 +62,15 @@ export const SoftwareToolsTab: React.FC = () => {
           <div>
             <h4 className="text-lg font-medium text-bsd-gray mb-4 flex items-center">
               <MousePointer className="w-5 h-5 text-bsd-orange mr-2" />
-              Prototyping & Testing Tools
+              Prototyping & Wireframing Tools
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               <div className="p-4 bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center mb-2">
-                  <Play className="w-5 h-5 text-bsd-orange mr-2" />
-                  <h5 className="font-medium">ProtoPie</h5>
+                  <Code className="w-5 h-5 text-bsd-orange mr-2" />
+                  <h5 className="font-medium">Axure</h5>
                 </div>
-                <p className="text-sm text-foreground/70">High-fidelity interactive prototyping</p>
-              </div>
-              
-              <div className="p-4 bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                <div className="flex items-center mb-2">
-                  <Film className="w-5 h-5 text-bsd-orange mr-2" />
-                  <h5 className="font-medium">Principle</h5>
-                </div>
-                <p className="text-sm text-foreground/70">Animation and interaction design</p>
-              </div>
-              
-              <div className="p-4 bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                <div className="flex items-center mb-2">
-                  <MousePointer className="w-5 h-5 text-bsd-orange mr-2" />
-                  <h5 className="font-medium">Maze</h5>
-                </div>
-                <p className="text-sm text-foreground/70">Rapid user testing platform</p>
+                <p className="text-sm text-foreground/70">Advanced prototyping and documentation</p>
               </div>
               
               <div className="p-4 bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
@@ -116,17 +84,41 @@ export const SoftwareToolsTab: React.FC = () => {
               <div className="p-4 bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center mb-2">
                   <Smartphone className="w-5 h-5 text-bsd-orange mr-2" />
-                  <h5 className="font-medium">Zeplin</h5>
+                  <h5 className="font-medium">Marvel</h5>
                 </div>
-                <p className="text-sm text-foreground/70">Design handoff and developer collaboration</p>
+                <p className="text-sm text-foreground/70">Rapid prototyping and user testing</p>
               </div>
               
               <div className="p-4 bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center mb-2">
-                  <Code className="w-5 h-5 text-bsd-orange mr-2" />
-                  <h5 className="font-medium">Framer</h5>
+                  <PenTool className="w-5 h-5 text-bsd-orange mr-2" />
+                  <h5 className="font-medium">Balsamiq</h5>
                 </div>
-                <p className="text-sm text-foreground/70">Interactive design with code components</p>
+                <p className="text-sm text-foreground/70">Quick wireframing and low-fidelity mockups</p>
+              </div>
+              
+              <div className="p-4 bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-2">
+                  <Layout className="w-5 h-5 text-bsd-orange mr-2" />
+                  <h5 className="font-medium">FlowMapp</h5>
+                </div>
+                <p className="text-sm text-foreground/70">User flow and sitemap creation tool</p>
+              </div>
+              
+              <div className="p-4 bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-2">
+                  <Smartphone className="w-5 h-5 text-bsd-orange mr-2" />
+                  <h5 className="font-medium">Proto.io</h5>
+                </div>
+                <p className="text-sm text-foreground/70">High-fidelity interactive prototyping</p>
+              </div>
+              
+              <div className="p-4 bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-2">
+                  <MousePointer className="w-5 h-5 text-bsd-orange mr-2" />
+                  <h5 className="font-medium">InVision</h5>
+                </div>
+                <p className="text-sm text-foreground/70">Prototyping and collaboration platform</p>
               </div>
             </div>
           </div>
@@ -137,8 +129,8 @@ export const SoftwareToolsTab: React.FC = () => {
             <p className="mb-4">Our students graduate with expertise in the latest UX/UI tools and methodologies, giving them a competitive edge in the job market and the ability to immediately contribute to design teams.</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
               <div className="p-3">
-                <h5 className="text-xl font-semibold text-bsd-orange">25+</h5>
-                <p className="text-sm text-foreground/70">Design tools covered in curriculum</p>
+                <h5 className="text-xl font-semibold text-bsd-orange">11+</h5>
+                <p className="text-sm text-foreground/70">Industry-standard UX/UI tools</p>
               </div>
               <div className="p-3">
                 <h5 className="text-xl font-semibold text-bsd-orange">100%</h5>
