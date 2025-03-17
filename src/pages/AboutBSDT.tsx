@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
@@ -9,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Card, CardContent, CardHeader } from '../components/ui-elements/Card';
+
 const AboutBSDT = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
@@ -270,7 +270,7 @@ const AboutBSDT = () => {
                   <CardContent className="pt-6">
                     <div className="flex items-start">
                       <div className="mr-4 flex-shrink-0">
-                        <img src="/lovable-uploads/8b983b3f-fd59-44d3-b5cc-152eeffe62cd.png" alt="Mysore University Logo" className="w-16 h-16 object-contain" />
+                        <img src="/lovable-uploads/97b89cbf-3490-4189-ab5a-1029c18072ef.png" alt="Mysore University Logo" className="w-16 h-16 object-contain" />
                       </div>
                       <div>
                         <h4 className="text-lg font-semibold text-bsd-gray mb-2">Mysore University – via Cresta BSD</h4>
@@ -422,7 +422,9 @@ const AboutBSDT = () => {
                         <Card className="border-0 shadow-none">
                           <CardContent className="flex items-center justify-center p-6">
                             <img 
-                              src={index === 0 ? "/lovable-uploads/294f5e6e-f3dc-462d-b5e0-13a1bf147bf7.png" : `/lovable-uploads/8b983b3f-fd59-44d3-b5cc-152eeffe62cd.png`} 
+                              src={index === 0 ? "/lovable-uploads/294f5e6e-f3dc-462d-b5e0-13a1bf147bf7.png" : 
+                                  index === 1 ? "/lovable-uploads/97b89cbf-3490-4189-ab5a-1029c18072ef.png" : 
+                                  `/lovable-uploads/8b983b3f-fd59-44d3-b5cc-152eeffe62cd.png`} 
                               alt={`Partner logo ${index + 1}`} 
                               className="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" 
                             />
