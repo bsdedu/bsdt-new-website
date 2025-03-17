@@ -297,7 +297,7 @@ const AboutBSDT = () => {
                   <CardContent className="pt-6">
                     <div className="flex items-start">
                       <div className="mr-4 flex-shrink-0">
-                        <img src="/lovable-uploads/8b983b3f-fd59-44d3-b5cc-152eeffe62cd.png" alt="Cresta BSD Logo" className="w-16 h-16 object-contain" />
+                        <img src="/lovable-uploads/0ca4c838-d02a-47df-a1ad-43d00ef48c8f.png" alt="Cresta BSD Logo" className="w-16 h-16 object-contain" />
                       </div>
                       <div>
                         <h4 className="text-lg font-semibold text-bsd-gray mb-2">Cresta School of Management, Science & Arts</h4>
@@ -314,7 +314,7 @@ const AboutBSDT = () => {
                   <CardContent className="pt-6">
                     <div className="flex items-start">
                       <div className="mr-4 flex-shrink-0">
-                        <img src="/lovable-uploads/8b983b3f-fd59-44d3-b5cc-152eeffe62cd.png" alt="École Conte Logo" className="w-16 h-16 object-contain" />
+                        <img src="/lovable-uploads/8c54bc32-e626-4a4b-ba4a-e75e84612ca8.png" alt="College De Paris Logo" className="w-16 h-16 object-contain" />
                       </div>
                       <div>
                         <h4 className="text-lg font-semibold text-bsd-gray mb-2">College De Paris – École Conte</h4>
@@ -423,7 +423,9 @@ const AboutBSDT = () => {
                           <CardContent className="flex items-center justify-center p-6">
                             <img 
                               src={index === 0 ? "/lovable-uploads/294f5e6e-f3dc-462d-b5e0-13a1bf147bf7.png" : 
-                                  index === 1 ? "/lovable-uploads/97b89cbf-3490-4189-ab5a-1029c18072ef.png" : 
+                                  index === 1 ? "/lovable-uploads/97b89cbf-3490-4189-ab5a-1029c18072ef.png" :
+                                  index === 2 ? "/lovable-uploads/0ca4c838-d02a-47df-a1ad-43d00ef48c8f.png" :
+                                  index === 3 ? "/lovable-uploads/8c54bc32-e626-4a4b-ba4a-e75e84612ca8.png" :
                                   `/lovable-uploads/8b983b3f-fd59-44d3-b5cc-152eeffe62cd.png`} 
                               alt={`Partner logo ${index + 1}`} 
                               className="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" 
