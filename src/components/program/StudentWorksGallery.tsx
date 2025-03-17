@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
@@ -12,13 +13,28 @@ import {
 } from "@/components/ui/carousel";
 import { useLocation } from 'react-router-dom';
 
+// Define a common project type
+interface Project {
+  id: number;
+  title: string;
+  student: string;
+  year: string;
+  image: string;
+}
+
+// Define a type for project categories
+interface ProjectCategory {
+  id: string;
+  name: string;
+}
+
 export const StudentWorksGallery: React.FC = () => {
   const location = useLocation();
   const isInteriorDesignProgram = location.pathname.includes('interior-design');
   const isAnimationGameProgram = location.pathname.includes('animation-game-design');
   
   // Categories based on program type
-  let projectCategories = [
+  let projectCategories: ProjectCategory[] = [
     { id: "branding", name: "Branding Projects" },
     { id: "digital", name: "Digital Design" },
     { id: "print", name: "Print & Editorial" },
@@ -58,6 +74,10 @@ export const StudentWorksGallery: React.FC = () => {
       { id: 3, title: "Biophilic Design Home", student: "Ananya Desai", year: "2022", image: "/lovable-uploads/eae8547f-d58b-4033-9238-f06feb28240f.png" },
       { id: 4, title: "Adaptive Reuse Project", student: "Sanjay Varma", year: "2022", image: "https://images.unsplash.com/photo-1600563438938-a9a27216b4f5?w=800&auto=format&fit=crop" },
     ],
+    // Add these properties to match the expected type
+    branding: [],
+    digital: [],
+    print: []
   };
   
   const graphicProjects = {
@@ -79,6 +99,10 @@ export const StudentWorksGallery: React.FC = () => {
       { id: 3, title: "Book Cover Series", student: "Rohan Murthy", year: "2022", image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=800&auto=format&fit=crop" },
       { id: 4, title: "Packaging Design Collection", student: "Neha Gupta", year: "2022", image: "https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?w=800&auto=format&fit=crop" },
     ],
+    // Add these properties to match interior projects structure (empty arrays)
+    residential: [],
+    commercial: [],
+    conceptual: []
   };
   
   // Animation & Game Design specific projects
@@ -101,14 +125,24 @@ export const StudentWorksGallery: React.FC = () => {
       { id: 3, title: "Stylized Character Models", student: "Aditya Raj", year: "2022", image: "https://images.unsplash.com/photo-1601987177651-8edfe6c20009?w=800&auto=format&fit=crop" },
       { id: 4, title: "Concept Art Series", student: "Nisha Kamdar", year: "2022", image: "https://images.unsplash.com/photo-1518331647614-7a1f04cd34cf?w=800&auto=format&fit=crop" },
     ],
+    // Add these properties to match the expected type
+    branding: [],
+    digital: [],
+    print: [],
+    residential: [],
+    commercial: [],
+    conceptual: []
   };
   
+  // Define a common type for all project collections
+  type ProjectsCollection = typeof graphicProjects;
+  
   // Choose projects based on program type
-  let projects = graphicProjects;
+  let projects: ProjectsCollection = graphicProjects;
   if (isInteriorDesignProgram) {
-    projects = interiorProjects;
+    projects = interiorProjects as ProjectsCollection;
   } else if (isAnimationGameProgram) {
-    projects = animationProjects;
+    projects = animationProjects as ProjectsCollection;
   }
   
   // Choose default tab based on program type
@@ -151,42 +185,45 @@ export const StudentWorksGallery: React.FC = () => {
             </div>
             
             {Object.entries(projects).map(([category, categoryProjects]) => (
-              <TabsContent key={category} value={category} className="mt-0">
-                <div className="relative px-4 md:px-10">
-                  <Carousel 
-                    opts={{
-                      align: "start",
-                      loop: true,
-                    }}
-                    className="w-full"
-                  >
-                    <CarouselContent>
-                      {categoryProjects.map(project => (
-                        <CarouselItem key={project.id} className="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 pl-4">
-                          <Card className="overflow-hidden border-0 shadow-md transition-all duration-300 hover:shadow-xl h-full">
-                            <div className="aspect-[4/3] w-full overflow-hidden">
-                              <img 
-                                src={project.image} 
-                                alt={project.title} 
-                                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                              />
-                            </div>
-                            <div className="p-4">
-                              <h3 className="font-medium text-bsd-gray">{project.title}</h3>
-                              <div className="flex justify-between items-center mt-1">
-                                <p className="text-sm text-foreground/70">{project.student}</p>
-                                <Badge variant="outline" className="text-xs">{project.year}</Badge>
+              // Only render tabs for categories that have projects and are in the current program
+              projectCategories.some(pc => pc.id === category) && categoryProjects.length > 0 ? (
+                <TabsContent key={category} value={category} className="mt-0">
+                  <div className="relative px-4 md:px-10">
+                    <Carousel 
+                      opts={{
+                        align: "start",
+                        loop: true,
+                      }}
+                      className="w-full"
+                    >
+                      <CarouselContent>
+                        {categoryProjects.map(project => (
+                          <CarouselItem key={project.id} className="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 pl-4">
+                            <Card className="overflow-hidden border-0 shadow-md transition-all duration-300 hover:shadow-xl h-full">
+                              <div className="aspect-[4/3] w-full overflow-hidden">
+                                <img 
+                                  src={project.image} 
+                                  alt={project.title} 
+                                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                                />
                               </div>
-                            </div>
-                          </Card>
-                        </CarouselItem>
-                      ))}
-                    </CarouselContent>
-                    <CarouselPrevious className="left-1 md:left-0" />
-                    <CarouselNext className="right-1 md:right-0" />
-                  </Carousel>
-                </div>
-              </TabsContent>
+                              <div className="p-4">
+                                <h3 className="font-medium text-bsd-gray">{project.title}</h3>
+                                <div className="flex justify-between items-center mt-1">
+                                  <p className="text-sm text-foreground/70">{project.student}</p>
+                                  <Badge variant="outline" className="text-xs">{project.year}</Badge>
+                                </div>
+                              </div>
+                            </Card>
+                          </CarouselItem>
+                        ))}
+                      </CarouselContent>
+                      <CarouselPrevious className="left-1 md:left-0" />
+                      <CarouselNext className="right-1 md:right-0" />
+                    </Carousel>
+                  </div>
+                </TabsContent>
+              ) : null
             ))}
           </Tabs>
         </RevealSection>
