@@ -47,13 +47,13 @@ export const NavItem: React.FC<NavItemProps> = ({ item }) => {
   
   if (item.type === 'megamenu' && item.categories) {
     return (
-      <NavigationMenuItem className="relative">
+      <NavigationMenuItem>
         <NavigationMenuTrigger 
           className="bg-transparent text-bsd-gray hover:text-bsd-orange hover:bg-transparent focus:bg-transparent"
         >
           {item.name}
         </NavigationMenuTrigger>
-        <NavigationMenuContent className="absolute left-0 top-full">
+        <NavigationMenuContent>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 w-[800px] max-w-screen-lg bg-white shadow-lg rounded-md">
             {item.categories.map((category, index) => (
               <div key={index} className="space-y-3">
@@ -90,13 +90,13 @@ export const NavItem: React.FC<NavItemProps> = ({ item }) => {
   }
   
   return (
-    <NavigationMenuItem className="relative">
+    <NavigationMenuItem>
       <NavigationMenuTrigger 
         className="bg-transparent text-bsd-gray hover:text-bsd-orange hover:bg-transparent focus:bg-transparent"
       >
         {item.name}
       </NavigationMenuTrigger>
-      <NavigationMenuContent className="absolute left-0 top-full">
+      <NavigationMenuContent>
         <ul className="grid w-[250px] gap-1 p-2 bg-white shadow-lg rounded-md">
           {item.items?.map((subItem) => (
             <li key={subItem.name}>

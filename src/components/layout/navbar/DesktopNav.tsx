@@ -12,8 +12,8 @@ type DesktopNavProps = {
 export const DesktopNav: React.FC<DesktopNavProps> = ({ navStructure }) => {
   return (
     <div className="hidden md:flex items-center space-x-6">
-      <NavigationMenu>
-        <NavigationMenuList>
+      <NavigationMenu className="relative">
+        <NavigationMenuList className="space-x-2">
           {navStructure.map((item) => (
             <NavItem key={item.name} item={item} />
           ))}
