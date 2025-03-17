@@ -53,7 +53,6 @@ export const AIEmpoweredSection: React.FC = () => {
       <div className="container mx-auto px-6 md:px-8">
         <RevealSection>
           <div className="text-center mb-12">
-            <h6 className="text-bsd-orange font-medium mb-3">FUTURE-READY EDUCATION</h6>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray mb-4">
               AI-Empowered Design Curriculum
             </h2>
