@@ -4,6 +4,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Helmet } from 'react-helmet-async';
 import { EnquiryFormSection } from "@/components/home/EnquiryFormSection";
+import { StudentWorksGallery } from "@/components/program/StudentWorksGallery";
 import { HeroSection } from "@/components/program/interaction-experience/HeroSection";
 import { ProgramOverviewSection } from "@/components/program/interaction-experience/ProgramOverviewSection";
 import { CustomFacultySection } from "@/components/program/interaction-experience/CustomFacultySection";
@@ -21,6 +22,7 @@ const ProgramInteractionExperience = () => {
 
       <HeroSection />
       <ProgramOverviewSection />
+      <StudentWorksGallery />
       <CustomFacultySection />
       <StudioSection />
       <EnquiryFormSection />
