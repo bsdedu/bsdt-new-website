@@ -145,7 +145,7 @@ export const bcaProjects: ProjectCollection = {
     { id: 4, title: "Healthcare Data Analysis", student: "Meera Reddy", year: "2022", image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop" },
   ],
   webapps: [
-    { id: 1, title: "Fitness Tracking App", student: "Vivek Nair", year: "2023", image: "/lovable-uploads/e89cc1d4-b789-4ae4-8c9a-5d9bb88744cd.png" },
+    { id: 1, title: "Fitness Tracking App", student: "Vivek Nair", year: "2023", image: "/lovable-uploads/4d6b6f53-ef13-4f6a-82f1-34bc6295f8f6.png" },
     { id: 2, title: "Recipe Sharing Platform", student: "Maya Desai", year: "2023", image: "/lovable-uploads/b6c8d2f5-ebe8-45b6-98da-bacea2355570.png" },
     { id: 3, title: "Student Collaboration Tool", student: "Rohit Malhotra", year: "2022", image: "/lovable-uploads/1cdeaa2b-5009-4a7d-b2fa-a912996acf79.png" },
     { id: 4, title: "Inventory Management System", student: "Ankit Shah", year: "2022", image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=800&auto=format&fit=crop" },
