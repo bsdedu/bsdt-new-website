@@ -1,15 +1,16 @@
-
 import React from 'react';
 import { cn } from "@/lib/utils";
 import { Button, ButtonProps } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 interface AnimatedButtonProps extends ButtonProps {
   delay?: number;
   hoverEffect?: 'slide' | 'glow' | 'scale' | 'pulse';
+  href?: string;
 }
 
 const AnimatedButton = React.forwardRef<HTMLButtonElement, AnimatedButtonProps>(
-  ({ className, children, delay = 0, hoverEffect = 'slide', ...props }, ref) => {
+  ({ className, children, delay = 0, hoverEffect = 'slide', href, ...props }, ref) => {
     
     const getHoverClasses = () => {
       switch (hoverEffect) {
@@ -26,6 +27,29 @@ const AnimatedButton = React.forwardRef<HTMLButtonElement, AnimatedButtonProps>(
       }
     };
     
+    // If href is provided, render as a Link
+    if (href) {
+      return (
+        <Link to={href}>
+          <Button
+            className={cn(
+              getHoverClasses(),
+              className
+            )}
+            style={{
+              animationDelay: delay ? `${delay}ms` : '0ms',
+            }}
+            {...props}
+          >
+            <span className="transition-all duration-300">
+              {children}
+            </span>
+          </Button>
+        </Link>
+      );
+    }
+    
+    // Otherwise, render as a regular button
     return (
       <Button
         ref={ref}
