@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
@@ -56,8 +55,8 @@ export const CustomFacultySection: React.FC = () => {
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
                     <img src="/lovable-uploads/af5130bc-a7bc-4348-8951-861078594741.png" alt="Amalan" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Amalan</h3>
-                  <p className="text-sm text-bsd-orange">Faculty</p>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Amalan Bharali</h3>
+                  <p className="text-sm text-bsd-orange">Faculty, Graphic Design</p>
                   <p className="mt-4 text-sm text-foreground/70">
                     An award-winning typographer and print design specialist, Amalan combines traditional craftsmanship with contemporary applications. His work has been featured in international design publications, and he maintains an active practice alongside his teaching responsibilities.
                   </p>
