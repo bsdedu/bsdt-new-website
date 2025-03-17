@@ -444,35 +444,6 @@ const AboutBSDT = () => {
           </div>
         </RevealSection>
 
-        {/* Campus Facilities */}
-        <RevealSection>
-          <div className="container mx-auto px-6 md:px-8 py-16">
-            <h2 className="text-3xl font-bold text-bsd-gray mb-12 text-center">Campus Facilities</h2>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <div className="overflow-hidden rounded-lg mb-8">
-                  <img src="/lovable-uploads/fb0f9a42-b665-42ed-a4f5-50557f6a5093.png" alt="Design Studio" className="w-full h-auto rounded-lg hover:scale-105 transition-transform duration-500" />
-                </div>
-                <h3 className="text-xl font-semibold text-bsd-gray mb-3">State-of-the-Art Design Studios</h3>
-                <p className="text-bsd-gray/80">
-                  Our spacious design studios are equipped with the latest tools and technologies, providing an optimal environment for creativity and collaboration.
-                </p>
-              </div>
-              
-              <div>
-                <div className="overflow-hidden rounded-lg mb-8">
-                  <img src="/lovable-uploads/c72be9c4-87fc-415a-a4fb-8e3db30e45cf.png" alt="Computer Lab" className="w-full h-auto rounded-lg hover:scale-105 transition-transform duration-500" />
-                </div>
-                <h3 className="text-xl font-semibold text-bsd-gray mb-3">Advanced Technology Labs</h3>
-                <p className="text-bsd-gray/80">
-                  Our computer labs feature high-performance workstations with industry-standard software, enabling students to bring their creative visions to life.
-                </p>
-              </div>
-            </div>
-          </div>
-        </RevealSection>
-
         {/* Vision & Values CTA */}
         <RevealSection>
           <div className="bg-bsd-orange/10 py-16">
