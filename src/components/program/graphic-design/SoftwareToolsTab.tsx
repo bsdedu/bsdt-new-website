@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent, CardHeader } from "@/components/ui-elements/Card";
-import { Brush, PenTool, Shapes, Play, Film, Sparkles, Wand2, Box, Cube, Image } from "lucide-react";
+import { Brush, PenTool, Shapes, Play, Film, Sparkles, Wand2, Box, Package, Image } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
 export const SoftwareToolsTab: React.FC = () => {
@@ -99,7 +99,7 @@ export const SoftwareToolsTab: React.FC = () => {
               
               <div className="p-4 bg-bsd-orange/5 rounded-lg border border-bsd-orange/10 hover:shadow-md transition-shadow">
                 <div className="flex items-center mb-2">
-                  <Cube className="w-5 h-5 text-bsd-orange mr-2" />
+                  <Package className="w-5 h-5 text-bsd-orange mr-2" />
                   <h5 className="font-medium">BLENDER</h5>
                 </div>
                 <p className="text-sm text-foreground/70">3D modeling and animation with AI capabilities</p>
@@ -107,7 +107,7 @@ export const SoftwareToolsTab: React.FC = () => {
               
               <div className="p-4 bg-bsd-orange/5 rounded-lg border border-bsd-orange/10 hover:shadow-md transition-shadow">
                 <div className="flex items-center mb-2">
-                  <Cube className="w-5 h-5 text-bsd-orange mr-2" />
+                  <Box className="w-5 h-5 text-bsd-orange mr-2" />
                   <h5 className="font-medium">SPLINE 3D Advanced</h5>
                 </div>
                 <p className="text-sm text-foreground/70">Advanced 3D design and modeling with AI enhancements</p>
