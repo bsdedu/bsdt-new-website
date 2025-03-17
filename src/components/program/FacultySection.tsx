@@ -18,19 +18,19 @@ export const FacultySection: React.FC = () => {
       name: "Dipti Dineshwar",
       role: "Senior Design Faculty",
       bio: "An architect from BMS School of Architecture with experience in Bangalore and Jaipur. Dipti leads academic programs at BSD, helping students develop design skills through workshops and projects. She specializes in design theory and architectural history, with a Harvard certification in 'The Architectural Imagination'.",
-      imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?fit=crop&w=300&h=300",
+      imageUrl: "/lovable-uploads/796f352b-67e6-4210-9634-1eebb7b9b5eb.png",
     },
     {
       name: "Jainy Steve George",
       role: "Lead Faculty",
       bio: "An architect graduate from Manipal School of Architecture with international experience. Jainy has worked on architectural projects in Bahrain and Bangalore, including residential and commercial designs. She has contributed to the Ministry of Education in Bahrain and commercial projects in Saudi Arabia.",
-      imageUrl: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?fit=crop&w=300&h=300",
+      imageUrl: "/lovable-uploads/60503a43-efdf-4b52-b5eb-9820520a9f2c.png",
     },
     {
       name: "Aditha Verma Raj",
       role: "Senior Design Faculty",
       bio: "An architecture graduate from Thiagarajar School of Architecture with over eight years of professional experience in hotels, commercial buildings, and luxury villas. Currently a senior architect at Design Studio, Aditha has been with BSDT since its inception, mentoring students and providing industry-relevant guidance.",
-      imageUrl: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?fit=crop&w=300&h=300",
+      imageUrl: "/lovable-uploads/cf4f9117-b682-4731-a2bd-2235671a4373.png",
     },
   ];
 
