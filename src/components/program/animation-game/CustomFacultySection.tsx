@@ -26,12 +26,12 @@ export const CustomFacultySection: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Rahul Sharma" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/469b16b9-1a86-4abc-926f-fecba15128d3.png" alt="Lakshmi Gopalakrishna" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Rahul Sharma</h3>
-                  <p className="text-sm text-bsd-orange">Head of Department, Animation</p>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Lakshmi Gopalakrishna</h3>
+                  <p className="text-sm text-bsd-orange">Faculty, Animation</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    With over 15 years of experience in the animation industry, Rahul has worked on projects for Dreamworks, Disney, and several Indian animation studios. His expertise spans traditional and digital animation techniques, with a focus on character animation and storytelling.
+                    A professionally trained educator with a passion for animation, Lakshmi worked with Disney as a 2D animator for five years before transitioning to education. At BSDT, she guides students in developing their animation skills through fundamentals of character design, movement principles, and storytelling techniques while conducting workshops that encourage exploration beyond the curriculum.
                   </p>
                 </div>
               </CardContent>
@@ -41,12 +41,12 @@ export const CustomFacultySection: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Priya Kapoor" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/8c654396-817b-41ba-9b58-67f6362d40ca.png" alt="Yogesh Praveen" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Priya Kapoor</h3>
-                  <p className="text-sm text-bsd-orange">Faculty, Game Design</p>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Yogesh Praveen</h3>
+                  <p className="text-sm text-bsd-orange">Senior Faculty, Game Design</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    Priya is a game designer and developer who has worked on multiple award-winning mobile and PC games. Previously at Ubisoft and Zynga, she specializes in gameplay systems, player experience, and level design. She brings practical industry knowledge and a focus on the latest gaming trends.
+                    Yogesh specializes in game design and development with a background at leading game studios and tech companies. His expertise in Unity, Unreal Engine, and game mechanics provides students with cutting-edge skills for creating immersive interactive experiences in the rapidly evolving gaming industry.
                   </p>
                 </div>
               </CardContent>
@@ -56,12 +56,12 @@ export const CustomFacultySection: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Vikram Mehta" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/af5130bc-a7bc-4348-8951-861078594741.png" alt="Amalan" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Vikram Mehta</h3>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Amalan Bharali</h3>
                   <p className="text-sm text-bsd-orange">Faculty, 3D Modeling & VFX</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    Vikram is a 3D artist and VFX specialist with credits on major films and game titles. His expertise in Autodesk Maya, ZBrush, and Unreal Engine helps students master the technical aspects of 3D creation. At BSDT, he focuses on teaching industry-standard workflows and emerging technologies.
+                    An award-winning 3D artist and VFX specialist, Amalan combines technical precision with artistic vision. His work has been featured in international films and game titles, and he maintains an active practice alongside his teaching responsibilities, bringing the latest industry trends and techniques to the classroom.
                   </p>
                 </div>
               </CardContent>
