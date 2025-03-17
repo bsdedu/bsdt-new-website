@@ -56,7 +56,7 @@ export const HeroSection: React.FC = () => {
 
           <RevealSection direction="left">
             <div className="relative rounded-2xl overflow-hidden shadow-lg h-[400px]">
-              <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=800&auto=format&fit=crop" alt="B.Sc Computer Science" className="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&auto=format&fit=crop" alt="B.Sc Computer Science" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
                 <div className="absolute bottom-0 left-0 p-6">
                   <p className="text-white font-medium text-lg">Comprehensive curriculum with specializations in Data Analytics & Cyber Security</p>
