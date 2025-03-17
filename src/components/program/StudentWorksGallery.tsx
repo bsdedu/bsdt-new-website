@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
@@ -45,7 +46,7 @@ export const StudentWorksGallery: React.FC = () => {
     ],
     conceptual: [
       { id: 1, title: "Sustainable Living Space", student: "Divya Sharma", year: "2023", image: "/lovable-uploads/a9c8ce1e-1529-470a-8999-acff7698cf4f.png" },
-      { id: 2, title: "Future Home Concept", student: "Rohan Kumar", year: "2023", image: "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=800&auto=format&fit=crop" },
+      { id: 2, title: "Future Home Concept", student: "Rohan Kumar", year: "2023", image: "/lovable-uploads/34b0c2a2-04a5-4ea4-a255-4c1741233792.png" },
       { id: 3, title: "Biophilic Design Study", student: "Ananya Desai", year: "2022", image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&auto=format&fit=crop" },
       { id: 4, title: "Adaptive Reuse Project", student: "Sanjay Varma", year: "2022", image: "https://images.unsplash.com/photo-1600563438938-a9a27216b4f5?w=800&auto=format&fit=crop" },
     ],
