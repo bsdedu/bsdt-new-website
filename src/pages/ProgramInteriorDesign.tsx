@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -9,7 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader } from "@/components/ui-elements/Card";
 import { AnimatedButton } from "@/components/ui-elements/AnimatedButton";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Check, BookOpen, Calendar, GraduationCap, Award, BriefcaseBusiness, Building2, Lightbulb, Users, Palette, Ruler, Sofa } from "lucide-react";
+import { Check, BookOpen, Calendar, GraduationCap, Award, BriefcaseBusiness, Building2, Lightbulb, Users, Palette, Ruler, Sofa, Monitor, Code, Laptop, Bot, Cpu, Layers, PenTool } from "lucide-react";
 import { Link } from "react-router-dom";
 import { EnquiryFormSection } from "@/components/home/EnquiryFormSection";
 import { FacultySection } from "@/components/program/FacultySection";
@@ -155,8 +154,9 @@ const ProgramInteriorDesign = () => {
           <RevealSection delay={100}>
             <Tabs defaultValue="curriculum" className="w-full">
               <div className="flex justify-center mb-8">
-                <TabsList className="grid grid-cols-3 w-full max-w-2xl">
+                <TabsList className="grid grid-cols-4 w-full max-w-2xl">
                   <TabsTrigger value="curriculum">Curriculum</TabsTrigger>
+                  <TabsTrigger value="tools">Softwares & AI Tools</TabsTrigger>
                   <TabsTrigger value="outcomes">Learning Outcomes</TabsTrigger>
                   <TabsTrigger value="career">Career Opportunities</TabsTrigger>
                 </TabsList>
@@ -305,6 +305,131 @@ const ProgramInteriorDesign = () => {
                           </div>
                         </li>
                       </ul>
+                    </CardContent>
+                  </Card>
+                </div>
+              </TabsContent>
+              
+              <TabsContent value="tools" className="mt-0">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <Card>
+                    <CardHeader>
+                      <h3 className="text-xl font-semibold text-bsd-gray flex items-center">
+                        <Monitor className="w-5 h-5 mr-2 text-bsd-orange" />
+                        Interior Design Software Tools
+                      </h3>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-6">
+                        <p className="text-foreground/70">
+                          Master essential software tools used in professional interior design practice.
+                        </p>
+                        
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div className="bg-bsd-light-gray/50 p-4 rounded-lg">
+                            <div className="flex items-center mb-2">
+                              <Layers className="w-5 h-5 text-bsd-orange mr-2" />
+                              <h4 className="font-medium text-bsd-gray">3D Modeling & Rendering</h4>
+                            </div>
+                            <ul className="space-y-2 pl-7">
+                              <li className="list-disc text-sm text-foreground/80">SketchUp</li>
+                              <li className="list-disc text-sm text-foreground/80">3Ds Max</li>
+                              <li className="list-disc text-sm text-foreground/80">V-Ray</li>
+                              <li className="list-disc text-sm text-foreground/80">Lumion</li>
+                            </ul>
+                          </div>
+                          
+                          <div className="bg-bsd-light-gray/50 p-4 rounded-lg">
+                            <div className="flex items-center mb-2">
+                              <PenTool className="w-5 h-5 text-bsd-orange mr-2" />
+                              <h4 className="font-medium text-bsd-gray">Technical Drawing</h4>
+                            </div>
+                            <ul className="space-y-2 pl-7">
+                              <li className="list-disc text-sm text-foreground/80">AutoCAD</li>
+                              <li className="list-disc text-sm text-foreground/80">Autodesk Revit - Basic</li>
+                              <li className="list-disc text-sm text-foreground/80">Autodesk Revit - Advanced</li>
+                              <li className="list-disc text-sm text-foreground/80">RHINO-Basic</li>
+                            </ul>
+                          </div>
+                          
+                          <div className="bg-bsd-light-gray/50 p-4 rounded-lg">
+                            <div className="flex items-center mb-2">
+                              <Palette className="w-5 h-5 text-bsd-orange mr-2" />
+                              <h4 className="font-medium text-bsd-gray">Design & Visualization</h4>
+                            </div>
+                            <ul className="space-y-2 pl-7">
+                              <li className="list-disc text-sm text-foreground/80">Adobe Photoshop</li>
+                              <li className="list-disc text-sm text-foreground/80">Adobe InDesign</li>
+                              <li className="list-disc text-sm text-foreground/80">Enscape</li>
+                            </ul>
+                          </div>
+                          
+                          <div className="bg-bsd-light-gray/50 p-4 rounded-lg">
+                            <div className="flex items-center mb-2">
+                              <Laptop className="w-5 h-5 text-bsd-orange mr-2" />
+                              <h4 className="font-medium text-bsd-gray">Other Professional Tools</h4>
+                            </div>
+                            <ul className="space-y-2 pl-7">
+                              <li className="list-disc text-sm text-foreground/80">Grasshopper</li>
+                              <li className="list-disc text-sm text-foreground/80">3D Printing</li>
+                              <li className="list-disc text-sm text-foreground/80">Virtual Tour Creation</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-bsd-orange/5 border-bsd-orange/20">
+                    <CardHeader>
+                      <h3 className="text-xl font-semibold text-bsd-gray flex items-center">
+                        <Bot className="w-5 h-5 mr-2 text-bsd-orange" />
+                        AI Tools for Interior Design
+                      </h3>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-6">
+                        <p className="text-foreground/70">
+                          Learn cutting-edge AI tools that are transforming the interior design industry.
+                        </p>
+                        
+                        <div className="space-y-4">
+                          <div className="bg-white p-4 rounded-lg shadow-sm">
+                            <div className="flex items-center mb-2">
+                              <Cpu className="w-5 h-5 text-bsd-orange mr-2" />
+                              <h4 className="font-medium text-bsd-gray">AI-Powered Design Tools</h4>
+                            </div>
+                            <ul className="space-y-2 pl-7">
+                              <li className="list-disc text-sm text-foreground/80">Dawn AI</li>
+                              <li className="list-disc text-sm text-foreground/80">Midjourney</li>
+                              <li className="list-disc text-sm text-foreground/80">COOHOM</li>
+                              <li className="list-disc text-sm text-foreground/80">Planner 5D</li>
+                            </ul>
+                          </div>
+                          
+                          <div className="bg-white p-4 rounded-lg shadow-sm">
+                            <div className="flex items-center mb-2">
+                              <Code className="w-5 h-5 text-bsd-orange mr-2" />
+                              <h4 className="font-medium text-bsd-gray">AR/VR & Simulation Tools</h4>
+                            </div>
+                            <ul className="space-y-2 pl-7">
+                              <li className="list-disc text-sm text-foreground/80">AR Plan 3D Measure</li>
+                              <li className="list-disc text-sm text-foreground/80">AI Virtual Tour Creator</li>
+                              <li className="list-disc text-sm text-foreground/80">Enscape (AI features)</li>
+                            </ul>
+                          </div>
+                        </div>
+                        
+                        <div className="mt-4 p-4 bg-white rounded-lg border border-bsd-orange/20">
+                          <h4 className="font-medium text-bsd-gray mb-2 flex items-center">
+                            <Lightbulb className="w-4 h-4 text-bsd-orange mr-2" />
+                            How AI is Transforming Interior Design
+                          </h4>
+                          <p className="text-sm text-foreground/70">
+                            Our students gain hands-on experience with the latest AI tools, learning how to harness technology to enhance creativity, streamline workflows, and create innovative design solutions that were previously impossible. This future-focused approach ensures graduates are ready for the evolving landscape of interior design.
+                          </p>
+                        </div>
+                      </div>
                     </CardContent>
                   </Card>
                 </div>
@@ -491,145 +616,3 @@ const ProgramInteriorDesign = () => {
 
       {/* Faculty Section */}
       <FacultySection />
-      
-      {/* BSD Studio Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6 md:px-8">
-          <RevealSection>
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <Badge variant="bsdOrange" className="mb-4">UNIQUE ADVANTAGE</Badge>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
-                BSD Studio: Learn by Doing
-              </h2>
-              <p className="mt-4 text-foreground/70">
-                Experience real-world design projects in our in-house professional design studio.
-              </p>
-            </div>
-          </RevealSection>
-
-          <RevealSection delay={100}>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-              <div className="relative rounded-2xl overflow-hidden h-[500px]">
-                <img 
-                  src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&auto=format&fit=crop" 
-                  alt="BSD Studio" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent">
-                  <div className="absolute bottom-0 left-0 p-8">
-                    <h3 className="text-white text-2xl font-bold mb-2">BSD Studio</h3>
-                    <p className="text-white/80">Students working on real commercial projects</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-bsd-gray">A Unique Learning Experience</h3>
-                <p className="text-foreground/70">
-                  BSD Studio is our in-house design center that takes on real commercial projects. What makes BSDT unique is that no other design college in India offers students this level of hands-on experience with actual client projects.
-                </p>
-                
-                <div className="space-y-4 pt-2">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-4 h-4 text-bsd-orange" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-bsd-gray">Work on Real Client Projects</h4>
-                      <p className="text-sm text-foreground/70">Experience the entire design process from client briefing to final execution</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-4 h-4 text-bsd-orange" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-bsd-gray">Mentorship from Practicing Professionals</h4>
-                      <p className="text-sm text-foreground/70">Learn directly from industry experts working on current projects</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-4 h-4 text-bsd-orange" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-bsd-gray">Build a Professional Portfolio</h4>
-                      <p className="text-sm text-foreground/70">Graduate with actual commercial projects in your portfolio</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-4 h-4 text-bsd-orange" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-bsd-gray">Network with Industry Clients</h4>
-                      <p className="text-sm text-foreground/70">Develop connections with potential employers while still studying</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="pt-4">
-                  <AnimatedButton asChild>
-                    <a href="#enquiry-form" className="hover:no-underline">Apply Now</a>
-                  </AnimatedButton>
-                </div>
-              </div>
-            </div>
-          </RevealSection>
-        </div>
-      </section>
-
-      {/* Eligibility & Admission Section */}
-      <section className="py-16 bg-bsd-light-gray">
-        <div className="container mx-auto px-6 md:px-8">
-          <RevealSection>
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <Badge variant="bsdOrange" className="mb-4">ADMISSIONS</Badge>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
-                Eligibility & Application Process
-              </h2>
-              <p className="mt-4 text-foreground/70">
-                Join our B.Sc Interior Design program and start your journey toward a creative and fulfilling career in interior design.
-              </p>
-            </div>
-          </RevealSection>
-
-          <RevealSection delay={100}>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-              <Card>
-                <CardHeader>
-                  <h3 className="text-xl font-semibold text-bsd-gray">Eligibility Criteria</h3>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-4">
-                    <li className="flex items-start">
-                      <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <Check className="w-4 h-4 text-bsd-orange" />
-                      </div>
-                      <div className="ml-3">
-                        <h4 className="font-medium text-bsd-gray">Academic Qualification</h4>
-                        <p className="text-sm text-foreground/70">10+2 (Higher Secondary) or equivalent with a minimum of 50% aggregate marks from any recognized board</p>
-                      </div>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-          </RevealSection>
-        </div>
-      </section>
-
-      {/* Enquiry Form Section with id for scroll target */}
-      <div id="enquiry-form">
-        <EnquiryFormSection />
-      </div>
-
-      <Footer />
-    </>
-  );
-};
-
-export default ProgramInteriorDesign;
