@@ -9,6 +9,7 @@ import { HeroSection } from "@/components/program/graphic-design/HeroSection";
 import { ProgramOverviewSection } from "@/components/program/graphic-design/ProgramOverviewSection";
 import { CustomFacultySection } from "@/components/program/graphic-design/CustomFacultySection";
 import { StudioSection } from "@/components/program/graphic-design/StudioSection";
+import { AIEmpoweredSection } from "@/components/program/graphic-design/AIEmpoweredSection";
 
 const ProgramGraphicDesign = () => {
   return (
@@ -22,6 +23,7 @@ const ProgramGraphicDesign = () => {
 
       <HeroSection />
       <ProgramOverviewSection />
+      <AIEmpoweredSection />
       <StudentWorksGallery />
       <CustomFacultySection />
       <StudioSection />
