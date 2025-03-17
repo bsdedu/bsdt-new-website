@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
@@ -16,19 +15,28 @@ import { useLocation } from 'react-router-dom';
 export const StudentWorksGallery: React.FC = () => {
   const location = useLocation();
   const isInteriorDesignProgram = location.pathname.includes('interior-design');
+  const isAnimationGameProgram = location.pathname.includes('animation-game-design');
   
   // Categories based on program type
-  const projectCategories = isInteriorDesignProgram 
-    ? [
-        { id: "residential", name: "Residential Spaces" },
-        { id: "commercial", name: "Commercial Projects" },
-        { id: "conceptual", name: "Conceptual Designs" },
-      ]
-    : [
-        { id: "branding", name: "Branding Projects" },
-        { id: "digital", name: "Digital Design" },
-        { id: "print", name: "Print & Editorial" },
-      ];
+  let projectCategories = [
+    { id: "branding", name: "Branding Projects" },
+    { id: "digital", name: "Digital Design" },
+    { id: "print", name: "Print & Editorial" },
+  ];
+  
+  if (isInteriorDesignProgram) {
+    projectCategories = [
+      { id: "residential", name: "Residential Spaces" },
+      { id: "commercial", name: "Commercial Projects" },
+      { id: "conceptual", name: "Conceptual Designs" },
+    ];
+  } else if (isAnimationGameProgram) {
+    projectCategories = [
+      { id: "animation", name: "3D Animation" },
+      { id: "game", name: "Game Design" },
+      { id: "character", name: "Character Design" },
+    ];
+  }
   
   // Program-specific projects data
   const interiorProjects = {
@@ -73,11 +81,43 @@ export const StudentWorksGallery: React.FC = () => {
     ],
   };
   
+  // Animation & Game Design specific projects
+  const animationProjects = {
+    animation: [
+      { id: 1, title: "Fantasy World Animation", student: "Arjun Kumar", year: "2023", image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&auto=format&fit=crop" },
+      { id: 2, title: "Animated Short Film", student: "Priya Singh", year: "2023", image: "https://images.unsplash.com/photo-1572177215132-5d7c8191f55f?w=800&auto=format&fit=crop" },
+      { id: 3, title: "3D Character Animation", student: "Rohit Sharma", year: "2022", image: "https://images.unsplash.com/photo-1633355444132-695d5876cd00?w=800&auto=format&fit=crop" },
+      { id: 4, title: "Motion Graphics Showreel", student: "Meera Joshi", year: "2022", image: "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=800&auto=format&fit=crop" },
+    ],
+    game: [
+      { id: 1, title: "Adventure Game Prototype", student: "Vikram Reddy", year: "2023", image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&auto=format&fit=crop" },
+      { id: 2, title: "Mobile Game UI Design", student: "Ananya Gupta", year: "2023", image: "https://images.unsplash.com/photo-1580234811497-9df7fd2f357e?w=800&auto=format&fit=crop" },
+      { id: 3, title: "2D Platformer Game", student: "Karan Mehta", year: "2022", image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&auto=format&fit=crop" },
+      { id: 4, title: "VR Experience Design", student: "Tanya Kapoor", year: "2022", image: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?w=800&auto=format&fit=crop" },
+    ],
+    character: [
+      { id: 1, title: "Fantasy Character Design", student: "Rahul Verma", year: "2023", image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&auto=format&fit=crop" },
+      { id: 2, title: "Game Avatar Collection", student: "Sanjana Patel", year: "2023", image: "https://images.unsplash.com/photo-1634029466991-43a9d8635376?w=800&auto=format&fit=crop" },
+      { id: 3, title: "Stylized Character Models", student: "Aditya Raj", year: "2022", image: "https://images.unsplash.com/photo-1601987177651-8edfe6c20009?w=800&auto=format&fit=crop" },
+      { id: 4, title: "Concept Art Series", student: "Nisha Kamdar", year: "2022", image: "https://images.unsplash.com/photo-1518331647614-7a1f04cd34cf?w=800&auto=format&fit=crop" },
+    ],
+  };
+  
   // Choose projects based on program type
-  const projects = isInteriorDesignProgram ? interiorProjects : graphicProjects;
+  let projects = graphicProjects;
+  if (isInteriorDesignProgram) {
+    projects = interiorProjects;
+  } else if (isAnimationGameProgram) {
+    projects = animationProjects;
+  }
   
   // Choose default tab based on program type
-  const defaultTabValue = isInteriorDesignProgram ? "residential" : "branding";
+  let defaultTabValue = "branding";
+  if (isInteriorDesignProgram) {
+    defaultTabValue = "residential";
+  } else if (isAnimationGameProgram) {
+    defaultTabValue = "animation";
+  }
 
   return (
     <section className="py-16 bg-bsd-light-gray">
@@ -91,6 +131,8 @@ export const StudentWorksGallery: React.FC = () => {
             <p className="mt-4 text-foreground/70">
               {isInteriorDesignProgram 
                 ? "Explore outstanding interior design projects created by our talented students, showcasing their creativity, technical skills, and spatial thinking."
+                : isAnimationGameProgram
+                ? "Explore remarkable animation and game design projects created by our talented students, showcasing their storytelling, technical skills, and digital creativity."
                 : "Explore outstanding graphic design projects created by our talented students, showcasing their creativity, technical skills, and design thinking."}
             </p>
           </div>
