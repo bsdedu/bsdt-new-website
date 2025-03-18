@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
@@ -67,6 +68,7 @@ export const HeroSection: React.FC = () => {
               </div>
             </div>
           </RevealSection>
+        </div>
 
         {/* Quick stats */}
         <RevealSection delay={200}>
