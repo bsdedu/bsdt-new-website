@@ -14,8 +14,8 @@ const ProgramInteriorDesign = () => {
   return (
     <>
       <Helmet>
-        <title>B.Des Interior & Spatial Design | BSDT</title>
-        <meta name="description" content="Pursue a Bachelor of Design in Interior & Spatial Design at Bangalore School of Design & Technology. Learn to create functional, aesthetic interior spaces for residential and commercial settings." />
+        <title>B.Sc Interior Design | BSDT</title>
+        <meta name="description" content="Pursue a Bachelor of Science in Interior Design at Bangalore School of Design & Technology. Learn to create functional, aesthetic interior spaces for residential and commercial settings." />
       </Helmet>
 
       <Navbar />
