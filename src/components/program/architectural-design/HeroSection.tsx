@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 export const HeroSection: React.FC = () => {
   return (
     <section className="relative bg-gradient-to-b from-gray-50 to-white pt-32 pb-24 overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/public/lovable-uploads/84bf2665-5492-457f-8295-f739efb5d307.png')] bg-cover bg-center opacity-10 z-0"></div>
+      <div className="absolute inset-0 bg-[url('/lovable-uploads/1487958449943-2429e8be8625.png')] bg-cover bg-center opacity-10 z-0"></div>
       
       <div className="container mx-auto px-6 md:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -55,7 +55,7 @@ export const HeroSection: React.FC = () => {
             <div className="relative">
               <div className="aspect-w-4 aspect-h-3 rounded-2xl overflow-hidden shadow-xl">
                 <img 
-                  src="/public/lovable-uploads/97b89cbf-3490-4189-ab5a-1029c18072ef.png" 
+                  src="/lovable-uploads/1496307653780-42ee777d4833.png" 
                   alt="Architectural Design Student Working" 
                   className="object-cover w-full h-full"
                 />
