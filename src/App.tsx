@@ -16,7 +16,6 @@ import ProgramBCA from "./pages/ProgramBCA";
 import ProgramBScCS from "./pages/ProgramBScCS";
 import ProgramInteractionExperience from "./pages/ProgramInteractionExperience";
 import ProgramArchitecturalDesign from "./pages/ProgramArchitecturalDesign";
-import ProgramDiplomaInteriorDesign from "./pages/ProgramDiplomaInteriorDesign";
 import ApplicationProcess from "./pages/admissions/ApplicationProcess";
 import FeesScholarships from "./pages/admissions/FeesScholarships";
 import ScheduleVisit from "./pages/admissions/ScheduleVisit";
@@ -47,7 +46,6 @@ const App = () => (
             <Route path="/programs/bdes-interaction-experience" element={<ProgramInteractionExperience />} />
             <Route path="/programs/bdes-architectural-design" element={<ProgramArchitecturalDesign />} />
             <Route path="/programs/bdes-architectural-construction" element={<ProgramArchitecturalDesign />} />
-            <Route path="/programs/diploma-interior-design" element={<ProgramDiplomaInteriorDesign />} />
             
             {/* Admissions Routes */}
             <Route path="/admissions/application-process" element={<ApplicationProcess />} />
