@@ -25,13 +25,13 @@ export const navStructure: NavStructure[] = [
       {
         title: 'UG DEGREE PROGRAMS',
         items: [
-          { name: 'B.Des Interior & Spatial Design', href: '/programs/bsc-interior-design' },
+          { name: 'B.Sc Interior Design', href: '/programs/bsc-interior-design' },
           { name: 'BVA Graphic & Communication Design', href: '/programs/bva-graphic-design' },
           { name: 'BVA Animation & Game Design', href: '/programs/bva-animation-game-design' },
           { name: 'BCA with UI/UX & AI/ML', href: '/programs/bca-uiux-aiml' },
           { name: 'B.Sc Computer Science Data Analytics & Cyber Security', href: '/programs/bsc-cs-analytics-security' },
           { name: 'B.Des in Interaction & Experience Design', href: '/programs/bdes-interaction-experience' },
-          { name: 'B.Des in Architectural Design', href: '/programs/bdes-architectural-design' }
+          { name: 'B.Des in Architectural Construction Design', href: '/programs/bdes-architectural-design' }
         ]
       },
       {
