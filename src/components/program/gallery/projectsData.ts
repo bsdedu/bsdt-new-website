@@ -21,9 +21,6 @@ export const getProjectsForProgram = (programPath: string): ProjectCollection =>
   } else if (programPath.includes('bdes-architectural')) {
     // Create a ProjectCollection for architectural projects which is currently just an array
     return { architectural: architecturalProjects, construction: [], sustainable: [] };
-  } else if (programPath.includes('diploma-uiux')) {
-    // For the UI/UX diploma program, use the UX projects from the interaction design program
-    return { uiux: interactionProjects.ux, interface: interactionProjects.ui, mobile: interactionProjects.interactive };
   }
   // Default to graphic design projects
   return graphicProjects;
