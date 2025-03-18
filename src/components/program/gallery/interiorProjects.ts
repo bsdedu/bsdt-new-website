@@ -1,25 +1,25 @@
 
 import { ProjectCollection } from './types';
 
-// Interior Design projects
+// Interior & Spatial Design projects
 export const interiorProjects: ProjectCollection = {
   residential: [
-    { id: "1", title: "Modern Apartment Redesign", student: "Anika Patel", year: "2023", image: "https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&auto=format&fit=crop" },
-    { id: "2", title: "Minimalist Villa Interior", student: "Raj Sharma", year: "2023", image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&auto=format&fit=crop" },
-    { id: "3", title: "Urban Loft Conversion", student: "Priya Malhotra", year: "2022", image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&auto=format&fit=crop" },
-    { id: "4", title: "Contemporary Home Design", student: "Arjun Kapoor", year: "2022", image: "https://images.unsplash.com/photo-1600585153490-76fb20a32601?w=800&auto=format&fit=crop" },
+    { id: "1", title: "Modern Apartment Renovation", student: "Priya Sharma", year: "2023", image: "/lovable-uploads/4f3de368-ac90-4b0b-b38f-45580d4df068.png" },
+    { id: "2", title: "Minimalist Home Design", student: "Rahul Kapoor", year: "2023", image: "/lovable-uploads/84bf2665-5492-457f-8295-f739efb5d307.png" },
+    { id: "3", title: "Contemporary Villa Interior", student: "Ananya Singh", year: "2022", image: "/lovable-uploads/5798432f-82b3-43e6-a5be-03af3cc31ea4.png" },
+    { id: "4", title: "Urban Loft Redesign", student: "Vikram Reddy", year: "2022", image: "/lovable-uploads/796f352b-67e6-4210-9634-1eebb7b9b5eb.png" },
   ],
   commercial: [
-    { id: "1", title: "Boutique Hotel Lobby", student: "Neha Reddy", year: "2023", image: "https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?w=800&auto=format&fit=crop" },
-    { id: "2", title: "Corporate Office Design", student: "Vikram Singh", year: "2023", image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&auto=format&fit=crop" },
-    { id: "3", title: "Retail Store Design", student: "Maya Joshi", year: "2022", image: "/lovable-uploads/bd80ca6d-217b-4c7b-aa96-351c6bd06122.png" },
-    { id: "4", title: "Restaurant Interior Design", student: "Karan Mehta", year: "2022", image: "https://images.unsplash.com/photo-1537640538966-79f369143f8f?w=800&auto=format&fit=crop" },
+    { id: "1", title: "Boutique Hotel Lobby", student: "Maya Desai", year: "2023", image: "/lovable-uploads/5d5629b1-de30-46f9-8bef-ebefcac909c5.png" },
+    { id: "2", title: "Retail Store Layout", student: "Karan Mehta", year: "2023", image: "/lovable-uploads/7d078e54-32f9-4dcf-9af6-9717145d71b7.png" },
+    { id: "3", title: "Corporate Office Design", student: "Neha Gupta", year: "2022", image: "/lovable-uploads/9c2c1fa3-d5a1-4a00-964d-96697da1bbeb.png" },
+    { id: "4", title: "Restaurant Concept", student: "Arjun Kumar", year: "2022", image: "/lovable-uploads/8b983b3f-fd59-44d3-b5cc-152eeffe62cd.png" },
   ],
   conceptual: [
-    { id: "1", title: "Sustainable Living Space", student: "Divya Sharma", year: "2023", image: "/lovable-uploads/a9c8ce1e-1529-470a-8999-acff7698cf4f.png" },
-    { id: "2", title: "Future Home Concept", student: "Rohan Kumar", year: "2023", image: "/lovable-uploads/34b0c2a2-04a5-4ea4-a255-4c1741233792.png" },
-    { id: "3", title: "Biophilic Design Home", student: "Ananya Desai", year: "2022", image: "/lovable-uploads/eae8547f-d58b-4033-9238-f06feb28240f.png" },
-    { id: "4", title: "Adaptive Reuse Project", student: "Sanjay Varma", year: "2022", image: "https://images.unsplash.com/photo-1600563438938-a9a27216b4f5?w=800&auto=format&fit=crop" },
+    { id: "1", title: "Sustainable Living Space", student: "Aditya Sharma", year: "2023", image: "/lovable-uploads/eab37b09-9b31-4fe2-b26c-92bdf0d74782.png" },
+    { id: "2", title: "Biophilic Design Concept", student: "Sanjana Patel", year: "2023", image: "/lovable-uploads/f8cc79a4-4428-4787-83df-808a715df0a1.png" },
+    { id: "3", title: "Modular Space Solution", student: "Rohit Verma", year: "2022", image: "/lovable-uploads/e48b8c13-052e-4d80-ada8-db3eaf003d21.png" },
+    { id: "4", title: "Adaptive Reuse Project", student: "Ishita Jain", year: "2022", image: "/lovable-uploads/a14f6c87-51d9-46f6-a691-d097e9dd9d7a.png" },
   ],
   // Add empty arrays for other categories for type consistency
   branding: [],
