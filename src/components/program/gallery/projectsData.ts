@@ -19,7 +19,8 @@ export const getProjectsForProgram = (programPath: string): ProjectCollection =>
   } else if (programPath.includes('bdes-interaction-experience')) {
     return interactionProjects;
   } else if (programPath.includes('bdes-architectural')) {
-    return { architectural: architecturalProjects };
+    // Create a ProjectCollection for architectural projects which is currently just an array
+    return { architectural: architecturalProjects, construction: [], sustainable: [] };
   }
   // Default to graphic design projects
   return graphicProjects;

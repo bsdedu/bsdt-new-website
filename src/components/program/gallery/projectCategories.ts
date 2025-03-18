@@ -34,12 +34,45 @@ export const projectCategories: Record<string, Project[]> = {
   ui: interactionProjects.ui || [],
   interactive: interactionProjects.interactive || [],
   
-  // Architectural Design categories
-  architectural: architecturalProjects.architectural || [],
-  construction: architecturalProjects.construction || [],
-  sustainable: architecturalProjects.sustainable || [],
+  // Architectural Design categories - fixed to use array instead of accessing properties
+  architectural: architecturalProjects || [],
+  construction: [],
+  sustainable: [],
 };
 
 // Now we need to make sure that the Project type is also defined here
 // so that we can use it in the ProjectCategories type
 import { Project } from './types';
+
+// Export helper functions that projectsData.ts is expecting
+export const getProjectCategories = (programPath: string): string[] => {
+  if (programPath.includes('interior-design')) {
+    return ['residential', 'commercial', 'conceptual'];
+  } else if (programPath.includes('animation-game-design')) {
+    return ['animation', 'game', 'character'];
+  } else if (programPath.includes('bca-uiux-aiml')) {
+    return ['uiux', 'aiml', 'webapps'];
+  } else if (programPath.includes('bdes-interaction-experience')) {
+    return ['ux', 'ui', 'interactive'];
+  } else if (programPath.includes('bdes-architectural')) {
+    return ['architectural', 'construction', 'sustainable'];
+  }
+  // Default to graphic design categories
+  return ['branding', 'digital', 'print'];
+};
+
+export const getDefaultTabValue = (programPath: string): string => {
+  if (programPath.includes('interior-design')) {
+    return 'residential';
+  } else if (programPath.includes('animation-game-design')) {
+    return 'animation';
+  } else if (programPath.includes('bca-uiux-aiml')) {
+    return 'uiux';
+  } else if (programPath.includes('bdes-interaction-experience')) {
+    return 'ux';
+  } else if (programPath.includes('bdes-architectural')) {
+    return 'architectural';
+  }
+  // Default to graphic design branding
+  return 'branding';
+};
