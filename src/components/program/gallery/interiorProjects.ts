@@ -6,7 +6,7 @@ export const interiorProjects: ProjectCollection = {
   residential: [
     { id: "1", title: "Modern Apartment Renovation", student: "Priya Sharma", year: "2023", image: "/lovable-uploads/bed29529-a644-4c17-8243-336fd531777e.png" },
     { id: "2", title: "Minimalist Home Design", student: "Rahul Kapoor", year: "2023", image: "/lovable-uploads/42704a16-816a-4a24-a602-f88fab23667b.png" },
-    { id: "3", title: "Contemporary Villa Interior", student: "Ananya Singh", year: "2022", image: "/lovable-uploads/5798432f-82b3-43e6-a5be-03af3cc31ea4.png" },
+    { id: "3", title: "Contemporary Villa Interior", student: "Ananya Singh", year: "2022", image: "/lovable-uploads/23609cd5-2cbf-4e98-8211-0b953a25a5c3.png" },
     { id: "4", title: "Urban Loft Redesign", student: "Vikram Reddy", year: "2022", image: "/lovable-uploads/796f352b-67e6-4210-9634-1eebb7b9b5eb.png" },
   ],
   commercial: [
@@ -38,4 +38,3 @@ export const interiorProjects: ProjectCollection = {
   ui: [],
   interactive: []
 };
-
