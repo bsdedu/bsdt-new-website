@@ -1,10 +1,9 @@
-
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader } from "@/components/ui-elements/Card";
-import { Check, Palette, Monitor, Users, BriefcaseBusiness, PenTool, Layout, Home, Ruler, Lightbulb, Brush } from "lucide-react";
+import { Check, Palette, Monitor, Users, BriefcaseBusiness, PenTool, Layout, Home, Ruler, Lightbulb, Brush, Bot } from "lucide-react";
 
 export const ProgramOverviewSection: React.FC = () => {
   return (
@@ -27,7 +26,7 @@ export const ProgramOverviewSection: React.FC = () => {
             <div className="flex justify-center mb-8">
               <TabsList className="grid grid-cols-4 w-full max-w-3xl">
                 <TabsTrigger value="curriculum">Curriculum</TabsTrigger>
-                <TabsTrigger value="software">Software & Tools</TabsTrigger>
+                <TabsTrigger value="software">Software & AI Tools</TabsTrigger>
                 <TabsTrigger value="outcomes">Learning Outcomes</TabsTrigger>
                 <TabsTrigger value="career">Career Opportunities</TabsTrigger>
               </TabsList>
@@ -42,7 +41,7 @@ export const ProgramOverviewSection: React.FC = () => {
                   <CardContent>
                     <div className="space-y-6">
                       <p className="text-foreground/70">
-                        The B.Sc Interior Design program is a 4-year full-time undergraduate course divided into 8 semesters. Each semester builds upon the last, developing both theoretical knowledge and practical design skills.
+                        The B.Sc Interior Design program is a 3-year full-time undergraduate course divided into 6 semesters. Each semester builds upon the last, developing both theoretical knowledge and practical design skills.
                       </p>
                       
                       <div className="space-y-4">
@@ -70,15 +69,15 @@ export const ProgramOverviewSection: React.FC = () => {
                         <ul className="space-y-2">
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Residential Design Studio</span>
+                            <span>Residential & Commercial Design Studio</span>
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Computer-Aided Design (CAD)</span>
+                            <span>Building Systems & Construction</span>
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Building Materials & Construction</span>
+                            <span>Digital Design Tools & 3D Modeling</span>
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
@@ -90,27 +89,7 @@ export const ProgramOverviewSection: React.FC = () => {
                         <ul className="space-y-2">
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Commercial Space Design</span>
-                          </li>
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>3D Visualization & Rendering</span>
-                          </li>
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Furniture Design & Detailing</span>
-                          </li>
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Sustainable Design Practices</span>
-                          </li>
-                        </ul>
-
-                        <h4 className="font-medium text-bsd-gray">Fourth Year: Specialization & Portfolio</h4>
-                        <ul className="space-y-2">
-                          <li className="flex items-start">
-                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Hospitality & Retail Design</span>
+                            <span>Advanced Interior Design Studio</span>
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
@@ -118,11 +97,11 @@ export const ProgramOverviewSection: React.FC = () => {
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Capstone Project & Portfolio Development</span>
+                            <span>Sustainable Design & Smart Interiors</span>
                           </li>
                           <li className="flex items-start">
                             <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
-                            <span>Industry Internship</span>
+                            <span>Capstone Project & Industry Internship</span>
                           </li>
                         </ul>
                       </div>
@@ -202,70 +181,120 @@ export const ProgramOverviewSection: React.FC = () => {
             </TabsContent>
             
             <TabsContent value="software" className="mt-0">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-bsd-orange/10 rounded-full flex items-center justify-center mb-4">
-                    <img src="/placeholder.svg" alt="AutoCAD" className="w-8 h-8" />
-                  </div>
-                  <h3 className="font-semibold">AutoCAD</h3>
-                  <p className="text-sm text-foreground/70 mt-2">2D drafting and documentation</p>
-                </div>
-                
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-bsd-orange/10 rounded-full flex items-center justify-center mb-4">
-                    <img src="/placeholder.svg" alt="SketchUp" className="w-8 h-8" />
-                  </div>
-                  <h3 className="font-semibold">SketchUp</h3>
-                  <p className="text-sm text-foreground/70 mt-2">3D modeling and visualization</p>
-                </div>
-                
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-bsd-orange/10 rounded-full flex items-center justify-center mb-4">
-                    <img src="/placeholder.svg" alt="Revit" className="w-8 h-8" />
-                  </div>
-                  <h3 className="font-semibold">Revit</h3>
-                  <p className="text-sm text-foreground/70 mt-2">Building information modeling</p>
-                </div>
-                
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-bsd-orange/10 rounded-full flex items-center justify-center mb-4">
-                    <img src="/placeholder.svg" alt="3ds Max" className="w-8 h-8" />
-                  </div>
-                  <h3 className="font-semibold">3ds Max</h3>
-                  <p className="text-sm text-foreground/70 mt-2">Advanced 3D modeling and rendering</p>
-                </div>
-                
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-bsd-orange/10 rounded-full flex items-center justify-center mb-4">
-                    <img src="/placeholder.svg" alt="V-Ray" className="w-8 h-8" />
-                  </div>
-                  <h3 className="font-semibold">V-Ray</h3>
-                  <p className="text-sm text-foreground/70 mt-2">Photorealistic rendering</p>
-                </div>
-                
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-bsd-orange/10 rounded-full flex items-center justify-center mb-4">
-                    <img src="/placeholder.svg" alt="Adobe Photoshop" className="w-8 h-8" />
-                  </div>
-                  <h3 className="font-semibold">Photoshop</h3>
-                  <p className="text-sm text-foreground/70 mt-2">Image editing and presentation</p>
-                </div>
-                
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-bsd-orange/10 rounded-full flex items-center justify-center mb-4">
-                    <img src="/placeholder.svg" alt="Adobe Illustrator" className="w-8 h-8" />
-                  </div>
-                  <h3 className="font-semibold">Illustrator</h3>
-                  <p className="text-sm text-foreground/70 mt-2">Vector graphics and diagrams</p>
-                </div>
-                
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-bsd-orange/10 rounded-full flex items-center justify-center mb-4">
-                    <img src="/placeholder.svg" alt="Adobe InDesign" className="w-8 h-8" />
-                  </div>
-                  <h3 className="font-semibold">InDesign</h3>
-                  <p className="text-sm text-foreground/70 mt-2">Portfolio and presentation layouts</p>
-                </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <Card>
+                  <CardHeader>
+                    <h3 className="text-xl font-semibold text-bsd-gray">Interior Design Tools</h3>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+                      <div className="flex flex-col items-center text-center">
+                        <div className="w-16 h-16 bg-bsd-orange/10 rounded-full flex items-center justify-center mb-4">
+                          <Monitor className="w-8 h-8 text-bsd-orange" />
+                        </div>
+                        <h3 className="font-semibold">AutoCAD</h3>
+                        <p className="text-sm text-foreground/70 mt-2">2D drafting</p>
+                      </div>
+                      
+                      <div className="flex flex-col items-center text-center">
+                        <div className="w-16 h-16 bg-bsd-orange/10 rounded-full flex items-center justify-center mb-4">
+                          <Layout className="w-8 h-8 text-bsd-orange" />
+                        </div>
+                        <h3 className="font-semibold">SketchUp</h3>
+                        <p className="text-sm text-foreground/70 mt-2">3D modeling</p>
+                      </div>
+                      
+                      <div className="flex flex-col items-center text-center">
+                        <div className="w-16 h-16 bg-bsd-orange/10 rounded-full flex items-center justify-center mb-4">
+                          <Palette className="w-8 h-8 text-bsd-orange" />
+                        </div>
+                        <h3 className="font-semibold">3Ds Max</h3>
+                        <p className="text-sm text-foreground/70 mt-2">Advanced 3D</p>
+                      </div>
+                      
+                      <div className="flex flex-col items-center text-center">
+                        <div className="w-16 h-16 bg-bsd-orange/10 rounded-full flex items-center justify-center mb-4">
+                          <PenTool className="w-8 h-8 text-bsd-orange" />
+                        </div>
+                        <h3 className="font-semibold">Adobe Suite</h3>
+                        <p className="text-sm text-foreground/70 mt-2">Creative tools</p>
+                      </div>
+                      
+                      <div className="flex flex-col items-center text-center">
+                        <div className="w-16 h-16 bg-bsd-orange/10 rounded-full flex items-center justify-center mb-4">
+                          <Home className="w-8 h-8 text-bsd-orange" />
+                        </div>
+                        <h3 className="font-semibold">Revit</h3>
+                        <p className="text-sm text-foreground/70 mt-2">BIM software</p>
+                      </div>
+                      
+                      <div className="flex flex-col items-center text-center">
+                        <div className="w-16 h-16 bg-bsd-orange/10 rounded-full flex items-center justify-center mb-4">
+                          <Lightbulb className="w-8 h-8 text-bsd-orange" />
+                        </div>
+                        <h3 className="font-semibold">V-Ray</h3>
+                        <p className="text-sm text-foreground/70 mt-2">Rendering</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardHeader>
+                    <h3 className="text-xl font-semibold text-bsd-gray">AI-Powered Tools</h3>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+                      <div className="flex flex-col items-center text-center">
+                        <div className="w-16 h-16 bg-bsd-orange/10 rounded-full flex items-center justify-center mb-4">
+                          <Bot className="w-8 h-8 text-bsd-orange" />
+                        </div>
+                        <h3 className="font-semibold">AR Plan 3D</h3>
+                        <p className="text-sm text-foreground/70 mt-2">AR measurements</p>
+                      </div>
+                      
+                      <div className="flex flex-col items-center text-center">
+                        <div className="w-16 h-16 bg-bsd-orange/10 rounded-full flex items-center justify-center mb-4">
+                          <Bot className="w-8 h-8 text-bsd-orange" />
+                        </div>
+                        <h3 className="font-semibold">COOHOM</h3>
+                        <p className="text-sm text-foreground/70 mt-2">AI design</p>
+                      </div>
+                      
+                      <div className="flex flex-col items-center text-center">
+                        <div className="w-16 h-16 bg-bsd-orange/10 rounded-full flex items-center justify-center mb-4">
+                          <Bot className="w-8 h-8 text-bsd-orange" />
+                        </div>
+                        <h3 className="font-semibold">Enscape</h3>
+                        <p className="text-sm text-foreground/70 mt-2">Real-time renders</p>
+                      </div>
+                      
+                      <div className="flex flex-col items-center text-center">
+                        <div className="w-16 h-16 bg-bsd-orange/10 rounded-full flex items-center justify-center mb-4">
+                          <Bot className="w-8 h-8 text-bsd-orange" />
+                        </div>
+                        <h3 className="font-semibold">Lumion</h3>
+                        <p className="text-sm text-foreground/70 mt-2">3D visualization</p>
+                      </div>
+                      
+                      <div className="flex flex-col items-center text-center">
+                        <div className="w-16 h-16 bg-bsd-orange/10 rounded-full flex items-center justify-center mb-4">
+                          <Bot className="w-8 h-8 text-bsd-orange" />
+                        </div>
+                        <h3 className="font-semibold">Midjourney</h3>
+                        <p className="text-sm text-foreground/70 mt-2">AI imagery</p>
+                      </div>
+                      
+                      <div className="flex flex-col items-center text-center">
+                        <div className="w-16 h-16 bg-bsd-orange/10 rounded-full flex items-center justify-center mb-4">
+                          <Bot className="w-8 h-8 text-bsd-orange" />
+                        </div>
+                        <h3 className="font-semibold">Virtual Tour</h3>
+                        <p className="text-sm text-foreground/70 mt-2">AI tours</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               </div>
             </TabsContent>
             
