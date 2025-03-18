@@ -23,7 +23,7 @@ export const FloatingCallCTA: React.FC = () => {
   
   return (
     <div className={cn(
-      "fixed bottom-10 z-50 transition-all duration-300 ease-in-out", 
+      "fixed bottom-10 z-[99999] transition-all duration-300 ease-in-out", 
       isMobile ? "right-4" : "right-8"
     )}>
       {isExpanded ? (

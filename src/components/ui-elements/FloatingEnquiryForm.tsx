@@ -43,7 +43,7 @@ export const FloatingEnquiryForm = () => {
 
   return (
     <div className={cn(
-      "fixed right-0 top-1/2 -translate-y-1/2 z-[9999] transition-all duration-300",
+      "fixed right-0 top-1/2 -translate-y-1/2 z-[99999]",
       isExpanded ? "translate-x-0" : "translate-x-[calc(100%-2rem)]"
     )}>
       <div className="relative flex items-start">
