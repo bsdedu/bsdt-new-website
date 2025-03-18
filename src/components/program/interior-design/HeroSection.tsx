@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
@@ -56,15 +55,18 @@ export const HeroSection: React.FC = () => {
 
           <RevealSection direction="left">
             <div className="relative rounded-2xl overflow-hidden shadow-lg h-[400px]">
-              <img src="/lovable-uploads/69a68aef-de64-4767-9726-f0cd1fdf07c2.png" alt="Interior Design Studio" className="w-full h-full object-cover" />
+              <img 
+                src="/lovable-uploads/8c6af2d4-79fa-42a5-8f81-fecc0d4bbee6.png" 
+                alt="Modern Retail Interior Design" 
+                className="w-full h-full object-cover" 
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
                 <div className="absolute bottom-0 left-0 p-6">
-                  <p className="text-white font-medium text-lg">Create beautiful functional spaces with professional expertise</p>
+                  <p className="text-white font-medium text-lg">Design innovative retail and commercial spaces</p>
                 </div>
               </div>
             </div>
           </RevealSection>
-        </div>
 
         {/* Quick stats */}
         <RevealSection delay={200}>
