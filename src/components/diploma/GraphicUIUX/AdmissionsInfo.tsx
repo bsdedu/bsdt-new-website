@@ -4,7 +4,7 @@ import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui-elements/Card";
-import { GraduationCap, CalendarClock, IndianRupee, FileText } from "lucide-react";
+import { GraduationCap, CalendarClock, FileText } from "lucide-react";
 import { Link } from 'react-router-dom';
 
 export const AdmissionsInfo: React.FC = () => {
@@ -71,12 +71,12 @@ export const AdmissionsInfo: React.FC = () => {
                   
                   <div>
                     <h4 className="font-semibold text-bsd-gray">Program Structure</h4>
-                    <p className="text-foreground/70">Classroom sessions, practical workshops, industry projects, portfolio development</p>
+                    <p className="text-foreground/70">Online & offline classroom sessions, practical workshops, industry projects, portfolio development</p>
                   </div>
                   
                   <div>
                     <h4 className="font-semibold text-bsd-gray">Class Schedule</h4>
-                    <p className="text-foreground/70">Weekday classes (Monday to Friday, 10:00 AM to 4:00 PM)</p>
+                    <p className="text-foreground/70">Weekday classes (Wed, Thru & Fri, 09:30 AM to 4:30 PM)</p>
                   </div>
                   
                   <div>
@@ -88,38 +88,7 @@ export const AdmissionsInfo: React.FC = () => {
             </Card>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-            <Card>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-bsd-gray mb-6 flex items-center">
-                  <IndianRupee className="w-6 h-6 text-bsd-orange mr-3" />
-                  Fee Structure
-                </h3>
-                
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold text-bsd-gray">Tuition Fee</h4>
-                    <p className="text-foreground/70">₹1,50,000 for the full program</p>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-semibold text-bsd-gray">Additional Costs</h4>
-                    <p className="text-foreground/70">Registration fee: ₹5,000 (non-refundable)</p>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-semibold text-bsd-gray">Payment Options</h4>
-                    <p className="text-foreground/70">Full payment or installment options available</p>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-semibold text-bsd-gray">Scholarships</h4>
-                    <p className="text-foreground/70">Merit-based scholarships available for outstanding applicants</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-8 mb-10">
             <Card>
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold text-bsd-gray mb-6 flex items-center">
