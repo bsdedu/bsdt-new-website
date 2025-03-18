@@ -1,4 +1,3 @@
-
 import { ProjectCollection } from './types';
 
 // Interior & Spatial Design projects
@@ -7,7 +6,7 @@ export const interiorProjects: ProjectCollection = {
     { id: "1", title: "Modern Apartment Renovation", student: "Priya Sharma", year: "2023", image: "/lovable-uploads/bed29529-a644-4c17-8243-336fd531777e.png" },
     { id: "2", title: "Minimalist Home Design", student: "Rahul Kapoor", year: "2023", image: "/lovable-uploads/42704a16-816a-4a24-a602-f88fab23667b.png" },
     { id: "3", title: "Contemporary Villa Interior", student: "Ananya Singh", year: "2022", image: "/lovable-uploads/23609cd5-2cbf-4e98-8211-0b953a25a5c3.png" },
-    { id: "4", title: "Urban Loft Redesign", student: "Vikram Reddy", year: "2022", image: "/lovable-uploads/796f352b-67e6-4210-9634-1eebb7b9b5eb.png" },
+    { id: "4", title: "Urban Loft Redesign", student: "Vikram Reddy", year: "2022", image: "/lovable-uploads/487553cf-3eea-4ef4-b402-210e4f06c515.png" },
   ],
   commercial: [
     { id: "1", title: "Boutique Hotel Lobby", student: "Maya Desai", year: "2023", image: "/lovable-uploads/5d5629b1-de30-46f9-8bef-ebefcac909c5.png" },
