@@ -26,12 +26,12 @@ export const CustomFacultySection: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="/lovable-uploads/275a175a-0d92-43ee-b13d-136f76aa4f00.png" alt="Prof. Ananya Singh" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/f9a81ed0-1eab-4c08-a64b-f26652946746.png" alt="Prof. Dipti Dineshwar" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Prof. Ananya Singh</h3>
-                  <p className="text-sm text-bsd-orange">Program Director, Interior Design</p>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Prof. Dipti Dineshwar</h3>
+                  <p className="text-sm text-bsd-orange">Senior Design Faculty</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    Former design lead at Gensler with 15+ years of experience in residential and commercial interior design. Prof. Singh brings her wealth of international experience to guide students in developing sophisticated design solutions that address contemporary needs.
+                    An architect from BMS School of Architecture with experience in Bangalore and Jaipur. Dipti leads academic programs at BSD, helping students develop design skills through workshops and projects. She specializes in design theory and architectural history, with a Harvard certification in 'The Architectural Imagination'.
                   </p>
                 </div>
               </CardContent>
@@ -41,12 +41,12 @@ export const CustomFacultySection: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="/lovable-uploads/307e4b93-21bc-4e6b-9ee4-096750278ace.png" alt="Prof. Rohan Mehta" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/5b49195f-8e0b-429b-bb86-f02b98960ae7.png" alt="Prof. Jainy Steve George" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Prof. Rohan Mehta</h3>
-                  <p className="text-sm text-bsd-orange">Associate Professor, Spatial Design</p>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Prof. Jainy Steve George</h3>
+                  <p className="text-sm text-bsd-orange">Lead Faculty</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    Award-winning spatial designer specializing in sustainable materials and adaptive reuse. Prof. Mehta's research focuses on innovative approaches to space planning and sustainable design practices that minimize environmental impact.
+                    An architect graduate from Manipal School of Architecture with international experience. Jainy has worked on architectural projects in Bahrain and Bangalore, including residential and commercial designs. She has contributed to the Ministry of Education in Bahrain and commercial projects in Saudi Arabia.
                   </p>
                 </div>
               </CardContent>
@@ -56,12 +56,12 @@ export const CustomFacultySection: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="/lovable-uploads/938cccc7-6337-481e-861d-5cedb08cafd7.png" alt="Prof. Maya Patel" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/8ccec140-104c-4377-af2e-fe1d5d2c5bc9.png" alt="Prof. Aditha Verma Raj" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Prof. Maya Patel</h3>
-                  <p className="text-sm text-bsd-orange">Visiting Faculty, Hospitality Design</p>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Prof. Aditha Verma Raj</h3>
+                  <p className="text-sm text-bsd-orange">Senior Design Faculty</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    Founder of Studio Spatium and expert in hospitality design with projects across Southeast Asia. Prof. Patel brings real-world perspectives to the classroom, helping students understand how to create memorable spaces for hospitality clients.
+                    Architecture graduate from Thiagarajar School of Architecture with over eight years of experience in hotels, commercial buildings, and luxury villas. Currently a senior architect at Design Studio, Aditha has been with BSDT since its inception, mentoring students and providing industry-relevant guidance.
                   </p>
                 </div>
               </CardContent>
@@ -72,3 +72,4 @@ export const CustomFacultySection: React.FC = () => {
     </section>
   );
 };
+
