@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
@@ -26,7 +25,7 @@ export const CustomFacultySection: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="/lovable-uploads/f9a81ed0-1eab-4c08-a64b-f26652946746.png" alt="Prof. Dipti Dineshwar" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/8ccec140-104c-4377-af2e-fe1d5d2c5bc9.png" alt="Prof. Dipti Dineshwar" className="w-full h-full object-cover" />
                   </div>
                   <h3 className="text-lg font-semibold text-bsd-gray">Prof. Dipti Dineshwar</h3>
                   <p className="text-sm text-bsd-orange">Senior Design Faculty</p>
@@ -56,7 +55,7 @@ export const CustomFacultySection: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="/lovable-uploads/8ccec140-104c-4377-af2e-fe1d5d2c5bc9.png" alt="Prof. Aditha Verma Raj" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/f9a81ed0-1eab-4c08-a64b-f26652946746.png" alt="Prof. Aditha Verma Raj" className="w-full h-full object-cover" />
                   </div>
                   <h3 className="text-lg font-semibold text-bsd-gray">Prof. Aditha Verma Raj</h3>
                   <p className="text-sm text-bsd-orange">Senior Design Faculty</p>
@@ -72,4 +71,3 @@ export const CustomFacultySection: React.FC = () => {
     </section>
   );
 };
-
