@@ -56,6 +56,8 @@ export const getProjectCategories = (programPath: string): string[] => {
     return ['ux', 'ui', 'interactive'];
   } else if (programPath.includes('bdes-architectural')) {
     return ['architectural', 'construction', 'sustainable'];
+  } else if (programPath.includes('diploma-uiux')) {
+    return ['uiux', 'ui', 'interactive'];
   }
   // Default to graphic design categories
   return ['branding', 'digital', 'print'];
@@ -72,6 +74,8 @@ export const getDefaultTabValue = (programPath: string): string => {
     return 'ux';
   } else if (programPath.includes('bdes-architectural')) {
     return 'architectural';
+  } else if (programPath.includes('diploma-uiux')) {
+    return 'uiux';
   }
   // Default to graphic design branding
   return 'branding';
