@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
@@ -6,10 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui-elements/Card";
 import { GraduationCap, CalendarClock, FileText } from "lucide-react";
 import { Link } from 'react-router-dom';
-
 export const AdmissionsInfo: React.FC = () => {
-  return (
-    <section className="py-16 bg-bsd-light-gray">
+  return <section className="py-16 bg-bsd-light-gray">
       <div className="container mx-auto px-6 md:px-8">
         <RevealSection>
           <div className="text-center max-w-2xl mx-auto mb-12">
@@ -129,9 +126,7 @@ export const AdmissionsInfo: React.FC = () => {
         <RevealSection delay={200}>
           <div className="text-center">
             <div className="inline-flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white">
-                Download Information Brochure
-              </Button>
+              
               <Link to="/admissions/application-process">
                 <Button size="lg" variant="outline" className="border-bsd-orange text-bsd-orange hover:bg-bsd-orange/10">
                   Apply Now
@@ -141,6 +136,5 @@ export const AdmissionsInfo: React.FC = () => {
           </div>
         </RevealSection>
       </div>
-    </section>
-  );
+    </section>;
 };
