@@ -43,27 +43,27 @@ export const FloatingEnquiryForm = () => {
 
   return (
     <div className={cn(
-      "fixed right-0 top-1/2 -translate-y-1/2 z-50 transition-all duration-300",
-      isExpanded ? "translate-x-0" : "translate-x-[calc(100%-3rem)]"
+      "fixed right-0 top-1/2 -translate-y-1/2 z-[9999] transition-all duration-300",
+      isExpanded ? "translate-x-0" : "translate-x-[calc(100%-2rem)]"
     )}>
       <div className="relative flex">
         {/* Trigger button */}
         <button
           onClick={() => setIsExpanded(!isExpanded)}
           className={cn(
-            "bg-bsd-orange text-white px-3 py-6 rounded-l-lg writing-vertical transform rotate-180 whitespace-nowrap",
-            "hover:bg-bsd-orange/90 transition-colors flex items-center gap-2"
+            "bg-bsd-orange text-white px-2 py-4 rounded-l-lg writing-vertical transform rotate-180 whitespace-nowrap text-sm",
+            "hover:bg-bsd-orange/90 transition-colors flex items-center gap-1"
           )}
           style={{ writingMode: 'vertical-rl' }}
         >
           {isExpanded ? (
             <>
-              <X className="w-4 h-4" />
+              <X className="w-3 h-3" />
               Close
             </>
           ) : (
             <>
-              <MessageSquare className="w-4 h-4" />
+              <MessageSquare className="w-3 h-3" />
               Enquire Now
             </>
           )}
