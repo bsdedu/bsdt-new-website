@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -612,39 +611,4 @@ const ProgramArchitecturalDesign = () => {
                       <h4 className="font-medium text-bsd-gray mb-4">Industry Insights</h4>
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div className="text-center p-4">
-                          <h5 className="text-3xl font-bold text-bsd-orange">₹4-10L</h5>
-                          <p className="text-sm text-foreground/70">Average Starting Salary</p>
-                        </div>
-                        <div className="text-center p-4">
-                          <h5 className="text-3xl font-bold text-bsd-orange">18%</h5>
-                          <p className="text-sm text-foreground/70">Industry Growth Rate</p>
-                        </div>
-                        <div className="text-center p-4">
-                          <h5 className="text-3xl font-bold text-bsd-orange">7L+</h5>
-                          <p className="text-sm text-foreground/70">Jobs by 2025</p>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </TabsContent>
-            </Tabs>
-          </RevealSection>
-        </div>
-      </section>
-
-      {/* Student Works Gallery */}
-      <StudentWorksGallery />
-
-      {/* Faculty Section - Updated to use CustomFacultySection */}
-      <CustomFacultySection />
-
-      {/* Enquiry Form Section */}
-      <EnquiryFormSection />
-
-      <Footer />
-    </>
-  );
-};
-
-export default ProgramArchitecturalDesign;
+                          <h5 className="text-3xl font-
