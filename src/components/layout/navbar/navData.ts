@@ -31,7 +31,7 @@ export const navStructure: NavStructure[] = [
           { name: 'BCA with UI/UX & AI/ML', href: '/programs/bca-uiux-aiml' },
           { name: 'B.Sc Computer Science Data Analytics & Cyber Security', href: '/programs/bsc-cs-analytics-security' },
           { name: 'B.Des in Interaction & Experience Design', href: '/programs/bdes-interaction-experience' },
-          { name: 'B.Des in Architectural Construction Design', href: '/programs/bdes-architectural-construction' }
+          { name: 'B.Des in Architectural Construction Design', href: '/programs/bdes-architectural-design' }
         ]
       },
       {
