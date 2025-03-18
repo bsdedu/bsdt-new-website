@@ -8,7 +8,6 @@ import { StudentWorksGallery } from "@/components/program/StudentWorksGallery";
 import { HeroSection } from "@/components/program/interior-design/HeroSection";
 import { ProgramOverviewSection } from "@/components/program/interior-design/ProgramOverviewSection";
 import { CustomFacultySection } from "@/components/program/interior-design/CustomFacultySection";
-import { StudioSection } from "@/components/program/interior-design/StudioSection";
 
 const ProgramInteriorDesign = () => {
   return (
@@ -28,7 +27,6 @@ const ProgramInteriorDesign = () => {
         category="residential"
       />
       <CustomFacultySection />
-      <StudioSection />
       <EnquiryFormSection />
       
       <Footer />
