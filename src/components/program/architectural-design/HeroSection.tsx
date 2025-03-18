@@ -55,7 +55,7 @@ export const HeroSection: React.FC = () => {
             <div className="relative">
               <div className="aspect-w-4 aspect-h-3 rounded-2xl overflow-hidden shadow-xl">
                 <img 
-                  src="/lovable-uploads/1496307653780-42ee777d4833.png" 
+                  src="/lovable-uploads/1518005020951-eccb494ad742.png" 
                   alt="Architectural Design Student Working" 
                   className="object-cover w-full h-full"
                 />
