@@ -29,7 +29,7 @@ const ProgramDiplomaInteriorDesign = () => {
       />
       <CustomFacultySection />
       <StudioSection />
-      <EnquiryFormSection />
+      <EnquiryFormSection programSpecific={true} />
       
       <Footer />
     </>
