@@ -12,24 +12,24 @@ export const ProgramFeatures: React.FC = () => {
       description: "Our curriculum is crafted in collaboration with industry experts to ensure you learn what's relevant in the current UI/UX landscape."
     },
     {
-      title: "Live Projects & Internships",
-      description: "Work on real-world projects and gain valuable experience through internships with our industry partners."
+      title: "Hands-on Project Work",
+      description: "Apply your skills to real-world projects and build a portfolio that showcases your UI/UX capabilities to potential employers."
     },
     {
       title: "Professional Tools & Software",
-      description: "Master the latest design tools and software used by professionals including Figma, Adobe XD, Sketch, and prototyping tools."
+      description: "Master industry-standard design tools including Figma, Adobe XD, Sketch, and various prototyping tools used by professionals."
     },
     {
       title: "User Research Methods",
-      description: "Learn how to conduct effective user research, interviews, surveys, and usability testing to inform your design decisions."
+      description: "Learn how to conduct effective user research, interviews, usability testing, and create user personas to inform your design decisions."
     },
     {
-      title: "Portfolio Development",
-      description: "Build a professional portfolio showcasing your UI/UX projects, essential for starting your career in the industry."
+      title: "Design Thinking Process",
+      description: "Develop a deep understanding of the design thinking methodology and apply it to solve complex UX problems effectively."
     },
     {
       title: "Career Support",
-      description: "Receive placement assistance, interview preparation, and networking opportunities with potential employers."
+      description: "Receive placement assistance, interview preparation, and networking opportunities with potential employers in the UI/UX field."
     }
   ];
   
@@ -75,7 +75,7 @@ export const ProgramFeatures: React.FC = () => {
                     <div className="mt-1 bg-bsd-orange/10 rounded-full p-1.5 flex-shrink-0">
                       <Check className="w-4 h-4 text-bsd-orange" />
                     </div>
-                    <span>UI/UX Fundamentals & Design Thinking</span>
+                    <span>Design Thinking & UX Fundamentals</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="mt-1 bg-bsd-orange/10 rounded-full p-1.5 flex-shrink-0">
@@ -93,7 +93,7 @@ export const ProgramFeatures: React.FC = () => {
                     <div className="mt-1 bg-bsd-orange/10 rounded-full p-1.5 flex-shrink-0">
                       <Check className="w-4 h-4 text-bsd-orange" />
                     </div>
-                    <span>Visual Design & Interface Design</span>
+                    <span>UI Design & Visual Communication</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="mt-1 bg-bsd-orange/10 rounded-full p-1.5 flex-shrink-0">
@@ -117,19 +117,19 @@ export const ProgramFeatures: React.FC = () => {
                     <div className="mt-1 bg-bsd-orange/10 rounded-full p-1.5 flex-shrink-0">
                       <Check className="w-4 h-4 text-bsd-orange" />
                     </div>
+                    <span>Product Designer</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="mt-1 bg-bsd-orange/10 rounded-full p-1.5 flex-shrink-0">
+                      <Check className="w-4 h-4 text-bsd-orange" />
+                    </div>
                     <span>Interaction Designer</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="mt-1 bg-bsd-orange/10 rounded-full p-1.5 flex-shrink-0">
                       <Check className="w-4 h-4 text-bsd-orange" />
                     </div>
-                    <span>User Experience Researcher</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="mt-1 bg-bsd-orange/10 rounded-full p-1.5 flex-shrink-0">
-                      <Check className="w-4 h-4 text-bsd-orange" />
-                    </div>
-                    <span>Product Designer</span>
+                    <span>UX Researcher</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="mt-1 bg-bsd-orange/10 rounded-full p-1.5 flex-shrink-0">
