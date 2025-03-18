@@ -12,8 +12,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Check, BookOpen, Calendar, GraduationCap, Award, BriefcaseBusiness, Building2, Lightbulb, Users, Palette, Ruler, Sofa, Monitor, Code, Laptop, Bot, Cpu, Layers, PenTool, BrainCircuit } from "lucide-react";
 import { Link } from "react-router-dom";
 import { EnquiryFormSection } from "@/components/home/EnquiryFormSection";
-import { FacultySection } from "@/components/program/FacultySection";
 import { StudentWorksGallery } from "@/components/program/StudentWorksGallery";
+import { CustomFacultySection } from "@/components/program/architectural-design/CustomFacultySection";
 
 const ProgramArchitecturalDesign = () => {
   return (
@@ -636,8 +636,8 @@ const ProgramArchitecturalDesign = () => {
       {/* Student Works Gallery */}
       <StudentWorksGallery />
 
-      {/* Faculty Section */}
-      <FacultySection />
+      {/* Faculty Section - Updated to use CustomFacultySection */}
+      <CustomFacultySection />
 
       {/* Enquiry Form Section */}
       <EnquiryFormSection />
