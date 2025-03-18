@@ -1,10 +1,11 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
+import { FloatingEnquiryForm } from "./components/ui-elements/FloatingEnquiryForm";
+import { FloatingCallCTA } from "./components/ui-elements/FloatingCallCTA";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import AboutBSDT from "./pages/AboutBSDT";
@@ -23,7 +24,6 @@ import Faculty from "./pages/admissions/Faculty";
 import StudioBSD from "./pages/admissions/StudioBSD";
 import BeyondCurriculum from "./pages/admissions/BeyondCurriculum";
 import FAQs from "./pages/admissions/FAQs";
-import { FloatingCallCTA } from "./components/ui-elements/FloatingCallCTA";
 
 const queryClient = new QueryClient();
 
@@ -59,6 +59,7 @@ const App = () => (
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <FloatingEnquiryForm />
           <FloatingCallCTA />
         </BrowserRouter>
       </TooltipProvider>
