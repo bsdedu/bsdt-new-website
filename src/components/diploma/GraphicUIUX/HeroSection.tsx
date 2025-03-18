@@ -32,7 +32,7 @@ export const HeroSection: React.FC = () => {
               </div>
               <div className="flex items-center">
                 <Award className="w-5 h-5 text-bsd-orange mr-2" />
-                <span className="text-bsd-gray font-medium">Professional Certificate</span>
+                <span className="text-bsd-gray font-medium">Professional Certificate Recognised by BSDT</span>
               </div>
             </div>
             
