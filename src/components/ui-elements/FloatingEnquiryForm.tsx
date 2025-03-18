@@ -43,15 +43,15 @@ export const FloatingEnquiryForm = () => {
 
   return (
     <div className={cn(
-      "fixed right-0 top-1/2 -translate-y-1/2 z-[9999] transition-all duration-300",
+      "fixed right-0 top-1/2 -translate-y-1/2 z-[99999] transition-all duration-300",
       isExpanded ? "translate-x-0" : "translate-x-[calc(100%-2rem)]"
     )}>
-      <div className="relative flex items-start">
+      <div className="flex items-start">
         {/* Trigger button */}
         <button
           onClick={() => setIsExpanded(!isExpanded)}
           className={cn(
-            "bg-bsd-orange text-white px-2 py-4 rounded-l-lg writing-vertical transform rotate-180 whitespace-nowrap text-sm sticky top-0",
+            "bg-bsd-orange text-white px-2 py-4 rounded-l-lg writing-vertical transform rotate-180 whitespace-nowrap text-sm",
             "hover:bg-bsd-orange/90 transition-colors flex items-center gap-1"
           )}
           style={{ writingMode: 'vertical-rl' }}
@@ -71,7 +71,7 @@ export const FloatingEnquiryForm = () => {
 
         {/* Form panel */}
         <div className={cn(
-          "bg-white p-6 shadow-lg w-80 border-l border-t border-b border-gray-200 sticky top-0",
+          "bg-white p-6 shadow-lg w-80 border-l border-t border-b border-gray-200",
           isExpanded ? "opacity-100" : "opacity-0 pointer-events-none"
         )}>
           <h3 className="text-lg font-semibold text-bsd-gray mb-4">Quick Enquiry</h3>
