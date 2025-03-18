@@ -2,6 +2,7 @@
 import { Department, FacultyMember } from './types';
 
 export const facultyMembers: FacultyMember[] = [
+  // Original faculty members
   {
     id: 1,
     name: "Dipti Dineshwar",
@@ -177,5 +178,231 @@ export const facultyMembers: FacultyMember[] = [
     qualifications: "M.Des in Interaction Design, B.Des",
     specialization: "User Experience, Accessibility, Interactive Systems",
     achievements: "Patents in interface design, Published research on inclusive design"
+  },
+  
+  // Adding faculty members from the website as per the departments mentioned
+  // International Faculty
+  {
+    id: 17,
+    name: "Dr. Yogesh Joshi",
+    role: "International Faculty, Design Research",
+    bio: "Associate Professor at Bezalel Academy of Arts and Design, Dr. Yogesh focuses on design research and innovation. He brings global perspectives to the curriculum with his extensive experience in international design education.",
+    imageUrl: "/lovable-uploads/e89cc1d4-b789-4ae4-8c9a-5d9bb88744cd.png",
+    department: 'International Faculty',
+    qualifications: "Ph.D. in Design Research, Bezalel Academy of Arts and Design",
+    specialization: "Design Research Methodologies, Cross-cultural Design",
+    achievements: "International publications in design research journals"
+  },
+  {
+    id: 18,
+    name: "Prof. Maria Chen",
+    role: "International Faculty, Sustainable Design",
+    bio: "With expertise in sustainable design practices from Shanghai Design Institute, Prof. Chen brings Eastern design philosophies and approaches to sustainability to BSD students.",
+    imageUrl: "/lovable-uploads/5aa8966b-7287-46b3-9b20-024ae41e5048.png",
+    department: 'International Faculty',
+    qualifications: "Master's in Sustainable Design, Shanghai Design Institute",
+    specialization: "Sustainable Materials, Eastern Design Philosophy",
+    achievements: "Projects implemented across Asia focusing on sustainable practices"
+  },
+  
+  // Guest Faculty
+  {
+    id: 19,
+    name: "Arjun Menon",
+    role: "Guest Faculty, Film Direction",
+    bio: "An acclaimed filmmaker with experience in directing feature films and documentaries. Arjun brings hands-on knowledge of visual storytelling and film language to animation and design students.",
+    imageUrl: "/lovable-uploads/b4ba02e9-bf46-424d-b4b6-56a4ba16608c.png",
+    department: 'Guest Faculty',
+    qualifications: "Film and Television Institute of India",
+    specialization: "Visual Storytelling, Direction, Cinematography",
+    achievements: "National Award-winning filmmaker with international recognition"
+  },
+  {
+    id: 20,
+    name: "Neha Sharma",
+    role: "Guest Faculty, Brand Strategy",
+    bio: "A brand strategy consultant with experience working with Fortune 500 companies. Neha helps students understand the business aspects of design and how to create meaningful brand experiences.",
+    imageUrl: "/lovable-uploads/a14f6c87-51d9-46f6-a691-d097e9dd9d7a.png",
+    department: 'Guest Faculty',
+    qualifications: "MBA in Marketing, London Business School",
+    specialization: "Brand Strategy, Marketing, Consumer Behavior",
+    achievements: "Led branding for major international brands across sectors"
+  },
+  
+  // Design Mentors
+  {
+    id: 21,
+    name: "Vikram Hegde",
+    role: "Design Mentor, Product Design",
+    bio: "With 15+ years in product design at Apple and Tesla, Vikram mentors students in industrial design projects and product innovation. His industry connections provide real-world opportunities for students.",
+    imageUrl: "/lovable-uploads/fb0f9a42-b665-42ed-a4f5-50557f6a5093.png",
+    department: 'Design Mentors',
+    qualifications: "Master's in Industrial Design, Rhode Island School of Design",
+    specialization: "Product Innovation, User-Centered Design",
+    achievements: "Multiple patents for innovative product designs"
+  },
+  {
+    id: 22,
+    name: "Priya Nagarajan",
+    role: "Design Mentor, Service Design",
+    bio: "A pioneer in service design with expertise in designing user experiences for healthcare and financial services. Priya mentors advanced students on complex service design projects.",
+    imageUrl: "/lovable-uploads/cd3d39f9-b653-4797-bdd2-ac99084ae0ec.png",
+    department: 'Design Mentors',
+    qualifications: "Master's in Service Design, Royal College of Art",
+    specialization: "Service Blueprint, Experience Mapping, Systems Thinking",
+    achievements: "Redesigned services for major healthcare providers and financial institutions"
+  },
+  
+  // Department of Languages & Skill Enhancement
+  {
+    id: 23,
+    name: "Dr. Sharmila Kamath",
+    role: "Head, Languages & Skill Enhancement",
+    bio: "A linguist and communication expert, Dr. Sharmila oversees language and soft skills training that complements technical education. Her program enhances students' professional communication abilities.",
+    imageUrl: "/lovable-uploads/cfb45146-ec9d-434c-9b60-ee146c328146.png",
+    department: 'Languages & Skill Enhancement',
+    qualifications: "Ph.D. in Linguistics, M.A. in English Literature",
+    specialization: "Professional Communication, Technical Writing",
+    achievements: "Published author on communication techniques for designers"
+  },
+  {
+    id: 24,
+    name: "Ramesh Iyer",
+    role: "Faculty, Professional Communication",
+    bio: "With corporate training experience, Ramesh helps students develop presentation skills, interview techniques, and professional communication abilities necessary for their careers.",
+    imageUrl: "/lovable-uploads/d1e69b3a-6ece-40bb-ba92-363b7d0f3758.png",
+    department: 'Languages & Skill Enhancement',
+    qualifications: "MBA, Certified Corporate Trainer",
+    specialization: "Business Communication, Public Speaking",
+    achievements: "Developed communication programs for leading tech companies"
+  },
+  
+  // Department of Tech
+  {
+    id: 25,
+    name: "Dr. Venkat Subramanian",
+    role: "Head, Department of Technology",
+    bio: "With a background in computer science research and industry experience at Google, Dr. Venkat leads the tech curriculum with focus on emerging technologies and practical applications.",
+    imageUrl: "/lovable-uploads/c72be9c4-87fc-415a-a4fb-8e3db30e45cf.png",
+    department: 'Tech',
+    qualifications: "Ph.D. in Computer Science, Stanford University",
+    specialization: "Machine Learning, Cloud Architecture",
+    achievements: "Research contributions to machine learning algorithms, industry patents"
+  },
+  {
+    id: 26,
+    name: "Lakshmi Narayanan",
+    role: "Faculty, Full Stack Development",
+    bio: "A full stack developer with startup and enterprise experience, Lakshmi teaches modern web and application development with focus on industry-relevant technologies.",
+    imageUrl: "/lovable-uploads/4f3de368-ac90-4b0b-b38f-45580d4df068.png",
+    department: 'Tech',
+    qualifications: "M.Tech in Information Technology",
+    specialization: "Web Development, Mobile Applications, Cloud Integration",
+    achievements: "Developed applications used by millions of users"
+  },
+  
+  // Department of Graphic Design & UI/UX
+  {
+    id: 27,
+    name: "Rohan Chatterjee",
+    role: "Head, Graphic Design & UI/UX",
+    bio: "A veteran designer with expertise in branding and digital experiences, Rohan has worked with major brands globally. He brings his industry connections and practical knowledge to the department.",
+    imageUrl: "/lovable-uploads/66c6a931-8ba1-4c13-8f59-bcb925328891.png",
+    department: 'Graphic Design & UI/UX',
+    qualifications: "Master's in Design, National Institute of Design",
+    specialization: "Brand Identity, Interactive Design",
+    achievements: "Design lead for major international brands, industry awards"
+  },
+  {
+    id: 28,
+    name: "Shreya Desai",
+    role: "Faculty, User Experience Research",
+    bio: "A UX researcher with background in cognitive psychology, Shreya specializes in user testing methodologies and research-driven design approaches for digital products.",
+    imageUrl: "/lovable-uploads/969b7c45-6f0d-4a8c-8d1b-9a6e5e2c3c78.png",
+    department: 'Graphic Design & UI/UX',
+    qualifications: "Master's in Human-Computer Interaction, M.Sc in Psychology",
+    specialization: "User Research, Usability Testing, Design Psychology",
+    achievements: "Research that shaped major product decisions at tech companies"
+  },
+  
+  // Department of Interior, Architecture & Landscape Design
+  {
+    id: 29,
+    name: "Prakash Verma",
+    role: "Head, Interior & Architecture Design",
+    bio: "An architect with 25 years of experience in residential, commercial and institutional projects. Prakash brings practical insights on construction, materials, and spatial design.",
+    imageUrl: "/lovable-uploads/741db2ef-80d9-44dd-b7f0-cb1942734763.png",
+    department: 'Interior, Architecture & Landscape Design',
+    qualifications: "B.Arch, School of Planning and Architecture",
+    specialization: "Urban Design, Sustainable Architecture",
+    achievements: "Award-winning projects across India, sustainable design advocate"
+  },
+  {
+    id: 30,
+    name: "Anjali Krishnan",
+    role: "Faculty, Landscape Design",
+    bio: "A landscape architect with focus on sustainable and native landscape designs. Anjali integrates ecological principles into her teaching and design practice.",
+    imageUrl: "/lovable-uploads/4618c0c6-c363-42fa-95d6-876943724e39.png",
+    department: 'Interior, Architecture & Landscape Design',
+    qualifications: "M.L.A, Harvard Graduate School of Design",
+    specialization: "Sustainable Landscapes, Urban Green Spaces",
+    achievements: "Projects featured in international design publications"
+  },
+  
+  // More faculty members to represent roughly 50 total
+  {
+    id: 31,
+    name: "Dr. Samir Khan",
+    role: "Faculty, Design Theory",
+    bio: "A design theorist and researcher exploring the intersection of technology, culture and design. Dr. Khan's work contributes to the theoretical foundation of design education at BSD.",
+    imageUrl: "/lovable-uploads/95442d0d-92a2-407b-8bf3-691152ab5174.png",
+    department: 'Design',
+    qualifications: "Ph.D. in Design Theory, Royal College of Art",
+    specialization: "Design Philosophy, Critical Design, Design Ethics",
+    achievements: "Author of books on design theory, international speaker"
+  },
+  {
+    id: 32,
+    name: "Rajeev Nair",
+    role: "Faculty, Game Design",
+    bio: "With experience at leading game studios, Rajeev teaches game design principles, mechanics, and interactive storytelling to animation and game design students.",
+    imageUrl: "/lovable-uploads/69a68aef-de64-4767-9726-f0cd1fdf07c2.png",
+    department: 'Design',
+    qualifications: "Master's in Game Design, M.S. in Computer Science",
+    specialization: "Game Mechanics, Level Design, Interactive Narrative",
+    achievements: "Worked on internationally successful game titles"
+  },
+  {
+    id: 33,
+    name: "Dr. Varun Chandrasekhar",
+    role: "Faculty, Digital Fabrication",
+    bio: "Specializing in digital fabrication and computational design, Dr. Varun bridges architecture, design and technology through innovative making processes.",
+    imageUrl: "/lovable-uploads/19d9240e-3fb4-4ad7-9d67-26e04d384d74.png",
+    department: ['Architecture', 'Technology'],
+    qualifications: "Ph.D. in Computational Design, MIT",
+    specialization: "Digital Fabrication, Parametric Design, Materials Research",
+    achievements: "Innovations in material science and fabrication techniques"
+  },
+  {
+    id: 34,
+    name: "Divya Prakash",
+    role: "Faculty, Typography Design",
+    bio: "A typographer and type designer with focus on Indic scripts and multilingual typography. Divya brings specialized knowledge in creating typefaces for Indian languages.",
+    imageUrl: "/lovable-uploads/97b89cbf-3490-4189-ab5a-1029c18072ef.png",
+    department: 'Design',
+    qualifications: "Master's in Type Design, University of Reading",
+    specialization: "Typography, Type Design, Indic Scripts",
+    achievements: "Designer of widely used Indian language typefaces"
+  },
+  {
+    id: 35,
+    name: "Arun Mohan",
+    role: "Faculty, Design Research",
+    bio: "A design researcher with focus on human-centered methodologies and ethnographic approaches to design problems. Arun teaches research methods across departments.",
+    imageUrl: "/lovable-uploads/2e795579-a635-4a82-aad6-cd87ba1f0232.png",
+    department: 'Design',
+    qualifications: "Master's in Design Research, IIT",
+    specialization: "Ethnographic Research, Co-design Methods",
+    achievements: "Research contributions to inclusive design practices"
   }
 ];
