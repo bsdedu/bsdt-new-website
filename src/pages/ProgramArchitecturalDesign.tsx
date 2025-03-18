@@ -75,7 +75,7 @@ const ProgramArchitecturalDesign = () => {
             <RevealSection direction="left">
               <div className="relative rounded-2xl overflow-hidden shadow-lg h-[400px]">
                 <img 
-                  src="/public/lovable-uploads/97b89cbf-3490-4189-ab5a-1029c18072ef.png" 
+                  src="/lovable-uploads/1496307653780-42ee777d4833.png" 
                   alt="Architectural Design Studio" 
                   className="w-full h-full object-cover"
                 />
