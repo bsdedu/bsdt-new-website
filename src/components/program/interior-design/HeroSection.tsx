@@ -40,7 +40,7 @@ export const HeroSection: React.FC = () => {
               <div className="flex flex-wrap gap-x-8 gap-y-4 pt-4 text-sm text-foreground/70">
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4 text-bsd-orange" />
-                  <span>4 Years Duration</span>
+                  <span>3 Years Duration</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <GraduationCap className="w-4 h-4 text-bsd-orange" />
@@ -48,7 +48,7 @@ export const HeroSection: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <BookOpen className="w-4 h-4 text-bsd-orange" />
-                  <span>Next Batch: June 2025</span>
+                  <span>Next Batch: July 2025</span>
                 </div>
               </div>
             </div>
