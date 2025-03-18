@@ -16,7 +16,16 @@ export const InfoGraphicsSection: React.FC = () => {
       (entries) => {
         if (entries[0].isIntersecting) {
           setAnimate(true);
-          setChartData(careerData);
+          // Import the data directly from the CareerGrowthChart component
+          import('./insights/CareerGrowthChart').then(module => {
+            // Access the default export and extract the careerData
+            if (module.careerData) {
+              setChartData(module.careerData);
+            }
+          }).catch(error => {
+            console.error("Failed to load career data:", error);
+            setChartData([]);
+          });
         }
       },
       { threshold: 0.1 }
