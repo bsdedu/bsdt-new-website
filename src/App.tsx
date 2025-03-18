@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -26,6 +25,7 @@ import Faculty from "./pages/admissions/Faculty";
 import StudioBSD from "./pages/admissions/StudioBSD";
 import BeyondCurriculum from "./pages/admissions/BeyondCurriculum";
 import FAQs from "./pages/admissions/FAQs";
+import DiplomaProgramUIUX from "./pages/diploma/DiplomaProgramUIUX";
 
 const queryClient = new QueryClient();
 
@@ -51,6 +51,7 @@ const App = () => (
             
             {/* Diploma Program Routes */}
             <Route path="/programs/diploma-graphic-uiux" element={<DiplomaProgramGraphicUIUX />} />
+            <Route path="/programs/diploma-uiux" element={<DiplomaProgramUIUX />} />
             
             {/* Admissions Routes */}
             <Route path="/admissions/application-process" element={<ApplicationProcess />} />
