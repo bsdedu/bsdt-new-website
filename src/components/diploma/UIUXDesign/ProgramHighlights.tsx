@@ -42,6 +42,18 @@ export const ProgramHighlights: React.FC = () => {
             </p>
           </div>
         </div>
+        
+        <div className="bg-bsd-light-gray rounded-xl p-6 hover:shadow-md transition-shadow">
+          <div className="text-center">
+            <div className="w-12 h-12 mx-auto rounded-full bg-bsd-orange/10 flex items-center justify-center mb-4">
+              <Lightbulb className="w-6 h-6 text-bsd-orange" />
+            </div>
+            <h3 className="text-xl font-semibold text-bsd-gray mb-3">Creative Problem Solving</h3>
+            <p className="text-foreground/70">
+              Develop the ability to approach design challenges with innovative thinking and evidence-based solutions that address real user needs.
+            </p>
+          </div>
+        </div>
       </div>
     </RevealSection>
   );

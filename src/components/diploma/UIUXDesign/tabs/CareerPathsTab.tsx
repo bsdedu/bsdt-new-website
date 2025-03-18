@@ -40,6 +40,28 @@ export const CareerPathsTab: React.FC = () => {
             Average Salary: ₹10-20 LPA
           </div>
         </Card>
+        
+        <Card className="p-6 bg-gradient-to-br from-bsd-orange/5 to-white border-bsd-orange/20 hover:shadow-md transition-shadow">
+          <div className="w-12 h-12 rounded-xl bg-bsd-orange/10 flex items-center justify-center mb-4">
+            <Smartphone className="w-6 h-6 text-bsd-orange" />
+          </div>
+          <h3 className="text-xl font-bold text-bsd-gray mb-2">Mobile UI/UX Designer</h3>
+          <p className="text-foreground/70 mb-4">Specialize in creating engaging, intuitive mobile experiences across iOS and Android platforms with deep understanding of mobile patterns.</p>
+          <div className="text-sm text-bsd-orange font-medium">
+            Average Salary: ₹7-14 LPA
+          </div>
+        </Card>
+        
+        <Card className="p-6 bg-gradient-to-br from-bsd-orange/5 to-white border-bsd-orange/20 hover:shadow-md transition-shadow">
+          <div className="w-12 h-12 rounded-xl bg-bsd-orange/10 flex items-center justify-center mb-4">
+            <Lightbulb className="w-6 h-6 text-bsd-orange" />
+          </div>
+          <h3 className="text-xl font-bold text-bsd-gray mb-2">Design Strategist</h3>
+          <p className="text-foreground/70 mb-4">Combine design thinking with business strategy to guide organizations in creating innovative products and services that create value.</p>
+          <div className="text-sm text-bsd-orange font-medium">
+            Average Salary: ₹12-22 LPA
+          </div>
+        </Card>
       </div>
     </RevealSection>
   );
