@@ -25,16 +25,16 @@ export const CustomFacultySection: React.FC = () => {
             <Card isHoverable>
               <div className="aspect-w-3 aspect-h-4">
                 <img 
-                  src="/public/lovable-uploads/60503a43-efdf-4b52-b5eb-9820520a9f2c.png" 
-                  alt="Architect Rajesh Patel" 
+                  src="/lovable-uploads/f8cc79a4-4428-4787-83df-808a715df0a1.png" 
+                  alt="Ar. Mohammed Fahad" 
                   className="object-cover w-full h-full rounded-t-2xl"
                 />
               </div>
               <CardContent className="text-center pt-6">
-                <h3 className="text-xl font-semibold text-bsd-gray">Rajesh Patel</h3>
-                <p className="text-bsd-orange font-medium">Program Head, Architectural Design</p>
+                <h3 className="text-xl font-semibold text-bsd-gray">Ar. Mohammed Fahad</h3>
+                <p className="text-bsd-orange font-medium">Faculty, Architectural Design</p>
                 <p className="mt-3 text-sm text-foreground/70">
-                  With over 15 years of experience in sustainable architectural design, Rajesh has led award-winning projects across residential, commercial, and institutional sectors. He brings a wealth of practical knowledge and industry connections to the program.
+                  An architect and educator specializing in conceptual visualization with a B.Arch from BGS School of Architecture. His award-winning work includes the sustainable Tree House project and South India's first capsule hotel. He teaches across multiple disciplines while managing his own architectural practice.
                 </p>
               </CardContent>
             </Card>
@@ -44,16 +44,16 @@ export const CustomFacultySection: React.FC = () => {
             <Card isHoverable>
               <div className="aspect-w-3 aspect-h-4">
                 <img 
-                  src="/public/lovable-uploads/131f247b-d139-4d13-9a35-257c01ccdb84.png" 
-                  alt="Architect Ananya Sharma" 
+                  src="/lovable-uploads/f41aeb18-b8b9-48e3-9212-ce854e1b4ea9.png" 
+                  alt="Ar. Kapil Krishnan K" 
                   className="object-cover w-full h-full rounded-t-2xl"
                 />
               </div>
               <CardContent className="text-center pt-6">
-                <h3 className="text-xl font-semibold text-bsd-gray">Ananya Sharma</h3>
-                <p className="text-bsd-orange font-medium">Professor, Digital Design & BIM</p>
+                <h3 className="text-xl font-semibold text-bsd-gray">Ar. Kapil Krishnan K</h3>
+                <p className="text-bsd-orange font-medium">Senior Faculty, Architecture</p>
                 <p className="mt-3 text-sm text-foreground/70">
-                  A specialist in computational design and BIM integration, Ananya bridges traditional architectural practices with cutting-edge digital technologies. Her research focuses on parametric design and digital fabrication methods for complex architectural forms.
+                  An architect with 23 years of industry experience and a Master's from VTU SJB School of Architecture and Planning. Teaching since 2017, he explores the intersection of technology and artistry in architecture, viewing the discipline as a means to preserve history and knowledge for future generations.
                 </p>
               </CardContent>
             </Card>
@@ -63,16 +63,16 @@ export const CustomFacultySection: React.FC = () => {
             <Card isHoverable>
               <div className="aspect-w-3 aspect-h-4">
                 <img 
-                  src="/public/lovable-uploads/96eb81ec-f2fb-4f5c-88d8-ec2a099f67e3.png" 
-                  alt="Architect Thomas Wilson" 
+                  src="/lovable-uploads/6b4a7e04-bb44-4b67-9d64-88776c117f66.png" 
+                  alt="Er. Ritesh L" 
                   className="object-cover w-full h-full rounded-t-2xl"
                 />
               </div>
               <CardContent className="text-center pt-6">
-                <h3 className="text-xl font-semibold text-bsd-gray">Thomas Wilson</h3>
-                <p className="text-bsd-orange font-medium">Associate Professor, Sustainable Design</p>
+                <h3 className="text-xl font-semibold text-bsd-gray">Er. Ritesh L</h3>
+                <p className="text-bsd-orange font-medium">Faculty, Structural Engineering</p>
                 <p className="mt-3 text-sm text-foreground/70">
-                  Thomas specializes in green building design and environmental systems integration. His global experience includes LEED-certified projects across Asia and Europe, bringing an international perspective to sustainable design practices.
+                  A gold medalist with an M.Tech in Structural Engineering from SJB Institute of Technology. His extensive experience in civil engineering includes highways and bridges construction. As faculty, he bridges design with structural engineering, introducing students to the latest technological advancements in construction.
                 </p>
               </CardContent>
             </Card>
