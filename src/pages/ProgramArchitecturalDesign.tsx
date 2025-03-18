@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -611,4 +612,43 @@ const ProgramArchitecturalDesign = () => {
                       <h4 className="font-medium text-bsd-gray mb-4">Industry Insights</h4>
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div className="text-center p-4">
-                          <h5 className="text-3xl font-
+                          <h5 className="text-3xl font-bold text-bsd-orange">₹4.5L</h5>
+                          <p className="text-sm text-foreground/70 mt-2">Average Starting Salary</p>
+                        </div>
+                        <div className="text-center p-4">
+                          <h5 className="text-3xl font-bold text-bsd-orange">12.8%</h5>
+                          <p className="text-sm text-foreground/70 mt-2">Industry Growth Rate</p>
+                        </div>
+                        <div className="text-center p-4">
+                          <h5 className="text-3xl font-bold text-bsd-orange">90%</h5>
+                          <p className="text-sm text-foreground/70 mt-2">Placement Success Rate</p>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+            </Tabs>
+          </RevealSection>
+        </div>
+      </section>
+
+      {/* Faculty Section */}
+      <CustomFacultySection />
+
+      {/* Student Works Gallery */}
+      <StudentWorksGallery
+        title="Architectural Design Student Projects"
+        description="Explore the creative works of our Architectural Design students, showcasing their skills in spatial design, technical documentation, and innovative construction solutions."
+        category="architectural"
+      />
+
+      {/* Enquiry Form Section */}
+      <EnquiryFormSection />
+
+      <Footer />
+    </>
+  );
+};
+
+export default ProgramArchitecturalDesign;
