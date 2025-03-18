@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader } from "@/components/ui-elements/Card";
 import { Check, Palette, Monitor, Users, BriefcaseBusiness, PenTool, Layout, Home, Ruler, Lightbulb, Brush, Bot } from "lucide-react";
+import { CareerOpportunitiesTab } from "./CareerOpportunitiesTab";
 
 export const ProgramOverviewSection: React.FC = () => {
   return (
@@ -363,73 +364,7 @@ export const ProgramOverviewSection: React.FC = () => {
             </TabsContent>
             
             <TabsContent value="career" className="mt-0">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <Card>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-3">Residential Interior Designer</h3>
-                    <p className="text-foreground/70 mb-4">Design homes and living spaces that reflect clients' personalities while maximizing functionality and aesthetics.</p>
-                    <div className="flex items-center text-sm text-bsd-orange">
-                      <span className="font-medium">Key Skills:</span>
-                      <span className="ml-2">Space Planning, Client Communication, Material Selection</span>
-                    </div>
-                  </CardContent>
-                </Card>
-                
-                <Card>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-3">Commercial Designer</h3>
-                    <p className="text-foreground/70 mb-4">Create functional and memorable spaces for offices, retail stores, restaurants, and other business environments.</p>
-                    <div className="flex items-center text-sm text-bsd-orange">
-                      <span className="font-medium">Key Skills:</span>
-                      <span className="ml-2">Branding Integration, Space Efficiency, Building Codes</span>
-                    </div>
-                  </CardContent>
-                </Card>
-                
-                <Card>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-3">Hospitality Designer</h3>
-                    <p className="text-foreground/70 mb-4">Specialize in creating memorable experiences in hotels, resorts, restaurants, and entertainment venues.</p>
-                    <div className="flex items-center text-sm text-bsd-orange">
-                      <span className="font-medium">Key Skills:</span>
-                      <span className="ml-2">Experience Design, Lighting, Durability Planning</span>
-                    </div>
-                  </CardContent>
-                </Card>
-                
-                <Card>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-3">Exhibition Designer</h3>
-                    <p className="text-foreground/70 mb-4">Design temporary and permanent exhibitions for museums, galleries, trade shows, and retail displays.</p>
-                    <div className="flex items-center text-sm text-bsd-orange">
-                      <span className="font-medium">Key Skills:</span>
-                      <span className="ml-2">Storytelling, Visual Communication, Visitor Flow</span>
-                    </div>
-                  </CardContent>
-                </Card>
-                
-                <Card>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-3">Lighting Designer</h3>
-                    <p className="text-foreground/70 mb-4">Specialize in creating lighting schemes that enhance spatial experiences, mood, and functionality.</p>
-                    <div className="flex items-center text-sm text-bsd-orange">
-                      <span className="font-medium">Key Skills:</span>
-                      <span className="ml-2">Technical Lighting, Energy Efficiency, Mood Creation</span>
-                    </div>
-                  </CardContent>
-                </Card>
-                
-                <Card>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-3">Furniture Designer</h3>
-                    <p className="text-foreground/70 mb-4">Design custom furniture pieces that complement interior spaces and meet specific client needs.</p>
-                    <div className="flex items-center text-sm text-bsd-orange">
-                      <span className="font-medium">Key Skills:</span>
-                      <span className="ml-2">Product Design, Material Selection, Ergonomics</span>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
+              <CareerOpportunitiesTab />
             </TabsContent>
           </Tabs>
         </RevealSection>
