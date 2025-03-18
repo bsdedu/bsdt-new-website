@@ -22,7 +22,11 @@ const ProgramAnimationGameDesign = () => {
 
       <HeroSection />
       <ProgramOverviewSection />
-      <StudentWorksGallery />
+      <StudentWorksGallery 
+        title="Animation & Game Design Student Projects"
+        description="Explore the creative works of our Animation & Game Design students, showcasing their skills in 2D/3D animation, game development, and character design."
+        category="animation"
+      />
       <CustomFacultySection />
       <StudioSection />
       <EnquiryFormSection />

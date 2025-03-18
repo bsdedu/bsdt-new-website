@@ -22,7 +22,11 @@ const ProgramInteractionExperience = () => {
 
       <HeroSection />
       <ProgramOverviewSection />
-      <StudentWorksGallery />
+      <StudentWorksGallery 
+        title="Interaction & Experience Design Student Projects"
+        description="Explore the innovative works of our Interaction & Experience Design students, showcasing their skills in UX research, UI design, and interactive prototyping."
+        category="ux"
+      />
       <CustomFacultySection />
       <StudioSection />
       <EnquiryFormSection />

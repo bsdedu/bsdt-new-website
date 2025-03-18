@@ -6,7 +6,7 @@ import { animationProjects } from './animationProjects';
 import { bcaProjects } from './bcaProjects';
 import { interactionProjects } from './interactionProjects';
 import { architecturalProjects } from './architecturalProjects';
-import { getProjectCategories, getDefaultTabValue } from './projectCategories';
+import { projectCategories, getProjectCategories, getDefaultTabValue } from './projectCategories';
 
 // Function to get projects for a specific program
 export const getProjectsForProgram = (programPath: string): ProjectCollection => {
@@ -19,10 +19,10 @@ export const getProjectsForProgram = (programPath: string): ProjectCollection =>
   } else if (programPath.includes('bdes-interaction-experience')) {
     return interactionProjects;
   } else if (programPath.includes('bdes-architectural')) {
-    return architecturalProjects;
+    return { architectural: architecturalProjects };
   }
   // Default to graphic design projects
   return graphicProjects;
 };
 
-export { getProjectCategories, getDefaultTabValue };
+export { getProjectCategories, getDefaultTabValue, projectCategories };

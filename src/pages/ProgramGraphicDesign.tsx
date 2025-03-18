@@ -22,7 +22,11 @@ const ProgramGraphicDesign = () => {
 
       <HeroSection />
       <ProgramOverviewSection />
-      <StudentWorksGallery />
+      <StudentWorksGallery 
+        title="Graphic Design Student Projects"
+        description="Explore the creative works of our Graphic Design students, showcasing their expertise in branding, digital design, and print media."
+        category="branding"
+      />
       <CustomFacultySection />
       <StudioSection />
       <EnquiryFormSection />

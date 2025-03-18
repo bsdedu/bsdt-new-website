@@ -20,10 +20,16 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       </div>
       <div className="p-4">
         <h3 className="font-medium text-bsd-gray">{project.title}</h3>
-        <div className="flex justify-between items-center mt-1">
+        {project.description && (
+          <p className="text-xs text-foreground/60 mt-1 line-clamp-2">{project.description}</p>
+        )}
+        <div className="flex justify-between items-center mt-2">
           <p className="text-sm text-foreground/70">{project.student}</p>
           <Badge variant="outline" className="text-xs">{project.year}</Badge>
         </div>
+        {project.semester && (
+          <p className="text-xs text-foreground/60 mt-1">{project.semester}</p>
+        )}
       </div>
     </Card>
   );
