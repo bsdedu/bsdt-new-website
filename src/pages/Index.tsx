@@ -18,18 +18,26 @@ const Index = () => {
   const [scrollY, setScrollY] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
 
+  console.log("Index component initializing");
+
   useEffect(() => {
+    console.log("Index useEffect running");
+    
     // Page load animation
     const timer = setTimeout(() => {
       setIsLoaded(true);
+      console.log("Index marked as loaded");
     }, 100);
 
     // Smooth scroll behavior for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href') || '');
+        const targetId = this.getAttribute('href') || '';
+        console.log(`Attempting to scroll to ${targetId}`);
+        const target = document.querySelector(targetId);
         if (target) {
+          console.log(`Found section ${targetId}, scrolling to it`);
           window.scrollTo({
             top: target.getBoundingClientRect().top + window.scrollY - 80,
             behavior: 'smooth'
@@ -52,6 +60,7 @@ const Index = () => {
       clearTimeout(timer);
       window.removeEventListener('scroll', handleScroll);
       document.body.classList.remove('fadeIn');
+      console.log("Index cleanup function executed");
     };
   }, []);
 
@@ -59,6 +68,8 @@ const Index = () => {
   const getParallaxStyle = (factor = 0.1) => ({
     transform: `translateY(${scrollY * factor}px)`,
   });
+
+  console.log("Index rendering");
 
   return (
     <div className={`min-h-screen flex flex-col transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>

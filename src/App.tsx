@@ -27,51 +27,67 @@ import StudioBSD from "./pages/admissions/StudioBSD";
 import BeyondCurriculum from "./pages/admissions/BeyondCurriculum";
 import FAQs from "./pages/admissions/FAQs";
 import PlacementReport from "./pages/PlacementReport";
+import { useEffect } from "react";
+
+console.log("App component loaded");
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <HelmetProvider>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/about-bsdt" element={<AboutBSDT />} />
-            <Route path="/leadership-governance" element={<LeadershipGovernance />} />
-            <Route path="/programs/bsc-interior-design" element={<ProgramInteriorDesign />} />
-            <Route path="/programs/bva-graphic-design" element={<ProgramGraphicDesign />} />
-            <Route path="/programs/bva-animation-game-design" element={<ProgramAnimationGameDesign />} />
-            <Route path="/programs/bca-uiux-aiml" element={<ProgramBCA />} />
-            <Route path="/programs/bsc-cs-analytics-security" element={<ProgramBScCS />} />
-            <Route path="/programs/bdes-interaction-experience" element={<ProgramInteractionExperience />} />
-            <Route path="/programs/bdes-architectural-design" element={<ProgramArchitecturalDesign />} />
-            <Route path="/programs/bdes-architectural-construction" element={<ProgramArchitecturalDesign />} />
-            <Route path="/placement-report" element={<PlacementReport />} />
-            
-            {/* Diploma Program Routes */}
-            <Route path="/programs/diploma-graphic-uiux" element={<DiplomaProgramGraphicUIUX />} />
-            
-            {/* Admissions Routes */}
-            <Route path="/admissions/application-process" element={<ApplicationProcess />} />
-            <Route path="/admissions/fees-scholarships" element={<FeesScholarships />} />
-            <Route path="/admissions/schedule-visit" element={<ScheduleVisit />} />
-            <Route path="/admissions/faculty" element={<Faculty />} />
-            <Route path="/admissions/studio-bsd" element={<StudioBSD />} />
-            <Route path="/admissions/beyond-curriculum" element={<BeyondCurriculum />} />
-            <Route path="/admissions/faqs" element={<FAQs />} />
-            
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-          <FloatingEnquiryForm />
-          <FloatingCallCTA />
-        </BrowserRouter>
-      </TooltipProvider>
-    </HelmetProvider>
-  </QueryClientProvider>
-);
+const App = () => {
+  useEffect(() => {
+    console.log("App component mounted");
+    return () => {
+      console.log("App component unmounted");
+    };
+  }, []);
+
+  console.log("App rendering");
+  
+  return (
+    <QueryClientProvider client={queryClient}>
+      <HelmetProvider>
+        <TooltipProvider>
+          {console.log("TooltipProvider rendering")}
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            {console.log("BrowserRouter rendering")}
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/about-bsdt" element={<AboutBSDT />} />
+              <Route path="/leadership-governance" element={<LeadershipGovernance />} />
+              <Route path="/programs/bsc-interior-design" element={<ProgramInteriorDesign />} />
+              <Route path="/programs/bva-graphic-design" element={<ProgramGraphicDesign />} />
+              <Route path="/programs/bva-animation-game-design" element={<ProgramAnimationGameDesign />} />
+              <Route path="/programs/bca-uiux-aiml" element={<ProgramBCA />} />
+              <Route path="/programs/bsc-cs-analytics-security" element={<ProgramBScCS />} />
+              <Route path="/programs/bdes-interaction-experience" element={<ProgramInteractionExperience />} />
+              <Route path="/programs/bdes-architectural-design" element={<ProgramArchitecturalDesign />} />
+              <Route path="/programs/bdes-architectural-construction" element={<ProgramArchitecturalDesign />} />
+              <Route path="/placement-report" element={<PlacementReport />} />
+              
+              {/* Diploma Program Routes */}
+              <Route path="/programs/diploma-graphic-uiux" element={<DiplomaProgramGraphicUIUX />} />
+              
+              {/* Admissions Routes */}
+              <Route path="/admissions/application-process" element={<ApplicationProcess />} />
+              <Route path="/admissions/fees-scholarships" element={<FeesScholarships />} />
+              <Route path="/admissions/schedule-visit" element={<ScheduleVisit />} />
+              <Route path="/admissions/faculty" element={<Faculty />} />
+              <Route path="/admissions/studio-bsd" element={<StudioBSD />} />
+              <Route path="/admissions/beyond-curriculum" element={<BeyondCurriculum />} />
+              <Route path="/admissions/faqs" element={<FAQs />} />
+              
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+            <FloatingEnquiryForm />
+            <FloatingCallCTA />
+          </BrowserRouter>
+        </TooltipProvider>
+      </HelmetProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
