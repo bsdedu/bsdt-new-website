@@ -1,5 +1,4 @@
-
-import React, { useState } from 'react';
+import * as React from 'react';
 import { format } from 'date-fns';
 import { CalendarIcon, Clock, Users } from 'lucide-react';
 import { RevealSection } from '@/components/ui-elements/RevealSection';
@@ -33,10 +32,10 @@ const timeSlots = [
 ];
 
 export const VisitScheduler: React.FC = () => {
-  const [date, setDate] = useState<Date | undefined>(undefined);
-  const [timeSlot, setTimeSlot] = useState<string | undefined>(undefined);
-  const [step, setStep] = useState<number>(1);
-  const [formData, setFormData] = useState({
+  const [date, setDate] = React.useState<Date | undefined>(undefined);
+  const [timeSlot, setTimeSlot] = React.useState<string | undefined>(undefined);
+  const [step, setStep] = React.useState<number>(1);
+  const [formData, setFormData] = React.useState({
     name: '',
     email: '',
     phone: '',

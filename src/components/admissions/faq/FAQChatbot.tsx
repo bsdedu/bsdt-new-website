@@ -1,5 +1,4 @@
-
-import React, { useState, useRef, useEffect } from 'react';
+import * as React from 'react';
 import { Send, Bot, UserRound, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -22,20 +21,20 @@ const generateUniqueId = (): string => {
 
 export const FAQChatbot: React.FC = () => {
   const { toast } = useToast();
-  const [input, setInput] = useState('');
-  const [messages, setMessages] = useState<Message[]>([
+  const [input, setInput] = React.useState('');
+  const [messages, setMessages] = React.useState<Message[]>([
     {
       id: 'welcome',
       content: 'Hello! I\'m your BSDT assistant. Ask me anything about our programs, admissions, fees, campus life, or any other questions you might have.',
       isBot: true
     }
   ]);
-  const [isLoading, setIsLoading] = useState(false);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
+  const [isLoading, setIsLoading] = React.useState(false);
+  const messagesEndRef = React.useRef<HTMLDivElement>(null);
+  const [isDesktop, setIsDesktop] = React.useState(window.innerWidth >= 768);
   
   // Check if we're on mobile or desktop for responsive UI
-  useEffect(() => {
+  React.useEffect(() => {
     const handleResize = () => {
       setIsDesktop(window.innerWidth >= 768);
     };
@@ -45,7 +44,7 @@ export const FAQChatbot: React.FC = () => {
   }, []);
 
   // Auto-scroll to bottom when messages update
-  useEffect(() => {
+  React.useEffect(() => {
     if (messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
     }

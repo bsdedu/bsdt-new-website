@@ -1,5 +1,5 @@
 
-import React from 'react';
+import * as React from 'react';
 import { Download, Lock } from "lucide-react";
 import { AnimatedButton } from "@/components/ui-elements/AnimatedButton";
 import { useToast } from "@/hooks/use-toast";
