@@ -26,6 +26,7 @@ import Faculty from "./pages/admissions/Faculty";
 import StudioBSD from "./pages/admissions/StudioBSD";
 import BeyondCurriculum from "./pages/admissions/BeyondCurriculum";
 import FAQs from "./pages/admissions/FAQs";
+import PlacementReport from "./pages/PlacementReport";
 
 const queryClient = new QueryClient();
 
@@ -48,6 +49,7 @@ const App = () => (
             <Route path="/programs/bdes-interaction-experience" element={<ProgramInteractionExperience />} />
             <Route path="/programs/bdes-architectural-design" element={<ProgramArchitecturalDesign />} />
             <Route path="/programs/bdes-architectural-construction" element={<ProgramArchitecturalDesign />} />
+            <Route path="/placement-report" element={<PlacementReport />} />
             
             {/* Diploma Program Routes */}
             <Route path="/programs/diploma-graphic-uiux" element={<DiplomaProgramGraphicUIUX />} />

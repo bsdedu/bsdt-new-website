@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, BookOpen, Download, Lock } from "lucide-react";
@@ -11,6 +11,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useToast } from "@/hooks/use-toast";
+import { useNavigate } from "react-router-dom";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -29,7 +30,16 @@ const formSchema = z.object({
 
 export const EnquiryFormSection: React.FC<{ programSpecific?: boolean }> = ({ programSpecific = false }) => {
   const { toast } = useToast();
+  const navigate = useNavigate();
   const [formSubmitted, setFormSubmitted] = useState(false);
+  
+  // Check if form was previously submitted
+  useEffect(() => {
+    const hasSubmitted = localStorage.getItem('enquiryFormSubmitted') === 'true';
+    if (hasSubmitted) {
+      setFormSubmitted(true);
+    }
+  }, []);
   
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -43,6 +53,8 @@ export const EnquiryFormSection: React.FC<{ programSpecific?: boolean }> = ({ pr
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
+    // Set the form submitted flag in localStorage
+    localStorage.setItem('enquiryFormSubmitted', 'true');
     setFormSubmitted(true);
     toast({
       title: "Enquiry Submitted",
@@ -57,6 +69,10 @@ export const EnquiryFormSection: React.FC<{ programSpecific?: boolean }> = ({ pr
       title: "Brochure Downloaded",
       description: "The program brochure with fee details has been downloaded."
     });
+  };
+
+  const handleViewPlacementReport = () => {
+    navigate('/placement-report');
   };
 
   return <section className="py-16 bg-bsd-light-gray relative overflow-hidden md:py-[50px]" id="enquiry-form">
@@ -112,9 +128,9 @@ export const EnquiryFormSection: React.FC<{ programSpecific?: boolean }> = ({ pr
                 </div>
               </div>
               
-              {/* Brochure Download Section */}
+              {/* Brochure & Placement Report Section */}
               <div className="mt-6 p-5 border border-dashed border-bsd-orange/30 rounded-xl bg-white/50">
-                <div className="flex items-center">
+                <div className="flex items-center mb-4">
                   {formSubmitted ? (
                     <>
                       <Download className="w-8 h-8 text-bsd-orange flex-shrink-0" />
@@ -136,6 +152,30 @@ export const EnquiryFormSection: React.FC<{ programSpecific?: boolean }> = ({ pr
                     </>
                   )}
                 </div>
+                
+                {/* Placement Report Section */}
+                <div className="flex items-center pt-4 border-t border-dashed border-bsd-orange/20">
+                  {formSubmitted ? (
+                    <>
+                      <Download className="w-8 h-8 text-bsd-orange flex-shrink-0" />
+                      <div className="ml-4">
+                        <h4 className="font-medium text-bsd-gray">Placement Report</h4>
+                        <p className="text-sm text-foreground/70 mb-2">Detailed information about placements, top recruiters, and salary packages</p>
+                        <AnimatedButton size="sm" onClick={handleViewPlacementReport}>
+                          <Download className="w-4 h-4 mr-2" /> View Report
+                        </AnimatedButton>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <Lock className="w-8 h-8 text-bsd-gray/40 flex-shrink-0" />
+                      <div className="ml-4">
+                        <h4 className="font-medium text-bsd-gray">Placement Report</h4>
+                        <p className="text-sm text-foreground/70">Submit the enquiry form to access our detailed placement report</p>
+                      </div>
+                    </>
+                  )}
+                </div>
               </div>
             </div>
           </RevealSection>
@@ -149,65 +189,77 @@ export const EnquiryFormSection: React.FC<{ programSpecific?: boolean }> = ({ pr
                   Enquire Now & Get Brochure
                 </h3>
                 
-                <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                      <FormField control={form.control} name="name" render={({
-                      field
-                    }) => <FormItem>
-                            <FormLabel>Full Name</FormLabel>
-                            <FormControl>
-                              <Input placeholder="Your name" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>} />
-                      
-                      <FormField control={form.control} name="email" render={({
-                      field
-                    }) => <FormItem>
-                            <FormLabel>Email Address</FormLabel>
-                            <FormControl>
-                              <Input placeholder="Your email" type="email" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>} />
+                {formSubmitted ? (
+                  <div className="text-center py-8">
+                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Check className="w-8 h-8 text-green-600" />
                     </div>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                      <FormField control={form.control} name="phone" render={({
-                      field
-                    }) => <FormItem>
-                            <FormLabel>Phone Number</FormLabel>
-                            <FormControl>
-                              <Input placeholder="Your phone number" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>} />
+                    <h4 className="text-lg font-medium text-bsd-gray mb-2">Thank You for Your Enquiry!</h4>
+                    <p className="text-foreground/70 mb-6">
+                      Our admissions team will contact you shortly. You now have access to our brochures and placement reports.
+                    </p>
+                  </div>
+                ) : (
+                  <Form {...form}>
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <FormField control={form.control} name="name" render={({
+                        field
+                      }) => <FormItem>
+                              <FormLabel>Full Name</FormLabel>
+                              <FormControl>
+                                <Input placeholder="Your name" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>} />
+                        
+                        <FormField control={form.control} name="email" render={({
+                        field
+                      }) => <FormItem>
+                              <FormLabel>Email Address</FormLabel>
+                              <FormControl>
+                                <Input placeholder="Your email" type="email" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>} />
+                      </div>
                       
-                      <FormField control={form.control} name="course" render={({
-                      field
-                    }) => <FormItem>
-                            <FormLabel>Course of Interest</FormLabel>
-                            <FormControl>
-                              <select className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" {...field}>
-                                <option value="">Select a course</option>
-                                <option value="UG Interior Design">UG Interior Design</option>
-                                <option value="UG Fashion Design">UG Fashion Design</option>
-                                <option value="P.Diploma Interior Design">P.Diploma Interior Design</option>
-                                <option value="P.Diploma Graphic Design">P.Diploma Graphic Design + UI & UX</option>
-                                <option value="P.Diploma UI UX">P.Diploma UI & UX</option>
-                                <option value="PG.Diploma Landscape Design">PG.Diploma Landscape Design</option>
-                              </select>
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>} />
-                    </div>
-                    
-                    <AnimatedButton type="submit" className="w-full">
-                      Submit Enquiry
-                    </AnimatedButton>
-                  </form>
-                </Form>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <FormField control={form.control} name="phone" render={({
+                        field
+                      }) => <FormItem>
+                              <FormLabel>Phone Number</FormLabel>
+                              <FormControl>
+                                <Input placeholder="Your phone number" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>} />
+                        
+                        <FormField control={form.control} name="course" render={({
+                        field
+                      }) => <FormItem>
+                              <FormLabel>Course of Interest</FormLabel>
+                              <FormControl>
+                                <select className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" {...field}>
+                                  <option value="">Select a course</option>
+                                  <option value="UG Interior Design">UG Interior Design</option>
+                                  <option value="UG Fashion Design">UG Fashion Design</option>
+                                  <option value="P.Diploma Interior Design">P.Diploma Interior Design</option>
+                                  <option value="P.Diploma Graphic Design">P.Diploma Graphic Design + UI & UX</option>
+                                  <option value="P.Diploma UI UX">P.Diploma UI & UX</option>
+                                  <option value="PG.Diploma Landscape Design">PG.Diploma Landscape Design</option>
+                                </select>
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>} />
+                      </div>
+                      
+                      <AnimatedButton type="submit" className="w-full">
+                        Submit Enquiry
+                      </AnimatedButton>
+                    </form>
+                  </Form>
+                )}
               </div>
             </Card>
           </RevealSection>

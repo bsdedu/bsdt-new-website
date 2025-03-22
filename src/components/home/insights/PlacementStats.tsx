@@ -2,8 +2,34 @@
 import React from 'react';
 import { TrendingUp } from "lucide-react";
 import { AnimatedButton } from "../../ui-elements/AnimatedButton";
+import { useNavigate } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
 
 export const PlacementStats: React.FC = () => {
+  const navigate = useNavigate();
+  const { toast } = useToast();
+
+  const handleViewPlacementReport = () => {
+    // Check if user has filled the form (using localStorage)
+    const hasFilledForm = localStorage.getItem('enquiryFormSubmitted') === 'true';
+    
+    if (hasFilledForm) {
+      navigate('/placement-report');
+    } else {
+      toast({
+        title: "Access Restricted",
+        description: "Please fill the enquiry form to view the placement report.",
+        variant: "destructive"
+      });
+      
+      // Scroll to enquiry form
+      const enquiryForm = document.getElementById('enquiry-form');
+      if (enquiryForm) {
+        enquiryForm.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <div className="relative">
       <div className="bg-gradient-to-br from-bsd-orange/10 to-bsd-gray/5 rounded-2xl p-6 md:p-8">
@@ -36,8 +62,9 @@ export const PlacementStats: React.FC = () => {
             variant="outline" 
             className="w-full border-bsd-orange/30 text-bsd-gray hover:bg-bsd-orange/10 hover:text-bsd-orange"
             hoverEffect="scale"
+            onClick={handleViewPlacementReport}
           >
-            Download Placement Report
+            View Placement Report
           </AnimatedButton>
         </div>
       </div>
