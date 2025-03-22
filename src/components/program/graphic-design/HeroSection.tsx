@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
@@ -46,7 +45,7 @@ export const HeroSection: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <BookOpen className="w-4 h-4 text-bsd-orange" />
-                  <span>Next Batch: July 2025</span>
+                  <span>Next Batch: June 2025</span>
                 </div>
               </div>
             </div>
@@ -92,8 +91,8 @@ export const HeroSection: React.FC = () => {
                 <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-3">
                   <Award className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-3xl font-bold text-bsd-gray">30+</h3>
-                <p className="text-sm text-foreground/70">Years of Design Teaching Experience</p>
+                <h3 className="text-3xl font-bold text-bsd-gray">15+</h3>
+                <p className="text-sm text-foreground/70">Years Experience</p>
               </CardContent>
             </Card>
             
