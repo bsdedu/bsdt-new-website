@@ -14,10 +14,10 @@ const DiplomaProgramHCIUIUX: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Diploma in HCI for UI/UX | BSD Design School</title>
+        <title>Professional Diploma in HCI for UI/UX | BSD Design School</title>
         <meta 
           name="description" 
-          content="A specialized diploma program in Human-Computer Interaction for UI/UX design that equips students with skills in creating intuitive, user-centered digital experiences." 
+          content="A specialized professional diploma program in Human-Computer Interaction for UI/UX design that equips students with skills in creating intuitive, user-centered digital experiences." 
         />
       </Helmet>
       

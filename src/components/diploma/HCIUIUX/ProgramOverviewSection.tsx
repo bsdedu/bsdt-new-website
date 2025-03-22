@@ -14,7 +14,7 @@ export const ProgramOverviewSection: React.FC = () => {
               Master Human-Computer Interaction for UI/UX Design
             </h2>
             <p className="mt-4 text-foreground/70">
-              Our Diploma in HCI for UI/UX is designed to give you a deep understanding of human behavior and psychology in digital interactions, combined with practical skills in interface design and usability testing.
+              Our Professional Diploma in HCI for UI/UX is designed to give you a deep understanding of human behavior and psychology in digital interactions, combined with practical skills in interface design and usability testing.
             </p>
           </div>
         </RevealSection>
@@ -25,7 +25,7 @@ export const ProgramOverviewSection: React.FC = () => {
               <h3 className="text-2xl font-semibold text-bsd-gray">Program Highlights</h3>
               <div className="space-y-4">
                 <p className="text-foreground/70">
-                  The Diploma in HCI for UI/UX is a specialized 6-month program that combines theoretical knowledge with practical skills in creating user-centered digital experiences. You'll learn how to research user needs, design intuitive interfaces, conduct usability testing, and implement effective UI/UX solutions.
+                  The Professional Diploma in HCI for UI/UX is a specialized 6-month program that combines theoretical knowledge with practical skills in creating user-centered digital experiences. You'll learn how to research user needs, design intuitive interfaces, conduct usability testing, and implement effective UI/UX solutions.
                 </p>
                 <p className="text-foreground/70">
                   With a focus on human psychology, cognitive science, and contemporary UI/UX methodologies, this program prepares you for a career in the rapidly-evolving field of digital design, where understanding human behavior is as crucial as technical proficiency.
