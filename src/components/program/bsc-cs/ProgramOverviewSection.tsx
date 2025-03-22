@@ -8,8 +8,11 @@ import { CareerOpportunitiesTab } from './CareerOpportunitiesTab';
 import { LearningOutcomesTab } from './LearningOutcomesTab';
 import { SoftwareToolsTab } from './SoftwareToolsTab';
 import { CurriculumTab } from './CurriculumTab';
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export const ProgramOverviewSection: React.FC = () => {
+  const isMobile = useIsMobile();
+  
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-6 md:px-8">
@@ -68,11 +71,11 @@ export const ProgramOverviewSection: React.FC = () => {
         <RevealSection delay={200}>
           <Tabs defaultValue="curriculum" className="w-full">
             <div className="flex justify-center mb-8">
-              <TabsList className="grid w-full max-w-xl grid-cols-4">
-                <TabsTrigger value="curriculum">Curriculum</TabsTrigger>
-                <TabsTrigger value="learning-outcomes">Learning Outcomes</TabsTrigger>
-                <TabsTrigger value="software-tools">Software Tools</TabsTrigger>
-                <TabsTrigger value="career-opportunities">Career Opportunities</TabsTrigger>
+              <TabsList className={`${isMobile ? 'flex flex-col space-y-2' : 'grid grid-cols-4'} w-full max-w-xl`}>
+                <TabsTrigger value="curriculum" className="w-full">Curriculum</TabsTrigger>
+                <TabsTrigger value="learning-outcomes" className="w-full">Learning Outcomes</TabsTrigger>
+                <TabsTrigger value="software-tools" className="w-full">Software Tools</TabsTrigger>
+                <TabsTrigger value="career-opportunities" className="w-full">Career Opportunities</TabsTrigger>
               </TabsList>
             </div>
             
