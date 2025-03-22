@@ -19,6 +19,7 @@ import ProgramBScCS from "./pages/ProgramBScCS";
 import ProgramInteractionExperience from "./pages/ProgramInteractionExperience";
 import ProgramArchitecturalDesign from "./pages/ProgramArchitecturalDesign";
 import DiplomaProgramGraphicUIUX from "./pages/diploma/DiplomaProgramGraphicUIUX";
+import DiplomaProgramInteriorDesign from "./pages/diploma/DiplomaProgramInteriorDesign";
 import ApplicationProcess from "./pages/admissions/ApplicationProcess";
 import FeesScholarships from "./pages/admissions/FeesScholarships";
 import ScheduleVisit from "./pages/admissions/ScheduleVisit";
@@ -67,6 +68,7 @@ const App = () => {
               
               {/* Diploma Program Routes */}
               <Route path="/programs/diploma-graphic-uiux" element={<DiplomaProgramGraphicUIUX />} />
+              <Route path="/programs/diploma-interior-design" element={<DiplomaProgramInteriorDesign />} />
               
               {/* Admissions Routes */}
               <Route path="/admissions/application-process" element={<ApplicationProcess />} />
