@@ -78,8 +78,8 @@ export const HeroSection: React.FC = () => {
                 <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-3">
                   <BrainCircuit className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-3xl font-bold text-bsd-gray">100%</h3>
-                <p className="text-sm text-foreground/70">Hands-on Learning</p>
+                <h3 className="text-3xl font-bold text-bsd-gray">AI+</h3>
+                <p className="text-sm text-foreground/70">Empowered Curriculum</p>
               </CardContent>
             </Card>
             
