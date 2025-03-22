@@ -25,81 +25,165 @@ const ToolCard: React.FC<ToolCardProps> = ({ name, category, purpose, logoUrl })
 };
 
 export const SoftwareToolsTab: React.FC = () => {
-  const dataAnalyticsTools = [
+  const programmingTools = [
     {
-      name: "Python & Libraries",
-      category: "Data Analysis",
-      purpose: "Programming language with pandas, NumPy, and scikit-learn for data analysis and machine learning",
+      name: "Java",
+      category: "Programming Language",
+      purpose: "Object-oriented programming language used for developing enterprise-level applications",
+      logoUrl: "https://www.svgrepo.com/show/184143/java.svg"
+    },
+    {
+      name: "Python",
+      category: "Programming Language",
+      purpose: "Versatile programming language used for data analysis, AI, web development, and automation",
       logoUrl: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
     },
     {
-      name: "R Studio",
-      category: "Statistical Analysis",
-      purpose: "Environment for statistical computing and graphics for data analysis",
-      logoUrl: "https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-flat.svg"
+      name: "C++",
+      category: "Programming Language",
+      purpose: "Powerful language for system/software development, game development, and resource-intensive applications",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
     },
     {
-      name: "Tableau",
-      category: "Data Visualization",
-      purpose: "Interactive data visualization software for creating dashboards and reports",
-      logoUrl: "https://logos-world.net/wp-content/uploads/2021/10/Tableau-Symbol.png"
+      name: "JavaScript",
+      category: "Programming Language",
+      purpose: "Client-side scripting language for creating interactive web applications",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
     },
     {
-      name: "Power BI",
-      category: "Business Intelligence",
-      purpose: "Business analytics service for interactive visualizations and business intelligence",
-      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg"
+      name: "R",
+      category: "Statistical Programming",
+      purpose: "Language for statistical computing and graphics, commonly used in data analysis",
+      logoUrl: "https://www.r-project.org/logo/Rlogo.svg"
     },
     {
-      name: "SQL",
-      category: "Database Query",
-      purpose: "Standard language for managing and querying relational databases",
-      logoUrl: "https://www.svgrepo.com/show/331760/sql-database-generic.svg"
-    },
-    {
-      name: "MongoDB",
-      category: "NoSQL Database",
-      purpose: "Document-oriented database for managing large volumes of unstructured data",
-      logoUrl: "https://www.mongodb.com/assets/images/global/leaf.svg"
+      name: "HTML/CSS/Bootstrap",
+      category: "Web Development",
+      purpose: "Core technologies for building and styling web pages and applications",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
     }
   ];
 
-  const cyberSecurityTools = [
+  const developmentTools = [
     {
-      name: "Wireshark",
-      category: "Network Analysis",
-      purpose: "Network protocol analyzer for monitoring and troubleshooting network issues",
-      logoUrl: "https://www.wireshark.org/assets/theme-2015/images/wireshark_logo.png"
+      name: "Eclipse",
+      category: "IDE",
+      purpose: "Integrated development environment primarily used for Java development",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Eclipse-Luna-Logo.svg"
     },
     {
-      name: "Metasploit",
-      category: "Penetration Testing",
-      purpose: "Framework for developing, testing, and executing exploits against remote targets",
-      logoUrl: "https://www.metasploit.com/includes/images/favicon.ico"
+      name: "NetBeans",
+      category: "IDE",
+      purpose: "Development environment for Java, PHP, C++, and other languages",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/9/98/Apache_NetBeans_Logo.svg"
     },
     {
-      name: "Nmap",
-      category: "Network Scanning",
-      purpose: "Open-source utility for network discovery and security auditing",
-      logoUrl: "https://nmap.org/images/nmap-logo-256x256.png"
+      name: "PyCharm",
+      category: "IDE",
+      purpose: "Integrated development environment specifically for Python programming",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1d/PyCharm_Icon.svg"
     },
     {
-      name: "Burp Suite",
-      category: "Web Security",
-      purpose: "Platform for performing security testing of web applications",
-      logoUrl: "https://portswigger.net/burp/communitydownload/images/burp-logo.svg"
+      name: "Visual Studio Code",
+      category: "Code Editor",
+      purpose: "Lightweight, cross-platform source code editor with built-in debugging support",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg"
     },
     {
-      name: "Kali Linux",
-      category: "Security OS",
-      purpose: "Advanced penetration testing and security auditing Linux distribution",
-      logoUrl: "https://www.kali.org/images/kali-logo.svg"
+      name: "Jupyter Notebooks",
+      category: "Development Environment",
+      purpose: "Web application for creating and sharing documents with live code, equations, and visualizations",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg"
     },
     {
-      name: "Snort",
-      category: "Intrusion Detection",
-      purpose: "Open-source network intrusion prevention and detection system",
-      logoUrl: "https://www.snort.org/assets/SnortTM.png"
+      name: "TensorFlow",
+      category: "Machine Learning Framework",
+      purpose: "Open-source library for machine learning and artificial intelligence",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg"
+    }
+  ];
+
+  const databaseSystems = [
+    {
+      name: "MySQL",
+      category: "Relational Database",
+      purpose: "Open-source relational database management system",
+      logoUrl: "https://www.mysql.com/common/logos/logo-mysql-170x115.png"
+    },
+    {
+      name: "Oracle",
+      category: "Enterprise Database",
+      purpose: "Commercial relational database management system for enterprise applications",
+      logoUrl: "https://www.oracle.com/a/ocom/img/cb71-java-logo.png"
+    },
+    {
+      name: "Microsoft SQL Server",
+      category: "Relational Database",
+      purpose: "Enterprise database management system developed by Microsoft",
+      logoUrl: "https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg"
+    }
+  ];
+
+  const operatingSystems = [
+    {
+      name: "Windows",
+      category: "Operating System",
+      purpose: "Primary operating system for personal computers and laptops",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_logo_-_2012.svg"
+    },
+    {
+      name: "Linux",
+      category: "Operating System",
+      purpose: "Open-source operating system commonly used in servers and cybersecurity",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg"
+    },
+    {
+      name: "macOS",
+      category: "Operating System",
+      purpose: "Operating system for Apple's Mac computers",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/2/22/MacOS_logo_%282017%29.svg"
+    }
+  ];
+
+  const cloudVirtualization = [
+    {
+      name: "VMware",
+      category: "Virtualization",
+      purpose: "Software for creating and managing virtual machines",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Vmware.svg"
+    },
+    {
+      name: "VirtualBox",
+      category: "Virtualization",
+      purpose: "Free and open-source virtualization software for x86 computers",
+      logoUrl: "https://www.virtualbox.org/graphics/vbox_logo2_gradient.png"
+    },
+    {
+      name: "AWS",
+      category: "Cloud Services",
+      purpose: "Comprehensive cloud computing platform from Amazon",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
+    },
+    {
+      name: "Azure",
+      category: "Cloud Services",
+      purpose: "Microsoft's cloud computing service for building and managing applications",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg"
+    }
+  ];
+
+  const productivityTools = [
+    {
+      name: "Microsoft Office",
+      category: "Productivity Suite",
+      purpose: "Suite of applications for document processing, spreadsheets, and presentations",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Microsoft_Office_logo_%282019%E2%80%93present%29.svg"
+    },
+    {
+      name: "Google Workspace",
+      category: "Productivity Suite",
+      purpose: "Collection of cloud computing, productivity and collaboration tools by Google",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/5/5a/Google_Workspace_2020_Logo.svg"
     }
   ];
 
@@ -107,18 +191,54 @@ export const SoftwareToolsTab: React.FC = () => {
     <RevealSection>
       <div className="space-y-8">
         <div>
-          <h3 className="text-xl font-semibold text-bsd-gray mb-4">Data Analytics Tools</h3>
+          <h3 className="text-xl font-semibold text-bsd-gray mb-4">Programming Languages & Web Technologies</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {dataAnalyticsTools.map((tool, index) => (
+            {programmingTools.map((tool, index) => (
               <ToolCard key={index} {...tool} />
             ))}
           </div>
         </div>
         
         <div className="pt-4">
-          <h3 className="text-xl font-semibold text-bsd-gray mb-4">Cyber Security Tools</h3>
+          <h3 className="text-xl font-semibold text-bsd-gray mb-4">Development Environments & Frameworks</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {cyberSecurityTools.map((tool, index) => (
+            {developmentTools.map((tool, index) => (
+              <ToolCard key={index} {...tool} />
+            ))}
+          </div>
+        </div>
+
+        <div className="pt-4">
+          <h3 className="text-xl font-semibold text-bsd-gray mb-4">Database Systems</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {databaseSystems.map((tool, index) => (
+              <ToolCard key={index} {...tool} />
+            ))}
+          </div>
+        </div>
+
+        <div className="pt-4">
+          <h3 className="text-xl font-semibold text-bsd-gray mb-4">Operating Systems</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {operatingSystems.map((tool, index) => (
+              <ToolCard key={index} {...tool} />
+            ))}
+          </div>
+        </div>
+
+        <div className="pt-4">
+          <h3 className="text-xl font-semibold text-bsd-gray mb-4">Virtualization & Cloud Services</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {cloudVirtualization.map((tool, index) => (
+              <ToolCard key={index} {...tool} />
+            ))}
+          </div>
+        </div>
+
+        <div className="pt-4">
+          <h3 className="text-xl font-semibold text-bsd-gray mb-4">Productivity Tools</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {productivityTools.map((tool, index) => (
               <ToolCard key={index} {...tool} />
             ))}
           </div>
