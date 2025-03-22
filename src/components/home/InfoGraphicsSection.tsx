@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
@@ -7,36 +7,72 @@ import { KeyStats } from "./insights/KeyStats";
 import { CareerGrowthChart } from "./insights/CareerGrowthChart";
 import { PlacementStats } from "./insights/PlacementStats";
 
+// Sample chart data in case dynamic import fails
+const fallbackChartData = [
+  { year: "2018", value: 65 },
+  { year: "2019", value: 72 },
+  { year: "2020", value: 78 },
+  { year: "2021", value: 83 },
+  { year: "2022", value: 89 },
+  { year: "2023", value: 94 }
+];
+
 export const InfoGraphicsSection: React.FC = () => {
   const [animate, setAnimate] = useState(false);
-  const [chartData, setChartData] = useState<any[]>([]);
-  const [chartKey, setChartKey] = useState(Date.now()); // Add a key to force remount
+  const [chartData, setChartData] = useState<any[]>(fallbackChartData);
+  const [chartKey, setChartKey] = useState(Date.now());
+  const [isLoading, setIsLoading] = useState(true);
+  const mounted = useRef(true);
 
   useEffect(() => {
+    // Set component as mounted
+    mounted.current = true;
+    
     // Set a timeout to ensure the component is mounted before trying to animate
     const animateTimer = setTimeout(() => {
-      setAnimate(true);
+      if (mounted.current) {
+        setAnimate(true);
+      }
     }, 500);
 
-    // Load chart data
-    import('./insights/CareerGrowthChart')
-      .then(module => {
-        if (module.careerData) {
-          setChartData(module.careerData);
-          // Force chart to re-render with new data by changing key
-          setChartKey(Date.now());
-        }
-      })
-      .catch(error => {
-        console.error("Failed to load career data:", error);
-        setChartData([]);
-      });
+    // Try to load chart data
+    try {
+      import('./insights/CareerGrowthChart')
+        .then(module => {
+          if (mounted.current && module.careerData) {
+            setChartData(module.careerData);
+            // Force chart to re-render with new data by changing key
+            setChartKey(Date.now());
+          }
+        })
+        .catch(error => {
+          console.error("Failed to load career data:", error);
+          // Use fallback data
+          if (mounted.current) {
+            setChartData(fallbackChartData);
+            setChartKey(Date.now());
+          }
+        })
+        .finally(() => {
+          if (mounted.current) {
+            setIsLoading(false);
+          }
+        });
+    } catch (error) {
+      console.error("Error importing chart data:", error);
+      if (mounted.current) {
+        setChartData(fallbackChartData);
+        setIsLoading(false);
+      }
+    }
 
     // Set up intersection observer with delay to ensure DOM is ready
     const observerTimer = setTimeout(() => {
+      if (!mounted.current) return;
+      
       const observer = new IntersectionObserver(
         (entries) => {
-          if (entries[0].isIntersecting) {
+          if (entries[0].isIntersecting && mounted.current) {
             setAnimate(true);
           }
         },
@@ -51,7 +87,9 @@ export const InfoGraphicsSection: React.FC = () => {
       };
     }, 1000);
 
+    // Clean up
     return () => {
+      mounted.current = false;
       clearTimeout(animateTimer);
       clearTimeout(observerTimer);
     };
@@ -80,8 +118,13 @@ export const InfoGraphicsSection: React.FC = () => {
 
         <RevealSection delay={200}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-12">
-            {/* Use key to force remount */}
-            <CareerGrowthChart key={chartKey} animate={animate} chartData={chartData} />
+            {!isLoading && (
+              <CareerGrowthChart 
+                key={chartKey} 
+                animate={animate} 
+                chartData={chartData} 
+              />
+            )}
             <PlacementStats />
           </div>
         </RevealSection>

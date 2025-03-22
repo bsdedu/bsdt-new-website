@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
 import { HeroSection } from '../components/home/HeroSection';
@@ -18,11 +18,17 @@ const Index = () => {
   const [scrollY, setScrollY] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
   const [isHydrated, setIsHydrated] = useState(false);
+  const observersRef = useRef<IntersectionObserver[]>([]);
+  const timersRef = useRef<number[]>([]);
 
   // Mark component as hydrated after initial render
   useEffect(() => {
     console.log("Index component hydrating");
     setIsHydrated(true);
+    
+    return () => {
+      console.log("Index hydration cleanup");
+    };
   }, []);
 
   useEffect(() => {
@@ -31,16 +37,20 @@ const Index = () => {
     console.log("Index useEffect running");
     
     // Page load animation with delay to ensure hydration
-    const timer = setTimeout(() => {
+    const loadTimer = setTimeout(() => {
       setIsLoaded(true);
       console.log("Index marked as loaded");
     }, 300);
+    timersRef.current.push(loadTimer);
 
     // Smooth scroll behavior for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
+    const anchorElements = document.querySelectorAll('a[href^="#"]');
+    const anchorClickListeners: (() => void)[] = [];
+    
+    anchorElements.forEach(anchor => {
+      const clickHandler = function(e: Event) {
         e.preventDefault();
-        const targetId = this.getAttribute('href') || '';
+        const targetId = (this as HTMLAnchorElement).getAttribute('href') || '';
         const target = document.querySelector(targetId);
         if (target) {
           window.scrollTo({
@@ -48,7 +58,10 @@ const Index = () => {
             behavior: 'smooth'
           });
         }
-      });
+      };
+      
+      anchor.addEventListener('click', clickHandler);
+      anchorClickListeners.push(() => anchor.removeEventListener('click', clickHandler));
     });
 
     // Scroll event listener with throttling for better performance
@@ -69,9 +82,21 @@ const Index = () => {
     document.body.classList.add('fadeIn');
 
     return () => {
-      clearTimeout(timer);
+      // Clear all timers
+      timersRef.current.forEach(timer => clearTimeout(timer));
+      timersRef.current = [];
+      
+      // Remove event listeners
       window.removeEventListener('scroll', handleScroll);
+      anchorClickListeners.forEach(removeListener => removeListener());
+      
+      // Remove observers
+      observersRef.current.forEach(observer => observer.disconnect());
+      observersRef.current = [];
+      
+      // Remove classes
       document.body.classList.remove('fadeIn');
+      
       console.log("Index cleanup function executed");
     };
   }, [isHydrated]);
