@@ -1,12 +1,13 @@
 
 import React from 'react';
 import { cn } from "@/lib/utils";
-import { Facebook, Instagram, Linkedin, Youtube, Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Youtube, Mail, Phone, MapPin, Clock, ExternalLink } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 export const Footer: React.FC = () => {
   return <footer className="bg-[#333333] text-white py-16">
       <div className="container mx-auto px-6 md:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Column 1: About */}
           <div className="space-y-6">
             <h3 className="text-xl font-display font-bold tracking-tight">
@@ -21,7 +22,50 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Column 2: Contact - Enhanced with all contact information */}
+          {/* Column 2: Quick Links - New Section */}
+          <div className="space-y-6">
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-bsd-orange">Quick Links</h4>
+            <ul className="space-y-3">
+              <li>
+                <Link to="/about-bsdt" className="text-sm text-white/80 hover:text-white transition-colors flex items-center">
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/programs/bdes-interaction-experience" className="text-sm text-white/80 hover:text-white transition-colors flex items-center">
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  Popular Programs
+                </Link>
+              </li>
+              <li>
+                <Link to="/admissions/application-process" className="text-sm text-white/80 hover:text-white transition-colors flex items-center">
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  Admissions
+                </Link>
+              </li>
+              <li>
+                <a href="#contact" className="text-sm text-white/80 hover:text-white transition-colors flex items-center">
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  Contact Us
+                </a>
+              </li>
+              <li>
+                <Link to="/admissions/fees-scholarships" className="text-sm text-white/80 hover:text-white transition-colors flex items-center">
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  Fees & Scholarships
+                </Link>
+              </li>
+              <li>
+                <Link to="/admissions/faculty" className="text-sm text-white/80 hover:text-white transition-colors flex items-center">
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  Our Faculty
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 3: Contact - Enhanced with all contact information */}
           <div className="space-y-6">
             <h4 className="text-sm font-semibold uppercase tracking-wider text-bsd-orange">Contact</h4>
             <ul className="space-y-4">
@@ -48,7 +92,7 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Column 3: Campus Map */}
+          {/* Column 4: Campus Map */}
           <div className="space-y-4">
             <h4 className="text-sm font-semibold uppercase tracking-wider text-bsd-orange">Campus Location</h4>
             <p className="text-sm text-white/80">

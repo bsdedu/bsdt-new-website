@@ -79,10 +79,5 @@ export const navStructure: NavStructure[] = [
       { name: 'About BSDT', href: '/about-bsdt' },
       { name: 'Leadership & Governance', href: '/leadership-governance' }
     ]
-  },
-  {
-    name: 'Contact',
-    href: '#contact',
-    type: 'link'
   }
 ];
