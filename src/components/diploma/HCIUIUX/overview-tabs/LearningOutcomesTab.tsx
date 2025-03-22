@@ -2,7 +2,7 @@
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Card, CardContent } from "@/components/ui-elements/Card";
-import { BrainCircuit, Users, PenTool, Lightbulb, LayoutGrid, SearchCheck, EyeCheck, Palette } from "lucide-react";
+import { BrainCircuit, Users, PenTool, Lightbulb, LayoutGrid, SearchCheck, Eye, Palette } from "lucide-react";
 
 export const LearningOutcomesTab: React.FC = () => {
   return (
@@ -83,7 +83,7 @@ export const LearningOutcomesTab: React.FC = () => {
         <Card className="border-0 shadow-sm bg-white">
           <CardContent className="p-6">
             <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-gradient-to-br from-bsd-orange/20 to-bsd-orange/5">
-              <EyeCheck className="w-6 h-6 text-bsd-orange" />
+              <Eye className="w-6 h-6 text-bsd-orange" />
             </div>
             <h3 className="text-lg font-semibold text-bsd-gray mb-2">Accessibility Standards</h3>
             <p className="text-sm text-foreground/70">
