@@ -47,11 +47,11 @@ const App = () => {
     <QueryClientProvider client={queryClient}>
       <HelmetProvider>
         <TooltipProvider>
-          {console.log("TooltipProvider rendering")}
+          {/* Removing console.log from JSX context */}
           <Toaster />
           <Sonner />
           <BrowserRouter>
-            {console.log("BrowserRouter rendering")}
+            {/* Removing console.log from JSX context */}
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/about-bsdt" element={<AboutBSDT />} />
