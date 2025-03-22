@@ -17,27 +17,32 @@ import { InfoGraphicsSection } from '../components/home/InfoGraphicsSection';
 const Index = () => {
   const [scrollY, setScrollY] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isHydrated, setIsHydrated] = useState(false);
 
-  console.log("Index component initializing");
+  // Mark component as hydrated after initial render
+  useEffect(() => {
+    console.log("Index component hydrating");
+    setIsHydrated(true);
+  }, []);
 
   useEffect(() => {
+    if (!isHydrated) return;
+    
     console.log("Index useEffect running");
     
-    // Page load animation
+    // Page load animation with delay to ensure hydration
     const timer = setTimeout(() => {
       setIsLoaded(true);
       console.log("Index marked as loaded");
-    }, 100);
+    }, 300);
 
     // Smooth scroll behavior for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const targetId = this.getAttribute('href') || '';
-        console.log(`Attempting to scroll to ${targetId}`);
         const target = document.querySelector(targetId);
         if (target) {
-          console.log(`Found section ${targetId}, scrolling to it`);
           window.scrollTo({
             top: target.getBoundingClientRect().top + window.scrollY - 80,
             behavior: 'smooth'
@@ -46,9 +51,16 @@ const Index = () => {
       });
     });
 
-    // Scroll event listener for parallax effects
+    // Scroll event listener with throttling for better performance
+    let ticking = false;
     const handleScroll = () => {
-      setScrollY(window.scrollY);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrollY(window.scrollY);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
     
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -62,14 +74,12 @@ const Index = () => {
       document.body.classList.remove('fadeIn');
       console.log("Index cleanup function executed");
     };
-  }, []);
+  }, [isHydrated]);
 
   // Calculate the parallax styles for background elements
   const getParallaxStyle = (factor = 0.1) => ({
     transform: `translateY(${scrollY * factor}px)`,
   });
-
-  console.log("Index rendering");
 
   return (
     <div className={`min-h-screen flex flex-col transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>

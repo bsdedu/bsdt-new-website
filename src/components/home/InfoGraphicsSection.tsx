@@ -10,32 +10,50 @@ import { PlacementStats } from "./insights/PlacementStats";
 export const InfoGraphicsSection: React.FC = () => {
   const [animate, setAnimate] = useState(false);
   const [chartData, setChartData] = useState<any[]>([]);
+  const [chartKey, setChartKey] = useState(Date.now()); // Add a key to force remount
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setAnimate(true);
-          // Import the data directly from the CareerGrowthChart component
-          import('./insights/CareerGrowthChart').then(module => {
-            // Access the default export and extract the careerData
-            if (module.careerData) {
-              setChartData(module.careerData);
-            }
-          }).catch(error => {
-            console.error("Failed to load career data:", error);
-            setChartData([]);
-          });
-        }
-      },
-      { threshold: 0.1 }
-    );
+    // Set a timeout to ensure the component is mounted before trying to animate
+    const animateTimer = setTimeout(() => {
+      setAnimate(true);
+    }, 500);
 
-    const section = document.getElementById('career-growth-section');
-    if (section) observer.observe(section);
+    // Load chart data
+    import('./insights/CareerGrowthChart')
+      .then(module => {
+        if (module.careerData) {
+          setChartData(module.careerData);
+          // Force chart to re-render with new data by changing key
+          setChartKey(Date.now());
+        }
+      })
+      .catch(error => {
+        console.error("Failed to load career data:", error);
+        setChartData([]);
+      });
+
+    // Set up intersection observer with delay to ensure DOM is ready
+    const observerTimer = setTimeout(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting) {
+            setAnimate(true);
+          }
+        },
+        { threshold: 0.1 }
+      );
+
+      const section = document.getElementById('career-growth-section');
+      if (section) observer.observe(section);
+
+      return () => {
+        if (section) observer.unobserve(section);
+      };
+    }, 1000);
 
     return () => {
-      if (section) observer.unobserve(section);
+      clearTimeout(animateTimer);
+      clearTimeout(observerTimer);
     };
   }, []);
 
@@ -62,7 +80,8 @@ export const InfoGraphicsSection: React.FC = () => {
 
         <RevealSection delay={200}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-12">
-            <CareerGrowthChart animate={animate} chartData={chartData} />
+            {/* Use key to force remount */}
+            <CareerGrowthChart key={chartKey} animate={animate} chartData={chartData} />
             <PlacementStats />
           </div>
         </RevealSection>
