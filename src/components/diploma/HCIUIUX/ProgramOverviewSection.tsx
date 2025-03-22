@@ -2,6 +2,11 @@
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { LearningOutcomesTab } from './overview-tabs/LearningOutcomesTab';
+import { CurriculumTab } from './overview-tabs/CurriculumTab';
+import { CareerPathsTab } from './overview-tabs/CareerPathsTab';
+import { SoftwareToolsTab } from './overview-tabs/SoftwareToolsTab';
 
 export const ProgramOverviewSection: React.FC = () => {
   return (
@@ -20,7 +25,7 @@ export const ProgramOverviewSection: React.FC = () => {
         </RevealSection>
 
         <RevealSection delay={100}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12">
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold text-bsd-gray">Program Highlights</h3>
               <div className="space-y-4">
@@ -52,6 +57,35 @@ export const ProgramOverviewSection: React.FC = () => {
               </ul>
             </div>
           </div>
+        </RevealSection>
+
+        <RevealSection delay={200}>
+          <Tabs defaultValue="curriculum" className="w-full">
+            <div className="flex justify-center mb-8">
+              <TabsList className="grid w-full max-w-xl grid-cols-4">
+                <TabsTrigger value="curriculum">Curriculum</TabsTrigger>
+                <TabsTrigger value="learning-outcomes">Learning Outcomes</TabsTrigger>
+                <TabsTrigger value="career-paths">Career Paths</TabsTrigger>
+                <TabsTrigger value="software-tools">Software & AI Tools</TabsTrigger>
+              </TabsList>
+            </div>
+            
+            <TabsContent value="curriculum" className="mt-0">
+              <CurriculumTab />
+            </TabsContent>
+            
+            <TabsContent value="learning-outcomes" className="mt-0">
+              <LearningOutcomesTab />
+            </TabsContent>
+            
+            <TabsContent value="career-paths" className="mt-0">
+              <CareerPathsTab />
+            </TabsContent>
+            
+            <TabsContent value="software-tools" className="mt-0">
+              <SoftwareToolsTab />
+            </TabsContent>
+          </Tabs>
         </RevealSection>
       </div>
     </section>
