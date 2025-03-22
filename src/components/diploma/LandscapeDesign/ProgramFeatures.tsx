@@ -1,9 +1,8 @@
-
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui-elements/Card";
-import { Clock, Users, Award, Briefcase, Mountains, Leaf } from "lucide-react";
+import { Clock, Users, Award, Briefcase, Mountain, Leaf } from "lucide-react";
 
 export const ProgramFeatures: React.FC = () => {
   return (
@@ -38,7 +37,7 @@ export const ProgramFeatures: React.FC = () => {
             <Card isHoverable className="bg-white border-bsd-orange/10">
               <CardContent className="p-6">
                 <div className="w-12 h-12 rounded-xl bg-bsd-orange/10 flex items-center justify-center mb-4">
-                  <Mountains className="w-6 h-6 text-bsd-orange" />
+                  <Mountain className="w-6 h-6 text-bsd-orange" />
                 </div>
                 <h3 className="text-xl font-bold text-bsd-gray mb-3">Site-Based Learning</h3>
                 <p className="text-foreground/70">
