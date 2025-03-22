@@ -40,7 +40,7 @@ export const TransportRoutes: React.FC = () => {
                       <img 
                         src={route.imagePath} 
                         alt={`${route.name} Map`} 
-                        className="max-w-full h-auto"
+                        className="max-w-full h-auto rounded-lg shadow-sm"
                       />
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
