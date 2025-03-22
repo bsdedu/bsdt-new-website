@@ -3,27 +3,34 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
-import { RevealSection } from '@/components/ui-elements/RevealSection';
+import { BeyondCurriculumHero } from '@/components/beyond-curriculum/BeyondCurriculumHero';
+import { BeyondCurriculumOverview } from '@/components/beyond-curriculum/BeyondCurriculumOverview';
+import { DesignStudioSection } from '@/components/beyond-curriculum/DesignStudioSection';
+import { WorkshopsSection } from '@/components/beyond-curriculum/WorkshopsSection';
+import { GuestLecturesSection } from '@/components/beyond-curriculum/GuestLecturesSection';
+import { OffCampusSection } from '@/components/beyond-curriculum/OffCampusSection';
+import { SiteVisitsSection } from '@/components/beyond-curriculum/SiteVisitsSection';
+import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
 
 const BeyondCurriculum = () => {
   return (
     <>
       <Helmet>
-        <title>We Go Beyond Curriculum | BSDT</title>
-        <meta name="description" content="Discover how BSDT goes beyond the standard curriculum." />
+        <title>We Go Beyond Curriculum | Bangalore School of Design & Technology</title>
+        <meta name="description" content="Discover how BSDT goes beyond the standard curriculum by dedicating one day per week to skills development through design studios, workshops, guest lectures, off-campus learning, and site visits." />
       </Helmet>
       
       <Navbar />
       
-      <main className="pt-24">
-        <RevealSection>
-          <div className="container mx-auto px-6 py-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-bsd-gray mb-8">We Go Beyond Curriculum</h1>
-            <div className="prose prose-lg max-w-none">
-              <p>This page will highlight how BSDT goes beyond the standard curriculum in its programs.</p>
-            </div>
-          </div>
-        </RevealSection>
+      <main id="beyond-activities">
+        <BeyondCurriculumHero />
+        <BeyondCurriculumOverview />
+        <DesignStudioSection />
+        <WorkshopsSection />
+        <GuestLecturesSection />
+        <OffCampusSection />
+        <SiteVisitsSection />
+        <EnquiryFormSection />
       </main>
       
       <Footer />
