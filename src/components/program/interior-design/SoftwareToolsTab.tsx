@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent, CardHeader } from "@/components/ui-elements/Card";
-import { Ruler, Monitor, Box3d, Layout, Palette, Image } from "lucide-react";
+import { Ruler, Monitor, Box, Layout, Palette, Image } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
 export const SoftwareToolsTab: React.FC = () => {
@@ -24,7 +24,7 @@ export const SoftwareToolsTab: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               <div className="p-4 bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center mb-2">
-                  <Box3d className="w-5 h-5 text-bsd-orange mr-2" />
+                  <Box className="w-5 h-5 text-bsd-orange mr-2" />
                   <h5 className="font-medium">AutoCAD</h5>
                 </div>
                 <p className="text-sm text-foreground/70">2D drafting and documentation for floor plans and elevations</p>
@@ -32,7 +32,7 @@ export const SoftwareToolsTab: React.FC = () => {
               
               <div className="p-4 bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center mb-2">
-                  <Box3d className="w-5 h-5 text-bsd-orange mr-2" />
+                  <Box className="w-5 h-5 text-bsd-orange mr-2" />
                   <h5 className="font-medium">SketchUp</h5>
                 </div>
                 <p className="text-sm text-foreground/70">3D modeling and visualization for concept development</p>
@@ -48,7 +48,7 @@ export const SoftwareToolsTab: React.FC = () => {
               
               <div className="p-4 bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center mb-2">
-                  <Box3d className="w-5 h-5 text-bsd-orange mr-2" />
+                  <Box className="w-5 h-5 text-bsd-orange mr-2" />
                   <h5 className="font-medium">Revit</h5>
                 </div>
                 <p className="text-sm text-foreground/70">Building Information Modeling (BIM) for comprehensive design</p>
