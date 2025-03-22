@@ -10,4 +10,3 @@ console.log("Root element found, rendering app");
 
 root.render(<App />);
 console.log("App rendered");
-
