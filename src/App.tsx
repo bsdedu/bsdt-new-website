@@ -71,6 +71,7 @@ const App = () => {
               <Route path="/programs/diploma-graphic-uiux" element={<DiplomaProgramGraphicUIUX />} />
               <Route path="/programs/diploma-interior-design" element={<DiplomaProgramInteriorDesign />} />
               <Route path="/programs/diploma-hci-uiux" element={<DiplomaProgramHCIUIUX />} />
+              <Route path="/programs/diploma-uiux" element={<DiplomaProgramHCIUIUX />} /> {/* Add alternate route */}
               
               {/* Admissions Routes */}
               <Route path="/admissions/application-process" element={<ApplicationProcess />} />
