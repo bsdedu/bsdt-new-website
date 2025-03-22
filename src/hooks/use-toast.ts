@@ -1,3 +1,4 @@
+
 import * as React from "react"
 import { 
   ToastActionElement, 
@@ -116,7 +117,7 @@ const addToRemoveQueue = (toastId: string) => {
 
   const timeout = setTimeout(() => {
     toastTimeouts.delete(toastId)
-    dispatch({
+    dispatcher.dispatch({
       type: actionTypes.REMOVE_TOAST,
       toastId: toastId,
     })
