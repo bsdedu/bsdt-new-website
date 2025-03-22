@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { cn } from "@/lib/utils";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
@@ -104,7 +105,7 @@ export const HeroSection: React.FC = () => {
               <AnimatedButton 
                 variant="outline" 
                 size="lg" 
-                onClick={() => scrollToSection('campus-life')}
+                onClick={() => scrollToSection('about')}
               >
                 Take a Virtual Tour
               </AnimatedButton>

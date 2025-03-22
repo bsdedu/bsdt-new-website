@@ -30,6 +30,7 @@ export const AboutSection: React.FC = () => {
               <p className="text-foreground/70">Take a virtual tour of our vibrant campus and see what makes BSD the perfect place for your creative journey.</p>
             </div>
             <div 
+              id="campus-life-video"
               className={`relative rounded-2xl overflow-hidden shadow-xl border border-border/30 mt-4 transition-transform duration-500 ${videoHovered ? 'scale-[1.02]' : ''}`}
               onMouseEnter={() => setVideoHovered(true)}
               onMouseLeave={() => setVideoHovered(false)}
