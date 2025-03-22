@@ -27,8 +27,13 @@ export const HeroSection: React.FC = () => {
                 Transform spaces into functional, aesthetic environments. Our B.Sc. Interior Design program develops creative professionals who combine artistic vision with technical expertise to design innovative interior spaces.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
-                <AnimatedButton asChild>
-                  <a href="#enquiry-form" className="hover:no-underline">Apply Now</a>
+                <AnimatedButton 
+                  asChild
+                  href="https://apply.bsd.edu.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <a className="hover:no-underline">Apply Now</a>
                 </AnimatedButton>
                 <AnimatedButton variant="outline" asChild>
                   <a href="#enquiry-form" className="hover:no-underline">

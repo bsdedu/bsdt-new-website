@@ -129,11 +129,11 @@ export const AdmissionsInfo: React.FC = () => {
         <RevealSection delay={200}>
           <div className="text-center">
             <div className="inline-flex flex-col sm:flex-row gap-4">
-              <Link to="/admissions/application-process">
+              <a href="https://apply.bsd.edu.in/" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" variant="outline" className="border-bsd-orange text-bsd-orange hover:bg-bsd-orange/10">
                   Apply Now
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
         </RevealSection>

@@ -71,7 +71,7 @@ const ApplicationProcess = () => {
                       <h3 className="text-2xl font-bold text-bsd-gray mb-3">Ready to Begin Your Journey?</h3>
                       <p className="text-foreground/70 mb-4">Start your application process today and take the first step toward your creative future.</p>
                       <div className="flex flex-wrap gap-4">
-                        <a href="https://www.apply.bsd.edu.in/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://apply.bsd.edu.in/" target="_blank" rel="noopener noreferrer">
                           <Button size="lg" className="bg-bsd-orange text-white hover:bg-bsd-orange/90">
                             Apply Now
                             <ArrowRight className="ml-2 h-4 w-4" />

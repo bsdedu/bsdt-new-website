@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
@@ -24,8 +25,13 @@ export const HeroSection: React.FC = () => {
                 Master visual storytelling, brand identity, and digital media design. Become a creative professional who shapes business, society, and culture through powerful visual communication.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
-                <AnimatedButton asChild>
-                  <a href="#enquiry-form" className="hover:no-underline">Apply Now</a>
+                <AnimatedButton 
+                  asChild
+                  href="https://apply.bsd.edu.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <a className="hover:no-underline">Apply Now</a>
                 </AnimatedButton>
                 <AnimatedButton variant="outline" asChild>
                   <a href="#enquiry-form" className="hover:no-underline">

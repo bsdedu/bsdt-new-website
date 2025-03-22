@@ -27,8 +27,13 @@ export const HeroSection: React.FC = () => {
                 Create intuitive digital experiences through a holistic approach to UI/UX design. Become a designer who shapes how humans interact with technology, products, and services.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
-                <AnimatedButton asChild>
-                  <a href="#enquiry-form" className="hover:no-underline">Apply Now</a>
+                <AnimatedButton 
+                  asChild
+                  href="https://apply.bsd.edu.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <a className="hover:no-underline">Apply Now</a>
                 </AnimatedButton>
                 <AnimatedButton variant="outline" asChild>
                   <a href="#enquiry-form" className="hover:no-underline">

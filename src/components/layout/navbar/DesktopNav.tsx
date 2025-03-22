@@ -19,7 +19,13 @@ export const DesktopNav: React.FC<DesktopNavProps> = ({ navStructure }) => {
           ))}
         </NavigationMenuList>
       </NavigationMenu>
-      <AnimatedButton size="sm" className="bg-bsd-orange text-white hover:bg-bsd-orange/90">
+      <AnimatedButton 
+        size="sm" 
+        className="bg-bsd-orange text-white hover:bg-bsd-orange/90"
+        href="https://apply.bsd.edu.in/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Apply Now
       </AnimatedButton>
     </div>

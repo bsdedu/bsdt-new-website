@@ -22,7 +22,12 @@ export const HeroSection: React.FC = () => {
               </p>
               
               <div className="flex flex-wrap gap-4">
-                <AnimatedButton href="/admissions/application-process" variant="default">
+                <AnimatedButton 
+                  href="https://apply.bsd.edu.in/" 
+                  variant="default"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Apply Now
                 </AnimatedButton>
                 <AnimatedButton href="/admissions/schedule-visit" variant="outline">

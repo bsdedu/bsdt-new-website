@@ -40,11 +40,15 @@ export const HeroSection: React.FC = () => {
               <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white">
                 Download Brochure
               </Button>
-              <Link to="/admissions/application-process">
+              <a 
+                href="https://apply.bsd.edu.in/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
                 <Button size="lg" variant="outline" className="border-bsd-orange text-bsd-orange hover:bg-bsd-orange/10">
                   Apply Now
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
           
