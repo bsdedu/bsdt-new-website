@@ -85,7 +85,7 @@ const Index = () => {
         <ProgramsSection />
         <InfoGraphicsSection />
         <UpcomingEventsSection />
-        <AboutSection /> {/* Moved this section here */}
+        <AboutSection />
         <WhyChooseSection />
         <TestimonialsSection />
         <CollaborationsSection />
@@ -100,4 +100,3 @@ const Index = () => {
 };
 
 export default Index;
-
