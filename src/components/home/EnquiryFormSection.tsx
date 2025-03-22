@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, BookOpen, Download, Lock } from "lucide-react";
+import { ArrowRight, BookOpen, Download, Lock, Check } from "lucide-react";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
 import { Input } from "@/components/ui/input";
 import { Card } from "../ui-elements/Card";
