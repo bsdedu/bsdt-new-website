@@ -7,6 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CareerOpportunitiesTab } from './CareerOpportunitiesTab';
 import { LearningOutcomesTab } from './LearningOutcomesTab';
 import { SoftwareToolsTab } from './SoftwareToolsTab';
+import { CurriculumTab } from './CurriculumTab';
 
 export const ProgramOverviewSection: React.FC = () => {
   return (
@@ -65,14 +66,19 @@ export const ProgramOverviewSection: React.FC = () => {
         </RevealSection>
 
         <RevealSection delay={200}>
-          <Tabs defaultValue="learning-outcomes" className="w-full">
+          <Tabs defaultValue="curriculum" className="w-full">
             <div className="flex justify-center mb-8">
-              <TabsList className="grid w-full max-w-md grid-cols-3">
+              <TabsList className="grid w-full max-w-xl grid-cols-4">
+                <TabsTrigger value="curriculum">Curriculum</TabsTrigger>
                 <TabsTrigger value="learning-outcomes">Learning Outcomes</TabsTrigger>
                 <TabsTrigger value="software-tools">Software Tools</TabsTrigger>
                 <TabsTrigger value="career-opportunities">Career Opportunities</TabsTrigger>
               </TabsList>
             </div>
+            
+            <TabsContent value="curriculum" className="mt-0">
+              <CurriculumTab />
+            </TabsContent>
             
             <TabsContent value="learning-outcomes" className="mt-0">
               <LearningOutcomesTab />
