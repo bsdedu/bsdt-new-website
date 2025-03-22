@@ -1,5 +1,6 @@
 
 import * as React from 'react';
+import { format } from 'date-fns';
 import { RevealSection } from '@/components/ui-elements/RevealSection';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
@@ -64,9 +65,6 @@ export const VisitScheduler: React.FC = () => {
       message: '',
     });
   };
-
-  // Need to import format here since we use it in handleSubmit
-  const { format } = require('date-fns');
 
   return (
     <RevealSection>

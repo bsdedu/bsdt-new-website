@@ -127,48 +127,45 @@ const addToRemoveQueue = (toastId: string) => {
 
 interface Toast extends Omit<ToasterToast, "id"> {}
 
-const dispatch = (() => {
-  const listeners: Array<(state: State) => void> = []
-
+// Create a separate dispatcher object
+const createDispatchObject = () => {
+  let listeners: Array<(state: State) => void> = []
   let state: State = { toasts: [] }
 
-  const dispatch = (action: Action) => {
-    state = reducer(state, action)
-    listeners.forEach((listener) => {
-      listener(state)
-    })
-  }
-
-  const subscribe = (listener: (state: State) => void) => {
-    listeners.push(listener)
-    return () => {
-      const index = listeners.indexOf(listener)
-      if (index > -1) {
-        listeners.splice(index, 1)
-      }
-    }
-  }
-
-  const getState = () => state
-
   return {
-    dispatch,
-    subscribe,
-    getState,
+    dispatch: (action: Action) => {
+      state = reducer(state, action)
+      listeners.forEach((listener) => {
+        listener(state)
+      })
+    },
+    subscribe: (listener: (state: State) => void) => {
+      listeners.push(listener)
+      return () => {
+        const index = listeners.indexOf(listener)
+        if (index > -1) {
+          listeners.splice(index, 1)
+        }
+      }
+    },
+    getState: () => state
   }
-})()
+}
+
+// Create a singleton dispatcher
+const dispatcher = createDispatchObject()
 
 export function toast(props: Toast) {
   const id = genId()
 
   const update = (props: Toast) =>
-    dispatch({
+    dispatcher.dispatch({
       type: actionTypes.UPDATE_TOAST,
       toast: { ...props, id },
     })
-  const dismiss = () => dispatch({ type: actionTypes.DISMISS_TOAST, toastId: id })
+  const dismiss = () => dispatcher.dispatch({ type: actionTypes.DISMISS_TOAST, toastId: id })
 
-  dispatch({
+  dispatcher.dispatch({
     type: actionTypes.ADD_TOAST,
     toast: {
       ...props,
@@ -188,15 +185,15 @@ export function toast(props: Toast) {
 }
 
 export function useToast() {
-  const [state, setState] = React.useState<State>(() => dispatch.getState())
+  const [state, setState] = React.useState<State>(() => dispatcher.getState())
 
   React.useEffect(() => {
-    return dispatch.subscribe(setState)
+    return dispatcher.subscribe(setState)
   }, [])
 
   return {
     ...state,
     toast,
-    dismiss: (toastId?: string) => dispatch({ type: actionTypes.DISMISS_TOAST, toastId }),
+    dismiss: (toastId?: string) => dispatcher.dispatch({ type: actionTypes.DISMISS_TOAST, toastId }),
   }
 }
