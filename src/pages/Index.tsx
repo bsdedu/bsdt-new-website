@@ -19,7 +19,8 @@ const Index = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isHydrated, setIsHydrated] = useState(false);
   const observersRef = useRef<IntersectionObserver[]>([]);
-  const timersRef = useRef<number[]>([]);
+  // Fix: Change the type from number[] to NodeJS.Timeout[]
+  const timersRef = useRef<NodeJS.Timeout[]>([]);
 
   // Mark component as hydrated after initial render
   useEffect(() => {
