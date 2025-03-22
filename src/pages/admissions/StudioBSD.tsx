@@ -4,26 +4,30 @@ import { Helmet } from 'react-helmet-async';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { RevealSection } from '@/components/ui-elements/RevealSection';
+import { StudioHero } from '@/components/studio/StudioHero';
+import { StudioOverview } from '@/components/studio/StudioOverview';
+import { StudioFacilities } from '@/components/studio/StudioFacilities';
+import { StudioProjects } from '@/components/studio/StudioProjects';
+import { StudioTestimonials } from '@/components/studio/StudioTestimonials';
+import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
 
 const StudioBSD = () => {
   return (
     <>
       <Helmet>
-        <title>Studio BSD | BSDT</title>
-        <meta name="description" content="Explore Studio BSD at Bangalore School of Design & Technology." />
+        <title>Studio BSD | Bangalore School of Design & Technology</title>
+        <meta name="description" content="Explore Studio BSD - a state-of-the-art professional design studio nestled inside our campus that provides students with real-world industry experience and professional growth opportunities." />
       </Helmet>
       
       <Navbar />
       
-      <main className="pt-24">
-        <RevealSection>
-          <div className="container mx-auto px-6 py-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-bsd-gray mb-8">Studio BSD</h1>
-            <div className="prose prose-lg max-w-none">
-              <p>This page will showcase Studio BSD and its work.</p>
-            </div>
-          </div>
-        </RevealSection>
+      <main>
+        <StudioHero />
+        <StudioOverview />
+        <StudioFacilities />
+        <StudioProjects />
+        <StudioTestimonials />
+        <EnquiryFormSection />
       </main>
       
       <Footer />
