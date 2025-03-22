@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
@@ -99,3 +100,4 @@ export const ProgramFeatures: React.FC = () => {
     </section>
   );
 };
+
