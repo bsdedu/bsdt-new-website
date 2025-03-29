@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
@@ -11,17 +10,16 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { RevealSection } from '@/components/ui-elements/RevealSection';
-
 const PlacementReport = () => {
   const navigate = useNavigate();
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasAccess, setHasAccess] = useState(false);
-
   useEffect(() => {
     // Check if user has access (submitted the form)
     const hasFilledForm = localStorage.getItem('enquiryFormSubmitted') === 'true';
-    
     if (!hasFilledForm) {
       toast({
         title: "Access Restricted",
@@ -31,24 +29,20 @@ const PlacementReport = () => {
       navigate('/');
       return;
     }
-    
     setHasAccess(true);
-    
+
     // Page load animation
     const timer = setTimeout(() => {
       setIsLoaded(true);
     }, 100);
-
     return () => clearTimeout(timer);
   }, [navigate, toast]);
-
   const handleDownloadReport = () => {
     toast({
       title: "Report Downloaded",
       description: "The detailed placement report has been downloaded."
     });
   };
-
   const handleShareReport = () => {
     // Copy current URL to clipboard
     navigator.clipboard.writeText(window.location.href);
@@ -57,13 +51,10 @@ const PlacementReport = () => {
       description: "Report link copied to clipboard"
     });
   };
-
   if (!hasAccess) {
     return null; // Don't render anything while redirecting
   }
-
-  return (
-    <div className={`min-h-screen flex flex-col transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+  return <div className={`min-h-screen flex flex-col transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
       <Helmet>
         <title>Placement Report | BSDT</title>
         <meta name="description" content="Explore BSDT's impressive placement statistics, industry connections, and student success stories." />
@@ -166,11 +157,11 @@ const PlacementReport = () => {
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
               {/* Placeholder for company logos */}
-              {Array.from({ length: 12 }).map((_, index) => (
-                <div key={index} className="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center h-24">
+              {Array.from({
+              length: 12
+            }).map((_, index) => <div key={index} className="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center h-24">
                   <div className="text-bsd-gray/40 font-medium text-center">Company {index + 1}</div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </RevealSection>
@@ -184,7 +175,7 @@ const PlacementReport = () => {
             
             <div className="space-y-8 max-w-4xl mx-auto">
               <Card className="p-6 border-bsd-orange/20 shadow-sm">
-                <h3 className="text-xl font-bold text-bsd-gray mb-4">B.Des Interior Design</h3>
+                <h3 className="text-xl font-bold text-bsd-gray mb-4">B.Sc. Interior Design</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-bsd-gray mb-1">₹4.8 LPA</div>
@@ -276,8 +267,9 @@ const PlacementReport = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Placeholder for student testimonials */}
-              {Array.from({ length: 3 }).map((_, index) => (
-                <Card key={index} className="p-6 border-bsd-orange/20 shadow-sm">
+              {Array.from({
+              length: 3
+            }).map((_, index) => <Card key={index} className="p-6 border-bsd-orange/20 shadow-sm">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-bsd-gray/10 rounded-full mr-4"></div>
                     <div>
@@ -292,16 +284,13 @@ const PlacementReport = () => {
                     <span className="text-bsd-orange font-medium">Placed at: Company Name</span>
                     <span className="text-bsd-gray font-bold">₹7.2 LPA</span>
                   </div>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </RevealSection>
       </main>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default PlacementReport;
