@@ -1,4 +1,3 @@
-
 export interface Club {
   id: number;
   name: string;
@@ -70,7 +69,7 @@ export const clubsData: Club[] = [
     name: "Cultural Club",
     category: "Cultural",
     description: "Celebrates diversity and promotes cultural exchange through festivals, traditional performances, and cultural exhibitions.",
-    image: "/lovable-uploads/dc95fbd7-f3b3-4377-8214-c2506a6e8829.png",
+    image: "/lovable-uploads/07851c39-faf4-444d-9c08-69fefdccb59c.png",
     tags: ["Cultural Events", "Diversity", "Traditional Arts"]
   },
   {
