@@ -64,8 +64,8 @@ export const navStructure: NavStructure[] = [
     href: '#campus-life',
     type: 'dropdown',
     items: [
-      { name: 'Student Experience', href: '/campus-life/student-experience' },
       { name: 'Student Clubs', href: '/campus-life/student-clubs' },
+      { name: 'Student Experience', href: '/campus-life/student-experience' },
       { name: 'Sports Facility', href: '/campus-life/sports-facility' },
       { name: 'Events & Activities', href: '/campus-life/events-activities' },
       { name: 'Hostel & Transport', href: '/campus-life/hostel-transport' }
