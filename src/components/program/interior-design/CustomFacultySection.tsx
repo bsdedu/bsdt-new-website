@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
@@ -41,12 +42,12 @@ export const CustomFacultySection: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="/lovable-uploads/22849e53-5fd4-414c-826d-99aa91cfc501.png" alt="Er. Ritesh L" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/fc9b9c4c-91be-43de-b1a5-d5c09b30a3d8.png" alt="Ar. Bhavana" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Er. Ritesh L</h3>
-                  <p className="text-sm text-bsd-orange">Lead Faculty</p>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Ar. Bhavana</h3>
+                  <p className="text-sm text-bsd-orange">Design Faculty</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    A civil engineering gold medalist with an M.Tech from SJB Institute of Technology, Ritesh brings structural engineering expertise to design education. He has published in international research journals and conducted seminars on innovative design and construction practices. Ritesh is passionate about bridging technical knowledge with creative design approaches.
+                    An innovative designer who transforms ideas into impactful visuals by exploring new perspectives and pushing creative boundaries. Bhavana is collaborative by nature, working closely with both instructors and students to foster meaningful discussions. She draws inspiration from her love for trekking, travel, and nature, bringing these influences into her design approach and teaching methodology.
                   </p>
                 </div>
               </CardContent>
