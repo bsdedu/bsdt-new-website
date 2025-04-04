@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
@@ -22,6 +21,7 @@ export const CustomFacultySection: React.FC = () => {
 
         <RevealSection delay={100}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
             <Card>
               <CardContent className="pt-6">
                 <div className="text-center">
@@ -41,12 +41,12 @@ export const CustomFacultySection: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="/lovable-uploads/6e57ae3d-71c2-4a4a-8a08-6d3e5a61fdb0.png" alt="Er. Ritesh L" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/22849e53-5fd4-414c-826d-99aa91cfc501.png" alt="Er. Ritesh L" className="w-full h-full object-cover" />
                   </div>
                   <h3 className="text-lg font-semibold text-bsd-gray">Er. Ritesh L</h3>
                   <p className="text-sm text-bsd-orange">Lead Faculty</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    Our resident civil engineer with a passion for design. He has graduated as a gold medalist in his M.Tech (Structures) from SJB Institute of Technology where he secured the third rank. He worked as a structural engineer and published in the International Research Journal of Engineering and Technology. He combines design passion with an objective approach to structures and construction.
+                    Our resident civil engineer with a passion for design. He has graduated as a gold medalist in his M.Tech (Structures) from SJB Institute of Technology where he secured the third rank. He worked as a structural engineer and published in the International Research Journal of Engineering and Technology. He has conducted national and international seminars on "The Concrete Panorama" and "Innovative Designs and Construction practices in Highways, Bridges and flyover". Ritesh is very passionate about his subject and is always innovating, researching and discovering journals on it. He is also an admirable teacher who takes pride in showing design students how they can combine their love for design and the objective approach of structures and construction…
                   </p>
                 </div>
               </CardContent>
