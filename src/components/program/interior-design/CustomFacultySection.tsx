@@ -46,7 +46,7 @@ export const CustomFacultySection: React.FC = () => {
                   <h3 className="text-lg font-semibold text-bsd-gray">Er. Ritesh L</h3>
                   <p className="text-sm text-bsd-orange">Lead Faculty</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    Our resident civil engineer with a passion for design. He has graduated as a gold medalist in his M.Tech (Structures) from SJB Institute of Technology where he secured the third rank. He worked as a structural engineer and published in the International Research Journal of Engineering and Technology. He has conducted national and international seminars on "The Concrete Panorama" and "Innovative Designs and Construction practices in Highways, Bridges and flyover". Ritesh is very passionate about his subject and is always innovating, researching and discovering journals on it. He is also an admirable teacher who takes pride in showing design students how they can combine their love for design and the objective approach of structures and construction…
+                    A civil engineering gold medalist with an M.Tech from SJB Institute of Technology, Ritesh brings structural engineering expertise to design education. He has published in international research journals and conducted seminars on innovative design and construction practices. Ritesh is passionate about bridging technical knowledge with creative design approaches.
                   </p>
                 </div>
               </CardContent>
