@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
@@ -40,12 +41,12 @@ export const CustomFacultySection: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="/lovable-uploads/5b49195f-8e0b-429b-bb86-f02b98960ae7.png" alt="Prof. Jainy Steve George" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/6e57ae3d-71c2-4a4a-8a08-6d3e5a61fdb0.png" alt="Er. Ritesh L" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Prof. Jainy Steve George</h3>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Er. Ritesh L</h3>
                   <p className="text-sm text-bsd-orange">Lead Faculty</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    An architect graduate from Manipal School of Architecture with international experience. Jainy has worked on architectural projects in Bahrain and Bangalore, including residential and commercial designs. She has contributed to the Ministry of Education in Bahrain and commercial projects in Saudi Arabia.
+                    Our resident civil engineer with a passion for design. He has graduated as a gold medalist in his M.Tech (Structures) from SJB Institute of Technology where he secured the third rank. He worked as a structural engineer and published in the International Research Journal of Engineering and Technology. He combines design passion with an objective approach to structures and construction.
                   </p>
                 </div>
               </CardContent>
