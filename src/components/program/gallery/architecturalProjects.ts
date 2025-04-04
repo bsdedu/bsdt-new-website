@@ -1,4 +1,3 @@
-
 import { Project } from './types';
 
 export const architecturalProjects: Project[] = [
@@ -18,7 +17,7 @@ export const architecturalProjects: Project[] = [
     student: 'Rahul Mehta',
     year: '2023',
     semester: '6th Semester',
-    image: '/lovable-uploads/4041b097-648e-4871-bba1-a42cfb069280.png',
+    image: '/lovable-uploads/2be4af47-f320-4036-b7a8-5a08f4fba2de.png',
   },
   {
     id: 'arch-3',
