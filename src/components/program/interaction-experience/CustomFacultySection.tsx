@@ -56,12 +56,12 @@ export const CustomFacultySection: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="/lovable-uploads/131f247b-d139-4d13-9a35-257c01ccdb84.png" alt="Sanjay Gupta" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/18447800-f016-4625-b117-1b07598c7e08.png" alt="Piyush Kanti Mahapatra" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Sanjay Gupta</h3>
-                  <p className="text-sm text-bsd-orange">Faculty, Product Design</p>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Piyush Kanti Mahapatra</h3>
+                  <p className="text-sm text-bsd-orange">Faculty, Visual Design</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    With a background in product design at startups and established tech companies, Sanjay brings practical experience in creating user-centered digital products from concept to launch. His expertise in user research methodologies and design thinking processes helps students develop a structured approach to problem-solving.
+                    With 4+ years in digital brand management, Piyush combines industry experience as a Visual Designer with three years of teaching in Art and Design. Skilled in Adobe Creative Cloud, he brings a strategic approach to design that balances aesthetics with brand objectives. His background in both professional and academic environments enriches his collaborative approach to creative problem-solving.
                   </p>
                 </div>
               </CardContent>
