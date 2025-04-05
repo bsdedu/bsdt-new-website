@@ -41,12 +41,12 @@ export const IndustryFaculty: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=2576&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Rajesh Menon" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/f41aeb18-b8b9-48e3-9212-ce854e1b4ea9.png" alt="Ar. Kapil Krishnan K" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Rajesh Menon</h3>
-                  <p className="text-sm text-bsd-orange">Environmental Designer & Ecologist</p>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Ar. Kapil Krishnan K</h3>
+                  <p className="text-sm text-bsd-orange">Senior Faculty, Landscape Architecture</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    Rajesh combines his background in environmental science with landscape design, specializing in ecological restoration and native plant landscapes. His work on biodiversity conservation and sustainable landscape management informs his practical, hands-on teaching approach.
+                    An architect with 23 years of industry experience and a Master's from VTU SJB School of Architecture and Planning. Teaching since 2017, he explores the intersection of technology and artistry in landscape design, viewing the discipline as a means to preserve natural environments and create sustainable outdoor spaces for future generations.
                   </p>
                 </div>
               </CardContent>
@@ -56,12 +56,12 @@ export const IndustryFaculty: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2576&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Priya Nair" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/80d897a6-3e50-49da-b9c3-86a1b0f84d01.png" alt="Er. Ritesh L" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Priya Nair</h3>
-                  <p className="text-sm text-bsd-orange">Landscape Design Director</p>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Er. Ritesh L</h3>
+                  <p className="text-sm text-bsd-orange">Faculty, Landscape Engineering</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    As the design director of a leading landscape architecture firm, Priya brings her expertise in luxury residential landscapes, hospitality projects, and commercial developments to the classroom. Her focus on innovative design solutions and client relations prepares students for professional practice.
+                    A gold medalist in M.Tech (Structures) from SJB Institute of Technology, Ritesh combines engineering expertise with landscape design thinking. He has published in international journals and conducted seminars on innovative construction practices for outdoor spaces. He bridges the gap between creative landscape design and technical implementation, teaching students how to integrate structural principles with ecological vision.
                   </p>
                 </div>
               </CardContent>
