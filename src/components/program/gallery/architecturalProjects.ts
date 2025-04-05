@@ -18,7 +18,7 @@ export const architecturalProjects: Project[] = [
     student: 'Rahul Mehta',
     year: '2023',
     semester: '6th Semester',
-    image: '/lovable-uploads/488972685288-c3fd157d7c7a.png',
+    image: '/placeholder.svg', // Replaced with a placeholder that should definitely exist
   },
   {
     id: 'arch-3',

@@ -15,8 +15,14 @@ interface ProjectCarouselProps {
 }
 
 export const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
+  // Handle cases where projects might be undefined or empty
   if (!projects || projects.length === 0) {
-    return null;
+    console.log("No projects available for carousel");
+    return (
+      <div className="text-center p-8 bg-muted/20 rounded-lg">
+        <p>No projects available to display</p>
+      </div>
+    );
   }
 
   return (
