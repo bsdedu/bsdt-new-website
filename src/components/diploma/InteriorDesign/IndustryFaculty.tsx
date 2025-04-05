@@ -41,12 +41,12 @@ export const IndustryFaculty: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Rohan Mehta" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/02978600-d16a-40b3-aa9a-d6edb67502f2.png" alt="Ar. Bhavana" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Rohan Mehta</h3>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Ar. Bhavana</h3>
                   <p className="text-sm text-bsd-orange">Commercial Design Specialist</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    With 15+ years in commercial and hospitality design, Rohan brings expertise in creating functional and aesthetic workspaces, retail environments, and hospitality interiors that balance form and function.
+                    An innovative designer with 10+ years of experience in commercial design. Bhavana excels at transforming abstract concepts into functional spaces, collaborating with diverse teams, and mentoring students to explore creative boundaries while drawing inspiration from nature.
                   </p>
                 </div>
               </CardContent>
