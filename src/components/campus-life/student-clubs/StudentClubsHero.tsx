@@ -5,7 +5,7 @@ import { AnimatedButton } from '@/components/ui-elements/AnimatedButton';
 export const StudentClubsHero: React.FC = () => {
   return (
     <section className="relative bg-gradient-to-r from-bsd-gray to-bsd-gray/90 text-white py-20">
-      <div className="absolute inset-0 opacity-20 bg-[url(/lovable-uploads/790f59e6-556f-4b98-80b5-3c57e3f70296.png)] bg-cover bg-center mix-blend-overlay"></div>
+      <div className="absolute inset-0 opacity-20 bg-[url(/lovable-uploads/7ac4f67b-92cc-42db-832a-c85d36f5b39c.png)] bg-cover bg-center mix-blend-overlay"></div>
       <div className="container mx-auto px-6 md:px-8 relative z-10">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
