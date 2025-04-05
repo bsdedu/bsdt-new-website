@@ -1,3 +1,4 @@
+
 export interface Club {
   id: number;
   name: string;
@@ -21,7 +22,7 @@ export const clubsData: Club[] = [
     name: "Shutterbugs Photography",
     category: "Arts",
     description: "For photography enthusiasts to learn, practice, and showcase their skills through photo walks, exhibitions, and competitions.",
-    image: "/lovable-uploads/3e1b6482-f28a-4680-9931-2f728b80d0eb.png",
+    image: "/lovable-uploads/7e22def2-79bd-4950-95e1-18ada8d171ab.png",
     tags: ["Photography", "Visual Arts", "Exhibitions"]
   },
   {
