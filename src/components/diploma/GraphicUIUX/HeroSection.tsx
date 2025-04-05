@@ -14,11 +14,11 @@ export const HeroSection: React.FC = () => {
             <Badge variant="bsdOrange" className="mb-2">Professional Diploma Program</Badge>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-bsd-gray">
               Professional Diploma in<br />
-              <span className="text-bsd-orange">Graphic Design + UI/UX</span>
+              <span className="text-bsd-orange">Visual Communication + UI/UX</span>
             </h1>
             
             <p className="text-lg text-foreground/80 max-w-xl">
-              A comprehensive professional diploma program that combines graphic design fundamentals with user interface and experience design principles for digital platforms.
+              A comprehensive professional diploma program that combines visual communication fundamentals with user interface and experience design principles for digital platforms.
             </p>
             
             <div className="flex flex-wrap gap-6 pt-2">
@@ -62,7 +62,7 @@ export const HeroSection: React.FC = () => {
                 <div className="rounded-xl overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80" 
-                    alt="Graphic Design and UI/UX Diploma" 
+                    alt="Visual Communication and UI/UX Diploma" 
                     className="w-full h-[350px] object-cover"
                   />
                 </div>

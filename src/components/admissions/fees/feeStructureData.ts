@@ -76,7 +76,7 @@ export const feeStructureData: FeeStructure = {
       semesterFees: [58500, 88500, null, null, null, null, null, null]
     },
     {
-      name: "Professional Diploma in Graphic Design + UI/UX",
+      name: "Professional Diploma in Visual Communication + UI/UX",
       duration: "1 Year",
       semesters: 2,
       totalFee: 147500,
