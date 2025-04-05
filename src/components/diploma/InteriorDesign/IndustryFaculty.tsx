@@ -26,12 +26,12 @@ export const IndustryFaculty: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Sanya Kapoor" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/a094cc73-a395-4c02-b7e0-8fcf25938d8f.png" alt="Ar. Jainy Steve George" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Sanya Kapoor</h3>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Ar. Jainy Steve George</h3>
                   <p className="text-sm text-bsd-orange">Senior Interior Designer</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    A seasoned interior designer with over 12 years of experience working with prestigious design firms. Sanya specializes in residential interiors, space planning, and sustainable design solutions for modern living spaces.
+                    An architect with a passion for design education and creative exploration. Jainy combines architectural experience with dynamic teaching, bringing practical insights and innovative thinking to the classroom. Her approach emphasizes critical discourse while nurturing the next generation of design professionals.
                   </p>
                 </div>
               </CardContent>
