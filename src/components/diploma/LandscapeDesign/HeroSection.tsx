@@ -61,8 +61,8 @@ export const HeroSection: React.FC = () => {
               <div className="p-6">
                 <div className="rounded-xl overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1558904541-efa843a96f01?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                    alt="Landscape Design Diploma" 
+                    src="/lovable-uploads/dd02c43d-99c4-4a35-aa9a-6aa1a661758d.png" 
+                    alt="Landscape Design Drawing" 
                     className="w-full h-[350px] object-cover"
                   />
                 </div>
