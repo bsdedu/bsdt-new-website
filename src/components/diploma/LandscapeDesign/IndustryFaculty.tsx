@@ -26,12 +26,12 @@ export const IndustryFaculty: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1548449112-96a38a643324?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Aditi Sharma" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/a216f1ec-28e7-45f0-a57f-0684120d759d.png" alt="Ar. Niharika Nigam" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Aditi Sharma</h3>
-                  <p className="text-sm text-bsd-orange">Landscape Architect & Urban Designer</p>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Ar. Niharika Nigam</h3>
+                  <p className="text-sm text-bsd-orange">Landscape Architect & Educator</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    With over 15 years of experience in landscape architecture, Aditi has led major urban design projects across India and internationally. Her expertise in sustainable urban landscapes and public space design provides students with valuable insights into real-world applications.
+                    With over 8 years in academia, Niharika brings expertise in integrating ecological sensitivity with spatial design. A graduate from BBD University, she focuses on sustainable landscape practices and environmental planning. Her teaching approach combines theoretical frameworks with practical applications, empowering students to develop holistic, context-responsive landscape solutions.
                   </p>
                 </div>
               </CardContent>
