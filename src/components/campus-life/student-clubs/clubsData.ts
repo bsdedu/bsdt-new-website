@@ -1,4 +1,12 @@
-import { Club } from './clubsData';
+
+export interface Club {
+  id: number;
+  name: string;
+  category: string;
+  description: string;
+  image: string;
+  tags: string[];
+}
 
 export const clubsData: Club[] = [
   {
