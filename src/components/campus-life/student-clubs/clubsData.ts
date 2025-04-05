@@ -62,7 +62,7 @@ export const clubsData: Club[] = [
     name: "Entrepreneurship Club",
     category: "Business",
     description: "Nurtures entrepreneurial mindset and skills through startup workshops, business plan competitions, and networking with industry professionals.",
-    image: "/lovable-uploads/469b16b9-1a86-4abc-926f-fecba15128d3.png",
+    image: "/lovable-uploads/7b4801e7-0774-4c72-add0-6ccf6cb62a74.png",
     tags: ["Startups", "Business", "Innovation"]
   },
   {
