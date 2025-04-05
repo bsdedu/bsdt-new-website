@@ -1,12 +1,4 @@
-
-export interface Club {
-  id: number;
-  name: string;
-  category: string;
-  description: string;
-  image: string;
-  tags: string[];
-}
+import { Club } from './clubsData';
 
 export const clubsData: Club[] = [
   {
@@ -46,7 +38,7 @@ export const clubsData: Club[] = [
     name: "Eco Warriors",
     category: "Environmental",
     description: "Raises awareness about environmental issues and promotes sustainable practices through campaigns, plantation drives, and recycling initiatives.",
-    image: "/lovable-uploads/c72be9c4-87fc-415a-a4fb-8e3db30e45cf.png",
+    image: "/lovable-uploads/10aff83a-4dde-4576-a4b6-be7d0c63eb23.png",
     tags: ["Sustainability", "Conservation", "Awareness"]
   },
   {
