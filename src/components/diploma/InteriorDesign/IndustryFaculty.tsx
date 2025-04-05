@@ -56,12 +56,12 @@ export const IndustryFaculty: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Anita Singh" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/ee80d4a8-ab78-4c12-8690-fd856f23d2e3.png" alt="Ar. Mohammed Fahad" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Anita Singh</h3>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Ar. Mohammed Fahad</h3>
                   <p className="text-sm text-bsd-orange">3D Visualization Expert</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    A digital design specialist with 10+ years of experience in 3D visualization, rendering, and interior design software. Anita brings practical knowledge of current industry tools and visualization techniques.
+                    An architect with expertise in visualization and sustainable design. Fahad combines teaching experience across multiple design disciplines with professional practice, creating innovative projects like South India's first capsule hotel. His curious mindset and diverse background bring valuable perspectives to interior design education.
                   </p>
                 </div>
               </CardContent>
