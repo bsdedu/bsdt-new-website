@@ -26,12 +26,12 @@ export const IndustryFaculty: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Aryan Sharma" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/8c654396-817b-41ba-9b58-67f6362d40ca.png" alt="Yogesh Praveen" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Aryan Sharma</h3>
-                  <p className="text-sm text-bsd-orange">Senior UI/UX Designer</p>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Yogesh Praveen</h3>
+                  <p className="text-sm text-bsd-orange">Senior Faculty, Digital Design</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    A seasoned UI/UX designer with over 10 years of experience working with major tech companies. Aryan specializes in user research, wireframing, and creating intuitive digital experiences across various platforms and devices.
+                    Yogesh specializes in UI/UX and digital experiences with a background at leading tech companies and design consultancies. His expertise in emerging technologies and digital platforms provides students with cutting-edge skills for the evolving design landscape.
                   </p>
                 </div>
               </CardContent>
@@ -72,3 +72,4 @@ export const IndustryFaculty: React.FC = () => {
     </section>
   );
 };
+
