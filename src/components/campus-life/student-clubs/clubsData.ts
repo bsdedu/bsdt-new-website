@@ -29,7 +29,7 @@ export const clubsData: Club[] = [
     name: "Tech Innovators",
     category: "Technology",
     description: "Focuses on technological innovations and developments in AI, machine learning, and other cutting-edge technologies through workshops and hackathons.",
-    image: "/lovable-uploads/8c54bc32-e626-4a4b-ba4a-e75e84612ca8.png",
+    image: "/lovable-uploads/a3b0f02e-a441-4988-a7c8-d26d8f11150d.png",
     tags: ["Coding", "AI/ML", "Hackathons"]
   },
   {
