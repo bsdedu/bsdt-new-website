@@ -20,10 +20,10 @@ export const CustomFacultySection: React.FC = () => {
       imageUrl: "/lovable-uploads/f41aeb18-b8b9-48e3-9212-ce854e1b4ea9.png",
     },
     {
-      name: "Ar. Bhavana",
-      role: "Faculty, Architectural Design",
-      bio: "An innovative designer who transforms ideas into impactful visuals by exploring new perspectives and pushing creative boundaries. Bhavana is collaborative by nature, working closely with both instructors and students to foster meaningful discussions. She draws inspiration from her love for trekking, travel, and nature into her design teaching.",
-      imageUrl: "/lovable-uploads/fc9b9c4c-91be-43de-b1a5-d5c09b30a3d8.png",
+      name: "Er. Ritesh",
+      role: "Faculty, Structural Design",
+      bio: "A gold medalist in M.Tech (Structures) from SJB Institute of Technology, Ritesh combines engineering expertise with design thinking. He has published in international journals and conducted seminars on innovative construction practices. He bridges the gap between creative design and technical execution, teaching students how to integrate structural principles with architectural vision.",
+      imageUrl: "/lovable-uploads/80d897a6-3e50-49da-b9c3-86a1b0f84d01.png",
     },
   ];
 
