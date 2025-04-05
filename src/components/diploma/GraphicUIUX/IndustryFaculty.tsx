@@ -26,12 +26,12 @@ export const IndustryFaculty: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="/lovable-uploads/8c654396-817b-41ba-9b58-67f6362d40ca.png" alt="Yogesh Praveen" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/b6181cce-9876-49c8-a669-98e38baf6bfa.png" alt="Arun Murugesan" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Yogesh Praveen</h3>
-                  <p className="text-sm text-bsd-orange">Senior Faculty, Digital Design</p>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Arun Murugesan</h3>
+                  <p className="text-sm text-bsd-orange">Program Head, UI/UX Design</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    Yogesh specializes in UI/UX and digital experiences with a background at leading tech companies and design consultancies. His expertise in emerging technologies and digital platforms provides students with cutting-edge skills for the evolving design landscape.
+                    With 12+ years in UX design, Arun leads the HCI department at BSD. He has worked with MNCs like SAP and Cisco, and currently heads the UX group at Rupeek Fintech. He previously founded DTALE design studio, leading a team that worked on 50+ projects across e-commerce, fintech, healthcare, and IoT sectors.
                   </p>
                 </div>
               </CardContent>
@@ -41,12 +41,12 @@ export const IndustryFaculty: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="/lovable-uploads/af5130bc-a7bc-4348-8951-861078594741.png" alt="Amalan Bharali" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/94870121-42f6-48a4-ba7d-955284a194f6.png" alt="Amlan Jyothi Bharali" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Amalan Bharali</h3>
-                  <p className="text-sm text-bsd-orange">Faculty, Graphic Design</p>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Amlan Jyothi Bharali</h3>
+                  <p className="text-sm text-bsd-orange">Faculty, Interaction Design</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    An award-winning typographer and print design specialist, Amalan combines traditional craftsmanship with contemporary applications. His work has been featured in international design publications, and he maintains an active practice alongside his teaching responsibilities.
+                    Dedicated to exploring relationships between form and various contexts, Amlan brings expertise in Product and UI/UX Design. His portfolio includes a website for a design-focused educational institution, a mobile app for the transgender community, a dashboard UI for an electric sports car at IIT Guwahati, and contributions to a sustainable bamboo EV bicycle project at IIT Bombay.
                   </p>
                 </div>
               </CardContent>
@@ -56,12 +56,12 @@ export const IndustryFaculty: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="/lovable-uploads/17900fde-ea8a-4cbb-964e-5c69823ebdf1.png" alt="Amal Sateesh" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/18447800-f016-4625-b117-1b07598c7e08.png" alt="Piyush Kanti Mahapatra" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Amal Sateesh</h3>
-                  <p className="text-sm text-bsd-orange">Faculty, UI/UX Design</p>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Piyush Kanti Mahapatra</h3>
+                  <p className="text-sm text-bsd-orange">Faculty, Visual Design</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    A passionate UI/UX and Graphic Design educator with expertise in User Research, Wireframing, Prototyping, and Visual Communication. Amal bridges design theory with real-world applications, fostering critical thinking and innovation while preparing students to meet the evolving demands of the design industry.
+                    With 4+ years in digital brand management, Piyush combines industry experience as a Visual Designer with three years of teaching in Art and Design. Skilled in Adobe Creative Cloud, he brings a strategic approach to design that balances aesthetics with brand objectives. His background in both professional and academic environments enriches his collaborative approach to creative problem-solving.
                   </p>
                 </div>
               </CardContent>
