@@ -54,7 +54,7 @@ export const clubsData: Club[] = [
     name: "3D Modeling Club",
     category: "Technology",
     description: "Dedicated to 3D modeling, animation, and game development. Members collaborate on projects and learn advanced techniques in 3D design.",
-    image: "/lovable-uploads/cf7871df-3c22-4504-ae9f-824fd6ec7804.png",
+    image: "/lovable-uploads/4c61dfd2-9d5b-4687-9622-1d3cc9d98054.png",
     tags: ["3D Design", "Animation", "Game Design"]
   },
   {
