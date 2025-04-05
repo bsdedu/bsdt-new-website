@@ -14,7 +14,7 @@ export const clubsData: Club[] = [
     name: "Design Hub",
     category: "Creative",
     description: "A collaborative community of design enthusiasts who explore various design disciplines through workshops, competitions, and creative projects.",
-    image: "/lovable-uploads/6e8f285e-a6c2-4dba-9059-ca5b191bd897.png",
+    image: "/lovable-uploads/72b11af0-1a63-4937-a381-39778b981ae3.png",
     tags: ["UX/UI", "Graphic Design", "Product Design"]
   },
   {
