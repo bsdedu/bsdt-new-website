@@ -38,7 +38,7 @@ export const clubsData: Club[] = [
     name: "Drama Society",
     category: "Performing Arts",
     description: "A platform for students to express themselves through theater, street plays, and dramatic performances while learning acting skills.",
-    image: "/lovable-uploads/84bf2665-5492-457f-8295-f739efb5d307.png",
+    image: "/lovable-uploads/5729785a-a4a4-4bd8-a51c-ac5f994e99d1.png",
     tags: ["Theater", "Acting", "Storytelling"]
   },
   {
