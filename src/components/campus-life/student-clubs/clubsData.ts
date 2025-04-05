@@ -77,7 +77,7 @@ export const clubsData: Club[] = [
     name: "Literature & Debate",
     category: "Academic",
     description: "Fosters critical thinking and communication skills through book discussions, literary events, debates, and public speaking competitions.",
-    image: "/lovable-uploads/7d078e54-32f9-4dcf-9af6-9717145d71b7.png",
+    image: "/lovable-uploads/bd51d218-84b7-4b37-a7e0-edb734785adc.png",
     tags: ["Debate", "Literature", "Public Speaking"]
   }
 ];
