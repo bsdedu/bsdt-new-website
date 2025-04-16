@@ -1,4 +1,3 @@
-
 import { Department, FacultyMember } from './types';
 
 export const facultyMembers: FacultyMember[] = [
@@ -178,17 +177,6 @@ export const facultyMembers: FacultyMember[] = [
     qualifications: "Master's in Type Design, University of Reading",
     specialization: "Typography, Type Design, Indic Scripts",
     achievements: "Designer of widely used Indian language typefaces"
-  },
-  {
-    id: 35,
-    name: "Arun Mohan",
-    role: "Faculty, Design Research",
-    bio: "A design researcher with focus on human-centered methodologies and ethnographic approaches to design problems. Arun teaches research methods across departments.",
-    imageUrl: "/lovable-uploads/2e795579-a635-4a82-aad6-cd87ba1f0232.png",
-    department: 'Design',
-    qualifications: "Master's in Design Research, IIT",
-    specialization: "Ethnographic Research, Co-design Methods",
-    achievements: "Research contributions to inclusive design practices"
   },
   // Additional design faculty from program pages
   {
@@ -428,4 +416,4 @@ export const facultyMembers: FacultyMember[] = [
     specialization: "Service Blueprint, Experience Mapping, Systems Thinking",
     achievements: "Redesigned services for major healthcare providers and financial institutions"
   }
-];
+].filter(faculty => faculty.name !== "Arun Mohan");
