@@ -1,23 +1,30 @@
 
 import React from 'react';
-import { RevealSection } from "@/components/ui-elements/RevealSection";
+import { RevealSection } from '../ui-elements/RevealSection';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 
 export const FacultyProgramInfo: React.FC = () => {
   return (
-    <RevealSection delay={300}>
-      <div className="mt-16 bg-bsd-light-gray rounded-xl p-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <h3 className="text-xl font-bold text-bsd-gray mb-4">Visiting Faculty Program</h3>
-            <p className="text-foreground/70">
-              Our program is enriched by industry professionals who visit as guest lecturers, workshop conductors, and mentors, bringing current industry trends and practices directly to our students. These practitioners provide invaluable insights from their active careers, ensuring our curriculum remains aligned with industry needs.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-xl font-bold text-bsd-gray mb-4">Faculty Development</h3>
-            <p className="text-foreground/70">
-              At BSDT, we invest in our faculty's continuous professional development through workshops, research opportunities, industry collaborations, and conference participation. This commitment ensures our educators remain at the forefront of their disciplines, bringing cutting-edge knowledge and methodologies to the classroom.
-            </p>
+    <RevealSection>
+      <div className="mt-16 bg-bsd-light-gray/30 rounded-xl p-6 md:p-10">
+        <div className="text-center max-w-3xl mx-auto">
+          <Badge variant="bsdOrange" className="mb-4">INDUSTRY NETWORK</Badge>
+          <h3 className="text-2xl md:text-3xl font-bold text-bsd-gray mb-4">Connect With Industry Professionals</h3>
+          <p className="mb-6 text-foreground/70">
+            BSDT features a unique ecosystem where students work alongside industry professionals in our in-house design center, BSD Studio. This provides students with hands-on experience in a professional studio environment while still in school.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button variant="outline" size="lg" className="bg-white">
+              <a href="/admissions/visit-campus" className="flex items-center">
+                Visit Our Campus
+              </a>
+            </Button>
+            <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90">
+              <a href="https://apply.bsd.edu.in/" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                Apply Now
+              </a>
+            </Button>
           </div>
         </div>
       </div>

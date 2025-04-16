@@ -2,14 +2,14 @@
 import { Department, FacultyMember } from './types';
 
 export const facultyMembers: FacultyMember[] = [
-  // Original faculty members
+  // Design Faculty
   {
     id: 1,
     name: "Dipti Dineshwar",
     role: "Senior Design Faculty",
     bio: "An architect from BMS School of Architecture with experience in Bangalore and Jaipur. Dipti leads academic programs at BSD, helping students develop design skills through workshops and projects. She specializes in design theory and architectural history, with a Harvard certification in 'The Architectural Imagination'.",
     imageUrl: "/lovable-uploads/796f352b-67e6-4210-9634-1eebb7b9b5eb.png",
-    department: 'Architecture',
+    department: 'Design',
     qualifications: "B.Arch, BMS School of Architecture",
     specialization: "Architectural Design, Design Theory",
     achievements: "Harvard Certification in 'The Architectural Imagination'"
@@ -20,7 +20,7 @@ export const facultyMembers: FacultyMember[] = [
     role: "Lead Faculty",
     bio: "An architect graduate from Manipal School of Architecture with international experience. Jainy has worked on architectural projects in Bahrain and Bangalore, including residential and commercial designs. She has contributed to the Ministry of Education in Bahrain and commercial projects in Saudi Arabia.",
     imageUrl: "/lovable-uploads/60503a43-efdf-4b52-b5eb-9820520a9f2c.png",
-    department: 'Architecture',
+    department: 'Design',
     qualifications: "B.Arch, Manipal School of Architecture",
     specialization: "Residential and Commercial Design, International Architecture",
     achievements: "Projects with Ministry of Education in Bahrain"
@@ -31,43 +31,10 @@ export const facultyMembers: FacultyMember[] = [
     role: "Senior Design Faculty",
     bio: "An architecture graduate from Thiagarajar School of Architecture with over eight years of professional experience in hotels, commercial buildings, and luxury villas. Currently a senior architect at Design Studio, Aditha has been with BSDT since its inception, mentoring students and providing industry-relevant guidance.",
     imageUrl: "/lovable-uploads/cf4f9117-b682-4731-a2bd-2235671a4373.png",
-    department: 'Architecture',
+    department: 'Design',
     qualifications: "B.Arch, Thiagarajar School of Architecture",
     specialization: "Hotels, Commercial Buildings, Luxury Villas",
     achievements: "8+ years professional experience, Senior Architect at Design Studio"
-  },
-  {
-    id: 4,
-    name: "Harish Narayan",
-    role: "Faculty, UI/UX Design & Product Management",
-    bio: "A skilled product manager specializing in UI/UX and collaboration tools. With a post-graduate degree in Management from Great Lakes Institute and a bachelor's in Instrumentation Technology from M S Ramaiah Institute, his expertise in user experience and metrics has led to significant contributions in the tech industry.",
-    imageUrl: "/lovable-uploads/ba42a875-3428-489e-84f5-b44223159d85.png",
-    department: ['Design', 'Technology'],
-    qualifications: "PG in Management, Great Lakes Institute; B.Tech, M S Ramaiah Institute",
-    specialization: "UI/UX Design, Product Management, Collaboration Tools",
-    achievements: "Significant contributions to tech industry products"
-  },
-  {
-    id: 5,
-    name: "J. Sheeba Selvapattu",
-    role: "Faculty, Computer Science & Cybersecurity",
-    bio: "With a Master's in Information Technology and currently pursuing a Ph.D. in Computer Science, Sheeba brings 4.5 years of experience as a researcher and academician. Her expertise in cybersecurity, cloud computing, and programming languages like Python and Java, along with several Scopus-indexed research publications, enriches the learning experience.",
-    imageUrl: "/lovable-uploads/121fd226-ad55-481d-b095-79c9e4765b16.png",
-    department: 'Technology',
-    qualifications: "M.Tech in Information Technology, Pursuing Ph.D. in Computer Science",
-    specialization: "Cybersecurity, Cloud Computing, Python, Java",
-    achievements: "Scopus-indexed research publications, 4.5 years as researcher and academician"
-  },
-  {
-    id: 6,
-    name: "Shyni K C",
-    role: "Faculty, Computer Applications",
-    bio: "An experienced educator with 18 years of teaching experience, Shyni holds a Master's in Computer Applications and a Bachelor's in Mathematics. Her strong foundation in computational thinking and problem-solving drives her passion for mathematics and computer science education, empowering students with critical thinking skills relevant to the evolving tech industry.",
-    imageUrl: "/lovable-uploads/3e1b6482-f28a-4680-9931-2f728b80d0eb.png",
-    department: 'Technology',
-    qualifications: "MCA, B.Sc. in Mathematics",
-    specialization: "Computer Applications, Mathematics, Computational Thinking",
-    achievements: "18 years of teaching experience"
   },
   {
     id: 7,
@@ -90,39 +57,6 @@ export const facultyMembers: FacultyMember[] = [
     qualifications: "M.Des in User Experience, B.Des in Visual Communication",
     specialization: "UX/UI Design, Branding, Digital Design",
     achievements: "Projects with leading tech companies and design studios"
-  },
-  {
-    id: 9,
-    name: "Dr. Rekha Srinivasan",
-    role: "Head of Management Studies",
-    bio: "With over 15 years in academia and industry, Dr. Rekha brings extensive knowledge in strategic management and organizational behavior. Her research focuses on educational leadership and innovation management.",
-    imageUrl: "/lovable-uploads/e48b8c13-052e-4d80-ada8-db3eaf003d21.png",
-    department: 'Management',
-    qualifications: "Ph.D. in Management, MBA from IIM",
-    specialization: "Strategic Management, Organizational Behavior, Innovation Management",
-    achievements: "Published research in top-tier journals, Consulting experience with Fortune 500 companies"
-  },
-  {
-    id: 10,
-    name: "Dr. Deepa Rajan",
-    role: "Faculty, Business Management",
-    bio: "Dr. Deepa has 12+ years of experience in teaching business administration and entrepreneurship. Her research focuses on sustainable business practices and startup ecosystems in emerging markets.",
-    imageUrl: "/lovable-uploads/e717df8a-d41c-41e2-aead-5ec816cebd6e.png",
-    department: 'Management',
-    qualifications: "Ph.D. in Business Administration, MBA",
-    specialization: "Entrepreneurship, Strategic Management, Sustainable Business",
-    achievements: "Published author with multiple research papers on entrepreneurship"
-  },
-  {
-    id: 11,
-    name: "Dr. Prashant Kumar",
-    role: "Faculty, Data Science",
-    bio: "A data science expert with industry and academic experience in machine learning and artificial intelligence applications. Dr. Prashant has contributed to several high-impact projects in both corporate and research settings.",
-    imageUrl: "/lovable-uploads/8b983b3f-fd59-44d3-b5cc-152eeffe62cd.png",
-    department: 'Technology',
-    qualifications: "Ph.D. in Computer Science, M.Tech in AI",
-    specialization: "Machine Learning, Data Analytics, AI Applications",
-    achievements: "Patents in AI technology, Industry consultant for tech startups"
   },
   {
     id: 12,
@@ -158,17 +92,6 @@ export const facultyMembers: FacultyMember[] = [
     achievements: "National design awards, International design exhibitions"
   },
   {
-    id: 15,
-    name: "Dr. Sunil Patel",
-    role: "Faculty, Architectural Engineering",
-    bio: "With expertise in structural engineering and sustainable architecture, Dr. Sunil combines technical knowledge with design sensibility. His research focuses on innovative building materials and construction technologies.",
-    imageUrl: "/lovable-uploads/dc95fbd7-f3b3-4377-8214-c2506a6e8829.png",
-    department: 'Architecture',
-    qualifications: "Ph.D. in Architectural Engineering, B.Arch",
-    specialization: "Structural Design, Sustainable Materials, Green Building",
-    achievements: "GRIHA evaluator, Research grants in sustainable construction"
-  },
-  {
     id: 16,
     name: "Meera Krishnan",
     role: "Faculty, Interaction Design",
@@ -179,136 +102,13 @@ export const facultyMembers: FacultyMember[] = [
     specialization: "User Experience, Accessibility, Interactive Systems",
     achievements: "Patents in interface design, Published research on inclusive design"
   },
-  
-  // Adding faculty members from the website as per the departments mentioned
-  // International Faculty
-  {
-    id: 17,
-    name: "Dr. Yogesh Joshi",
-    role: "International Faculty, Design Research",
-    bio: "Associate Professor at Bezalel Academy of Arts and Design, Dr. Yogesh focuses on design research and innovation. He brings global perspectives to the curriculum with his extensive experience in international design education.",
-    imageUrl: "/lovable-uploads/e89cc1d4-b789-4ae4-8c9a-5d9bb88744cd.png",
-    department: 'International Faculty',
-    qualifications: "Ph.D. in Design Research, Bezalel Academy of Arts and Design",
-    specialization: "Design Research Methodologies, Cross-cultural Design",
-    achievements: "International publications in design research journals"
-  },
-  {
-    id: 18,
-    name: "Prof. Maria Chen",
-    role: "International Faculty, Sustainable Design",
-    bio: "With expertise in sustainable design practices from Shanghai Design Institute, Prof. Chen brings Eastern design philosophies and approaches to sustainability to BSD students.",
-    imageUrl: "/lovable-uploads/5aa8966b-7287-46b3-9b20-024ae41e5048.png",
-    department: 'International Faculty',
-    qualifications: "Master's in Sustainable Design, Shanghai Design Institute",
-    specialization: "Sustainable Materials, Eastern Design Philosophy",
-    achievements: "Projects implemented across Asia focusing on sustainable practices"
-  },
-  
-  // Guest Faculty
-  {
-    id: 19,
-    name: "Arjun Menon",
-    role: "Guest Faculty, Film Direction",
-    bio: "An acclaimed filmmaker with experience in directing feature films and documentaries. Arjun brings hands-on knowledge of visual storytelling and film language to animation and design students.",
-    imageUrl: "/lovable-uploads/b4ba02e9-bf46-424d-b4b6-56a4ba16608c.png",
-    department: 'Guest Faculty',
-    qualifications: "Film and Television Institute of India",
-    specialization: "Visual Storytelling, Direction, Cinematography",
-    achievements: "National Award-winning filmmaker with international recognition"
-  },
-  {
-    id: 20,
-    name: "Neha Sharma",
-    role: "Guest Faculty, Brand Strategy",
-    bio: "A brand strategy consultant with experience working with Fortune 500 companies. Neha helps students understand the business aspects of design and how to create meaningful brand experiences.",
-    imageUrl: "/lovable-uploads/a14f6c87-51d9-46f6-a691-d097e9dd9d7a.png",
-    department: 'Guest Faculty',
-    qualifications: "MBA in Marketing, London Business School",
-    specialization: "Brand Strategy, Marketing, Consumer Behavior",
-    achievements: "Led branding for major international brands across sectors"
-  },
-  
-  // Design Mentors
-  {
-    id: 21,
-    name: "Vikram Hegde",
-    role: "Design Mentor, Product Design",
-    bio: "With 15+ years in product design at Apple and Tesla, Vikram mentors students in industrial design projects and product innovation. His industry connections provide real-world opportunities for students.",
-    imageUrl: "/lovable-uploads/fb0f9a42-b665-42ed-a4f5-50557f6a5093.png",
-    department: 'Design Mentors',
-    qualifications: "Master's in Industrial Design, Rhode Island School of Design",
-    specialization: "Product Innovation, User-Centered Design",
-    achievements: "Multiple patents for innovative product designs"
-  },
-  {
-    id: 22,
-    name: "Priya Nagarajan",
-    role: "Design Mentor, Service Design",
-    bio: "A pioneer in service design with expertise in designing user experiences for healthcare and financial services. Priya mentors advanced students on complex service design projects.",
-    imageUrl: "/lovable-uploads/cd3d39f9-b653-4797-bdd2-ac99084ae0ec.png",
-    department: 'Design Mentors',
-    qualifications: "Master's in Service Design, Royal College of Art",
-    specialization: "Service Blueprint, Experience Mapping, Systems Thinking",
-    achievements: "Redesigned services for major healthcare providers and financial institutions"
-  },
-  
-  // Department of Languages & Skill Enhancement
-  {
-    id: 23,
-    name: "Dr. Sharmila Kamath",
-    role: "Head, Languages & Skill Enhancement",
-    bio: "A linguist and communication expert, Dr. Sharmila oversees language and soft skills training that complements technical education. Her program enhances students' professional communication abilities.",
-    imageUrl: "/lovable-uploads/cfb45146-ec9d-434c-9b60-ee146c328146.png",
-    department: 'Languages & Skill Enhancement',
-    qualifications: "Ph.D. in Linguistics, M.A. in English Literature",
-    specialization: "Professional Communication, Technical Writing",
-    achievements: "Published author on communication techniques for designers"
-  },
-  {
-    id: 24,
-    name: "Ramesh Iyer",
-    role: "Faculty, Professional Communication",
-    bio: "With corporate training experience, Ramesh helps students develop presentation skills, interview techniques, and professional communication abilities necessary for their careers.",
-    imageUrl: "/lovable-uploads/d1e69b3a-6ece-40bb-ba92-363b7d0f3758.png",
-    department: 'Languages & Skill Enhancement',
-    qualifications: "MBA, Certified Corporate Trainer",
-    specialization: "Business Communication, Public Speaking",
-    achievements: "Developed communication programs for leading tech companies"
-  },
-  
-  // Department of Tech
-  {
-    id: 25,
-    name: "Dr. Venkat Subramanian",
-    role: "Head, Department of Technology",
-    bio: "With a background in computer science research and industry experience at Google, Dr. Venkat leads the tech curriculum with focus on emerging technologies and practical applications.",
-    imageUrl: "/lovable-uploads/c72be9c4-87fc-415a-a4fb-8e3db30e45cf.png",
-    department: 'Tech',
-    qualifications: "Ph.D. in Computer Science, Stanford University",
-    specialization: "Machine Learning, Cloud Architecture",
-    achievements: "Research contributions to machine learning algorithms, industry patents"
-  },
-  {
-    id: 26,
-    name: "Lakshmi Narayanan",
-    role: "Faculty, Full Stack Development",
-    bio: "A full stack developer with startup and enterprise experience, Lakshmi teaches modern web and application development with focus on industry-relevant technologies.",
-    imageUrl: "/lovable-uploads/4f3de368-ac90-4b0b-b38f-45580d4df068.png",
-    department: 'Tech',
-    qualifications: "M.Tech in Information Technology",
-    specialization: "Web Development, Mobile Applications, Cloud Integration",
-    achievements: "Developed applications used by millions of users"
-  },
-  
-  // Department of Graphic Design & UI/UX
   {
     id: 27,
     name: "Rohan Chatterjee",
     role: "Head, Graphic Design & UI/UX",
     bio: "A veteran designer with expertise in branding and digital experiences, Rohan has worked with major brands globally. He brings his industry connections and practical knowledge to the department.",
     imageUrl: "/lovable-uploads/66c6a931-8ba1-4c13-8f59-bcb925328891.png",
-    department: 'Graphic Design & UI/UX',
+    department: 'Design',
     qualifications: "Master's in Design, National Institute of Design",
     specialization: "Brand Identity, Interactive Design",
     achievements: "Design lead for major international brands, industry awards"
@@ -319,20 +119,18 @@ export const facultyMembers: FacultyMember[] = [
     role: "Faculty, User Experience Research",
     bio: "A UX researcher with background in cognitive psychology, Shreya specializes in user testing methodologies and research-driven design approaches for digital products.",
     imageUrl: "/lovable-uploads/969b7c45-6f0d-4a8c-8d1b-9a6e5e2c3c78.png",
-    department: 'Graphic Design & UI/UX',
+    department: 'Design',
     qualifications: "Master's in Human-Computer Interaction, M.Sc in Psychology",
     specialization: "User Research, Usability Testing, Design Psychology",
     achievements: "Research that shaped major product decisions at tech companies"
   },
-  
-  // Department of Interior, Architecture & Landscape Design
   {
     id: 29,
     name: "Prakash Verma",
     role: "Head, Interior & Architecture Design",
     bio: "An architect with 25 years of experience in residential, commercial and institutional projects. Prakash brings practical insights on construction, materials, and spatial design.",
     imageUrl: "/lovable-uploads/741db2ef-80d9-44dd-b7f0-cb1942734763.png",
-    department: 'Interior, Architecture & Landscape Design',
+    department: 'Design',
     qualifications: "B.Arch, School of Planning and Architecture",
     specialization: "Urban Design, Sustainable Architecture",
     achievements: "Award-winning projects across India, sustainable design advocate"
@@ -343,13 +141,11 @@ export const facultyMembers: FacultyMember[] = [
     role: "Faculty, Landscape Design",
     bio: "A landscape architect with focus on sustainable and native landscape designs. Anjali integrates ecological principles into her teaching and design practice.",
     imageUrl: "/lovable-uploads/4618c0c6-c363-42fa-95d6-876943724e39.png",
-    department: 'Interior, Architecture & Landscape Design',
+    department: 'Design',
     qualifications: "M.L.A, Harvard Graduate School of Design",
     specialization: "Sustainable Landscapes, Urban Green Spaces",
     achievements: "Projects featured in international design publications"
   },
-  
-  // More faculty members to represent roughly 50 total
   {
     id: 31,
     name: "Dr. Samir Khan",
@@ -373,17 +169,6 @@ export const facultyMembers: FacultyMember[] = [
     achievements: "Worked on internationally successful game titles"
   },
   {
-    id: 33,
-    name: "Dr. Varun Chandrasekhar",
-    role: "Faculty, Digital Fabrication",
-    bio: "Specializing in digital fabrication and computational design, Dr. Varun bridges architecture, design and technology through innovative making processes.",
-    imageUrl: "/lovable-uploads/19d9240e-3fb4-4ad7-9d67-26e04d384d74.png",
-    department: ['Architecture', 'Technology'],
-    qualifications: "Ph.D. in Computational Design, MIT",
-    specialization: "Digital Fabrication, Parametric Design, Materials Research",
-    achievements: "Innovations in material science and fabrication techniques"
-  },
-  {
     id: 34,
     name: "Divya Prakash",
     role: "Faculty, Typography Design",
@@ -404,5 +189,243 @@ export const facultyMembers: FacultyMember[] = [
     qualifications: "Master's in Design Research, IIT",
     specialization: "Ethnographic Research, Co-design Methods",
     achievements: "Research contributions to inclusive design practices"
+  },
+  // Additional design faculty from program pages
+  {
+    id: 101,
+    name: "Ar. Bhavana",
+    role: "Commercial Design Specialist",
+    bio: "An innovative designer with 10+ years of experience in commercial design. Bhavana excels at transforming abstract concepts into functional spaces, collaborating with diverse teams, and mentoring students to explore creative boundaries while drawing inspiration from nature.",
+    imageUrl: "/lovable-uploads/02978600-d16a-40b3-aa9a-d6edb67502f2.png",
+    department: 'Design',
+    qualifications: "B.Arch, M.Des in Commercial Design",
+    specialization: "Commercial Spaces, Interior Design",
+    achievements: "10+ years of industry experience in commercial design"
+  },
+  {
+    id: 102,
+    name: "Ar. Mohammed Fahad",
+    role: "3D Visualization Expert",
+    bio: "An architect with expertise in visualization and sustainable design. Fahad combines teaching experience across multiple design disciplines with professional practice, creating innovative projects like South India's first capsule hotel. His curious mindset and diverse background bring valuable perspectives to interior design education.",
+    imageUrl: "/lovable-uploads/ee80d4a8-ab78-4c12-8690-fd856f23d2e3.png",
+    department: 'Design',
+    qualifications: "B.Arch, Specialization in 3D Visualization",
+    specialization: "3D Visualization, Sustainable Design",
+    achievements: "Designed South India's first capsule hotel"
+  },
+  {
+    id: 103,
+    name: "Ar. Niharika Nigam",
+    role: "Landscape Architect & Educator",
+    bio: "With over 8 years in academia, Niharika brings expertise in integrating ecological sensitivity with spatial design. A graduate from BBD University, she focuses on sustainable landscape practices and environmental planning. Her teaching approach combines theoretical frameworks with practical applications, empowering students to develop holistic, context-responsive landscape solutions.",
+    imageUrl: "/lovable-uploads/a216f1ec-28e7-45f0-a57f-0684120d759d.png",
+    department: 'Design',
+    qualifications: "Graduate from BBD University",
+    specialization: "Sustainable Landscape Practices, Environmental Planning",
+    achievements: "8+ years in academia, specializing in ecological design"
+  },
+  {
+    id: 104,
+    name: "Ar. Kapil Krishnan K",
+    role: "Senior Faculty, Landscape Architecture",
+    bio: "An architect with 23 years of industry experience and a Master's from VTU SJB School of Architecture and Planning. Teaching since 2017, he explores the intersection of technology and artistry in landscape design, viewing the discipline as a means to preserve natural environments and create sustainable outdoor spaces for future generations.",
+    imageUrl: "/lovable-uploads/f41aeb18-b8b9-48e3-9212-ce854e1b4ea9.png",
+    department: 'Design',
+    qualifications: "Master's from VTU SJB School of Architecture and Planning",
+    specialization: "Landscape Architecture, Sustainable Outdoor Spaces",
+    achievements: "23 years of industry experience, teaching since 2017"
+  },
+  {
+    id: 105,
+    name: "Arun Murugesan",
+    role: "Program Head, UI/UX Design",
+    bio: "With 12+ years in UX design, Arun leads the HCI department at BSD. He has worked with MNCs like SAP and Cisco, and currently heads the UX group at Rupeek Fintech. He previously founded DTALE design studio, leading a team that worked on 50+ projects across e-commerce, fintech, healthcare, and IoT sectors.",
+    imageUrl: "/lovable-uploads/b6181cce-9876-49c8-a669-98e38baf6bfa.png",
+    department: 'Design',
+    qualifications: "Masters in User Experience Design",
+    specialization: "UX Design, Product Design Strategy",
+    achievements: "Founded DTALE design studio, led 50+ projects across multiple sectors"
+  },
+  {
+    id: 106,
+    name: "Amlan Jyothi Bharali",
+    role: "Faculty, Interaction Design",
+    bio: "Dedicated to exploring relationships between form and various contexts, Amlan brings expertise in Product and UI/UX Design. His portfolio includes a website for a design-focused educational institution, a mobile app for the transgender community, a dashboard UI for an electric sports car at IIT Guwahati, and contributions to a sustainable bamboo EV bicycle project at IIT Bombay.",
+    imageUrl: "/lovable-uploads/94870121-42f6-48a4-ba7d-955284a194f6.png",
+    department: 'Design',
+    qualifications: "Design education from IIT",
+    specialization: "Product Design, UI/UX Design",
+    achievements: "Contributions to sustainable EV bicycle project at IIT Bombay"
+  },
+  {
+    id: 107,
+    name: "Piyush Kanti Mahapatra",
+    role: "Faculty, Visual Design",
+    bio: "With 4+ years in digital brand management, Piyush combines industry experience as a Visual Designer with three years of teaching in Art and Design. Skilled in Adobe Creative Cloud, he brings a strategic approach to design that balances aesthetics with brand objectives. His background in both professional and academic environments enriches his collaborative approach to creative problem-solving.",
+    imageUrl: "/lovable-uploads/18447800-f016-4625-b117-1b07598c7e08.png",
+    department: 'Design',
+    qualifications: "Degree in Visual Design",
+    specialization: "Digital Brand Management, Visual Design",
+    achievements: "4+ years in digital brand management, 3 years teaching experience"
+  },
+
+  // Technology Faculty
+  {
+    id: 4,
+    name: "Harish Narayan",
+    role: "Faculty, UI/UX Design & Product Management",
+    bio: "A skilled product manager specializing in UI/UX and collaboration tools. With a post-graduate degree in Management from Great Lakes Institute and a bachelor's in Instrumentation Technology from M S Ramaiah Institute, his expertise in user experience and metrics has led to significant contributions in the tech industry.",
+    imageUrl: "/lovable-uploads/ba42a875-3428-489e-84f5-b44223159d85.png",
+    department: 'Technology',
+    qualifications: "PG in Management, Great Lakes Institute; B.Tech, M S Ramaiah Institute",
+    specialization: "UI/UX Design, Product Management, Collaboration Tools",
+    achievements: "Significant contributions to tech industry products"
+  },
+  {
+    id: 5,
+    name: "J. Sheeba Selvapattu",
+    role: "Faculty, Computer Science & Cybersecurity",
+    bio: "With a Master's in Information Technology and currently pursuing a Ph.D. in Computer Science, Sheeba brings 4.5 years of experience as a researcher and academician. Her expertise in cybersecurity, cloud computing, and programming languages like Python and Java, along with several Scopus-indexed research publications, enriches the learning experience.",
+    imageUrl: "/lovable-uploads/121fd226-ad55-481d-b095-79c9e4765b16.png",
+    department: 'Technology',
+    qualifications: "M.Tech in Information Technology, Pursuing Ph.D. in Computer Science",
+    specialization: "Cybersecurity, Cloud Computing, Python, Java",
+    achievements: "Scopus-indexed research publications, 4.5 years as researcher and academician"
+  },
+  {
+    id: 6,
+    name: "Shyni K C",
+    role: "Faculty, Computer Applications",
+    bio: "An experienced educator with 18 years of teaching experience, Shyni holds a Master's in Computer Applications and a Bachelor's in Mathematics. Her strong foundation in computational thinking and problem-solving drives her passion for mathematics and computer science education, empowering students with critical thinking skills relevant to the evolving tech industry.",
+    imageUrl: "/lovable-uploads/3e1b6482-f28a-4680-9931-2f728b80d0eb.png",
+    department: 'Technology',
+    qualifications: "MCA, B.Sc. in Mathematics",
+    specialization: "Computer Applications, Mathematics, Computational Thinking",
+    achievements: "18 years of teaching experience"
+  },
+  {
+    id: 11,
+    name: "Dr. Prashant Kumar",
+    role: "Faculty, Data Science",
+    bio: "A data science expert with industry and academic experience in machine learning and artificial intelligence applications. Dr. Prashant has contributed to several high-impact projects in both corporate and research settings.",
+    imageUrl: "/lovable-uploads/8b983b3f-fd59-44d3-b5cc-152eeffe62cd.png",
+    department: 'Technology',
+    qualifications: "Ph.D. in Computer Science, M.Tech in AI",
+    specialization: "Machine Learning, Data Analytics, AI Applications",
+    achievements: "Patents in AI technology, Industry consultant for tech startups"
+  },
+  {
+    id: 25,
+    name: "Dr. Venkat Subramanian",
+    role: "Head, Department of Technology",
+    bio: "With a background in computer science research and industry experience at Google, Dr. Venkat leads the tech curriculum with focus on emerging technologies and practical applications.",
+    imageUrl: "/lovable-uploads/c72be9c4-87fc-415a-a4fb-8e3db30e45cf.png",
+    department: 'Technology',
+    qualifications: "Ph.D. in Computer Science, Stanford University",
+    specialization: "Machine Learning, Cloud Architecture",
+    achievements: "Research contributions to machine learning algorithms, industry patents"
+  },
+  {
+    id: 26,
+    name: "Lakshmi Narayanan",
+    role: "Faculty, Full Stack Development",
+    bio: "A full stack developer with startup and enterprise experience, Lakshmi teaches modern web and application development with focus on industry-relevant technologies.",
+    imageUrl: "/lovable-uploads/4f3de368-ac90-4b0b-b38f-45580d4df068.png",
+    department: 'Technology',
+    qualifications: "M.Tech in Information Technology",
+    specialization: "Web Development, Mobile Applications, Cloud Integration",
+    achievements: "Developed applications used by millions of users"
+  },
+  {
+    id: 33,
+    name: "Dr. Varun Chandrasekhar",
+    role: "Faculty, Digital Fabrication",
+    bio: "Specializing in digital fabrication and computational design, Dr. Varun bridges architecture, design and technology through innovative making processes.",
+    imageUrl: "/lovable-uploads/19d9240e-3fb4-4ad7-9d67-26e04d384d74.png",
+    department: 'Technology',
+    qualifications: "Ph.D. in Computational Design, MIT",
+    specialization: "Digital Fabrication, Parametric Design, Materials Research",
+    achievements: "Innovations in material science and fabrication techniques"
+  },
+  {
+    id: 108,
+    name: "Er. Ritesh L",
+    role: "Faculty, Landscape Engineering",
+    bio: "A gold medalist in M.Tech (Structures) from SJB Institute of Technology, Ritesh combines engineering expertise with landscape design thinking. He has published in international journals and conducted seminars on innovative construction practices for outdoor spaces. He bridges the gap between creative landscape design and technical implementation, teaching students how to integrate structural principles with ecological vision.",
+    imageUrl: "/lovable-uploads/80d897a6-3e50-49da-b9c3-86a1b0f84d01.png",
+    department: 'Technology',
+    qualifications: "M.Tech (Structures) from SJB Institute of Technology, Gold Medalist",
+    specialization: "Landscape Engineering, Structural Design for Outdoor Spaces",
+    achievements: "Published in international journals, conducted seminars on innovative construction practices"
+  },
+
+  // International Faculty
+  {
+    id: 17,
+    name: "Dr. Yogesh Joshi",
+    role: "International Faculty, Design Research",
+    bio: "Associate Professor at Bezalel Academy of Arts and Design, Dr. Yogesh focuses on design research and innovation. He brings global perspectives to the curriculum with his extensive experience in international design education.",
+    imageUrl: "/lovable-uploads/e89cc1d4-b789-4ae4-8c9a-5d9bb88744cd.png",
+    department: 'International Faculty',
+    qualifications: "Ph.D. in Design Research, Bezalel Academy of Arts and Design",
+    specialization: "Design Research Methodologies, Cross-cultural Design",
+    achievements: "International publications in design research journals"
+  },
+  {
+    id: 18,
+    name: "Prof. Maria Chen",
+    role: "International Faculty, Sustainable Design",
+    bio: "With expertise in sustainable design practices from Shanghai Design Institute, Prof. Chen brings Eastern design philosophies and approaches to sustainability to BSD students.",
+    imageUrl: "/lovable-uploads/5aa8966b-7287-46b3-9b20-024ae41e5048.png",
+    department: 'International Faculty',
+    qualifications: "Master's in Sustainable Design, Shanghai Design Institute",
+    specialization: "Sustainable Materials, Eastern Design Philosophy",
+    achievements: "Projects implemented across Asia focusing on sustainable practices"
+  },
+
+  // Guest Faculty
+  {
+    id: 19,
+    name: "Arjun Menon",
+    role: "Guest Faculty, Film Direction",
+    bio: "An acclaimed filmmaker with experience in directing feature films and documentaries. Arjun brings hands-on knowledge of visual storytelling and film language to animation and design students.",
+    imageUrl: "/lovable-uploads/b4ba02e9-bf46-424d-b4b6-56a4ba16608c.png",
+    department: 'Guest Faculty',
+    qualifications: "Film and Television Institute of India",
+    specialization: "Visual Storytelling, Direction, Cinematography",
+    achievements: "National Award-winning filmmaker with international recognition"
+  },
+  {
+    id: 20,
+    name: "Neha Sharma",
+    role: "Guest Faculty, Brand Strategy",
+    bio: "A brand strategy consultant with experience working with Fortune 500 companies. Neha helps students understand the business aspects of design and how to create meaningful brand experiences.",
+    imageUrl: "/lovable-uploads/a14f6c87-51d9-46f6-a691-d097e9dd9d7a.png",
+    department: 'Guest Faculty',
+    qualifications: "MBA in Marketing, London Business School",
+    specialization: "Brand Strategy, Marketing, Consumer Behavior",
+    achievements: "Led branding for major international brands across sectors"
+  },
+  {
+    id: 21,
+    name: "Vikram Hegde",
+    role: "Guest Faculty, Product Design",
+    bio: "With 15+ years in product design at Apple and Tesla, Vikram mentors students in industrial design projects and product innovation. His industry connections provide real-world opportunities for students.",
+    imageUrl: "/lovable-uploads/fb0f9a42-b665-42ed-a4f5-50557f6a5093.png",
+    department: 'Guest Faculty',
+    qualifications: "Master's in Industrial Design, Rhode Island School of Design",
+    specialization: "Product Innovation, User-Centered Design",
+    achievements: "Multiple patents for innovative product designs"
+  },
+  {
+    id: 22,
+    name: "Priya Nagarajan",
+    role: "Guest Faculty, Service Design",
+    bio: "A pioneer in service design with expertise in designing user experiences for healthcare and financial services. Priya mentors advanced students on complex service design projects.",
+    imageUrl: "/lovable-uploads/cd3d39f9-b653-4797-bdd2-ac99084ae0ec.png",
+    department: 'Guest Faculty',
+    qualifications: "Master's in Service Design, Royal College of Art",
+    specialization: "Service Blueprint, Experience Mapping, Systems Thinking",
+    achievements: "Redesigned services for major healthcare providers and financial institutions"
   }
 ];

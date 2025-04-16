@@ -38,16 +38,9 @@ export const FacultyFilter: React.FC<FacultyFilterProps> = ({
         <TabsList className="flex flex-wrap justify-center w-full">
           <TabsTrigger value="All">All</TabsTrigger>
           <TabsTrigger value="Design">Design</TabsTrigger>
-          <TabsTrigger value="Architecture">Architecture</TabsTrigger>
           <TabsTrigger value="Technology">Technology</TabsTrigger>
-          <TabsTrigger value="Management">Management</TabsTrigger>
           <TabsTrigger value="International Faculty">International</TabsTrigger>
           <TabsTrigger value="Guest Faculty">Guest</TabsTrigger>
-          <TabsTrigger value="Design Mentors">Mentors</TabsTrigger>
-          <TabsTrigger value="Languages & Skill Enhancement">Languages</TabsTrigger>
-          <TabsTrigger value="Tech">Tech</TabsTrigger>
-          <TabsTrigger value="Graphic Design & UI/UX">Graphic & UI/UX</TabsTrigger>
-          <TabsTrigger value="Interior, Architecture & Landscape Design">Interior & Landscape</TabsTrigger>
         </TabsList>
       </Tabs>
     </div>

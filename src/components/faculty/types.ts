@@ -1,16 +1,9 @@
 
 export type Department = 
   'Design' | 
-  'Architecture' | 
   'Technology' | 
-  'Management' | 
   'International Faculty' |
   'Guest Faculty' |
-  'Design Mentors' |
-  'Languages & Skill Enhancement' |
-  'Tech' |
-  'Graphic Design & UI/UX' |
-  'Interior, Architecture & Landscape Design' |
   'All';
 
 export interface FacultyMember {
