@@ -1,3 +1,4 @@
+
 import { FacultyMember } from '../types';
 
 export const designFaculty: FacultyMember[] = [
@@ -34,150 +35,6 @@ export const designFaculty: FacultyMember[] = [
     specialization: "Hotels, Commercial Buildings, Luxury Villas",
     achievements: "8+ years professional experience, Senior Architect at Design Studio"
   },
-  {
-    id: 7,
-    name: "Sahana Sundar",
-    role: "Associate Faculty, Design",
-    bio: "A passionate and well-trained animator, character designer, and storyteller with experience in 2D and 3D animation for films and games. Sahana brings expertise in character design, 3D modeling, texturing, and VFX to help students develop creative solutions.",
-    imageUrl: "/lovable-uploads/bd166343-0db2-4cf7-b8cf-209cc56641bc.png",
-    department: 'Design',
-    qualifications: "B.Des in Animation and Game Design",
-    specialization: "Animation, Character Design, 3D Modeling, Storytelling",
-    achievements: "Professional experience in film and game animation"
-  },
-  {
-    id: 8,
-    name: "Anish Nayak",
-    role: "Senior Faculty, Design",
-    bio: "A creative professional with experience in digital design, UX/UI, and branding. Anish has worked with leading design studios and tech companies, bringing real-world knowledge to the classroom. His approach combines design thinking with technical implementation.",
-    imageUrl: "/lovable-uploads/cdcb8556-cfb5-4124-be04-f0f32a8ce017.png",
-    department: 'Design',
-    qualifications: "M.Des in User Experience, B.Des in Visual Communication",
-    specialization: "UX/UI Design, Branding, Digital Design",
-    achievements: "Projects with leading tech companies and design studios"
-  },
-  {
-    id: 12,
-    name: "Kiran Kamath",
-    role: "Faculty, Interior Design",
-    bio: "With a background in interior architecture and sustainable design practices, Kiran brings practical insights from residential and commercial projects to the classroom. Her teaching emphasizes the integration of aesthetics with functionality.",
-    imageUrl: "/lovable-uploads/9c2c1fa3-d5a1-4a00-964d-96697da1bbeb.png",
-    department: 'Design',
-    qualifications: "M.Des in Interior Architecture, B.Des",
-    specialization: "Sustainable Design, Residential Spaces, Commercial Interiors",
-    achievements: "Award-winning interior design projects, LEED certification"
-  },
-  {
-    id: 13,
-    name: "Vijay Shankar",
-    role: "Faculty, Animation & VFX",
-    bio: "A veteran in the animation industry with credits in national and international productions, Vijay specializes in character animation and visual effects. His industry connections provide students with practical opportunities and placements.",
-    imageUrl: "/lovable-uploads/9ff3e25b-a93f-40fb-87ff-cd765e063b61.png",
-    department: 'Design',
-    qualifications: "Diploma in Advanced Animation, B.Des in Digital Arts",
-    specialization: "3D Animation, Visual Effects, Character Design",
-    achievements: "Animation credits in internationally released films, Industry mentor"
-  },
-  {
-    id: 14,
-    name: "Radhika Menon",
-    role: "Faculty, Graphic Design",
-    bio: "A practicing graphic designer with expertise in branding, typography, and publication design. Radhika has worked with leading advertising agencies and maintains an active freelance practice alongside teaching.",
-    imageUrl: "/lovable-uploads/af5130bc-a7bc-4348-8951-861078594741.png",
-    department: 'Design',
-    qualifications: "M.Des in Visual Communication, B.F.A",
-    specialization: "Typography, Branding, Publication Design",
-    achievements: "National design awards, International design exhibitions"
-  },
-  {
-    id: 16,
-    name: "Meera Krishnan",
-    role: "Faculty, Interaction Design",
-    bio: "A UX researcher and interaction designer with experience in tech companies and design consultancies. Meera brings human-centered design methodologies to the classroom, with a focus on accessible and inclusive design.",
-    imageUrl: "/lovable-uploads/c9727b90-962e-4b3e-be56-d9c05c7ddcbb.png",
-    department: 'Design',
-    qualifications: "M.Des in Interaction Design, B.Des",
-    specialization: "User Experience, Accessibility, Interactive Systems",
-    achievements: "Patents in interface design, Published research on inclusive design"
-  },
-  {
-    id: 27,
-    name: "Rohan Chatterjee",
-    role: "Head, Graphic Design & UI/UX",
-    bio: "A veteran designer with expertise in branding and digital experiences, Rohan has worked with major brands globally. He brings his industry connections and practical knowledge to the department.",
-    imageUrl: "/lovable-uploads/66c6a931-8ba1-4c13-8f59-bcb925328891.png",
-    department: 'Design',
-    qualifications: "Master's in Design, National Institute of Design",
-    specialization: "Brand Identity, Interactive Design",
-    achievements: "Design lead for major international brands, industry awards"
-  },
-  {
-    id: 28,
-    name: "Shreya Desai",
-    role: "Faculty, User Experience Research",
-    bio: "A UX researcher with background in cognitive psychology, Shreya specializes in user testing methodologies and research-driven design approaches for digital products.",
-    imageUrl: "/lovable-uploads/969b7c45-6f0d-4a8c-8d1b-9a6e5e2c3c78.png",
-    department: 'Design',
-    qualifications: "Master's in Human-Computer Interaction, M.Sc in Psychology",
-    specialization: "User Research, Usability Testing, Design Psychology",
-    achievements: "Research that shaped major product decisions at tech companies"
-  },
-  {
-    id: 29,
-    name: "Prakash Verma",
-    role: "Head, Interior & Architecture Design",
-    bio: "An architect with 25 years of experience in residential, commercial and institutional projects. Prakash brings practical insights on construction, materials, and spatial design.",
-    imageUrl: "/lovable-uploads/741db2ef-80d9-44dd-b7f0-cb1942734763.png",
-    department: 'Design',
-    qualifications: "B.Arch, School of Planning and Architecture",
-    specialization: "Urban Design, Sustainable Architecture",
-    achievements: "Award-winning projects across India, sustainable design advocate"
-  },
-  {
-    id: 30,
-    name: "Anjali Krishnan",
-    role: "Faculty, Landscape Design",
-    bio: "A landscape architect with focus on sustainable and native landscape designs. Anjali integrates ecological principles into her teaching and design practice.",
-    imageUrl: "/lovable-uploads/4618c0c6-c363-42fa-95d6-876943724e39.png",
-    department: 'Design',
-    qualifications: "M.L.A, Harvard Graduate School of Design",
-    specialization: "Sustainable Landscapes, Urban Green Spaces",
-    achievements: "Projects featured in international design publications"
-  },
-  {
-    id: 31,
-    name: "Dr. Samir Khan",
-    role: "Faculty, Design Theory",
-    bio: "A design theorist and researcher exploring the intersection of technology, culture and design. Dr. Khan's work contributes to the theoretical foundation of design education at BSD.",
-    imageUrl: "/lovable-uploads/95442d0d-92a2-407b-8bf3-691152ab5174.png",
-    department: 'Design',
-    qualifications: "Ph.D. in Design Theory, Royal College of Art",
-    specialization: "Design Philosophy, Critical Design, Design Ethics",
-    achievements: "Author of books on design theory, international speaker"
-  },
-  {
-    id: 32,
-    name: "Rajeev Nair",
-    role: "Faculty, Game Design",
-    bio: "With experience at leading game studios, Rajeev teaches game design principles, mechanics, and interactive storytelling to animation and game design students.",
-    imageUrl: "/lovable-uploads/69a68aef-de64-4767-9726-f0cd1fdf07c2.png",
-    department: 'Design',
-    qualifications: "Master's in Game Design, M.S. in Computer Science",
-    specialization: "Game Mechanics, Level Design, Interactive Narrative",
-    achievements: "Worked on internationally successful game titles"
-  },
-  {
-    id: 34,
-    name: "Divya Prakash",
-    role: "Faculty, Typography Design",
-    bio: "A typographer and type designer with focus on Indic scripts and multilingual typography. Divya brings specialized knowledge in creating typefaces for Indian languages.",
-    imageUrl: "/lovable-uploads/97b89cbf-3490-4189-ab5a-1029c18072ef.png",
-    department: 'Design',
-    qualifications: "Master's in Type Design, University of Reading",
-    specialization: "Typography, Type Design, Indic Scripts",
-    achievements: "Designer of widely used Indian language typefaces"
-  },
-  // Additional design faculty from program pages
   {
     id: 101,
     name: "Ar. Bhavana",
@@ -256,3 +113,4 @@ export const designFaculty: FacultyMember[] = [
     achievements: "4+ years in digital brand management, 3 years teaching experience"
   },
 ];
+
