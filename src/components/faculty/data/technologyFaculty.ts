@@ -1,3 +1,4 @@
+
 import { FacultyMember } from '../types';
 
 export const technologyFaculty: FacultyMember[] = [
@@ -35,50 +36,6 @@ export const technologyFaculty: FacultyMember[] = [
     achievements: "18 years of teaching experience"
   },
   {
-    id: 11,
-    name: "Dr. Prashant Kumar",
-    role: "Faculty, Data Science",
-    bio: "A data science expert with industry and academic experience in machine learning and artificial intelligence applications. Dr. Prashant has contributed to several high-impact projects in both corporate and research settings.",
-    imageUrl: "/lovable-uploads/8b983b3f-fd59-44d3-b5cc-152eeffe62cd.png",
-    department: 'Technology',
-    qualifications: "Ph.D. in Computer Science, M.Tech in AI",
-    specialization: "Machine Learning, Data Analytics, AI Applications",
-    achievements: "Patents in AI technology, Industry consultant for tech startups"
-  },
-  {
-    id: 25,
-    name: "Dr. Venkat Subramanian",
-    role: "Head, Department of Technology",
-    bio: "With a background in computer science research and industry experience at Google, Dr. Venkat leads the tech curriculum with focus on emerging technologies and practical applications.",
-    imageUrl: "/lovable-uploads/c72be9c4-87fc-415a-a4fb-8e3db30e45cf.png",
-    department: 'Technology',
-    qualifications: "Ph.D. in Computer Science, Stanford University",
-    specialization: "Machine Learning, Cloud Architecture",
-    achievements: "Research contributions to machine learning algorithms, industry patents"
-  },
-  {
-    id: 26,
-    name: "Lakshmi Narayanan",
-    role: "Faculty, Full Stack Development",
-    bio: "A full stack developer with startup and enterprise experience, Lakshmi teaches modern web and application development with focus on industry-relevant technologies.",
-    imageUrl: "/lovable-uploads/4f3de368-ac90-4b0b-b38f-45580d4df068.png",
-    department: 'Technology',
-    qualifications: "M.Tech in Information Technology",
-    specialization: "Web Development, Mobile Applications, Cloud Integration",
-    achievements: "Developed applications used by millions of users"
-  },
-  {
-    id: 33,
-    name: "Dr. Varun Chandrasekhar",
-    role: "Faculty, Digital Fabrication",
-    bio: "Specializing in digital fabrication and computational design, Dr. Varun bridges architecture, design and technology through innovative making processes.",
-    imageUrl: "/lovable-uploads/19d9240e-3fb4-4ad7-9d67-26e04d384d74.png",
-    department: 'Technology',
-    qualifications: "Ph.D. in Computational Design, MIT",
-    specialization: "Digital Fabrication, Parametric Design, Materials Research",
-    achievements: "Innovations in material science and fabrication techniques"
-  },
-  {
     id: 108,
     name: "Er. Ritesh L",
     role: "Faculty, Landscape Engineering",
@@ -90,3 +47,4 @@ export const technologyFaculty: FacultyMember[] = [
     achievements: "Published in international journals, conducted seminars on innovative construction practices"
   },
 ];
+
