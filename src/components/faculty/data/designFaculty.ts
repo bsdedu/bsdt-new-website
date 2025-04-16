@@ -1,4 +1,3 @@
-
 import { FacultyMember } from '../types';
 
 export const designFaculty: FacultyMember[] = [
@@ -112,5 +111,15 @@ export const designFaculty: FacultyMember[] = [
     specialization: "Digital Brand Management, Visual Design",
     achievements: "4+ years in digital brand management, 3 years teaching experience"
   },
+  {
+    id: 108,
+    name: "Er. Ritesh L",
+    role: "Faculty, Landscape Engineering",
+    bio: "A gold medalist in M.Tech (Structures) from SJB Institute of Technology, Ritesh combines engineering expertise with landscape design thinking. He has published in international journals and conducted seminars on innovative construction practices for outdoor spaces. He bridges the gap between creative landscape design and technical implementation, teaching students how to integrate structural principles with ecological vision.",
+    imageUrl: "/lovable-uploads/80d897a6-3e50-49da-b9c3-86a1b0f84d01.png",
+    department: 'Design',
+    qualifications: "M.Tech (Structures) from SJB Institute of Technology, Gold Medalist",
+    specialization: "Landscape Engineering, Structural Design for Outdoor Spaces",
+    achievements: "Published in international journals, conducted seminars on innovative construction practices"
+  },
 ];
-
