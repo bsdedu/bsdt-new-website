@@ -54,8 +54,8 @@ export const NavItem: React.FC<NavItemProps> = ({ item }) => {
         >
           {item.name}
         </NavigationMenuTrigger>
-        <NavigationMenuContent className="absolute top-full left-0 bg-white shadow-lg rounded-md z-50">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 w-[800px] max-w-screen-lg">
+        <NavigationMenuContent>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 w-[800px] max-w-screen-lg bg-white shadow-lg rounded-md">
             {item.categories?.map((category, index) => (
               <div key={index} className="space-y-3">
                 <h3 className="text-sm font-bold text-bsd-gray border-b pb-1">{category.title}</h3>
@@ -100,30 +100,32 @@ export const NavItem: React.FC<NavItemProps> = ({ item }) => {
       >
         {item.name}
       </NavigationMenuTrigger>
-      <NavigationMenuContent className="absolute top-full left-0 bg-white shadow-lg rounded-md z-50">
-        <ul className="grid w-[250px] gap-1 p-2">
-          {item.items?.map((subItem) => (
-            <li key={subItem.name}>
-              <NavigationMenuLink asChild>
-                {subItem.href.startsWith('/') ? (
-                  <Link
-                    to={subItem.href}
-                    className="block select-none rounded-md p-2 text-sm leading-none text-bsd-gray hover:text-bsd-orange hover:bg-bsd-light-gray"
-                  >
-                    {subItem.name}
-                  </Link>
-                ) : (
-                  <a
-                    href={subItem.href}
-                    className="block select-none rounded-md p-2 text-sm leading-none text-bsd-gray hover:text-bsd-orange hover:bg-bsd-light-gray"
-                  >
-                    {subItem.name}
-                  </a>
-                )}
-              </NavigationMenuLink>
-            </li>
-          ))}
-        </ul>
+      <NavigationMenuContent>
+        <div className="bg-white shadow-lg rounded-md">
+          <ul className="grid w-[250px] gap-1 p-2">
+            {item.items?.map((subItem) => (
+              <li key={subItem.name}>
+                <NavigationMenuLink asChild>
+                  {subItem.href.startsWith('/') ? (
+                    <Link
+                      to={subItem.href}
+                      className="block select-none rounded-md p-2 text-sm leading-none text-bsd-gray hover:text-bsd-orange hover:bg-bsd-light-gray"
+                    >
+                      {subItem.name}
+                    </Link>
+                  ) : (
+                    <a
+                      href={subItem.href}
+                      className="block select-none rounded-md p-2 text-sm leading-none text-bsd-gray hover:text-bsd-orange hover:bg-bsd-light-gray"
+                    >
+                      {subItem.name}
+                    </a>
+                  )}
+                </NavigationMenuLink>
+              </li>
+            ))}
+          </ul>
+        </div>
       </NavigationMenuContent>
     </NavigationMenuItem>
   );
