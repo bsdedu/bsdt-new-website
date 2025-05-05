@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { cn } from "@/lib/utils";
 import { Link } from 'react-router-dom';
@@ -46,14 +47,14 @@ export const NavItem: React.FC<NavItemProps> = ({ item }) => {
   
   if (item.type === 'megamenu' && item.categories) {
     return (
-      <NavigationMenuItem>
+      <NavigationMenuItem className="relative">
         <NavigationMenuTrigger 
           className="bg-transparent text-bsd-gray hover:text-bsd-orange hover:bg-transparent focus:bg-transparent"
           data-side="bottom"
         >
           {item.name}
         </NavigationMenuTrigger>
-        <NavigationMenuContent className="bg-white shadow-lg rounded-md z-50 relative">
+        <NavigationMenuContent className="absolute top-full left-0 bg-white shadow-lg rounded-md z-50">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 w-[800px] max-w-screen-lg">
             {item.categories?.map((category, index) => (
               <div key={index} className="space-y-3">
@@ -92,14 +93,14 @@ export const NavItem: React.FC<NavItemProps> = ({ item }) => {
   }
   
   return (
-    <NavigationMenuItem>
+    <NavigationMenuItem className="relative">
       <NavigationMenuTrigger 
         className="bg-transparent text-bsd-gray hover:text-bsd-orange hover:bg-transparent focus:bg-transparent"
         data-side="bottom"
       >
         {item.name}
       </NavigationMenuTrigger>
-      <NavigationMenuContent className="bg-white shadow-lg rounded-md z-50 relative">
+      <NavigationMenuContent className="absolute top-full left-0 bg-white shadow-lg rounded-md z-50">
         <ul className="grid w-[250px] gap-1 p-2">
           {item.items?.map((subItem) => (
             <li key={subItem.name}>
