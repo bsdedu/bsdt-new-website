@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import { initializeWidget } from '@/lib/nopaperforms';
+import React, { useEffect, useRef } from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
 import { Badge } from "@/components/ui/badge";
@@ -8,12 +7,35 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 
 export const ContactSection: React.FC = () => {
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+
   useEffect(() => {
-    const cleanup = initializeWidget({
-      w: '14fe90258f1849328c9ebb3adc9782bb',
-      h: '400px'
-    });
-    return cleanup;
+    // Function to create the iframe URL with current origin
+    const createIframeUrl = () => {
+      const widgetId = '14fe90258f1849328c9ebb3adc9782bb';
+      const currentOrigin = typeof window !== 'undefined' ? window.location.origin : '';
+      return `https://widgets.in5.nopaperforms.com/register?w=${widgetId}&cu=${encodeURIComponent(currentOrigin)}`;
+    };
+
+    // Function to handle messages from the iframe
+    const handleMessage = (event: MessageEvent) => {
+      if (event.origin === 'https://widgets.in5.nopaperforms.com') {
+        console.log('Received message from widget:', event.data);
+      }
+    };
+
+    // Add message listener
+    window.addEventListener('message', handleMessage);
+
+    // Update iframe src if ref exists
+    if (iframeRef.current) {
+      iframeRef.current.src = createIframeUrl();
+    }
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('message', handleMessage);
+    };
   }, []);
 
   return (
@@ -33,7 +55,12 @@ export const ContactSection: React.FC = () => {
         <RevealSection>
           <div className="bg-white rounded-xl shadow-sm border border-border/40 p-6">
             {/* Embedded widget */}
-            <div id="npf_widget_container" className="npf_wgts" data-height="400px" data-w="14fe90258f1849328c9ebb3adc9782bb"></div>
+            <iframe
+              ref={iframeRef}
+              style={{ width: '100%', height: '400px', border: 'none' }}
+              sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation"
+              title="Enquiry Form"
+            />
             
             {/*  
             <form className="space-y-4">

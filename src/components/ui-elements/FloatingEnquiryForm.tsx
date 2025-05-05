@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import { initializeWidget } from '@/lib/nopaperforms';
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -32,12 +31,35 @@ export const FloatingEnquiryForm = () => {
     },
   });
 
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+
   useEffect(() => {
-    const cleanup = initializeWidget({
-      w: 'adff9b077808c1fcb8e77a017693b6b9',
-      h: '400px'
-    });
-    return cleanup;
+    // Function to create the iframe URL with current origin
+    const createIframeUrl = () => {
+      const widgetId = 'adff9b077808c1fcb8e77a017693b6b9';
+      const currentOrigin = typeof window !== 'undefined' ? window.location.origin : '';
+      return `https://widgets.in5.nopaperforms.com/register?w=${widgetId}&cu=${encodeURIComponent(currentOrigin)}`;
+    };
+
+    // Function to handle messages from the iframe
+    const handleMessage = (event: MessageEvent) => {
+      if (event.origin === 'https://widgets.in5.nopaperforms.com') {
+        console.log('Received message from widget:', event.data);
+      }
+    };
+
+    // Add message listener
+    window.addEventListener('message', handleMessage);
+
+    // Update iframe src if ref exists
+    if (iframeRef.current) {
+      iframeRef.current.src = createIframeUrl();
+    }
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('message', handleMessage);
+    };
   }, []);
 
   useEffect(() => {
@@ -112,10 +134,11 @@ export const FloatingEnquiryForm = () => {
             ✕
           </button>
           <h3 className="text-lg font-semibold text-bsd-gray mb-4">Quick Enquiry</h3>
-          <div 
-            className="npf_wgts" 
-            data-height="400px" 
-            data-w="adff9b077808c1fcb8e77a017693b6b9"
+          <iframe
+            ref={iframeRef}
+            style={{ width: '100%', height: '400px', border: 'none' }}
+            sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation"
+            title="Quick Enquiry Form"
           />
         </div>
       </div>
