@@ -218,8 +218,7 @@ export const FloatingEnquiryForm = () => {
                 transition: 'opacity 0.3s ease-in-out'
               }}
               sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads"
-              title="Quick Enquiry Form"
-              crossOrigin="anonymous"
+              title="Quick Enquiry Form" 
               onLoad={(e) => {
                 console.log('[FloatingEnquiryForm] Iframe onLoad event triggered');
                 const iframe = e.target as HTMLIFrameElement;
@@ -259,7 +258,6 @@ export const FloatingEnquiryForm = () => {
               }}
             />
           )}
-          />
         </div>
       </div>
     </div>
