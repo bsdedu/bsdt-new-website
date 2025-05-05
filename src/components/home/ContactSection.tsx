@@ -1,4 +1,5 @@
-import  React, {useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { initializeWidget } from '@/lib/nopaperforms';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
 import { Badge } from "@/components/ui/badge";
@@ -8,23 +9,11 @@ import { Label } from "@/components/ui/label";
 
 export const ContactSection: React.FC = () => {
   useEffect(() => {
-    const script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.async = true;
-    script.src = 'https://widgets.in5.nopaperforms.com/emwgts.js';
-    script.id = 'nopaperforms-widget-script';
-    
-    // Only add the script if it's not already present
-    if (!document.getElementById('nopaperforms-widget-script')) {
-      document.body.appendChild(script);
-    }
-    
-    return () => {
-      const existingScript = document.getElementById('nopaperforms-widget-script');
-      if (existingScript) {
-        document.body.removeChild(existingScript);
-      }
-    };
+    const cleanup = initializeWidget({
+      w: '14fe90258f1849328c9ebb3adc9782bb',
+      h: '400px'
+    });
+    return cleanup;
   }, []);
 
   return (
@@ -44,7 +33,7 @@ export const ContactSection: React.FC = () => {
         <RevealSection>
           <div className="bg-white rounded-xl shadow-sm border border-border/40 p-6">
             {/* Embedded widget */}
-            <div className="npf_wgts" data-height="400px" data-w="14fe90258f1849328c9ebb3adc9782bb"></div>
+            <div id="npf_widget_container" className="npf_wgts" data-height="400px" data-w="14fe90258f1849328c9ebb3adc9782bb"></div>
             
             {/*  
             <form className="space-y-4">
