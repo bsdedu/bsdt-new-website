@@ -8,20 +8,22 @@ import { Label } from "@/components/ui/label";
 
 export const ContactSection: React.FC = () => {
   useEffect(() => {
-    const scriptText = `
-      var s=document.createElement("script");
-      s.type="text/javascript";
-      s.async=true;
-      s.src="https://widgets.in5.nopaperforms.com/emwgts.js";
-      document.body.appendChild(s);
-    `;
-    
     const script = document.createElement('script');
-    script.innerHTML = scriptText;
-    document.body.appendChild(script);
+    script.type = 'text/javascript';
+    script.async = true;
+    script.src = 'https://widgets.in5.nopaperforms.com/emwgts.js';
+    script.id = 'nopaperforms-widget-script';
+    
+    // Only add the script if it's not already present
+    if (!document.getElementById('nopaperforms-widget-script')) {
+      document.body.appendChild(script);
+    }
     
     return () => {
-      document.body.removeChild(script);
+      const existingScript = document.getElementById('nopaperforms-widget-script');
+      if (existingScript) {
+        document.body.removeChild(existingScript);
+      }
     };
   }, []);
 
@@ -34,7 +36,7 @@ export const ContactSection: React.FC = () => {
               Get in Touch
             </Badge>
             <h2 className="text-2xl md:text-3xl font-display font-bold tracking-tight text-bsd-gray">
-              Contact Uss
+              Contact Us
             </h2>
           </div>
         </RevealSection>
