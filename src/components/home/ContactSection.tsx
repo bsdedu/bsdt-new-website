@@ -117,12 +117,28 @@ export const ContactSection: React.FC = () => {
                 width: '100%', 
                 height: '400px', 
                 border: 'none',
-                backgroundColor: '#f8f9fa' // Light background to see if iframe is rendered
+                backgroundColor: '#f8f9fa' 
               }}
-              sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation"
+              sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads"
               title="Enquiry Form"
-              onLoad={() => console.log('[ContactSection] Iframe onLoad event triggered')}
-              onError={(e) => console.error('[ContactSection] Iframe onError event:', e)}
+              onLoad={(e) => {
+                console.log('[ContactSection] Iframe onLoad event triggered');
+                // Check if the iframe is visible
+                const iframe = e.target as HTMLIFrameElement;
+                if (iframe) {
+                  console.log('[ContactSection] Iframe dimensions:', {
+                    width: iframe.offsetWidth,
+                    height: iframe.offsetHeight
+                  });
+                }
+              }}
+              onError={(e) => {
+                console.error('[ContactSection] Iframe onError event:', e);
+                // Log network errors
+                if (e.target instanceof HTMLIFrameElement) {
+                  console.error('[ContactSection] Iframe src:', e.target.src);
+                }
+              }}
             />
             
             {/*  

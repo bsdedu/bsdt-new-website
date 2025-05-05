@@ -197,14 +197,30 @@ export const FloatingEnquiryForm = () => {
               width: '100%', 
               height: '400px', 
               border: 'none',
-              backgroundColor: '#f8f9fa', // Light background to see if iframe is rendered
+              backgroundColor: '#f8f9fa', 
               opacity: isExpanded ? 1 : 0,
               transition: 'opacity 0.3s ease-in-out'
             }}
-            sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation"
+            sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads"
             title="Quick Enquiry Form"
-            onLoad={() => console.log('[FloatingEnquiryForm] Iframe onLoad event triggered')}
-            onError={(e) => console.error('[FloatingEnquiryForm] Iframe onError event:', e)}
+            onLoad={(e) => {
+              console.log('[FloatingEnquiryForm] Iframe onLoad event triggered');
+              // Check if the iframe is visible
+              const iframe = e.target as HTMLIFrameElement;
+              if (iframe) {
+                console.log('[FloatingEnquiryForm] Iframe dimensions:', {
+                  width: iframe.offsetWidth,
+                  height: iframe.offsetHeight
+                });
+              }
+            }}
+            onError={(e) => {
+              console.error('[FloatingEnquiryForm] Iframe onError event:', e);
+              // Log network errors
+              if (e.target instanceof HTMLIFrameElement) {
+                console.error('[FloatingEnquiryForm] Iframe src:', e.target.src);
+              }
+            }}
           />
         </div>
       </div>
