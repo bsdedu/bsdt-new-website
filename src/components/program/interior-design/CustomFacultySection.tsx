@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
@@ -21,6 +22,7 @@ export const CustomFacultySection: React.FC = () => {
 
         <RevealSection delay={100}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
             <Card>
               <CardContent className="pt-6">
                 <div className="text-center">
@@ -40,12 +42,12 @@ export const CustomFacultySection: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="/lovable-uploads/5b49195f-8e0b-429b-bb86-f02b98960ae7.png" alt="Prof. Jainy Steve George" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/fc9b9c4c-91be-43de-b1a5-d5c09b30a3d8.png" alt="Ar. Bhavana" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Prof. Jainy Steve George</h3>
-                  <p className="text-sm text-bsd-orange">Lead Faculty</p>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Ar. Bhavana</h3>
+                  <p className="text-sm text-bsd-orange">Design Faculty</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    An architect graduate from Manipal School of Architecture with international experience. Jainy has worked on architectural projects in Bahrain and Bangalore, including residential and commercial designs. She has contributed to the Ministry of Education in Bahrain and commercial projects in Saudi Arabia.
+                    An innovative designer who transforms ideas into impactful visuals by exploring new perspectives and pushing creative boundaries. Bhavana is collaborative by nature, working closely with both instructors and students to foster meaningful discussions. She draws inspiration from her love for trekking, travel, and nature, bringing these influences into her design approach and teaching methodology.
                   </p>
                 </div>
               </CardContent>

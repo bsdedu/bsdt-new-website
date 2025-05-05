@@ -26,12 +26,12 @@ export const IndustryFaculty: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Aryan Sharma" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/b6181cce-9876-49c8-a669-98e38baf6bfa.png" alt="Arun Murugesan" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Aryan Sharma</h3>
-                  <p className="text-sm text-bsd-orange">Senior UI/UX Designer</p>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Arun Murugesan</h3>
+                  <p className="text-sm text-bsd-orange">Program Head, UI/UX Design</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    A seasoned UI/UX designer with over 10 years of experience working with major tech companies. Aryan specializes in user research, wireframing, and creating intuitive digital experiences across various platforms and devices.
+                    With 12+ years in UX design, Arun leads the HCI department at BSD. He has worked with MNCs like SAP and Cisco, and currently heads the UX group at Rupeek Fintech. He previously founded DTALE design studio, leading a team that worked on 50+ projects across e-commerce, fintech, healthcare, and IoT sectors.
                   </p>
                 </div>
               </CardContent>
@@ -41,12 +41,12 @@ export const IndustryFaculty: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Priya Malhotra" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/94870121-42f6-48a4-ba7d-955284a194f6.png" alt="Amlan Jyothi Bharali" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Priya Malhotra</h3>
-                  <p className="text-sm text-bsd-orange">Creative Director</p>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Amlan Jyothi Bharali</h3>
+                  <p className="text-sm text-bsd-orange">Faculty, Interaction Design</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    With 15+ years in brand design and visual identity, Priya has led creative teams at top agencies and worked with global brands. Her expertise in branding, typography, and color theory provides students with insights into creating impactful visual communications.
+                    Dedicated to exploring relationships between form and various contexts, Amlan brings expertise in Product and UI/UX Design. His portfolio includes a website for a design-focused educational institution, a mobile app for the transgender community, a dashboard UI for an electric sports car at IIT Guwahati, and contributions to a sustainable bamboo EV bicycle project at IIT Bombay.
                   </p>
                 </div>
               </CardContent>
@@ -56,12 +56,12 @@ export const IndustryFaculty: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Vikram Mehta" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/18447800-f016-4625-b117-1b07598c7e08.png" alt="Piyush Kanti Mahapatra" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Vikram Mehta</h3>
-                  <p className="text-sm text-bsd-orange">Web & Digital Designer</p>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Piyush Kanti Mahapatra</h3>
+                  <p className="text-sm text-bsd-orange">Faculty, Visual Design</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    A digital design specialist with 12+ years of experience in web design, mobile interfaces, and interactive media. Vikram brings practical knowledge of current industry tools and workflows, helping students create portfolio-ready projects that demonstrate technical proficiency.
+                    With 4+ years in digital brand management, Piyush combines industry experience as a Visual Designer with three years of teaching in Art and Design. Skilled in Adobe Creative Cloud, he brings a strategic approach to design that balances aesthetics with brand objectives. His background in both professional and academic environments enriches his collaborative approach to creative problem-solving.
                   </p>
                 </div>
               </CardContent>

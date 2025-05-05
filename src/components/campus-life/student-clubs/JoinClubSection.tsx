@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { AnimatedButton } from '@/components/ui-elements/AnimatedButton';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 export const JoinClubSection: React.FC = () => {
   const faqItems = [
@@ -55,7 +55,8 @@ export const JoinClubSection: React.FC = () => {
             </AnimatedButton>
           </div>
           
-          <div className="lg:w-1/2">
+          <div className="lg:w-1/2 space-y-6">
+            {/* Existing FAQ Accordion */}
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold mb-4">Frequently Asked Questions</h3>
               <Accordion type="single" collapsible className="w-full">
@@ -70,6 +71,20 @@ export const JoinClubSection: React.FC = () => {
                   </AccordionItem>
                 ))}
               </Accordion>
+            </div>
+
+            {/* New Video Section */}
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-4">Student Clubs Highlights</h3>
+              <AspectRatio ratio={16 / 9} className="rounded-lg overflow-hidden">
+                <iframe 
+                  src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+                  title="BSD Student Clubs Highlights" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowFullScreen 
+                  className="absolute inset-0 w-full h-full"
+                />
+              </AspectRatio>
             </div>
           </div>
         </div>

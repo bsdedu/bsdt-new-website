@@ -26,12 +26,12 @@ export const IndustryFaculty: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Sanya Kapoor" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/a094cc73-a395-4c02-b7e0-8fcf25938d8f.png" alt="Ar. Jainy Steve George" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Sanya Kapoor</h3>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Ar. Jainy Steve George</h3>
                   <p className="text-sm text-bsd-orange">Senior Interior Designer</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    A seasoned interior designer with over 12 years of experience working with prestigious design firms. Sanya specializes in residential interiors, space planning, and sustainable design solutions for modern living spaces.
+                    An architect with a passion for design education and creative exploration. Jainy combines architectural experience with dynamic teaching, bringing practical insights and innovative thinking to the classroom. Her approach emphasizes critical discourse while nurturing the next generation of design professionals.
                   </p>
                 </div>
               </CardContent>
@@ -41,12 +41,12 @@ export const IndustryFaculty: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Rohan Mehta" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/02978600-d16a-40b3-aa9a-d6edb67502f2.png" alt="Ar. Bhavana" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Rohan Mehta</h3>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Ar. Bhavana</h3>
                   <p className="text-sm text-bsd-orange">Commercial Design Specialist</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    With 15+ years in commercial and hospitality design, Rohan brings expertise in creating functional and aesthetic workspaces, retail environments, and hospitality interiors that balance form and function.
+                    An innovative designer with 10+ years of experience in commercial design. Bhavana excels at transforming abstract concepts into functional spaces, collaborating with diverse teams, and mentoring students to explore creative boundaries while drawing inspiration from nature.
                   </p>
                 </div>
               </CardContent>
@@ -56,12 +56,12 @@ export const IndustryFaculty: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Anita Singh" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/ee80d4a8-ab78-4c12-8690-fd856f23d2e3.png" alt="Ar. Mohammed Fahad" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Anita Singh</h3>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Ar. Mohammed Fahad</h3>
                   <p className="text-sm text-bsd-orange">3D Visualization Expert</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    A digital design specialist with 10+ years of experience in 3D visualization, rendering, and interior design software. Anita brings practical knowledge of current industry tools and visualization techniques.
+                    An architect with expertise in visualization and sustainable design. Fahad combines teaching experience across multiple design disciplines with professional practice, creating innovative projects like South India's first capsule hotel. His curious mindset and diverse background bring valuable perspectives to interior design education.
                   </p>
                 </div>
               </CardContent>

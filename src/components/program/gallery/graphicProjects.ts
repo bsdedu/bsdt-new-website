@@ -7,7 +7,7 @@ export const graphicProjects: ProjectCollection = {
     { id: "1", title: "Eco-friendly Brand Identity", student: "Priya Sharma", year: "2023", image: "/lovable-uploads/9e5f0918-e471-4105-8926-6e066cea868e.png" },
     { id: "2", title: "Tech Startup Branding", student: "Arjun Mehta", year: "2023", image: "/lovable-uploads/e50eadd7-d31e-4b3e-a69a-e005ba9bd014.png" },
     { id: "3", title: "Restaurant Chain Rebrand", student: "Meera Patel", year: "2022", image: "/lovable-uploads/12afaa33-a164-4018-8397-4f5e550f4203.png" },
-    { id: "4", title: "Artisanal Coffee Branding", student: "Vikram Reddy", year: "2022", image: "https://images.unsplash.com/photo-1579438428425-67f2a4d83827?w=800&auto=format&fit=crop" },
+    { id: "4", title: "Artisanal Coffee Branding", student: "Vikram Reddy", year: "2022", image: "/lovable-uploads/ef3ea604-aaf8-4387-99a1-55ac188ac260.png" },
   ],
   digital: [
     { id: "1", title: "Mobile App UI Design", student: "Kiran Kumar", year: "2023", image: "https://images.unsplash.com/photo-1616469829941-c7200edec809?w=800&auto=format&fit=crop" },

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui-elements/Card";
 import { GraduationCap, CalendarClock, FileText } from "lucide-react";
 import { Link } from 'react-router-dom';
+
 export const AdmissionsInfo: React.FC = () => {
   return <section className="py-16 bg-bsd-light-gray">
       <div className="container mx-auto px-6 md:px-8">

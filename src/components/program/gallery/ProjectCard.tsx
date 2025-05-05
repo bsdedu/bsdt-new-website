@@ -16,6 +16,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           src={project.image} 
           alt={project.title} 
           className="w-full h-full object-cover transition-transform duration-500 hover:scale-125"
+          onError={(e) => {
+            console.log(`Failed to load image for project: ${project.title}`);
+            e.currentTarget.src = '/placeholder.svg';
+          }}
         />
       </div>
       <div className="p-4">

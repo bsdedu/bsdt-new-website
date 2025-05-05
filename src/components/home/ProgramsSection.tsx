@@ -96,8 +96,8 @@ const diplomaPrograms: Program[] = [
   }, 
   {
     icon: <Monitor className="w-6 h-6 text-bsd-orange" />,
-    title: "Professional Diploma in Graphic Design + UI & UX",
-    description: "An integrated program combining graphic design fundamentals with user interface and experience design principles for digital platforms.",
+    title: "Professional Diploma in Visual Communication + UI & UX",
+    description: "An integrated program combining visual communication fundamentals with user interface and experience design principles for digital platforms.",
     color: "from-bsd-orange/20 to-bsd-orange/5",
     isFeatured: true,
     duration: "1 year",

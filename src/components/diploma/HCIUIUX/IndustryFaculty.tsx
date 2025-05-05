@@ -15,7 +15,7 @@ export const IndustryFaculty: React.FC = () => {
               Learn From Industry Leaders
             </h2>
             <p className="mt-4 text-foreground/70">
-              Our HCI for UI/UX program is led by professionals with extensive industry experience who are passionate about creating user-centered digital experiences.
+              Our Human-Computer Interaction for UI/UX program is led by professionals with extensive industry experience who are passionate about nurturing the next generation of creative talent.
             </p>
           </div>
         </RevealSection>
@@ -26,12 +26,12 @@ export const IndustryFaculty: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Anika Patel" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/b6181cce-9876-49c8-a669-98e38baf6bfa.png" alt="Arun Murugesan" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Anika Patel</h3>
-                  <p className="text-sm text-bsd-orange">UX Research Lead</p>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Arun Murugesan</h3>
+                  <p className="text-sm text-bsd-orange">Program Head, UI/UX Design</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    A UX research specialist with over 10 years of experience working with global tech companies. Anika specializes in user behavior analysis, interview techniques, and translating research insights into actionable design recommendations.
+                    With 12+ years in UX design, Arun leads the HCI department at BSD. He has worked with MNCs like SAP and Cisco, and currently heads the UX group at Rupeek Fintech. He previously founded DTALE design studio, leading a team that worked on 50+ projects across e-commerce, fintech, healthcare, and IoT sectors.
                   </p>
                 </div>
               </CardContent>
@@ -41,12 +41,12 @@ export const IndustryFaculty: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Rahul Sharma" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/94870121-42f6-48a4-ba7d-955284a194f6.png" alt="Amlan Jyothi Bharali" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Rahul Sharma</h3>
-                  <p className="text-sm text-bsd-orange">UI/UX Design Director</p>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Amlan Jyothi Bharali</h3>
+                  <p className="text-sm text-bsd-orange">Faculty, Interaction Design</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    With 15+ years in digital product design, Rahul brings expertise from leading design teams at major tech companies. His focus on design systems, interaction design, and creating scalable UI solutions provides students with valuable industry insights.
+                    Dedicated to exploring relationships between form and various contexts, Amlan brings expertise in Product and UI/UX Design. His portfolio includes a website for a design-focused educational institution, a mobile app for the transgender community, a dashboard UI for an electric sports car at IIT Guwahati, and contributions to a sustainable bamboo EV bicycle project at IIT Bombay.
                   </p>
                 </div>
               </CardContent>
@@ -56,12 +56,12 @@ export const IndustryFaculty: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Nisha Kapoor" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/18447800-f016-4625-b117-1b07598c7e08.png" alt="Piyush Kanti Mahapatra" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Nisha Kapoor</h3>
-                  <p className="text-sm text-bsd-orange">Cognitive Psychology Expert</p>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Piyush Kanti Mahapatra</h3>
+                  <p className="text-sm text-bsd-orange">Faculty, Visual Design</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    A cognitive psychologist with 12+ years of experience in applying psychological principles to digital design. Nisha brings unique insights into human perception, attention, and decision-making processes that form the foundation of effective UI/UX design.
+                    With 4+ years in digital brand management, Piyush combines industry experience as a Visual Designer with three years of teaching in Art and Design. Skilled in Adobe Creative Cloud, he brings a strategic approach to design that balances aesthetics with brand objectives. His background in both professional and academic environments enriches his collaborative approach to creative problem-solving.
                   </p>
                 </div>
               </CardContent>

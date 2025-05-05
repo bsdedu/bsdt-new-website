@@ -1,3 +1,4 @@
+
 export interface Club {
   id: number;
   name: string;
@@ -13,7 +14,7 @@ export const clubsData: Club[] = [
     name: "Design Hub",
     category: "Creative",
     description: "A collaborative community of design enthusiasts who explore various design disciplines through workshops, competitions, and creative projects.",
-    image: "/lovable-uploads/6e8f285e-a6c2-4dba-9059-ca5b191bd897.png",
+    image: "/lovable-uploads/72b11af0-1a63-4937-a381-39778b981ae3.png",
     tags: ["UX/UI", "Graphic Design", "Product Design"]
   },
   {
@@ -21,7 +22,7 @@ export const clubsData: Club[] = [
     name: "Shutterbugs Photography",
     category: "Arts",
     description: "For photography enthusiasts to learn, practice, and showcase their skills through photo walks, exhibitions, and competitions.",
-    image: "/lovable-uploads/3e1b6482-f28a-4680-9931-2f728b80d0eb.png",
+    image: "/lovable-uploads/7e22def2-79bd-4950-95e1-18ada8d171ab.png",
     tags: ["Photography", "Visual Arts", "Exhibitions"]
   },
   {
@@ -29,7 +30,7 @@ export const clubsData: Club[] = [
     name: "Tech Innovators",
     category: "Technology",
     description: "Focuses on technological innovations and developments in AI, machine learning, and other cutting-edge technologies through workshops and hackathons.",
-    image: "/lovable-uploads/8c54bc32-e626-4a4b-ba4a-e75e84612ca8.png",
+    image: "/lovable-uploads/a3b0f02e-a441-4988-a7c8-d26d8f11150d.png",
     tags: ["Coding", "AI/ML", "Hackathons"]
   },
   {
@@ -37,7 +38,7 @@ export const clubsData: Club[] = [
     name: "Drama Society",
     category: "Performing Arts",
     description: "A platform for students to express themselves through theater, street plays, and dramatic performances while learning acting skills.",
-    image: "/lovable-uploads/84bf2665-5492-457f-8295-f739efb5d307.png",
+    image: "/lovable-uploads/5729785a-a4a4-4bd8-a51c-ac5f994e99d1.png",
     tags: ["Theater", "Acting", "Storytelling"]
   },
   {
@@ -45,7 +46,7 @@ export const clubsData: Club[] = [
     name: "Eco Warriors",
     category: "Environmental",
     description: "Raises awareness about environmental issues and promotes sustainable practices through campaigns, plantation drives, and recycling initiatives.",
-    image: "/lovable-uploads/c72be9c4-87fc-415a-a4fb-8e3db30e45cf.png",
+    image: "/lovable-uploads/10aff83a-4dde-4576-a4b6-be7d0c63eb23.png",
     tags: ["Sustainability", "Conservation", "Awareness"]
   },
   {
@@ -53,7 +54,7 @@ export const clubsData: Club[] = [
     name: "3D Modeling Club",
     category: "Technology",
     description: "Dedicated to 3D modeling, animation, and game development. Members collaborate on projects and learn advanced techniques in 3D design.",
-    image: "/lovable-uploads/cf7871df-3c22-4504-ae9f-824fd6ec7804.png",
+    image: "/lovable-uploads/4c61dfd2-9d5b-4687-9622-1d3cc9d98054.png",
     tags: ["3D Design", "Animation", "Game Design"]
   },
   {
@@ -61,7 +62,7 @@ export const clubsData: Club[] = [
     name: "Entrepreneurship Club",
     category: "Business",
     description: "Nurtures entrepreneurial mindset and skills through startup workshops, business plan competitions, and networking with industry professionals.",
-    image: "/lovable-uploads/469b16b9-1a86-4abc-926f-fecba15128d3.png",
+    image: "/lovable-uploads/7b4801e7-0774-4c72-add0-6ccf6cb62a74.png",
     tags: ["Startups", "Business", "Innovation"]
   },
   {
@@ -77,7 +78,7 @@ export const clubsData: Club[] = [
     name: "Literature & Debate",
     category: "Academic",
     description: "Fosters critical thinking and communication skills through book discussions, literary events, debates, and public speaking competitions.",
-    image: "/lovable-uploads/7d078e54-32f9-4dcf-9af6-9717145d71b7.png",
+    image: "/lovable-uploads/bd51d218-84b7-4b37-a7e0-edb734785adc.png",
     tags: ["Debate", "Literature", "Public Speaking"]
   }
 ];

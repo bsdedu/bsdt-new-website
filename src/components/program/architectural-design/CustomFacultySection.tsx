@@ -20,10 +20,10 @@ export const CustomFacultySection: React.FC = () => {
       imageUrl: "/lovable-uploads/f41aeb18-b8b9-48e3-9212-ce854e1b4ea9.png",
     },
     {
-      name: "Er. Ritesh L",
-      role: "Faculty, Structural Engineering",
-      bio: "A gold medalist with an M.Tech in Structural Engineering from SJB Institute of Technology. His extensive experience in civil engineering includes highways and bridges construction. As faculty, he bridges design with structural engineering, introducing students to the latest technological advancements in construction.",
-      imageUrl: "/lovable-uploads/6b4a7e04-bb44-4b67-9d64-88776c117f66.png",
+      name: "Er. Ritesh",
+      role: "Faculty, Structural Design",
+      bio: "A gold medalist in M.Tech (Structures) from SJB Institute of Technology, Ritesh combines engineering expertise with design thinking. He has published in international journals and conducted seminars on innovative construction practices. He bridges the gap between creative design and technical execution, teaching students how to integrate structural principles with architectural vision.",
+      imageUrl: "/lovable-uploads/80d897a6-3e50-49da-b9c3-86a1b0f84d01.png",
     },
   ];
 
