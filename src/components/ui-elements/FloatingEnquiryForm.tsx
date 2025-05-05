@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -33,6 +33,9 @@ export const FloatingEnquiryForm = () => {
 
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const debugTimeoutRef = useRef<NodeJS.Timeout>();
+  const [isWidgetLoaded, setIsWidgetLoaded] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
     console.log('[FloatingEnquiryForm] Component mounted');
@@ -56,6 +59,10 @@ export const FloatingEnquiryForm = () => {
 
       if (event.origin === 'https://widgets.in5.nopaperforms.com') {
         console.log('[FloatingEnquiryForm] Valid message from widget:', event.data);
+        setIsWidgetLoaded(true);
+        setIsLoading(false);
+      } else {
+        console.log('[FloatingEnquiryForm] Ignoring message from origin:', event.origin);
       }
     };
 
@@ -191,53 +198,67 @@ export const FloatingEnquiryForm = () => {
             ✕
           </button>
           <h3 className="text-lg font-semibold text-bsd-gray mb-4">Quick Enquiry</h3>
-          <iframe
-            ref={iframeRef}
-            style={{ 
-              width: '100%', 
-              height: '400px', 
-              border: 'none',
-              backgroundColor: '#f8f9fa', 
-              opacity: isExpanded ? 1 : 0,
-              transition: 'opacity 0.3s ease-in-out'
-            }}
-            sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads"
-            title="Quick Enquiry Form"
-            crossOrigin="anonymous"
-            onLoad={(e) => {
-              console.log('[FloatingEnquiryForm] Iframe onLoad event triggered');
-              const iframe = e.target as HTMLIFrameElement;
-              if (iframe) {
-                console.log('[FloatingEnquiryForm] Iframe dimensions:', {
-                  width: iframe.offsetWidth,
-                  height: iframe.offsetHeight
-                });
-                // Try to get contentWindow to check if it's loaded
-                const contentWindow = iframe.contentWindow;
-                if (contentWindow) {
-                  console.log('[FloatingEnquiryForm] Content window exists');
+          {hasError ? (
+            <div className="flex items-center justify-center h-full text-red-500">
+              <p>Failed to load form. Please try again later.</p>
+            </div>
+          ) : isLoading ? (
+            <div className="flex items-center justify-center h-full">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-bsd-orange"></div>
+            </div>
+          ) : (
+            <iframe
+              ref={iframeRef}
+              style={{ 
+                width: '100%', 
+                height: '400px', 
+                border: 'none',
+                backgroundColor: '#f8f9fa', 
+                opacity: isExpanded ? 1 : 0,
+                transition: 'opacity 0.3s ease-in-out'
+              }}
+              sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads"
+              title="Quick Enquiry Form"
+              crossOrigin="anonymous"
+              onLoad={(e) => {
+                console.log('[FloatingEnquiryForm] Iframe onLoad event triggered');
+                const iframe = e.target as HTMLIFrameElement;
+                if (iframe) {
+                  console.log('[FloatingEnquiryForm] Iframe dimensions:', {
+                    width: iframe.offsetWidth,
+                    height: iframe.offsetHeight
+                  });
+                  // Try to get contentWindow to check if it's loaded
+                  const contentWindow = iframe.contentWindow;
+                  if (contentWindow) {
+                    console.log('[FloatingEnquiryForm] Content window exists');
+                  }
                 }
-              }
-            }}
-            onError={(e) => {
-              console.error('[FloatingEnquiryForm] Iframe onError event:', e);
-              const iframe = e.target as HTMLIFrameElement;
-              if (iframe) {
-                console.error('[FloatingEnquiryForm] Iframe src:', iframe.src);
-                // Try to get error details
-                console.error('[FloatingEnquiryForm] Iframe error:', {
-                  type: e.type,
-                  target: e.target,
-                  currentTarget: e.currentTarget
-                });
-              }
-            }}
-            onAbort={(e) => {
-              console.error('[FloatingEnquiryForm] Iframe onAbort event:', e);
-            }}
-            onStalled={(e) => {
-              console.error('[FloatingEnquiryForm] Iframe onStalled event:', e);
-            }}
+              }}
+              onError={(e) => {
+                console.error('[FloatingEnquiryForm] Iframe onError event:', e);
+                const iframe = e.target as HTMLIFrameElement;
+                if (iframe) {
+                  console.error('[FloatingEnquiryForm] Iframe src:', iframe.src);
+                  // Try to get error details
+                  console.error('[FloatingEnquiryForm] Iframe error:', {
+                    type: e.type,
+                    target: e.target,
+                    currentTarget: e.currentTarget
+                  });
+                  setHasError(true);
+                }
+              }}
+              onAbort={(e) => {
+                console.error('[FloatingEnquiryForm] Iframe onAbort event:', e);
+                setHasError(true);
+              }}
+              onStalled={(e) => {
+                console.error('[FloatingEnquiryForm] Iframe onStalled event:', e);
+                setHasError(true);
+              }}
+            />
+          )}
           />
         </div>
       </div>
