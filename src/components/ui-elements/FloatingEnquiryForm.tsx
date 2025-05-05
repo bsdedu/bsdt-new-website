@@ -57,6 +57,7 @@ export const FloatingEnquiryForm = () => {
         source: event.source ? 'window' : 'unknown'
       });
 
+      // Only accept messages from the widget domain
       if (event.origin === 'https://widgets.in5.nopaperforms.com') {
         console.log('[FloatingEnquiryForm] Valid message from widget:', event.data);
         setIsWidgetLoaded(true);
@@ -68,24 +69,26 @@ export const FloatingEnquiryForm = () => {
 
     // Function to check iframe status
     const checkIframeStatus = () => {
-      if (iframeRef.current) {
-        console.log('[FloatingEnquiryForm] Iframe current status:', {
-          src: iframeRef.current.src,
-          width: iframeRef.current.offsetWidth,
-          height: iframeRef.current.offsetHeight,
-          visible: iframeRef.current.style.display !== 'none',
-          expanded: isExpanded
-        });
+      const iframe = iframeRef.current;
+      if (!iframe) {
+        console.log('[FloatingEnquiryForm] Iframe ref is not available');
+        return;
+      }
 
-        // Try to detect if iframe content is loaded
-        try {
-          const iframeDoc = iframeRef.current.contentDocument || iframeRef.current.contentWindow?.document;
-          console.log('[FloatingEnquiryForm] Iframe document accessible:', !!iframeDoc);
-        } catch (error) {
-          console.log('[FloatingEnquiryForm] Cannot access iframe document (expected due to CORS):', error);
-        }
-      } else {
-        console.warn('[FloatingEnquiryForm] Iframe ref is not available');
+      console.log('[FloatingEnquiryForm] Iframe current status:', {
+        src: iframe.src,
+        width: iframe.offsetWidth,
+        height: iframe.offsetHeight,
+        visible: iframe.style.display !== 'none',
+        expanded: isExpanded
+      });
+
+      // Try to detect if iframe content is loaded
+      try {
+        const iframeDoc = iframe.contentDocument || iframe.contentWindow?.document;
+        console.log('[FloatingEnquiryForm] Iframe document accessible:', !!iframeDoc);
+      } catch (error) {
+        console.log('[FloatingEnquiryForm] Cannot access iframe document (expected due to CORS):', error);
       }
     };
 
@@ -124,7 +127,7 @@ export const FloatingEnquiryForm = () => {
         clearInterval(debugTimeoutRef.current);
       }
     };
-  }, [isExpanded]); // Added isExpanded to dependencies
+  }, []); // Empty dependency array since we don't want to re-run on prop changes
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
