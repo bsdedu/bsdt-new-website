@@ -1,0 +1,13 @@
+{
+    "headers": [
+      {
+        "source": "/(.*)",
+        "headers": [
+          {
+            "key": "Content-Security-Policy",
+            "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://widgets.in5.nopaperforms.com; style-src 'self' 'unsafe-inline' https://widgets.in5.nopaperforms.com; img-src 'self' data: https:; connect-src 'self' https://api.nopaperforms.com; frame-src https://widgets.in5.nopaperforms.com;"
+          }
+        ]
+      }
+    ]
+  }

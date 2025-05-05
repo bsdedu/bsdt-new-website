@@ -34,7 +34,7 @@ export const ContactSection: React.FC = () => {
               Get in Touch
             </Badge>
             <h2 className="text-2xl md:text-3xl font-display font-bold tracking-tight text-bsd-gray">
-              Contact Us
+              Contact Uss
             </h2>
           </div>
         </RevealSection>
