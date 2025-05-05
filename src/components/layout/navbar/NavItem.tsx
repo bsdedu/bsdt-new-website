@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { cn } from "@/lib/utils";
 import { Link } from 'react-router-dom';
@@ -50,16 +49,17 @@ export const NavItem: React.FC<NavItemProps> = ({ item }) => {
       <NavigationMenuItem>
         <NavigationMenuTrigger 
           className="bg-transparent text-bsd-gray hover:text-bsd-orange hover:bg-transparent focus:bg-transparent"
+          data-side="bottom"
         >
           {item.name}
         </NavigationMenuTrigger>
-        <NavigationMenuContent className="bg-white shadow-lg rounded-md z-50">
+        <NavigationMenuContent className="bg-white shadow-lg rounded-md z-50 relative">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 w-[800px] max-w-screen-lg">
-            {item.categories.map((category, index) => (
+            {item.categories?.map((category, index) => (
               <div key={index} className="space-y-3">
                 <h3 className="text-sm font-bold text-bsd-gray border-b pb-1">{category.title}</h3>
                 <ul className="space-y-2">
-                  {category.items.map((subItem) => (
+                  {category.items?.map((subItem) => (
                     <li key={subItem.name}>
                       <NavigationMenuLink asChild>
                         {subItem.href.startsWith('/') ? (
@@ -72,6 +72,8 @@ export const NavItem: React.FC<NavItemProps> = ({ item }) => {
                         ) : (
                           <a
                             href={subItem.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="block select-none rounded-md py-1.5 text-sm leading-none text-bsd-gray hover:text-bsd-orange"
                           >
                             {subItem.name}
@@ -93,10 +95,11 @@ export const NavItem: React.FC<NavItemProps> = ({ item }) => {
     <NavigationMenuItem>
       <NavigationMenuTrigger 
         className="bg-transparent text-bsd-gray hover:text-bsd-orange hover:bg-transparent focus:bg-transparent"
+        data-side="bottom"
       >
         {item.name}
       </NavigationMenuTrigger>
-      <NavigationMenuContent className="bg-white shadow-lg rounded-md z-50">
+      <NavigationMenuContent className="bg-white shadow-lg rounded-md z-50 relative">
         <ul className="grid w-[250px] gap-1 p-2">
           {item.items?.map((subItem) => (
             <li key={subItem.name}>

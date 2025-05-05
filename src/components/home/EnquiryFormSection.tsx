@@ -54,6 +54,7 @@ export const EnquiryFormSection: React.FC<{ programSpecific?: boolean }> = ({ pr
           
           {/* Enquiry Form */}
           <RevealSection direction="left" className="lg:col-span-3">
+           
             <Card className="bg-white shadow-md border-0">
               <div className="p-6 md:p-8">
                 <h3 className="text-xl font-semibold mb-6 text-bsd-gray flex items-center">

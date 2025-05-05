@@ -5,6 +5,40 @@ import { Facebook, Instagram, Linkedin, Youtube, Mail, Phone, MapPin, Clock, Ext
 import { Link } from 'react-router-dom';
 
 export const Footer: React.FC = () => {
+
+  const openCalendlyPopup = () => {
+    // Calculate centered position for the popup
+    const width = 600;
+    const height = 700;
+    const left = (window.screen.width - width) / 2;
+    const top = (window.screen.height - height) / 2;
+    
+    const windowFeatures = `width=${width},height=${height},left=${left},top=${top},scrollbars=yes,resizable=yes`;
+    
+    // Try to open as popup first
+    const popup = window.open(
+      'https://calendly.com/admissions-bsd/campus_visit',
+      'calendly_popup',
+      windowFeatures
+    );
+    
+    // Check if popup was blocked
+    if (!popup || popup.closed || typeof popup.closed === 'undefined') {
+      // Fallback 1: Try without position features
+      const fallbackPopup = window.open(
+        'https://calendly.com/admissions-bsd/campus_visit',
+        '_blank',
+        `width=${width},height=${height}`
+      );
+      
+      // Final fallback: regular new tab
+      if (!fallbackPopup || fallbackPopup.closed) {
+        window.open('https://calendly.com/admissions-bsd/campus_visit', '_blank');
+      }
+    }
+  };
+
+  
   return <footer className="bg-[#333333] text-white py-16">
       <div className="container mx-auto px-6 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
@@ -62,6 +96,15 @@ export const Footer: React.FC = () => {
                   Our Faculty
                 </Link>
               </li>
+              <li>
+              <button 
+                onClick={openCalendlyPopup}
+                className="text-sm text-white/80 hover:text-white transition-colors flex items-center w-full text-left"
+              >
+                <ExternalLink className="w-4 h-4 mr-2" />
+                Schedule a Visit
+              </button>
+            </li>
             </ul>
           </div>
 
@@ -98,7 +141,7 @@ export const Footer: React.FC = () => {
             <p className="text-sm text-white/80">
               Visit our campus to experience our world-class facilities and vibrant learning environment.
             </p>
-            <div className="aspect-video rounded-lg overflow-hidden h-48">
+            <div className="aspect-video rounded-lg overflow-hidden h-58">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.531860116302!2d77.64088777532129!3d13.065443187258602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae19fca05a7085%3A0x32d325d7452e1509!2sBangalore%20School%20of%20Design%20%26%20Technology!5e0!3m2!1sen!2sin!4v1741951831100!5m2!1sen!2sin" width="100%" height="100%" style={{
               border: 0
               }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="BSDT Campus Map" className="w-full h-full" />

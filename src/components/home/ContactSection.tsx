@@ -1,5 +1,4 @@
-
-import React from 'react';
+import  React, {useEffect } from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
 import { Badge } from "@/components/ui/badge";
@@ -8,6 +7,24 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 
 export const ContactSection: React.FC = () => {
+  useEffect(() => {
+    const scriptText = `
+      var s=document.createElement("script");
+      s.type="text/javascript";
+      s.async=true;
+      s.src="https://widgets.in5.nopaperforms.com/emwgts.js";
+      document.body.appendChild(s);
+    `;
+    
+    const script = document.createElement('script');
+    script.innerHTML = scriptText;
+    document.body.appendChild(script);
+    
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <section id="contact" className="py-12 bg-bsd-light-gray relative">
       <div className="container mx-auto px-6 md:px-8 max-w-4xl">
@@ -24,6 +41,10 @@ export const ContactSection: React.FC = () => {
 
         <RevealSection>
           <div className="bg-white rounded-xl shadow-sm border border-border/40 p-6">
+            {/* Embedded widget */}
+            <div className="npf_wgts" data-height="400px" data-w="14fe90258f1849328c9ebb3adc9782bb"></div>
+            
+            {/*  
             <form className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
@@ -96,7 +117,8 @@ export const ContactSection: React.FC = () => {
                   <span>Send Message</span>
                 </AnimatedButton>
               </div>
-            </form>
+            </form> 
+            */}
           </div>
         </RevealSection>
       </div>

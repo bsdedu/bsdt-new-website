@@ -29,7 +29,7 @@ export const Navbar: React.FC = () => {
             <img 
               src="/lovable-uploads/c83c596d-add8-4ab2-a74f-1dc8c849424e.png" 
               alt="Bangalore School of Design & Technology Logo" 
-              className="h-14 md:h-18 object-fill" 
+              className="h-16 md:h-20 object-fill" 
             />
           </Link>
 
