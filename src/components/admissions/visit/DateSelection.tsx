@@ -1,10 +1,19 @@
-
 import * as React from 'react';
 import { format } from 'date-fns';
-import { Calendar } from '@/components/ui/calendar';
 import { DateSelectionProps } from './types';
 
 export const DateSelection: React.FC<DateSelectionProps> = ({ date, onDateSelect }) => {
+  React.useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <div>
       <div className="mb-4">
@@ -15,17 +24,11 @@ export const DateSelection: React.FC<DateSelectionProps> = ({ date, onDateSelect
       </div>
       
       <div className="flex justify-center my-6">
-        <Calendar
-          mode="single"
-          selected={date}
-          onSelect={onDateSelect}
-          disabled={(date) => {
-            // Disable weekends and past dates
-            const day = date.getDay();
-            return date < new Date() || day === 0 || day === 6;
-          }}
-          className="rounded-md border pointer-events-auto"
-        />
+        <div
+          className="calendly-inline-widget"
+          data-url="https://calendly.com/admissions-bsd/campus_visit"
+          style={{ minWidth: '320px', height: '700px' }}
+        ></div>
       </div>
     </div>
   );
