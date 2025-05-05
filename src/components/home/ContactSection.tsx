@@ -8,33 +8,89 @@ import { Label } from "@/components/ui/label";
 
 export const ContactSection: React.FC = () => {
   const iframeRef = useRef<HTMLIFrameElement>(null);
+  const debugTimeoutRef = useRef<NodeJS.Timeout>();
 
   useEffect(() => {
+    console.log('[ContactSection] Component mounted');
+
     // Function to create the iframe URL with current origin
     const createIframeUrl = () => {
       const widgetId = '14fe90258f1849328c9ebb3adc9782bb';
       const currentOrigin = typeof window !== 'undefined' ? window.location.origin : '';
-      return `https://widgets.in5.nopaperforms.com/register?w=${widgetId}&cu=${encodeURIComponent(currentOrigin)}`;
+      const url = `https://widgets.in5.nopaperforms.com/register?w=${widgetId}&cu=${encodeURIComponent(currentOrigin)}`;
+      console.log('[ContactSection] Generated URL:', url);
+      return url;
     };
 
     // Function to handle messages from the iframe
     const handleMessage = (event: MessageEvent) => {
+      console.log('[ContactSection] Received postMessage event:', {
+        origin: event.origin,
+        data: event.data,
+        source: event.source ? 'window' : 'unknown'
+      });
+
       if (event.origin === 'https://widgets.in5.nopaperforms.com') {
-        console.log('Received message from widget:', event.data);
+        console.log('[ContactSection] Valid message from widget:', event.data);
+      }
+    };
+
+    // Function to check iframe status
+    const checkIframeStatus = () => {
+      if (iframeRef.current) {
+        console.log('[ContactSection] Iframe current status:', {
+          src: iframeRef.current.src,
+          width: iframeRef.current.offsetWidth,
+          height: iframeRef.current.offsetHeight,
+          visible: iframeRef.current.style.display !== 'none'
+        });
+
+        // Try to detect if iframe content is loaded
+        try {
+          const iframeDoc = iframeRef.current.contentDocument || iframeRef.current.contentWindow?.document;
+          console.log('[ContactSection] Iframe document accessible:', !!iframeDoc);
+        } catch (error) {
+          console.log('[ContactSection] Cannot access iframe document (expected due to CORS):', error);
+        }
+      } else {
+        console.warn('[ContactSection] Iframe ref is not available');
       }
     };
 
     // Add message listener
+    console.log('[ContactSection] Adding postMessage listener');
     window.addEventListener('message', handleMessage);
 
     // Update iframe src if ref exists
     if (iframeRef.current) {
-      iframeRef.current.src = createIframeUrl();
+      const url = createIframeUrl();
+      console.log('[ContactSection] Setting iframe src:', url);
+      iframeRef.current.src = url;
+
+      // Add load event listener to iframe
+      iframeRef.current.onload = () => {
+        console.log('[ContactSection] Iframe onload event fired');
+        checkIframeStatus();
+      };
+
+      // Add error event listener to iframe
+      iframeRef.current.onerror = (error) => {
+        console.error('[ContactSection] Iframe loading error:', error);
+      };
+    } else {
+      console.warn('[ContactSection] Iframe ref not available on mount');
     }
+
+    // Set up periodic checks
+    debugTimeoutRef.current = setInterval(checkIframeStatus, 5000);
 
     // Cleanup
     return () => {
+      console.log('[ContactSection] Component unmounting');
       window.removeEventListener('message', handleMessage);
+      if (debugTimeoutRef.current) {
+        clearInterval(debugTimeoutRef.current);
+      }
     };
   }, []);
 
@@ -57,9 +113,16 @@ export const ContactSection: React.FC = () => {
             {/* Embedded widget */}
             <iframe
               ref={iframeRef}
-              style={{ width: '100%', height: '400px', border: 'none' }}
+              style={{ 
+                width: '100%', 
+                height: '400px', 
+                border: 'none',
+                backgroundColor: '#f8f9fa' // Light background to see if iframe is rendered
+              }}
               sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation"
               title="Enquiry Form"
+              onLoad={() => console.log('[ContactSection] Iframe onLoad event triggered')}
+              onError={(e) => console.error('[ContactSection] Iframe onError event:', e)}
             />
             
             {/*  
