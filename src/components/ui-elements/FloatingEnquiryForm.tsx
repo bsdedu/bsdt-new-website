@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { initializeWidget } from '@/lib/nopaperforms';
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -32,20 +33,12 @@ export const FloatingEnquiryForm = () => {
   });
 
   useEffect(() => {
-    // Load the widget script dynamically
-    const script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.async = true;
-    script.src = 'https://widgets.in5.nopaperforms.com/emwgts.js';
-    
-    // Add script to document body
-    document.body.appendChild(script);
-    
-    // Cleanup function to remove script when component unmounts
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []); // Empty dependency array ensures this runs only once on mount
+    const cleanup = initializeWidget({
+      w: 'adff9b077808c1fcb8e77a017693b6b9',
+      h: '400px'
+    });
+    return cleanup;
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
