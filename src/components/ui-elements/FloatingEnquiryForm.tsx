@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
@@ -15,32 +15,6 @@ export const FloatingEnquiryForm = () => {
     });
     setIsExpanded(false);
   };
-
-  // Initialize the widget when the component mounts
-  useEffect(() => {
-    if (isExpanded) {
-      // Create the widget container
-      const widgetContainer = document.createElement('div');
-      widgetContainer.className = 'npf_wgts';
-      widgetContainer.setAttribute('data-height', '400px');
-      widgetContainer.setAttribute('data-w', 'adff9b077808c1fcb8e77a017693b6b9');
-      
-      // Create the script element
-      const script = document.createElement('script');
-      script.src = 'https://widgets.in5.nopaperforms.com/emwgts.js';
-      script.async = true;
-      
-      // Add the container and script to the body
-      document.body.appendChild(widgetContainer);
-      document.body.appendChild(script);
-
-      // Clean up when the component unmounts or when expanded state changes
-      return () => {
-        document.body.removeChild(widgetContainer);
-        document.body.removeChild(script);
-      };
-    }
-  }, [isExpanded]);
 
   return (
     <div className={cn(
@@ -76,7 +50,17 @@ export const FloatingEnquiryForm = () => {
           isExpanded ? "opacity-100" : "opacity-0 pointer-events-none"
         )}>
           <h3 className="text-lg font-semibold text-bsd-gray mb-4">Quick Enquiry</h3>
-          <div className="npf_wgts" data-height="400px" data-w="adff9b077808c1fcb8e77a017693b6b9" />
+          <iframe
+            src="/nopaperforms-widget.html"
+            style={{
+              width: '100%',
+              height: '400px',
+              border: 'none',
+              borderRadius: '8px',
+              backgroundColor: '#f8f9fa'
+            }}
+            title="Quick Enquiry Form"
+          />
         </div>
       </div>
     </div>
