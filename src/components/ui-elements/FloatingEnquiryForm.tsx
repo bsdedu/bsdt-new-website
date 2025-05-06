@@ -10,6 +10,8 @@ export const FloatingEnquiryForm = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isScriptLoading, setIsScriptLoading] = useState(false);
   const [isWidgetLoaded, setIsWidgetLoaded] = useState(false);
+  const [retryCount, setRetryCount] = useState(0);
+  const maxRetries = 3;
   const { toast } = useToast();
   const widgetContainerRef = useRef<HTMLDivElement>(null);
   const scriptLoadedRef = useRef(false);
@@ -19,43 +21,77 @@ export const FloatingEnquiryForm = () => {
     console.log('[FloatingEnquiryForm] useEffect triggered', { isExpanded, scriptLoaded: scriptLoadedRef.current });
     if (isExpanded && !scriptLoadedRef.current) {
       setIsScriptLoading(true);
+      
       // Create and append script only once when expanded
       console.log('[FloatingEnquiryForm] Creating and appending NopaperForms script');
       const script = document.createElement('script');
       script.type = 'text/javascript';
       script.async = true;
+      script.crossOrigin = 'anonymous'; // Add CORS handling
       script.src = 'https://widgets.in5.nopaperforms.com/emwgts.js';
-      script.onload = () => {
-        console.log('[FloatingEnquiryForm] NopaperForms script loaded successfully');
-        scriptLoadedRef.current = true;
-        setIsScriptLoading(false);
-        
-        // Set the global configuration for NopaperForms after script loads
-        console.log('[FloatingEnquiryForm] Setting NopaperForms configuration after script loads');
-        window.npf_wgts = {
-          widgetId: 'adff9b077808c1fcb8e77a017693b6b9',
-          height: '400px',
-          container: 'npf_widget_container',
-          onLoad: function() {
-            console.log('[FloatingEnquiryForm] NoPaper Forms widget loaded successfully');
-            setIsWidgetLoaded(true);
-            console.log('[FloatingEnquiryForm] Widget container after load:', {
-              exists: !!container,
-              container: container?.innerHTML || 'Empty'
-            });
-          },
-          onError: function(error) {
-            console.error('[FloatingEnquiryForm] NoPaper Forms widget failed to load', error);
-            setIsWidgetLoaded(false);
+      
+      // Add security headers
+      script.setAttribute('data-nonce', Math.random().toString(36).substring(2));
+      script.setAttribute('data-csp-nonce', Math.random().toString(36).substring(2));
+      
+      // Add request headers
+      script.setAttribute('data-request-headers', JSON.stringify({
+        'Accept': 'application/javascript',
+        'Cache-Control': 'no-cache',
+        'Pragma': 'no-cache'
+      }));
+      
+      // Add CORS headers
+      script.setAttribute('data-cors-headers', JSON.stringify({
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
+        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
+      }));
+      
+      const loadScript = () => {
+        setRetryCount(0); // Reset retry count on new load attempt
+        script.onload = () => {
+          console.log('[FloatingEnquiryForm] NopaperForms script loaded successfully');
+          scriptLoadedRef.current = true;
+          setIsScriptLoading(false);
+          
+          // Set the global configuration for NopaperForms after script loads
+          console.log('[FloatingEnquiryForm] Setting NopaperForms configuration after script loads');
+          window.npf_wgts = {
+            widgetId: 'adff9b077808c1fcb8e77a017693b6b9',
+            height: '400px',
+            container: 'npf_widget_container',
+            onLoad: function() {
+              console.log('[FloatingEnquiryForm] NoPaper Forms widget loaded successfully');
+              setIsWidgetLoaded(true);
+              console.log('[FloatingEnquiryForm] Widget container after load:', {
+                exists: !!container,
+                container: container?.innerHTML || 'Empty'
+              });
+            },
+            onError: function(error) {
+              console.error('[FloatingEnquiryForm] NoPaper Forms widget failed to load', error);
+              setIsWidgetLoaded(false);
+            }
+          };
+        };
+
+        script.onerror = (error) => {
+          retryCount++;
+          console.error(`[FloatingEnquiryForm] Attempt ${retryCount} - Error loading NopaperForms script:`, error);
+          
+          if (retryCount < maxRetries) {
+            setRetryCount(retryCount + 1);
+            console.log(`[FloatingEnquiryForm] Retrying script load (attempt ${retryCount}/${maxRetries})`);
+            setTimeout(loadScript, 1000 * retryCount); // Exponential backoff
+          } else {
+            console.error('[FloatingEnquiryForm] Maximum retries reached. Failed to load script.');
+            setIsScriptLoading(false);
           }
         };
       };
-      
-      script.onerror = (error) => {
-        console.error('[FloatingEnquiryForm] Error loading NopaperForms script:', error);
-        setIsScriptLoading(false);
-      };
-      script.onerror = (error) => console.error('[FloatingEnquiryForm] Error loading NopaperForms script:', error);
+
+      loadScript();
       document.body.appendChild(script);
       
       // Check widget container status before script loads
@@ -64,7 +100,6 @@ export const FloatingEnquiryForm = () => {
         exists: !!container,
         container: container?.innerHTML || 'Empty'
       });
-      
       window.npf_wgts = {
         widgetId: 'adff9b077808c1fcb8e77a017693b6b9',
         height: '400px',
@@ -152,7 +187,7 @@ export const FloatingEnquiryForm = () => {
           >
             {/* Fallback content */}
             <div className="text-center py-4">
-              {isScriptLoading ? 'Loading enquiry form...' : 
+              {isScriptLoading ? `Loading enquiry form... (Attempt ${retryCount + 1}/${maxRetries})` : 
                isWidgetLoaded ? '' : 
                'Enquiry form failed to load'}
             </div>
