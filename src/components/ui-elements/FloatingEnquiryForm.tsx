@@ -22,27 +22,53 @@ export const FloatingEnquiryForm = () => {
       script.type = 'text/javascript';
       script.async = true;
       script.src = 'https://widgets.in5.nopaperforms.com/emwgts.js';
-      script.onload = () => console.log('[FloatingEnquiryForm] NopaperForms script loaded successfully');
+      script.onload = () => {
+        console.log('[FloatingEnquiryForm] NopaperForms script loaded successfully');
+        scriptLoadedRef.current = true;
+      };
       script.onerror = (error) => console.error('[FloatingEnquiryForm] Error loading NopaperForms script:', error);
       document.body.appendChild(script);
       
       // Set the global configuration for NopaperForms
       console.log('[FloatingEnquiryForm] Setting NopaperForms configuration');
+      
+      // Check widget container status
+      const container = document.getElementById('npf_widget_container');
+      console.log('[FloatingEnquiryForm] Widget container status:', {
+        exists: !!container,
+        container: container?.innerHTML || 'Empty'
+      });
+      
       window.npf_wgts = {
         widgetId: 'adff9b077808c1fcb8e77a017693b6b9',
         height: '400px',
         container: 'npf_widget_container',
         onLoad: function() {
-          console.log('NoPaper Forms widget loaded successfully');
+          console.log('[FloatingEnquiryForm] NoPaper Forms widget loaded successfully');
+          console.log('[FloatingEnquiryForm] Widget container after load:', {
+            exists: !!container,
+            container: container?.innerHTML || 'Empty'
+          });
         },
-        onError: function() {
-          console.error('NoPaper Forms widget failed to load');
+        onError: function(error) {
+          console.error('[FloatingEnquiryForm] NoPaper Forms widget failed to load', error);
         }
       };
       
       scriptLoadedRef.current = true;
     }
   }, [isExpanded]);
+
+  // Cleanup script on unmount
+  useEffect(() => {
+    return () => {
+      const script = document.querySelector('script[src="https://widgets.in5.nopaperforms.com/emwgts.js"]');
+      if (script) {
+        document.body.removeChild(script);
+        console.log('[FloatingEnquiryForm] Removed NopaperForms script on unmount');
+      }
+    };
+  }, []);
 
   const onSubmit = () => {
     toast({
@@ -97,7 +123,12 @@ export const FloatingEnquiryForm = () => {
             className="npf_wgts" 
             data-height="400px" 
             data-w="adff9b077808c1fcb8e77a017693b6b9"
-          ></div>
+          >
+            {/* Fallback content */}
+            <div className="text-center py-4">
+              Loading enquiry form...
+            </div>
+          </div>
         </div>
       </div>
     </div>
