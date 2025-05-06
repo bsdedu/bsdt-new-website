@@ -38,60 +38,101 @@ export const FloatingEnquiryForm = () => {
       script.setAttribute('data-request-headers', JSON.stringify({
         'Accept': 'application/javascript',
         'Cache-Control': 'no-cache',
-        'Pragma': 'no-cache'
+        'Pragma': 'no-cache',
+        'X-Requested-With': 'XMLHttpRequest'
       }));
       
       // Add CORS headers
       script.setAttribute('data-cors-headers', JSON.stringify({
         'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
-        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
+        'Access-Control-Allow-Methods': 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
+        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, X-CSRF-Token, Authorization'
       }));
-      
-      const loadScript = () => {
-        setRetryCount(0); // Reset retry count on new load attempt
-        script.onload = () => {
-          console.log('[FloatingEnquiryForm] NopaperForms script loaded successfully');
-          scriptLoadedRef.current = true;
-          setIsScriptLoading(false);
-          
-          // Set the global configuration for NopaperForms after script loads
-          console.log('[FloatingEnquiryForm] Setting NopaperForms configuration after script loads');
-          window.npf_wgts = {
-            widgetId: 'adff9b077808c1fcb8e77a017693b6b9',
-            height: '400px',
-            container: 'npf_widget_container',
-            onLoad: function() {
-              console.log('[FloatingEnquiryForm] NoPaper Forms widget loaded successfully');
-              setIsWidgetLoaded(true);
-              console.log('[FloatingEnquiryForm] Widget container after load:', {
-                exists: !!container,
-                container: container?.innerHTML || 'Empty'
-              });
-            },
-            onError: function(error) {
-              console.error('[FloatingEnquiryForm] NoPaper Forms widget failed to load', error);
-              setIsWidgetLoaded(false);
-            }
-          };
-        };
 
-        script.onerror = (error) => {
-          retryCount++;
-          console.error(`[FloatingEnquiryForm] Attempt ${retryCount} - Error loading NopaperForms script:`, error);
-          
-          if (retryCount < maxRetries) {
-            setRetryCount(retryCount + 1);
-            console.log(`[FloatingEnquiryForm] Retrying script load (attempt ${retryCount}/${maxRetries})`);
-            setTimeout(loadScript, 1000 * retryCount); // Exponential backoff
-          } else {
-            console.error('[FloatingEnquiryForm] Maximum retries reached. Failed to load script.');
-            setIsScriptLoading(false);
+      // Set up script error handling
+      script.onerror = (event) => {
+        setRetryCount(prev => prev + 1);
+        console.error(`[FloatingEnquiryForm] Attempt ${retryCount} - Error loading NopaperForms script:`, event);
+        
+        if (retryCount < maxRetries) {
+          console.log(`[FloatingEnquiryForm] Retrying script load (attempt ${retryCount}/${maxRetries})`);
+          setTimeout(() => {
+            // Create new script element for retry
+            const newScript = document.createElement('script');
+            newScript.type = 'text/javascript';
+            newScript.async = true;
+            newScript.crossOrigin = 'anonymous';
+            newScript.src = 'https://widgets.in5.nopaperforms.com/emwgts.js';
+            
+            // Copy headers
+            newScript.setAttribute('data-nonce', Math.random().toString(36).substring(2));
+            newScript.setAttribute('data-csp-nonce', Math.random().toString(36).substring(2));
+            newScript.setAttribute('data-request-headers', script.getAttribute('data-request-headers') || '');
+            newScript.setAttribute('data-cors-headers', script.getAttribute('data-cors-headers') || '');
+            
+            // Set up handlers
+            newScript.onload = () => {
+              console.log('[FloatingEnquiryForm] NopaperForms script loaded successfully');
+              scriptLoadedRef.current = true;
+              setIsScriptLoading(false);
+              
+              // Set the global configuration for NopaperForms after script loads
+              console.log('[FloatingEnquiryForm] Setting NopaperForms configuration after script loads');
+              window.npf_wgts = {
+                widgetId: 'adff9b077808c1fcb8e77a017693b6b9',
+                height: '400px',
+                container: 'npf_widget_container',
+                onLoad: function() {
+                  console.log('[FloatingEnquiryForm] NoPaper Forms widget loaded successfully');
+                  setIsWidgetLoaded(true);
+                  console.log('[FloatingEnquiryForm] Widget container after load:', {
+                    exists: !!container,
+                    container: container?.innerHTML || 'Empty'
+                  });
+                },
+                onError: function() {
+                  console.error('[FloatingEnquiryForm] NoPaper Forms widget failed to load');
+                  setIsWidgetLoaded(false);
+                }
+              };
+            };
+            
+            newScript.onerror = script.onerror;
+            document.body.appendChild(newScript);
+          }, 1000 * retryCount); // Exponential backoff
+        } else {
+          console.error('[FloatingEnquiryForm] Maximum retries reached. Failed to load script.');
+          setIsScriptLoading(false);
+        }
+      };
+
+      // Set up initial load
+      script.onload = () => {
+        console.log('[FloatingEnquiryForm] NopaperForms script loaded successfully');
+        scriptLoadedRef.current = true;
+        setIsScriptLoading(false);
+        
+        // Set the global configuration for NopaperForms after script loads
+        console.log('[FloatingEnquiryForm] Setting NopaperForms configuration after script loads');
+        window.npf_wgts = {
+          widgetId: 'adff9b077808c1fcb8e77a017693b6b9',
+          height: '400px',
+          container: 'npf_widget_container',
+          onLoad: function() {
+            console.log('[FloatingEnquiryForm] NoPaper Forms widget loaded successfully');
+            setIsWidgetLoaded(true);
+            console.log('[FloatingEnquiryForm] Widget container after load:', {
+              exists: !!container,
+              container: container?.innerHTML || 'Empty'
+            });
+          },
+          onError: function() {
+            console.error('[FloatingEnquiryForm] NoPaper Forms widget failed to load');
+            setIsWidgetLoaded(false);
           }
         };
       };
 
-      loadScript();
       document.body.appendChild(script);
       
       // Check widget container status before script loads
@@ -100,20 +141,12 @@ export const FloatingEnquiryForm = () => {
         exists: !!container,
         container: container?.innerHTML || 'Empty'
       });
-      window.npf_wgts = {
-        widgetId: 'adff9b077808c1fcb8e77a017693b6b9',
-        height: '400px',
-        container: 'npf_widget_container',
-        onLoad: function() {
-          console.log('[FloatingEnquiryForm] NoPaper Forms widget loaded successfully');
-          console.log('[FloatingEnquiryForm] Widget container after load:', {
-            exists: !!container,
-            container: container?.innerHTML || 'Empty'
-          });
-        },
-        onError: function(error) {
-          console.error('[FloatingEnquiryForm] NoPaper Forms widget failed to load', error);
-        }
+
+      script.onload = function() {
+        console.log('[FloatingEnquiryForm] NoPaper Forms widget script loaded successfully');
+      };
+      script.onerror = function(error) {
+        console.error('[FloatingEnquiryForm] NoPaper Forms widget failed to load', error);
       };
       
       scriptLoadedRef.current = true;
