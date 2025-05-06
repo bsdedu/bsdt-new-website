@@ -9,6 +9,7 @@ export const FloatingEnquiryForm = () => {
   console.log('[FloatingEnquiryForm] Component initialized');
   const [isExpanded, setIsExpanded] = useState(false);
   const [isScriptLoading, setIsScriptLoading] = useState(false);
+  const [isWidgetLoaded, setIsWidgetLoaded] = useState(false);
   const { toast } = useToast();
   const widgetContainerRef = useRef<HTMLDivElement>(null);
   const scriptLoadedRef = useRef(false);
@@ -37,6 +38,7 @@ export const FloatingEnquiryForm = () => {
           container: 'npf_widget_container',
           onLoad: function() {
             console.log('[FloatingEnquiryForm] NoPaper Forms widget loaded successfully');
+            setIsWidgetLoaded(true);
             console.log('[FloatingEnquiryForm] Widget container after load:', {
               exists: !!container,
               container: container?.innerHTML || 'Empty'
@@ -44,6 +46,7 @@ export const FloatingEnquiryForm = () => {
           },
           onError: function(error) {
             console.error('[FloatingEnquiryForm] NoPaper Forms widget failed to load', error);
+            setIsWidgetLoaded(false);
           }
         };
       };
@@ -149,7 +152,9 @@ export const FloatingEnquiryForm = () => {
           >
             {/* Fallback content */}
             <div className="text-center py-4">
-              {isScriptLoading ? 'Loading enquiry form...' : 'Enquiry form failed to load'}
+              {isScriptLoading ? 'Loading enquiry form...' : 
+               isWidgetLoaded ? '' : 
+               'Enquiry form failed to load'}
             </div>
           </div>
         </div>
