@@ -1,13 +1,17 @@
 {
-  "headers": [
-    {
-      "source": "/(.*)",  
-      "headers": [
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"  
-        }
-      ]
-    }
-  ]
-}
+    "headers": [
+      {
+        "source": "/(.*)",
+        "headers": [
+          {
+            "key": "Content-Security-Policy",
+            "value": "default-src 'self'; frame-src https://widgets.in5.nopaperforms.com; script-src 'self' 'unsafe-inline' https://widgets.in5.nopaperforms.com; style-src 'self' 'unsafe-inline' https://widgets.in5.nopaperforms.com; img-src 'self' data: https:; connect-src 'self' https://widgets.in5.nopaperforms.com;"
+          },
+          {
+            "key": "Referrer-Policy",
+            "value": "strict-origin-when-cross-origin"
+          }
+        ]
+      }
+    ]
+  }
