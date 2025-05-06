@@ -8,6 +8,7 @@ import { X, MessageSquare } from "lucide-react";
 export const FloatingEnquiryForm = () => {
   console.log('[FloatingEnquiryForm] Component initialized');
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isScriptLoading, setIsScriptLoading] = useState(false);
   const { toast } = useToast();
   const widgetContainerRef = useRef<HTMLDivElement>(null);
   const scriptLoadedRef = useRef(false);
@@ -16,6 +17,7 @@ export const FloatingEnquiryForm = () => {
   useEffect(() => {
     console.log('[FloatingEnquiryForm] useEffect triggered', { isExpanded, scriptLoaded: scriptLoadedRef.current });
     if (isExpanded && !scriptLoadedRef.current) {
+      setIsScriptLoading(true);
       // Create and append script only once when expanded
       console.log('[FloatingEnquiryForm] Creating and appending NopaperForms script');
       const script = document.createElement('script');
@@ -25,16 +27,37 @@ export const FloatingEnquiryForm = () => {
       script.onload = () => {
         console.log('[FloatingEnquiryForm] NopaperForms script loaded successfully');
         scriptLoadedRef.current = true;
+        setIsScriptLoading(false);
+        
+        // Set the global configuration for NopaperForms after script loads
+        console.log('[FloatingEnquiryForm] Setting NopaperForms configuration after script loads');
+        window.npf_wgts = {
+          widgetId: 'adff9b077808c1fcb8e77a017693b6b9',
+          height: '400px',
+          container: 'npf_widget_container',
+          onLoad: function() {
+            console.log('[FloatingEnquiryForm] NoPaper Forms widget loaded successfully');
+            console.log('[FloatingEnquiryForm] Widget container after load:', {
+              exists: !!container,
+              container: container?.innerHTML || 'Empty'
+            });
+          },
+          onError: function(error) {
+            console.error('[FloatingEnquiryForm] NoPaper Forms widget failed to load', error);
+          }
+        };
+      };
+      
+      script.onerror = (error) => {
+        console.error('[FloatingEnquiryForm] Error loading NopaperForms script:', error);
+        setIsScriptLoading(false);
       };
       script.onerror = (error) => console.error('[FloatingEnquiryForm] Error loading NopaperForms script:', error);
       document.body.appendChild(script);
       
-      // Set the global configuration for NopaperForms
-      console.log('[FloatingEnquiryForm] Setting NopaperForms configuration');
-      
-      // Check widget container status
+      // Check widget container status before script loads
       const container = document.getElementById('npf_widget_container');
-      console.log('[FloatingEnquiryForm] Widget container status:', {
+      console.log('[FloatingEnquiryForm] Widget container status before script loads:', {
         exists: !!container,
         container: container?.innerHTML || 'Empty'
       });
@@ -126,7 +149,7 @@ export const FloatingEnquiryForm = () => {
           >
             {/* Fallback content */}
             <div className="text-center py-4">
-              Loading enquiry form...
+              {isScriptLoading ? 'Loading enquiry form...' : 'Enquiry form failed to load'}
             </div>
           </div>
         </div>
