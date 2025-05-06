@@ -1,178 +1,44 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
+import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { useToast } from "@/hooks/use-toast";
-import { MessageSquare, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-
-const formSchema = z.object({
-  name: z.string().min(2, "Name is required"),
-  email: z.string().email("Please enter a valid email"),
-  phone: z.string().min(10, "Please enter a valid phone number"),
-});
-
-type FormData = z.infer<typeof formSchema>;
+import { X, MessageSquare } from "lucide-react";
 
 export const FloatingEnquiryForm = () => {
-  const [isExpanded, setIsExpanded] = React.useState(false);
-  const formRef = useRef<HTMLDivElement>(null); // Ref for the form container
+  const [isExpanded, setIsExpanded] = useState(false);
   const { toast } = useToast();
-  
-  const form = useForm<FormData>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      phone: "",
-    },
-  });
-
-  const iframeRef = useRef<HTMLIFrameElement>(null);
-  const debugTimeoutRef = useRef<NodeJS.Timeout>();
-  const [isWidgetLoaded, setIsWidgetLoaded] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
-    console.log('[FloatingEnquiryForm] Component mounted');
+    // Create and append the widget script
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.async = true;
+    script.src = 'https://widgets.in5.nopaperforms.com/emwgts.js';
+    document.body.appendChild(script);
+  }, []);
 
-    // Function to create the iframe URL with current origin
-    const createIframeUrl = () => {
-      const widgetId = 'adff9b077808c1fcb8e77a017693b6b9';
-      const currentOrigin = typeof window !== 'undefined' ? window.location.origin : '';
-      const url = `https://widgets.in5.nopaperforms.com/register?w=${widgetId}&cu=${encodeURIComponent(currentOrigin)}`;
-      console.log('[FloatingEnquiryForm] Generated URL:', url);
-      return url;
-    };
-
-    // Function to handle messages from the iframe
-    const handleMessage = (event: MessageEvent) => {
-      console.log('[FloatingEnquiryForm] Received postMessage event:', {
-        origin: event.origin,
-        data: event.data,
-        source: event.source ? 'window' : 'unknown'
-      });
-
-      // Only accept messages from the widget domain
-      if (event.origin === 'https://widgets.in5.nopaperforms.com') {
-        console.log('[FloatingEnquiryForm] Valid message from widget:', event.data);
-        setIsWidgetLoaded(true);
-        setIsLoading(false);
-      } else {
-        console.log('[FloatingEnquiryForm] Ignoring message from origin:', event.origin);
-      }
-    };
-
-    // Function to check iframe status
-    const checkIframeStatus = () => {
-      const iframe = iframeRef.current;
-      if (!iframe) {
-        console.log('[FloatingEnquiryForm] Iframe ref is not available');
-        return;
-      }
-
-      console.log('[FloatingEnquiryForm] Iframe current status:', {
-        src: iframe.src,
-        width: iframe.offsetWidth,
-        height: iframe.offsetHeight,
-        visible: iframe.style.display !== 'none',
-        expanded: isExpanded
-      });
-
-      // Try to detect if iframe content is loaded
-      try {
-        const iframeDoc = iframe.contentDocument || iframe.contentWindow?.document;
-        console.log('[FloatingEnquiryForm] Iframe document accessible:', !!iframeDoc);
-      } catch (error) {
-        console.log('[FloatingEnquiryForm] Cannot access iframe document (expected due to CORS):', error);
-      }
-    };
-
-    // Add message listener
-    console.log('[FloatingEnquiryForm] Adding postMessage listener');
-    window.addEventListener('message', handleMessage);
-
-    // Update iframe src if ref exists
-    if (iframeRef.current) {
-      const url = createIframeUrl();
-      console.log('[FloatingEnquiryForm] Setting iframe src:', url);
-      iframeRef.current.src = url;
-
-      // Add load event listener to iframe
-      iframeRef.current.onload = () => {
-        console.log('[FloatingEnquiryForm] Iframe onload event fired');
-        checkIframeStatus();
-      };
-
-      // Add error event listener to iframe
-      iframeRef.current.onerror = (error) => {
-        console.error('[FloatingEnquiryForm] Iframe loading error:', error);
-      };
-    } else {
-      console.warn('[FloatingEnquiryForm] Iframe ref not available on mount');
-    }
-
-    // Set up periodic checks
-    debugTimeoutRef.current = setInterval(checkIframeStatus, 5000);
-
-    // Cleanup
-    return () => {
-      console.log('[FloatingEnquiryForm] Component unmounting');
-      window.removeEventListener('message', handleMessage);
-      if (debugTimeoutRef.current) {
-        clearInterval(debugTimeoutRef.current);
-      }
-    };
-  }, []); // Empty dependency array since we don't want to re-run on prop changes
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (formRef.current && !formRef.current.contains(event.target as Node)) {
-        setIsExpanded(false); // Close the form if clicked outside
-      }
-    };
-
-    if (isExpanded) {
-      document.addEventListener('mousedown', handleClickOutside);
-    } else {
-      document.removeEventListener('mousedown', handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [isExpanded]);
-
-  const onSubmit = (data: FormData) => {
-    console.log(data);
+  const onSubmit = () => {
     toast({
       title: "Thanks for your enquiry!",
       description: "We'll get back to you soon.",
     });
-    form.reset();
     setIsExpanded(false);
   };
 
   return (
     <div className={cn(
-      "fixed right-0 top-1/2 -translate-y-1/2 z-[99999]", // Ensure it remains fixed
+      "fixed right-0 top-1/2 -translate-y-1/2 z-[99999]",
       isExpanded ? "translate-x-0" : "translate-x-[calc(100%-2rem)]"
-    )}
-    ref={formRef} // Attach ref to the form container
-    >
+    )}>
       <div className="relative flex items-start">
         {/* Trigger button */}
         <button
           onClick={() => setIsExpanded(!isExpanded)}
           className={cn(
-            "bg-bsd-orange text-white px-2 py-4 rounded-l-lg writing-vertical transform rotate-180 whitespace-nowrap text-sm",
+            "bg-bsd-orange text-white px-2 py-4 rounded-l-lg writing-vertical transform rotate-180 whitespace-nowrap text-sm sticky top-0",
             "hover:bg-bsd-orange/90 transition-colors flex items-center gap-1"
           )}
-          style={{ writingMode: 'vertical-rl', position: 'fixed', top: '50%', transform: 'translateY(-50%)' }} // Ensure button stays fixed
+          style={{ writingMode: 'vertical-rl' }}
         >
           {isExpanded ? (
             <>
@@ -182,85 +48,18 @@ export const FloatingEnquiryForm = () => {
           ) : (
             <>
               <MessageSquare className="w-3 h-3" />
-              Enquire Now
+              Enquire Nows
             </>
           )}
         </button>
 
         {/* Form panel */}
         <div className={cn(
-          "bg-white p-6 shadow-lg w-80 border-l border-t border-b border-gray-200",
-          isExpanded ? "opacity-100" : "opacity-0 pointer-events-none",
-          "fixed top-1/2 transform -translate-y-1/2 right-0" // Ensure form stays fixed
+          "bg-white p-6 shadow-lg w-80 border-l border-t border-b border-gray-200 sticky top-0",
+          isExpanded ? "opacity-100" : "opacity-0 pointer-events-none"
         )}>
-          <button
-            onClick={() => setIsExpanded(false)}
-            className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
-            aria-label="Close"
-          >
-            ✕
-          </button>
           <h3 className="text-lg font-semibold text-bsd-gray mb-4">Quick Enquiry</h3>
-          {hasError ? (
-            <div className="flex items-center justify-center h-full text-red-500">
-              <p>Failed to load form. Please try again later.</p>
-            </div>
-          ) : isLoading ? (
-            <div className="flex items-center justify-center h-full">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-bsd-orange"></div>
-            </div>
-          ) : (
-            <iframe
-              ref={iframeRef}
-              style={{ 
-                width: '100%', 
-                height: '400px', 
-                border: 'none',
-                backgroundColor: '#f8f9fa', 
-                opacity: isExpanded ? 1 : 0,
-                transition: 'opacity 0.3s ease-in-out'
-              }}
-              sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads"
-              title="Quick Enquiry Form" 
-              onLoad={(e) => {
-                console.log('[FloatingEnquiryForm] Iframe onLoad event triggered');
-                const iframe = e.target as HTMLIFrameElement;
-                if (iframe) {
-                  console.log('[FloatingEnquiryForm] Iframe dimensions:', {
-                    width: iframe.offsetWidth,
-                    height: iframe.offsetHeight
-                  });
-                  // Try to get contentWindow to check if it's loaded
-                  const contentWindow = iframe.contentWindow;
-                  if (contentWindow) {
-                    console.log('[FloatingEnquiryForm] Content window exists');
-                  }
-                }
-              }}
-              onError={(e) => {
-                console.error('[FloatingEnquiryForm] Iframe onError event:', e);
-                const iframe = e.target as HTMLIFrameElement;
-                if (iframe) {
-                  console.error('[FloatingEnquiryForm] Iframe src:', iframe.src);
-                  // Try to get error details
-                  console.error('[FloatingEnquiryForm] Iframe error:', {
-                    type: e.type,
-                    target: e.target,
-                    currentTarget: e.currentTarget
-                  });
-                  setHasError(true);
-                }
-              }}
-              onAbort={(e) => {
-                console.error('[FloatingEnquiryForm] Iframe onAbort event:', e);
-                setHasError(true);
-              }}
-              onStalled={(e) => {
-                console.error('[FloatingEnquiryForm] Iframe onStalled event:', e);
-                setHasError(true);
-              }}
-            />
-          )}
+          <div className="npf_wgts" data-height="400px" data-w="adff9b077808c1fcb8e77a017693b6b9" />
         </div>
       </div>
     </div>
