@@ -1,3 +1,4 @@
+
 {
     "headers": [
       {
@@ -5,7 +6,7 @@
         "headers": [
           {
             "key": "Content-Security-Policy",
-            "value": "default-src 'self'; frame-src https://widgets.in5.nopaperforms.com; script-src 'self' 'unsafe-inline' https://widgets.in5.nopaperforms.com; style-src 'self' 'unsafe-inline' https://widgets.in5.nopaperforms.com; img-src 'self' data: https:; connect-src 'self' https://widgets.in5.nopaperforms.com;"
+            "value": "default-src 'self'; frame-src https://widgets.in5.nopaperforms.com; script-src 'self' 'unsafe-inline' https://widgets.in5.nopaperforms.com; style-src 'self' 'unsafe-inline' https://widgets.in5.nopaperforms.com; img-src 'self' data: https:; connect-src 'self' https://widgets.in5.nopaperforms.com https://*.nopaperforms.com;"
           },
           {
             "key": "Referrer-Policy",
