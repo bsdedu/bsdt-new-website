@@ -122,7 +122,6 @@ export const ContactSection: React.FC = () => {
               }}
               sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads"
               title="Enquiry Form"
-              crossOrigin="anonymous"
               onLoad={(e) => {
                 console.log('[ContactSection] Iframe onLoad event triggered');
                 const iframe = e.target as HTMLIFrameElement;
@@ -159,7 +158,7 @@ export const ContactSection: React.FC = () => {
               }}
             />
             
-            {/*  
+            {/* 
             <form className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
