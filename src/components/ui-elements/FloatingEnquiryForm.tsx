@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { X, MessageSquare } from "lucide-react";
 
 export const FloatingEnquiryForm = () => {
+  console.log('[FloatingEnquiryForm] Component initialized');
   const [isExpanded, setIsExpanded] = useState(false);
   const { toast } = useToast();
   const widgetContainerRef = useRef<HTMLDivElement>(null);
@@ -13,15 +14,20 @@ export const FloatingEnquiryForm = () => {
 
   // Load the NopaperForms script when the component is expanded
   useEffect(() => {
+    console.log('[FloatingEnquiryForm] useEffect triggered', { isExpanded, scriptLoaded: scriptLoadedRef.current });
     if (isExpanded && !scriptLoadedRef.current) {
       // Create and append script only once when expanded
+      console.log('[FloatingEnquiryForm] Creating and appending NopaperForms script');
       const script = document.createElement('script');
       script.type = 'text/javascript';
       script.async = true;
       script.src = 'https://widgets.in5.nopaperforms.com/emwgts.js';
+      script.onload = () => console.log('[FloatingEnquiryForm] NopaperForms script loaded successfully');
+      script.onerror = (error) => console.error('[FloatingEnquiryForm] Error loading NopaperForms script:', error);
       document.body.appendChild(script);
       
       // Set the global configuration for NopaperForms
+      console.log('[FloatingEnquiryForm] Setting NopaperForms configuration');
       window.npf_wgts = {
         widgetId: 'adff9b077808c1fcb8e77a017693b6b9',
         height: '400px',
@@ -54,7 +60,10 @@ export const FloatingEnquiryForm = () => {
       <div className="relative flex items-start">
         {/* Trigger button */}
         <button
-          onClick={() => setIsExpanded(!isExpanded)}
+          onClick={() => {
+            console.log('[FloatingEnquiryForm] Trigger button clicked');
+            setIsExpanded(!isExpanded);
+          }}
           className={cn(
             "bg-bsd-orange text-white px-2 py-4 rounded-l-lg writing-vertical transform rotate-180 whitespace-nowrap text-sm sticky top-0",
             "hover:bg-bsd-orange/90 transition-colors flex items-center gap-1"
