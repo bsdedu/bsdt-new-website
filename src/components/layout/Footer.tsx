@@ -113,8 +113,8 @@ export const Footer: React.FC = () => {
             <h4 className="text-sm font-semibold uppercase tracking-wider text-bsd-orange">Contact</h4>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-bsd-orange mt-0.5" />
-                <span className="text-sm text-white/80">No.4/3, Opposite B.D.S Nagar, Devanna Compound, K.Narayanapura, Kothanur Post, Bangalore – 560077</span>
+No.4/3, Opposite B.D.S Nagar, Devanna Compound, K.Narayanapura, Kothanur Post, Bangalore – 560077                <MapPin className="w-5 h-5 text-bsd-orange mt-0.5" />
+                <span className="text-sm text-white/80"></span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-bsd-orange" />
@@ -144,7 +144,7 @@ export const Footer: React.FC = () => {
             <div className="aspect-video rounded-lg overflow-hidden h-58">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.531860116302!2d77.64088777532129!3d13.065443187258602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae19fca05a7085%3A0x32d325d7452e1509!2sBangalore%20School%20of%20Design%20%26%20Technology!5e0!3m2!1sen!2sin!4v1741951831100!5m2!1sen!2sin" width="100%" height="100%" style={{
               border: 0
-              }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="BSDT Campus Map" className="w-full h-full" />
+              }} allowFullScreen loading="lazy" referrerPolicy="no-referrer" title="BSDT Campus Map" className="w-full h-full" sandbox="allow-same-origin allow-scripts allow-popups allow-top-navigation" />
             </div>
             <a href="https://goo.gl/maps/HEWypUEL8RdSy61u6" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm font-medium text-bsd-orange hover:text-bsd-orange/80 transition-colors">
               <span className="border-b border-current">Get Directions</span>
