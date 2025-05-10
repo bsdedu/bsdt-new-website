@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
 import { Badge } from "@/components/ui/badge";
-import { Input } from "@/components/ui/input"; 
+import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 
@@ -12,15 +12,6 @@ export const ContactSection: React.FC = () => {
 
   useEffect(() => {
     console.log('[ContactSection] Component mounted');
-
-    // Function to create the iframe URL with current origin
-    const createIframeUrl = () => {
-      const widgetId = '14fe90258f1849328c9ebb3adc9782bb';
-      const currentOrigin = typeof window !== 'undefined' ? window.location.origin : '';
-      const url = `https://widgets.in5.nopaperforms.com/register?w=${widgetId}&cu=${encodeURIComponent(currentOrigin)}`;
-      console.log('[ContactSection] Generated URL:', url);
-      return url;
-    };
 
     // Function to handle messages from the iframe
     const handleMessage = (event: MessageEvent) => {
@@ -61,26 +52,6 @@ export const ContactSection: React.FC = () => {
     console.log('[ContactSection] Adding postMessage listener');
     window.addEventListener('message', handleMessage);
 
-    // Update iframe src if ref exists
-    if (iframeRef.current) {
-      const url = createIframeUrl();
-      console.log('[ContactSection] Setting iframe src:', url);
-      iframeRef.current.src = url;
-
-      // Add load event listener to iframe
-      iframeRef.current.onload = () => {
-        console.log('[ContactSection] Iframe onload event fired');
-        checkIframeStatus();
-      };
-
-      // Add error event listener to iframe
-      iframeRef.current.onerror = (error) => {
-        console.error('[ContactSection] Iframe loading error:', error);
-      };
-    } else {
-      console.warn('[ContactSection] Iframe ref not available on mount');
-    }
-
     // Set up periodic checks
     debugTimeoutRef.current = setInterval(checkIframeStatus, 5000);
 
@@ -93,6 +64,10 @@ export const ContactSection: React.FC = () => {
       }
     };
   }, []);
+
+  const widgetId = '14fe90258f1849328c9ebb3adc9782bb';
+  const currentOrigin = typeof window !== 'undefined' ? window.location.origin : '';
+  const iframeSrc = `https://widgets.in5.nopaperforms.com/register?w=${widgetId}&cu=${encodeURIComponent(currentOrigin)}`;
 
   return (
     <section id="contact" className="py-12 bg-bsd-light-gray relative">
@@ -113,9 +88,10 @@ export const ContactSection: React.FC = () => {
             {/* Embedded widget */}
             <iframe
               ref={iframeRef}
-              style={{ 
-                width: '100%', 
-                height: '400px', 
+              src={iframeSrc}
+              style={{
+                width: '100%',
+                height: '400px',
                 border: 'none',
                 backgroundColor: '#f8f9fa',
                 visibility: 'visible'
@@ -130,7 +106,6 @@ export const ContactSection: React.FC = () => {
                     width: iframe.offsetWidth,
                     height: iframe.offsetHeight
                   });
-                  // Try to get contentWindow to check if it's loaded
                   const contentWindow = iframe.contentWindow;
                   if (contentWindow) {
                     console.log('[ContactSection] Content window exists');
@@ -142,7 +117,6 @@ export const ContactSection: React.FC = () => {
                 const iframe = e.target as HTMLIFrameElement;
                 if (iframe) {
                   console.error('[ContactSection] Iframe src:', iframe.src);
-                  // Try to get error details
                   console.error('[ContactSection] Iframe error:', {
                     type: e.type,
                     target: e.target,
@@ -157,8 +131,7 @@ export const ContactSection: React.FC = () => {
                 console.error('[ContactSection] Iframe onStalled event:', e);
               }}
             />
-            
-            {/* 
+            {/*
             <form className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
@@ -231,7 +204,7 @@ export const ContactSection: React.FC = () => {
                   <span>Send Message</span>
                 </AnimatedButton>
               </div>
-            </form> 
+            </form>
             */}
           </div>
         </RevealSection>
