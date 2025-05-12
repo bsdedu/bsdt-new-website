@@ -7,68 +7,23 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 
 export const ContactSection: React.FC = () => {
-  const iframeRef = useRef<HTMLIFrameElement>(null);
-  const debugTimeoutRef = useRef<NodeJS.Timeout>();
-
+ 
   useEffect(() => {
-    console.log('[ContactSection] Component mounted');
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.async = true;
+    script.src = 'https://widgets.in5.nopaperforms.com/emwgts.js';
+    document.body.appendChild(script);
 
-    // Function to handle messages from the iframe
-    const handleMessage = (event: MessageEvent) => {
-      console.log('[ContactSection] Received postMessage event:', {
-        origin: event.origin,
-        data: event.data,
-        source: event.source ? 'window' : 'unknown'
-      });
-
-      if (event.origin === 'https://widgets.in5.nopaperforms.com') {
-        console.log('[ContactSection] Valid message from widget:', event.data);
-      }
-    };
-
-    // Function to check iframe status
-    const checkIframeStatus = () => {
-      if (iframeRef.current) {
-        console.log('[ContactSection] Iframe current status:', {
-          src: iframeRef.current.src,
-          width: iframeRef.current.offsetWidth,
-          height: iframeRef.current.offsetHeight,
-          visible: iframeRef.current.style.display !== 'none'
-        });
-
-        // Try to detect if iframe content is loaded
-        try {
-          const iframeDoc = iframeRef.current.contentDocument || iframeRef.current.contentWindow?.document;
-          console.log('[ContactSection] Iframe document accessible:', !!iframeDoc);
-        } catch (error) {
-          console.log('[ContactSection] Cannot access iframe document (expected due to CORS):', error);
-        }
-      } else {
-        console.warn('[ContactSection] Iframe ref is not available');
-      }
-    };
-
-    // Add message listener
-    console.log('[ContactSection] Adding postMessage listener');
-    window.addEventListener('message', handleMessage);
-
-    // Set up periodic checks
-    debugTimeoutRef.current = setInterval(checkIframeStatus, 5000);
-
-    // Cleanup
     return () => {
-      console.log('[ContactSection] Component unmounting');
-      window.removeEventListener('message', handleMessage);
-      if (debugTimeoutRef.current) {
-        clearInterval(debugTimeoutRef.current);
-      }
+      const scripts = document.querySelectorAll('script[src="https://widgets.in5.nopaperforms.com/emwgts.js"]');
+      scripts.forEach(script => {
+        document.body.removeChild(script);
+      });
     };
   }, []);
 
-  const widgetId = '14fe90258f1849328c9ebb3adc9782bb';
-  const currentOrigin = typeof window !== 'undefined' ? window.location.origin : '';
-  const iframeSrc = `https://widgets.in5.nopaperforms.com/register?w=${widgetId}&cu=${encodeURIComponent(currentOrigin)}`;
-
+ 
   return (
     <section id="contact" className="py-12 bg-bsd-light-gray relative">
       <div className="container mx-auto px-6 md:px-8 max-w-4xl">
@@ -85,52 +40,7 @@ export const ContactSection: React.FC = () => {
 
         <RevealSection>
           <div className="bg-white rounded-xl shadow-sm border border-border/40 p-6">
-            {/* Embedded widget */}
-            <iframe
-              ref={iframeRef}
-              src={iframeSrc}
-              style={{
-                width: '100%',
-                height: '400px',
-                border: 'none',
-                backgroundColor: '#f8f9fa',
-                visibility: 'visible'
-              }}
-              sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads"
-              title="Enquiry Form"
-              onLoad={(e) => {
-                console.log('[ContactSection] Iframe onLoad event triggered');
-                const iframe = e.target as HTMLIFrameElement;
-                if (iframe) {
-                  console.log('[ContactSection] Iframe dimensions:', {
-                    width: iframe.offsetWidth,
-                    height: iframe.offsetHeight
-                  });
-                  const contentWindow = iframe.contentWindow;
-                  if (contentWindow) {
-                    console.log('[ContactSection] Content window exists');
-                  }
-                }
-              }}
-              onError={(e) => {
-                console.error('[ContactSection] Iframe onError event:', e);
-                const iframe = e.target as HTMLIFrameElement;
-                if (iframe) {
-                  console.error('[ContactSection] Iframe src:', iframe.src);
-                  console.error('[ContactSection] Iframe error:', {
-                    type: e.type,
-                    target: e.target,
-                    currentTarget: e.currentTarget
-                  });
-                }
-              }}
-              onAbort={(e) => {
-                console.error('[ContactSection] Iframe onAbort event:', e);
-              }}
-              onStalled={(e) => {
-                console.error('[ContactSection] Iframe onStalled event:', e);
-              }}
-            />
+          <div className="npf_wgts" data-height="400px" data-w="14fe90258f1849328c9ebb3adc9782bb"></div>
             {/*
             <form className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
