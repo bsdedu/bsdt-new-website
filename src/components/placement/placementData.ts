@@ -23,7 +23,7 @@ export const placementData: PlacementData = {
     {
       name: "Sk Saifuddin",
       program: "B.Sc Interior Design",
-      company: "Design",
+      company: "Design Studio",
       companyLogo: "/placeholder.svg",
       salary: "₹7.5 LPA"
     },
