@@ -144,9 +144,6 @@ export const topRecruitersLogos = [
   {
     name: "HMG Stones",
     logo: "/lovable-uploads/bb57c500-318d-40db-8440-7cc475c47272.png"
-  },
-  {
-    name: "DEFA",
-    logo: "/lovable-uploads/630a0988-811e-49f8-b79e-4f7543c67e11.png"
   }
 ];
+
