@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
 import { FloatingEnquiryForm } from "./components/ui-elements/FloatingEnquiryForm";
 import { FloatingCallCTA } from "./components/ui-elements/FloatingCallCTA";
+import { FloatingWhatsAppCTA } from "./components/ui-elements/FloatingWhatsAppCTA";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import AboutBSDT from "./pages/AboutBSDT";
@@ -94,6 +95,7 @@ const App = () => {
             </Routes>
             <FloatingEnquiryForm />
             <FloatingCallCTA />
+            <FloatingWhatsAppCTA />
           </BrowserRouter>
         </TooltipProvider>
       </HelmetProvider>
