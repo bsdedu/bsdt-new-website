@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
@@ -238,7 +239,7 @@ const PlacementReport = () => {
           </div>
         </RevealSection>
         
-        {/* Alumni Success Stories section - NEW */}
+        {/* Alumni Success Stories section */}
         <RevealSection direction="up" className="py-16 bg-bsd-light-gray">
           <div className="container mx-auto px-6 md:px-8">
             <h2 className="text-3xl font-display font-bold text-bsd-gray mb-8 text-center">
@@ -246,37 +247,6 @@ const PlacementReport = () => {
             </h2>
             
             <AlumniSuccessStories />
-          </div>
-        </RevealSection>
-        
-        {/* Success stories section */}
-        <RevealSection direction="up" className="py-16 bg-bsd-light-gray">
-          <div className="container mx-auto px-6 md:px-8">
-            <h2 className="text-3xl font-display font-bold text-bsd-gray mb-12 text-center">
-              Success Stories
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Placeholder for student testimonials */}
-              {Array.from({
-              length: 3
-            }).map((_, index) => <Card key={index} className="p-6 border-bsd-orange/20 shadow-sm">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-bsd-gray/10 rounded-full mr-4"></div>
-                    <div>
-                      <h4 className="font-bold text-bsd-gray">Student Name</h4>
-                      <p className="text-sm text-foreground/70">BVA Graphic Design, 2023 Batch</p>
-                    </div>
-                  </div>
-                  <p className="text-foreground/80 mb-4">
-                    "The skills and knowledge I gained at BSDT helped me secure my dream job at a leading design firm. The faculty mentored me through every step of my journey."
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-bsd-orange font-medium">Placed at: Company Name</span>
-                    <span className="text-bsd-gray font-bold">₹7.2 LPA</span>
-                  </div>
-                </Card>)}
-            </div>
           </div>
         </RevealSection>
       </main>
