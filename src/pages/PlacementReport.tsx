@@ -54,6 +54,26 @@ const PlacementReport = () => {
       <Navbar />
       
       <main className="flex-grow">
+        {/* Cover Image Section */}
+        <div className="relative h-[300px] md:h-[400px] w-full overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/60 z-10" />
+          <img 
+            src="/lovable-uploads/42704a16-816a-4a24-a602-f88fab23667b.png" 
+            alt="Students celebrating placement success" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 z-20 flex items-center justify-center">
+            <div className="text-center px-6">
+              <h1 className="text-5xl font-display font-bold text-white mb-4 drop-shadow-lg">
+                Placement Report
+              </h1>
+              <p className="text-xl text-white/90 max-w-2xl mx-auto drop-shadow-md">
+                Showcasing the success of our graduates in the professional world
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Hero section */}
         <section className="bg-gradient-to-br from-bsd-orange/5 to-white py-16 md:py-24">
           <div className="container mx-auto px-6 md:px-8">
