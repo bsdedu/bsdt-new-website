@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
@@ -10,6 +9,7 @@ import { TrendingUp, Building, Users, Award, BarChart, PieChart, Check } from 'l
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { RevealSection } from '@/components/ui-elements/RevealSection';
+import { AlumniSuccessStories } from '@/components/placement/AlumniSuccessStories';
 
 const PlacementReport = () => {
   const navigate = useNavigate();
@@ -235,6 +235,17 @@ const PlacementReport = () => {
                 </div>
               </Card>
             </div>
+          </div>
+        </RevealSection>
+        
+        {/* Alumni Success Stories section - NEW */}
+        <RevealSection direction="up" className="py-16 bg-bsd-light-gray">
+          <div className="container mx-auto px-6 md:px-8">
+            <h2 className="text-3xl font-display font-bold text-bsd-gray mb-8 text-center">
+              Alumni Success Stories
+            </h2>
+            
+            <AlumniSuccessStories />
           </div>
         </RevealSection>
         
