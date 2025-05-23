@@ -6,17 +6,16 @@ import { useNavigate } from 'react-router-dom';
 import { useToast } from "@/hooks/use-toast";
 import { Helmet } from 'react-helmet-async';
 import { Card } from '@/components/ui-elements/Card';
-import { TrendingUp, Building, Users, Award, BarChart, PieChart, Check } from 'lucide-react';
+import { TrendingUp, Building, Users, Award } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { RevealSection } from '@/components/ui-elements/RevealSection';
 import { AlumniSuccessStories } from '@/components/placement/AlumniSuccessStories';
+import { TopRecruiters } from '@/components/placement/TopRecruiters';
 
 const PlacementReport = () => {
   const navigate = useNavigate();
-  const {
-    toast
-  } = useToast();
+  const { toast } = useToast();
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasAccess, setHasAccess] = useState(false);
   
@@ -45,7 +44,8 @@ const PlacementReport = () => {
     return null; // Don't render anything while redirecting
   }
   
-  return <div className={`min-h-screen flex flex-col transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+  return (
+    <div className={`min-h-screen flex flex-col transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
       <Helmet>
         <title>Placement Report | BSDT</title>
         <meta name="description" content="Explore BSDT's impressive placement statistics, industry connections, and student success stories." />
@@ -136,14 +136,7 @@ const PlacementReport = () => {
               Top Recruiters
             </h2>
             
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-              {/* Placeholder for company logos */}
-              {Array.from({
-              length: 12
-            }).map((_, index) => <div key={index} className="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center h-24">
-                  <div className="text-bsd-gray/40 font-medium text-center">Company {index + 1}</div>
-                </div>)}
-            </div>
+            <TopRecruiters />
           </div>
         </RevealSection>
         
@@ -252,7 +245,8 @@ const PlacementReport = () => {
       </main>
       
       <Footer />
-    </div>;
+    </div>
+  );
 };
 
 export default PlacementReport;

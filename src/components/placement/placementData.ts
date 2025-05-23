@@ -82,3 +82,71 @@ export const placementData: PlacementData = {
     }
   ]
 };
+
+// Top recruiting companies logos
+export const topRecruitersLogos = [
+  {
+    name: "Twigger Design",
+    logo: "/lovable-uploads/6803a059-73a2-43e7-99c9-de9e2726e3c6.png"
+  },
+  {
+    name: "Flipkart",
+    logo: "/lovable-uploads/3a1114ca-a146-4d4a-a9e7-c9fd0cda672c.png"
+  },
+  {
+    name: "Thence",
+    logo: "/lovable-uploads/5a2d9a30-ad17-467a-a3eb-45eed52a9ba2.png"
+  },
+  {
+    name: "Lollypop.Design",
+    logo: "/lovable-uploads/523ad064-bd6e-4d63-852f-0191929251a3.png"
+  },
+  {
+    name: "HP",
+    logo: "/lovable-uploads/0ff2cdf6-8043-4aa2-b6f0-5fb423d30dbe.png"
+  },
+  {
+    name: "Bonito Designs",
+    logo: "/lovable-uploads/2e96f455-edd6-4404-a473-76a3a0a3cf1d.png"
+  },
+  {
+    name: "Pepperfry",
+    logo: "/lovable-uploads/2595d585-fc2d-402a-9beb-9e8e906045b3.png"
+  },
+  {
+    name: "Livspace",
+    logo: "/lovable-uploads/b5cd9a1d-d755-41c7-8383-06aeb875d90e.png"
+  },
+  {
+    name: "Philips",
+    logo: "/lovable-uploads/b520d93f-6809-4935-9548-716b8c17a66a.png"
+  },
+  {
+    name: "HCL",
+    logo: "/lovable-uploads/0ae72b8a-07cc-49d2-b849-2ed58b4560e8.png"
+  },
+  {
+    name: "Honeywell",
+    logo: "/lovable-uploads/183ffb4c-ed98-4bf2-96c0-10b29c4c87db.png"
+  },
+  {
+    name: "VMware",
+    logo: "/lovable-uploads/476fd190-4c25-4173-8752-fbc47df7d467.png"
+  },
+  {
+    name: "Capgemini",
+    logo: "/lovable-uploads/8514240d-03da-4876-8bcf-4f6eaefbb30c.png"
+  },
+  {
+    name: "Hexaspace",
+    logo: "/lovable-uploads/32d9a48d-79a3-4841-b4d7-5e245d1d7ab4.png"
+  },
+  {
+    name: "HMG Stones",
+    logo: "/lovable-uploads/bb57c500-318d-40db-8440-7cc475c47272.png"
+  },
+  {
+    name: "DEFA",
+    logo: "/lovable-uploads/630a0988-811e-49f8-b79e-4f7543c67e11.png"
+  }
+];
