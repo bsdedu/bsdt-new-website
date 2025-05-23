@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
@@ -11,6 +12,7 @@ import { Separator } from '@/components/ui/separator';
 import { RevealSection } from '@/components/ui-elements/RevealSection';
 import { AlumniSuccessStories } from '@/components/placement/AlumniSuccessStories';
 import { TopRecruiters } from '@/components/placement/TopRecruiters';
+
 const PlacementReport = () => {
   const navigate = useNavigate();
   const {
@@ -18,6 +20,7 @@ const PlacementReport = () => {
   } = useToast();
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasAccess, setHasAccess] = useState(false);
+
   useEffect(() => {
     // Check if user has access (submitted the form)
     const hasFilledForm = localStorage.getItem('enquiryFormSubmitted') === 'true';
@@ -38,9 +41,11 @@ const PlacementReport = () => {
     }, 100);
     return () => clearTimeout(timer);
   }, [navigate, toast]);
+
   if (!hasAccess) {
     return null; // Don't render anything while redirecting
   }
+
   return <div className={`min-h-screen flex flex-col transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
       <Helmet>
         <title>Placement Report | BSDT</title>
@@ -52,8 +57,8 @@ const PlacementReport = () => {
       <main className="flex-grow">
         {/* Cover Image Section */}
         <div className="relative h-[300px] md:h-[400px] w-full overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/60 z-10" />
-          <img src="/lovable-uploads/42704a16-816a-4a24-a602-f88fab23667b.png" alt="Students celebrating placement success" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black/70 z-10" />
+          <img src="/lovable-uploads/743a58dd-f0a8-4863-b123-8a080e2da853.png" alt="BSDT Design & Technology Building" className="w-full h-full object-cover" />
           <div className="absolute inset-0 z-20 flex items-center justify-center">
             <div className="text-center px-6">
               <h1 className="text-5xl font-display font-bold text-white mb-4 drop-shadow-lg">
@@ -257,4 +262,5 @@ const PlacementReport = () => {
       <Footer />
     </div>;
 };
+
 export default PlacementReport;
