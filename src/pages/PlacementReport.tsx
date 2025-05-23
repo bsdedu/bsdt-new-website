@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
@@ -12,13 +11,13 @@ import { Separator } from '@/components/ui/separator';
 import { RevealSection } from '@/components/ui-elements/RevealSection';
 import { AlumniSuccessStories } from '@/components/placement/AlumniSuccessStories';
 import { TopRecruiters } from '@/components/placement/TopRecruiters';
-
 const PlacementReport = () => {
   const navigate = useNavigate();
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasAccess, setHasAccess] = useState(false);
-  
   useEffect(() => {
     // Check if user has access (submitted the form)
     const hasFilledForm = localStorage.getItem('enquiryFormSubmitted') === 'true';
@@ -39,13 +38,10 @@ const PlacementReport = () => {
     }, 100);
     return () => clearTimeout(timer);
   }, [navigate, toast]);
-  
   if (!hasAccess) {
     return null; // Don't render anything while redirecting
   }
-  
-  return (
-    <div className={`min-h-screen flex flex-col transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+  return <div className={`min-h-screen flex flex-col transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
       <Helmet>
         <title>Placement Report | BSDT</title>
         <meta name="description" content="Explore BSDT's impressive placement statistics, industry connections, and student success stories." />
@@ -57,11 +53,7 @@ const PlacementReport = () => {
         {/* Cover Image Section */}
         <div className="relative h-[300px] md:h-[400px] w-full overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/60 z-10" />
-          <img 
-            src="/lovable-uploads/42704a16-816a-4a24-a602-f88fab23667b.png" 
-            alt="Students celebrating placement success" 
-            className="w-full h-full object-cover"
-          />
+          <img src="/lovable-uploads/42704a16-816a-4a24-a602-f88fab23667b.png" alt="Students celebrating placement success" className="w-full h-full object-cover" />
           <div className="absolute inset-0 z-20 flex items-center justify-center">
             <div className="text-center px-6">
               <h1 className="text-5xl font-display font-bold text-white mb-4 drop-shadow-lg">
@@ -75,7 +67,7 @@ const PlacementReport = () => {
         </div>
 
         {/* Hero section */}
-        <section className="bg-gradient-to-br from-bsd-orange/5 to-white py-16 md:py-24">
+        <section className="bg-gradient-to-br from-bsd-orange/5 to-white py-16 md:py-[20px]">
           <div className="container mx-auto px-6 md:px-8">
             <div className="max-w-4xl mx-auto text-center">
               <Badge variant="bsdOrange" className="mb-4">Student Placement Report</Badge>
@@ -93,9 +85,7 @@ const PlacementReport = () => {
         {/* Key statistics section */}
         <RevealSection direction="up" className="py-16">
           <div className="container mx-auto px-6 md:px-8">
-            <h2 className="text-3xl font-display font-bold text-bsd-gray mb-12 text-center">
-              Placement Highlights
-            </h2>
+            
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Card className="p-6 border-bsd-orange/20 shadow-sm">
@@ -265,8 +255,6 @@ const PlacementReport = () => {
       </main>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default PlacementReport;
