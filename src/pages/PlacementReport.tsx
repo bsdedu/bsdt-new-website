@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
@@ -5,11 +6,11 @@ import { useNavigate } from 'react-router-dom';
 import { useToast } from "@/hooks/use-toast";
 import { Helmet } from 'react-helmet-async';
 import { Card } from '@/components/ui-elements/Card';
-import { TrendingUp, Building, Users, Award, ArrowUp, BarChart, PieChart, Check, DownloadCloud, Share2 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { TrendingUp, Building, Users, Award, BarChart, PieChart, Check } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { RevealSection } from '@/components/ui-elements/RevealSection';
+
 const PlacementReport = () => {
   const navigate = useNavigate();
   const {
@@ -17,6 +18,7 @@ const PlacementReport = () => {
   } = useToast();
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasAccess, setHasAccess] = useState(false);
+  
   useEffect(() => {
     // Check if user has access (submitted the form)
     const hasFilledForm = localStorage.getItem('enquiryFormSubmitted') === 'true';
@@ -37,23 +39,11 @@ const PlacementReport = () => {
     }, 100);
     return () => clearTimeout(timer);
   }, [navigate, toast]);
-  const handleDownloadReport = () => {
-    toast({
-      title: "Report Downloaded",
-      description: "The detailed placement report has been downloaded."
-    });
-  };
-  const handleShareReport = () => {
-    // Copy current URL to clipboard
-    navigator.clipboard.writeText(window.location.href);
-    toast({
-      title: "Link Copied",
-      description: "Report link copied to clipboard"
-    });
-  };
+  
   if (!hasAccess) {
     return null; // Don't render anything while redirecting
   }
+  
   return <div className={`min-h-screen flex flex-col transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
       <Helmet>
         <title>Placement Report | BSDT</title>
@@ -75,16 +65,6 @@ const PlacementReport = () => {
                 Discover how our students are excelling in their careers across creative industries.
                 This report highlights our placement statistics, top recruiters, and student success stories.
               </p>
-              <div className="flex flex-wrap gap-4 justify-center">
-                <Button variant="outline" className="gap-2" onClick={handleDownloadReport}>
-                  <DownloadCloud size={18} />
-                  Download PDF Report
-                </Button>
-                <Button variant="outline" className="gap-2" onClick={handleShareReport}>
-                  <Share2 size={18} />
-                  Share Report
-                </Button>
-              </div>
             </div>
           </div>
         </section>
@@ -293,4 +273,5 @@ const PlacementReport = () => {
       <Footer />
     </div>;
 };
+
 export default PlacementReport;
