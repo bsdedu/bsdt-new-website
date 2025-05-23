@@ -17,7 +17,7 @@ export const placementData: PlacementData = {
       name: "Navyashree G",
       program: "B.Sc Interior Design",
       company: "Square Yards",
-      companyLogo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Square_Yards_Logo.png/320px-Square_Yards_Logo.png",
+      companyLogo: "/lovable-uploads/fb299145-de7a-450e-b1b9-6db180baf0aa.png",
       salary: "₹6.5 LPA"
     },
     {
