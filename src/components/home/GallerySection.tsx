@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { cn } from "@/lib/utils";
@@ -424,45 +425,47 @@ export const GallerySection: React.FC = () => {
                 </Carousel>
               </div>
 
-              {/* Desktop View - Grid */}
+              {/* Desktop View - Centered Grid */}
               <div className="hidden md:block">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
-                  {Object.entries(previewItems).map(([category, item], index) => (
-                    <div key={index} className="group relative">
-                      <Card isHoverable className="overflow-hidden h-full">
-                        <div className="relative aspect-video overflow-hidden">
-                          {item.type === "image" ? (
-                            <img 
-                              src={item.image} 
-                              alt={item.caption} 
-                              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                            />
-                          ) : (
-                            <>
+                <div className="flex justify-center">
+                  <div className="grid grid-cols-5 gap-6 max-w-5xl">
+                    {Object.entries(previewItems).map(([category, item], index) => (
+                      <div key={index} className="group relative">
+                        <Card isHoverable className="overflow-hidden h-full">
+                          <div className="relative aspect-video overflow-hidden">
+                            {item.type === "image" ? (
                               <img 
-                                src={item.thumbnail} 
+                                src={item.image} 
                                 alt={item.caption} 
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                               />
-                              <div 
-                                className="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer"
-                                onClick={() => item.videoId && handleVideoClick(item.videoId)}
-                              >
-                                <div className="bg-white/90 rounded-full p-3 transition-transform duration-300 group-hover:scale-110">
-                                  <Play className="h-8 w-8 text-bsd-orange" fill="currentColor" />
+                            ) : (
+                              <>
+                                <img 
+                                  src={item.thumbnail} 
+                                  alt={item.caption} 
+                                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
+                                <div 
+                                  className="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer"
+                                  onClick={() => item.videoId && handleVideoClick(item.videoId)}
+                                >
+                                  <div className="bg-white/90 rounded-full p-3 transition-transform duration-300 group-hover:scale-110">
+                                    <Play className="h-8 w-8 text-bsd-orange" fill="currentColor" />
+                                  </div>
                                 </div>
-                              </div>
-                            </>
-                          )}
-                          <div className="absolute top-3 left-3">
-                            <Badge variant="bsdOrange" className="bg-bsd-orange/90 text-white px-2 py-1 text-xs">
-                              {category}
-                            </Badge>
+                              </>
+                            )}
+                            <div className="absolute top-3 left-3">
+                              <Badge variant="bsdOrange" className="bg-bsd-orange/90 text-white px-2 py-1 text-xs">
+                                {category}
+                              </Badge>
+                            </div>
                           </div>
-                        </div>
-                      </Card>
-                    </div>
-                  ))}
+                        </Card>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </TabsContent>
