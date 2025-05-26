@@ -115,37 +115,6 @@ export const AboutSection: React.FC = () => {
             </div>
           </div>
         </RevealSection>
-
-        {/* Key stats */}
-        <RevealSection delay={200}>
-          <div className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[{
-              number: "8+",
-              label: "Years of Excellence"
-            }, {
-              number: "200+",
-              label: "Industry Partners"
-            }, {
-              number: "500+",
-              label: "Alumni Network"
-            }, {
-              number: "10+",
-              label: "Awards & Recognitions"
-            }].map((stat, index) => (
-              <RevealSection 
-                key={index} 
-                delay={index * 100} 
-                direction="up" 
-                distance={20}
-              >
-                <div className="text-center p-4 rounded-lg transition-all duration-500 hover:bg-white hover:shadow-md transform hover:-translate-y-1">
-                  <div className="text-4xl font-display font-bold text-bsd-orange">{stat.number}</div>
-                  <div className="text-sm text-bsd-gray mt-2">{stat.label}</div>
-                </div>
-              </RevealSection>
-            ))}
-          </div>
-        </RevealSection>
       </div>
     </section>;
 };
