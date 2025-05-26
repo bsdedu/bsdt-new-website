@@ -4,9 +4,8 @@ import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
 import { HeroSection } from '../components/home/HeroSection';
 import { ProgramsSection } from '../components/home/ProgramsSection';
-import { AboutSection } from '../components/home/AboutSection';
 import { WhyChooseSection } from '../components/home/WhyChooseSection';
-import { GallerySection } from '../components/home/GallerySection';
+import { AIEnhancedLearningSection } from '../components/home/AIEnhancedLearningSection';
 import { ContactSection } from '../components/home/ContactSection';
 import { EnquiryFormSection } from '../components/home/EnquiryFormSection';
 import { CollaborationsSection } from '../components/home/CollaborationsSection';
@@ -73,10 +72,9 @@ const Index = () => {
         <HeroSection />
         <ProgramsSection />
         <InfoGraphicsSection />
-        <AboutSection />
         <WhyChooseSection />
+        <AIEnhancedLearningSection />
         <CollaborationsSection />
-        <GallerySection />
         <EnquiryFormSection />
         <ContactSection />
         <FloatingEnquiryForm />

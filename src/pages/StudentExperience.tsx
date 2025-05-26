@@ -7,6 +7,8 @@ import { StudentExperienceHero } from '@/components/student-experience/StudentEx
 import { WhyChooseSection } from '@/components/home/WhyChooseSection';
 import { TestimonialsSection } from '@/components/home/TestimonialsSection';
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
+import { GallerySection } from '@/components/home/GallerySection';
+import { AboutSection } from '@/components/home/AboutSection';
 
 const StudentExperience: React.FC = () => {
   return (
@@ -23,6 +25,8 @@ const StudentExperience: React.FC = () => {
       
       <main>
         <StudentExperienceHero />
+        <GallerySection />
+        <AboutSection />
         <WhyChooseSection />
         <TestimonialsSection />
         <EnquiryFormSection />
