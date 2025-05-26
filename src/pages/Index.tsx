@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState, useRef } from 'react';
 import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
@@ -72,9 +73,9 @@ const Index = () => {
         <HeroSection />
         <ProgramsSection />
         <InfoGraphicsSection />
-        <GallerySection />
         <WhyChooseSection />
         <AIEnhancedLearningSection />
+        <GallerySection />
         <CollaborationsSection />
         <EnquiryFormSection />
         <ContactSection />
