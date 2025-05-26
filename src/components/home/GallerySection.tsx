@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { cn } from "@/lib/utils";
@@ -409,10 +408,11 @@ export const GallerySection: React.FC = () => {
                                   </div>
                                 </>
                               )}
-                            </div>
-                            <div className="p-4">
-                              <h4 className="font-medium text-bsd-gray mb-1">{category}</h4>
-                              <p className="text-sm text-gray-600">{item.caption}</p>
+                              <div className="absolute top-3 left-3">
+                                <Badge variant="bsdOrange" className="bg-bsd-orange/90 text-white px-2 py-1 text-xs">
+                                  {category}
+                                </Badge>
+                              </div>
                             </div>
                           </Card>
                         </div>
@@ -459,9 +459,6 @@ export const GallerySection: React.FC = () => {
                               {category}
                             </Badge>
                           </div>
-                        </div>
-                        <div className="p-4">
-                          <p className="text-sm text-gray-600">{item.caption}</p>
                         </div>
                       </Card>
                     </div>
