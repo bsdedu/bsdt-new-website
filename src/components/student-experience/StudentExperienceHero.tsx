@@ -4,7 +4,7 @@ import { AnimatedButton } from '@/components/ui-elements/AnimatedButton';
 
 export const StudentExperienceHero: React.FC = () => {
   return (
-    <section className="relative bg-white text-bsd-gray py-20">
+    <section className="relative bg-white text-bsd-gray pt-20 md:pt-28 pb-16 md:pb-20">
       <div className="container mx-auto px-6 md:px-8 relative z-10">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
