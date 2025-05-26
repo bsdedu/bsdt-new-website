@@ -4,14 +4,13 @@ import { AnimatedButton } from '@/components/ui-elements/AnimatedButton';
 
 export const StudentClubsHero: React.FC = () => {
   return (
-    <section className="relative bg-gradient-to-r from-bsd-gray to-bsd-gray/90 text-white py-20">
-      <div className="absolute inset-0 opacity-30 bg-[url(/lovable-uploads/7ac4f67b-92cc-42db-832a-c85d36f5b39c.png)] bg-cover bg-center mix-blend-multiply"></div>
+    <section className="relative bg-white text-bsd-gray py-20">
       <div className="container mx-auto px-6 md:px-8 relative z-10">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             Student Clubs at BSD
           </h1>
-          <p className="text-lg md:text-xl mb-8 text-gray-100">
+          <p className="text-lg md:text-xl mb-8 text-gray-600">
             Explore our vibrant community of student-led clubs that provide opportunities for growth, 
             leadership, and creative expression beyond the classroom.
           </p>
@@ -27,7 +26,7 @@ export const StudentClubsHero: React.FC = () => {
             <AnimatedButton 
               href="#clubs-list" 
               variant="outline" 
-              className="bg-white/10 text-white border-white hover:bg-white/20"
+              className="border-bsd-gray text-bsd-gray hover:bg-bsd-gray/10"
               hoverEffect="scale"
             >
               Explore Clubs
