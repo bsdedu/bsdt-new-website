@@ -10,6 +10,7 @@ import { ContactSection } from '../components/home/ContactSection';
 import { EnquiryFormSection } from '../components/home/EnquiryFormSection';
 import { CollaborationsSection } from '../components/home/CollaborationsSection';
 import { InfoGraphicsSection } from '../components/home/InfoGraphicsSection';
+import { GallerySection } from '../components/home/GallerySection';
 import { FloatingEnquiryForm } from '../components/ui-elements/FloatingEnquiryForm';
 
 const Index = () => {
@@ -72,6 +73,7 @@ const Index = () => {
         <HeroSection />
         <ProgramsSection />
         <InfoGraphicsSection />
+        <GallerySection />
         <WhyChooseSection />
         <AIEnhancedLearningSection />
         <CollaborationsSection />
