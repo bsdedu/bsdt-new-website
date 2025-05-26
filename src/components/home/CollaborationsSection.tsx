@@ -38,15 +38,6 @@ export const CollaborationsSection: React.FC = () => {
     { id: "19", name: "Parallel Studios", logo: "/lovable-uploads/1cb9ba0e-e43a-41a3-be10-2df87a94d509.png" },
   ];
 
-  const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: false })
-  );
-
-  // Create a second carousel for desktop view that shows multiple items
-  const desktopPlugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: false })
-  );
-
   return (
     <section id="collaborations" className="py-16 bg-white">
       <div className="container mx-auto px-6 md:px-8 max-w-6xl">
@@ -69,7 +60,7 @@ export const CollaborationsSection: React.FC = () => {
           <div className="md:hidden">
             <Carousel 
               opts={{ loop: true, align: "center" }} 
-              plugins={[plugin.current]}
+              plugins={[Autoplay({ delay: 2000, stopOnInteraction: false }) as any]}
               className="w-full"
             >
               <CarouselContent>
@@ -92,7 +83,7 @@ export const CollaborationsSection: React.FC = () => {
           <div className="hidden md:block">
             <Carousel 
               opts={{ loop: true, align: "center" }} 
-              plugins={[desktopPlugin.current]}
+              plugins={[Autoplay({ delay: 2000, stopOnInteraction: false }) as any]}
               className="w-full"
             >
               <CarouselContent>
