@@ -33,6 +33,7 @@ import FAQs from "./pages/admissions/FAQs";
 import PlacementReport from "./pages/PlacementReport";
 import HostelTransport from "./pages/campus-life/HostelTransport";
 import StudentClubs from "./pages/campus-life/StudentClubs";
+import EventsActivities from "./pages/EventsActivities";
 import { useEffect } from "react";
 
 console.log("App component loaded");
@@ -89,6 +90,7 @@ const App = () => {
               {/* Campus Life Routes */}
               <Route path="/campus-life/hostel-transport" element={<HostelTransport />} />
               <Route path="/campus-life/student-clubs" element={<StudentClubs />} />
+              <Route path="/campus-life/events-activities" element={<EventsActivities />} />
               
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
