@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState, useRef } from 'react';
 import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
@@ -8,11 +9,9 @@ import { WhyChooseSection } from '../components/home/WhyChooseSection';
 import { GallerySection } from '../components/home/GallerySection';
 import { ContactSection } from '../components/home/ContactSection';
 import { EnquiryFormSection } from '../components/home/EnquiryFormSection';
-import { TestimonialsSection } from '../components/home/TestimonialsSection';
-import { UpcomingEventsSection } from '../components/home/UpcomingEventsSection';
 import { CollaborationsSection } from '../components/home/CollaborationsSection';
 import { InfoGraphicsSection } from '../components/home/InfoGraphicsSection';
-import { FloatingEnquiryForm } from '../components/ui-elements/FloatingEnquiryForm'; // Import the FloatingEnquiryForm
+import { FloatingEnquiryForm } from '../components/ui-elements/FloatingEnquiryForm';
 
 const Index = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -74,15 +73,13 @@ const Index = () => {
         <HeroSection />
         <ProgramsSection />
         <InfoGraphicsSection />
-        <UpcomingEventsSection />
         <AboutSection />
         <WhyChooseSection />
-        <TestimonialsSection />
         <CollaborationsSection />
-        <EnquiryFormSection />
         <GallerySection />
+        <EnquiryFormSection />
         <ContactSection />
-        <FloatingEnquiryForm /> {/* Revert FloatingEnquiryForm to its original position */}
+        <FloatingEnquiryForm />
       </main>
       
       <Footer />

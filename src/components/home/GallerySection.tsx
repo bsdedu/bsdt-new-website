@@ -11,12 +11,28 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card } from "../ui-elements/Card";
-import { Play, GalleryHorizontal } from "lucide-react";
+import { Play, GalleryHorizontal, Calendar } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
 // Import testimonials data to use for Student Interviews
 import { testimonials } from './TestimonialsSection';
+
+// Events data from UpcomingEventsSection
+const eventsData = [
+  {
+    type: "image" as const,
+    category: "Events & Activities",
+    image: "/lovable-uploads/741db2ef-80d9-44dd-b7f0-cb1942734763.png",
+    caption: "Open Day 2025 - March 29th, 2025 | 09:30 AM - 4:00 PM - Experience our creative campus, meet faculty and students, explore accommodations, engage with design experts, and join hands-on workshops at our Open Day!"
+  },
+  {
+    type: "image" as const,
+    category: "Events & Activities",
+    image: "/lovable-uploads/5798432f-82b3-43e6-a5be-03af3cc31ea4.png",
+    caption: "Designing Tomorrow: The Opportunities in Architecture & Interior Design - April 5th, 2025 | 11:00 AM onwards - Join our expert panel with Neha N Achar (Architect, AtkinsRealis) and Ar. Bhavna R (Assistant Professor) as they discuss career opportunities in design."
+  }
+];
 
 // Gallery items array with the sports events images
 const galleryItems: {
@@ -27,6 +43,9 @@ const galleryItems: {
   thumbnail?: string;
   caption: string;
 }[] = [
+  // Events & Activities
+  ...eventsData,
+  
   // Sports Events images
   {
     type: "image",
@@ -183,14 +202,14 @@ const studentInterviewItems = testimonials.map(testimonial => ({
 // Combine the gallery items with student interviews
 const allGalleryItems = [...galleryItems, ...studentInterviewItems];
 
-// Keep the categories for tab structure (removed Events and Campus Tour)
-const categories = ["All", "Sports Events", "Campus Life", "Student Work", "Student Interviews"];
+// Updated categories to include Events & Activities
+const categories = ["All", "Events & Activities", "Sports Events", "Campus Life", "Student Work", "Student Interviews"];
 
 export const GallerySection: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState("All");
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
-  const [expandedCategories, setExpandedCategories] = useState<string[]>(["Sports Events"]);
+  const [expandedCategories, setExpandedCategories] = useState<string[]>(["Events & Activities"]);
 
   // Group items by category and take only the first item from each category for the "All" tab
   const previewItems: Record<string, typeof allGalleryItems[0]> = {};
@@ -337,7 +356,7 @@ export const GallerySection: React.FC = () => {
               Experience Our Vibrant Campus
             </h2>
             <p className="mt-4 text-foreground/70">
-              From sports events to creative showcases, our campus life offers a perfect blend of academics and extracurricular activities.
+              From upcoming events and sports activities to creative showcases and student experiences, our campus life offers a perfect blend of academics and extracurricular activities.
             </p>
           </div>
         </RevealSection>
@@ -407,7 +426,7 @@ export const GallerySection: React.FC = () => {
 
               {/* Desktop View - Grid */}
               <div className="hidden md:block">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
                   {Object.entries(previewItems).map(([category, item], index) => (
                     <div key={index} className="group relative">
                       <Card isHoverable className="overflow-hidden h-full">
