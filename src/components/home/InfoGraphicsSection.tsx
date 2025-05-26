@@ -24,6 +24,21 @@ export const InfoGraphicsSection: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const mounted = useRef(true);
 
+  // Function to handle smooth scrolling to enquiry form section
+  const scrollToEnquiryForm = () => {
+    console.log("Attempting to scroll to #enquiry-form");
+    const section = document.getElementById('enquiry-form');
+    if (section) {
+      console.log("Found enquiry form section, scrolling to it");
+      window.scrollTo({
+        top: section.offsetTop - 80, // Offset for header
+        behavior: 'smooth',
+      });
+    } else {
+      console.log("Enquiry form section not found");
+    }
+  };
+
   useEffect(() => {
     // Set component as mounted
     mounted.current = true;
@@ -135,6 +150,7 @@ export const InfoGraphicsSection: React.FC = () => {
               size="lg" 
               className="bg-bsd-orange text-white hover:bg-bsd-orange/90"
               hoverEffect="glow"
+              onClick={scrollToEnquiryForm}
             >
               Schedule a Career Counseling Session
             </AnimatedButton>
