@@ -1,3 +1,4 @@
+
 import { FacultyMember } from '../types';
 
 export const designFaculty: FacultyMember[] = [
@@ -36,14 +37,14 @@ export const designFaculty: FacultyMember[] = [
   },
   {
     id: 101,
-    name: "Ar. Bhavana",
+    name: "Ar. Bhavna",
     role: "Commercial Design Specialist",
-    bio: "An innovative designer with 10+ years of experience in commercial design. Bhavana excels at transforming abstract concepts into functional spaces, collaborating with diverse teams, and mentoring students to explore creative boundaries while drawing inspiration from nature.",
+    bio: "An innovative designer with 5+ years of experience in commercial design. Bhavna excels at transforming abstract concepts into functional spaces, collaborating with diverse teams, and mentoring students to explore creative boundaries while drawing inspiration from nature.",
     imageUrl: "/lovable-uploads/02978600-d16a-40b3-aa9a-d6edb67502f2.png",
     department: 'Design',
     qualifications: "B.Arch, M.Des in Commercial Design",
     specialization: "Commercial Spaces, Interior Design",
-    achievements: "10+ years of industry experience in commercial design"
+    achievements: "5+ years of industry experience in commercial design"
   },
   {
     id: 102,
@@ -105,7 +106,7 @@ export const designFaculty: FacultyMember[] = [
     name: "Piyush Kanti Mahapatra",
     role: "Faculty, Visual Design",
     bio: "With 4+ years in digital brand management, Piyush combines industry experience as a Visual Designer with three years of teaching in Art and Design. Skilled in Adobe Creative Cloud, he brings a strategic approach to design that balances aesthetics with brand objectives. His background in both professional and academic environments enriches his collaborative approach to creative problem-solving.",
-    imageUrl: "/lovable-uploads/18447800-f016-4625-b117-1b07598c7e08.png",
+    imageUrl: "/lovable-uploads/4a5d1ae8-5e3a-4e3d-929d-14b52fde7bbb.png",
     department: 'Design',
     qualifications: "Degree in Visual Design",
     specialization: "Digital Brand Management, Visual Design",
