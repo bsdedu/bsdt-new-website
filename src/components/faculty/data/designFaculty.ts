@@ -42,7 +42,7 @@ export const designFaculty: FacultyMember[] = [
     bio: "An innovative designer with 5+ years of experience in commercial design. Bhavna excels at transforming abstract concepts into functional spaces, collaborating with diverse teams, and mentoring students to explore creative boundaries while drawing inspiration from nature.",
     imageUrl: "/lovable-uploads/02978600-d16a-40b3-aa9a-d6edb67502f2.png",
     department: 'Design',
-    qualifications: "B.Arch, M.Des in Commercial Design",
+    qualifications: "B.Arch in Commercial Design",
     specialization: "Commercial Spaces, Interior Design",
     achievements: "5+ years of industry experience in commercial design"
   },
