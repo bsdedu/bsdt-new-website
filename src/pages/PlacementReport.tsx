@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
@@ -5,11 +6,13 @@ import { useNavigate } from 'react-router-dom';
 import { useToast } from "@/hooks/use-toast";
 import { Helmet } from 'react-helmet-async';
 import { Card } from '@/components/ui-elements/Card';
-import { TrendingUp, Building, Users, Award, ArrowUp, BarChart, PieChart, Check, DownloadCloud, Share2 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { TrendingUp, Building, Users, Award } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { RevealSection } from '@/components/ui-elements/RevealSection';
+import { AlumniSuccessStories } from '@/components/placement/AlumniSuccessStories';
+import { TopRecruiters } from '@/components/placement/TopRecruiters';
+
 const PlacementReport = () => {
   const navigate = useNavigate();
   const {
@@ -17,6 +20,7 @@ const PlacementReport = () => {
   } = useToast();
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasAccess, setHasAccess] = useState(false);
+
   useEffect(() => {
     // Check if user has access (submitted the form)
     const hasFilledForm = localStorage.getItem('enquiryFormSubmitted') === 'true';
@@ -37,23 +41,11 @@ const PlacementReport = () => {
     }, 100);
     return () => clearTimeout(timer);
   }, [navigate, toast]);
-  const handleDownloadReport = () => {
-    toast({
-      title: "Report Downloaded",
-      description: "The detailed placement report has been downloaded."
-    });
-  };
-  const handleShareReport = () => {
-    // Copy current URL to clipboard
-    navigator.clipboard.writeText(window.location.href);
-    toast({
-      title: "Link Copied",
-      description: "Report link copied to clipboard"
-    });
-  };
+
   if (!hasAccess) {
     return null; // Don't render anything while redirecting
   }
+
   return <div className={`min-h-screen flex flex-col transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
       <Helmet>
         <title>Placement Report | BSDT</title>
@@ -63,8 +55,24 @@ const PlacementReport = () => {
       <Navbar />
       
       <main className="flex-grow">
+        {/* Cover Image Section */}
+        <div className="relative h-[300px] md:h-[400px] w-full overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black/70 z-10" />
+          <img src="/lovable-uploads/743a58dd-f0a8-4863-b123-8a080e2da853.png" alt="BSDT Design & Technology Building" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 z-20 flex items-center justify-center">
+            <div className="text-center px-6">
+              <h1 className="text-5xl font-display font-bold text-white mb-4 drop-shadow-lg">
+                Placement Report
+              </h1>
+              <p className="text-xl text-white/90 max-w-2xl mx-auto drop-shadow-md">
+                Showcasing the success of our graduates in the professional world
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Hero section */}
-        <section className="bg-gradient-to-br from-bsd-orange/5 to-white py-16 md:py-24">
+        <section className="bg-gradient-to-br from-bsd-orange/5 to-white py-16 md:py-[20px]">
           <div className="container mx-auto px-6 md:px-8">
             <div className="max-w-4xl mx-auto text-center">
               <Badge variant="bsdOrange" className="mb-4">Student Placement Report</Badge>
@@ -75,16 +83,6 @@ const PlacementReport = () => {
                 Discover how our students are excelling in their careers across creative industries.
                 This report highlights our placement statistics, top recruiters, and student success stories.
               </p>
-              <div className="flex flex-wrap gap-4 justify-center">
-                <Button variant="outline" className="gap-2" onClick={handleDownloadReport}>
-                  <DownloadCloud size={18} />
-                  Download PDF Report
-                </Button>
-                <Button variant="outline" className="gap-2" onClick={handleShareReport}>
-                  <Share2 size={18} />
-                  Share Report
-                </Button>
-              </div>
             </div>
           </div>
         </section>
@@ -92,9 +90,7 @@ const PlacementReport = () => {
         {/* Key statistics section */}
         <RevealSection direction="up" className="py-16">
           <div className="container mx-auto px-6 md:px-8">
-            <h2 className="text-3xl font-display font-bold text-bsd-gray mb-12 text-center">
-              Placement Highlights
-            </h2>
+            
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Card className="p-6 border-bsd-orange/20 shadow-sm">
@@ -155,14 +151,7 @@ const PlacementReport = () => {
               Top Recruiters
             </h2>
             
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-              {/* Placeholder for company logos */}
-              {Array.from({
-              length: 12
-            }).map((_, index) => <div key={index} className="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center h-24">
-                  <div className="text-bsd-gray/40 font-medium text-center">Company {index + 1}</div>
-                </div>)}
-            </div>
+            <TopRecruiters />
           </div>
         </RevealSection>
         
@@ -258,34 +247,14 @@ const PlacementReport = () => {
           </div>
         </RevealSection>
         
-        {/* Success stories section */}
+        {/* Alumni Success Stories section */}
         <RevealSection direction="up" className="py-16 bg-bsd-light-gray">
           <div className="container mx-auto px-6 md:px-8">
-            <h2 className="text-3xl font-display font-bold text-bsd-gray mb-12 text-center">
-              Success Stories
+            <h2 className="text-3xl font-display font-bold text-bsd-gray mb-8 text-center">
+              Alumni Success Stories
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Placeholder for student testimonials */}
-              {Array.from({
-              length: 3
-            }).map((_, index) => <Card key={index} className="p-6 border-bsd-orange/20 shadow-sm">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-bsd-gray/10 rounded-full mr-4"></div>
-                    <div>
-                      <h4 className="font-bold text-bsd-gray">Student Name</h4>
-                      <p className="text-sm text-foreground/70">BVA Graphic Design, 2023 Batch</p>
-                    </div>
-                  </div>
-                  <p className="text-foreground/80 mb-4">
-                    "The skills and knowledge I gained at BSDT helped me secure my dream job at a leading design firm. The faculty mentored me through every step of my journey."
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-bsd-orange font-medium">Placed at: Company Name</span>
-                    <span className="text-bsd-gray font-bold">₹7.2 LPA</span>
-                  </div>
-                </Card>)}
-            </div>
+            <AlumniSuccessStories />
           </div>
         </RevealSection>
       </main>
@@ -293,4 +262,5 @@ const PlacementReport = () => {
       <Footer />
     </div>;
 };
+
 export default PlacementReport;

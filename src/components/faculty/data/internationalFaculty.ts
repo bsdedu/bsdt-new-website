@@ -1,16 +1,17 @@
+
 import { FacultyMember } from '../types';
 
 export const internationalFaculty: FacultyMember[] = [
   {
     id: 17,
-    name: "Dr. Yogesh Joshi",
-    role: "International Faculty, Design Research",
-    bio: "Associate Professor at Bezalel Academy of Arts and Design, Dr. Yogesh focuses on design research and innovation. He brings global perspectives to the curriculum with his extensive experience in international design education.",
-    imageUrl: "/lovable-uploads/e89cc1d4-b789-4ae4-8c9a-5d9bb88744cd.png",
+    name: "Yogesh Praveen D",
+    role: "Assistant Professor, Graphic Design & Visual Communication",
+    bio: "An Assistant Professor in Graphic Design & Visual Communication, Yogesh Praveen D brings 9 years of industry experience in branding, advertising, UI/UX, web design, and photo compositing. Holding a B.Sc. in Computer Science from Tiruvallur University, he specializes in integrating design principles with emerging technologies like AI, AR, and VR. Passionate about mentorship and sustainability, he envisions a design future where technology, creativity, and nature coexist harmoniously. His teaching philosophy encourages experimentation, critical thinking, and impactful design solutions, preparing students for the ever-evolving creative industry.",
+    imageUrl: "/lovable-uploads/8073acf9-58b8-42aa-b127-5b645e3ed887.png",
     department: 'International Faculty',
-    qualifications: "Ph.D. in Design Research, Bezalel Academy of Arts and Design",
-    specialization: "Design Research Methodologies, Cross-cultural Design",
-    achievements: "International publications in design research journals"
+    qualifications: "B.Sc. in Computer Science, Tiruvallur University",
+    specialization: "Branding, Advertising, UI/UX, Web Design, Photo Compositing, AI/AR/VR Integration",
+    achievements: "9 years of industry experience in design and visual communication"
   },
   {
     id: 18,

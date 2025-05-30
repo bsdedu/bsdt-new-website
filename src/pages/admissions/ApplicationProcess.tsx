@@ -6,9 +6,9 @@ import { Footer } from '@/components/layout/Footer';
 import { RevealSection } from '@/components/ui-elements/RevealSection';
 import { AdmissionTimeline } from '@/components/admissions/AdmissionTimeline';
 import { EligibilityCriteria } from '@/components/admissions/EligibilityCriteria';
-import { ApplicationSteps } from '@/components/admissions/ApplicationSteps';
 import { SelectionProcess } from '@/components/admissions/SelectionProcess';
 import { ExplorePrograms } from '@/components/admissions/ExplorePrograms';
+import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
 import { Card, CardContent } from '@/components/ui-elements/Card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -41,13 +41,6 @@ const ApplicationProcess = () => {
             </div>
             
             <EligibilityCriteria />
-            
-            <div className="my-16">
-              <RevealSection delay={100}>
-                <h2 className="text-3xl font-bold text-bsd-gray mb-8 text-center">Application Process</h2>
-                <ApplicationSteps />
-              </RevealSection>
-            </div>
             
             <div className="my-16">
               <RevealSection delay={200}>
@@ -102,6 +95,8 @@ const ApplicationProcess = () => {
             </div>
           </div>
         </RevealSection>
+        
+        <EnquiryFormSection />
       </main>
       
       <Footer />

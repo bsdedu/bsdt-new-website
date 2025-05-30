@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
 import { FloatingEnquiryForm } from "./components/ui-elements/FloatingEnquiryForm";
 import { FloatingCallCTA } from "./components/ui-elements/FloatingCallCTA";
+import { FloatingWhatsAppCTA } from "./components/ui-elements/FloatingWhatsAppCTA";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import AboutBSDT from "./pages/AboutBSDT";
@@ -32,6 +33,8 @@ import FAQs from "./pages/admissions/FAQs";
 import PlacementReport from "./pages/PlacementReport";
 import HostelTransport from "./pages/campus-life/HostelTransport";
 import StudentClubs from "./pages/campus-life/StudentClubs";
+import EventsActivities from "./pages/EventsActivities";
+import StudentExperience from "./pages/StudentExperience";
 import { useEffect } from "react";
 
 console.log("App component loaded");
@@ -88,12 +91,15 @@ const App = () => {
               {/* Campus Life Routes */}
               <Route path="/campus-life/hostel-transport" element={<HostelTransport />} />
               <Route path="/campus-life/student-clubs" element={<StudentClubs />} />
+              <Route path="/campus-life/events-activities" element={<EventsActivities />} />
+              <Route path="/student-experience" element={<StudentExperience />} />
               
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
             <FloatingEnquiryForm />
             <FloatingCallCTA />
+            <FloatingWhatsAppCTA />
           </BrowserRouter>
         </TooltipProvider>
       </HelmetProvider>

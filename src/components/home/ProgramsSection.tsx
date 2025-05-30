@@ -228,11 +228,14 @@ export const ProgramsSection: React.FC = () => {
 
         <RevealSection delay={300}>
           <div className="mt-10 text-center">
-            <Link to="/programs" className="inline-flex items-center text-sm font-medium text-bsd-orange hover:text-bsd-orange/80 transition-colors">
+            <a 
+              href="https://b3454028-e84a-4654-825a-597bc4e4e58d.lovableproject.com/admissions/application-process" 
+              className="inline-flex items-center text-sm font-medium text-bsd-orange hover:text-bsd-orange/80 transition-colors"
+            >
               <span className="border-b border-current transition-all duration-300 hover:pb-1">
                 View All Programs & Admission Details
               </span>
-            </Link>
+            </a>
           </div>
         </RevealSection>
       </div>
