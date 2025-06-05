@@ -73,18 +73,18 @@ export const CustomFacultySection: React.FC = () => {
                   <div className="text-center">
                     <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
                       <img 
-                        src="/lovable-uploads/18447800-f016-4625-b117-1b07598c7e08.png" 
-                        alt="Piyush Kanti Mahapatra" 
+                        src="/lovable-uploads/9cbaefe8-2412-48f3-bd91-789b5bb89db1.png" 
+                        alt="Amal Satheesh" 
                         className="w-full h-full object-cover"
                         onError={(e) => {
                           e.currentTarget.src = '/placeholder.svg';
                         }}
                       />
                     </div>
-                    <h3 className="text-lg font-semibold text-bsd-gray">Piyush Kanti Mahapatra</h3>
-                    <p className="text-sm text-bsd-orange">Faculty, Visual Design</p>
+                    <h3 className="text-lg font-semibold text-bsd-gray">Amal Satheesh</h3>
+                    <p className="text-sm text-bsd-orange">Assistant Professor</p>
                     <p className="mt-4 text-sm text-foreground/70">
-                      With 4+ years in digital brand management, Piyush combines industry experience as a Visual Designer with three years of teaching in Art and Design. Skilled in Adobe Creative Cloud, he brings a strategic approach to design that balances aesthetics with brand objectives. His background in both professional and academic environments enriches his collaborative approach to creative problem-solving.
+                      A passionate UI/UX and Graphic Design faculty, Amal Satheesh holds a Postgraduate Degree in Interaction Design (UI/UX) from Pearl Academy. With expertise in User Research, Wireframing, Prototyping, Interaction Design, Branding, and Visual Communication, he focuses on blending theoretical knowledge with real-world applications.
                     </p>
                   </div>
                 </CardContent>
