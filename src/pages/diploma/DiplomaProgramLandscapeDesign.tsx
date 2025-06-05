@@ -14,10 +14,10 @@ const DiplomaProgramLandscapeDesign: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Post Graduate Diploma in Landscape Design | BSD Design School</title>
+        <title>Professional Diploma in Landscape Design | BSD Design School</title>
         <meta 
           name="description" 
-          content="A comprehensive post graduate diploma program in landscape design that equips students with the skills to create sustainable, functional, and aesthetically pleasing outdoor environments." 
+          content="A comprehensive professional diploma program in landscape design that equips students with the skills to create sustainable, functional, and aesthetically pleasing outdoor environments." 
         />
       </Helmet>
       

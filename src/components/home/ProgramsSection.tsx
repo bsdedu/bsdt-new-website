@@ -113,8 +113,8 @@ const diplomaPrograms: Program[] = [
   }, 
   {
     icon: <GraduationCap className="w-6 h-6 text-bsd-orange" />,
-    title: "Post Grad Diploma in Landscape Design",
-    description: "A postgraduate diploma program focused on sustainable landscape design, environmental planning, and outdoor space development.",
+    title: "Professional Diploma in Landscape Design",
+    description: "A professional diploma program focused on sustainable landscape design, environmental planning, and outdoor space development.",
     color: "from-bsd-gray/15 to-bsd-gray/5",
     duration: "1 year",
     href: "/programs/pgd-landscape-design"
