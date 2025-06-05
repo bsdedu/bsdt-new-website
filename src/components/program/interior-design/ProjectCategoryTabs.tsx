@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { projectCategories } from '../gallery/projectCategories';
+import { interiorProjects } from '../gallery/interiorProjects';
 import { ProjectCarousel } from '../gallery/ProjectCarousel';
 
 export const ProjectCategoryTabs: React.FC = () => {
@@ -16,15 +16,15 @@ export const ProjectCategoryTabs: React.FC = () => {
       </TabsList>
       
       <TabsContent value="residential" className="mt-8">
-        <ProjectCarousel projects={projectCategories.residential} />
+        <ProjectCarousel projects={interiorProjects.residential} />
       </TabsContent>
       
       <TabsContent value="commercial" className="mt-8">
-        <ProjectCarousel projects={projectCategories.commercial} />
+        <ProjectCarousel projects={interiorProjects.commercial} />
       </TabsContent>
       
       <TabsContent value="conceptual" className="mt-8">
-        <ProjectCarousel projects={projectCategories.conceptual} />
+        <ProjectCarousel projects={interiorProjects.conceptual} />
       </TabsContent>
     </Tabs>
   );
