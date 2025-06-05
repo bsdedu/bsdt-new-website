@@ -26,21 +26,6 @@ export const CustomFacultySection: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="/lovable-uploads/469b16b9-1a86-4abc-926f-fecba15128d3.png" alt="Lakshmi Gopalakrishna" className="w-full h-full object-cover" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Lakshmi Gopalakrishna</h3>
-                  <p className="text-sm text-bsd-orange">Faculty, Graphic Design</p>
-                  <p className="mt-4 text-sm text-foreground/70">
-                    A professionally trained educator with a passion for art since childhood, Lakshmi worked with Disney as a 2D animator before transitioning to education. At BSDT, she guides students in developing creative expression through fundamentals of drawing, color theory, and art history while conducting workshops that encourage exploration beyond the curriculum.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-            
-            <Card>
-              <CardContent className="pt-6">
-                <div className="text-center">
-                  <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
                     <img src="/lovable-uploads/8c654396-817b-41ba-9b58-67f6362d40ca.png" alt="Yogesh Praveen" className="w-full h-full object-cover" />
                   </div>
                   <h3 className="text-lg font-semibold text-bsd-gray">Yogesh Praveen</h3>
@@ -62,6 +47,21 @@ export const CustomFacultySection: React.FC = () => {
                   <p className="text-sm text-bsd-orange">Faculty, Visual Design</p>
                   <p className="mt-4 text-sm text-foreground/70">
                     With 4+ years in digital brand management, Piyush combines industry experience as a Visual Designer with three years of teaching in Art and Design. Skilled in Adobe Creative Cloud, he brings a strategic approach to design that balances aesthetics with brand objectives. His background in both professional and academic environments enriches his collaborative approach to creative problem-solving.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+            
+            <Card>
+              <CardContent className="pt-6">
+                <div className="text-center">
+                  <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
+                    <img src="/lovable-uploads/469b16b9-1a86-4abc-926f-fecba15128d3.png" alt="Lakshmi Gopalakrishna" className="w-full h-full object-cover" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Lakshmi Gopalakrishna</h3>
+                  <p className="text-sm text-bsd-orange">Faculty, Graphic Design</p>
+                  <p className="mt-4 text-sm text-foreground/70">
+                    A professionally trained educator with a passion for art since childhood, Lakshmi worked with Disney as a 2D animator before transitioning to education. At BSDT, she guides students in developing creative expression through fundamentals of drawing, color theory, and art history while conducting workshops that encourage exploration beyond the curriculum.
                   </p>
                 </div>
               </CardContent>
