@@ -12,7 +12,7 @@ export const interiorProjects: ProjectCollection = {
     { id: "7", title: "Dormitory - Backpacker's Hostel", student: "Kebisha Chathuguthi", year: "2024", image: "/lovable-uploads/be598cdf-2aef-413c-b9f0-84e54035473b.png" },
   ],
   conceptual: [
-    { id: "4", title: "Adaptive Reuse Project", student: "Ishita Jain", year: "2022", image: "/lovable-uploads/a14f6c87-51d9-46f6-a691-d097e9dd9d7a.png" },
+    { id: "4", title: "Adaptive Reuse Project", student: "Riaa", year: "2024", semester: "5th Semester", image: "/lovable-uploads/8b748831-aee6-4ad0-8436-f8dda916be74.png" },
   ],
   // Add empty arrays for other categories for type consistency
   branding: [],
