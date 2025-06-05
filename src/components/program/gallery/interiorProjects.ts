@@ -15,6 +15,7 @@ export const interiorProjects: ProjectCollection = {
     { id: "3", title: "Corporate Office Design", student: "Neha Gupta", year: "2022", image: "/lovable-uploads/9c2c1fa3-d5a1-4a00-964d-96697da1bbeb.png" },
     { id: "4", title: "Restaurant Concept", student: "Arjun Kumar", year: "2022", image: "/lovable-uploads/8b983b3f-fd59-44d3-b5cc-152eeffe62cd.png" },
     { id: "5", title: "Law Firm Interiors", student: "Vidhi Pareek", year: "2024", semester: "6th Semester", image: "/lovable-uploads/4e3d34c6-ceab-43ba-b10a-a0b70450e10f.png" },
+    { id: "6", title: "Gallery Space", student: "Kebisha Chathuguthi", year: "2024", image: "/lovable-uploads/a9ff4288-2450-4d09-bcc1-ac5a47b797f6.png" },
   ],
   conceptual: [
     { id: "1", title: "Sustainable Living Space", student: "Aditya Sharma", year: "2023", image: "/lovable-uploads/eab37b09-9b31-4fe2-b26c-92bdf0d74782.png" },
