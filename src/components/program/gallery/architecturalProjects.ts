@@ -21,15 +21,6 @@ export const architecturalProjects: Project[] = [
     image: '/placeholder.svg', // Replaced with a placeholder that should definitely exist
   },
   {
-    id: 'arch-3',
-    title: 'Cultural Center with Traditional Elements',
-    description: 'A cultural center that blends modern architecture with traditional Indian design elements.',
-    student: 'Ananya Patel',
-    year: '2024',
-    semester: '7th Semester',
-    image: '/lovable-uploads/0ae77c0c-8ef4-404c-abf0-bb90598dfbf4.png',
-  },
-  {
     id: 'arch-4',
     title: 'Eco-friendly Residential Villa',
     description: 'An eco-friendly villa design that minimizes environmental impact while maximizing comfort.',
