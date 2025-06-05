@@ -26,9 +26,9 @@ export const CustomFacultySection: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="/lovable-uploads/af5130bc-a7bc-4348-8951-861078594741.png" alt="Amal" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/2e96f455-edd6-4404-a473-76a3a0a3cf1d.png" alt="Amal Satheesh" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Amal</h3>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Amal Satheesh</h3>
                   <p className="text-sm text-bsd-orange">Faculty, Animation</p>
                   <p className="mt-4 text-sm text-foreground/70">
                     A professionally trained educator with a passion for animation, Amal worked with Disney as a 2D animator for five years before transitioning to education. At BSDT, he guides students in developing their animation skills through fundamentals of character design, movement principles, and storytelling techniques while conducting workshops that encourage exploration beyond the curriculum.
