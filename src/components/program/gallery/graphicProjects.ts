@@ -1,10 +1,11 @@
+
 import { ProjectCollection } from './types';
 
 // Graphic Design projects
 export const graphicProjects: ProjectCollection = {
   branding: [
     { id: "1", title: "Eco-friendly Brand Identity", student: "Priya Sharma", year: "2023", image: "/lovable-uploads/9e5f0918-e471-4105-8926-6e066cea868e.png" },
-    { id: "2", title: "Startup Branding", student: "Tanu & Mayank", year: "2023", image: "/lovable-uploads/0dc7d02b-3e01-49d1-8438-52c8fc265fe4.png" },
+    { id: "2", title: "Tech Startup Branding", student: "Arjun Mehta", year: "2023", image: "/lovable-uploads/e50eadd7-d31e-4b3e-a69a-e005ba9bd014.png" },
     { id: "3", title: "Sitcom Illustrations", student: "Afiya Taleen", year: "2024", semester: "6th Semester", image: "/lovable-uploads/ceae1fb0-5640-4849-b136-442d74f75253.png" },
     { id: "4", title: "Artisanal Coffee Branding", student: "Vikram Reddy", year: "2022", image: "/lovable-uploads/ef3ea604-aaf8-4387-99a1-55ac188ac260.png" },
   ],
