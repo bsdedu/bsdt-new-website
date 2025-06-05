@@ -10,9 +10,10 @@ export const interiorProjects: ProjectCollection = {
     { id: "5", title: "Law Firm Interiors", student: "Vidhi Pareek", year: "2024", semester: "6th Semester", image: "/lovable-uploads/4e3d34c6-ceab-43ba-b10a-a0b70450e10f.png" },
     { id: "6", title: "Gallery Space", student: "Kebisha Chathuguthi", year: "2024", image: "/lovable-uploads/a9ff4288-2450-4d09-bcc1-ac5a47b797f6.png" },
     { id: "7", title: "Dormitory - Backpacker's Hostel", student: "Kebisha Chathuguthi", year: "2024", image: "/lovable-uploads/be598cdf-2aef-413c-b9f0-84e54035473b.png" },
+    { id: "arch-6", title: "Public Library and Learning Center", student: "Meera Krishnan", year: "2024", semester: "6th Semester", image: "/lovable-uploads/4869cbcd-2619-477f-b5c6-bfdeccf70093.png" },
   ],
   conceptual: [
-    { id: "4", title: "Adaptive Reuse Project", student: "Riaa", year: "2024", semester: "5th Semester", image: "/lovable-uploads/8b748831-aee6-4ad0-8436-f8dda916be74.png" },
+    // Adaptive Reuse Project moved to architectural projects
   ],
   // Add empty arrays for other categories for type consistency
   branding: [],

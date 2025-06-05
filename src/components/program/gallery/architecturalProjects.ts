@@ -21,15 +21,6 @@ export const architecturalProjects: Project[] = [
     image: '/lovable-uploads/fbf11841-3ccd-4706-a287-a1e7f880bb88.png',
   },
   {
-    id: 'arch-6',
-    title: 'Public Library and Learning Center',
-    description: 'A modern library design that creates dynamic spaces for learning and community engagement.',
-    student: 'Meera Krishnan',
-    year: '2024',
-    semester: '6th Semester',
-    image: '/lovable-uploads/4869cbcd-2619-477f-b5c6-bfdeccf70093.png',
-  },
-  {
     id: 'arch-7',
     title: 'Sustainable Urban Housing Complex',
     description: 'The Linear Nest Row Housing is a modern residential complex that features sustainable building techniques in a sleek, functional design. Organized in a linear format, the project focuses on modularity, ventilation, and energy efficiency while maintaining contemporary aesthetic elements of its architectural language.',
@@ -37,5 +28,13 @@ export const architecturalProjects: Project[] = [
     year: '2024',
     semester: '6th Semester',
     image: '/lovable-uploads/8f82b7d2-5ef6-48f1-99e0-7ad31d4b24dc.png',
+  },
+  {
+    id: "4",
+    title: "Adaptive Reuse Project",
+    student: "Riaa",
+    year: "2024",
+    semester: "5th Semester",
+    image: "/lovable-uploads/8b748831-aee6-4ad0-8436-f8dda916be74.png",
   }
 ];
