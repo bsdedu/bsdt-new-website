@@ -144,4 +144,15 @@ export const designFaculty: FacultyMember[] = [
     specialization: "Fundamentals of Drawing, Colour Theory, Art History",
     achievements: "Conducts workshops for creative expression beyond curriculum"
   },
+  {
+    id: 20,
+    name: "Amal Satheesh",
+    role: "Assistant Professor",
+    bio: "A passionate UI/UX and Graphic Design faculty, Amal Satheesh holds a Postgraduate Degree in Interaction Design (UI/UX) from Pearl Academy. With expertise in User Research, Wireframing, Prototyping, Interaction Design, Branding, and Visual Communication, he focuses on blending theoretical knowledge with real-world applications.",
+    imageUrl: "/lovable-uploads/9cbaefe8-2412-48f3-bd91-789b5bb89db1.png",
+    department: 'Design',
+    qualifications: "Postgraduate Degree in Interaction Design (UI/UX) from Pearl Academy",
+    specialization: "User Research, Wireframing, Prototyping, Interaction Design, Branding, Visual Communication",
+    achievements: "Blends theoretical knowledge with real-world applications in UI/UX and Graphic Design"
+  },
 ];
