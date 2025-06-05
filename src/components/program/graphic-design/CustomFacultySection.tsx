@@ -3,8 +3,10 @@ import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui-elements/Card";
+
 export const CustomFacultySection: React.FC = () => {
-  return <section className="py-16 bg-white">
+  return (
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-6 md:px-8">
         <RevealSection>
           <div className="text-center max-w-3xl mx-auto mb-12">
@@ -54,12 +56,12 @@ export const CustomFacultySection: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="/lovable-uploads/af5130bc-a7bc-4348-8951-861078594741.png" alt="Amalan" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/4a5d1ae8-5e3a-4e3d-929d-14b52fde7bbb.png" alt="Piyush Kanti Mahapatra" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Amalan Bharali</h3>
-                  <p className="text-sm text-bsd-orange">Faculty, Graphic Design</p>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Piyush Kanti Mahapatra</h3>
+                  <p className="text-sm text-bsd-orange">Faculty, Visual Design</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    An award-winning typographer and print design specialist, Amalan combines traditional craftsmanship with contemporary applications. His work has been featured in international design publications, and he maintains an active practice alongside his teaching responsibilities.
+                    With 4+ years in digital brand management, Piyush combines industry experience as a Visual Designer with three years of teaching in Art and Design. Skilled in Adobe Creative Cloud, he brings a strategic approach to design that balances aesthetics with brand objectives. His background in both professional and academic environments enriches his collaborative approach to creative problem-solving.
                   </p>
                 </div>
               </CardContent>
@@ -67,5 +69,6 @@ export const CustomFacultySection: React.FC = () => {
           </div>
         </RevealSection>
       </div>
-    </section>;
+    </section>
+  );
 };
