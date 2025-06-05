@@ -133,4 +133,15 @@ export const designFaculty: FacultyMember[] = [
     specialization: "Branding, Advertising, UI/UX, Web Design, Photo Compositing, AI/AR/VR Integration",
     achievements: "9 years of industry experience in design and visual communication"
   },
+  {
+    id: 19,
+    name: "Lakshmi Gopalakrishnan",
+    role: "Lecturer, Design Faculty",
+    bio: "Lakshmi is professionally trained in science and computer education, but as a passionate artist At BSD she works with design students to help them build their creative senses and also guides them with methods of creative expression. She takes classes on the fundamentals of drawing, colour theory, art history and conducts workshops that allow students to explore the arts beyond the curriculum",
+    imageUrl: "/lovable-uploads/79fb4ac1-ede2-4413-ad00-92090dd90bb5.png",
+    department: 'Design',
+    qualifications: "Professional training in Science and Computer Education",
+    specialization: "Fundamentals of Drawing, Colour Theory, Art History",
+    achievements: "Conducts workshops for creative expression beyond curriculum"
+  },
 ];
