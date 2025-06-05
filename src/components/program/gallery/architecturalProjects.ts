@@ -12,15 +12,6 @@ export const architecturalProjects: Project[] = [
     image: '/lovable-uploads/66fc8cb6-ad09-4f8b-a510-fd7837b2f91d.png',
   },
   {
-    id: 'arch-2',
-    title: 'Modern Commercial Office Space',
-    description: 'A contemporary commercial office design with flexible workspaces and collaborative zones.',
-    student: 'Rahul Mehta',
-    year: '2023',
-    semester: '6th Semester',
-    image: '/placeholder.svg', // Replaced with a placeholder that should definitely exist
-  },
-  {
     id: 'arch-4',
     title: 'Eco-friendly Residential Villa',
     description: 'An eco-friendly villa design that minimizes environmental impact while maximizing comfort.',
