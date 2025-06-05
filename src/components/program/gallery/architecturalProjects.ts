@@ -55,5 +55,14 @@ export const architecturalProjects: Project[] = [
     year: '2024',
     semester: '6th Semester',
     image: '/lovable-uploads/4869cbcd-2619-477f-b5c6-bfdeccf70093.png',
+  },
+  {
+    id: 'arch-7',
+    title: 'Sustainable Urban Housing Complex',
+    description: 'The Linear Nest Row Housing is a modern residential complex that features sustainable building techniques in a sleek, functional design. Organized in a linear format, the project focuses on modularity, ventilation, and energy efficiency while maintaining contemporary aesthetic elements of its architectural language.',
+    student: 'Gokul',
+    year: '2024',
+    semester: '6th Semester',
+    image: '/lovable-uploads/0895e1ca-5cca-49a4-98c8-9492abcd61a1.png',
   }
 ];
