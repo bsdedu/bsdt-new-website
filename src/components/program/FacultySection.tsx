@@ -54,7 +54,7 @@ export const FacultySection: React.FC = () => {
             {facultyMembers.map((faculty, index) => (
               <Card key={index} className="overflow-hidden border-0 shadow-md transition-all duration-300 hover:shadow-xl text-center p-6">
                 <div className="flex justify-center mb-4">
-                  <Avatar className="h-32 w-32">
+                  <Avatar className="h-32 w-32 border-4 border-bsd-orange/20">
                     <AvatarImage 
                       src={faculty.imageUrl} 
                       alt={faculty.name} 
