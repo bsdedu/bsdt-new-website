@@ -26,6 +26,19 @@ export const HostelSection: React.FC = () => {
           </div>
         </RevealSection>
 
+        {/* Hostel Details Image */}
+        <RevealSection delay={50}>
+          <div className="mb-16">
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img 
+                src="/lovable-uploads/f448edd5-3487-45fc-a09c-a6b3493f9797.png" 
+                alt="Hostel Accommodation Details - Room Types and Facilities" 
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+        </RevealSection>
+
         <RevealSection delay={100}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div className="rounded-2xl overflow-hidden shadow-lg h-[450px]">
