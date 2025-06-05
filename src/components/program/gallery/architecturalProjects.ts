@@ -3,6 +3,15 @@ import { Project } from './types';
 
 export const architecturalProjects: Project[] = [
   {
+    id: 'arch-1',
+    title: 'Row-Housing project',
+    description: 'A contemporary row housing development featuring modern design principles and efficient space utilization.',
+    student: 'Alina',
+    year: '2024',
+    semester: '4th Semester',
+    image: '/lovable-uploads/66fc8cb6-ad09-4f8b-a510-fd7837b2f91d.png',
+  },
+  {
     id: 'arch-2',
     title: 'Modern Commercial Office Space',
     description: 'A contemporary commercial office design with flexible workspaces and collaborative zones.',
