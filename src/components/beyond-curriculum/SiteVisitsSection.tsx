@@ -39,7 +39,7 @@ export const SiteVisitsSection: React.FC = () => {
       title: "Architectural Landmarks",
       description: "Visits to significant architectural sites where students analyze design principles, structural solutions, and contextual integration of buildings.",
       icon: <Building className="w-5 h-5 text-bsd-orange" />,
-      image: "/lovable-uploads/e89cc1d4-b789-4ae4-8c9a-5d9bb88744cd.png"
+      image: "/lovable-uploads/f1d92903-6482-44dc-ad21-e40b8f539cc3.png"
     },
     {
       title: "Manufacturing Facilities",
@@ -142,7 +142,7 @@ export const SiteVisitsSection: React.FC = () => {
               
               <div className="relative rounded-2xl overflow-hidden h-[400px]">
                 <img 
-                  src="/lovable-uploads/fb4bedc7-ed6b-470b-82fe-e714ed5d7d6a.png" 
+                  src="/lovable-uploads/f1d92903-6482-44dc-ad21-e40b8f539cc3.png" 
                   alt="Students on site visit" 
                   className="w-full h-full object-cover" 
                 />
