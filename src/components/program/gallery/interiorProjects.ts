@@ -11,6 +11,7 @@ export const interiorProjects: ProjectCollection = {
     { id: "6", title: "Gallery Space", student: "Kebisha Chathuguthi", year: "2024", image: "/lovable-uploads/a9ff4288-2450-4d09-bcc1-ac5a47b797f6.png" },
     { id: "7", title: "Dormitory - Backpacker's Hostel", student: "Kebisha Chathuguthi", year: "2024", image: "/lovable-uploads/be598cdf-2aef-413c-b9f0-84e54035473b.png" },
     { id: "arch-6", title: "Public Library and Learning Center", student: "Vidhi Pareek", year: "2024", semester: "6th Semester", image: "/lovable-uploads/90ca834a-2b8c-4013-9946-dfa1db55a299.png" },
+    { id: "8", title: "Luxury Retail Design", student: "Sahana Kashyap", year: "2024", semester: "6th Semester", image: "/lovable-uploads/1209aced-ff30-4e52-9f50-18019f4e166a.png" },
   ],
   conceptual: [
     // Adaptive Reuse Project moved to architectural projects
