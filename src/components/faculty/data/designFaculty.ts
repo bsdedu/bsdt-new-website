@@ -1,4 +1,3 @@
-
 import { FacultyMember } from '../types';
 
 export const designFaculty: FacultyMember[] = [
@@ -122,5 +121,16 @@ export const designFaculty: FacultyMember[] = [
     qualifications: "M.Tech (Structures) from SJB Institute of Technology, Gold Medalist",
     specialization: "Landscape Engineering, Structural Design for Outdoor Spaces",
     achievements: "Published in international journals, conducted seminars on innovative construction practices"
+  },
+  {
+    id: 17,
+    name: "Yogesh Praveen D",
+    role: "Assistant Professor, Graphic Design & Visual Communication",
+    bio: "An Assistant Professor in Graphic Design & Visual Communication, Yogesh Praveen D brings 9 years of industry experience in branding, advertising, UI/UX, web design, and photo compositing. Holding a B.Sc. in Computer Science from Tiruvallur University, he specializes in integrating design principles with emerging technologies like AI, AR, and VR. Passionate about mentorship and sustainability, he envisions a design future where technology, creativity, and nature coexist harmoniously. His teaching philosophy encourages experimentation, critical thinking, and impactful design solutions, preparing students for the ever-evolving creative industry.",
+    imageUrl: "/lovable-uploads/8073acf9-58b8-42aa-b127-5b645e3ed887.png",
+    department: 'Design',
+    qualifications: "B.Sc. in Computer Science, Tiruvallur University",
+    specialization: "Branding, Advertising, UI/UX, Web Design, Photo Compositing, AI/AR/VR Integration",
+    achievements: "9 years of industry experience in design and visual communication"
   },
 ];
