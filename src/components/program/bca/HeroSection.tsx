@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
@@ -21,10 +20,10 @@ export const HeroSection: React.FC = () => {
             <div className="space-y-6">
               <Badge variant="bsdOrange" className="mb-2">3-YEAR UNDERGRADUATE PROGRAM</Badge>
               <h1 className="text-4xl md:text-5xl font-display font-bold text-bsd-gray leading-tight">
-                BCA with UI/UX Design or AI/ML
+                BCA with UI/UX
               </h1>
               <p className="text-lg text-foreground/80">
-                Discover the perfect blend of technology and creativity. Master UI/UX design principles or dive into AI/ML algorithms to build future-ready applications and interfaces that transform user experiences.
+                Discover the perfect blend of technology and creativity. Master UI/UX design principles and development technologies to build future-ready applications and interfaces that transform user experiences.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
                 <AnimatedButton asChild>
@@ -56,10 +55,10 @@ export const HeroSection: React.FC = () => {
 
           <RevealSection direction="left">
             <div className="relative rounded-2xl overflow-hidden shadow-lg h-[400px]">
-              <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&auto=format&fit=crop" alt="BCA in UI/UX and AI/ML" className="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&auto=format&fit=crop" alt="BCA with UI/UX" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
                 <div className="absolute bottom-0 left-0 p-6">
-                  <p className="text-white font-medium text-lg">Cutting-edge curriculum with specializations in UI/UX Design and AI/ML</p>
+                  <p className="text-white font-medium text-lg">Cutting-edge curriculum with specialization in UI/UX Design</p>
                 </div>
               </div>
             </div>

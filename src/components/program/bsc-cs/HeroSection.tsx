@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
@@ -21,11 +20,12 @@ export const HeroSection: React.FC = () => {
             <div className="space-y-6">
               <Badge variant="bsdOrange" className="mb-2">3-YEAR UNDERGRADUATE PROGRAM</Badge>
               <h1 className="text-4xl md:text-5xl font-display font-bold text-bsd-gray leading-tight">
-                B.Sc Computer Science with Data Analytics & Cyber Security
+                B.Sc Computer Science with Data Analytics, Cyber Security & AI/ML
               </h1>
               <p className="text-lg text-foreground/80">
-                Master computer science fundamentals with a specialization in either Data Analytics or Cyber Security. Develop skills to analyze complex data sets or protect digital assets against emerging cyber threats.
+                Master computer science fundamentals with specializations in Data Analytics, Cyber Security, and AI/ML. Develop comprehensive skills to analyze complex data sets, protect digital assets, and implement intelligent solutions.
               </p>
+              
               <div className="flex flex-wrap gap-4 pt-4">
                 <AnimatedButton asChild>
                   <a href="#enquiry-form" className="hover:no-underline">Apply Now</a>
@@ -59,14 +59,14 @@ export const HeroSection: React.FC = () => {
               <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&auto=format&fit=crop" alt="B.Sc Computer Science" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
                 <div className="absolute bottom-0 left-0 p-6">
-                  <p className="text-white font-medium text-lg">Comprehensive curriculum with specializations in Data Analytics & Cyber Security</p>
+                  <p className="text-white font-medium text-lg">Comprehensive curriculum with specializations in Data Analytics, Cyber Security & AI/ML</p>
                 </div>
               </div>
             </div>
           </RevealSection>
         </div>
 
-        {/* Quick stats */}
+        
         <RevealSection delay={200}>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
             <Card className="border-0 bg-white/80 backdrop-blur">

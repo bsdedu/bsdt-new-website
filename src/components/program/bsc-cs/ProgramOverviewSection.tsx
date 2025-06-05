@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Cpu, Database, Shield } from "lucide-react";
 import { RevealSection } from "@/components/ui-elements/RevealSection";
@@ -17,10 +16,10 @@ export const ProgramOverviewSection: React.FC = () => {
           <div className="text-center max-w-3xl mx-auto mb-12">
             <Badge variant="bsdOrange" className="mb-4">PROGRAM OVERVIEW</Badge>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
-              B.Sc Computer Science with Data Analytics & Cyber Security
+              B.Sc Computer Science with Data Analytics, Cyber Security & AI/ML
             </h2>
             <p className="mt-4 text-foreground/70">
-              A comprehensive 3-year undergraduate program that combines core computer science principles with specialized tracks in data analytics and cybersecurity, preparing students for the digital future.
+              A comprehensive 3-year undergraduate program that combines core computer science principles with specialized tracks in data analytics, cybersecurity, and AI/ML, preparing students for the digital future.
             </p>
           </div>
         </RevealSection>
@@ -44,9 +43,9 @@ export const ProgramOverviewSection: React.FC = () => {
                 <div className="w-12 h-12 mx-auto rounded-full bg-bsd-orange/10 flex items-center justify-center mb-4">
                   <Database className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-xl font-semibold text-bsd-gray mb-3">Data Analytics Specialization</h3>
+                <h3 className="text-xl font-semibold text-bsd-gray mb-3">Data Analytics & AI/ML</h3>
                 <p className="text-foreground/70">
-                  Learn to analyze complex datasets, apply statistical methods, and create visualizations to derive actionable insights from data using industry-standard tools.
+                  Learn to analyze complex datasets, apply statistical methods, implement machine learning algorithms, and create intelligent solutions using industry-standard tools.
                 </p>
               </div>
             </div>
@@ -56,7 +55,7 @@ export const ProgramOverviewSection: React.FC = () => {
                 <div className="w-12 h-12 mx-auto rounded-full bg-bsd-orange/10 flex items-center justify-center mb-4">
                   <Shield className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-xl font-semibold text-bsd-gray mb-3">Cyber Security Specialization</h3>
+                <h3 className="text-xl font-semibold text-bsd-gray mb-3">Cyber Security</h3>
                 <p className="text-foreground/70">
                   Develop skills to protect digital assets, identify vulnerabilities, respond to security incidents, and implement robust security measures against evolving cyber threats.
                 </p>

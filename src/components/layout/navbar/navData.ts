@@ -1,4 +1,3 @@
-
 export type SubItem = {
   name: string;
   href: string;
@@ -28,8 +27,8 @@ export const navStructure: NavStructure[] = [
           { name: 'B.Sc Interior Design', href: '/programs/bsc-interior-design' },
           { name: 'BVA Graphic & Communication Design', href: '/programs/bva-graphic-design' },
           { name: 'BVA Animation & Game Design', href: '/programs/bva-animation-game-design' },
-          { name: 'BCA with UI/UX & AI/ML', href: '/programs/bca-uiux-aiml' },
-          { name: 'B.Sc Computer Science Data Analytics & Cyber Security', href: '/programs/bsc-cs-analytics-security' },
+          { name: 'BCA with UI/UX', href: '/programs/bca-uiux-aiml' },
+          { name: 'B.Sc Computer Science with Data Analytics, Cyber Security & AI/ML', href: '/programs/bsc-cs-analytics-security' },
           { name: 'B.Des in Interaction & Experience Design', href: '/programs/bdes-interaction-experience' },
           { name: 'B.Des in Architectural Construction Design', href: '/programs/bdes-architectural-design' }
         ]
