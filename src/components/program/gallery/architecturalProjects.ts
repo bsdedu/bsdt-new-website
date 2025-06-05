@@ -63,6 +63,6 @@ export const architecturalProjects: Project[] = [
     student: 'Gokul',
     year: '2024',
     semester: '6th Semester',
-    image: '/lovable-uploads/0895e1ca-5cca-49a4-98c8-9492abcd61a1.png',
+    image: '/lovable-uploads/8f82b7d2-5ef6-48f1-99e0-7ad31d4b24dc.png',
   }
 ];
