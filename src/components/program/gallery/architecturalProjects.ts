@@ -1,3 +1,4 @@
+
 import { Project } from './types';
 
 export const architecturalProjects: Project[] = [
@@ -32,13 +33,22 @@ export const architecturalProjects: Project[] = [
     id: 'arch-4',
     title: 'Eco-friendly Residential Villa',
     description: 'An eco-friendly villa design that minimizes environmental impact while maximizing comfort.',
+    student: 'Darshan',
+    year: '2024',
+    semester: '4th Semester',
+    image: '/lovable-uploads/fbf11841-3ccd-4706-a287-a1e7f880bb88.png',
+  },
+  {
+    id: 'arch-5',
+    title: 'Eco-friendly Residential Villa',
+    description: 'An eco-friendly villa design that minimizes environmental impact while maximizing comfort.',
     student: 'Vikram Singh',
     year: '2023',
     semester: '8th Semester',
     image: '/lovable-uploads/fb0f9a42-b665-42ed-a4f5-50557f6a5093.png',
   },
   {
-    id: 'arch-5',
+    id: 'arch-6',
     title: 'Public Library and Learning Center',
     description: 'A modern library design that creates dynamic spaces for learning and community engagement.',
     student: 'Meera Krishnan',
