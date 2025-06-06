@@ -4,7 +4,7 @@ import { ProjectCollection } from './types';
 export const interactionProjects: ProjectCollection = {
   ux: [
     { id: "1", title: "Music Streaming Service Redesign", student: "Pranesh", year: "2023", image: "/lovable-uploads/a66f680c-cb0d-4dbd-938a-8c3fc1951872.png" },
-    { id: "2", title: "E-commerce Checkout Redesign", student: "Rahul Joshi", year: "2023", image: "/lovable-uploads/22d341bf-212e-47be-b781-4ffdee0d9881.png" },
+    { id: "2", title: "Flight Booking Service Project", student: "Rahul Devaramani", year: "2023", image: "/lovable-uploads/22d341bf-212e-47be-b781-4ffdee0d9881.png" },
     { id: "3", title: "Food Delivery App Interface Design", student: "Afra Firdouse", year: "2022", image: "/lovable-uploads/b4913743-8ed2-450e-8998-b9678be6617f.png" },
     { id: "4", title: "Travel Planning Service Blueprint", student: "Jhanani M", year: "2022", image: "/lovable-uploads/5f3418a8-6660-4450-8ba7-8515c31c2707.png" },
   ],
