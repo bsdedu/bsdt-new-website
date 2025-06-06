@@ -5,8 +5,21 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui-elements/Card";
 import { AnimatedButton } from "@/components/ui-elements/AnimatedButton";
 import { Calendar, GraduationCap, BookOpen, Users, BriefcaseBusiness, Award, Building2, BrainCircuit } from "lucide-react";
+
 export const HeroSection: React.FC = () => {
-  return <section className="relative pt-20 md:pt-28 pb-16 md:pb-20 overflow-hidden bg-bsd-light-gray">
+  const handleApplyClick = () => {
+    window.open("https://apply.bsd.edu.in/", "_blank", "noopener noreferrer");
+  };
+
+  const handleBrochureClick = () => {
+    const enquiryForm = document.getElementById('enquiry-form');
+    if (enquiryForm) {
+      enquiryForm.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <section className="relative pt-20 md:pt-28 pb-16 md:pb-20 overflow-hidden bg-bsd-light-gray">
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-radial from-white to-transparent opacity-70"></div>
         <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-bsd-orange/5 blur-3xl"></div>
@@ -25,18 +38,11 @@ export const HeroSection: React.FC = () => {
                 Master visual storytelling, brand identity, and digital media design. Become a creative professional who shapes business, society, and culture through powerful visual communication.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
-                <AnimatedButton 
-                  asChild
-                  href="https://apply.bsd.edu.in/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <a className="hover:no-underline">Apply Now</a>
+                <AnimatedButton onClick={handleApplyClick}>
+                  Apply Now
                 </AnimatedButton>
-                <AnimatedButton variant="outline" asChild>
-                  <a href="#enquiry-form" className="hover:no-underline">
-                    Download Brochure
-                  </a>
+                <AnimatedButton variant="outline" onClick={handleBrochureClick}>
+                  Download Brochure
                 </AnimatedButton>
               </div>
 
@@ -114,5 +120,6 @@ export const HeroSection: React.FC = () => {
           </div>
         </RevealSection>
       </div>
-    </section>;
+    </section>
+  );
 };
