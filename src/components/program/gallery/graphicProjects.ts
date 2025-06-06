@@ -5,7 +5,7 @@ export const graphicProjects: ProjectCollection = {
   branding: [
     { id: "1", title: "Photo Manipulation", student: "Nidhi Pastey", year: "2023", image: "/lovable-uploads/1a3a3944-560e-40df-8dc6-84079b2f1f12.png" },
     { id: "2", title: "Tech Startup Branding", student: "Arjun Mehta", year: "2023", image: "/lovable-uploads/e50eadd7-d31e-4b3e-a69a-e005ba9bd014.png" },
-    { id: "3", title: "Sitcom Illustrations", student: "Tanu & Mayank", year: "2024", semester: "6th Semester", image: "/lovable-uploads/9e6beab0-9d49-4293-b06d-e13fb0eaf57b.png" },
+    { id: "3", title: "Startup Branding", student: "Tanu & Mayank", year: "2024", semester: "6th Semester", image: "/lovable-uploads/9e6beab0-9d49-4293-b06d-e13fb0eaf57b.png" },
     { id: "4", title: "Artisanal Coffee Branding", student: "Vikram Reddy", year: "2022", image: "/lovable-uploads/ef3ea604-aaf8-4387-99a1-55ac188ac260.png" },
   ],
   digital: [
