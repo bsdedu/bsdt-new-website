@@ -9,6 +9,7 @@ import { HeroSection } from "@/components/program/graphic-design/HeroSection";
 import { ProgramOverviewSection } from "@/components/program/graphic-design/ProgramOverviewSection";
 import { CustomFacultySection } from "@/components/program/graphic-design/CustomFacultySection";
 import { StudioSection } from "@/components/program/graphic-design/StudioSection";
+import { StudentLearningSection } from "@/components/program/StudentLearningSection";
 
 const ProgramGraphicDesign = () => {
   return (
@@ -22,6 +23,7 @@ const ProgramGraphicDesign = () => {
 
       <HeroSection />
       <ProgramOverviewSection />
+      <StudentLearningSection />
       <StudentWorksGallery 
         title="Graphic Design Student Projects"
         description="Explore the creative works of our Graphic Design students, showcasing their expertise in branding, digital design, and print media."
