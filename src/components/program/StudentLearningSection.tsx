@@ -23,56 +23,56 @@ export const StudentLearningSection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="relative group overflow-hidden rounded-xl shadow-lg">
               <img 
-                src="/lovable-uploads/3c2bfc8e-1416-437e-b948-3076ba014625.png" 
-                alt="Students collaborating and celebrating together" 
+                src="/lovable-uploads/1597e85c-9001-4ca7-bad1-23f442ef2c46.png" 
+                alt="Students collaborating on design projects with faculty guidance" 
                 className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-bsd-gray/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <h3 className="font-semibold mb-1">Creative Collaboration</h3>
-                  <p className="text-sm opacity-90">Students working together on inspiring projects</p>
+                  <h3 className="font-semibold mb-1">Faculty Mentorship</h3>
+                  <p className="text-sm opacity-90">One-on-one guidance from industry experts</p>
                 </div>
               </div>
             </div>
 
             <div className="relative group overflow-hidden rounded-xl shadow-lg">
               <img 
-                src="/lovable-uploads/7f9499bd-ba99-48e9-9080-7e30a96ad71e.png" 
-                alt="Students presenting and discussing design concepts" 
+                src="/lovable-uploads/d1c8421a-7e9c-4617-bea7-2d63f830c507.png" 
+                alt="Students working on design concepts and layouts" 
                 className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-bsd-gray/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <h3 className="font-semibold mb-1">Design Presentations</h3>
-                  <p className="text-sm opacity-90">Presenting concepts and getting feedback</p>
+                  <h3 className="font-semibold mb-1">Design Development</h3>
+                  <p className="text-sm opacity-90">Collaborative brainstorming and concept creation</p>
                 </div>
               </div>
             </div>
 
             <div className="relative group overflow-hidden rounded-xl shadow-lg">
               <img 
-                src="/lovable-uploads/94b41ba7-ec67-4fa4-8c87-9b30cf4155dd.png" 
-                alt="Student focused on creative work and exploration" 
+                src="/lovable-uploads/276ed623-1f52-4bf9-9c24-ed45c553845d.png" 
+                alt="Students reviewing and discussing design work" 
                 className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-bsd-gray/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <h3 className="font-semibold mb-1">Focused Creation</h3>
-                  <p className="text-sm opacity-90">Deep concentration on creative exploration</p>
+                  <h3 className="font-semibold mb-1">Project Review</h3>
+                  <p className="text-sm opacity-90">Peer feedback and design critique sessions</p>
                 </div>
               </div>
             </div>
 
             <div className="relative group overflow-hidden rounded-xl shadow-lg">
               <img 
-                src="/lovable-uploads/65fd0c85-ad27-4a85-927d-59a271e3ecd6.png" 
-                alt="Student working on digital projects" 
+                src="/lovable-uploads/7173c77f-042d-40e3-b875-c88be912795f.png" 
+                alt="Students showcasing their work in the design studio" 
                 className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-bsd-gray/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <h3 className="font-semibold mb-1">Digital Innovation</h3>
-                  <p className="text-sm opacity-90">Exploring digital design and technology</p>
+                  <h3 className="font-semibold mb-1">Studio Showcase</h3>
+                  <p className="text-sm opacity-90">Presenting final projects and achievements</p>
                 </div>
               </div>
             </div>
