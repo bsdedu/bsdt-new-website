@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -21,7 +20,7 @@ type FormData = z.infer<typeof formSchema>;
 export const FloatingEnquiryForm = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const { toast } = useToast();
-  
+
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -42,66 +41,61 @@ export const FloatingEnquiryForm = () => {
   };
 
   return (
-    <div className={cn(
-      "fixed right-0 top-1/2 -translate-y-1/2 z-[99999]",
-      isExpanded ? "translate-x-0" : "translate-x-[calc(100%-2rem)]"
-    )}>
-      <div className="relative flex items-start">
-        {/* Trigger button */}
+    <>
+      {/* Trigger button */}
+      <div className="fixed right-0 top-1/2 -translate-y-1/2 z-[99999]">
         <button
-          onClick={() => setIsExpanded(!isExpanded)}
+          onClick={() => setIsExpanded(true)}
           className={cn(
-            "bg-bsd-orange text-white px-2 py-4 rounded-l-lg writing-vertical transform rotate-180 whitespace-nowrap text-sm sticky top-0",
+            "bg-bsd-orange text-white px-2 py-4 rounded-l-lg writing-vertical whitespace-nowrap text-sm sticky top-0",
             "hover:bg-bsd-orange/90 transition-colors flex items-center gap-1"
           )}
-          style={{ writingMode: 'vertical-rl' }}
+          style={{ writingMode: 'vertical-lr' }}
         >
-          {isExpanded ? (
-            <>
-              <X className="w-3 h-3" />
-              Close
-            </>
-          ) : (
-            <>
-              <MessageSquare className="w-3 h-3" />
-              Enquire Now
-            </>
-          )}
+          <MessageSquare className="w-3 h-3" />
+          Enquire Now
         </button>
-
-        {/* Form panel */}
-        <div className={cn(
-          "bg-white p-6 shadow-lg w-80 border-l border-t border-b border-gray-200 sticky top-0",
-          isExpanded ? "opacity-100" : "opacity-0 pointer-events-none"
-        )}>
-          <h3 className="text-lg font-semibold text-bsd-gray mb-4">Quick Enquiry</h3>
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-              <FormItem>
-                <FormControl>
-                  <Input placeholder="Your Name" {...form.register("name")} />
-                </FormControl>
-              </FormItem>
-              
-              <FormItem>
-                <FormControl>
-                  <Input type="email" placeholder="Email Address" {...form.register("email")} />
-                </FormControl>
-              </FormItem>
-              
-              <FormItem>
-                <FormControl>
-                  <Input placeholder="Phone Number" {...form.register("phone")} />
-                </FormControl>
-              </FormItem>
-              
-              <Button type="submit" className="w-full bg-bsd-orange hover:bg-bsd-orange/90">
-                Submit Enquiry
-              </Button>
-            </form>
-          </Form>
-        </div>
       </div>
-    </div>
+
+      {/* Popup */}
+      {isExpanded && (
+        <div className="fixed inset-0 bg-black/50 z-[99998] flex items-center justify-center">
+          <div className="bg-white p-6 shadow-lg w-96 rounded-lg relative">
+            <button
+              onClick={() => setIsExpanded(false)}
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            <h3 className="text-lg font-semibold text-bsd-gray mb-4">Quick Enquiry</h3>
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                <FormItem>
+                  <FormControl>
+                    <Input placeholder="Your Name" {...form.register("name")} />
+                  </FormControl>
+                </FormItem>
+
+                <FormItem>
+                  <FormControl>
+                    <Input type="email" placeholder="Email Address" {...form.register("email")} />
+                  </FormControl>
+                </FormItem>
+
+                <FormItem>
+                  <FormControl>
+                    <Input placeholder="Phone Number" {...form.register("phone")} />
+                  </FormControl>
+                </FormItem>
+
+                <Button type="submit" className="w-full bg-bsd-orange hover:bg-bsd-orange/90">
+                  Submit Enquiry
+                </Button>
+              </form>
+            </Form>
+          </div>
+        </div>
+      )}
+    </>
   );
 };

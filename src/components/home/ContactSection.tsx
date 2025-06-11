@@ -40,7 +40,7 @@ export const ContactSection: React.FC = () => {
 
         <RevealSection>
           <div className="bg-white rounded-xl shadow-sm border border-border/40 p-6">
-          <div className="npf_wgts" data-height="400px" data-w="14fe90258f1849328c9ebb3adc9782bb"></div>
+          <div className="npf_wgts" data-height="800px" data-w="14fe90258f1849328c9ebb3adc9782bb"></div>
             {/*
             <form className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
