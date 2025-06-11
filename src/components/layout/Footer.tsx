@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { cn } from "@/lib/utils";
 import { Facebook, Instagram, Linkedin, Youtube, Mail, Phone, MapPin, Clock, ExternalLink } from "lucide-react";
@@ -158,9 +157,9 @@ No.4/3, Opposite B.D.S Nagar, Devanna Compound, K.Narayanapura, Kothanur Post, B
               © {new Date().getFullYear()} Bangalore School of Design & Technology. All rights reserved.
             </p>
             <div className="mt-4 md:mt-0 flex space-x-6">
-              <a href="#" className="text-xs text-white/60 hover:text-white/80 transition-colors">
+              <Link to="/privacy-policy" className="text-xs text-white/60 hover:text-white/80 transition-colors">
                 Privacy Policy
-              </a>
+              </Link>
               <a href="#" className="text-xs text-white/60 hover:text-white/80 transition-colors">
                 Terms of Service
               </a>

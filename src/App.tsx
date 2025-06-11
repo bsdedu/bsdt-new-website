@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -10,6 +11,7 @@ import { FloatingWhatsAppCTA } from "./components/ui-elements/FloatingWhatsAppCT
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import AboutBSDT from "./pages/AboutBSDT";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import LeadershipGovernance from "./pages/LeadershipGovernance";
 import ProgramInteriorDesign from "./pages/ProgramInteriorDesign";
 import ProgramGraphicDesign from "./pages/ProgramGraphicDesign";
@@ -60,6 +62,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/about" element={<AboutBSDT />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/leadership" element={<LeadershipGovernance />} />
               <Route path="/academics/bsc-interior-design" element={<ProgramInteriorDesign />} />
               <Route path="/academics/bva-graphic-design" element={<ProgramGraphicDesign />} />
