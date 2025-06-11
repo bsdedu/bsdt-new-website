@@ -14,8 +14,8 @@ const ProgramBCA = () => {
   return (
     <>
       <Helmet>
-        <title>BCA in UI/UX & AI/ML | BSDT</title>
-        <meta name="description" content="Pursue a Bachelor of Computer Applications with specialization in UI/UX Design or AI/ML at Bangalore School of Design & Technology. Develop technical and creative skills for modern tech industry roles." />
+        <title>BCA with UI/UX | BSDT</title>
+        <meta name="description" content="Pursue a Bachelor of Computer Applications with specialization in UI/UX Design at Bangalore School of Design & Technology. Develop technical and creative skills for modern tech industry roles." />
       </Helmet>
 
       <Navbar />

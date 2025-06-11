@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { cn } from "@/lib/utils";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
@@ -11,8 +10,18 @@ export const HeroSection: React.FC = () => {
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   // Images for the student showcase carousel
-  const studentImages = ["/lovable-uploads/fc9c4875-4b4b-44a9-b8ad-3eb5db1ed2cc.png", "/lovable-uploads/0ae77c0c-8ef4-404c-abf0-bb90598dfbf4.png", "/lovable-uploads/e48b8c13-052e-4d80-ada8-db3eaf003d21.png"];
-  const imageDescriptions = ["Students celebrating at BSDT annual showcase event", "International Mentors engaging with students on design projects", "Innovative learning at BSDT"];
+  const studentImages = [
+    "/lovable-uploads/fc9c4875-4b4b-44a9-b8ad-3eb5db1ed2cc.png", 
+    "/lovable-uploads/0ae77c0c-8ef4-404c-abf0-bb90598dfbf4.png", 
+    "/lovable-uploads/e48b8c13-052e-4d80-ada8-db3eaf003d21.png",
+    "/lovable-uploads/4825af86-9e9e-4ba0-9f35-6dc7889f93ad.png"
+  ];
+  const imageDescriptions = [
+    "Students celebrating at BSDT annual showcase event", 
+    "International Mentors engaging with students on design projects", 
+    "Innovative learning at BSDT",
+    "Graduation ceremony celebrating student achievements"
+  ];
 
   // Handle auto-play functionality manually
   const startAutoPlay = useCallback(() => {
@@ -71,7 +80,8 @@ export const HeroSection: React.FC = () => {
     };
   }, []);
   
-  return <section className="relative min-h-screen flex items-center overflow-hidden pt-10 pb-30 py-0">
+  return (
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-10 pb-30 py-0">
       {/* Background Elements with Images */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-white/80 z-10"></div>
@@ -140,7 +150,8 @@ export const HeroSection: React.FC = () => {
               duration: 50
             }} setApi={setApi}>
                 <CarouselContent>
-                  {studentImages.map((image, index) => <CarouselItem key={index}>
+                  {studentImages.map((image, index) => (
+                    <CarouselItem key={index}>
                       <div className="relative">
                         <div className="aspect-[4/3] w-full">
                           <img src={image} alt={imageDescriptions[index]} className="w-full h-full object-cover" />
@@ -151,7 +162,8 @@ export const HeroSection: React.FC = () => {
                           <p className="text-lg md:text-xl font-medium drop-shadow-md">{imageDescriptions[index]}</p>
                         </div>
                       </div>
-                    </CarouselItem>)}
+                    </CarouselItem>
+                  ))}
                 </CarouselContent>
                 <CarouselPrevious className="left-4 bg-white/80 hover:bg-white text-foreground" />
                 <CarouselNext className="right-4 bg-white/80 hover:bg-white text-foreground" />
@@ -164,5 +176,6 @@ export const HeroSection: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };

@@ -47,7 +47,7 @@ export const CustomFacultySection: React.FC = () => {
             {facultyMembers.map((faculty, index) => (
               <Card key={index} className="overflow-hidden border-0 shadow-md transition-all duration-300 hover:shadow-xl text-center p-6">
                 <div className="flex justify-center mb-4">
-                  <div className="w-32 h-32 rounded-full border-4 border-bsd-orange/20 overflow-hidden">
+                  <div className="w-32 h-32 rounded-full overflow-hidden">
                     <img 
                       src={faculty.imageUrl} 
                       alt={faculty.name} 

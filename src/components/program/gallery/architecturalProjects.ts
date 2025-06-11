@@ -1,49 +1,40 @@
+
 import { Project } from './types';
 
 export const architecturalProjects: Project[] = [
   {
     id: 'arch-1',
-    title: 'Sustainable Urban Housing Complex',
-    description: 'A sustainable urban housing complex design that incorporates green spaces and renewable energy sources.',
-    student: 'Priya Sharma',
+    title: 'Row-Housing project',
+    description: 'A contemporary row housing development featuring modern design principles and efficient space utilization.',
+    student: 'Alina',
     year: '2024',
-    semester: '7th Semester',
-    image: '/lovable-uploads/709b9573-ed78-4f01-bc33-f153a0d0c679.png',
-  },
-  {
-    id: 'arch-2',
-    title: 'Modern Commercial Office Space',
-    description: 'A contemporary commercial office design with flexible workspaces and collaborative zones.',
-    student: 'Rahul Mehta',
-    year: '2023',
-    semester: '6th Semester',
-    image: '/placeholder.svg', // Replaced with a placeholder that should definitely exist
-  },
-  {
-    id: 'arch-3',
-    title: 'Cultural Center with Traditional Elements',
-    description: 'A cultural center that blends modern architecture with traditional Indian design elements.',
-    student: 'Ananya Patel',
-    year: '2024',
-    semester: '7th Semester',
-    image: '/lovable-uploads/0ae77c0c-8ef4-404c-abf0-bb90598dfbf4.png',
+    semester: '4th Semester',
+    image: '/lovable-uploads/66fc8cb6-ad09-4f8b-a510-fd7837b2f91d.png',
   },
   {
     id: 'arch-4',
     title: 'Eco-friendly Residential Villa',
     description: 'An eco-friendly villa design that minimizes environmental impact while maximizing comfort.',
-    student: 'Vikram Singh',
-    year: '2023',
-    semester: '8th Semester',
-    image: '/lovable-uploads/fb0f9a42-b665-42ed-a4f5-50557f6a5093.png',
+    student: 'Darshan',
+    year: '2024',
+    semester: '4th Semester',
+    image: '/lovable-uploads/fbf11841-3ccd-4706-a287-a1e7f880bb88.png',
   },
   {
-    id: 'arch-5',
-    title: 'Public Library and Learning Center',
-    description: 'A modern library design that creates dynamic spaces for learning and community engagement.',
-    student: 'Meera Krishnan',
+    id: 'arch-7',
+    title: 'Sustainable Urban Housing Complex',
+    description: 'The Linear Nest Row Housing is a modern residential complex that features sustainable building techniques in a sleek, functional design. Organized in a linear format, the project focuses on modularity, ventilation, and energy efficiency while maintaining contemporary aesthetic elements of its architectural language.',
+    student: 'Gokul',
     year: '2024',
     semester: '6th Semester',
-    image: '/lovable-uploads/4869cbcd-2619-477f-b5c6-bfdeccf70093.png',
+    image: '/lovable-uploads/8f82b7d2-5ef6-48f1-99e0-7ad31d4b24dc.png',
+  },
+  {
+    id: "4",
+    title: "Adaptive Reuse Project",
+    student: "Riaa",
+    year: "2024",
+    semester: "5th Semester",
+    image: "/lovable-uploads/8b748831-aee6-4ad0-8436-f8dda916be74.png",
   }
 ];

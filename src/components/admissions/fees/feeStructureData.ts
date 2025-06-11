@@ -1,4 +1,3 @@
-
 type Program = {
   name: string;
   specialization?: string;
@@ -90,7 +89,7 @@ export const feeStructureData: FeeStructure = {
       semesterFees: [40800, null, null, null, null, null, null, null]
     },
     {
-      name: "Post Graduate Diploma in Landscape Design",
+      name: "Professional Diploma in Landscape Design",
       duration: "1 Year",
       semesters: 2,
       totalFee: 147500,

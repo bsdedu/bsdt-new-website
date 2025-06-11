@@ -14,8 +14,12 @@ export const projectCategories: Record<string, Project[]> = {
   digital: graphicProjects.digital || [],
   print: graphicProjects.print || [],
   
-  // Animation & Game Design categories
-  animation: animationProjects.animation || [],
+  // Animation & Game Design categories - merged all into one animation category
+  animation: [
+    ...(animationProjects.animation || []),
+    ...(animationProjects.game || []),
+    ...(animationProjects.character || [])
+  ],
   game: animationProjects.game || [],
   character: animationProjects.character || [],
   
@@ -49,7 +53,7 @@ export const getProjectCategories = (programPath: string): string[] => {
   if (programPath.includes('interior-design')) {
     return ['residential', 'commercial', 'conceptual'];
   } else if (programPath.includes('animation-game-design')) {
-    return ['animation', 'game', 'character'];
+    return ['animation']; // Only show the merged animation category
   } else if (programPath.includes('bca-uiux-aiml')) {
     return ['uiux', 'aiml', 'webapps'];
   } else if (programPath.includes('bdes-interaction-experience')) {

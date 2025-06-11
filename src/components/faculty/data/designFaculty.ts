@@ -1,4 +1,3 @@
-
 import { FacultyMember } from '../types';
 
 export const designFaculty: FacultyMember[] = [
@@ -122,5 +121,38 @@ export const designFaculty: FacultyMember[] = [
     qualifications: "M.Tech (Structures) from SJB Institute of Technology, Gold Medalist",
     specialization: "Landscape Engineering, Structural Design for Outdoor Spaces",
     achievements: "Published in international journals, conducted seminars on innovative construction practices"
+  },
+  {
+    id: 17,
+    name: "Yogesh Praveen D",
+    role: "Assistant Professor, Graphic Design & Visual Communication",
+    bio: "An Assistant Professor in Graphic Design & Visual Communication, Yogesh Praveen D brings 9 years of industry experience in branding, advertising, UI/UX, web design, and photo compositing. Holding a B.Sc. in Computer Science from Tiruvallur University, he specializes in integrating design principles with emerging technologies like AI, AR, and VR. Passionate about mentorship and sustainability, he envisions a design future where technology, creativity, and nature coexist harmoniously. His teaching philosophy encourages experimentation, critical thinking, and impactful design solutions, preparing students for the ever-evolving creative industry.",
+    imageUrl: "/lovable-uploads/8073acf9-58b8-42aa-b127-5b645e3ed887.png",
+    department: 'Design',
+    qualifications: "B.Sc. in Computer Science, Tiruvallur University",
+    specialization: "Branding, Advertising, UI/UX, Web Design, Photo Compositing, AI/AR/VR Integration",
+    achievements: "9 years of industry experience in design and visual communication"
+  },
+  {
+    id: 19,
+    name: "Lakshmi Gopalakrishnan",
+    role: "Lecturer, Design Faculty",
+    bio: "Lakshmi is professionally trained in science and computer education, but as a passionate artist At BSD she works with design students to help them build their creative senses and also guides them with methods of creative expression. She takes classes on the fundamentals of drawing, colour theory, art history and conducts workshops that allow students to explore the arts beyond the curriculum",
+    imageUrl: "/lovable-uploads/79fb4ac1-ede2-4413-ad00-92090dd90bb5.png",
+    department: 'Design',
+    qualifications: "Professional training in Science and Computer Education",
+    specialization: "Fundamentals of Drawing, Colour Theory, Art History",
+    achievements: "Conducts workshops for creative expression beyond curriculum"
+  },
+  {
+    id: 20,
+    name: "Amal Satheesh",
+    role: "Assistant Professor",
+    bio: "A passionate UI/UX and Graphic Design faculty, Amal Satheesh holds a Postgraduate Degree in Interaction Design (UI/UX) from Pearl Academy. With expertise in User Research, Wireframing, Prototyping, Interaction Design, Branding, and Visual Communication, he focuses on blending theoretical knowledge with real-world applications.",
+    imageUrl: "/lovable-uploads/9cbaefe8-2412-48f3-bd91-789b5bb89db1.png",
+    department: 'Design',
+    qualifications: "Postgraduate Degree in Interaction Design (UI/UX) from Pearl Academy",
+    specialization: "User Research, Wireframing, Prototyping, Interaction Design, Branding, Visual Communication",
+    achievements: "Blends theoretical knowledge with real-world applications in UI/UX and Graphic Design"
   },
 ];
