@@ -24,9 +24,6 @@ const PrivacyPolicy = () => {
               <h1 className="text-4xl md:text-5xl font-display font-bold text-bsd-gray mb-6">
                 Privacy Policy
               </h1>
-              <p className="text-lg text-foreground/70">
-                Last updated: January 2024
-              </p>
             </div>
           </RevealSection>
 
@@ -34,144 +31,99 @@ const PrivacyPolicy = () => {
             <div className="prose prose-lg max-w-none text-foreground/80">
               <div className="space-y-8">
                 <section>
-                  <h2 className="text-2xl font-semibold text-bsd-gray mb-4">Introduction</h2>
                   <p>
-                    Bangalore School of Design & Technology ("we," "our," or "us") is committed to protecting your privacy. 
-                    This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit 
-                    our website or use our services.
+                    Bangalore School of Design & Technology ("we," "our," or "the Institution") values your privacy and is committed to safeguarding the personal data you provide us. This Privacy Policy outlines how we collect, process, and protect your personal information when you interact with our institution, including via our website or other communication channels. By submitting your personal information to us, you consent to the terms of this Privacy Policy.
                   </p>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-bsd-gray mb-4">Information We Collect</h2>
-                  <h3 className="text-xl font-medium text-bsd-gray mb-3">Personal Information</h3>
+                  <h2 className="text-2xl font-semibold text-bsd-gray mb-4">1. Information We Collect</h2>
                   <p className="mb-4">
-                    We may collect personal information that you voluntarily provide to us when you:
-                  </p>
-                  <ul className="list-disc pl-6 space-y-2 mb-4">
-                    <li>Fill out application forms or enquiry forms</li>
-                    <li>Register for events or workshops</li>
-                    <li>Subscribe to our newsletter</li>
-                    <li>Contact us through our website</li>
-                    <li>Participate in surveys or feedback forms</li>
-                  </ul>
-                  
-                  <h3 className="text-xl font-medium text-bsd-gray mb-3">Automatically Collected Information</h3>
-                  <p className="mb-4">
-                    When you visit our website, we may automatically collect certain information about your device and usage, including:
+                    We collect the following personal data when you express interest in our programs or engage with our services:
                   </p>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li>IP address and location data</li>
-                    <li>Browser type and version</li>
-                    <li>Pages visited and time spent on pages</li>
-                    <li>Referring website addresses</li>
-                    <li>Device information and operating system</li>
+                    <li><strong>Name:</strong> For identification and personalized communication.</li>
+                    <li><strong>Phone Number:</strong> For contacting you regarding your inquiries and updates about our courses.</li>
+                    <li><strong>Email Address:</strong> For sending information related to course details, admission processes, and other relevant communications.</li>
+                    <li><strong>City Name:</strong> To understand your geographic location and offer relevant information.</li>
+                    <li><strong>State Name:</strong> To customize communication based on your location and to offer region-specific details.</li>
+                    <li><strong>Course Interested In:</strong> To provide information tailored to your educational interests.</li>
                   </ul>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-bsd-gray mb-4">How We Use Your Information</h2>
-                  <p className="mb-4">We use the information we collect to:</p>
+                  <h2 className="text-2xl font-semibold text-bsd-gray mb-4">2. How We Use Your Information</h2>
+                  <p className="mb-4">We use the personal information we collect for the following purposes:</p>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li>Process applications and admissions</li>
-                    <li>Provide customer support and respond to inquiries</li>
-                    <li>Send administrative information and updates</li>
-                    <li>Improve our website and services</li>
-                    <li>Send marketing communications (with your consent)</li>
-                    <li>Comply with legal obligations</li>
-                    <li>Protect against fraudulent or illegal activity</li>
+                    <li><strong>Responding to Inquiries:</strong> To address your queries regarding our courses, admissions, and services.</li>
+                    <li><strong>Course and Program Updates:</strong> To send you information about our programs, admissions, deadlines, and other educational content.</li>
+                    <li><strong>Personalized Communication:</strong> To customize our communication with you based on the courses you are interested in.</li>
+                    <li><strong>Application Processing:</strong> To process your applications, conduct follow-ups, and provide necessary information for admission into our courses.</li>
+                    <li><strong>Improvement of Services:</strong> To enhance user experience and improve our website and communication systems.</li>
                   </ul>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-bsd-gray mb-4">Information Sharing and Disclosure</h2>
+                  <h2 className="text-2xl font-semibold text-bsd-gray mb-4">3. Sharing Your Information</h2>
                   <p className="mb-4">
-                    We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, 
-                    except in the following circumstances:
+                    We respect your privacy and will not sell, rent, or lease your personal information. However, we may share your data under the following circumstances:
                   </p>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li>Service providers who assist us in operating our website and services</li>
-                    <li>Educational partners and accreditation bodies as required</li>
-                    <li>Legal compliance when required by law or legal process</li>
-                    <li>Protection of our rights, property, or safety</li>
-                    <li>Business transfers in case of merger or acquisition</li>
+                    <li><strong>With Service Providers:</strong> We may share your information with trusted third-party service providers who assist us in operating our website, processing applications, or sending communications. These third parties are obligated to use your data solely for the purpose of providing these services and are required to keep it confidential.</li>
+                    <li><strong>Legal Obligations:</strong> We may disclose your information to comply with legal obligations, regulations, or requests from governmental authorities, or to protect the rights, property, or safety of our institution, our users, or others.</li>
                   </ul>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-bsd-gray mb-4">Data Security</h2>
+                  <h2 className="text-2xl font-semibold text-bsd-gray mb-4">4. Data Security</h2>
                   <p>
-                    We implement appropriate technical and organizational security measures to protect your personal information 
-                    against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over 
-                    the internet or electronic storage is 100% secure.
+                    We take appropriate technical and organizational measures to protect the personal data you provide from unauthorized access, disclosure, alteration, and destruction. Despite our efforts to protect your data, please be aware that no method of data transmission over the internet or electronic storage is completely secure. While we strive to protect your personal information, we cannot guarantee its absolute security.
                   </p>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-bsd-gray mb-4">Cookies and Tracking Technologies</h2>
+                  <h2 className="text-2xl font-semibold text-bsd-gray mb-4">5. Your Rights</h2>
+                  <p className="mb-4">As a data subject, you have the following rights regarding your personal data:</p>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>Access:</strong> You have the right to request access to the personal data we hold about you.</li>
+                    <li><strong>Rectification:</strong> You have the right to request correction of inaccurate or incomplete information.</li>
+                    <li><strong>Erasure:</strong> You have the right to request the deletion of your personal data, subject to applicable legal requirements.</li>
+                    <li><strong>Restriction of Processing:</strong> You have the right to request restrictions on how your personal data is processed.</li>
+                    <li><strong>Data Portability:</strong> You have the right to request a copy of your personal data in a structured, commonly used, and machine-readable format.</li>
+                    <li><strong>Withdraw Consent:</strong> You can withdraw your consent to receive communications from us at any time by using the opt-out mechanisms provided in our communications or by contacting us directly.</li>
+                  </ul>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-semibold text-bsd-gray mb-4">6. Cookies and Tracking Technologies</h2>
+                  <p>
+                    We may use cookies and similar technologies on our website to enhance user experience, analyze website traffic, and offer personalized content. Cookies are small files stored on your device that track your interactions with our website. You can manage your cookie preferences through your browser settings. Disabling cookies may limit some website functionalities.
+                  </p>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-semibold text-bsd-gray mb-4">7. Third-Party Links</h2>
+                  <p>
+                    Our website may contain links to third-party websites. Please be aware that we are not responsible for the privacy practices of these external sites. We encourage you to review the privacy policies of these third-party websites before sharing any personal data.
+                  </p>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-semibold text-bsd-gray mb-4">8. Changes to This Privacy Policy</h2>
+                  <p>
+                    We may update this Privacy Policy periodically to reflect changes in our data processing practices, legal obligations, or for other operational reasons. Any changes will be posted on this page with an updated "Effective Date." We encourage you to review this Privacy Policy regularly to stay informed about how we are protecting your personal information.
+                  </p>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-semibold text-bsd-gray mb-4">9. Contact Us</h2>
                   <p className="mb-4">
-                    We use cookies and similar tracking technologies to enhance your experience on our website. You can control 
-                    cookie settings through your browser preferences. We use cookies for:
-                  </p>
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li>Essential website functionality</li>
-                    <li>Analytics and performance monitoring</li>
-                    <li>Personalization of content</li>
-                    <li>Marketing and advertising purposes</li>
-                  </ul>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-semibold text-bsd-gray mb-4">Your Rights and Choices</h2>
-                  <p className="mb-4">You have the right to:</p>
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li>Access and review your personal information</li>
-                    <li>Correct inaccurate or incomplete information</li>
-                    <li>Request deletion of your personal information</li>
-                    <li>Object to processing of your personal information</li>
-                    <li>Withdraw consent for marketing communications</li>
-                    <li>Request data portability</li>
-                  </ul>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-semibold text-bsd-gray mb-4">Children's Privacy</h2>
-                  <p>
-                    Our services are not directed to children under 13 years of age. We do not knowingly collect personal 
-                    information from children under 13. If we become aware that we have collected personal information from 
-                    a child under 13, we will take steps to delete such information.
-                  </p>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-semibold text-bsd-gray mb-4">International Data Transfers</h2>
-                  <p>
-                    Your information may be transferred to and processed in countries other than your own. We ensure that 
-                    such transfers are conducted in accordance with applicable data protection laws and with appropriate 
-                    safeguards in place.
-                  </p>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-semibold text-bsd-gray mb-4">Changes to This Privacy Policy</h2>
-                  <p>
-                    We may update this Privacy Policy from time to time. We will notify you of any material changes by 
-                    posting the new Privacy Policy on this page and updating the "Last updated" date. Your continued use 
-                    of our services after such modifications constitutes acceptance of the updated Privacy Policy.
-                  </p>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-semibold text-bsd-gray mb-4">Contact Information</h2>
-                  <p className="mb-4">
-                    If you have any questions about this Privacy Policy or our privacy practices, please contact us:
+                    If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us at:
                   </p>
                   <div className="bg-bsd-light-gray rounded-lg p-6">
                     <p className="mb-2"><strong>Bangalore School of Design & Technology</strong></p>
-                    <p className="mb-2">No.4/3, Opposite B.D.S Nagar, Devanna Compound</p>
-                    <p className="mb-2">K.Narayanapura, Kothanur Post, Bangalore – 560077</p>
-                    <p className="mb-2">Email: enquiry@bsd.edu.in</p>
-                    <p>Phone: +91 9620202871 | +91 9845779000</p>
+                    <p className="mb-2">No.4/3, Opposite B.D.S Nagar, Devanna Compound, K.Narayanapura, Kothanur Post, Bangalore – 560077</p>
+                    <p>Email: enquiry@bsd.edu.in</p>
                   </div>
                 </section>
               </div>
