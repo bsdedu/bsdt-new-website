@@ -30,7 +30,7 @@ export const HeroSection: React.FC = () => {
                 >
                   Apply Now
                 </AnimatedButton>
-                <AnimatedButton href="/admissions/schedule-visit" variant="outline">
+                <AnimatedButton href="/plan-a-visit" variant="outline">
                   Schedule a Visit
                 </AnimatedButton>
               </div>

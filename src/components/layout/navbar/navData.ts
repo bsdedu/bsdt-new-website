@@ -25,22 +25,22 @@ export const navStructure: NavStructure[] = [
       {
         title: 'UG DEGREE PROGRAMS',
         items: [
-          { name: 'B.Sc Interior Design', href: '/programs/bsc-interior-design' },
-          { name: 'BVA Graphic & Communication Design', href: '/programs/bva-graphic-design' },
-          { name: 'BVA Animation & Game Design', href: '/programs/bva-animation-game-design' },
-          { name: 'BCA with UI/UX & AI/ML', href: '/programs/bca-uiux-aiml' },
+          { name: 'B.Sc Interior Design', href: '/academics/bsc-interior-design' },
+          { name: 'BVA Graphic & Communication Design', href: '/academics/bva-graphic-design' },
+          { name: 'BVA Animation & Game Design', href: '/bva-animation-and-multimedia-game-design' },
+          { name: 'BCA with UI/UX & AI/ML', href: '/academics/b-computer-application-ui-ux' },
           { name: 'B.Sc Computer Science Data Analytics & Cyber Security', href: '/programs/bsc-cs-analytics-security' },
-          { name: 'B.Des in Interaction & Experience Design', href: '/programs/bdes-interaction-experience' },
-          { name: 'B.Des in Architectural Construction Design', href: '/programs/bdes-architectural-design' }
+          { name: 'B.Des in Interaction & Experience Design', href: '/academics/b-des-interaction-and-experience-design' },
+          { name: 'B.Des in Architectural Construction Design', href: '/academics/b-des-architectural-design' }
         ]
       },
       {
         title: 'DIPLOMA PROGRAMS',
         items: [
-          { name: 'Professional Dip. Interior Design', href: '/programs/diploma-interior-design' },
-          { name: 'Professional Dip. Visual Communication + UI & UX', href: '/programs/diploma-graphic-uiux' },
-          { name: 'Professional Dip. in UI & UX', href: '/programs/diploma-uiux' },
-          { name: 'Post Grad Dip. Landscape Design', href: '/programs/pgd-landscape-design' }
+          { name: 'Professional Dip. Interior Design', href: '/academics/professional-diploma-in-interior-design' },
+          { name: 'Professional Dip. Visual Communication + UI & UX', href: '/academics/professional-diploma-graphics-design-ui-ux' },
+          { name: 'Professional Dip. in UI & UX', href: '/academics/diploma-in-hci-for-ui-ux' },
+          { name: 'Post Grad Dip. Landscape Design', href: '/academics/post-graduate-diploma-in-landscape-design' }
         ]
       }
     ]
@@ -52,11 +52,11 @@ export const navStructure: NavStructure[] = [
     items: [
       { name: 'Application Process', href: '/admissions/application-process' },
       { name: 'Fees & Scholarships', href: '/admissions/fees-scholarships' },
-      { name: 'Schedule a Campus Visit', href: '/admissions/schedule-visit' },
-      { name: 'Faculty', href: '/admissions/faculty' },
-      { name: 'Studio BSD', href: '/admissions/studio-bsd' },
-      { name: 'We Go Beyond Curriculum', href: '/admissions/beyond-curriculum' },
-      { name: 'FAQs', href: '/admissions/faqs' }
+      { name: 'Schedule a Campus Visit', href: '/plan-a-visit' },
+      { name: 'Faculty', href: '/faculty' },
+      { name: 'Studio BSD', href: '/studio-bsd' },
+      { name: 'We Go Beyond Curriculum', href: '/we-go-beyond-curriculum' },
+      { name: 'FAQs', href: '/request-information' }
     ]
   },
   {
@@ -64,11 +64,11 @@ export const navStructure: NavStructure[] = [
     href: '#campus-life',
     type: 'dropdown',
     items: [
-      { name: 'Student Clubs', href: '/campus-life/student-clubs' },
+      { name: 'Student Clubs', href: '/student-clubs' },
       { name: 'Student Experience', href: '/student-experience' },
-      { name: 'Sports Facility', href: '/campus-life/sports-facility' },
+      { name: 'Sports Facility', href: '/sports-facilities' },
       { name: 'Events & Activities', href: '/campus-life/events-activities' },
-      { name: 'Hostel & Transport', href: '/campus-life/hostel-transport' }
+      { name: 'Hostel & Transport', href: '/housing-transport' }
     ]
   },
   {
@@ -76,8 +76,8 @@ export const navStructure: NavStructure[] = [
     href: '#about',
     type: 'dropdown',
     items: [
-      { name: 'About BSDT', href: '/about-bsdt' },
-      { name: 'Leadership & Governance', href: '/leadership-governance' }
+      { name: 'About BSDT', href: '/about' },
+      { name: 'Leadership & Governance', href: '/leadership' }
     ]
   }
 ];

@@ -61,13 +61,13 @@ export const Footer: React.FC = () => {
             <h4 className="text-sm font-semibold uppercase tracking-wider text-bsd-orange">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/about-bsdt" className="text-sm text-white/80 hover:text-white transition-colors flex items-center">
+                <Link to="/about" className="text-sm text-white/80 hover:text-white transition-colors flex items-center">
                   <ExternalLink className="w-4 h-4 mr-2" />
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/programs/bdes-interaction-experience" className="text-sm text-white/80 hover:text-white transition-colors flex items-center">
+                <Link to="/academics/b-des-interaction-and-experience-design" className="text-sm text-white/80 hover:text-white transition-colors flex items-center">
                   <ExternalLink className="w-4 h-4 mr-2" />
                   Popular Programs
                 </Link>
@@ -91,7 +91,7 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/admissions/faculty" className="text-sm text-white/80 hover:text-white transition-colors flex items-center">
+                <Link to="/faculty" className="text-sm text-white/80 hover:text-white transition-colors flex items-center">
                   <ExternalLink className="w-4 h-4 mr-2" />
                   Our Faculty
                 </Link>

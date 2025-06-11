@@ -1,9 +1,8 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"; // Updated import
 import { HelmetProvider } from 'react-helmet-async';
 import { FloatingEnquiryForm } from "./components/ui-elements/FloatingEnquiryForm";
 import { FloatingCallCTA } from "./components/ui-elements/FloatingCallCTA";
@@ -60,37 +59,42 @@ const App = () => {
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Index />} />
-              <Route path="/about-bsdt" element={<AboutBSDT />} />
-              <Route path="/leadership-governance" element={<LeadershipGovernance />} />
-              <Route path="/programs/bsc-interior-design" element={<ProgramInteriorDesign />} />
-              <Route path="/programs/bva-graphic-design" element={<ProgramGraphicDesign />} />
-              <Route path="/programs/bva-animation-game-design" element={<ProgramAnimationGameDesign />} />
-              <Route path="/programs/bca-uiux-aiml" element={<ProgramBCA />} />
+              <Route path="/about" element={<AboutBSDT />} />
+              <Route path="/leadership" element={<LeadershipGovernance />} />
+              <Route path="/academics/bsc-interior-design" element={<ProgramInteriorDesign />} />
+              <Route path="/academics/bva-graphic-design" element={<ProgramGraphicDesign />} />
+              <Route path="/bva-animation-and-multimedia-game-design" element={<ProgramAnimationGameDesign />} />
+              <Route path="/academics/b-computer-application-ui-ux" element={<ProgramBCA />} />
               <Route path="/programs/bsc-cs-analytics-security" element={<ProgramBScCS />} />
-              <Route path="/programs/bdes-interaction-experience" element={<ProgramInteractionExperience />} />
-              <Route path="/programs/bdes-architectural-design" element={<ProgramArchitecturalDesign />} />
+              <Route path="/academics/b-des-interaction-and-experience-design" element={<ProgramInteractionExperience />} />
+              <Route path="/academics/b-des-architectural-design" element={<ProgramArchitecturalDesign />} />
               <Route path="/programs/bdes-architectural-construction" element={<ProgramArchitecturalDesign />} />
               <Route path="/placement-report" element={<PlacementReport />} />
               
               {/* Diploma Program Routes */}
-              <Route path="/programs/diploma-graphic-uiux" element={<DiplomaProgramGraphicUIUX />} />
-              <Route path="/programs/diploma-interior-design" element={<DiplomaProgramInteriorDesign />} />
+              <Route path="/academics/professional-diploma-graphics-design-ui-ux" element={<DiplomaProgramGraphicUIUX />} />
+              <Route path="/academics/professional-diploma-in-interior-design" element={<DiplomaProgramInteriorDesign />} />
               <Route path="/programs/diploma-hci-uiux" element={<DiplomaProgramHCIUIUX />} />
-              <Route path="/programs/diploma-uiux" element={<DiplomaProgramHCIUIUX />} /> 
-              <Route path="/programs/pgd-landscape-design" element={<DiplomaProgramLandscapeDesign />} />
+              <Route path="/academics/diploma-in-hci-for-ui-ux" element={<DiplomaProgramHCIUIUX />} /> 
+              <Route path="/academics/post-graduate-diploma-in-landscape-design" element={<DiplomaProgramLandscapeDesign />} />
               
               {/* Admissions Routes */}
               <Route path="/admissions/application-process" element={<ApplicationProcess />} />
               <Route path="/admissions/fees-scholarships" element={<FeesScholarships />} />
-              <Route path="/admissions/schedule-visit" element={<ScheduleVisit />} />
-              <Route path="/admissions/faculty" element={<Faculty />} />
-              <Route path="/admissions/studio-bsd" element={<StudioBSD />} />
-              <Route path="/admissions/beyond-curriculum" element={<BeyondCurriculum />} />
-              <Route path="/admissions/faqs" element={<FAQs />} />
+              <Route path="/plan-a-visit" element={<ScheduleVisit />} />
+              <Route path="/faculty" element={<Faculty />} />
+              <Route path="/studio-bsd" element={<StudioBSD />} />
+              <Route path="/we-go-beyond-curriculum" element={<BeyondCurriculum />} />
+              <Route path="/request-information" element={<FAQs />} />
+              <Route path="/design-studio-2" element={<Navigate to="/we-go-beyond-curriculum?from=design-studio-2" replace />} /> {/* Updated route */}
+              <Route path="/workshops" element={<Navigate to="/we-go-beyond-curriculum?from=workshops" replace />} /> {/* New route */}
+              <Route path="/guest-lectures" element={<Navigate to="/we-go-beyond-curriculum?from=guest-lectures" replace />} /> {/* New route */}
+              <Route path="/off-campus-learning" element={<Navigate to="/we-go-beyond-curriculum?from=off-campus-learning" replace />} /> {/* New route */}
+              <Route path="/site-visits" element={<Navigate to="/we-go-beyond-curriculum?from=site-visits" replace />} /> {/* New route */}
               
               {/* Campus Life Routes */}
-              <Route path="/campus-life/hostel-transport" element={<HostelTransport />} />
-              <Route path="/campus-life/student-clubs" element={<StudentClubs />} />
+              <Route path="/housing-transport" element={<HostelTransport />} />
+              <Route path="/student-clubs" element={<StudentClubs />} />
               <Route path="/campus-life/events-activities" element={<EventsActivities />} />
               <Route path="/student-experience" element={<StudentExperience />} />
               

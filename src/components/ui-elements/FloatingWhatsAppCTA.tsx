@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils"; 
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -23,7 +22,7 @@ export const FloatingWhatsAppCTA: React.FC = () => {
   
   return (
     <div className={cn(
-      "fixed bottom-24 z-[99999] transition-all duration-300 ease-in-out", 
+      "fixed bottom-40 z-[99999] transition-all duration-300 ease-in-out", 
       isMobile ? "right-4" : "right-8"
     )}>
       {isExpanded ? (

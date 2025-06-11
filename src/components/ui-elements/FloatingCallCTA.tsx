@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils"; 
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -23,7 +22,7 @@ export const FloatingCallCTA: React.FC = () => {
   
   return (
     <div className={cn(
-      "fixed bottom-10 z-[99999] transition-all duration-300 ease-in-out", 
+      "fixed bottom-24 z-[99999] transition-all duration-300 ease-in-out", 
       isMobile ? "right-4" : "right-8"
     )}>
       {isExpanded ? (
@@ -53,7 +52,7 @@ export const FloatingCallCTA: React.FC = () => {
           onClick={() => setIsExpanded(true)}
           className={cn(
             "bg-bsd-orange text-white rounded-full p-3 shadow-lg hover:bg-bsd-orange/90 transition-all",
-            "animate-bounce hover:animate-none"
+            ""
           )}
           aria-label="Call us"
         >

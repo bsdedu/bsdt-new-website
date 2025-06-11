@@ -26,7 +26,7 @@ const undergraduatePrograms: Program[] = [
     description: "A 4-year program focusing on innovative architectural design principles, integrating sustainable practices with cutting-edge computational design tools.",
     color: "from-bsd-orange/20 to-bsd-orange/5",
     duration: "4 years",
-    href: "/programs/bdes-architectural-design"
+    href: "/academics/b-des-architectural-design"
   },
   {
     icon: <LayoutDashboard className="w-6 h-6 text-bsd-orange" />,
@@ -34,7 +34,7 @@ const undergraduatePrograms: Program[] = [
     description: "A 4-year program teaching students to create intuitive digital interfaces and meaningful user experiences using advanced UX methodologies and AI tools.",
     color: "from-bsd-orange/20 to-bsd-orange/5",
     duration: "4 years",
-    href: "/programs/bdes-interaction-experience"
+    href: "/academics/b-des-interaction-and-experience-design"
   },
   {
     icon: <PenTool className="w-6 h-6 text-bsd-orange" />,
@@ -50,7 +50,7 @@ const undergraduatePrograms: Program[] = [
     description: "A 4-year program teaching visual storytelling, brand identity, and digital media design using industry-standard tools and AI-assisted workflows.",
     color: "from-bsd-gray/15 to-bsd-gray/5",
     duration: "4 years",
-    href: "/programs/bva-graphic-design"
+    href: "/academics/bva-graphic-design"
   },
   {
     icon: <Gamepad className="w-6 h-6 text-bsd-orange" />,
@@ -58,7 +58,7 @@ const undergraduatePrograms: Program[] = [
     description: "A 4-year program where students master 2D/3D animation, game mechanics, and interactive storytelling using cutting-edge technologies.",
     color: "from-bsd-gray/15 to-bsd-gray/5",
     duration: "4 years",
-    href: "/programs/bva-animation-game-design"
+    href: "/bva-animation-and-multimedia-game-design"
   },
   {
     icon: <Code className="w-6 h-6 text-bsd-orange" />,
@@ -66,7 +66,7 @@ const undergraduatePrograms: Program[] = [
     description: "A 3-year program with specializations in UI/UX and AI/ML, preparing students to develop innovative applications and interfaces.",
     color: "from-bsd-gray/15 to-bsd-gray/5",
     duration: "3 years",
-    href: "/programs/bca-uiux-aiml"
+    href: "/academics/b-computer-application-ui-ux"
   }
 ];
 
@@ -77,7 +77,7 @@ const diplomaPrograms: Program[] = [
     description: "An integrated program combining visual communication fundamentals with user interface and experience design principles for digital platforms.",
     color: "from-bsd-orange/20 to-bsd-orange/5",
     duration: "1 year",
-    href: "/programs/diploma-graphic-uiux"
+    href: "/academics/professional-diploma-graphics-design-ui-ux"
   },
   {
     icon: <LayoutDashboard className="w-6 h-6 text-bsd-orange" />,
@@ -85,7 +85,7 @@ const diplomaPrograms: Program[] = [
     description: "A specialized program teaching user interface and experience design methodologies, prototyping, and usability testing for digital products.",
     color: "from-bsd-gray/15 to-bsd-gray/5",
     duration: "6 months",
-    href: "/programs/diploma-uiux"
+    href: "/academics/diploma-in-hci-for-ui-ux"
   },
   {
     icon: <PenTool className="w-6 h-6 text-bsd-orange" />,
@@ -93,7 +93,7 @@ const diplomaPrograms: Program[] = [
     description: "A professional diploma program focused on teaching interior design principles, space planning, and material selection for various environments.",
     color: "from-bsd-orange/20 to-bsd-orange/5",
     duration: "1 year",
-    href: "/programs/diploma-interior-design"
+    href: "/academics/professional-diploma-in-interior-design"
   },
   {
     icon: <GraduationCap className="w-6 h-6 text-bsd-orange" />,
@@ -101,7 +101,7 @@ const diplomaPrograms: Program[] = [
     description: "A postgraduate diploma program focused on sustainable landscape design, environmental planning, and outdoor space development.",
     color: "from-bsd-gray/15 to-bsd-gray/5",
     duration: "1 year",
-    href: "/programs/pgd-landscape-design"
+    href: "/academics/post-graduate-diploma-in-landscape-design"
   }
 ];
 

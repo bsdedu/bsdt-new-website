@@ -21,7 +21,7 @@ export const DesktopNav: React.FC<DesktopNavProps> = ({ navStructure }) => {
       <AnimatedButton
         size="sm"
         className="bg-bsd-orange text-white hover:bg-bsd-orange/90 ml-2"
-        href="/admissions/schedule-visit"
+        href="/plan-a-visit"
       >
         Schedule Visit
       </AnimatedButton>

@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React, { useEffect, useRef } from 'react'; // Updated import
 import { Helmet } from 'react-helmet-async';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
@@ -13,6 +12,24 @@ import { SiteVisitsSection } from '@/components/beyond-curriculum/SiteVisitsSect
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
 
 const BeyondCurriculum = () => {
+  const siteVisitsRef = useRef<HTMLDivElement>(null); // Ref for SiteVisitsSection
+
+  useEffect(() => {
+    const searchParams = new URLSearchParams(window.location.search);
+    const fromRedirect = searchParams.get("from");
+
+    if (
+      (fromRedirect === "design-studio-2" || 
+       fromRedirect === "workshops" || 
+       fromRedirect === "guest-lectures" || 
+       fromRedirect === "off-campus-learning" || 
+       fromRedirect === "site-visits") && // Added "site-visits" condition
+      siteVisitsRef.current
+    ) {
+      siteVisitsRef.current.scrollIntoView({ behavior: "smooth" }); // Scroll to SiteVisitsSection
+    }
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -26,10 +43,14 @@ const BeyondCurriculum = () => {
         <BeyondCurriculumHero />
         <BeyondCurriculumOverview />
         <DesignStudioSection />
-        <WorkshopsSection />
+        <div>
+          <WorkshopsSection />
+        </div>
         <GuestLecturesSection />
         <OffCampusSection />
-        <SiteVisitsSection />
+        <div ref={siteVisitsRef}>
+          <SiteVisitsSection /> {/* Attach the ref here */}
+        </div>
         <EnquiryFormSection />
       </main>
       
