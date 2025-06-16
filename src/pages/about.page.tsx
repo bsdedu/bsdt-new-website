@@ -103,4 +103,8 @@ const AboutBSDT = () => {
   );
 };
 
-export default AboutBSDT;
+ 
+// 👇 THIS IS IMPORTANT for vike to understand the page
+export default {
+  Page: AboutBSDT
+};
