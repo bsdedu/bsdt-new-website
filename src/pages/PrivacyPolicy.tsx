@@ -21,7 +21,7 @@ const PrivacyPolicy = () => {
         <div className="container mx-auto px-6 md:px-8 max-w-4xl">
           <RevealSection>
             <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-display font-bold text-bsd-gray mb-6">
+              <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
                 Privacy Policy
               </h1>
             </div>
@@ -37,7 +37,7 @@ const PrivacyPolicy = () => {
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-bsd-gray mb-4">1. Information We Collect</h2>
+                  <h2 className="text-2xl font-semibold text-foreground mb-4">1. Information We Collect</h2>
                   <p className="mb-4">
                     We collect the following personal data when you express interest in our programs or engage with our services:
                   </p>
@@ -52,7 +52,7 @@ const PrivacyPolicy = () => {
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-bsd-gray mb-4">2. How We Use Your Information</h2>
+                  <h2 className="text-2xl font-semibold text-foreground mb-4">2. How We Use Your Information</h2>
                   <p className="mb-4">We use the personal information we collect for the following purposes:</p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li><strong>Responding to Inquiries:</strong> To address your queries regarding our courses, admissions, and services.</li>
@@ -64,7 +64,7 @@ const PrivacyPolicy = () => {
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-bsd-gray mb-4">3. Sharing Your Information</h2>
+                  <h2 className="text-2xl font-semibold text-foreground mb-4">3. Sharing Your Information</h2>
                   <p className="mb-4">
                     We respect your privacy and will not sell, rent, or lease your personal information. However, we may share your data under the following circumstances:
                   </p>
@@ -75,14 +75,14 @@ const PrivacyPolicy = () => {
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-bsd-gray mb-4">4. Data Security</h2>
+                  <h2 className="text-2xl font-semibold text-foreground mb-4">4. Data Security</h2>
                   <p>
                     We take appropriate technical and organizational measures to protect the personal data you provide from unauthorized access, disclosure, alteration, and destruction. Despite our efforts to protect your data, please be aware that no method of data transmission over the internet or electronic storage is completely secure. While we strive to protect your personal information, we cannot guarantee its absolute security.
                   </p>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-bsd-gray mb-4">5. Your Rights</h2>
+                  <h2 className="text-2xl font-semibold text-foreground mb-4">5. Your Rights</h2>
                   <p className="mb-4">As a data subject, you have the following rights regarding your personal data:</p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li><strong>Access:</strong> You have the right to request access to the personal data we hold about you.</li>
@@ -95,32 +95,32 @@ const PrivacyPolicy = () => {
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-bsd-gray mb-4">6. Cookies and Tracking Technologies</h2>
+                  <h2 className="text-2xl font-semibold text-foreground mb-4">6. Cookies and Tracking Technologies</h2>
                   <p>
                     We may use cookies and similar technologies on our website to enhance user experience, analyze website traffic, and offer personalized content. Cookies are small files stored on your device that track your interactions with our website. You can manage your cookie preferences through your browser settings. Disabling cookies may limit some website functionalities.
                   </p>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-bsd-gray mb-4">7. Third-Party Links</h2>
+                  <h2 className="text-2xl font-semibold text-foreground mb-4">7. Third-Party Links</h2>
                   <p>
                     Our website may contain links to third-party websites. Please be aware that we are not responsible for the privacy practices of these external sites. We encourage you to review the privacy policies of these third-party websites before sharing any personal data.
                   </p>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-bsd-gray mb-4">8. Changes to This Privacy Policy</h2>
+                  <h2 className="text-2xl font-semibold text-foreground mb-4">8. Changes to This Privacy Policy</h2>
                   <p>
                     We may update this Privacy Policy periodically to reflect changes in our data processing practices, legal obligations, or for other operational reasons. Any changes will be posted on this page with an updated "Effective Date." We encourage you to review this Privacy Policy regularly to stay informed about how we are protecting your personal information.
                   </p>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-bsd-gray mb-4">9. Contact Us</h2>
+                  <h2 className="text-2xl font-semibold text-foreground mb-4">9. Contact Us</h2>
                   <p className="mb-4">
                     If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us at:
                   </p>
-                  <div className="bg-bsd-light-gray rounded-lg p-6">
+                  <div className="bg-muted rounded-lg p-6">
                     <p className="mb-2"><strong>Bangalore School of Design & Technology</strong></p>
                     <p className="mb-2">No.4/3, Opposite B.D.S Nagar, Devanna Compound, K.Narayanapura, Kothanur Post, Bangalore – 560077</p>
                     <p>Email: enquiry@bsd.edu.in</p>
