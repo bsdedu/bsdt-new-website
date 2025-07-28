@@ -77,15 +77,16 @@ const ScheduleVisit = () => {
               </div>
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.8252406232064!2d77.59181797512616!3d12.983856914789062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1681af279f67%3A0x9c9ed47284cfd80d!2sBangalore%20School%20of%20Design%20(BSD)!5e0!3m2!1sen!2sin!4v1699364271539!5m2!1sen!2sin" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.531860116302!2d77.64088777532129!3d13.065443187258602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae19fca05a7085%3A0x32d325d7452e1509!2sBangalore%20School%20of%20Design%20%26%20Technology!5e0!3m2!1sen!2sin!4v1741951831100!5m2!1sen!2sin" 
                   width="100%" 
                   height="400" 
                   style={{ border: 0 }} 
                   allowFullScreen 
                   loading="lazy" 
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="BSDT Campus Location"
-                  className="w-full h-full"
+                  referrerPolicy="no-referrer" 
+                  title="BSDT Campus Map" 
+                  className="w-full h-full" 
+                  sandbox="allow-same-origin allow-scripts allow-popups allow-top-navigation"
                 ></iframe>
               </div>
             </div>
