@@ -62,8 +62,8 @@ const ScheduleVisit = () => {
                     <h3 className="text-xl font-semibold">Address:</h3>
                     <p className="text-foreground/80">
                       Bangalore School of Design & Technology<br />
-                      No. 36/5, Jasma Bhavan Road, Vasanth Nagar<br />
-                      Bengaluru, Karnataka 560052
+                      No.4/3, Opposite B.D.S Nagar, Devanna Compound,<br />
+                      K.Narayanapura, Kothanur Post, Bangalore – 560077
                     </p>
                   </div>
                   <div className="mt-4">
