@@ -25,11 +25,11 @@ export const Navbar: React.FC = () => {
       <div className="container mx-auto px-6 md:px-8">
         <div className="flex items-center justify-between">
           {/* Logo as homepage link with increased size */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center flex-shrink-0">
             <img 
               src="/lovable-uploads/c83c596d-add8-4ab2-a74f-1dc8c849424e.png" 
               alt="Bangalore School of Design & Technology Logo" 
-              className="h-16 md:h-20 object-fill" 
+              className="h-12 sm:h-14 md:h-16 lg:h-20 w-auto object-contain transition-all duration-300" 
             />
           </Link>
 
