@@ -46,7 +46,7 @@ export const navStructure: NavStructure[] = [
   },
   {
     name: 'Future School',
-    href: '#continuing-studies',
+    href: '/future-school',
     type: 'megamenu',
     categories: [
       {

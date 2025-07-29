@@ -36,6 +36,7 @@ import HostelTransport from "./pages/campus-life/HostelTransport";
 import StudentClubs from "./pages/campus-life/StudentClubs";
 import EventsActivities from "./pages/EventsActivities";
 import StudentExperience from "./pages/StudentExperience";
+import FutureSchool from "./pages/FutureSchool";
 import { useEffect } from "react";
 
 console.log("App component loaded");
@@ -101,6 +102,9 @@ const App = () => {
               <Route path="/student-clubs" element={<StudentClubs />} />
               <Route path="/campus-life/events-activities" element={<EventsActivities />} />
               <Route path="/student-experience" element={<StudentExperience />} />
+              
+              {/* Future School Route */}
+              <Route path="/future-school" element={<FutureSchool />} />
               
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
