@@ -6,6 +6,7 @@ import './index.css'
 // More robust error handling for app initialization
 const renderApp = () => {
   try {
+    console.log("renderApp called");
     // Try to find the root element
     const rootElement = document.getElementById("root");
     
@@ -21,12 +22,19 @@ const renderApp = () => {
     // Wrap the entire rendering process in a try-catch
     try {
       const root = createRoot(rootElement);
+      console.log("Creating React root...");
       root.render(
         <App />
       );
       console.log("App rendered successfully");
     } catch (error) {
       console.error("Error rendering app:", error);
+      // Show a fallback UI
+      rootElement.innerHTML = `<div style="padding: 20px; text-align: center; color: red;">
+        <h2>Application Error</h2>
+        <p>Failed to load the application. Please refresh the page.</p>
+        <pre>${error}</pre>
+      </div>`;
     }
   } catch (error) {
     console.error("Critical error during app initialization:", error);

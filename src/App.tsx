@@ -52,7 +52,8 @@ const App = () => {
 
   console.log("App rendering");
   
-  return (
+  try {
+    return (
     <QueryClientProvider client={queryClient}>
       <HelmetProvider>
         <TooltipProvider>
@@ -110,8 +111,16 @@ const App = () => {
           </BrowserRouter>
         </TooltipProvider>
       </HelmetProvider>
-    </QueryClientProvider>
-  );
+      </QueryClientProvider>
+    );
+  } catch (error) {
+    console.error("Error in App component:", error);
+    return <div style={{ padding: '20px', textAlign: 'center', color: 'red' }}>
+      <h2>App Error</h2>
+      <p>Something went wrong. Please refresh the page.</p>
+      <pre>{String(error)}</pre>
+    </div>;
+  }
 };
 
 export default App;
