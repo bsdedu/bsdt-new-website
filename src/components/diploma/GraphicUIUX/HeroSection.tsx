@@ -24,7 +24,7 @@ export const HeroSection: React.FC = () => {
             <div className="flex flex-wrap gap-6 pt-2">
               <div className="flex items-center">
                 <Clock className="w-5 h-5 text-bsd-orange mr-2" />
-                <span className="text-bsd-gray font-medium">1 Year Duration</span>
+                <span className="text-bsd-gray font-medium">8 Months Duration</span>
               </div>
               <div className="flex items-center">
                 <Calendar className="w-5 h-5 text-bsd-orange mr-2" />
