@@ -45,6 +45,35 @@ export const navStructure: NavStructure[] = [
     ]
   },
   {
+    name: 'Institute for Continuing & Professional Studies',
+    href: '#continuing-studies',
+    type: 'megamenu',
+    categories: [
+      {
+        title: '3 WEEKS PROGRAMS',
+        items: [
+          { name: 'Generative AI for Creative Prototyping', href: '/continuing-studies/generative-ai-creative-prototyping' },
+          { name: 'VR/AR Prototyping with Unity & Unreal', href: '/continuing-studies/vr-ar-prototyping' },
+          { name: 'Parametric Design with Rhino & Grasshopper', href: '/continuing-studies/parametric-design' },
+          { name: 'Motion Design Essentials', href: '/continuing-studies/motion-design-essentials' },
+          { name: 'UX Research Sprint', href: '/continuing-studies/ux-research-sprint' }
+        ]
+      },
+      {
+        title: '3 MONTHS PROGRAMS',
+        items: [
+          { name: 'Interior Lighting Design Specialist', href: '/continuing-studies/interior-lighting-design' },
+          { name: 'Basic Interior Design', href: '/continuing-studies/basic-interior-design' },
+          { name: 'UI/UX Product Design', href: '/continuing-studies/ui-ux-product-design' },
+          { name: 'Game Environment Art (Unreal Engine 5)', href: '/continuing-studies/game-environment-art' },
+          { name: 'Fashion Tech & Wearables', href: '/continuing-studies/fashion-tech-wearables' },
+          { name: 'Motion Graphics & Visual Storytelling', href: '/continuing-studies/motion-graphics' },
+          { name: 'AI for Design Optimization', href: '/continuing-studies/ai-design-optimization' }
+        ]
+      }
+    ]
+  },
+  {
     name: 'Admissions',
     href: '#admissions',
     type: 'dropdown',
