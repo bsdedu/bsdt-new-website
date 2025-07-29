@@ -30,7 +30,7 @@ export const FutureSchoolHero: React.FC = () => {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-foreground mb-6 leading-tight">
               Master the Future
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-glow">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary to-accent">
                 of Design & Tech
               </span>
             </h1>
