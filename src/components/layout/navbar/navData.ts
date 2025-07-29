@@ -45,7 +45,7 @@ export const navStructure: NavStructure[] = [
     ]
   },
   {
-    name: 'Institute for Continuing & Professional Studies',
+    name: 'Future School',
     href: '#continuing-studies',
     type: 'megamenu',
     categories: [
