@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Navbar } from '@/components/layout/Navbar';
@@ -14,10 +13,8 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, FileTextIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const ApplicationProcess = () => {
-  return (
-    <>
+  return <>
       <Helmet>
         <title>Application Process | BSDT</title>
         <meta name="description" content="Learn about the application and admission process at Bangalore School of Design & Technology." />
@@ -29,7 +26,7 @@ const ApplicationProcess = () => {
         <RevealSection>
           <div className="container mx-auto px-6 py-10">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <Badge variant="bsdOrange" className="mb-4">ADMISSIONS 2024</Badge>
+              <Badge variant="bsdOrange" className="mb-4">ADMISSIONS 2025-26</Badge>
               <h1 className="text-4xl md:text-5xl font-bold text-bsd-gray mb-4">Application Process</h1>
               <p className="text-lg text-foreground/70">
                 Your step-by-step guide to joining Bangalore School of Design & Technology's innovative programs.
@@ -100,8 +97,6 @@ const ApplicationProcess = () => {
       </main>
       
       <Footer />
-    </>
-  );
+    </>;
 };
-
 export default ApplicationProcess;
