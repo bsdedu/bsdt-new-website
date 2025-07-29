@@ -31,9 +31,9 @@ export const FeesTable = () => {
   // Filter programs based on active tab
   const filteredPrograms = feeStructureData.programs.filter(program => {
     if (activeTab === "undergraduate") {
-      return program.duration.includes("Years");
+      return program.duration.includes("3 Years") || program.duration.includes("4 Years");
     } else if (activeTab === "diploma") {
-      return program.duration.includes("Year") || program.duration.includes("Months");
+      return program.duration.includes("1 Year") || program.duration.includes("Months");
     }
     return true;
   });
