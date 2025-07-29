@@ -8,6 +8,7 @@ import { ProgramOverviewSection } from '@/components/diploma/LandscapeDesign/Pro
 import { ProgramFeatures } from '@/components/diploma/LandscapeDesign/ProgramFeatures';
 import { IndustryFaculty } from '@/components/diploma/LandscapeDesign/IndustryFaculty';
 import { AdmissionsInfo } from '@/components/diploma/LandscapeDesign/AdmissionsInfo';
+import { BatchScheduleSection } from '@/components/diploma/shared/BatchScheduleSection';
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
 
 const DiplomaProgramLandscapeDesign: React.FC = () => {
@@ -26,6 +27,7 @@ const DiplomaProgramLandscapeDesign: React.FC = () => {
       <main>
         <HeroSection />
         <ProgramOverviewSection />
+        <BatchScheduleSection />
         <ProgramFeatures />
         <IndustryFaculty />
         <AdmissionsInfo />

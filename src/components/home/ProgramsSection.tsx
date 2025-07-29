@@ -88,19 +88,19 @@ const diplomaPrograms: Program[] = [
   {
     icon: <PenTool className="w-6 h-6 text-bsd-orange" />,
     title: "Professional Diploma in Interior Design",
-    description: "A professional diploma program focused on teaching interior design principles, space planning, and material selection for various environments.",
+    description: "A professional diploma program focused on teaching interior design principles, space planning, and material selection for various environments. Available in Online & Offline modes.",
     color: "from-bsd-orange/20 to-bsd-orange/5",
     isFeatured: true,
-    duration: "1 year",
+    duration: "8 months",
     href: "/academics/professional-diploma-in-interior-design"
   }, 
   {
     icon: <Monitor className="w-6 h-6 text-bsd-orange" />,
     title: "Professional Diploma in Visual Communication + UI & UX",
-    description: "An integrated program combining visual communication fundamentals with user interface and experience design principles for digital platforms.",
+    description: "An integrated program combining visual communication fundamentals with user interface and experience design principles for digital platforms. Available in Online & Offline modes.",
     color: "from-bsd-orange/20 to-bsd-orange/5",
     isFeatured: true,
-    duration: "1 year",
+    duration: "8 months",
     href: "/academics/professional-diploma-graphics-design-ui-ux"
   }, 
   {
@@ -114,9 +114,9 @@ const diplomaPrograms: Program[] = [
   {
     icon: <GraduationCap className="w-6 h-6 text-bsd-orange" />,
     title: "Professional Diploma in Landscape Design",
-    description: "A professional diploma program focused on sustainable landscape design, environmental planning, and outdoor space development.",
+    description: "A professional diploma program focused on sustainable landscape design, environmental planning, and outdoor space development. Available in Online & Offline modes.",
     color: "from-bsd-gray/15 to-bsd-gray/5",
-    duration: "1 year",
+    duration: "8 months",
     href: "/academics/post-graduate-diploma-in-landscape-design"
   }
 ];

@@ -8,6 +8,7 @@ import { ProgramOverviewSection } from '@/components/diploma/GraphicUIUX/Program
 import { ProgramFeatures } from '@/components/diploma/GraphicUIUX/ProgramFeatures';
 import { IndustryFaculty } from '@/components/diploma/GraphicUIUX/IndustryFaculty';
 import { AdmissionsInfo } from '@/components/diploma/GraphicUIUX/AdmissionsInfo';
+import { BatchScheduleSection } from '@/components/diploma/shared/BatchScheduleSection';
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
 
 const DiplomaProgramGraphicUIUX: React.FC = () => {
@@ -26,6 +27,7 @@ const DiplomaProgramGraphicUIUX: React.FC = () => {
       <main>
         <HeroSection />
         <ProgramOverviewSection />
+        <BatchScheduleSection />
         <ProgramFeatures />
         <IndustryFaculty />
         <AdmissionsInfo />

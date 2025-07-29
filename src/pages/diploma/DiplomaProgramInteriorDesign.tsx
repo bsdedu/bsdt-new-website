@@ -9,6 +9,7 @@ import { ProgramFeatures } from '@/components/diploma/InteriorDesign/ProgramFeat
 import { IndustryFaculty } from '@/components/diploma/InteriorDesign/IndustryFaculty';
 import { AdmissionsInfo } from '@/components/diploma/InteriorDesign/AdmissionsInfo';
 import { StudentLearningSection } from '@/components/program/StudentLearningSection';
+import { BatchScheduleSection } from '@/components/diploma/shared/BatchScheduleSection';
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
 
 const DiplomaProgramInteriorDesign: React.FC = () => {
@@ -28,6 +29,7 @@ const DiplomaProgramInteriorDesign: React.FC = () => {
         <HeroSection />
         <ProgramOverviewSection />
         <StudentLearningSection />
+        <BatchScheduleSection />
         <ProgramFeatures />
         <IndustryFaculty />
         <AdmissionsInfo />
