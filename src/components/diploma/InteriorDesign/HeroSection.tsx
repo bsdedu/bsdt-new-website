@@ -28,7 +28,7 @@ export const HeroSection: React.FC = () => {
               </div>
               <div className="flex items-center">
                 <Calendar className="w-5 h-5 text-bsd-orange mr-2" />
-                <span className="text-bsd-gray font-medium">Intakes: Jan & July</span>
+                <span className="text-bsd-gray font-medium">Intakes: Aug, Nov, Feb & May</span>
               </div>
               <div className="flex items-center">
                 <Award className="w-5 h-5 text-bsd-orange mr-2" />
