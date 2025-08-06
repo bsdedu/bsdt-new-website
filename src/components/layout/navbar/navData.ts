@@ -45,7 +45,7 @@ export const navStructure: NavStructure[] = [
     ]
   },
   {
-    name: 'Future School',
+    name: 'Futr School',
     href: '/future-school',
     type: 'link'
   },
