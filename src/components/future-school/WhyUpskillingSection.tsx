@@ -51,11 +51,11 @@ export const WhyUpskillingSection: React.FC = () => {
           <div className="text-center max-w-3xl mx-auto mb-12">
             <Badge variant="bsdOrange" className="mb-4">THE FUTURE IS NOW</Badge>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
-              Why Upskilling is the Future
+              Why Upskilling is the Futr
             </h2>
             <p className="text-lg text-foreground/70 leading-relaxed">
               In today's rapidly evolving digital landscape, continuous learning isn't just an advantage—it's a necessity. 
-              The skills that got you here won't get you there. Future School bridges the gap between where you are and where you want to be.
+              The skills that got you here won't get you there. Futr School bridges the gap between where you are and where you want to be.
             </p>
           </div>
         </RevealSection>

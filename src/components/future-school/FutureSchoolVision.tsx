@@ -38,9 +38,9 @@ export const FutureSchoolVision: React.FC = () => {
               Shaping Tomorrow's Professionals Today
             </h2>
             <p className="text-lg text-foreground/70 leading-relaxed">
-              Future School was born from a simple belief: education should evolve as fast as technology. 
+              Futr School was born from a simple belief: education should evolve as fast as technology. 
               We're not just teaching skills—we're creating the next generation of innovators, creators, and leaders 
-              who will shape the future of design and technology.
+              who will shape the futr of design and technology.
             </p>
           </div>
         </RevealSection>
@@ -80,8 +80,8 @@ export const FutureSchoolVision: React.FC = () => {
                   to stay relevant, and companies couldn't find talent with the right skills.
                 </p>
                 <p className="text-center leading-relaxed mb-6">
-                  Future School emerged as the solution—a place where ambitious professionals could rapidly acquire 
-                  future-ready skills through immersive, industry-connected learning experiences. We partnered with 
+                  Futr School emerged as the solution—a place where ambitious professionals could rapidly acquire 
+                  futr-ready skills through immersive, industry-connected learning experiences. We partnered with 
                   leading companies and top practitioners to create programs that don't just teach theory, but build 
                   real-world expertise.
                 </p>

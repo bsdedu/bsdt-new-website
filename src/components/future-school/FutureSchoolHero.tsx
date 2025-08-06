@@ -24,11 +24,11 @@ export const FutureSchoolHero: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <RevealSection>
             <Badge variant="bsdOrange" className="mb-6 text-sm font-medium">
-              FUTURE SCHOOL
+              FUTR SCHOOL
             </Badge>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-foreground mb-6 leading-tight">
-              Master the Future
+              Master the Futr
               <br />
               <span className="text-primary">
                 of Design & Tech

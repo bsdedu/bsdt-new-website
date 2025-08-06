@@ -12,7 +12,7 @@ const FutureSchool: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Future School - Master the Future of Design & Tech | BSD Design School</title>
+        <title>Futr School - Master the Futr of Design & Tech | BSD Design School</title>
         <meta 
           name="description" 
           content="Join India's fastest-growing design & technology bootcamp. Learn from industry experts, build real projects, and land your dream job with our live interactive online programs." 

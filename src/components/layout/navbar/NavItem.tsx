@@ -34,9 +34,10 @@ export const NavItem: React.FC<NavItemProps> = ({ item }) => {
         <a 
           href={item.href} 
           className={cn(
-            "relative text-sm font-medium text-bsd-gray hover:text-bsd-orange transition-colors",
+            "relative text-sm text-bsd-gray hover:text-bsd-orange transition-colors",
             "after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-bsd-orange after:transition-all after:duration-300",
-            "hover:after:w-full"
+            "hover:after:w-full",
+            item.name === 'Futr School' ? 'font-bold' : 'font-medium'
           )}
         >
           {item.name}
