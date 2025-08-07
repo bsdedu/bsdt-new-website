@@ -5,8 +5,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader } from "@/components/ui-elements/Card";
 import { Check, Palette, Monitor, Users, BriefcaseBusiness, PenTool, Layout, Home, Ruler, Lightbulb, Brush, Bot } from "lucide-react";
 import { CareerOpportunitiesTab } from "./CareerOpportunitiesTab";
+
 export const ProgramOverviewSection: React.FC = () => {
-  return <section className="py-16 bg-white">
+  return (
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-6 md:px-8">
         <RevealSection>
           <div className="text-center max-w-3xl mx-auto mb-12">
@@ -14,7 +16,9 @@ export const ProgramOverviewSection: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
               Creating Functional & Aesthetic Spaces
             </h2>
-            <p className="mt-4 text-foreground/70">Our B.V.A. Interior & Spatial Design program equips students to reimagine spaces into captivating, functional environments through a dynamic curriculum that merges artistic innovation with technical mastery.</p>
+            <p className="mt-4 text-foreground/70">
+              Our B.Sc Interior Design program prepares students to transform spaces into beautiful, functional environments through a comprehensive curriculum that balances creativity with technical expertise.
+            </p>
           </div>
         </RevealSection>
 
@@ -365,5 +369,6 @@ export const ProgramOverviewSection: React.FC = () => {
           </Tabs>
         </RevealSection>
       </div>
-    </section>;
+    </section>
+  );
 };

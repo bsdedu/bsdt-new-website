@@ -67,7 +67,6 @@ const App = () => {
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/leadership" element={<LeadershipGovernance />} />
               <Route path="/academics/bsc-interior-design" element={<ProgramInteriorDesign />} />
-              <Route path="/academics/bva-interior-spatial-design" element={<ProgramInteriorDesign />} />
               <Route path="/academics/bva-graphic-design" element={<ProgramGraphicDesign />} />
               <Route path="/bva-animation-and-multimedia-game-design" element={<ProgramAnimationGameDesign />} />
               <Route path="/academics/b-computer-application-ui-ux" element={<ProgramBCA />} />
