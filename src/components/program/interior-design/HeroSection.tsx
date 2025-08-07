@@ -16,7 +16,7 @@ export const HeroSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <RevealSection>
             <div className="space-y-6">
-              <Badge variant="bsdOrange" className="mb-2">3-YEAR UNDERGRADUATE PROGRAM</Badge>
+              <Badge variant="bsdOrange" className="mb-2">Transform spaces into functional, aesthetic environments. Our B.V.A. Interior & Spatial Design program nurtures creative professionals who blend artistic vision with technical expertise to craft innovative and immersive interior spaces.</Badge>
               <h1 className="text-4xl md:text-5xl font-display font-bold text-bsd-gray leading-tight">BVA Interior & Spatial Design</h1>
               <p className="text-lg text-foreground/80">
                 Transform spaces into functional, aesthetic environments. Our B.Sc. Interior Design program develops creative professionals who combine artistic vision with technical expertise to design innovative interior spaces.
