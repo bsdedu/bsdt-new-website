@@ -26,9 +26,7 @@ export const HeroSection: React.FC = () => {
                   <a className="hover:no-underline">Apply Now</a>
                 </AnimatedButton>
                 <AnimatedButton variant="outline" asChild>
-                  <a href="#enquiry-form" className="hover:no-underline">
-                    Download Brochure
-                  </a>
+                  <a href="#enquiry-form" className="hover:no-underline">4 Years Duration</a>
                 </AnimatedButton>
               </div>
 
