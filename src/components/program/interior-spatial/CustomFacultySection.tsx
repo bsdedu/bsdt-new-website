@@ -106,7 +106,7 @@ export const CustomFacultySection: React.FC = () => {
                   <h3 className="text-lg font-semibold text-bsd-gray">Ar. Sharan Desai</h3>
                   <p className="text-sm text-bsd-orange">Senior Design Faculty</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    A distinguished architect with comprehensive expertise in both residential and commercial interior design. Sharan brings deep knowledge of design methodology, project management, and client relations. His experience in contemporary and traditional design approaches helps students develop versatile design skills and professional acumen.
+                    Ar. Desai is a highly qualified academic and industry professional with 20 years of experience, including 13 years in teaching. He holds a Master of Architecture from The University of Oklahoma, Norman, USA, bringing a global perspective to architectural education. With a strong leadership background, he has served as a principal for 8 years, contributing to the growth and development of institutions. His expertise spans architectural design, education, and administration, making him a key contributor to the Bangalore School of Design and Technology.
                   </p>
                 </div>
               </CardContent>
