@@ -11,7 +11,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card } from "../ui-elements/Card";
-import { Play, GalleryHorizontal, Calendar } from "lucide-react";
+import { Play, GalleryHorizontal, Calendar, ChevronDown } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
@@ -42,6 +42,12 @@ const galleryItems: {
   videoId?: string;
   thumbnail?: string;
   caption: string;
+  program?: string;
+  student?: string;
+  year?: string;
+  semester?: string;
+  description?: string;
+  techniques?: string[];
 }[] = [
   // Events & Activities
   ...eventsData,
@@ -160,24 +166,66 @@ const galleryItems: {
     caption: "Live music performance at campus event with visual projection and enthusiastic audience"
   },
   
-  // Student Work images
+  // Student Work images - Advanced realistic projects from 9 undergraduate programs
   {
     type: "image",
     category: "Student Work",
-    image: "/lovable-uploads/8428c2d9-4558-45fb-a678-619ad02f979b.png",
-    caption: "Miniature architectural model with wooden chairs and natural materials"
+    image: "/lovable-uploads/8f82b7d2-5ef6-48f1-99e0-7ad31d4b24dc.png",
+    caption: "Advanced architectural visualization of sustainable urban housing complex",
+    program: "B.Des Architectural Design",
+    student: "Gokul Krishnan",
+    year: "2024",
+    semester: "6th Semester",
+    description: "A comprehensive urban housing project showcasing sustainable design principles with modular construction, energy-efficient systems, and community-centered planning. The project demonstrates advanced understanding of contemporary architectural practice.",
+    techniques: ["Sustainable Design", "Modular Construction", "Energy Efficiency", "Urban Planning"]
   },
   {
     type: "image",
     category: "Student Work",
-    image: "/lovable-uploads/56b5b272-5d55-41f6-b960-9e4ad3058430.png",
-    caption: "Interior design student model of a garage workshop with detailed components"
+    image: "/lovable-uploads/fb8a4f76-a8b9-4bc8-ac63-81fb9267d4eb.png",
+    caption: "Professional law firm interior design with sophisticated spatial planning",
+    program: "BVA Interior & Spatial Design",
+    student: "Vidhi Pareek",
+    year: "2024",
+    semester: "6th Semester",
+    description: "A sophisticated commercial interior design project for a law firm, featuring professional spatial planning, custom furniture design, and attention to lighting and acoustics. The project demonstrates mastery of commercial design principles.",
+    techniques: ["Commercial Design", "Space Planning", "Custom Furniture", "Lighting Design"]
   },
   {
     type: "image",
     category: "Student Work",
-    image: "/lovable-uploads/307e4b93-21bc-4e6b-9ee4-096750278ace.png",
-    caption: "Scale model of a bistro terrace with wooden tables and railings"
+    image: "/lovable-uploads/d7bb8a42-1bb6-46c9-aa99-2b89caf61b9e.png",
+    caption: "Innovative cozy cafe management game with detailed UI/UX design",
+    program: "BVA Animation & Game Design",
+    student: "Cael Williams",
+    year: "2023",
+    semester: "5th Semester",
+    description: "A comprehensive game design project featuring character development, environmental storytelling, and intuitive gameplay mechanics. The project showcases advanced skills in game development, animation, and user experience design.",
+    techniques: ["Game Development", "Character Animation", "UI/UX Design", "Environmental Design"]
+  },
+  {
+    type: "image",
+    category: "Student Work",
+    image: "/lovable-uploads/1209aced-ff30-4e52-9f50-18019f4e166a.png",
+    caption: "Luxury retail space design with premium brand positioning",
+    program: "BVA Interior & Spatial Design",
+    student: "Sahana Kashyap",
+    year: "2024",
+    semester: "6th Semester",
+    description: "An upscale retail design project that combines luxury aesthetics with functional retail strategies. The design emphasizes customer experience, brand identity, and spatial flow to create an immersive shopping environment.",
+    techniques: ["Retail Design", "Brand Identity", "Customer Experience", "Luxury Aesthetics"]
+  },
+  {
+    type: "image",
+    category: "Student Work",
+    image: "/lovable-uploads/a595961e-d33b-4b0c-b044-3587eb6bea13.png",
+    caption: "Fantasy character design with detailed concept art and storytelling",
+    program: "BVA Graphic & Communication Design",
+    student: "Rahul Verma",
+    year: "2023",
+    semester: "4th Semester",
+    description: "A comprehensive character design project featuring detailed concept art, character development, and visual storytelling. The work demonstrates advanced illustration skills and narrative design capabilities.",
+    techniques: ["Character Design", "Concept Art", "Digital Illustration", "Visual Storytelling"]
   },
   
   // Student Work video
@@ -186,7 +234,12 @@ const galleryItems: {
     category: "Student Work",
     videoId: "y9iyA-KGkAo",
     thumbnail: "https://img.youtube.com/vi/y9iyA-KGkAo/maxresdefault.jpg",
-    caption: "Graphic Design Students Showcase Reel"
+    caption: "Graphic Design Students Professional Portfolio Showcase",
+    program: "BVA Graphic & Communication Design",
+    student: "Multiple Students",
+    year: "2024",
+    description: "A comprehensive showcase of student work from the Graphic & Communication Design program, featuring branding projects, digital designs, and print communications that demonstrate professional-level skills.",
+    techniques: ["Branding", "Digital Design", "Print Design", "Portfolio Development"]
   }
 ];
 
@@ -210,6 +263,7 @@ export const GallerySection: React.FC = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
   const [expandedCategories, setExpandedCategories] = useState<string[]>(["Events & Activities"]);
+  const [expandedStudentWork, setExpandedStudentWork] = useState<number[]>([]);
 
   // Group items by category and take only the first item from each category for the "All" tab
   const previewItems: Record<string, typeof allGalleryItems[0]> = {};
@@ -240,6 +294,14 @@ export const GallerySection: React.FC = () => {
 
   const closeVideoModal = () => {
     setSelectedVideo(null);
+  };
+
+  const toggleStudentWorkExpansion = (index: number) => {
+    setExpandedStudentWork(prev => 
+      prev.includes(index) 
+        ? prev.filter(i => i !== index) 
+        : [...prev, index]
+    );
   };
 
   // Helper function to render gallery items in a grid or carousel
@@ -296,6 +358,87 @@ export const GallerySection: React.FC = () => {
           <CarouselPrevious className="left-2 bg-white/80" />
           <CarouselNext className="right-2 bg-white/80" />
         </Carousel>
+      );
+    }
+
+    // Special handling for Student Work category with expandable format
+    if (activeCategory === "Student Work") {
+      return (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {items.map((item, index) => {
+            const isExpanded = expandedStudentWork.includes(index);
+            return (
+              <div key={index} className="group relative">
+                <Card isHoverable className="overflow-hidden h-full">
+                  <div className="relative aspect-video overflow-hidden">
+                    {item.type === "image" ? (
+                      <img 
+                        src={item.image} 
+                        alt={item.caption} 
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    ) : (
+                      <>
+                        <img 
+                          src={item.thumbnail} 
+                          alt={item.caption} 
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                        <div 
+                          className="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer"
+                          onClick={() => item.videoId && handleVideoClick(item.videoId)}
+                        >
+                          <div className="bg-white/90 rounded-full p-3 transition-transform duration-300 group-hover:scale-110">
+                            <Play className="h-8 w-8 text-bsd-orange" fill="currentColor" />
+                          </div>
+                        </div>
+                      </>
+                    )}
+                    {(item as any).program && (
+                      <div className="absolute top-3 right-3">
+                        <Badge variant="bsdOrange" className="bg-bsd-orange/90 text-white px-2 py-1 text-xs">
+                          {(item as any).program}
+                        </Badge>
+                      </div>
+                    )}
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-semibold text-bsd-gray mb-2">{item.caption}</h3>
+                    {(item as any).student && (
+                      <div className="flex items-center justify-between text-sm text-gray-600 mb-2">
+                        <span>By {(item as any).student}</span>
+                        <span>{(item as any).year}</span>
+                      </div>
+                    )}
+                    <Collapsible open={isExpanded} onOpenChange={() => toggleStudentWorkExpansion(index)}>
+                      <CollapsibleTrigger className="flex items-center justify-between w-full text-left text-sm font-medium text-bsd-orange hover:text-bsd-orange/80 transition-colors">
+                        <span>View More Details</span>
+                        <ChevronDown className={cn("h-4 w-4 transition-transform duration-200", isExpanded && "rotate-180")} />
+                      </CollapsibleTrigger>
+                      <CollapsibleContent className="space-y-3 mt-3">
+                        {(item as any).description && (
+                          <p className="text-sm text-gray-700">{(item as any).description}</p>
+                        )}
+                        {(item as any).semester && (
+                          <p className="text-xs text-gray-500">{(item as any).semester}</p>
+                        )}
+                        {(item as any).techniques && (
+                          <div className="flex flex-wrap gap-1">
+                            {(item as any).techniques.map((technique: string, techIndex: number) => (
+                              <Badge key={techIndex} variant="outline" className="text-xs">
+                                {technique}
+                              </Badge>
+                            ))}
+                          </div>
+                        )}
+                      </CollapsibleContent>
+                    </Collapsible>
+                  </div>
+                </Card>
+              </div>
+            );
+          })}
+        </div>
       );
     }
 
