@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardContent, CardHeader } from "@/components/ui-elements/Card";
+import { Check, Wrench, Zap, Users, Lightbulb, Target, Award } from "lucide-react";
 import { LearningOutcomesTab } from './LearningOutcomesTab';
 import { CareerOpportunitiesTab } from './CareerOpportunitiesTab';
 import { SoftwareToolsTab } from './SoftwareToolsTab';
@@ -34,73 +36,202 @@ export const ProgramOverviewSection: React.FC = () => {
             </TabsList>
             
             <TabsContent value="overview" className="mt-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="space-y-6">
-                  <h3 className="text-2xl font-semibold text-bsd-gray">Program Highlights</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 rounded-full bg-bsd-orange mt-2"></div>
-                      <div>
-                        <h4 className="font-medium text-bsd-gray">Design Thinking</h4>
-                        <p className="text-foreground/70 text-sm">Master human-centered design methodologies and creative problem-solving approaches.</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <Card className="col-span-1 md:col-span-2">
+                  <CardHeader>
+                    <h3 className="text-xl font-semibold text-bsd-gray">Program Structure</h3>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-6">
+                      <p className="text-foreground/70">
+                        The BVA Product Design program is a 4-year full-time undergraduate course that develops comprehensive skills in product design, user experience, prototyping, and manufacturing. The curriculum integrates creativity with technical expertise and business understanding.
+                      </p>
+                      
+                      <div className="space-y-4">
+                        <h4 className="font-medium text-bsd-gray">First Year: Foundation</h4>
+                        <ul className="space-y-2">
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Design Fundamentals I & II</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Drawing & Sketching Techniques</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Materials & Manufacturing Processes</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Design History & Theory</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Basic 3D Modeling & CAD</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Introduction to Design Thinking</span>
+                          </li>
+                        </ul>
+
+                        <h4 className="font-medium text-bsd-gray">Second Year: Core Design Skills</h4>
+                        <ul className="space-y-2">
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>User Research & Human Factors</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Concept Development & Ideation</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Rapid Prototyping & Model Making</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Advanced 3D Modeling & Rendering</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Electronics & Smart Product Design</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Design Communication & Presentation</span>
+                          </li>
+                        </ul>
+
+                        <h4 className="font-medium text-bsd-gray">Third Year: Advanced Applications</h4>
+                        <ul className="space-y-2">
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Advanced Product Design Studio</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Sustainable Design & Circular Economy</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Digital Product Design & UI/UX</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Product Testing & Validation</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Design for Manufacturing (DFM)</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Innovation Management & Design Strategy</span>
+                          </li>
+                        </ul>
+
+                        <h4 className="font-medium text-bsd-gray">Fourth Year: Specialization & Professional Practice</h4>
+                        <ul className="space-y-2">
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Professional Practice & Project Management</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Specialized Design Studio (Choose: Automotive, Furniture, Electronics, Medical)</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Design Entrepreneurship & Business Development</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Capstone Project & Portfolio Development</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Industry Internship & Professional Networking</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Design Research & Thesis Project</span>
+                          </li>
+                        </ul>
                       </div>
                     </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 rounded-full bg-bsd-orange mt-2"></div>
-                      <div>
-                        <h4 className="font-medium text-bsd-gray">Prototyping & Manufacturing</h4>
-                        <p className="text-foreground/70 text-sm">Learn rapid prototyping, 3D modeling, and manufacturing processes for product development.</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 rounded-full bg-bsd-orange mt-2"></div>
-                      <div>
-                        <h4 className="font-medium text-bsd-gray">User Experience</h4>
-                        <p className="text-foreground/70 text-sm">Understand user research, ergonomics, and usability testing for product optimization.</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 rounded-full bg-bsd-orange mt-2"></div>
-                      <div>
-                        <h4 className="font-medium text-bsd-gray">Sustainable Design</h4>
-                        <p className="text-foreground/70 text-sm">Explore eco-friendly materials, circular design principles, and sustainable manufacturing.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="space-y-6">
-                  <h3 className="text-2xl font-semibold text-bsd-gray">Curriculum Structure</h3>
-                  <div className="space-y-4">
-                    <div className="border-l-4 border-bsd-orange pl-4">
-                      <h4 className="font-medium text-bsd-gray">Year 1: Foundation</h4>
-                      <p className="text-foreground/70 text-sm">Design fundamentals, sketching, materials, and basic 3D modeling</p>
-                    </div>
-                    <div className="border-l-4 border-bsd-orange pl-4">
-                      <h4 className="font-medium text-bsd-gray">Year 2: Development</h4>
-                      <p className="text-foreground/70 text-sm">User research, ergonomics, prototyping, and manufacturing processes</p>
-                    </div>
-                    <div className="border-l-4 border-bsd-orange pl-4">
-                      <h4 className="font-medium text-bsd-gray">Year 3: Specialization</h4>
-                      <p className="text-foreground/70 text-sm">Advanced design methods, sustainability, and technology integration</p>
-                    </div>
-                    <div className="border-l-4 border-bsd-orange pl-4">
-                      <h4 className="font-medium text-bsd-gray">Year 4: Professional Practice</h4>
-                      <p className="text-foreground/70 text-sm">Capstone projects, industry internships, and portfolio development</p>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-bsd-light-gray p-6 rounded-lg">
-                    <h4 className="font-medium text-bsd-gray mb-2">Key Features</h4>
-                    <ul className="space-y-1 text-sm text-foreground/70">
-                      <li>• State-of-the-art design labs and workshops</li>
-                      <li>• Industry mentorship and guest lectures</li>
-                      <li>• Regular design exhibitions and competitions</li>
-                      <li>• International design study tours</li>
-                      <li>• Collaboration with tech companies</li>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-bsd-orange/5 border-bsd-orange/20">
+                  <CardHeader>
+                    <h3 className="text-xl font-semibold text-bsd-gray">Program Highlights</h3>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-4">
+                      <li className="flex items-start">
+                        <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Wrench className="w-4 h-4 text-bsd-orange" />
+                        </div>
+                        <div className="ml-3">
+                          <h4 className="font-medium text-bsd-gray">Product Design Lab</h4>
+                          <p className="text-sm text-foreground/70">State-of-the-art design labs with rapid prototyping equipment</p>
+                        </div>
+                      </li>
+                      
+                      <li className="flex items-start">
+                        <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Zap className="w-4 h-4 text-bsd-orange" />
+                        </div>
+                        <div className="ml-3">
+                          <h4 className="font-medium text-bsd-gray">3D Printing & Digital Fabrication</h4>
+                          <p className="text-sm text-foreground/70">Advanced 3D printing and digital manufacturing tools</p>
+                        </div>
+                      </li>
+                      
+                      <li className="flex items-start">
+                        <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Users className="w-4 h-4 text-bsd-orange" />
+                        </div>
+                        <div className="ml-3">
+                          <h4 className="font-medium text-bsd-gray">User Experience Lab</h4>
+                          <p className="text-sm text-foreground/70">User testing and research facilities for product validation</p>
+                        </div>
+                      </li>
+                      
+                      <li className="flex items-start">
+                        <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Lightbulb className="w-4 h-4 text-bsd-orange" />
+                        </div>
+                        <div className="ml-3">
+                          <h4 className="font-medium text-bsd-gray">Innovation Studio</h4>
+                          <p className="text-sm text-foreground/70">Collaborative spaces for ideation and creative problem-solving</p>
+                        </div>
+                      </li>
+                      
+                      <li className="flex items-start">
+                        <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Target className="w-4 h-4 text-bsd-orange" />
+                        </div>
+                        <div className="ml-3">
+                          <h4 className="font-medium text-bsd-gray">Industry Partnerships</h4>
+                          <p className="text-sm text-foreground/70">Collaborations with leading product design companies</p>
+                        </div>
+                      </li>
+                      
+                      <li className="flex items-start">
+                        <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Award className="w-4 h-4 text-bsd-orange" />
+                        </div>
+                        <div className="ml-3">
+                          <h4 className="font-medium text-bsd-gray">Design Competitions</h4>
+                          <p className="text-sm text-foreground/70">Regular participation in national and international design competitions</p>
+                        </div>
+                      </li>
                     </ul>
-                  </div>
-                </div>
+                  </CardContent>
+                </Card>
               </div>
             </TabsContent>
             
