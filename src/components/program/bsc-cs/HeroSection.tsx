@@ -20,10 +20,10 @@ export const HeroSection: React.FC = () => {
             <div className="space-y-6">
               <Badge variant="bsdOrange" className="mb-2">3-YEAR UNDERGRADUATE PROGRAM</Badge>
               <h1 className="text-4xl md:text-5xl font-display font-bold text-bsd-gray leading-tight">
-                B.Sc Computer Science with Data Analytics, Cyber Security & AI/ML
+                BCA with Data Analytics & Cyber Security
               </h1>
               <p className="text-lg text-foreground/80">
-                Master computer science fundamentals with specializations in Data Analytics, Cyber Security, and AI/ML. Develop comprehensive skills to analyze complex data sets, protect digital assets, and implement intelligent solutions.
+                Master computer applications with specialized focus on Data Analytics and Cyber Security. Develop practical skills in software development, data analysis, cybersecurity protocols, and modern application frameworks.
               </p>
               
               <div className="flex flex-wrap gap-4 pt-4">
@@ -56,10 +56,10 @@ export const HeroSection: React.FC = () => {
 
           <RevealSection direction="left">
             <div className="relative rounded-2xl overflow-hidden shadow-lg h-[400px]">
-              <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&auto=format&fit=crop" alt="B.Sc Computer Science" className="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&auto=format&fit=crop" alt="BCA Program" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
                 <div className="absolute bottom-0 left-0 p-6">
-                  <p className="text-white font-medium text-lg">Comprehensive curriculum with specializations in Data Analytics, Cyber Security & AI/ML</p>
+                  <p className="text-white font-medium text-lg">Applied learning in Computer Applications with Data Analytics & Cyber Security</p>
                 </div>
               </div>
             </div>

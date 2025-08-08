@@ -16,10 +16,10 @@ export const ProgramOverviewSection: React.FC = () => {
           <div className="text-center max-w-3xl mx-auto mb-12">
             <Badge variant="bsdOrange" className="mb-4">PROGRAM OVERVIEW</Badge>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
-              B.Sc Computer Science with Data Analytics, Cyber Security & AI/ML
+              BCA with Data Analytics & Cyber Security
             </h2>
             <p className="mt-4 text-foreground/70">
-              A comprehensive 3-year undergraduate program that combines core computer science principles with specialized tracks in data analytics, cybersecurity, and AI/ML, preparing students for the digital future.
+              A comprehensive 3-year undergraduate program focusing on practical computer applications with specialized tracks in data analytics and cybersecurity, preparing students for industry-ready tech careers.
             </p>
           </div>
         </RevealSection>
@@ -31,9 +31,9 @@ export const ProgramOverviewSection: React.FC = () => {
                 <div className="w-12 h-12 mx-auto rounded-full bg-bsd-orange/10 flex items-center justify-center mb-4">
                   <Cpu className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-xl font-semibold text-bsd-gray mb-3">Computer Science Foundation</h3>
+                <h3 className="text-xl font-semibold text-bsd-gray mb-3">Computer Applications Foundation</h3>
                 <p className="text-foreground/70">
-                  Master programming fundamentals, data structures, algorithms, and software development methodologies that form the backbone of computer science education.
+                  Master programming languages, software development frameworks, application design patterns, and database management systems essential for modern application development.
                 </p>
               </div>
             </div>
@@ -43,9 +43,9 @@ export const ProgramOverviewSection: React.FC = () => {
                 <div className="w-12 h-12 mx-auto rounded-full bg-bsd-orange/10 flex items-center justify-center mb-4">
                   <Database className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-xl font-semibold text-bsd-gray mb-3">Data Analytics & AI/ML</h3>
+                <h3 className="text-xl font-semibold text-bsd-gray mb-3">Data Analytics & Business Intelligence</h3>
                 <p className="text-foreground/70">
-                  Learn to analyze complex datasets, apply statistical methods, implement machine learning algorithms, and create intelligent solutions using industry-standard tools.
+                  Learn to extract insights from complex datasets, apply statistical methods, create data visualizations, and develop business intelligence solutions using industry-standard analytics tools.
                 </p>
               </div>
             </div>

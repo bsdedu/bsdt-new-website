@@ -13,8 +13,8 @@ const ProgramBScCS = () => {
   return (
     <>
       <Helmet>
-        <title>B.Sc Computer Science with Data Analytics, Cyber Security & AI/ML | BSDT</title>
-        <meta name="description" content="Pursue a Bachelor of Science in Computer Science with specialization in Data Analytics, Cyber Security & AI/ML at Bangalore School of Design & Technology. Master programming, data analysis, cybersecurity, and AI concepts for tomorrow's tech challenges." />
+        <title>BCA with Data Analytics & Cyber Security | BSDT</title>
+        <meta name="description" content="Pursue a Bachelor of Computer Applications (BCA) with specialization in Data Analytics & Cyber Security at Bangalore School of Design & Technology. Master application development, data analysis, and cybersecurity for emerging tech careers." />
       </Helmet>
 
       <Navbar />
