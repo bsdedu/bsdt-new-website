@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { RevealSection } from '@/components/ui-elements/RevealSection';
-import { EnhancedFacultySection } from '@/components/faculty/EnhancedFacultySection';
+import { CourseFacultySection } from '@/components/faculty/CourseFacultySection';
 
 const Faculty = () => {
   return (
@@ -17,7 +17,7 @@ const Faculty = () => {
       <Navbar />
       
       <main className="pt-24">
-        <EnhancedFacultySection />
+        <CourseFacultySection />
       </main>
       
       <Footer />
