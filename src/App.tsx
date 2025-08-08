@@ -15,6 +15,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import LeadershipGovernance from "./pages/LeadershipGovernance";
 import ProgramInteriorDesign from "./pages/ProgramInteriorDesign";
 import ProgramFashionDesign from "./pages/ProgramFashionDesign";
+import ProgramProductDesign from "./pages/ProgramProductDesign";
 import ProgramGraphicDesign from "./pages/ProgramGraphicDesign";
 import ProgramAnimationGameDesign from "./pages/ProgramAnimationGameDesign";
 import ProgramBCA from "./pages/ProgramBCA";
@@ -71,6 +72,7 @@ const App = () => {
               <Route path="/academics/bsc-interior-design" element={<ProgramInteriorDesign />} />
               <Route path="/academics/bsc-fashion-design" element={<ProgramFashionDesign />} />
               <Route path="/academics/bva-graphic-design" element={<ProgramGraphicDesign />} />
+              <Route path="/academics/bva-product-design" element={<ProgramProductDesign />} />
               <Route path="/bva-animation-and-multimedia-game-design" element={<ProgramAnimationGameDesign />} />
               <Route path="/academics/b-computer-application-ui-ux" element={<ProgramBCA />} />
               <Route path="/programs/bsc-cs-analytics-security" element={<ProgramBScCS />} />
