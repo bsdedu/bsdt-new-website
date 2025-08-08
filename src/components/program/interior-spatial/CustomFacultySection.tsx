@@ -95,6 +95,25 @@ export const CustomFacultySection: React.FC = () => {
           </div>
         </RevealSection>
 
+        <RevealSection delay={150}>
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-6 mb-12 max-w-md mx-auto">
+            <Card>
+              <CardContent className="pt-6">
+                <div className="text-center">
+                  <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
+                    <img src="/lovable-uploads/6e45673b-6401-46ce-aea5-bdb5df5ec636.png" alt="Ar. Sharan Desai" className="w-full h-full object-cover" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Ar. Sharan Desai</h3>
+                  <p className="text-sm text-bsd-orange">Senior Design Faculty</p>
+                  <p className="mt-4 text-sm text-foreground/70">
+                    A distinguished architect with comprehensive expertise in both residential and commercial interior design. Sharan brings deep knowledge of design methodology, project management, and client relations. His experience in contemporary and traditional design approaches helps students develop versatile design skills and professional acumen.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </RevealSection>
+
         <RevealSection delay={200}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {facultyHighlights.map((highlight, index) => (
