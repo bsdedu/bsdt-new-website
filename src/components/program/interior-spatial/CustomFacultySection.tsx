@@ -39,22 +39,6 @@ export const CustomFacultySection: React.FC = () => {
         </RevealSection>
 
         <RevealSection delay={100}>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            {facultyHighlights.map((highlight, index) => (
-              <Card key={index} className="text-center border-0 bg-bsd-light-gray">
-                <CardContent className="p-8">
-                  <div className="w-16 h-16 rounded-full bg-bsd-orange/10 flex items-center justify-center mx-auto mb-4">
-                    <highlight.icon className="w-8 h-8 text-bsd-orange" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-bsd-gray mb-3">{highlight.title}</h3>
-                  <p className="text-foreground/70">{highlight.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </RevealSection>
-
-        <RevealSection delay={200}>
           <div className="text-center max-w-3xl mx-auto mb-8">
             <h3 className="text-2xl md:text-3xl font-display font-bold text-bsd-gray mb-4">
               Senior Design Faculty
@@ -108,6 +92,22 @@ export const CustomFacultySection: React.FC = () => {
                 </div>
               </CardContent>
             </Card>
+          </div>
+        </RevealSection>
+
+        <RevealSection delay={200}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            {facultyHighlights.map((highlight, index) => (
+              <Card key={index} className="text-center border-0 bg-bsd-light-gray">
+                <CardContent className="p-8">
+                  <div className="w-16 h-16 rounded-full bg-bsd-orange/10 flex items-center justify-center mx-auto mb-4">
+                    <highlight.icon className="w-8 h-8 text-bsd-orange" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-bsd-gray mb-3">{highlight.title}</h3>
+                  <p className="text-foreground/70">{highlight.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </RevealSection>
 
