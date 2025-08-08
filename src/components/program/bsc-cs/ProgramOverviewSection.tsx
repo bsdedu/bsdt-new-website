@@ -1,12 +1,12 @@
 import React from 'react';
-import { Cpu, Database, Shield } from "lucide-react";
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CareerOpportunitiesTab } from './CareerOpportunitiesTab';
-import { LearningOutcomesTab } from './LearningOutcomesTab';
-import { SoftwareToolsTab } from './SoftwareToolsTab';
-import { CurriculumTab } from './CurriculumTab';
+import { Card, CardContent, CardHeader } from "@/components/ui-elements/Card";
+import { Check, Code, Layers, Shield, Database, Sparkles, Lock, BarChart } from "lucide-react";
+import { LearningOutcomesTab } from "./LearningOutcomesTab";
+import { CareerOpportunitiesTab } from "./CareerOpportunitiesTab";
+import { SoftwareToolsTab } from "./SoftwareToolsTab";
 
 export const ProgramOverviewSection: React.FC = () => {
   return (
@@ -16,78 +16,236 @@ export const ProgramOverviewSection: React.FC = () => {
           <div className="text-center max-w-3xl mx-auto mb-12">
             <Badge variant="bsdOrange" className="mb-4">PROGRAM OVERVIEW</Badge>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
-              BCA with Data Analytics & Cyber Security
+              Technology Meets Security & Analytics
             </h2>
             <p className="mt-4 text-foreground/70">
-              A comprehensive 3-year undergraduate program focusing on practical computer applications with specialized tracks in data analytics and cybersecurity, preparing students for industry-ready tech careers.
+              Our BCA program with specializations in Data Analytics or Cyber Security prepares students to excel in the rapidly evolving tech landscape, combining strong technical foundations with specialized expertise in data science and cybersecurity.
             </p>
           </div>
         </RevealSection>
 
         <RevealSection delay={100}>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-bsd-light-gray rounded-xl p-6">
-              <div className="text-center">
-                <div className="w-12 h-12 mx-auto rounded-full bg-bsd-orange/10 flex items-center justify-center mb-4">
-                  <Cpu className="w-6 h-6 text-bsd-orange" />
-                </div>
-                <h3 className="text-xl font-semibold text-bsd-gray mb-3">Computer Applications Foundation</h3>
-                <p className="text-foreground/70">
-                  Master programming languages, software development frameworks, application design patterns, and database management systems essential for modern application development.
-                </p>
-              </div>
-            </div>
-            
-            <div className="bg-bsd-light-gray rounded-xl p-6">
-              <div className="text-center">
-                <div className="w-12 h-12 mx-auto rounded-full bg-bsd-orange/10 flex items-center justify-center mb-4">
-                  <Database className="w-6 h-6 text-bsd-orange" />
-                </div>
-                <h3 className="text-xl font-semibold text-bsd-gray mb-3">Data Analytics & Business Intelligence</h3>
-                <p className="text-foreground/70">
-                  Learn to extract insights from complex datasets, apply statistical methods, create data visualizations, and develop business intelligence solutions using industry-standard analytics tools.
-                </p>
-              </div>
-            </div>
-            
-            <div className="bg-bsd-light-gray rounded-xl p-6">
-              <div className="text-center">
-                <div className="w-12 h-12 mx-auto rounded-full bg-bsd-orange/10 flex items-center justify-center mb-4">
-                  <Shield className="w-6 h-6 text-bsd-orange" />
-                </div>
-                <h3 className="text-xl font-semibold text-bsd-gray mb-3">Cyber Security</h3>
-                <p className="text-foreground/70">
-                  Develop skills to protect digital assets, identify vulnerabilities, respond to security incidents, and implement robust security measures against evolving cyber threats.
-                </p>
-              </div>
-            </div>
-          </div>
-        </RevealSection>
-
-        <RevealSection delay={200}>
           <Tabs defaultValue="curriculum" className="w-full">
             <div className="flex justify-center mb-8">
-              <TabsList className="grid w-full max-w-xl grid-cols-4">
+              <TabsList className="grid grid-cols-4 w-full max-w-3xl">
                 <TabsTrigger value="curriculum">Curriculum</TabsTrigger>
-                <TabsTrigger value="learning-outcomes">Learning Outcomes</TabsTrigger>
-                <TabsTrigger value="software-tools">Software Tools</TabsTrigger>
-                <TabsTrigger value="career-opportunities">Career Opportunities</TabsTrigger>
+                <TabsTrigger value="software">Software & Tools</TabsTrigger>
+                <TabsTrigger value="outcomes">Learning Outcomes</TabsTrigger>
+                <TabsTrigger value="career">Career Opportunities</TabsTrigger>
               </TabsList>
             </div>
             
             <TabsContent value="curriculum" className="mt-0">
-              <CurriculumTab />
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <Card className="col-span-1 md:col-span-2">
+                  <CardHeader>
+                    <h3 className="text-xl font-semibold text-bsd-gray">Program Structure</h3>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-6">
+                      <p className="text-foreground/70">
+                        The BCA program is a 3-year full-time undergraduate course divided into 6 semesters. Students choose their specialization in the third year, focusing on either Data Analytics or Cyber Security.
+                      </p>
+                      
+                      <div className="space-y-4">
+                        <h4 className="font-medium text-bsd-gray">First & Second Year: Core Computer Applications</h4>
+                        <ul className="space-y-2">
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Introduction to Programming & Data Structures</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Computer Organization & Architecture</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Web Development Foundations</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Database Management Systems</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Object-Oriented Programming</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Software Engineering Principles</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Computer Networks</span>
+                          </li>
+                          <li className="flex items-start">
+                            <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                            <span>Operating Systems</span>
+                          </li>
+                        </ul>
+
+                        <h4 className="font-medium text-bsd-gray">Third Year: Specialization (Choose One)</h4>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                          <div>
+                            <h5 className="font-medium text-bsd-orange mb-2">Data Analytics Track</h5>
+                            <ul className="space-y-2">
+                              <li className="flex items-start">
+                                <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                                <span>Statistical Methods & Data Science</span>
+                              </li>
+                              <li className="flex items-start">
+                                <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                                <span>Python for Data Analytics</span>
+                              </li>
+                              <li className="flex items-start">
+                                <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                                <span>Machine Learning Fundamentals</span>
+                              </li>
+                              <li className="flex items-start">
+                                <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                                <span>Data Visualization & Reporting</span>
+                              </li>
+                              <li className="flex items-start">
+                                <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                                <span>Big Data Technologies</span>
+                              </li>
+                              <li className="flex items-start">
+                                <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                                <span>Business Intelligence & Analytics</span>
+                              </li>
+                              <li className="flex items-start">
+                                <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                                <span>Predictive Analytics</span>
+                              </li>
+                              <li className="flex items-start">
+                                <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                                <span>Data Analytics Capstone Project</span>
+                              </li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h5 className="font-medium text-bsd-orange mb-2">Cyber Security Track</h5>
+                            <ul className="space-y-2">
+                              <li className="flex items-start">
+                                <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                                <span>Network Security Fundamentals</span>
+                              </li>
+                              <li className="flex items-start">
+                                <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                                <span>Cryptography & Data Protection</span>
+                              </li>
+                              <li className="flex items-start">
+                                <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                                <span>Ethical Hacking & Penetration Testing</span>
+                              </li>
+                              <li className="flex items-start">
+                                <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                                <span>Digital Forensics</span>
+                              </li>
+                              <li className="flex items-start">
+                                <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                                <span>Security Operations & Incident Response</span>
+                              </li>
+                              <li className="flex items-start">
+                                <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                                <span>Malware Analysis & Detection</span>
+                              </li>
+                              <li className="flex items-start">
+                                <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                                <span>Cybersecurity Governance & Risk</span>
+                              </li>
+                              <li className="flex items-start">
+                                <Check className="w-5 h-5 text-bsd-orange mr-2 flex-shrink-0 mt-0.5" />
+                                <span>Cybersecurity Capstone Project</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-bsd-orange/5 border-bsd-orange/20">
+                  <CardHeader>
+                    <h3 className="text-xl font-semibold text-bsd-gray">Program Highlights</h3>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-4">
+                      <li className="flex items-start">
+                        <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Code className="w-4 h-4 text-bsd-orange" />
+                        </div>
+                        <div className="ml-3">
+                          <h4 className="font-medium text-bsd-gray">Specialization Options</h4>
+                          <p className="text-sm text-foreground/70">Choose between Data Analytics or Cyber Security pathways</p>
+                        </div>
+                      </li>
+                      
+                      <li className="flex items-start">
+                        <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Layers className="w-4 h-4 text-bsd-orange" />
+                        </div>
+                        <div className="ml-3">
+                          <h4 className="font-medium text-bsd-gray">Industry-Focused Projects</h4>
+                          <p className="text-sm text-foreground/70">Practical learning with real-world applications</p>
+                        </div>
+                      </li>
+                      
+                      <li className="flex items-start">
+                        <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <BarChart className="w-4 h-4 text-bsd-orange" />
+                        </div>
+                        <div className="ml-3">
+                          <h4 className="font-medium text-bsd-gray">Data-Driven Learning</h4>
+                          <p className="text-sm text-foreground/70">Analytics-powered curriculum and personalized learning</p>
+                        </div>
+                      </li>
+                      
+                      <li className="flex items-start">
+                        <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Shield className="w-4 h-4 text-bsd-orange" />
+                        </div>
+                        <div className="ml-3">
+                          <h4 className="font-medium text-bsd-gray">Security-First Approach</h4>
+                          <p className="text-sm text-foreground/70">Cybersecurity principles integrated throughout the curriculum</p>
+                        </div>
+                      </li>
+                      
+                      <li className="flex items-start">
+                        <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Lock className="w-4 h-4 text-bsd-orange" />
+                        </div>
+                        <div className="ml-3">
+                          <h4 className="font-medium text-bsd-gray">Hackathons & CTF Competitions</h4>
+                          <p className="text-sm text-foreground/70">Regular security challenges and data science competitions</p>
+                        </div>
+                      </li>
+                      
+                      <li className="flex items-start">
+                        <div className="w-8 h-8 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Database className="w-4 h-4 text-bsd-orange" />
+                        </div>
+                        <div className="ml-3">
+                          <h4 className="font-medium text-bsd-gray">Industry Certifications</h4>
+                          <p className="text-sm text-foreground/70">Integrated preparation for AWS, CompTIA, and data science certifications</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
             </TabsContent>
             
-            <TabsContent value="learning-outcomes" className="mt-0">
-              <LearningOutcomesTab />
-            </TabsContent>
-            
-            <TabsContent value="software-tools" className="mt-0">
+            <TabsContent value="software" className="mt-0">
               <SoftwareToolsTab />
             </TabsContent>
             
-            <TabsContent value="career-opportunities" className="mt-0">
+            <TabsContent value="outcomes" className="mt-0">
+              <LearningOutcomesTab />
+            </TabsContent>
+            
+            <TabsContent value="career" className="mt-0">
               <CareerOpportunitiesTab />
             </TabsContent>
           </Tabs>
