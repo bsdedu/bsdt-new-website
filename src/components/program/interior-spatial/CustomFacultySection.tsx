@@ -52,7 +52,7 @@ export const CustomFacultySection: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&q=80" alt="Ar. Dineshwar S" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/6a1ccf75-36c6-4e1d-a33e-de8d605a10a0.png" alt="Ar. Dineshwar S" className="w-full h-full object-cover" />
                   </div>
                   <h3 className="text-lg font-semibold text-bsd-gray">Ar. Dineshwar S</h3>
                   <p className="text-sm text-bsd-orange">Senior Design Faculty</p>
