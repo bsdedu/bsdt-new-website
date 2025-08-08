@@ -96,7 +96,7 @@ export const CustomFacultySection: React.FC = () => {
         </RevealSection>
 
         <RevealSection delay={150}>
-          <div className="grid grid-cols-1 md:grid-cols-1 gap-6 mb-12 max-w-md mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             <Card>
               <CardContent className="pt-6">
                 <div className="text-center">
@@ -107,6 +107,21 @@ export const CustomFacultySection: React.FC = () => {
                   <p className="text-sm text-bsd-orange">Senior Design Faculty</p>
                   <p className="mt-4 text-sm text-foreground/70">
                     Ar. Desai is a highly qualified academic and industry professional with 20 years of experience, including 13 years in teaching. He holds a Master of Architecture from The University of Oklahoma, Norman, USA, bringing a global perspective to architectural education. With a strong leadership background, he has served as a principal for 8 years, contributing to the growth and development of institutions. His expertise spans architectural design, education, and administration, making him a key contributor to the Bangalore School of Design and Technology.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+            
+            <Card>
+              <CardContent className="pt-6">
+                <div className="text-center">
+                  <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
+                    <img src="/lovable-uploads/9e903351-71c3-479a-83d3-60cba237b6f7.png" alt="Ar. Pravin DV" className="w-full h-full object-cover" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Ar. Pravin DV</h3>
+                  <p className="text-sm text-bsd-orange">Design Mentor for Landscape Design</p>
+                  <p className="mt-4 text-sm text-foreground/70">
+                    An adventurer who treks mountains & rides cross country, Ar. Pravin DV is a graduate of Architecture from VNIT, Nagpur, and holds a Masters in Landscape Architecture from SPA, New Delhi. With over 20 years of practice across large scale resorts, residential & commercial projects, he loves experimenting with materials and believes in breaking the norm to set new designs. His vast experience and global travel inspiration brings immense knowledge to students.
                   </p>
                 </div>
               </CardContent>
