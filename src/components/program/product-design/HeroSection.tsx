@@ -1,5 +1,6 @@
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
+import { HeroImageCarousel } from "@/components/ui-elements/HeroImageCarousel";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui-elements/Card";
 import { AnimatedButton } from "@/components/ui-elements/AnimatedButton";
@@ -16,6 +17,29 @@ export const HeroSection: React.FC = () => {
       enquiryForm.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const heroImages = [
+    {
+      src: "https://images.unsplash.com/photo-1586717799252-bd134ad00e26?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      alt: "Product Design Studio",
+      caption: "Designing products that enhance human experience"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&auto=format&fit=crop",
+      alt: "Industrial Design Workshop",
+      caption: "Create innovative industrial products and solutions"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&auto=format&fit=crop",
+      alt: "Product Prototyping Lab",
+      caption: "Build and test product prototypes with advanced tools"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1555664424-778a1e5e1b48?w=800&auto=format&fit=crop",
+      alt: "Consumer Product Design",
+      caption: "Design consumer products that solve everyday problems"
+    }
+  ];
 
   return (
     <section className="relative pt-20 md:pt-28 pb-16 md:pb-20 overflow-hidden bg-bsd-light-gray">
@@ -62,16 +86,7 @@ export const HeroSection: React.FC = () => {
             </div>
           </RevealSection>
 
-          <RevealSection direction="left">
-            <div className="relative rounded-2xl overflow-hidden shadow-lg h-[400px]">
-              <img src="https://images.unsplash.com/photo-1586717799252-bd134ad00e26?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Product Design Studio" className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                <div className="absolute bottom-0 left-0 p-6">
-                  <p className="text-white font-medium text-lg">Designing products that enhance human experience</p>
-                </div>
-              </div>
-            </div>
-          </RevealSection>
+          <HeroImageCarousel images={heroImages} />
         </div>
 
         {/* Quick stats */}

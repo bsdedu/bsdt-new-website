@@ -1,11 +1,35 @@
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
+import { HeroImageCarousel } from "@/components/ui-elements/HeroImageCarousel";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui-elements/Card";
 import { AnimatedButton } from "@/components/ui-elements/AnimatedButton";
 import { Calendar, GraduationCap, BookOpen, Users, BriefcaseBusiness, Award, Building2, BrainCircuit } from "lucide-react";
 
 export const HeroSection: React.FC = () => {
+  const heroImages = [
+    {
+      src: "/lovable-uploads/8c6af2d4-79fa-42a5-8f81-fecc0d4bbee6.png",
+      alt: "Modern Retail Interior Design",
+      caption: "Design innovative retail and commercial spaces"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop",
+      alt: "Residential Interior Design",
+      caption: "Create beautiful and functional living spaces"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&auto=format&fit=crop",
+      alt: "Office Interior Design",
+      caption: "Transform workspace environments for productivity"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?w=800&auto=format&fit=crop",
+      alt: "Hospitality Interior Design",
+      caption: "Design exceptional hospitality and dining experiences"
+    }
+  ];
+
   return (
     <section className="relative pt-20 md:pt-28 pb-16 md:pb-20 overflow-hidden bg-bsd-light-gray">
       <div className="absolute inset-0 -z-10">
@@ -58,20 +82,7 @@ export const HeroSection: React.FC = () => {
             </div>
           </RevealSection>
 
-          <RevealSection direction="left">
-            <div className="relative rounded-2xl overflow-hidden shadow-lg h-[400px]">
-              <img 
-                src="/lovable-uploads/8c6af2d4-79fa-42a5-8f81-fecc0d4bbee6.png" 
-                alt="Modern Retail Interior Design" 
-                className="w-full h-full object-cover" 
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                <div className="absolute bottom-0 left-0 p-6">
-                  <p className="text-white font-medium text-lg">Design innovative retail and commercial spaces</p>
-                </div>
-              </div>
-            </div>
-          </RevealSection>
+          <HeroImageCarousel images={heroImages} />
         </div>
 
         {/* Quick stats */}

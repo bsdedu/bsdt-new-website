@@ -1,5 +1,6 @@
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
+import { HeroImageCarousel } from "@/components/ui-elements/HeroImageCarousel";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui-elements/Card";
 import { AnimatedButton } from "@/components/ui-elements/AnimatedButton";
@@ -16,6 +17,29 @@ export const HeroSection: React.FC = () => {
       enquiryForm.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const heroImages = [
+    {
+      src: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1158&q=80",
+      alt: "Interior & Spatial Design Studio",
+      caption: "Creating functional, aesthetic spaces through spatial innovation"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?w=800&auto=format&fit=crop",
+      alt: "Commercial Space Design",
+      caption: "Design innovative commercial and retail environments"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&auto=format&fit=crop",
+      alt: "Residential Interior Design",
+      caption: "Create personalized living spaces that reflect lifestyle"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&auto=format&fit=crop",
+      alt: "Architectural Integration",
+      caption: "Integrate interior design with architectural elements"
+    }
+  ];
 
   return (
     <section className="relative pt-20 md:pt-28 pb-16 md:pb-20 overflow-hidden bg-bsd-light-gray">
@@ -62,16 +86,7 @@ export const HeroSection: React.FC = () => {
             </div>
           </RevealSection>
 
-          <RevealSection direction="left">
-            <div className="relative rounded-2xl overflow-hidden shadow-lg h-[400px]">
-              <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1158&q=80" alt="Interior & Spatial Design Studio" className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                <div className="absolute bottom-0 left-0 p-6">
-                  <p className="text-white font-medium text-lg">Creating functional, aesthetic spaces through spatial innovation</p>
-                </div>
-              </div>
-            </div>
-          </RevealSection>
+          <HeroImageCarousel images={heroImages} />
         </div>
 
         {/* Quick stats */}

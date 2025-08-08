@@ -1,12 +1,36 @@
 
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
+import { HeroImageCarousel } from "@/components/ui-elements/HeroImageCarousel";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui-elements/Card";
 import { AnimatedButton } from "@/components/ui-elements/AnimatedButton";
 import { Calendar, GraduationCap, BookOpen, Lightbulb, Smartphone, PenTool, MousePointer } from "lucide-react";
 
 export const HeroSection: React.FC = () => {
+  const heroImages = [
+    {
+      src: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80",
+      alt: "Interaction Design Studio",
+      caption: "Create user-centered digital experiences through human-focused design"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1586717799252-bd134ad00e26?w=800&auto=format&fit=crop",
+      alt: "UX Research and Testing",
+      caption: "Research user behavior and test design solutions"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1559028006-448665bd7c7f?w=800&auto=format&fit=crop",
+      alt: "Prototype Design Lab",
+      caption: "Build interactive prototypes and validate user experiences"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&auto=format&fit=crop",
+      alt: "Design Thinking Workshop",
+      caption: "Apply design thinking methodologies to solve complex problems"
+    }
+  ];
+
   return (
     <section className="relative pt-20 md:pt-28 pb-16 md:pb-20 overflow-hidden bg-bsd-light-gray">
       <div className="absolute inset-0 -z-10">
@@ -59,16 +83,7 @@ export const HeroSection: React.FC = () => {
             </div>
           </RevealSection>
 
-          <RevealSection direction="left">
-            <div className="relative rounded-2xl overflow-hidden shadow-lg h-[400px]">
-              <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Interaction Design Studio" className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                <div className="absolute bottom-0 left-0 p-6">
-                  <p className="text-white font-medium text-lg">Create user-centered digital experiences through human-focused design</p>
-                </div>
-              </div>
-            </div>
-          </RevealSection>
+          <HeroImageCarousel images={heroImages} />
         </div>
 
         {/* Quick stats */}

@@ -1,11 +1,35 @@
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
+import { HeroImageCarousel } from "@/components/ui-elements/HeroImageCarousel";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui-elements/Card";
 import { AnimatedButton } from "@/components/ui-elements/AnimatedButton";
 import { Calendar, GraduationCap, BookOpen, BrainCircuit, Code, Database, PieChart, Cpu } from "lucide-react";
 
 export const HeroSection: React.FC = () => {
+  const heroImages = [
+    {
+      src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&auto=format&fit=crop",
+      alt: "BCA UI/UX Design Lab",
+      caption: "Master user interface and experience design with cutting-edge tools"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1559028006-448665bd7c7f?w=800&auto=format&fit=crop",
+      alt: "Interactive Design Studio",
+      caption: "Create intuitive digital experiences and prototypes"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&auto=format&fit=crop",
+      alt: "Web Development Workspace",
+      caption: "Build responsive applications with modern frameworks"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&auto=format&fit=crop",
+      alt: "Computer Applications Lab",
+      caption: "Hands-on learning in advanced computing technologies"
+    }
+  ];
+
   return (
     <section className="relative pt-20 md:pt-28 pb-16 md:pb-20 overflow-hidden bg-bsd-light-gray">
       <div className="absolute inset-0 -z-10">
@@ -53,16 +77,7 @@ export const HeroSection: React.FC = () => {
             </div>
           </RevealSection>
 
-          <RevealSection direction="left">
-            <div className="relative rounded-2xl overflow-hidden shadow-lg h-[400px]">
-              <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&auto=format&fit=crop" alt="BCA with UI/UX" className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                <div className="absolute bottom-0 left-0 p-6">
-                  <p className="text-white font-medium text-lg">Cutting-edge curriculum with specialization in UI/UX Design</p>
-                </div>
-              </div>
-            </div>
-          </RevealSection>
+          <HeroImageCarousel images={heroImages} />
         </div>
 
         {/* Quick stats */}

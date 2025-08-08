@@ -1,11 +1,35 @@
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
+import { HeroImageCarousel } from "@/components/ui-elements/HeroImageCarousel";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui-elements/Card";
 import { AnimatedButton } from "@/components/ui-elements/AnimatedButton";
 import { Calendar, GraduationCap, BookOpen, Shield, Database, Network, Cpu, LockKeyhole } from "lucide-react";
 
 export const HeroSection: React.FC = () => {
+  const heroImages = [
+    {
+      src: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&auto=format&fit=crop",
+      alt: "BCA Data Analytics Lab",
+      caption: "Applied learning in Computer Applications with Data Analytics & Cyber Security"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&auto=format&fit=crop",
+      alt: "Cyber Security Operations Center",
+      caption: "Advanced cybersecurity training and threat detection"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop",
+      alt: "Data Analytics Visualization",
+      caption: "Transform data into actionable business insights"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&auto=format&fit=crop",
+      alt: "Modern Computer Lab",
+      caption: "State-of-the-art computing facilities and technology"
+    }
+  ];
+
   return (
     <section className="relative pt-20 md:pt-28 pb-16 md:pb-20 overflow-hidden bg-bsd-light-gray">
       <div className="absolute inset-0 -z-10">
@@ -54,16 +78,7 @@ export const HeroSection: React.FC = () => {
             </div>
           </RevealSection>
 
-          <RevealSection direction="left">
-            <div className="relative rounded-2xl overflow-hidden shadow-lg h-[400px]">
-              <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&auto=format&fit=crop" alt="BCA Program" className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                <div className="absolute bottom-0 left-0 p-6">
-                  <p className="text-white font-medium text-lg">Applied learning in Computer Applications with Data Analytics & Cyber Security</p>
-                </div>
-              </div>
-            </div>
-          </RevealSection>
+          <HeroImageCarousel images={heroImages} />
         </div>
 
         
