@@ -82,9 +82,9 @@ export const CustomFacultySection: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&q=80" alt="Ar. Seema" className="w-full h-full object-cover" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Ar. Seema</h3>
+                     <img src="/lovable-uploads/4b87a7c5-2ad6-4f5d-966c-9fa58b72cee5.png" alt="Ar. Seema Ramakrishnan" className="w-full h-full object-cover" />
+                   </div>
+                   <h3 className="text-lg font-semibold text-bsd-gray">Ar. Seema Ramakrishnan</h3>
                   <p className="text-sm text-bsd-orange">Senior Design Faculty</p>
                   <p className="mt-4 text-sm text-foreground/70">
                     A creative professional with deep expertise in spatial design and human-centered design principles. Seema's background in both architecture and interior design allows her to guide students in understanding space relationships and user experience. She emphasizes the importance of cultural context and environmental consciousness in design.
