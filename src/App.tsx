@@ -27,6 +27,7 @@ import DiplomaProgramGraphicUIUX from "./pages/diploma/DiplomaProgramGraphicUIUX
 import DiplomaProgramInteriorDesign from "./pages/diploma/DiplomaProgramInteriorDesign";
 import DiplomaProgramHCIUIUX from "./pages/diploma/DiplomaProgramHCIUIUX";
 import DiplomaProgramLandscapeDesign from "./pages/diploma/DiplomaProgramLandscapeDesign";
+import DiplomaProgramSustainableCircularDesign from "./pages/diploma/DiplomaProgramSustainableCircularDesign";
 import ApplicationProcess from "./pages/admissions/ApplicationProcess";
 import FeesScholarships from "./pages/admissions/FeesScholarships";
 import ScheduleVisit from "./pages/admissions/ScheduleVisit";
@@ -88,6 +89,7 @@ const App = () => {
               <Route path="/programs/diploma-hci-uiux" element={<DiplomaProgramHCIUIUX />} />
               <Route path="/academics/diploma-in-hci-for-ui-ux" element={<DiplomaProgramHCIUIUX />} /> 
               <Route path="/academics/post-graduate-diploma-in-landscape-design" element={<DiplomaProgramLandscapeDesign />} />
+              <Route path="/academics/professional-diploma-sustainable-circular-design" element={<DiplomaProgramSustainableCircularDesign />} />
               
               {/* Admissions Routes */}
               <Route path="/admissions/application-process" element={<ApplicationProcess />} />

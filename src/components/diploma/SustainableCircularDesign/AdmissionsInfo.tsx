@@ -1,0 +1,142 @@
+import React from 'react';
+import { RevealSection } from "@/components/ui-elements/RevealSection";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui-elements/Card";
+import { GraduationCap, CalendarClock, FileText } from "lucide-react";
+import { Link } from 'react-router-dom';
+
+export const AdmissionsInfo: React.FC = () => {
+  return (
+    <section className="py-16 bg-bsd-light-gray">
+      <div className="container mx-auto px-6 md:px-8">
+        <RevealSection>
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <Badge variant="bsdOrange" className="mb-4">ADMISSIONS INFORMATION</Badge>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
+              Join Our Sustainable Design Program
+            </h2>
+            <p className="mt-4 text-foreground/70">
+              Everything you need to know about admissions, eligibility, and the application process for sustainable design education.
+            </p>
+          </div>
+        </RevealSection>
+
+        <RevealSection delay={100}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-bsd-gray mb-6 flex items-center">
+                  <GraduationCap className="w-6 h-6 text-bsd-orange mr-3" />
+                  Eligibility & Requirements
+                </h3>
+                
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-semibold text-bsd-gray">Academic Qualification</h4>
+                    <p className="text-foreground/70">10+2 from any recognized board or equivalent</p>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-semibold text-bsd-gray">Age Limit</h4>
+                    <p className="text-foreground/70">No upper age limit</p>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-semibold text-bsd-gray">Selection Process</h4>
+                    <p className="text-foreground/70">Portfolio review (if available) and personal interview focused on sustainability interests</p>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-semibold text-bsd-gray">Environmental Awareness</h4>
+                    <p className="text-foreground/70">Interest in environmental issues and sustainability; no prior design experience required</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-bsd-gray mb-6 flex items-center">
+                  <CalendarClock className="w-6 h-6 text-bsd-orange mr-3" />
+                  Program Information
+                </h3>
+                
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-semibold text-bsd-gray">Duration</h4>
+                    <p className="text-foreground/70">12 Months (2 Semesters)</p>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-semibold text-bsd-gray">Program Structure</h4>
+                    <p className="text-foreground/70">Theory classes, practical workshops, field visits, sustainability projects, portfolio development</p>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-semibold text-bsd-gray">Class Schedule</h4>
+                    <p className="text-foreground/70">Weekday classes (Mon-Thu, 09:30 AM to 4:30 PM)</p>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-semibold text-bsd-gray">Intake Dates</h4>
+                    <p className="text-foreground/70">January, May, and September each year</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-8 mb-10">
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-bsd-gray mb-6 flex items-center">
+                  <FileText className="w-6 h-6 text-bsd-orange mr-3" />
+                  Application Process
+                </h3>
+                
+                <ol className="space-y-4 list-decimal pl-5">
+                  <li>
+                    <p className="text-foreground/70">
+                      <span className="font-semibold text-bsd-gray">Complete the online application form</span> with your personal and educational details
+                    </p>
+                  </li>
+                  
+                  <li>
+                    <p className="text-foreground/70">
+                      <span className="font-semibold text-bsd-gray">Submit required documents</span> including ID proof, educational certificates, and statement of purpose
+                    </p>
+                  </li>
+                  
+                  <li>
+                    <p className="text-foreground/70">
+                      <span className="font-semibold text-bsd-gray">Schedule and attend a personal interview</span> discussing your interest in sustainability and career goals
+                    </p>
+                  </li>
+                  
+                  <li>
+                    <p className="text-foreground/70">
+                      <span className="font-semibold text-bsd-gray">Receive admission confirmation</span> and complete registration process
+                    </p>
+                  </li>
+                </ol>
+              </CardContent>
+            </Card>
+          </div>
+        </RevealSection>
+        
+        <RevealSection delay={200}>
+          <div className="text-center">
+            <div className="inline-flex flex-col sm:flex-row gap-4">
+              <a href="https://apply.bsd.edu.in/" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" variant="outline" className="border-bsd-orange text-bsd-orange hover:bg-bsd-orange/10">
+                  Apply Now
+                </Button>
+              </a>
+            </div>
+          </div>
+        </RevealSection>
+      </div>
+    </section>
+  );
+};
