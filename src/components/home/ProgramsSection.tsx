@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader } from "../ui-elements/Card";
 import { RevealSection } from "../ui-elements/RevealSection";
-import { PenTool, Code, Gamepad, Cpu, Building2, LayoutDashboard, Monitor, GraduationCap } from "lucide-react";
+import { PenTool, Code, Gamepad, Cpu, Building2, LayoutDashboard, Monitor, GraduationCap, Recycle, Bot, Armchair } from "lucide-react";
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -118,6 +118,30 @@ const diplomaPrograms: Program[] = [
     color: "from-bsd-gray/15 to-bsd-gray/5",
     duration: "8 months",
     href: "/academics/post-graduate-diploma-in-landscape-design"
+  },
+  {
+    icon: <Recycle className="w-6 h-6 text-bsd-orange" />,
+    title: "Professional Dip. in Sustainable System & Circular Design",
+    description: "A comprehensive program focused on sustainable design principles, circular economy concepts, and environmentally conscious design solutions.",
+    color: "from-bsd-orange/20 to-bsd-orange/5",
+    duration: "1 year",
+    href: "/academics/professional-diploma-sustainable-circular-design"
+  },
+  {
+    icon: <Bot className="w-6 h-6 text-bsd-orange" />,
+    title: "Professional Dip. in AI & Integrated Service Design",
+    description: "An innovative program combining artificial intelligence technologies with service design methodologies for creating intelligent user experiences.",
+    color: "from-bsd-gray/15 to-bsd-gray/5",
+    duration: "1 year",
+    href: "/academics/professional-diploma-ai-service-design"
+  },
+  {
+    icon: <Armchair className="w-6 h-6 text-bsd-orange" />,
+    title: "Professional Dip. in Furniture Design",
+    description: "A specialized program focusing on furniture design principles, materials knowledge, manufacturing processes, and contemporary design trends.",
+    color: "from-bsd-orange/20 to-bsd-orange/5",
+    duration: "1 year",
+    href: "/academics/professional-diploma-furniture-design"
   }
 ];
 
