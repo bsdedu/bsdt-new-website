@@ -6,6 +6,23 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { RevealSection } from '@/components/ui-elements/RevealSection';
 import { Clock, Users, Calendar, ArrowRight, GraduationCap } from 'lucide-react';
 
+// Import images
+import generativeAIImage from '@/assets/programs/generative-ai-creative.jpg';
+import vrArImage from '@/assets/programs/vr-ar-prototyping.jpg';
+import parametricDesignImage from '@/assets/programs/parametric-design.jpg';
+import motionDesignImage from '@/assets/programs/motion-design.jpg';
+import uxResearchImage from '@/assets/programs/ux-research.jpg';
+import lightingDesignImage from '@/assets/programs/lighting-design.jpg';
+import interiorDesignImage from '@/assets/programs/interior-design.jpg';
+import uiUxDesignImage from '@/assets/programs/ui-ux-design.jpg';
+import gameEnvironmentImage from '@/assets/programs/game-environment.jpg';
+import fashionTechImage from '@/assets/programs/fashion-tech.jpg';
+import motionGraphicsImage from '@/assets/programs/motion-graphics.jpg';
+import aiOptimizationImage from '@/assets/programs/ai-optimization.jpg';
+import designCareerImage from '@/assets/programs/design-career.jpg';
+import aiCybersecurityImage from '@/assets/programs/ai-cybersecurity.jpg';
+import roboticsImage from '@/assets/programs/robotics.jpg';
+
 export const FutureSchoolPrograms: React.FC = () => {
   const threeWeekPrograms = [
     {
@@ -15,7 +32,8 @@ export const FutureSchoolPrograms: React.FC = () => {
       format: 'Live Online',
       nextBatch: 'Feb 2025',
       skills: ['Midjourney', 'DALL-E', 'Stable Diffusion', 'AI Prompting'],
-      href: '/continuing-studies/generative-ai-creative-prototyping'
+      href: '/continuing-studies/generative-ai-creative-prototyping',
+      image: generativeAIImage
     },
     {
       title: 'VR/AR Prototyping with Unity & Unreal',
@@ -24,7 +42,8 @@ export const FutureSchoolPrograms: React.FC = () => {
       format: 'Live Online',
       nextBatch: 'Mar 2025',
       skills: ['Unity 3D', 'Unreal Engine', 'VR Development', 'AR Frameworks'],
-      href: '/continuing-studies/vr-ar-prototyping'
+      href: '/continuing-studies/vr-ar-prototyping',
+      image: vrArImage
     },
     {
       title: 'Parametric Design with Rhino & Grasshopper',
@@ -33,7 +52,8 @@ export const FutureSchoolPrograms: React.FC = () => {
       format: 'Live Online',
       nextBatch: 'Apr 2025',
       skills: ['Rhino 3D', 'Grasshopper', 'Parametric Modeling', 'Algorithmic Design'],
-      href: '/continuing-studies/parametric-design'
+      href: '/continuing-studies/parametric-design',
+      image: parametricDesignImage
     },
     {
       title: 'Motion Design Essentials',
@@ -42,7 +62,8 @@ export const FutureSchoolPrograms: React.FC = () => {
       format: 'Live Online',
       nextBatch: 'May 2025',
       skills: ['After Effects', 'Cinema 4D', 'Motion Graphics', 'Animation Principles'],
-      href: '/continuing-studies/motion-design-essentials'
+      href: '/continuing-studies/motion-design-essentials',
+      image: motionDesignImage
     },
     {
       title: 'UX Research Sprint',
@@ -51,7 +72,8 @@ export const FutureSchoolPrograms: React.FC = () => {
       format: 'Live Online',
       nextBatch: 'Jun 2025',
       skills: ['User Interviews', 'Usability Testing', 'Data Analysis', 'Research Methods'],
-      href: '/continuing-studies/ux-research-sprint'
+      href: '/continuing-studies/ux-research-sprint',
+      image: uxResearchImage
     }
   ];
 
@@ -63,7 +85,8 @@ export const FutureSchoolPrograms: React.FC = () => {
       format: 'Live Online',
       nextBatch: 'Feb 2025',
       skills: ['Lighting Design', 'DIALux', 'Photometry', 'Smart Lighting'],
-      href: '/continuing-studies/interior-lighting-design'
+      href: '/continuing-studies/interior-lighting-design',
+      image: lightingDesignImage
     },
     {
       title: 'Basic Interior Design',
@@ -72,7 +95,8 @@ export const FutureSchoolPrograms: React.FC = () => {
       format: 'Live Online',
       nextBatch: 'Mar 2025',
       skills: ['AutoCAD', 'SketchUp', 'Space Planning', 'Design Principles'],
-      href: '/continuing-studies/basic-interior-design'
+      href: '/continuing-studies/basic-interior-design',
+      image: interiorDesignImage
     },
     {
       title: 'UI/UX Product Design',
@@ -81,7 +105,8 @@ export const FutureSchoolPrograms: React.FC = () => {
       format: 'Live Online',
       nextBatch: 'Feb 2025',
       skills: ['Figma', 'User Research', 'Prototyping', 'Design Systems'],
-      href: '/continuing-studies/ui-ux-product-design'
+      href: '/continuing-studies/ui-ux-product-design',
+      image: uiUxDesignImage
     },
     {
       title: 'Game Environment Art (Unreal Engine 5)',
@@ -90,7 +115,8 @@ export const FutureSchoolPrograms: React.FC = () => {
       format: 'Live Online',
       nextBatch: 'Apr 2025',
       skills: ['Unreal Engine 5', '3D Modeling', 'Texturing', 'Level Design'],
-      href: '/continuing-studies/game-environment-art'
+      href: '/continuing-studies/game-environment-art',
+      image: gameEnvironmentImage
     },
     {
       title: 'Fashion Tech & Wearables',
@@ -99,7 +125,8 @@ export const FutureSchoolPrograms: React.FC = () => {
       format: 'Live Online',
       nextBatch: 'May 2025',
       skills: ['Arduino', 'Wearable Tech', 'Smart Textiles', 'IoT Design'],
-      href: '/continuing-studies/fashion-tech-wearables'
+      href: '/continuing-studies/fashion-tech-wearables',
+      image: fashionTechImage
     },
     {
       title: 'Motion Graphics & Visual Storytelling',
@@ -108,7 +135,8 @@ export const FutureSchoolPrograms: React.FC = () => {
       format: 'Live Online',
       nextBatch: 'Mar 2025',
       skills: ['After Effects', 'Cinema 4D', 'Storytelling', 'Brand Animation'],
-      href: '/continuing-studies/motion-graphics'
+      href: '/continuing-studies/motion-graphics',
+      image: motionGraphicsImage
     },
     {
       title: 'AI for Design Optimization',
@@ -117,7 +145,8 @@ export const FutureSchoolPrograms: React.FC = () => {
       format: 'Live Online',
       nextBatch: 'Jun 2025',
       skills: ['Machine Learning', 'Design Automation', 'AI Tools', 'Data Visualization'],
-      href: '/continuing-studies/ai-design-optimization'
+      href: '/continuing-studies/ai-design-optimization',
+      image: aiOptimizationImage
     }
   ];
 
@@ -129,7 +158,8 @@ export const FutureSchoolPrograms: React.FC = () => {
       format: 'In-Person',
       nextBatch: 'Mar 2025',
       skills: ['Design Thinking', 'Ideation', 'Prototyping', 'User-Centered Design'],
-      href: '/workshops/design-thinking-bootcamp'
+      href: '/workshops/design-thinking-bootcamp',
+      image: designCareerImage
     },
     {
       title: 'Exploring AI & Cyber Security',
@@ -138,7 +168,8 @@ export const FutureSchoolPrograms: React.FC = () => {
       format: 'Hybrid',
       nextBatch: 'Apr 2025',
       skills: ['Procreate', 'Digital Sketching', 'Concept Art', 'Visual Communication'],
-      href: '/workshops/digital-sketching'
+      href: '/workshops/digital-sketching',
+      image: aiCybersecurityImage
     },
     {
       title: 'Exploring Robotics',
@@ -147,13 +178,23 @@ export const FutureSchoolPrograms: React.FC = () => {
       format: 'In-Person',
       nextBatch: 'May 2025',
       skills: ['Sustainable Design', 'Green Materials', 'Life Cycle Assessment', 'Circular Design'],
-      href: '/workshops/sustainable-design'
+      href: '/workshops/sustainable-design',
+      image: roboticsImage
     },
   ];
 
   const ProgramCard = ({ program, index }: { program: any; index: number }) => (
     <RevealSection delay={index * 100}>
-      <Card className="h-full hover:shadow-lg transition-all duration-300 group">
+      <Card className="h-full hover:shadow-lg transition-all duration-300 group overflow-hidden">
+        {program.image && (
+          <div className="aspect-video overflow-hidden">
+            <img 
+              src={program.image} 
+              alt={program.title}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+        )}
         <div className="p-6">
           <div className="flex items-start justify-between mb-4">
             <Badge variant="outline" className="text-xs">
