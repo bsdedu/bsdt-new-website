@@ -149,33 +149,6 @@ export const FutureSchoolPrograms: React.FC = () => {
       skills: ['Sustainable Design', 'Green Materials', 'Life Cycle Assessment', 'Circular Design'],
       href: '/workshops/sustainable-design'
     },
-    {
-      title: 'Brand Identity Sprint',
-      description: 'Fast-track workshop to create complete brand identities from concept to execution.',
-      duration: '2 Days',
-      format: 'Hybrid',
-      nextBatch: 'Jun 2025',
-      skills: ['Brand Strategy', 'Logo Design', 'Typography', 'Brand Guidelines'],
-      href: '/workshops/brand-identity-sprint'
-    },
-    {
-      title: '3D Printing & Rapid Prototyping',
-      description: 'Hands-on workshop covering 3D modeling, printing technologies, and prototyping.',
-      duration: '2 Days',
-      format: 'In-Person',
-      nextBatch: 'Jul 2025',
-      skills: ['3D Modeling', '3D Printing', 'Rapid Prototyping', 'Product Development'],
-      href: '/workshops/3d-printing-prototyping'
-    },
-    {
-      title: 'Color Theory in Practice',
-      description: 'Deep dive into color psychology, theory, and application across design disciplines.',
-      duration: '1 Day',
-      format: 'Live Online',
-      nextBatch: 'Aug 2025',
-      skills: ['Color Theory', 'Psychology of Color', 'Color Harmony', 'Digital Color'],
-      href: '/workshops/color-theory-practice'
-    }
   ];
 
   const ProgramCard = ({ program, index }: { program: any; index: number }) => (
