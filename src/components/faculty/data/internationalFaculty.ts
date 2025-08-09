@@ -25,5 +25,13 @@ export const internationalFaculty: FacultyMember[] = [
     bio: "Ar. Shanumathi Mageshwar brings extensive expertise in architectural design and spatial planning to the international faculty. With a strong background in sustainable design practices and innovative architectural solutions, she has contributed to numerous projects that blend functionality with aesthetic excellence. Her approach emphasizes the integration of traditional design principles with contemporary architectural practices, making her a valuable mentor for students exploring the intersection of culture and modern design.",
     imageUrl: "/lovable-uploads/0209fd90-e2e4-44a5-8c8b-54faee4eec30.png",
     department: "International Faculty"
+  },
+  {
+    id: 4,
+    name: "Tricia Carrey",
+    role: "International Faculty", 
+    bio: "Tricia Carrey is an accomplished design professional with extensive experience in interior design and spatial planning. Her work spans across residential, commercial, and hospitality projects, where she demonstrates exceptional skills in creating functional yet aesthetically pleasing environments. With a keen eye for detail and a passion for innovative design solutions, Tricia brings international perspectives to design education, helping students understand global design trends and sustainable practices.",
+    imageUrl: "/lovable-uploads/7557c7a0-23b4-445a-bec3-752b10dfdca6.png",
+    department: "International Faculty"
   }
 ];
