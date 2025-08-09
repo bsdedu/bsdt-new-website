@@ -4,7 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { RevealSection } from '@/components/ui-elements/RevealSection';
-import { Clock, Users, Calendar, ArrowRight } from 'lucide-react';
+import { Clock, Users, Calendar, ArrowRight, GraduationCap } from 'lucide-react';
 
 export const FutureSchoolPrograms: React.FC = () => {
   const threeWeekPrograms = [
@@ -121,6 +121,63 @@ export const FutureSchoolPrograms: React.FC = () => {
     }
   ];
 
+  const schoolWorkshops = [
+    {
+      title: 'Design Thinking Bootcamp',
+      description: 'Intensive workshop on design thinking methodology and creative problem-solving techniques.',
+      duration: '2 Days',
+      format: 'In-Person',
+      nextBatch: 'Mar 2025',
+      skills: ['Design Thinking', 'Ideation', 'Prototyping', 'User-Centered Design'],
+      href: '/workshops/design-thinking-bootcamp'
+    },
+    {
+      title: 'Digital Sketching Masterclass',
+      description: 'Master digital sketching techniques using iPad Pro and professional design apps.',
+      duration: '1 Day',
+      format: 'Hybrid',
+      nextBatch: 'Apr 2025',
+      skills: ['Procreate', 'Digital Sketching', 'Concept Art', 'Visual Communication'],
+      href: '/workshops/digital-sketching'
+    },
+    {
+      title: 'Sustainable Design Workshop',
+      description: 'Learn eco-friendly design principles and sustainable material selection.',
+      duration: '3 Days',
+      format: 'In-Person',
+      nextBatch: 'May 2025',
+      skills: ['Sustainable Design', 'Green Materials', 'Life Cycle Assessment', 'Circular Design'],
+      href: '/workshops/sustainable-design'
+    },
+    {
+      title: 'Brand Identity Sprint',
+      description: 'Fast-track workshop to create complete brand identities from concept to execution.',
+      duration: '2 Days',
+      format: 'Hybrid',
+      nextBatch: 'Jun 2025',
+      skills: ['Brand Strategy', 'Logo Design', 'Typography', 'Brand Guidelines'],
+      href: '/workshops/brand-identity-sprint'
+    },
+    {
+      title: '3D Printing & Rapid Prototyping',
+      description: 'Hands-on workshop covering 3D modeling, printing technologies, and prototyping.',
+      duration: '2 Days',
+      format: 'In-Person',
+      nextBatch: 'Jul 2025',
+      skills: ['3D Modeling', '3D Printing', 'Rapid Prototyping', 'Product Development'],
+      href: '/workshops/3d-printing-prototyping'
+    },
+    {
+      title: 'Color Theory in Practice',
+      description: 'Deep dive into color psychology, theory, and application across design disciplines.',
+      duration: '1 Day',
+      format: 'Live Online',
+      nextBatch: 'Aug 2025',
+      skills: ['Color Theory', 'Psychology of Color', 'Color Harmony', 'Digital Color'],
+      href: '/workshops/color-theory-practice'
+    }
+  ];
+
   const ProgramCard = ({ program, index }: { program: any; index: number }) => (
     <RevealSection delay={index * 100}>
       <Card className="h-full hover:shadow-lg transition-all duration-300 group">
@@ -199,7 +256,7 @@ export const FutureSchoolPrograms: React.FC = () => {
 
         <RevealSection delay={100}>
           <Tabs defaultValue="3-weeks" className="max-w-6xl mx-auto">
-            <TabsList className="grid w-full grid-cols-2 mb-8">
+            <TabsList className="grid w-full grid-cols-3 mb-8">
               <TabsTrigger value="3-weeks" className="flex items-center gap-2">
                 <Clock className="h-4 w-4" />
                 3 Weeks Programs
@@ -207,6 +264,10 @@ export const FutureSchoolPrograms: React.FC = () => {
               <TabsTrigger value="3-months" className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
                 3 Months Programs
+              </TabsTrigger>
+              <TabsTrigger value="workshops" className="flex items-center gap-2">
+                <GraduationCap className="h-4 w-4" />
+                School Workshops
               </TabsTrigger>
             </TabsList>
 
@@ -221,6 +282,14 @@ export const FutureSchoolPrograms: React.FC = () => {
             <TabsContent value="3-months">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {threeMonthPrograms.map((program, index) => (
+                  <ProgramCard key={index} program={program} index={index} />
+                ))}
+              </div>
+            </TabsContent>
+
+            <TabsContent value="workshops">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {schoolWorkshops.map((program, index) => (
                   <ProgramCard key={index} program={program} index={index} />
                 ))}
               </div>
