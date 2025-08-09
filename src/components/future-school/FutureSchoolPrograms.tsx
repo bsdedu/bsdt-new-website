@@ -123,7 +123,7 @@ export const FutureSchoolPrograms: React.FC = () => {
 
   const schoolWorkshops = [
     {
-      title: 'Design Thinking Bootcamp',
+      title: 'Exploring Design as a career',
       description: 'Intensive workshop on design thinking methodology and creative problem-solving techniques.',
       duration: '2 Days',
       format: 'In-Person',
@@ -132,7 +132,7 @@ export const FutureSchoolPrograms: React.FC = () => {
       href: '/workshops/design-thinking-bootcamp'
     },
     {
-      title: 'Digital Sketching Masterclass',
+      title: 'Exploring AI & Cyber Security',
       description: 'Master digital sketching techniques using iPad Pro and professional design apps.',
       duration: '1 Day',
       format: 'Hybrid',
@@ -141,7 +141,7 @@ export const FutureSchoolPrograms: React.FC = () => {
       href: '/workshops/digital-sketching'
     },
     {
-      title: 'Sustainable Design Workshop',
+      title: 'Exploring Robotics',
       description: 'Learn eco-friendly design principles and sustainable material selection.',
       duration: '3 Days',
       format: 'In-Person',
