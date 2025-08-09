@@ -33,5 +33,13 @@ export const internationalFaculty: FacultyMember[] = [
     bio: "Tricia Carrey is an accomplished design professional with extensive experience in interior design and spatial planning. Her work spans across residential, commercial, and hospitality projects, where she demonstrates exceptional skills in creating functional yet aesthetically pleasing environments. With a keen eye for detail and a passion for innovative design solutions, Tricia brings international perspectives to design education, helping students understand global design trends and sustainable practices.",
     imageUrl: "/lovable-uploads/7557c7a0-23b4-445a-bec3-752b10dfdca6.png",
     department: "International Faculty"
+  },
+  {
+    id: 5,
+    name: "Scott Warren",
+    role: "International Faculty",
+    bio: "Scott Warren is a distinguished design educator and practitioner with extensive experience in contemporary design methodologies and digital design technologies. His expertise spans across multiple design disciplines including product design, user experience, and design thinking. Scott brings a unique perspective to design education through his innovative approach to teaching and his commitment to preparing students for the evolving design industry. His work emphasizes the integration of technology with traditional design principles.",
+    imageUrl: "/lovable-uploads/54f14e6d-f61c-456d-8b67-0efe131659a3.png",
+    department: "International Faculty"
   }
 ];
