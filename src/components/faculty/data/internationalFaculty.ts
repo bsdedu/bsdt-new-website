@@ -17,5 +17,13 @@ export const internationalFaculty: FacultyMember[] = [
     bio: "With a passion for design and applied arts, Joanna Frank has been contributing to the field since 2012. She holds a Bachelor of Design with a specialization in Design and Applied Arts from UNSW Sydney, where she honed her skills in visual communication, aesthetics, and functional design. Her work reflects a deep understanding of artistic expression and practical application, making her a valuable mentor for students aspiring to explore the interdisciplinary nature of design.",
     imageUrl: "/lovable-uploads/d19981ae-095c-4f2f-979f-65200475f0bf.png",
     department: "International Faculty"
+  },
+  {
+    id: 3,
+    name: "Ar. Shanumathi Mageshwar",
+    role: "International Faculty",
+    bio: "Ar. Shanumathi Mageshwar brings extensive expertise in architectural design and spatial planning to the international faculty. With a strong background in sustainable design practices and innovative architectural solutions, she has contributed to numerous projects that blend functionality with aesthetic excellence. Her approach emphasizes the integration of traditional design principles with contemporary architectural practices, making her a valuable mentor for students exploring the intersection of culture and modern design.",
+    imageUrl: "/lovable-uploads/0209fd90-e2e4-44a5-8c8b-54faee4eec30.png",
+    department: "International Faculty"
   }
 ];
