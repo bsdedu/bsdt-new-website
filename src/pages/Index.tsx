@@ -11,6 +11,7 @@ import { EnquiryFormSection } from '../components/home/EnquiryFormSection';
 import { CollaborationsSection } from '../components/home/CollaborationsSection';
 import { InfoGraphicsSection } from '../components/home/InfoGraphicsSection';
 import { GallerySection } from '../components/home/GallerySection';
+import { UpcomingEventsSection } from '../components/home/UpcomingEventsSection';
 import { FloatingEnquiryForm } from '../components/ui-elements/FloatingEnquiryForm';
 
 const Index = () => {
@@ -90,6 +91,7 @@ const Index = () => {
           <InfoGraphicsSection />
           <WhyChooseSection />
           <AIEnhancedLearningSection />
+          <UpcomingEventsSection />
           <GallerySection />
           <CollaborationsSection />
           <EnquiryFormSection />
