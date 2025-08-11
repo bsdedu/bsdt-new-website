@@ -38,7 +38,7 @@ export const StudioHero: React.FC = () => {
           <RevealSection direction="left">
             <div className="relative rounded-2xl overflow-hidden shadow-lg h-[500px]">
               <img 
-                src="/lovable-uploads/bed29529-a644-4c17-8243-336fd531777e.png" 
+                src="/lovable-uploads/b543134a-e3bc-4567-8770-039c079c477b.png" 
                 alt="Studio BSD Workspace" 
                 className="w-full h-full object-cover" 
               />
