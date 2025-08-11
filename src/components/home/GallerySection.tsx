@@ -18,19 +18,25 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 // Import testimonials data to use for Student Interviews
 import { testimonials } from './TestimonialsSection';
 
-// Events data from UpcomingEventsSection
+// Updated Events & Activities data with complete upcoming events
 const eventsData = [
   {
     type: "image" as const,
     category: "Events & Activities",
-    image: "/lovable-uploads/741db2ef-80d9-44dd-b7f0-cb1942734763.png",
-    caption: "Open Day 2025 - March 29th, 2025 | 09:30 AM - 4:00 PM - Experience our creative campus, meet faculty and students, explore accommodations, engage with design experts, and join hands-on workshops at our Open Day!"
+    image: "/lovable-uploads/4e0c1fb9-f311-4f95-a90f-cc833365c95c.png",
+    caption: "Freshers Day - 16th August, 2025 | 10AM to 2PM - Welcome new students to BSD with fun activities, orientation sessions, and networking opportunities. Start your design journey with your fellow freshers!"
   },
   {
     type: "image" as const,
     category: "Events & Activities",
-    image: "/lovable-uploads/5798432f-82b3-43e6-a5be-03af3cc31ea4.png",
-    caption: "Designing Tomorrow: The Opportunities in Architecture & Interior Design - April 5th, 2025 | 11:00 AM onwards - Join our expert panel with Neha N Achar (Architect, AtkinsRealis) and Ar. Bhavna R (Assistant Professor) as they discuss career opportunities in design."
+    image: "/lovable-uploads/2c70e2d5-549c-43bd-bd5f-ef047b51dc10.png",
+    caption: "Teachers Day - 5th September, 2025 | 9:00 AM - 6:00 PM - Celebrate and honor our dedicated faculty members who shape the future designers. Join us for special presentations, appreciation events, and faculty showcases."
+  },
+  {
+    type: "image" as const,
+    category: "Events & Activities",
+    image: "/lovable-uploads/8405d26f-8d85-4e74-80b6-0ebc8ae470d3.png",
+    caption: "Mozaic - 12th October, 2025 | 11:00 AM - 8:00 PM - Our annual design festival showcasing student creativity through exhibitions, competitions, workshops, and cultural performances. Experience the vibrant design community at BSD."
   }
 ];
 
