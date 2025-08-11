@@ -71,7 +71,7 @@ export const UpcomingEventsSection: React.FC = () => {
             {upcomingEvents.map(event => <Card key={event.id} isHoverable className={`overflow-hidden ${event.featured ? 'border-bsd-orange/20 shadow' : ''}`}>
                 <div className="relative h-64 sm:h-80 md:h-96 overflow-hidden">
                   <img src={event.imageSrc} alt={event.title} className="w-full h-full object-cover object-right transition-transform duration-500 hover:scale-105" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex flex-col justify-end p-6">
                     <div className="flex items-center gap-2 text-white mb-2">
                       <Calendar className="w-4 h-4" />
                       <span className="text-sm font-medium">{event.date} | {event.time}</span>
