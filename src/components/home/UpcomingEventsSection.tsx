@@ -46,7 +46,7 @@ export const UpcomingEventsSection: React.FC = () => {
       date: "12th October, 2025",
       time: "11:00 AM - 8:00 PM",
       description: "Our annual design festival showcasing student creativity through exhibitions, competitions, workshops, and cultural performances. Experience the vibrant design community at BSD.",
-      imageSrc: "/lovable-uploads/741db2ef-80d9-44dd-b7f0-cb1942734763.png",
+      imageSrc: "/lovable-uploads/8405d26f-8d85-4e74-80b6-0ebc8ae470d3.png",
       registerLink: "/register-mozaic"
     }
   ];
