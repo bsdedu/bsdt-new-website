@@ -25,7 +25,7 @@ export const UpcomingEventsSection: React.FC = () => {
       date: "15th August, 2025",
       time: "10:00 AM - 4:00 PM",
       description: "Welcome new students to BSD with fun activities, orientation sessions, and networking opportunities. Start your design journey with your fellow freshers!",
-      imageSrc: "/lovable-uploads/741db2ef-80d9-44dd-b7f0-cb1942734763.png",
+      imageSrc: "/lovable-uploads/4e0c1fb9-f311-4f95-a90f-cc833365c95c.png",
       registerLink: "/register-freshers",
       featured: true
     },
