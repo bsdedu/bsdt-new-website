@@ -77,9 +77,6 @@ export const UpcomingEventsSection: React.FC = () => {
                       <span className="text-sm font-medium">{event.date} | {event.time}</span>
                     </div>
                     <h3 className="text-xl md:text-2xl font-semibold text-white">{event.title}</h3>
-                    <Badge variant={event.type === 'open-day' ? 'bsdOrange' : 'secondary'} className="mt-2 w-fit">
-                      {event.type === 'open-day' ? 'Open Day' : 'Webinar'}
-                    </Badge>
                   </div>
                 </div>
                 
