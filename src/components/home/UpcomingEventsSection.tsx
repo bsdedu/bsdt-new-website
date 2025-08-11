@@ -36,7 +36,7 @@ export const UpcomingEventsSection: React.FC = () => {
       date: "5th September, 2025",
       time: "9:00 AM - 6:00 PM",
       description: "Celebrate and honor our dedicated faculty members who shape the future designers. Join us for special presentations, appreciation events, and faculty showcases.",
-      imageSrc: "/lovable-uploads/5798432f-82b3-43e6-a5be-03af3cc31ea4.png",
+      imageSrc: "/lovable-uploads/2c70e2d5-549c-43bd-bd5f-ef047b51dc10.png",
       registerLink: "/register-teachers-day"
     },
     {
