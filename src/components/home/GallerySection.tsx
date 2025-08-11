@@ -24,19 +24,19 @@ const eventsData = [
     type: "image" as const,
     category: "Events & Activities",
     image: "/lovable-uploads/4e0c1fb9-f311-4f95-a90f-cc833365c95c.png",
-    caption: "Freshers Day - 16th August, 2025 | 10AM to 2PM - Welcome new students to BSD with fun activities, orientation sessions, and networking opportunities. Start your design journey with your fellow freshers!"
+    caption: "**Freshers Day** - 16th August, 2025 | 10AM to 2PM - Welcome new students to BSD with fun activities, orientation sessions, and networking opportunities. Start your design journey with your fellow freshers!"
   },
   {
     type: "image" as const,
     category: "Events & Activities",
     image: "/lovable-uploads/2c70e2d5-549c-43bd-bd5f-ef047b51dc10.png",
-    caption: "Teachers Day - 5th September, 2025 | 9:00 AM - 6:00 PM - Celebrate and honor our dedicated faculty members who shape the future designers. Join us for special presentations, appreciation events, and faculty showcases."
+    caption: "**Teachers Day** - 5th September, 2025 | 9:00 AM - 6:00 PM - Celebrate and honor our dedicated faculty members who shape the future designers. Join us for special presentations, appreciation events, and faculty showcases."
   },
   {
     type: "image" as const,
     category: "Events & Activities",
     image: "/lovable-uploads/8405d26f-8d85-4e74-80b6-0ebc8ae470d3.png",
-    caption: "Mozaic - 12th October, 2025 | 11:00 AM - 8:00 PM - Our annual design festival showcasing student creativity through exhibitions, competitions, workshops, and cultural performances. Experience the vibrant design community at BSD."
+    caption: "**Mozaic** - 12th October, 2025 | 11:00 AM - 8:00 PM - Our annual design festival showcasing student creativity through exhibitions, competitions, workshops, and cultural performances. Experience the vibrant design community at BSD."
   }
 ];
 
