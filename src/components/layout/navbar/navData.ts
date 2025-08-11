@@ -43,6 +43,7 @@ export const navStructure: NavStructure[] = [
           { name: 'Professional Dip. Visual Communication + UI & UX', href: '/academics/professional-diploma-graphics-design-ui-ux' },
           { name: 'Professional Dip. in UI & UX', href: '/academics/diploma-in-hci-for-ui-ux' },
           { name: 'Professional Dip. in Sustainable System & Circular Design', href: '/academics/professional-diploma-sustainable-circular-design' },
+          { name: 'Professional Dip. in AI & Integrated Service Design', href: '/academics/professional-diploma-ai-service-design' },
           { name: 'Post Grad Dip. Landscape Design', href: '/academics/post-graduate-diploma-in-landscape-design' }
         ]
       }
