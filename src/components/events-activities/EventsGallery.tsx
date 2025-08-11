@@ -78,35 +78,11 @@ export const EventsGallery: React.FC = () => {
                 <div className="relative h-64 sm:h-80 md:h-96 overflow-hidden">
                   <img src={event.imageSrc} alt={event.title} className="w-full h-full object-cover object-right transition-transform duration-500 hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex flex-col justify-end p-6">
-                    <h3 className="text-xl md:text-2xl font-semibold text-white mb-2">{event.title}</h3>
-                    <div className="flex items-center gap-2 text-white">
-                      <Calendar className="w-4 h-4" />
-                      <span className="text-sm font-medium">{event.date} | {event.time}</span>
-                    </div>
+                    <h3 className="text-xl md:text-2xl font-semibold text-white">{event.title}</h3>
                   </div>
                 </div>
-                
-                <CardContent className="p-6">
-                  <p className="text-bsd-gray/80 mb-6">{event.description}</p>
-                  <div className="flex justify-between items-center">
-                    <a href={event.registerLink} target="_blank" rel="noopener noreferrer">
-                      <AnimatedButton>
-                        Register Now
-                      </AnimatedButton>
-                    </a>
-                    <Button variant="ghost" className="text-bsd-gray hover:text-bsd-orange">
-                      Learn More
-                    </Button>
-                  </div>
-                </CardContent>
               </Card>
             ))}
-          </div>
-
-          <div className="flex justify-center mt-12">
-            <Button variant="outline" className="border-bsd-orange/30 text-bsd-gray hover:bg-bsd-orange/10">
-              View All Events
-            </Button>
           </div>
         </RevealSection>
       </div>
