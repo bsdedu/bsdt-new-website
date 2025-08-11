@@ -17,26 +17,39 @@ interface Event {
   featured?: boolean;
 }
 export const UpcomingEventsSection: React.FC = () => {
-  const upcomingEvents: Event[] = [{
-    id: "1",
-    title: "Open Day 2025",
-    type: "open-day",
-    date: "29th March, 2025",
-    time: "09:30 AM - 4:00 PM",
-    description: "Experience our creative campus, meet faculty and students, explore accommodations, engage with design experts, and join hands-on workshops at our Open Day!",
-    imageSrc: "/lovable-uploads/741db2ef-80d9-44dd-b7f0-cb1942734763.png",
-    registerLink: "https://bit.ly/3Fl6VkJ",
-    featured: true
-  }, {
-    id: "2",
-    title: "Designing Tomorrow: The Opportunities in Architecture & Interior Design",
-    type: "webinar",
-    date: "5th April, 2025",
-    time: "11:00 AM onwards",
-    description: "Join our expert panel with Neha N Achar (Architect, AtkinsRealis) and Ar. Bhavna R (Assistant Professor) as they discuss career opportunities in design.",
-    imageSrc: "/lovable-uploads/5798432f-82b3-43e6-a5be-03af3cc31ea4.png",
-    registerLink: "/register-webinar"
-  }];
+  const upcomingEvents: Event[] = [
+    {
+      id: "1",
+      title: "Freshers Day",
+      type: "open-day",
+      date: "15th August, 2025",
+      time: "10:00 AM - 4:00 PM",
+      description: "Welcome new students to BSD with fun activities, orientation sessions, and networking opportunities. Start your design journey with your fellow freshers!",
+      imageSrc: "/lovable-uploads/741db2ef-80d9-44dd-b7f0-cb1942734763.png",
+      registerLink: "/register-freshers",
+      featured: true
+    },
+    {
+      id: "2", 
+      title: "Teachers Day",
+      type: "open-day",
+      date: "5th September, 2025",
+      time: "9:00 AM - 6:00 PM",
+      description: "Celebrate and honor our dedicated faculty members who shape the future designers. Join us for special presentations, appreciation events, and faculty showcases.",
+      imageSrc: "/lovable-uploads/5798432f-82b3-43e6-a5be-03af3cc31ea4.png",
+      registerLink: "/register-teachers-day"
+    },
+    {
+      id: "3",
+      title: "Mozaic",
+      type: "open-day", 
+      date: "12th October, 2025",
+      time: "11:00 AM - 8:00 PM",
+      description: "Our annual design festival showcasing student creativity through exhibitions, competitions, workshops, and cultural performances. Experience the vibrant design community at BSD.",
+      imageSrc: "/lovable-uploads/741db2ef-80d9-44dd-b7f0-cb1942734763.png",
+      registerLink: "/register-mozaic"
+    }
+  ];
   return <section id="events" className="bg-[#F6F6F7] py-[30px]">
       <div className="container mx-auto px-6 md:px-8 max-w-6xl">
         <RevealSection>
@@ -54,7 +67,7 @@ export const UpcomingEventsSection: React.FC = () => {
         </RevealSection>
 
         <RevealSection delay={200}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {upcomingEvents.map(event => <Card key={event.id} isHoverable className={`overflow-hidden ${event.featured ? 'border-bsd-orange/20 shadow' : ''}`}>
                 <div className="relative h-64 sm:h-80 md:h-96 overflow-hidden">
                   <img src={event.imageSrc} alt={event.title} className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
