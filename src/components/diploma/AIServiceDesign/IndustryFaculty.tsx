@@ -12,7 +12,7 @@ export const IndustryFaculty: React.FC = () => {
       role: "AI Design Strategist",
       company: "Google AI",
       expertise: "Machine Learning UX, Conversational AI",
-      image: "/api/placeholder/100/100",
+      image: "/src/assets/faculty-ai-1.jpg",
       initials: "SC"
     },
     {

@@ -8,7 +8,7 @@ export const CurriculumTab: React.FC = () => {
   const modules = [
     {
       title: "Module 1: Fashion Design Fundamentals",
-      duration: "6 Weeks",
+      duration: "2 Months",
       topics: [
         "Fashion History & Cultural Influences",
         "Elements & Principles of Design",
@@ -19,7 +19,7 @@ export const CurriculumTab: React.FC = () => {
     },
     {
       title: "Module 2: Fashion Illustration & Digital Design",
-      duration: "6 Weeks", 
+      duration: "2 Months",
       topics: [
         "Advanced Fashion Illustration",
         "Fashion Croquis Development",
@@ -30,7 +30,7 @@ export const CurriculumTab: React.FC = () => {
     },
     {
       title: "Module 3: Pattern Making & Garment Construction",
-      duration: "6 Weeks",
+      duration: "2 Months",
       topics: [
         "Basic Pattern Making Techniques",
         "Draping Fundamentals",
@@ -41,7 +41,7 @@ export const CurriculumTab: React.FC = () => {
     },
     {
       title: "Module 4: Textiles & Fashion Business",
-      duration: "6 Weeks",
+      duration: "2 Months",
       topics: [
         "Textile Science & Fabric Properties",
         "Sustainable Fashion Practices",

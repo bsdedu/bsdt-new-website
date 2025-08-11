@@ -78,7 +78,7 @@ export const AdmissionsInfo: React.FC = () => {
                   <Clock className="h-4 w-4 text-primary" />
                   <div>
                     <p className="font-medium">Duration</p>
-                    <p className="text-sm text-muted-foreground">12 months (full-time) | 18 months (part-time)</p>
+                    <p className="text-sm text-muted-foreground">8 Months Intensive</p>
                   </div>
                 </div>
                 

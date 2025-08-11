@@ -12,7 +12,7 @@ export const IndustryFaculty: React.FC = () => {
       role: "Senior Fashion Designer",
       company: "Zara International",
       expertise: "Ready-to-Wear Design, Trend Forecasting",
-      image: "/api/placeholder/100/100",
+      image: "/src/assets/faculty-fashion-1.jpg",
       initials: "IC"
     },
     {

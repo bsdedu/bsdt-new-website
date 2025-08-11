@@ -39,7 +39,7 @@ export const HeroSection: React.FC = () => {
                 <Clock className="h-5 w-5 text-primary" />
                 <div>
                   <p className="font-semibold text-sm">Duration</p>
-                  <p className="text-xs text-muted-foreground">12 Months</p>
+                  <p className="text-xs text-muted-foreground">8 Months</p>
                 </div>
               </div>
               
@@ -77,7 +77,7 @@ export const HeroSection: React.FC = () => {
           <div className="relative">
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="/api/placeholder/600/400"
+                src="/src/assets/ai-service-design-hero.jpg"
                 alt="AI Service Design Illustration"
                 className="w-full h-auto"
               />

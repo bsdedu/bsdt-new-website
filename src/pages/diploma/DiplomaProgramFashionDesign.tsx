@@ -17,7 +17,7 @@ const DiplomaProgramFashionDesign: React.FC = () => {
         <title>Professional Diploma in Fashion Design | BSD Design School</title>
         <meta 
           name="description" 
-          content="Master fashion design fundamentals with our comprehensive professional diploma program. Learn garment construction, fashion illustration, textile design, and industry trends in an accelerated 6-month format." 
+          content="Master fashion design fundamentals with our comprehensive professional diploma program. Learn garment construction, fashion illustration, textile design, and industry trends in an accelerated 8-month format." 
         />
         <meta name="keywords" content="fashion design diploma, professional fashion design, fashion illustration, garment construction, textile design, fashion trends, fashion career, BSD Design School" />
         <link rel="canonical" href="/academics/professional-diploma-fashion-design" />

@@ -23,7 +23,7 @@ export const HeroSection: React.FC = () => {
               <p className="text-lg text-muted-foreground max-w-2xl">
                 Master the art of fashion design with our intensive professional diploma program. 
                 Learn garment construction, fashion illustration, textile design, and industry trends 
-                from experienced fashion professionals.
+                from experienced fashion professionals in our comprehensive 8-month program.
               </p>
             </div>
             
@@ -32,7 +32,7 @@ export const HeroSection: React.FC = () => {
               <div className="flex items-center gap-2 p-4 bg-background/50 rounded-lg border">
                 <Clock className="h-5 w-5 text-primary" />
                 <div>
-                  <p className="font-medium">6 Months</p>
+                  <p className="font-medium">8 Months</p>
                   <p className="text-sm text-muted-foreground">Duration</p>
                 </div>
               </div>
@@ -77,12 +77,11 @@ export const HeroSection: React.FC = () => {
               {/* Fashion Design Visual */}
               <div className="relative z-10 text-center space-y-6">
                 <div className="w-48 h-48 mx-auto bg-gradient-to-br from-primary to-primary/70 rounded-full flex items-center justify-center">
-                  <div className="w-32 h-32 bg-background rounded-full flex items-center justify-center shadow-xl">
-                    <svg className="w-16 h-16 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
-                      <path d="M8 8h8v8H8z" opacity="0.3"/>
-                    </svg>
-                  </div>
+                  <img
+                    src="/src/assets/fashion-design-hero.jpg"
+                    alt="Fashion Design Studio"
+                    className="w-32 h-32 rounded-full object-cover shadow-xl"
+                  />
                 </div>
                 
                 <div className="space-y-2">

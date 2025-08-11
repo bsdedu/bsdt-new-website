@@ -8,7 +8,7 @@ export const CurriculumTab: React.FC = () => {
   const modules = [
     {
       title: "Module 1: AI Foundations & Design Thinking",
-      duration: "3 Months",
+      duration: "2 Months",
       topics: [
         "Introduction to Artificial Intelligence & Machine Learning",
         "Design Thinking Methodology & Human-Centered Design",
@@ -19,7 +19,7 @@ export const CurriculumTab: React.FC = () => {
     },
     {
       title: "Module 2: AI Tools & Service Architecture",
-      duration: "3 Months", 
+      duration: "2 Months",
       topics: [
         "Machine Learning for Designers",
         "Natural Language Processing & Conversational AI",
@@ -30,7 +30,7 @@ export const CurriculumTab: React.FC = () => {
     },
     {
       title: "Module 3: Integrated Service Development",
-      duration: "3 Months",
+      duration: "2 Months",
       topics: [
         "AI-Powered Service Prototyping",
         "Business Model Innovation",
@@ -41,7 +41,7 @@ export const CurriculumTab: React.FC = () => {
     },
     {
       title: "Module 4: Professional Practice & Capstone",
-      duration: "3 Months",
+      duration: "2 Months",
       topics: [
         "Industry Collaboration Project",
         "Portfolio Development",

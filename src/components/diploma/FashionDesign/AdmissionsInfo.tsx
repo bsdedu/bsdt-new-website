@@ -107,7 +107,7 @@ export const AdmissionsInfo: React.FC = () => {
                 <div className="text-center">
                   <Award className="h-8 w-8 text-primary mx-auto mb-2" />
                   <h3 className="font-semibold mb-1">Duration</h3>
-                  <p className="text-sm text-muted-foreground">6 Months Intensive</p>
+                  <p className="text-sm text-muted-foreground">8 Months Intensive</p>
                 </div>
               </div>
               

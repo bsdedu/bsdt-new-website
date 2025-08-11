@@ -9,7 +9,7 @@ export const ProgramFeatures: React.FC = () => {
     {
       icon: Zap,
       title: "Accelerated Learning",
-      description: "Master fashion design fundamentals and advanced techniques in just 6 months with our intensive, focused curriculum."
+      description: "Master fashion design fundamentals and advanced techniques in just 8 months with our intensive, focused curriculum."
     },
     {
       icon: Briefcase,
