@@ -10,15 +10,37 @@ const ParametricDesign: React.FC = () => {
     metaTitle: "Parametric Design with Rhino & Grasshopper - 3 Week Course | BSD Design School",
     metaDescription: "Learn computational design techniques for architecture and product development. Master Rhino 3D, Grasshopper, and algorithmic design in 3 weeks.",
     
-    // Hero Section
+    // Hero Banner Section
     courseName: "Parametric Design with Rhino & Grasshopper",
     duration: "3 Weeks",
+    format: "Live + Recorded Sessions",
     startDate: "Apr 2025",
+    originalPrice: "₹15,999",
+    discountedPrice: "₹7,999",
+    discount: "50%",
     rating: "4.5",
     ratingCount: "500+",
     heroImage: parametricDesignImage,
-    studentCount: "15k+",
-    studentCountLabel: "Architects Trained",
+    
+    // Course Overview
+    overview: "Master the art of computational design with our comprehensive Rhino & Grasshopper course. Learn to create complex parametric models, develop algorithmic thinking, and build industry-ready designs that push the boundaries of architecture and product development.",
+    features: [
+      "Beginner-friendly approach with step-by-step guidance",
+      "Industry-relevant projects and real-world applications",
+      "Master both Rhino 3D and Grasshopper in depth",
+      "Build a professional portfolio of parametric designs",
+      "Learn from certified industry experts",
+      "Get lifetime access to course materials"
+    ],
+    
+    // Key Details
+    schedule: {
+      startDate: "April 15, 2025",
+      endDate: "May 5, 2025",
+      sessionTimings: "7:00 PM - 9:00 PM IST",
+      totalSessions: "12 Sessions"
+    },
+    certification: "BSD Design School Certificate in Parametric Design",
     
     // Course Details
     highlights: [
@@ -124,9 +146,61 @@ const ParametricDesign: React.FC = () => {
       }
     ],
     
-    // Call to Actions
-    ctaTitle: "Ready to Master Computational Design?",
-    ctaDescription: "Join the future of architecture and product design with parametric tools",
+    // Testimonials
+    testimonials: [
+      {
+        name: "Priya Sharma",
+        role: "Architect",
+        company: "DLF Group",
+        content: "This course transformed my approach to design. The parametric skills I learned have made me invaluable at my firm.",
+        rating: 5,
+        image: "/api/placeholder/60/60"
+      },
+      {
+        name: "Rohit Kumar",
+        role: "Product Designer",
+        company: "Tata Motors",
+        content: "Excellent course structure and amazing instructors. Now I can create complex parametric models with confidence.",
+        rating: 5,
+        image: "/api/placeholder/60/60"
+      },
+      {
+        name: "Anita Verma",
+        role: "Interior Designer",
+        company: "Freelancer",
+        content: "The hands-on approach and real projects helped me build an impressive portfolio. Highly recommended!",
+        rating: 5,
+        image: "/api/placeholder/60/60"
+      }
+    ],
+    
+    // FAQs
+    faqs: [
+      {
+        question: "Do I need prior experience with Rhino or Grasshopper?",
+        answer: "No prior experience is required. This course is designed for beginners and starts with the fundamentals of both Rhino 3D and Grasshopper."
+      },
+      {
+        question: "What software do I need for this course?",
+        answer: "You'll need Rhino 7 (educational license available) and Grasshopper (included with Rhino). We'll guide you through the installation process."
+      },
+      {
+        question: "Will I get lifetime access to course materials?",
+        answer: "Yes, you'll have lifetime access to all recorded sessions, project files, and course materials."
+      },
+      {
+        question: "What kind of certificate will I receive?",
+        answer: "You'll receive a BSD Design School Certificate in Parametric Design upon successful completion of all assignments and projects."
+      },
+      {
+        question: "Is there any refund policy?",
+        answer: "Yes, we offer a 7-day money-back guarantee if you're not satisfied with the course content."
+      },
+      {
+        question: "Can I pay in installments?",
+        answer: "Yes, we offer EMI options. Contact us on WhatsApp for more details about payment plans."
+      }
+    ],
     
     // Additional Props
     skillsOffered: [

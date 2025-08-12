@@ -10,15 +10,37 @@ const AppliedAIDesignAutomation: React.FC = () => {
     metaTitle: "Applied AI for Design Automation - 6 Week Course | BSD Design School",
     metaDescription: "Implement AI tools to streamline design workflows and enhance creativity. Learn prompt engineering, AI-assisted 3D modeling, and custom AI solutions in 6 weeks.",
     
-    // Hero Section
+    // Hero Banner Section
     courseName: "Applied AI for Design Automation",
     duration: "6 Weeks",
+    format: "Live + Recorded Sessions",
     startDate: "Jul 2025",
+    originalPrice: "₹24,999",
+    discountedPrice: "₹14,999",
+    discount: "40%",
     rating: "4.7",
     ratingCount: "800+",
     heroImage: aiOptimizationImage,
-    studentCount: "5k+",
-    studentCountLabel: "AI Specialists",
+    
+    // Course Overview
+    overview: "Step into the future of design with our comprehensive Applied AI course. Learn to harness the power of artificial intelligence to automate design processes, generate innovative solutions, and transform your creative workflow with cutting-edge AI tools and techniques.",
+    features: [
+      "Master AI design tools and automation workflows",
+      "Legal & ethical AI use in professional practice",
+      "Custom AI assistant creation for design studios",
+      "Industry-ready applications and portfolio projects",
+      "Advanced prompt engineering techniques",
+      "AI-powered visualization and presentation tools"
+    ],
+    
+    // Key Details
+    schedule: {
+      startDate: "July 15, 2025",
+      endDate: "August 26, 2025",
+      sessionTimings: "7:00 PM - 9:00 PM IST",
+      totalSessions: "18 Sessions"
+    },
+    certification: "BSD Design School Certificate in Applied AI for Design",
     
     // Course Details
     highlights: [
@@ -157,9 +179,60 @@ const AppliedAIDesignAutomation: React.FC = () => {
       }
     ],
     
-    // Call to Actions
-    ctaTitle: "Ready to Automate Your Design Workflow?",
-    ctaDescription: "Master the AI tools that are revolutionizing the design industry",
+    // Testimonials
+    testimonials: [
+      {
+        name: "Arjun Mehta",
+        role: "Creative Director",
+        company: "Ogilvy",
+        content: "This course revolutionized how I approach design. The AI automation techniques have increased my team's productivity by 300%.",
+        rating: 5,
+        image: "/api/placeholder/60/60"
+      },
+      {
+        name: "Sneha Gupta",
+        role: "UX Designer",
+        company: "Swiggy",
+        content: "Amazing insights into AI tools for design. The hands-on projects and real-world applications made all the difference.",
+        rating: 5,
+        image: "/api/placeholder/60/60"
+      },
+      {
+        name: "Vikram Joshi",
+        role: "Freelance Designer",
+        content: "The AI skills I learned here have made me stand out in the market. My clients are amazed by the quality and speed of delivery.",
+        rating: 5,
+        image: "/api/placeholder/60/60"
+      }
+    ],
+    
+    // FAQs
+    faqs: [
+      {
+        question: "Do I need programming experience for this course?",
+        answer: "No programming experience is required. We focus on practical applications and tools that designers can use without coding. However, basic computer literacy is helpful."
+      },
+      {
+        question: "Which AI tools will be covered in the course?",
+        answer: "We cover major AI tools including MidJourney, DALL·E, ChatGPT, Stable Diffusion, RunwayML, Kaedim, and various other design-focused AI platforms."
+      },
+      {
+        question: "Will I need to purchase AI tool subscriptions?",
+        answer: "We provide access to most tools during the course. Some premium features may require subscriptions, but we'll guide you on free alternatives and trial options."
+      },
+      {
+        question: "How is this different from other AI courses?",
+        answer: "Our course is specifically designed for designers, focusing on practical applications rather than technical theory. We emphasize real-world projects and design workflows."
+      },
+      {
+        question: "What kind of projects will I work on?",
+        answer: "You'll work on diverse projects including brand identity automation, UI/UX design assistance, 3D asset generation, and complete design workflow automation."
+      },
+      {
+        question: "Is there ongoing support after the course?",
+        answer: "Yes, you'll get lifetime access to course materials, updates on new AI tools, and access to our alumni community for continued learning."
+      }
+    ],
     
     // Additional Props
     skillsOffered: [
