@@ -51,6 +51,7 @@ import MotionDesignEssentials from "./pages/courses/MotionDesignEssentials";
 import UXResearchSprint from "./pages/courses/UXResearchSprint";
 // Course Imports - 6 Week Programs
 import AppliedAIDesignAutomation from "./pages/courses/AppliedAIDesignAutomation";
+import SampleCourse from "./pages/courses/SampleCourse";
 import { useEffect } from "react";
 
 console.log("App component loaded");
@@ -135,6 +136,7 @@ const App = () => {
               
               {/* Course Routes - 6 Week Programs */}
               <Route path="/courses/applied-ai-design-automation" element={<AppliedAIDesignAutomation />} />
+              <Route path="/courses/sample-course" element={<SampleCourse />} />
               
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
