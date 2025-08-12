@@ -1,216 +1,194 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Navbar } from '@/components/layout/Navbar';
-import { Footer } from '@/components/layout/Footer';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui-elements/Card';
-import { RevealSection } from '@/components/ui-elements/RevealSection';
-import { Clock, Users, Calendar, Download, Star, CheckCircle2 } from 'lucide-react';
-import uxResearchImage from '@/assets/programs/ux-research.jpg';
+import { CourseLandingPageTemplate } from '@/components/course/CourseLandingPageTemplate';
 
-const UXResearchSprint: React.FC = () => {
-  const curriculum = [
-    {
-      week: 1,
-      title: "Research Fundamentals & Planning",
-      topics: ["Research methodologies overview", "Study design and planning", "Participant recruitment", "Ethics and consent"]
+const UXResearchSprint = () => {
+  const courseData = {
+    // SEO & Meta
+    title: "UX Research Sprint - 3 Week Course | BSD Design School",
+    description: "Master user research methodologies and data-driven design decisions. Learn user interviews, usability testing, and research methods in 3 weeks.",
+    
+    // Banner Section
+    courseTitle: "UX Research Sprint",
+    heroImage: "/lovable-uploads/c83c596d-add8-4ab2-a74f-1dc8c849424e.png",
+    duration: "3 Weeks",
+    format: "Live + Recorded Sessions",
+    
+    // Course Overview
+    courseIntro: "Master user research methodologies and learn to make data-driven design decisions. Develop skills in user interviews, usability testing, and research analysis to create user-centered products.",
+    learningHighlights: [
+      "Master qualitative and quantitative research methods",
+      "Conduct effective user interviews and surveys",
+      "Design and execute usability testing sessions",
+      "Analyze research data and extract actionable insights",
+      "Create research reports and presentations",
+      "Build a comprehensive UX research portfolio"
+    ],
+    keyFeatures: [
+      "Hands-on research project experience",
+      "Industry-standard research tools and methods",
+      "Real user testing with live participants",
+      "Data analysis and insight generation",
+      "Professional certificate upon completion",
+      "Portfolio of research case studies"
+    ],
+    
+    // Key Details
+    details: {
+      schedule: {
+        startDate: "June 15, 2025",
+        endDate: "July 5, 2025",
+        sessionTimings: "7:00 PM - 9:00 PM IST",
+        format: "Live Online + Recorded Sessions"
+      },
+      pricing: {
+        originalPrice: 10999,
+        discountedPrice: 5999,
+        currency: "₹",
+        paymentOptions: [
+          "Full payment discount available",
+          "EMI options with 0% interest",
+          "Student and group discounts"
+        ]
+      },
+      certification: {
+        provider: "BSD Design School & Industry Partners",
+        type: "Professional Certificate in UX Research",
+        description: "Industry-recognized certificate validating your expertise in user experience research methodologies"
+      }
     },
-    {
-      week: 2,
-      title: "Data Collection & User Interviews",
-      topics: ["Interview techniques", "Survey design", "Observational research", "Usability testing setup"]
+    
+    // Curriculum
+    curriculum: [
+      {
+        week: 1,
+        title: "Research Fundamentals & Planning",
+        topics: [
+          "Introduction to UX research and its importance",
+          "Research methods overview: when to use what",
+          "Research planning and goal setting",
+          "Creating research questions and hypotheses",
+          "Ethics in user research and consent protocols"
+        ],
+        tools: ["Research Planning Templates", "Ethics Guidelines", "Goal Setting Frameworks"]
+      },
+      {
+        week: 2,
+        title: "Data Collection & User Testing",
+        topics: [
+          "Conducting effective user interviews",
+          "Survey design and distribution strategies",
+          "Usability testing setup and moderation",
+          "A/B testing and quantitative analysis",
+          "Card sorting and tree testing methods"
+        ],
+        tools: ["Zoom", "Typeform", "Maze", "OptimalSort", "UserTesting"]
+      },
+      {
+        week: 3,
+        title: "Analysis & Insights Presentation",
+        topics: [
+          "Qualitative data analysis and affinity mapping",
+          "Statistical analysis for quantitative data",
+          "Creating personas and journey maps from research",
+          "Research report writing and storytelling",
+          "Presenting insights to stakeholders effectively"
+        ],
+        tools: ["Miro", "FigJam", "Google Analytics", "Presentation Tools", "Research Templates"]
+      }
+    ],
+    softwareTools: [
+      "Figma",
+      "Miro",
+      "Maze",
+      "UserTesting",
+      "Typeform",
+      "Google Analytics",
+      "Hotjar",
+      "OptimalSort"
+    ],
+    
+    // Target Audience
+    targetAudience: {
+      title: "Who is it for?",
+      description: "This course is designed for professionals who want to master user research and make data-driven design decisions in their work.",
+      audiences: [
+        "UX/UI Designers wanting to add research skills",
+        "Product Managers seeking user insights expertise",
+        "Marketing Professionals exploring user behavior",
+        "Business Analysts interested in user research",
+        "Students pursuing UX research careers",
+        "Entrepreneurs building user-centered products"
+      ]
     },
-    {
-      week: 3,
-      title: "Analysis & Insights Communication",
-      topics: ["Data analysis methods", "Pattern identification", "Insight synthesis", "Research presentation skills"]
-    }
-  ];
+    
+    // Instructor
+    instructor: {
+      name: "Dr. Kavya Menon",
+      qualifications: "PhD HCI, M.Des Interaction Design",
+      experience: "9+ years in UX research and human-computer interaction",
+      image: "/lovable-uploads/c83c596d-add8-4ab2-a74f-1dc8c849424e.png",
+      bio: "Dr. Kavya Menon is a UX research expert with extensive experience in both academic and industry settings. She has led research teams at companies like Microsoft, Amazon, and has published numerous papers on user behavior. Her research has directly influenced product decisions affecting millions of users worldwide."
+    },
+    
+    // Testimonials
+    testimonials: [
+      {
+        name: "Ankit Agarwal",
+        role: "Product Manager",
+        company: "Razorpay",
+        rating: 5,
+        feedback: "This course gave me the research skills to back up product decisions with solid user data. The insights we now generate have dramatically improved our product success rate.",
+        image: "/lovable-uploads/c83c596d-add8-4ab2-a74f-1dc8c849424e.png"
+      },
+      {
+        name: "Deepika Singh",
+        role: "UX Designer",
+        company: "Paytm",
+        rating: 5,
+        feedback: "Incredible depth of knowledge and practical application. I went from making design assumptions to creating user-validated designs that perform better.",
+        isVideo: true,
+        videoUrl: "#"
+      },
+      {
+        name: "Rahul Joshi",
+        role: "UX Researcher",
+        company: "Flipkart",
+        rating: 5,
+        feedback: "The research methodologies and analysis techniques I learned here are now core to my daily work. Highly recommend for anyone serious about UX research.",
+        image: "/lovable-uploads/c83c596d-add8-4ab2-a74f-1dc8c849424e.png"
+      }
+    ],
+    
+    // FAQs
+    faqs: [
+      {
+        question: "Do I need prior UX design experience?",
+        answer: "While UX design experience is helpful, it's not required. We cover research fundamentals from the ground up and welcome participants from various backgrounds."
+      },
+      {
+        question: "Will I work with real users during the course?",
+        answer: "Yes! You'll conduct actual user interviews and usability tests with real participants as part of your hands-on learning experience."
+      },
+      {
+        question: "What tools and software will I learn?",
+        answer: "You'll master industry-standard tools like Maze, UserTesting, Typeform, Miro, and Google Analytics for comprehensive research workflows."
+      },
+      {
+        question: "How is this different from UX design courses?",
+        answer: "This course focuses specifically on research methodologies, data collection, and analysis rather than visual design. It's perfect for developing evidence-based design skills."
+      },
+      {
+        question: "Can I apply these skills immediately at work?",
+        answer: "Absolutely! The methodologies and frameworks you learn can be applied immediately to improve product decisions and validate design choices in any organization."
+      }
+    ],
+    
+    // CTAs
+    enrollmentUrl: "https://apply.bsd.edu.in/",
+    brochureUrl: "#"
+  };
 
-  const highlights = [
-    "Master user research methods",
-    "Conduct usability testing",
-    "Data analysis techniques",
-    "Research presentation skills",
-    "Industry-standard tools",
-    "Portfolio case studies"
-  ];
-
-  return (
-    <>
-      <Helmet>
-        <title>UX Research Sprint - 3 Week Course | BSD Design School</title>
-        <meta 
-          name="description" 
-          content="Master user research methodologies and data-driven design decisions. Learn user interviews, usability testing, and research methods in 3 weeks." 
-        />
-      </Helmet>
-      
-      <Navbar />
-      
-      <main>
-        {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-br from-primary/10 via-secondary/5 to-background overflow-hidden">
-          <div className="container mx-auto px-6 md:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <RevealSection>
-                <div>
-                  <div className="flex items-center gap-4 mb-6">
-                    <Badge variant="bsdOrange" className="text-sm">INDUSTRY EXPERT MENTORS</Badge>
-                    <div className="flex items-center gap-1">
-                      <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                      <span className="text-sm font-medium">4.6 Rating</span>
-                    </div>
-                  </div>
-                  
-                  <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
-                    UX Research Sprint
-                  </h1>
-                  
-                  <div className="flex items-center gap-6 mb-6 text-foreground/70">
-                    <div className="flex items-center gap-2">
-                      <Clock className="h-5 w-5 text-primary" />
-                      <span>3 Weeks</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Calendar className="h-5 w-5 text-primary" />
-                      <span>Jun 2025</span>
-                    </div>
-                  </div>
-                  
-                  <p className="text-lg text-foreground/70 mb-8 leading-relaxed">
-                    Master user research methodologies and data-driven design decisions. Learn user interviews, usability testing, data analysis, and research methods.
-                  </p>
-                  
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <Button 
-                      size="lg"
-                      onClick={() => {
-                        const enquirySection = document.getElementById('enquiry-form');
-                        enquirySection?.scrollIntoView({ behavior: 'smooth' });
-                      }}
-                    >
-                      Enroll Now
-                    </Button>
-                    <Button variant="outline" size="lg">
-                      <Download className="mr-2 h-4 w-4" />
-                      Download Brochure
-                    </Button>
-                  </div>
-                  
-                  <p className="text-sm text-foreground/60 mt-4">
-                    📱 EMI option available! Contact on WhatsApp
-                  </p>
-                </div>
-              </RevealSection>
-              
-              <RevealSection delay={100}>
-                <div className="relative">
-                  <img 
-                    src={uxResearchImage} 
-                    alt="UX Research Sprint Course"
-                    className="rounded-2xl shadow-2xl w-full h-[400px] object-cover"
-                  />
-                  <div className="absolute -bottom-6 -right-6 bg-white dark:bg-card p-4 rounded-xl shadow-lg">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-primary">7k+</div>
-                      <div className="text-sm text-foreground/70">UX Researchers</div>
-                    </div>
-                  </div>
-                </div>
-              </RevealSection>
-            </div>
-          </div>
-        </section>
-
-        {/* Course Highlights */}
-        <section className="py-16 bg-muted/30">
-          <div className="container mx-auto px-6 md:px-8">
-            <RevealSection>
-              <h2 className="text-3xl font-display font-bold text-center mb-12">Course Highlights</h2>
-            </RevealSection>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {highlights.map((highlight, index) => (
-                <RevealSection key={index} delay={index * 50}>
-                  <Card className="p-6 h-full">
-                    <div className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                      <p className="text-foreground">{highlight}</p>
-                    </div>
-                  </Card>
-                </RevealSection>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Curriculum Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-6 md:px-8">
-            <RevealSection>
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-display font-bold mb-4">3-Week Curriculum</h2>
-                <p className="text-foreground/70 max-w-2xl mx-auto">
-                  From research planning to actionable insights and recommendations
-                </p>
-              </div>
-            </RevealSection>
-
-            <div className="max-w-4xl mx-auto space-y-6">
-              {curriculum.map((week, index) => (
-                <RevealSection key={index} delay={index * 100}>
-                  <Card className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="bg-primary text-primary-foreground w-12 h-12 rounded-full flex items-center justify-center font-bold flex-shrink-0">
-                        {week.week}
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-semibold mb-3">{week.title}</h3>
-                        <ul className="space-y-2">
-                          {week.topics.map((topic, topicIndex) => (
-                            <li key={topicIndex} className="flex items-start gap-2 text-foreground/70">
-                              <CheckCircle2 className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
-                              <span>{topic}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  </Card>
-                </RevealSection>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground">
-          <div className="container mx-auto px-6 md:px-8 text-center">
-            <RevealSection>
-              <h2 className="text-3xl font-display font-bold mb-4">Ready to Master User Research?</h2>
-              <p className="text-xl mb-8 text-primary-foreground/90">
-                Learn the skills that drive successful product decisions
-              </p>
-              <Button 
-                size="lg" 
-                variant="secondary"
-                onClick={() => {
-                  const enquirySection = document.getElementById('enquiry-form');
-                  enquirySection?.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
-                Enroll Today - Limited Seats
-              </Button>
-            </RevealSection>
-          </div>
-        </section>
-      </main>
-      
-      <Footer />
-    </>
-  );
+  return <CourseLandingPageTemplate {...courseData} />;
 };
 
 export default UXResearchSprint;

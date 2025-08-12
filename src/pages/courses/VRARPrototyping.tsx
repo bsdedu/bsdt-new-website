@@ -1,216 +1,194 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Navbar } from '@/components/layout/Navbar';
-import { Footer } from '@/components/layout/Footer';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui-elements/Card';
-import { RevealSection } from '@/components/ui-elements/RevealSection';
-import { Clock, Users, Calendar, Download, Star, CheckCircle2 } from 'lucide-react';
-import vrArImage from '@/assets/programs/vr-ar-prototyping.jpg';
+import { CourseLandingPageTemplate } from '@/components/course/CourseLandingPageTemplate';
 
-const VRARPrototyping: React.FC = () => {
-  const curriculum = [
-    {
-      week: 1,
-      title: "VR/AR Fundamentals & Unity Setup",
-      topics: ["Introduction to XR technologies", "Unity 3D interface mastery", "XR SDK installation", "Basic scene creation"]
+const VRARPrototyping = () => {
+  const courseData = {
+    // SEO & Meta
+    title: "VR/AR Prototyping with Unity & Unreal - 3 Week Course | BSD Design School",
+    description: "Build immersive VR/AR experiences using Unity and Unreal Engine. Learn VR development, AR frameworks, and industry-standard workflows in 3 weeks.",
+    
+    // Banner Section
+    courseTitle: "VR/AR Prototyping with Unity & Unreal",
+    heroImage: "/lovable-uploads/c83c596d-add8-4ab2-a74f-1dc8c849424e.png",
+    duration: "3 Weeks",
+    format: "Live + Recorded Sessions",
+    
+    // Course Overview
+    courseIntro: "Build immersive VR/AR experiences using industry-standard development platforms. Master Unity 3D and Unreal Engine to create cutting-edge extended reality applications.",
+    learningHighlights: [
+      "Master Unity 3D for VR/AR development",
+      "Learn Unreal Engine XR workflows",
+      "Build interactive VR experiences with hand tracking",
+      "Create marker-based and markerless AR applications",
+      "Understand XR hardware optimization techniques",
+      "Deploy applications across multiple VR/AR platforms"
+    ],
+    keyFeatures: [
+      "Hands-on VR/AR project development",
+      "Industry-standard development tools",
+      "Cross-platform deployment strategies",
+      "Hardware optimization techniques",
+      "Professional certificate upon completion",
+      "Portfolio-ready VR/AR applications"
+    ],
+    
+    // Key Details
+    details: {
+      schedule: {
+        startDate: "March 15, 2025",
+        endDate: "April 5, 2025",
+        sessionTimings: "7:00 PM - 9:00 PM IST",
+        format: "Live Online + Recorded Sessions"
+      },
+      pricing: {
+        originalPrice: 13999,
+        discountedPrice: 7999,
+        currency: "₹",
+        paymentOptions: [
+          "Full payment discount available",
+          "EMI options with 0% interest",
+          "Student and group discounts"
+        ]
+      },
+      certification: {
+        provider: "BSD Design School & Industry Partners",
+        type: "Professional Certificate in VR/AR Development",
+        description: "Industry-recognized certificate validating your expertise in immersive technology development"
+      }
     },
-    {
-      week: 2,
-      title: "Interactive VR Development",
-      topics: ["Hand tracking and controllers", "Spatial UI design", "Physics interactions", "Teleportation systems"]
+    
+    // Curriculum
+    curriculum: [
+      {
+        week: 1,
+        title: "VR/AR Fundamentals & Unity Setup",
+        topics: [
+          "Introduction to XR technologies and market overview",
+          "Unity 3D interface mastery for XR development",
+          "XR SDK installation and project setup",
+          "Basic VR scene creation and optimization",
+          "Understanding VR hardware and specifications"
+        ],
+        tools: ["Unity 3D", "XR Toolkit", "Oculus SDK", "SteamVR"]
+      },
+      {
+        week: 2,
+        title: "Interactive VR Development",
+        topics: [
+          "Hand tracking and controller integration",
+          "Spatial UI design principles and implementation",
+          "Physics interactions in virtual environments",
+          "Teleportation and locomotion systems",
+          "Audio spatialization and haptic feedback"
+        ],
+        tools: ["Unity XR Interaction Toolkit", "Hand Tracking SDK", "Spatial Audio"]
+      },
+      {
+        week: 3,
+        title: "AR Applications & Deployment",
+        topics: [
+          "ARFoundation workflows and best practices",
+          "Marker-based and markerless AR development",
+          "Occlusion, lighting, and environmental understanding",
+          "Multi-platform deployment strategies",
+          "Performance optimization and testing"
+        ],
+        tools: ["ARFoundation", "ARCore", "ARKit", "Deployment Tools"]
+      }
+    ],
+    softwareTools: [
+      "Unity 3D",
+      "Unreal Engine",
+      "ARFoundation",
+      "Oculus SDK",
+      "SteamVR",
+      "ARCore",
+      "ARKit",
+      "Blender"
+    ],
+    
+    // Target Audience
+    targetAudience: {
+      title: "Who is it for?",
+      description: "This course is designed for developers and designers looking to enter the exciting world of VR/AR development and create immersive experiences.",
+      audiences: [
+        "Game Developers expanding into VR/AR",
+        "Mobile App Developers exploring immersive tech",
+        "3D Artists transitioning to interactive media",
+        "Product Designers interested in spatial computing",
+        "Students pursuing XR development careers",
+        "Tech Entrepreneurs building VR/AR products"
+      ]
     },
-    {
-      week: 3,
-      title: "AR Applications & Deployment",
-      topics: ["ARFoundation workflows", "Marker-based AR", "Occlusion and lighting", "Multi-platform deployment"]
-    }
-  ];
+    
+    // Instructor
+    instructor: {
+      name: "Karthik Raj",
+      qualifications: "M.Tech Computer Graphics, B.E Computer Science",
+      experience: "6+ years in VR/AR development and immersive technology",
+      image: "/lovable-uploads/c83c596d-add8-4ab2-a74f-1dc8c849424e.png",
+      bio: "Karthik is a VR/AR specialist with extensive experience in developing immersive applications for leading tech companies. He has worked on projects for Meta, Microsoft HoloLens, and has built VR training simulations used by Fortune 500 companies. His expertise spans from Unity 3D development to advanced spatial computing."
+    },
+    
+    // Testimonials
+    testimonials: [
+      {
+        name: "Sanjay Patel",
+        role: "VR Developer",
+        company: "Tata Consultancy Services",
+        rating: 5,
+        feedback: "This course gave me the practical skills to transition from web development to VR. The hands-on projects and industry insights were invaluable.",
+        image: "/lovable-uploads/c83c596d-add8-4ab2-a74f-1dc8c849424e.png"
+      },
+      {
+        name: "Meera Shah",
+        role: "Product Designer",
+        company: "Myntra",
+        rating: 5,
+        feedback: "Excellent introduction to VR/AR development. The instructor's real-world experience and practical examples made complex concepts easy to understand.",
+        isVideo: true,
+        videoUrl: "#"
+      },
+      {
+        name: "Arjun Nair",
+        role: "Freelance Developer",
+        company: "Independent",
+        rating: 5,
+        feedback: "The VR/AR skills I learned here opened up completely new opportunities. I'm now working on exciting immersive projects for international clients.",
+        image: "/lovable-uploads/c83c596d-add8-4ab2-a74f-1dc8c849424e.png"
+      }
+    ],
+    
+    // FAQs
+    faqs: [
+      {
+        question: "Do I need prior game development experience?",
+        answer: "Basic programming knowledge is helpful but not required. We'll cover Unity fundamentals as part of the curriculum. Familiarity with C# is beneficial but we'll provide learning resources."
+      },
+      {
+        question: "What VR/AR hardware do I need?",
+        answer: "You don't need VR/AR hardware to start learning. We'll provide access to development tools and simulators. However, having access to devices like Oculus Quest or HoloLens enhances the learning experience."
+      },
+      {
+        question: "Will I be able to publish my VR/AR apps?",
+        answer: "Yes! We'll guide you through the entire process from development to deployment on platforms like Oculus Store, Steam VR, and mobile app stores."
+      },
+      {
+        question: "What's the difference between VR and AR development?",
+        answer: "We cover both! VR creates completely immersive virtual environments, while AR overlays digital content on the real world. You'll learn to develop for both platforms."
+      },
+      {
+        question: "Are there job opportunities in VR/AR?",
+        answer: "Absolutely! The XR industry is rapidly growing with opportunities in gaming, education, healthcare, training simulations, and enterprise applications. We provide career guidance and industry connections."
+      }
+    ],
+    
+    // CTAs
+    enrollmentUrl: "https://apply.bsd.edu.in/",
+    brochureUrl: "#"
+  };
 
-  const highlights = [
-    "Master Unity 3D & Unreal Engine",
-    "Build VR/AR prototypes",
-    "Industry-standard workflows",
-    "Cross-platform deployment",
-    "Hardware optimization",
-    "Portfolio project included"
-  ];
-
-  return (
-    <>
-      <Helmet>
-        <title>VR/AR Prototyping with Unity & Unreal - 3 Week Course | BSD Design School</title>
-        <meta 
-          name="description" 
-          content="Build immersive VR/AR experiences using Unity and Unreal Engine. Learn VR development, AR frameworks, and industry-standard workflows in 3 weeks." 
-        />
-      </Helmet>
-      
-      <Navbar />
-      
-      <main>
-        {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-br from-primary/10 via-secondary/5 to-background overflow-hidden">
-          <div className="container mx-auto px-6 md:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <RevealSection>
-                <div>
-                  <div className="flex items-center gap-4 mb-6">
-                    <Badge variant="bsdOrange" className="text-sm">INDUSTRY EXPERT MENTORS</Badge>
-                    <div className="flex items-center gap-1">
-                      <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                      <span className="text-sm font-medium">4.3 Rating</span>
-                    </div>
-                  </div>
-                  
-                  <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
-                    VR/AR Prototyping with Unity & Unreal
-                  </h1>
-                  
-                  <div className="flex items-center gap-6 mb-6 text-foreground/70">
-                    <div className="flex items-center gap-2">
-                      <Clock className="h-5 w-5 text-primary" />
-                      <span>3 Weeks</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Calendar className="h-5 w-5 text-primary" />
-                      <span>Mar 2025</span>
-                    </div>
-                  </div>
-                  
-                  <p className="text-lg text-foreground/70 mb-8 leading-relaxed">
-                    Build immersive experiences using industry-standard VR/AR development platforms. Master Unity 3D, Unreal Engine, and modern XR frameworks.
-                  </p>
-                  
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <Button 
-                      size="lg"
-                      onClick={() => {
-                        const enquirySection = document.getElementById('enquiry-form');
-                        enquirySection?.scrollIntoView({ behavior: 'smooth' });
-                      }}
-                    >
-                      Enroll Now
-                    </Button>
-                    <Button variant="outline" size="lg">
-                      <Download className="mr-2 h-4 w-4" />
-                      Download Brochure
-                    </Button>
-                  </div>
-                  
-                  <p className="text-sm text-foreground/60 mt-4">
-                    📱 EMI option available! Contact on WhatsApp
-                  </p>
-                </div>
-              </RevealSection>
-              
-              <RevealSection delay={100}>
-                <div className="relative">
-                  <img 
-                    src={vrArImage} 
-                    alt="VR/AR Prototyping Course"
-                    className="rounded-2xl shadow-2xl w-full h-[400px] object-cover"
-                  />
-                  <div className="absolute -bottom-6 -right-6 bg-white dark:bg-card p-4 rounded-xl shadow-lg">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-primary">8k+</div>
-                      <div className="text-sm text-foreground/70">XR Developers</div>
-                    </div>
-                  </div>
-                </div>
-              </RevealSection>
-            </div>
-          </div>
-        </section>
-
-        {/* Course Highlights */}
-        <section className="py-16 bg-muted/30">
-          <div className="container mx-auto px-6 md:px-8">
-            <RevealSection>
-              <h2 className="text-3xl font-display font-bold text-center mb-12">Course Highlights</h2>
-            </RevealSection>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {highlights.map((highlight, index) => (
-                <RevealSection key={index} delay={index * 50}>
-                  <Card className="p-6 h-full">
-                    <div className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                      <p className="text-foreground">{highlight}</p>
-                    </div>
-                  </Card>
-                </RevealSection>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Curriculum Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-6 md:px-8">
-            <RevealSection>
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-display font-bold mb-4">3-Week Curriculum</h2>
-                <p className="text-foreground/70 max-w-2xl mx-auto">
-                  From XR fundamentals to deployment-ready immersive experiences
-                </p>
-              </div>
-            </RevealSection>
-
-            <div className="max-w-4xl mx-auto space-y-6">
-              {curriculum.map((week, index) => (
-                <RevealSection key={index} delay={index * 100}>
-                  <Card className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="bg-primary text-primary-foreground w-12 h-12 rounded-full flex items-center justify-center font-bold flex-shrink-0">
-                        {week.week}
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-semibold mb-3">{week.title}</h3>
-                        <ul className="space-y-2">
-                          {week.topics.map((topic, topicIndex) => (
-                            <li key={topicIndex} className="flex items-start gap-2 text-foreground/70">
-                              <CheckCircle2 className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
-                              <span>{topic}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  </Card>
-                </RevealSection>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground">
-          <div className="container mx-auto px-6 md:px-8 text-center">
-            <RevealSection>
-              <h2 className="text-3xl font-display font-bold mb-4">Ready to Build the Future of XR?</h2>
-              <p className="text-xl mb-8 text-primary-foreground/90">
-                Master the skills that leading tech companies are looking for
-              </p>
-              <Button 
-                size="lg" 
-                variant="secondary"
-                onClick={() => {
-                  const enquirySection = document.getElementById('enquiry-form');
-                  enquirySection?.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
-                Enroll Today - Limited Seats
-              </Button>
-            </RevealSection>
-          </div>
-        </section>
-      </main>
-      
-      <Footer />
-    </>
-  );
+  return <CourseLandingPageTemplate {...courseData} />;
 };
 
 export default VRARPrototyping;
