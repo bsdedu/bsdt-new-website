@@ -1,216 +1,209 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Navbar } from '@/components/layout/Navbar';
-import { Footer } from '@/components/layout/Footer';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui-elements/Card';
-import { RevealSection } from '@/components/ui-elements/RevealSection';
-import { Clock, Users, Calendar, Download, Star, CheckCircle2 } from 'lucide-react';
-import generativeAIImage from '@/assets/programs/generative-ai-creative.jpg';
+import { CourseLandingPageTemplate } from '@/components/course/CourseLandingPageTemplate';
 
-const GenerativeAICreativePrototyping: React.FC = () => {
-  const curriculum = [
-    {
-      week: 1,
-      title: "AI Fundamentals & Midjourney Mastery",
-      topics: ["Introduction to generative AI", "Midjourney interface and commands", "Basic prompt engineering", "Style references and parameters"]
+const GenerativeAICreativePrototyping = () => {
+  const courseData = {
+    // SEO & Meta
+    title: "Generative AI for Creative Prototyping - 3 Week Course | BSD Design School",
+    description: "Master AI tools for rapid creative ideation and prototyping across design disciplines. Learn Midjourney, DALL-E, Stable Diffusion, and AI prompting in 3 weeks.",
+    
+    // Banner Section
+    courseTitle: "Generative AI for Creative Prototyping",
+    heroImage: "/lovable-uploads/c83c596d-add8-4ab2-a74f-1dc8c849424e.png",
+    duration: "3 Weeks",
+    format: "Live + Recorded Sessions",
+    
+    // Course Overview
+    courseIntro: "Master the art of AI-powered creative prototyping and transform your design workflow with cutting-edge generative AI tools. Learn to harness the power of AI for rapid ideation, concept development, and visual prototyping.",
+    learningHighlights: [
+      "Master advanced AI prompting techniques for creative output",
+      "Generate high-quality visual concepts using Midjourney and DALL-E",
+      "Create consistent brand aesthetics with AI tools",
+      "Develop rapid prototyping workflows for design projects",
+      "Learn ethical AI practices and copyright considerations",
+      "Build a professional portfolio of AI-generated creative work"
+    ],
+    keyFeatures: [
+      "Beginner-friendly approach to AI tools",
+      "Industry-relevant creative projects",
+      "Live instructor guidance and feedback",
+      "Access to premium AI tools during course",
+      "Professional certificate upon completion",
+      "Portfolio development and review sessions"
+    ],
+    
+    // Key Details
+    details: {
+      schedule: {
+        startDate: "February 15, 2025",
+        endDate: "March 8, 2025",
+        sessionTimings: "7:00 PM - 9:00 PM IST",
+        format: "Live Online + Recorded Sessions"
+      },
+      pricing: {
+        originalPrice: 12999,
+        discountedPrice: 6999,
+        currency: "₹",
+        paymentOptions: [
+          "Full payment discount available",
+          "EMI options with 0% interest",
+          "Student and group discounts"
+        ]
+      },
+      certification: {
+        provider: "BSD Design School & Industry Partners",
+        type: "Professional Certificate in AI Creative Prototyping",
+        description: "Industry-recognized certificate validating your expertise in AI-powered creative design and prototyping"
+      }
     },
-    {
-      week: 2,
-      title: "DALL-E & Advanced Prompting",
-      topics: ["DALL-E 3 workflows", "Complex prompt structures", "Image editing with AI", "Brand consistency techniques"]
+    
+    // Curriculum
+    curriculum: [
+      {
+        week: 1,
+        title: "AI Fundamentals & Prompt Engineering",
+        topics: [
+          "Introduction to generative AI and its creative applications",
+          "Understanding different AI models and their strengths",
+          "Master prompt engineering techniques for visual generation",
+          "Creating effective prompts for different design styles",
+          "Ethics and best practices in AI-generated content"
+        ],
+        tools: ["ChatGPT", "Basic Prompting", "AI Ethics Guidelines"]
+      },
+      {
+        week: 2,
+        title: "Advanced Visual AI Tools Mastery",
+        topics: [
+          "Midjourney advanced techniques and style consistency",
+          "DALL-E 3 for precise visual concept generation",
+          "Stable Diffusion workflows and customization",
+          "Image-to-image transformations and editing",
+          "Creating cohesive visual narratives with AI"
+        ],
+        tools: ["Midjourney", "DALL-E 3", "Stable Diffusion", "Image Editing AI"]
+      },
+      {
+        week: 3,
+        title: "Creative Workflow Integration & Portfolio Development",
+        topics: [
+          "Building efficient AI-powered design workflows",
+          "Integrating AI tools with traditional design software",
+          "Quality control and refinement techniques",
+          "Portfolio development strategies for AI creative work",
+          "Client presentation and commercial applications"
+        ],
+        tools: ["Adobe Creative Suite", "Figma", "Portfolio Platforms", "Workflow Automation"]
+      }
+    ],
+    softwareTools: [
+      "Midjourney",
+      "DALL-E 3",
+      "Stable Diffusion",
+      "ChatGPT",
+      "Adobe Photoshop",
+      "Adobe Illustrator",
+      "Figma",
+      "RunwayML"
+    ],
+    
+    // Instructor
+    instructor: {
+      name: "Sarah Chen",
+      qualifications: "M.Des Digital Art, B.F.A Visual Communications",
+      experience: "7+ years in AI-powered creative design and digital art",
+      image: "/lovable-uploads/c83c596d-add8-4ab2-a74f-1dc8c849424e.png",
+      bio: "Sarah is a pioneering creative technologist who has been at the forefront of AI-powered design since 2018. She has worked with leading brands like Nike, Adobe, and Google to integrate AI into their creative workflows. Sarah has trained over 3000 designers in AI tools and has been featured in Design Week and Creative Review for her innovative AI art projects."
     },
-    {
-      week: 3,
-      title: "Stable Diffusion & Creative Applications",
-      topics: ["Local Stable Diffusion setup", "ControlNet and customization", "Real-world design applications", "Portfolio development"]
-    }
-  ];
+    
+    // Testimonials
+    testimonials: [
+      {
+        name: "Rahul Kapoor",
+        role: "Creative Director",
+        company: "Leo Burnett",
+        rating: 5,
+        feedback: "This course completely transformed how our creative team approaches ideation. The AI techniques Sarah taught us have cut our concept development time by 70% while increasing creative output quality.",
+        image: "/lovable-uploads/c83c596d-add8-4ab2-a74f-1dc8c849424e.png"
+      },
+      {
+        name: "Priya Sharma",
+        role: "UX Designer",
+        company: "Flipkart",
+        rating: 5,
+        feedback: "Incredible course! I went from being AI-curious to confidently using these tools in my daily workflow. The hands-on approach and real projects made all the difference.",
+        isVideo: true,
+        videoUrl: "#"
+      },
+      {
+        name: "Amit Patel",
+        role: "Freelance Designer",
+        company: "Independent",
+        rating: 5,
+        feedback: "The AI skills I learned here have made me 10x more competitive as a freelancer. My clients are amazed by the speed and quality of concepts I can now deliver.",
+        image: "/lovable-uploads/c83c596d-add8-4ab2-a74f-1dc8c849424e.png"
+      },
+      {
+        name: "Kavya Nair",
+        role: "Brand Designer",
+        company: "Tata Digital",
+        rating: 5,
+        feedback: "Perfect blend of technical training and creative application. The instructor's industry experience really shows in the practical tips and real-world examples.",
+        image: "/lovable-uploads/c83c596d-add8-4ab2-a74f-1dc8c849424e.png"
+      },
+      {
+        name: "Rohan Gupta",
+        role: "Art Director",
+        company: "Ogilvy",
+        rating: 5,
+        feedback: "This course is a must for any creative professional. The AI tools we learned are now essential parts of our agency's creative process.",
+        isVideo: true,
+        videoUrl: "#"
+      }
+    ],
+    
+    // FAQs
+    faqs: [
+      {
+        question: "Do I need any prior AI or technical experience?",
+        answer: "No prior AI experience is required! This course is designed for creative professionals from all backgrounds. We start with the basics and gradually build up to advanced techniques. Basic computer skills and familiarity with design concepts are helpful."
+      },
+      {
+        question: "What AI tools will I get access to during the course?",
+        answer: "We provide temporary access to premium versions of Midjourney, DALL-E 3, and other AI tools during the course period. We'll also guide you on free alternatives and help you choose the right subscription plans for your needs."
+      },
+      {
+        question: "Will I need to purchase any software?",
+        answer: "Most AI tools offer free tiers or trial periods. For traditional design software like Adobe Creative Suite, we'll work with free alternatives like Canva and Figma during the course, though having Adobe access is beneficial."
+      },
+      {
+        question: "What's your refund policy?",
+        answer: "We offer a 7-day money-back guarantee from the course start date. If you're not satisfied with the course content or delivery, you can get a full refund within this period, no questions asked."
+      },
+      {
+        question: "How much time should I dedicate outside of live sessions?",
+        answer: "We recommend 3-4 hours per week for practice and assignments outside of the 2-hour live sessions. All sessions are recorded, so you can catch up at your own pace if you miss a live session."
+      },
+      {
+        question: "Will I get ongoing support after the course ends?",
+        answer: "Yes! You'll get lifetime access to course materials, recordings, and updates. Plus, you'll join our exclusive alumni community where you can share work, get feedback, and stay updated on new AI tools and techniques."
+      },
+      {
+        question: "Can I use the AI-generated work in my professional projects?",
+        answer: "We cover the legal and ethical aspects of AI-generated content extensively. Most AI-generated work can be used commercially, but we'll teach you best practices for attribution, licensing, and ensuring your work meets professional standards."
+      },
+      {
+        question: "Is this course suitable for teams or corporate training?",
+        answer: "Absolutely! We offer special corporate packages with customized curriculum, team projects, and bulk discounts. Contact us directly to discuss corporate training options tailored to your organization's needs."
+      }
+    ],
+    
+    // CTAs
+    enrollmentUrl: "https://apply.bsd.edu.in/",
+    brochureUrl: "#"
+  };
 
-  const highlights = [
-    "Master 4 major AI creative tools",
-    "Hands-on project-based learning",
-    "Industry expert mentorship",
-    "Certificate of completion",
-    "Job placement assistance",
-    "Portfolio development support"
-  ];
-
-  return (
-    <>
-      <Helmet>
-        <title>Generative AI for Creative Prototyping - 3 Week Course | BSD Design School</title>
-        <meta 
-          name="description" 
-          content="Master AI tools for rapid creative ideation and prototyping. Learn Midjourney, DALL-E, Stable Diffusion, and AI prompting in this intensive 3-week online course." 
-        />
-      </Helmet>
-      
-      <Navbar />
-      
-      <main>
-        {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-br from-primary/10 via-secondary/5 to-background overflow-hidden">
-          <div className="container mx-auto px-6 md:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <RevealSection>
-                <div>
-                  <div className="flex items-center gap-4 mb-6">
-                    <Badge variant="bsdOrange" className="text-sm">INDUSTRY EXPERT MENTORS</Badge>
-                    <div className="flex items-center gap-1">
-                      <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                      <span className="text-sm font-medium">4.1 Rating</span>
-                    </div>
-                  </div>
-                  
-                  <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
-                    Generative AI for Creative Prototyping
-                  </h1>
-                  
-                  <div className="flex items-center gap-6 mb-6 text-foreground/70">
-                    <div className="flex items-center gap-2">
-                      <Clock className="h-5 w-5 text-primary" />
-                      <span>3 Weeks</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Calendar className="h-5 w-5 text-primary" />
-                      <span>Feb 2025</span>
-                    </div>
-                  </div>
-                  
-                  <p className="text-lg text-foreground/70 mb-8 leading-relaxed">
-                    Master AI tools for rapid creative ideation and prototyping across design disciplines. Learn Midjourney, DALL-E, Stable Diffusion, and advanced AI prompting techniques.
-                  </p>
-                  
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <Button 
-                      size="lg"
-                      onClick={() => {
-                        const enquirySection = document.getElementById('enquiry-form');
-                        enquirySection?.scrollIntoView({ behavior: 'smooth' });
-                      }}
-                    >
-                      Enroll Now
-                    </Button>
-                    <Button variant="outline" size="lg">
-                      <Download className="mr-2 h-4 w-4" />
-                      Download Brochure
-                    </Button>
-                  </div>
-                  
-                  <p className="text-sm text-foreground/60 mt-4">
-                    📱 EMI option available! Contact on WhatsApp
-                  </p>
-                </div>
-              </RevealSection>
-              
-              <RevealSection delay={100}>
-                <div className="relative">
-                  <img 
-                    src={generativeAIImage} 
-                    alt="Generative AI Creative Prototyping Course"
-                    className="rounded-2xl shadow-2xl w-full h-[400px] object-cover"
-                  />
-                  <div className="absolute -bottom-6 -right-6 bg-white dark:bg-card p-4 rounded-xl shadow-lg">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-primary">12k+</div>
-                      <div className="text-sm text-foreground/70">Certified Students</div>
-                    </div>
-                  </div>
-                </div>
-              </RevealSection>
-            </div>
-          </div>
-        </section>
-
-        {/* Course Highlights */}
-        <section className="py-16 bg-muted/30">
-          <div className="container mx-auto px-6 md:px-8">
-            <RevealSection>
-              <h2 className="text-3xl font-display font-bold text-center mb-12">Course Highlights</h2>
-            </RevealSection>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {highlights.map((highlight, index) => (
-                <RevealSection key={index} delay={index * 50}>
-                  <Card className="p-6 h-full">
-                    <div className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                      <p className="text-foreground">{highlight}</p>
-                    </div>
-                  </Card>
-                </RevealSection>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Curriculum Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-6 md:px-8">
-            <RevealSection>
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-display font-bold mb-4">3-Week Curriculum</h2>
-                <p className="text-foreground/70 max-w-2xl mx-auto">
-                  Comprehensive learning path designed to master AI creative tools from fundamentals to advanced applications
-                </p>
-              </div>
-            </RevealSection>
-
-            <div className="max-w-4xl mx-auto space-y-6">
-              {curriculum.map((week, index) => (
-                <RevealSection key={index} delay={index * 100}>
-                  <Card className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="bg-primary text-primary-foreground w-12 h-12 rounded-full flex items-center justify-center font-bold flex-shrink-0">
-                        {week.week}
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-semibold mb-3">{week.title}</h3>
-                        <ul className="space-y-2">
-                          {week.topics.map((topic, topicIndex) => (
-                            <li key={topicIndex} className="flex items-start gap-2 text-foreground/70">
-                              <CheckCircle2 className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
-                              <span>{topic}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  </Card>
-                </RevealSection>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground">
-          <div className="container mx-auto px-6 md:px-8 text-center">
-            <RevealSection>
-              <h2 className="text-3xl font-display font-bold mb-4">Ready to Master AI Creative Tools?</h2>
-              <p className="text-xl mb-8 text-primary-foreground/90">
-                Join thousands of students who have transformed their creative workflow with AI
-              </p>
-              <Button 
-                size="lg" 
-                variant="secondary"
-                onClick={() => {
-                  const enquirySection = document.getElementById('enquiry-form');
-                  enquirySection?.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
-                Enroll Today - Limited Seats
-              </Button>
-            </RevealSection>
-          </div>
-        </section>
-      </main>
-      
-      <Footer />
-    </>
-  );
+  return <CourseLandingPageTemplate {...courseData} />;
 };
 
 export default GenerativeAICreativePrototyping;
