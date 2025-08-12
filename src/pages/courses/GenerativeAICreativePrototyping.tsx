@@ -107,6 +107,20 @@ const GenerativeAICreativePrototyping = () => {
       "RunwayML"
     ],
     
+    // Target Audience
+    targetAudience: {
+      title: "Who is it for?",
+      description: "This course is designed for creative professionals looking to integrate AI into their design workflow and enhance their creative capabilities.",
+      audiences: [
+        "Graphic Designers seeking to accelerate creative ideation",
+        "UI/UX Designers wanting to prototype concepts faster",
+        "Marketing Professionals creating visual content at scale",
+        "Creative Directors exploring AI-powered workflows",
+        "Freelancers looking to increase productivity and output",
+        "Students preparing for AI-integrated design careers"
+      ]
+    },
+    
     // Instructor
     instructor: {
       name: "Sarah Chen",
@@ -142,23 +156,6 @@ const GenerativeAICreativePrototyping = () => {
         rating: 5,
         feedback: "The AI skills I learned here have made me 10x more competitive as a freelancer. My clients are amazed by the speed and quality of concepts I can now deliver.",
         image: "/lovable-uploads/c83c596d-add8-4ab2-a74f-1dc8c849424e.png"
-      },
-      {
-        name: "Kavya Nair",
-        role: "Brand Designer",
-        company: "Tata Digital",
-        rating: 5,
-        feedback: "Perfect blend of technical training and creative application. The instructor's industry experience really shows in the practical tips and real-world examples.",
-        image: "/lovable-uploads/c83c596d-add8-4ab2-a74f-1dc8c849424e.png"
-      },
-      {
-        name: "Rohan Gupta",
-        role: "Art Director",
-        company: "Ogilvy",
-        rating: 5,
-        feedback: "This course is a must for any creative professional. The AI tools we learned are now essential parts of our agency's creative process.",
-        isVideo: true,
-        videoUrl: "#"
       }
     ],
     
@@ -183,18 +180,6 @@ const GenerativeAICreativePrototyping = () => {
       {
         question: "How much time should I dedicate outside of live sessions?",
         answer: "We recommend 3-4 hours per week for practice and assignments outside of the 2-hour live sessions. All sessions are recorded, so you can catch up at your own pace if you miss a live session."
-      },
-      {
-        question: "Will I get ongoing support after the course ends?",
-        answer: "Yes! You'll get lifetime access to course materials, recordings, and updates. Plus, you'll join our exclusive alumni community where you can share work, get feedback, and stay updated on new AI tools and techniques."
-      },
-      {
-        question: "Can I use the AI-generated work in my professional projects?",
-        answer: "We cover the legal and ethical aspects of AI-generated content extensively. Most AI-generated work can be used commercially, but we'll teach you best practices for attribution, licensing, and ensuring your work meets professional standards."
-      },
-      {
-        question: "Is this course suitable for teams or corporate training?",
-        answer: "Absolutely! We offer special corporate packages with customized curriculum, team projects, and bulk discounts. Contact us directly to discuss corporate training options tailored to your organization's needs."
       }
     ],
     

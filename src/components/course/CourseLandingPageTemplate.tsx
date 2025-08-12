@@ -83,6 +83,13 @@ export interface CourseLandingPageProps {
   curriculum: CurriculumWeek[];
   softwareTools: string[];
   
+  // Target Audience
+  targetAudience: {
+    title: string;
+    description: string;
+    audiences: string[];
+  };
+  
   // Instructor
   instructor: CourseInstructor;
   
@@ -110,6 +117,7 @@ export const CourseLandingPageTemplate: React.FC<CourseLandingPageProps> = ({
   details,
   curriculum,
   softwareTools,
+  targetAudience,
   instructor,
   testimonials,
   faqs,
@@ -428,6 +436,35 @@ export const CourseLandingPageTemplate: React.FC<CourseLandingPageProps> = ({
               </CardContent>
             </Card>
           </RevealSection>
+        </div>
+      </section>
+
+      {/* Who is it for? Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6">
+          <RevealSection>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-6">{targetAudience.title}</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                {targetAudience.description}
+              </p>
+            </div>
+          </RevealSection>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {targetAudience.audiences.map((audience, index) => (
+              <RevealSection key={index} delay={index * 100}>
+                <Card className="p-6 text-center h-full">
+                  <CardContent className="pt-6">
+                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Users className="w-8 h-8 text-primary" />
+                    </div>
+                    <h3 className="text-lg font-semibold mb-3">{audience}</h3>
+                  </CardContent>
+                </Card>
+              </RevealSection>
+            ))}
+          </div>
         </div>
       </section>
 

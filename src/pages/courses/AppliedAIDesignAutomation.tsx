@@ -142,6 +142,20 @@ const AppliedAIDesignAutomation = () => {
       "Custom AI Tools"
     ],
     
+    // Target Audience
+    targetAudience: {
+      title: "Who is it for?",
+      description: "This course is ideal for design professionals and teams looking to implement AI automation and streamline their creative workflows.",
+      audiences: [
+        "Design Teams seeking workflow automation solutions",
+        "Creative Directors implementing AI strategies",
+        "UX/UI Designers exploring AI-assisted design",
+        "Product Managers integrating AI into design processes",
+        "Design Agency Owners scaling creative operations",
+        "Technology Leaders in creative organizations"
+      ]
+    },
+    
     // Instructor
     instructor: {
       name: "Dr. Maria Santos",

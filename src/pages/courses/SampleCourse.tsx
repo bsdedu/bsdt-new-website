@@ -1,7 +1,7 @@
 import React from 'react';
 import { CourseLandingPageTemplate } from '@/components/course/CourseLandingPageTemplate';
 
-const SampleCoursePage = () => {
+const SampleCourse = () => {
   const courseData = {
     // SEO & Meta
     title: "Rhino Grasshopper Affordable Parametric Workshop | BSD",
@@ -136,6 +136,20 @@ const SampleCoursePage = () => {
       "Adobe Creative Suite"
     ],
     
+    // Target Audience
+    targetAudience: {
+      title: "Who is it for?",
+      description: "This comprehensive workshop is designed for professionals looking to master parametric design principles and computational modeling.",
+      audiences: [
+        "Architecture Professionals seeking advanced design skills",
+        "Design Engineers exploring computational methods",
+        "Students pursuing parametric design specialization",
+        "CAD Professionals wanting to learn Grasshopper",
+        "Designers interested in algorithmic workflows",
+        "Professionals seeking Rhino certification"
+      ]
+    },
+    
     // Instructor
     instructor: {
       name: "Arjun Malhotra",
@@ -206,4 +220,4 @@ const SampleCoursePage = () => {
   return <CourseLandingPageTemplate {...courseData} />;
 };
 
-export default SampleCoursePage;
+export default SampleCourse;

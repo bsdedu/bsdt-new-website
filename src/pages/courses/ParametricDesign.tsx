@@ -105,6 +105,20 @@ const ParametricDesign = () => {
       "Weaverbird"
     ],
     
+    // Target Audience
+    targetAudience: {
+      title: "Who is it for?",
+      description: "This course is perfect for design professionals who want to master computational design and parametric modeling techniques.",
+      audiences: [
+        "Architects exploring computational design workflows",
+        "Product Designers seeking parametric modeling skills",
+        "Design Students interested in algorithmic design",
+        "Engineers wanting to integrate design thinking",
+        "3D Artists expanding into parametric modeling",
+        "Design Professionals seeking advanced Rhino skills"
+      ]
+    },
+    
     // Instructor
     instructor: {
       name: "Alex Rodriguez",
