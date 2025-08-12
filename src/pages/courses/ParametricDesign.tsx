@@ -1,60 +1,63 @@
 import React from 'react';
-import { CourseLandingTemplate } from '@/components/course/CourseLandingTemplate';
-import parametricDesignImage from '@/assets/programs/parametric-design.jpg';
+import { CourseLandingPageTemplate } from '@/components/course/CourseLandingPageTemplate';
 
-const ParametricDesign: React.FC = () => {
+const ParametricDesign = () => {
   const courseData = {
-    // SEO & Basic Info
-    title: "Parametric Design with Rhino & Grasshopper",
-    description: "Learn computational design techniques for architecture and product development. Master Rhino 3D, Grasshopper, parametric modeling, and algorithmic design.",
-    metaTitle: "Parametric Design with Rhino & Grasshopper - 3 Week Course | BSD Design School",
-    metaDescription: "Learn computational design techniques for architecture and product development. Master Rhino 3D, Grasshopper, and algorithmic design in 3 weeks.",
+    // SEO & Meta
+    title: "Parametric Design with Rhino & Grasshopper - 3 Week Course | BSD Design School",
+    description: "Learn computational design techniques for architecture and product development. Master Rhino 3D, Grasshopper, and algorithmic design in 3 weeks.",
     
-    // Hero Banner Section
-    courseName: "Parametric Design with Rhino & Grasshopper",
+    // Banner Section
+    courseTitle: "Parametric Design with Rhino & Grasshopper",
+    heroImage: "/lovable-uploads/c83c596d-add8-4ab2-a74f-1dc8c849424e.png",
     duration: "3 Weeks",
     format: "Live + Recorded Sessions",
-    startDate: "Apr 2025",
-    originalPrice: "₹15,999",
-    discountedPrice: "₹7,999",
-    discount: "50%",
-    rating: "4.5",
-    ratingCount: "500+",
-    heroImage: parametricDesignImage,
     
     // Course Overview
-    overview: "Master the art of computational design with our comprehensive Rhino & Grasshopper course. Learn to create complex parametric models, develop algorithmic thinking, and build industry-ready designs that push the boundaries of architecture and product development.",
-    features: [
-      "Beginner-friendly approach with step-by-step guidance",
-      "Industry-relevant projects and real-world applications",
-      "Master both Rhino 3D and Grasshopper in depth",
-      "Build a professional portfolio of parametric designs",
-      "Learn from certified industry experts",
-      "Get lifetime access to course materials"
+    courseIntro: "Master computational design techniques for architecture and product development using industry-standard parametric tools.",
+    learningHighlights: [
+      "Master Rhino 3D modeling fundamentals",
+      "Advanced Grasshopper scripting techniques",
+      "Parametric design thinking and methodology",
+      "Real-world architectural applications",
+      "Advanced surface modeling and analysis",
+      "Plugin integration and optimization"
+    ],
+    keyFeatures: [
+      "Beginner-friendly approach",
+      "Industry-relevant projects",
+      "Live instructor support",
+      "Recorded sessions for review",
+      "Certificate upon completion",
+      "Portfolio development guidance"
     ],
     
     // Key Details
-    schedule: {
-      startDate: "April 15, 2025",
-      endDate: "May 5, 2025",
-      sessionTimings: "7:00 PM - 9:00 PM IST",
-      totalSessions: "12 Sessions"
+    details: {
+      schedule: {
+        startDate: "April 15, 2025",
+        endDate: "May 5, 2025",
+        sessionTimings: "7:00 PM - 9:00 PM IST",
+        format: "Live Online + Recorded"
+      },
+      pricing: {
+        originalPrice: 15999,
+        discountedPrice: 7999,
+        currency: "₹",
+        paymentOptions: [
+          "Full payment discount",
+          "EMI options available",
+          "Student discounts"
+        ]
+      },
+      certification: {
+        provider: "BSD Design School",
+        type: "Professional Certificate",
+        description: "Industry-recognized certificate validating your parametric design skills"
+      }
     },
-    certification: "BSD Design School Certificate in Parametric Design",
     
-    // Course Details
-    highlights: [
-      "Master Rhino 3D & Grasshopper",
-      "Computational design thinking",
-      "Algorithmic modeling techniques", 
-      "Architecture & product applications",
-      "Industry-standard workflows",
-      "Professional portfolio projects",
-      "Advanced NURBS modeling",
-      "Parametric optimization",
-      "Fabrication-ready designs"
-    ],
-    
+    // Curriculum
     curriculum: [
       {
         week: 1,
@@ -65,7 +68,8 @@ const ParametricDesign: React.FC = () => {
           "File organization and workflow setup",
           "Basic 3D modeling principles",
           "Surface continuity and quality control"
-        ]
+        ],
+        tools: ["Rhino 7", "Basic Modeling Tools"]
       },
       {
         week: 2,
@@ -76,7 +80,8 @@ const ParametricDesign: React.FC = () => {
           "Basic parametric definitions",
           "Component workflows and connections",
           "Mathematical operations in design"
-        ]
+        ],
+        tools: ["Grasshopper", "Data Management", "Mathematical Components"]
       },
       {
         week: 3,
@@ -87,64 +92,27 @@ const ParametricDesign: React.FC = () => {
           "Real-world design challenges",
           "Portfolio development strategies",
           "Integration with fabrication processes"
-        ]
+        ],
+        tools: ["Advanced Grasshopper", "Optimization Tools", "Portfolio Tools"]
       }
     ],
-    
-    // Tools & Skills
-    tools: [
-      { name: "Rhino 3D", icon: "/api/placeholder/64/64" },
-      { name: "Grasshopper", icon: "/api/placeholder/64/64" },
-      { name: "Kangaroo", icon: "/api/placeholder/64/64" },
-      { name: "Galapagos", icon: "/api/placeholder/64/64" },
-      { name: "LunchBox", icon: "/api/placeholder/64/64" },
-      { name: "Weaverbird", icon: "/api/placeholder/64/64" }
+    softwareTools: [
+      "Rhino 7",
+      "Grasshopper",
+      "Kangaroo Physics",
+      "Galapagos",
+      "LunchBox",
+      "Weaverbird"
     ],
     
-    // Instructors
-    instructors: [
-      {
-        name: "Alex Rodriguez",
-        experience: "8+ years of exp.",
-        bio: "Computational Designer specializing in parametric architecture and advanced fabrication techniques at leading design firms.",
-        image: "/api/placeholder/120/120",
-        companies: ["Zaha Hadid", "Foster + Partners", "AECOM"],
-        linkedIn: "#"
-      },
-      {
-        name: "Sarah Chen",
-        experience: "6+ years of exp.",
-        bio: "Parametric Design Expert with extensive experience in algorithmic design and digital fabrication workflows.",
-        image: "/api/placeholder/120/120",
-        companies: ["UNStudio", "Grimshaw", "Arup"],
-        linkedIn: "#"
-      }
-    ],
-    
-    // Case Studies
-    caseStudies: [
-      {
-        title: "Parametric Pavilion Design",
-        author: "Michael Zhang",
-        institution: "MIT Architecture",
-        image: "/api/placeholder/300/200",
-        link: "#"
-      },
-      {
-        title: "Algorithmic Facade System",
-        author: "Emma Johnson", 
-        institution: "Harvard GSD",
-        image: "/api/placeholder/300/200",
-        link: "#"
-      },
-      {
-        title: "Computational Tower Design",
-        author: "David Kim",
-        institution: "AA School London",
-        image: "/api/placeholder/300/200",
-        link: "#"
-      }
-    ],
+    // Instructor
+    instructor: {
+      name: "Alex Rodriguez",
+      qualifications: "M.Arch Computational Design, B.Arch",
+      experience: "8+ years in parametric design and digital architecture",
+      image: "/lovable-uploads/c83c596d-add8-4ab2-a74f-1dc8c849424e.png",
+      bio: "Alex is a computational designer specializing in parametric architecture and advanced fabrication techniques. He has worked at leading design firms including Zaha Hadid Architects and Foster + Partners, bringing extensive real-world experience to the classroom."
+    },
     
     // Testimonials
     testimonials: [
@@ -152,25 +120,26 @@ const ParametricDesign: React.FC = () => {
         name: "Priya Sharma",
         role: "Architect",
         company: "DLF Group",
-        content: "This course transformed my approach to design. The parametric skills I learned have made me invaluable at my firm.",
         rating: 5,
-        image: "/api/placeholder/60/60"
+        feedback: "This course transformed my approach to design. The parametric skills I learned have made me invaluable at my firm.",
+        image: "/lovable-uploads/c83c596d-add8-4ab2-a74f-1dc8c849424e.png"
       },
       {
         name: "Rohit Kumar",
         role: "Product Designer",
         company: "Tata Motors",
-        content: "Excellent course structure and amazing instructors. Now I can create complex parametric models with confidence.",
         rating: 5,
-        image: "/api/placeholder/60/60"
+        feedback: "Excellent course structure and amazing instructors. Now I can create complex parametric models with confidence.",
+        isVideo: true,
+        videoUrl: "#"
       },
       {
         name: "Anita Verma",
         role: "Interior Designer",
         company: "Freelancer",
-        content: "The hands-on approach and real projects helped me build an impressive portfolio. Highly recommended!",
         rating: 5,
-        image: "/api/placeholder/60/60"
+        feedback: "The hands-on approach and real projects helped me build an impressive portfolio. Highly recommended!",
+        image: "/lovable-uploads/c83c596d-add8-4ab2-a74f-1dc8c849424e.png"
       }
     ],
     
@@ -195,27 +164,15 @@ const ParametricDesign: React.FC = () => {
       {
         question: "Is there any refund policy?",
         answer: "Yes, we offer a 7-day money-back guarantee if you're not satisfied with the course content."
-      },
-      {
-        question: "Can I pay in installments?",
-        answer: "Yes, we offer EMI options. Contact us on WhatsApp for more details about payment plans."
       }
     ],
     
-    // Additional Props
-    skillsOffered: [
-      "20+ Projects in Portfolio",
-      "Software Proficiency",
-      "Industry-Focused Curriculum", 
-      "Assignments by Module",
-      "Industry Recognized Certificate",
-      "Instructor-Guided Sessions",
-      "Peer Networking",
-      "Interview Opportunities"
-    ]
+    // CTAs
+    enrollmentUrl: "https://apply.bsd.edu.in/",
+    brochureUrl: "#"
   };
 
-  return <CourseLandingTemplate {...courseData} />;
+  return <CourseLandingPageTemplate {...courseData} />;
 };
 
 export default ParametricDesign;

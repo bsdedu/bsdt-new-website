@@ -1,60 +1,63 @@
 import React from 'react';
-import { CourseLandingTemplate } from '@/components/course/CourseLandingTemplate';
-import aiOptimizationImage from '@/assets/programs/ai-optimization.jpg';
+import { CourseLandingPageTemplate } from '@/components/course/CourseLandingPageTemplate';
 
-const AppliedAIDesignAutomation: React.FC = () => {
+const AppliedAIDesignAutomation = () => {
   const courseData = {
-    // SEO & Basic Info
-    title: "Applied AI for Design Automation",
-    description: "Implement AI tools to streamline design workflows and enhance creativity. Master prompt engineering, AI-assisted 3D modeling, legal considerations, and custom AI assistants.",
-    metaTitle: "Applied AI for Design Automation - 6 Week Course | BSD Design School",
-    metaDescription: "Implement AI tools to streamline design workflows and enhance creativity. Learn prompt engineering, AI-assisted 3D modeling, and custom AI solutions in 6 weeks.",
+    // SEO & Meta
+    title: "Applied AI for Design Automation - 6 Week Course | BSD Design School",
+    description: "Implement AI tools to streamline design workflows and enhance creativity. Learn prompt engineering, AI-assisted 3D modeling, and custom AI solutions in 6 weeks.",
     
-    // Hero Banner Section
-    courseName: "Applied AI for Design Automation",
+    // Banner Section
+    courseTitle: "Applied AI for Design Automation",
+    heroImage: "/lovable-uploads/c83c596d-add8-4ab2-a74f-1dc8c849424e.png",
     duration: "6 Weeks",
     format: "Live + Recorded Sessions",
-    startDate: "Jul 2025",
-    originalPrice: "₹24,999",
-    discountedPrice: "₹14,999",
-    discount: "40%",
-    rating: "4.7",
-    ratingCount: "800+",
-    heroImage: aiOptimizationImage,
     
     // Course Overview
-    overview: "Step into the future of design with our comprehensive Applied AI course. Learn to harness the power of artificial intelligence to automate design processes, generate innovative solutions, and transform your creative workflow with cutting-edge AI tools and techniques.",
-    features: [
-      "Master AI design tools and automation workflows",
-      "Legal & ethical AI use in professional practice",
-      "Custom AI assistant creation for design studios",
-      "Industry-ready applications and portfolio projects",
-      "Advanced prompt engineering techniques",
-      "AI-powered visualization and presentation tools"
+    courseIntro: "Transform your design workflow with cutting-edge AI tools and automation techniques. Learn to implement AI solutions that enhance creativity and streamline production.",
+    learningHighlights: [
+      "Master AI prompt engineering for design",
+      "Implement AI-assisted 3D modeling workflows",
+      "Develop custom AI solutions for design tasks",
+      "Understand legal and ethical considerations",
+      "Build automated design generation systems",
+      "Create AI-powered design validation tools"
+    ],
+    keyFeatures: [
+      "Hands-on AI implementation",
+      "Industry-relevant case studies",
+      "Legal and ethical guidance",
+      "Custom AI solution development",
+      "Professional certificate",
+      "Portfolio project completion"
     ],
     
     // Key Details
-    schedule: {
-      startDate: "July 15, 2025",
-      endDate: "August 26, 2025",
-      sessionTimings: "7:00 PM - 9:00 PM IST",
-      totalSessions: "18 Sessions"
+    details: {
+      schedule: {
+        startDate: "July 15, 2025",
+        endDate: "August 26, 2025",
+        sessionTimings: "7:00 PM - 9:00 PM IST",
+        format: "Live Online + Recorded"
+      },
+      pricing: {
+        originalPrice: 24999,
+        discountedPrice: 14999,
+        currency: "₹",
+        paymentOptions: [
+          "Full payment discount",
+          "EMI options available",
+          "Corporate discounts"
+        ]
+      },
+      certification: {
+        provider: "BSD Design School",
+        type: "Professional AI Certificate",
+        description: "Industry-recognized certificate in Applied AI for Design Automation"
+      }
     },
-    certification: "BSD Design School Certificate in Applied AI for Design",
     
-    // Course Details
-    highlights: [
-      "Master AI design tools",
-      "Implement automation workflows",
-      "Legal & ethical AI use",
-      "Custom AI assistant creation",
-      "Industry-ready applications",
-      "Portfolio automation projects",
-      "Advanced prompt engineering",
-      "AI-powered visualization",
-      "Workflow optimization"
-    ],
-    
+    // Curriculum
     curriculum: [
       {
         week: 1,
@@ -65,7 +68,8 @@ const AppliedAIDesignAutomation: React.FC = () => {
           "Style consistency across AI outputs",
           "Brand-specific AI outputs and guidelines",
           "Creative prompting strategies"
-        ]
+        ],
+        tools: ["MidJourney", "DALL-E", "Prompt Engineering Tools"]
       },
       {
         week: 2,
@@ -76,7 +80,8 @@ const AppliedAIDesignAutomation: React.FC = () => {
           "Texture synthesis and material creation",
           "Optimization techniques for 3D assets",
           "Integration with traditional modeling tools"
-        ]
+        ],
+        tools: ["Kaedim", "NVIDIA Omniverse", "3D AI Tools"]
       },
       {
         week: 3,
@@ -87,7 +92,8 @@ const AppliedAIDesignAutomation: React.FC = () => {
           "Design optimization algorithms",
           "Workflow integration techniques",
           "Custom automation development"
-        ]
+        ],
+        tools: ["Grasshopper AI", "CAD Automation", "Optimization Tools"]
       },
       {
         week: 4,
@@ -98,7 +104,8 @@ const AppliedAIDesignAutomation: React.FC = () => {
           "Commercial licensing frameworks",
           "Attribution standards and best practices",
           "Risk management strategies"
-        ]
+        ],
+        tools: ["Legal Frameworks", "Ethics Guidelines", "Documentation Tools"]
       },
       {
         week: 5,
@@ -109,7 +116,8 @@ const AppliedAIDesignAutomation: React.FC = () => {
           "Visual storytelling with AI",
           "Client communication enhancement",
           "Presentation optimization techniques"
-        ]
+        ],
+        tools: ["ChatGPT", "Presentation AI", "Documentation Tools"]
       },
       {
         week: 6,
@@ -120,64 +128,28 @@ const AppliedAIDesignAutomation: React.FC = () => {
           "API integrations and workflows",
           "Deployment strategies and maintenance",
           "Performance monitoring and optimization"
-        ]
+        ],
+        tools: ["Custom GPTs", "API Development", "Deployment Tools"]
       }
     ],
-    
-    // Tools & Skills
-    tools: [
-      { name: "MidJourney", icon: "/api/placeholder/64/64" },
-      { name: "DALL·E", icon: "/api/placeholder/64/64" },
-      { name: "ChatGPT", icon: "/api/placeholder/64/64" },
-      { name: "Stable Diffusion", icon: "/api/placeholder/64/64" },
-      { name: "RunwayML", icon: "/api/placeholder/64/64" },
-      { name: "Kaedim", icon: "/api/placeholder/64/64" }
+    softwareTools: [
+      "MidJourney",
+      "DALL-E",
+      "ChatGPT",
+      "Stable Diffusion",
+      "RunwayML",
+      "Kaedim",
+      "Custom AI Tools"
     ],
     
-    // Instructors
-    instructors: [
-      {
-        name: "Dr. Maria Santos",
-        experience: "10+ years of exp.",
-        bio: "AI Research Scientist and Design Technologist specializing in machine learning applications for creative industries.",
-        image: "/api/placeholder/120/120",
-        companies: ["Google AI", "Adobe", "MIT Media Lab"],
-        linkedIn: "#"
-      },
-      {
-        name: "James Wilson",
-        experience: "7+ years of exp.",
-        bio: "Creative Technologist with expertise in AI automation and computational design workflows.",
-        image: "/api/placeholder/120/120",
-        companies: ["IDEO", "Autodesk", "Nvidia"],
-        linkedIn: "#"
-      }
-    ],
-    
-    // Case Studies
-    caseStudies: [
-      {
-        title: "AI-Generated Building Facade",
-        author: "Lisa Chen",
-        institution: "Stanford University",
-        image: "/api/placeholder/300/200",
-        link: "#"
-      },
-      {
-        title: "Automated Design Process",
-        author: "Marcus Thompson",
-        institution: "Royal College of Art",
-        image: "/api/placeholder/300/200",
-        link: "#"
-      },
-      {
-        title: "AI Design Assistant Bot",
-        author: "Sophia Rodriguez",
-        institution: "Parsons School of Design",
-        image: "/api/placeholder/300/200",
-        link: "#"
-      }
-    ],
+    // Instructor
+    instructor: {
+      name: "Dr. Maria Santos",
+      qualifications: "PhD AI & Machine Learning, M.Tech Computer Science",
+      experience: "10+ years in AI research and design automation",
+      image: "/lovable-uploads/c83c596d-add8-4ab2-a74f-1dc8c849424e.png",
+      bio: "Dr. Maria Santos is a leading AI Research Scientist and Design Technologist specializing in machine learning applications for creative industries. She has worked at Google AI, Adobe, and MIT Media Lab, bringing cutting-edge AI research to practical design applications."
+    },
     
     // Testimonials
     testimonials: [
@@ -185,24 +157,26 @@ const AppliedAIDesignAutomation: React.FC = () => {
         name: "Arjun Mehta",
         role: "Creative Director",
         company: "Ogilvy",
-        content: "This course revolutionized how I approach design. The AI automation techniques have increased my team's productivity by 300%.",
         rating: 5,
-        image: "/api/placeholder/60/60"
+        feedback: "This course revolutionized how I approach design. The AI automation techniques have increased my team's productivity by 300%.",
+        image: "/lovable-uploads/c83c596d-add8-4ab2-a74f-1dc8c849424e.png"
       },
       {
         name: "Sneha Gupta",
         role: "UX Designer",
         company: "Swiggy",
-        content: "Amazing insights into AI tools for design. The hands-on projects and real-world applications made all the difference.",
         rating: 5,
-        image: "/api/placeholder/60/60"
+        feedback: "Amazing insights into AI tools for design. The hands-on projects and real-world applications made all the difference.",
+        isVideo: true,
+        videoUrl: "#"
       },
       {
         name: "Vikram Joshi",
         role: "Freelance Designer",
-        content: "The AI skills I learned here have made me stand out in the market. My clients are amazed by the quality and speed of delivery.",
+        company: "Independent",
         rating: 5,
-        image: "/api/placeholder/60/60"
+        feedback: "The AI skills I learned here have made me stand out in the market. My clients are amazed by the quality and speed of delivery.",
+        image: "/lovable-uploads/c83c596d-add8-4ab2-a74f-1dc8c849424e.png"
       }
     ],
     
@@ -227,27 +201,15 @@ const AppliedAIDesignAutomation: React.FC = () => {
       {
         question: "What kind of projects will I work on?",
         answer: "You'll work on diverse projects including brand identity automation, UI/UX design assistance, 3D asset generation, and complete design workflow automation."
-      },
-      {
-        question: "Is there ongoing support after the course?",
-        answer: "Yes, you'll get lifetime access to course materials, updates on new AI tools, and access to our alumni community for continued learning."
       }
     ],
     
-    // Additional Props
-    skillsOffered: [
-      "20+ AI Tools Mastery",
-      "Automation Workflows",
-      "Custom AI Development",
-      "Legal Compliance",
-      "Industry Certification",
-      "Portfolio Projects",
-      "Expert Mentorship",
-      "Career Support"
-    ]
+    // CTAs
+    enrollmentUrl: "https://apply.bsd.edu.in/",
+    brochureUrl: "#"
   };
 
-  return <CourseLandingTemplate {...courseData} />;
+  return <CourseLandingPageTemplate {...courseData} />;
 };
 
 export default AppliedAIDesignAutomation;
