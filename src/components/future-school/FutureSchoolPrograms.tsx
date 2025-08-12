@@ -32,7 +32,7 @@ export const FutureSchoolPrograms: React.FC = () => {
       format: 'Live Online',
       nextBatch: 'Feb 2025',
       skills: ['Midjourney', 'DALL-E', 'Stable Diffusion', 'AI Prompting'],
-      href: '/continuing-studies/generative-ai-creative-prototyping',
+      href: '/courses/generative-ai-creative-prototyping',
       image: generativeAIImage
     },
     {
@@ -42,7 +42,7 @@ export const FutureSchoolPrograms: React.FC = () => {
       format: 'Live Online',
       nextBatch: 'Mar 2025',
       skills: ['Unity 3D', 'Unreal Engine', 'VR Development', 'AR Frameworks'],
-      href: '/continuing-studies/vr-ar-prototyping',
+      href: '/courses/vr-ar-prototyping',
       image: vrArImage
     },
     {
@@ -52,7 +52,7 @@ export const FutureSchoolPrograms: React.FC = () => {
       format: 'Live Online',
       nextBatch: 'Apr 2025',
       skills: ['Rhino 3D', 'Grasshopper', 'Parametric Modeling', 'Algorithmic Design'],
-      href: '/continuing-studies/parametric-design',
+      href: '/courses/parametric-design',
       image: parametricDesignImage
     },
     {
@@ -62,7 +62,7 @@ export const FutureSchoolPrograms: React.FC = () => {
       format: 'Live Online',
       nextBatch: 'May 2025',
       skills: ['After Effects', 'Cinema 4D', 'Motion Graphics', 'Animation Principles'],
-      href: '/continuing-studies/motion-design-essentials',
+      href: '/courses/motion-design-essentials',
       image: motionDesignImage
     },
     {
@@ -72,7 +72,7 @@ export const FutureSchoolPrograms: React.FC = () => {
       format: 'Live Online',
       nextBatch: 'Jun 2025',
       skills: ['User Interviews', 'Usability Testing', 'Data Analysis', 'Research Methods'],
-      href: '/continuing-studies/ux-research-sprint',
+      href: '/courses/ux-research-sprint',
       image: uxResearchImage
     }
   ];
@@ -85,7 +85,7 @@ export const FutureSchoolPrograms: React.FC = () => {
       format: 'Live Online',
       nextBatch: 'Feb 2025',
       skills: ['BIM Workflows', 'LOD Standards', 'Space Planning', 'VR Walkthroughs'],
-      href: '/continuing-studies/bim-interiors',
+      href: '/courses/bim-interiors-small-projects',
       image: interiorDesignImage
     },
     {
@@ -95,7 +95,7 @@ export const FutureSchoolPrograms: React.FC = () => {
       format: 'Live Online',
       nextBatch: 'Mar 2025',
       skills: ['Atomic Design', 'Auto-Layout', 'Micro-interactions', 'Accessibility'],
-      href: '/continuing-studies/figma-mastery',
+      href: '/courses/ui-design-systems-figma',
       image: uiUxDesignImage
     },
     {
@@ -105,7 +105,7 @@ export const FutureSchoolPrograms: React.FC = () => {
       format: 'Live Online',
       nextBatch: 'Apr 2025',
       skills: ['Anatomy & Base Meshes', 'Costume Sculpting', 'PBR Texturing', 'UE5 Integration'],
-      href: '/continuing-studies/3d-character-modeling',
+      href: '/courses/3d-character-modeling',
       image: gameEnvironmentImage
     },
     {
@@ -115,7 +115,7 @@ export const FutureSchoolPrograms: React.FC = () => {
       format: 'Live Online',
       nextBatch: 'May 2025',
       skills: ['Brand Strategy', 'Visual Identity', 'Packaging Design', 'Brand Guidelines'],
-      href: '/continuing-studies/brand-packaging',
+      href: '/courses/brand-identity-packaging',
       image: lightingDesignImage
     },
     {
@@ -125,7 +125,7 @@ export const FutureSchoolPrograms: React.FC = () => {
       format: 'Live Online',
       nextBatch: 'Jun 2025',
       skills: ['Digital Rendering', 'Technical Drawing', 'CLO3D', 'Sustainable Materials'],
-      href: '/continuing-studies/fashion-tech-packs',
+      href: '/courses/digital-fashion-tech-packs',
       image: fashionTechImage
     },
     {
@@ -135,7 +135,7 @@ export const FutureSchoolPrograms: React.FC = () => {
       format: 'Live Online',
       nextBatch: 'Jul 2025',
       skills: ['Prompt Engineering', 'AI-Assisted 3D', 'Legal Considerations', 'Custom AI'],
-      href: '/continuing-studies/ai-design-automation',
+      href: '/courses/applied-ai-design-automation',
       image: aiOptimizationImage
     }
   ];
@@ -231,8 +231,12 @@ export const FutureSchoolPrograms: React.FC = () => {
             variant="outline" 
             className="w-full group/btn"
             onClick={() => {
-              const enquirySection = document.getElementById('enquiry-form');
-              enquirySection?.scrollIntoView({ behavior: 'smooth' });
+              if (program.href) {
+                window.location.href = program.href;
+              } else {
+                const enquirySection = document.getElementById('enquiry-form');
+                enquirySection?.scrollIntoView({ behavior: 'smooth' });
+              }
             }}
           >
             Learn More

@@ -43,6 +43,14 @@ import StudentClubs from "./pages/campus-life/StudentClubs";
 import EventsActivities from "./pages/EventsActivities";
 import StudentExperience from "./pages/StudentExperience";
 import FutureSchool from "./pages/FutureSchool";
+// Course Imports - 3 Week Programs
+import GenerativeAICreativePrototyping from "./pages/courses/GenerativeAICreativePrototyping";
+import VRARPrototyping from "./pages/courses/VRARPrototyping";
+import ParametricDesign from "./pages/courses/ParametricDesign";
+import MotionDesignEssentials from "./pages/courses/MotionDesignEssentials";
+import UXResearchSprint from "./pages/courses/UXResearchSprint";
+// Course Imports - 6 Week Programs
+import AppliedAIDesignAutomation from "./pages/courses/AppliedAIDesignAutomation";
 import { useEffect } from "react";
 
 console.log("App component loaded");
@@ -117,6 +125,16 @@ const App = () => {
               
               {/* Future School Route */}
               <Route path="/future-school" element={<FutureSchool />} />
+              
+              {/* Course Routes - 3 Week Programs */}
+              <Route path="/courses/generative-ai-creative-prototyping" element={<GenerativeAICreativePrototyping />} />
+              <Route path="/courses/vr-ar-prototyping" element={<VRARPrototyping />} />
+              <Route path="/courses/parametric-design" element={<ParametricDesign />} />
+              <Route path="/courses/motion-design-essentials" element={<MotionDesignEssentials />} />
+              <Route path="/courses/ux-research-sprint" element={<UXResearchSprint />} />
+              
+              {/* Course Routes - 6 Week Programs */}
+              <Route path="/courses/applied-ai-design-automation" element={<AppliedAIDesignAutomation />} />
               
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
