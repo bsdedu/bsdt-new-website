@@ -77,75 +77,65 @@ export const FutureSchoolPrograms: React.FC = () => {
     }
   ];
 
-  const threeMonthPrograms = [
+  const sixWeekPrograms = [
     {
-      title: 'Interior Lighting Design Specialist',
-      description: 'Comprehensive program covering lighting design principles for residential and commercial spaces.',
-      duration: '3 Months',
+      title: 'BIM for Interiors and Small Projects',
+      description: 'Master Building Information Modeling (BIM) for interior design projects and small-scale architectural works using Revit and related tools.',
+      duration: '6 Weeks',
       format: 'Live Online',
       nextBatch: 'Feb 2025',
-      skills: ['Lighting Design', 'DIALux', 'Photometry', 'Smart Lighting'],
-      href: '/continuing-studies/interior-lighting-design',
-      image: lightingDesignImage
-    },
-    {
-      title: 'Basic Interior Design',
-      description: 'Foundation course covering interior design principles, space planning, and design software.',
-      duration: '3 Months',
-      format: 'Live Online',
-      nextBatch: 'Mar 2025',
-      skills: ['AutoCAD', 'SketchUp', 'Space Planning', 'Design Principles'],
-      href: '/continuing-studies/basic-interior-design',
+      skills: ['BIM Workflows', 'LOD Standards', 'Space Planning', 'VR Walkthroughs'],
+      href: '/continuing-studies/bim-interiors',
       image: interiorDesignImage
     },
     {
-      title: 'UI/UX Product Design',
-      description: 'Complete product design program from research to prototyping to user testing.',
-      duration: '3 Months',
+      title: 'UI Design Systems and Figma Mastery',
+      description: 'Develop scalable design systems and master advanced Figma techniques for digital products.',
+      duration: '6 Weeks',
       format: 'Live Online',
-      nextBatch: 'Feb 2025',
-      skills: ['Figma', 'User Research', 'Prototyping', 'Design Systems'],
-      href: '/continuing-studies/ui-ux-product-design',
+      nextBatch: 'Mar 2025',
+      skills: ['Atomic Design', 'Auto-Layout', 'Micro-interactions', 'Accessibility'],
+      href: '/continuing-studies/figma-mastery',
       image: uiUxDesignImage
     },
     {
-      title: 'Game Environment Art (Unreal Engine 5)',
-      description: 'Learn to create stunning game environments using the latest Unreal Engine technologies.',
-      duration: '3 Months',
+      title: '3D Character Modeling for Games',
+      description: 'Create game-ready 3D characters with Indian aesthetics using Blender and ZBrush.',
+      duration: '6 Weeks',
       format: 'Live Online',
       nextBatch: 'Apr 2025',
-      skills: ['Unreal Engine 5', '3D Modeling', 'Texturing', 'Level Design'],
-      href: '/continuing-studies/game-environment-art',
+      skills: ['Anatomy & Base Meshes', 'Costume Sculpting', 'PBR Texturing', 'UE5 Integration'],
+      href: '/continuing-studies/3d-character-modeling',
       image: gameEnvironmentImage
     },
     {
-      title: 'Fashion Tech & Wearables',
-      description: 'Explore the intersection of fashion and technology through wearable design.',
-      duration: '3 Months',
+      title: 'Brand Identity and Packaging Design',
+      description: 'Develop complete brand systems and commercial packaging for Indian markets.',
+      duration: '6 Weeks',
       format: 'Live Online',
       nextBatch: 'May 2025',
-      skills: ['Arduino', 'Wearable Tech', 'Smart Textiles', 'IoT Design'],
-      href: '/continuing-studies/fashion-tech-wearables',
+      skills: ['Brand Strategy', 'Visual Identity', 'Packaging Design', 'Brand Guidelines'],
+      href: '/continuing-studies/brand-packaging',
+      image: lightingDesignImage
+    },
+    {
+      title: 'Digital Fashion Illustration and Tech Packs',
+      description: 'Master digital fashion design and create production-ready technical packages.',
+      duration: '6 Weeks',
+      format: 'Live Online',
+      nextBatch: 'Jun 2025',
+      skills: ['Digital Rendering', 'Technical Drawing', 'CLO3D', 'Sustainable Materials'],
+      href: '/continuing-studies/fashion-tech-packs',
       image: fashionTechImage
     },
     {
-      title: 'Motion Graphics & Visual Storytelling',
-      description: 'Advanced course in creating compelling visual narratives through motion design.',
-      duration: '3 Months',
+      title: 'Applied AI for Design Automation',
+      description: 'Implement AI tools to streamline design workflows and enhance creativity.',
+      duration: '6 Weeks',
       format: 'Live Online',
-      nextBatch: 'Mar 2025',
-      skills: ['After Effects', 'Cinema 4D', 'Storytelling', 'Brand Animation'],
-      href: '/continuing-studies/motion-graphics',
-      image: motionGraphicsImage
-    },
-    {
-      title: 'AI for Design Optimization',
-      description: 'Leverage artificial intelligence to enhance and optimize design workflows.',
-      duration: '3 Months',
-      format: 'Live Online',
-      nextBatch: 'Jun 2025',
-      skills: ['Machine Learning', 'Design Automation', 'AI Tools', 'Data Visualization'],
-      href: '/continuing-studies/ai-design-optimization',
+      nextBatch: 'Jul 2025',
+      skills: ['Prompt Engineering', 'AI-Assisted 3D', 'Legal Considerations', 'Custom AI'],
+      href: '/continuing-studies/ai-design-automation',
       image: aiOptimizationImage
     }
   ];
@@ -275,9 +265,9 @@ export const FutureSchoolPrograms: React.FC = () => {
                 <Clock className="h-4 w-4" />
                 3 Weeks Programs
               </TabsTrigger>
-              <TabsTrigger value="3-months" className="flex items-center gap-2">
+              <TabsTrigger value="6-weeks" className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
-                3 Months Programs
+                6 Weeks Programs
               </TabsTrigger>
               <TabsTrigger value="workshops" className="flex items-center gap-2">
                 <GraduationCap className="h-4 w-4" />
@@ -293,9 +283,9 @@ export const FutureSchoolPrograms: React.FC = () => {
               </div>
             </TabsContent>
 
-            <TabsContent value="3-months">
+            <TabsContent value="6-weeks">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {threeMonthPrograms.map((program, index) => (
+                {sixWeekPrograms.map((program, index) => (
                   <ProgramCard key={index} program={program} index={index} />
                 ))}
               </div>
