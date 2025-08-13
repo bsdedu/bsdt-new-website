@@ -9,7 +9,7 @@ const UXResearchSprint = () => {
     
     // Banner Section
     courseTitle: "UX Research Sprint",
-    heroImage: "/lovable-uploads/c83c596d-add8-4ab2-a74f-1dc8c849424e.png",
+    heroImage: "/lovable-uploads/c55a6120-6992-4ced-908c-4fddcf712bd2.png",
     duration: "3 Weeks",
     format: "Live + Recorded Sessions",
     
