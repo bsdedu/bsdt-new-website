@@ -9,7 +9,7 @@ const VRARPrototyping = () => {
     
     // Banner Section
     courseTitle: "VR/AR Prototyping with Unity & Unreal",
-    heroImage: "/lovable-uploads/c83c596d-add8-4ab2-a74f-1dc8c849424e.png",
+    heroImage: "/lovable-uploads/62066645-d54b-4f11-b55f-c29a82cb07c5.png",
     duration: "3 Weeks",
     format: "Live + Recorded Sessions",
     
