@@ -86,7 +86,7 @@ export const FutureSchoolPrograms: React.FC = () => {
       nextBatch: 'Feb 2025',
       skills: ['BIM Workflows', 'LOD Standards', 'Space Planning', 'VR Walkthroughs'],
       href: '/courses/bim-interiors-small-projects',
-      image: interiorDesignImage
+      image: '/lovable-uploads/a099e6b1-b172-4f43-a849-8bedf9a2d449.png'
     },
     {
       title: 'UI Design Systems and Figma Mastery',
