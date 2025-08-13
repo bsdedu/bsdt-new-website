@@ -9,7 +9,7 @@ const AppliedAIDesignAutomation = () => {
     
     // Banner Section
     courseTitle: "Applied AI for Design Automation",
-    heroImage: "/lovable-uploads/c83c596d-add8-4ab2-a74f-1dc8c849424e.png",
+    heroImage: "/lovable-uploads/cff48d66-ff3f-4995-8601-0591e0c8149a.png",
     duration: "6 Weeks",
     format: "Live + Recorded Sessions",
     
