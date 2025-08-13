@@ -50,8 +50,12 @@ import ParametricDesign from "./pages/courses/ParametricDesign";
 import MotionDesignEssentials from "./pages/courses/MotionDesignEssentials";
 import UXResearchSprint from "./pages/courses/UXResearchSprint";
 // Course Imports - 6 Week Programs
+import BIMInteriorsSmallProjects from "./pages/courses/BIMInteriorsSmallProjects";
+import UIDesignSystemsFigma from "./pages/courses/UIDesignSystemsFigma";
+import ThreeDCharacterModeling from "./pages/courses/3DCharacterModeling";
+import BrandIdentityPackaging from "./pages/courses/BrandIdentityPackaging";
+import DigitalFashionTechPacks from "./pages/courses/DigitalFashionTechPacks";
 import AppliedAIDesignAutomation from "./pages/courses/AppliedAIDesignAutomation";
-import SampleCourse from "./pages/courses/SampleCourse";
 import { useEffect } from "react";
 
 console.log("App component loaded");
@@ -135,8 +139,12 @@ const App = () => {
               <Route path="/courses/ux-research-sprint" element={<UXResearchSprint />} />
               
               {/* Course Routes - 6 Week Programs */}
+              <Route path="/courses/bim-interiors-small-projects" element={<BIMInteriorsSmallProjects />} />
+              <Route path="/courses/ui-design-systems-figma" element={<UIDesignSystemsFigma />} />
+              <Route path="/courses/3d-character-modeling" element={<ThreeDCharacterModeling />} />
+              <Route path="/courses/brand-identity-packaging" element={<BrandIdentityPackaging />} />
+              <Route path="/courses/digital-fashion-tech-packs" element={<DigitalFashionTechPacks />} />
               <Route path="/courses/applied-ai-design-automation" element={<AppliedAIDesignAutomation />} />
-              <Route path="/courses/sample-course" element={<SampleCourse />} />
               
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
