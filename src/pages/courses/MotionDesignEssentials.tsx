@@ -9,7 +9,7 @@ const MotionDesignEssentials = () => {
     
     // Banner Section
     courseTitle: "Motion Design Essentials",
-    heroImage: "/lovable-uploads/c83c596d-add8-4ab2-a74f-1dc8c849424e.png",
+    heroImage: "/lovable-uploads/b2c2c4f8-eaf1-4719-a0fa-8a988ef725d3.png",
     duration: "3 Weeks",
     format: "Live + Recorded Sessions",
     
