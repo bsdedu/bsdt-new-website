@@ -22,6 +22,7 @@ import aiOptimizationImage from '@/assets/programs/ai-optimization.jpg';
 import designCareerImage from '@/assets/programs/design-career.jpg';
 import aiCybersecurityImage from '@/assets/programs/ai-cybersecurity.jpg';
 import roboticsImage from '@/assets/programs/robotics.jpg';
+import bimInteriorsImage from '/lovable-uploads/a099e6b1-b172-4f43-a849-8bedf9a2d449.png';
 
 export const FutureSchoolPrograms: React.FC = () => {
   const threeWeekPrograms = [
@@ -86,7 +87,7 @@ export const FutureSchoolPrograms: React.FC = () => {
       nextBatch: 'Feb 2025',
       skills: ['BIM Workflows', 'LOD Standards', 'Space Planning', 'VR Walkthroughs'],
       href: '/courses/bim-interiors-small-projects',
-      image: '/lovable-uploads/a099e6b1-b172-4f43-a849-8bedf9a2d449.png'
+      image: bimInteriorsImage
     },
     {
       title: 'UI Design Systems and Figma Mastery',
