@@ -14,7 +14,7 @@ const GenerativeAICreativePrototyping = () => {
     format: "Live + Recorded Sessions",
     
     // Course Overview
-    courseIntro: "Master the art of AI-powered creative prototyping and transform your design workflow with cutting-edge generative AI tools. Learn to harness the power of AI for rapid ideation, concept development, and visual prototyping.",
+    courseIntro: "Learn to use AI tools like MidJourney, RunwayML, and ChatGPT to accelerate design workflows, create dynamic prototypes, and enhance creative ideation.",
     learningHighlights: [
       "Master advanced AI prompting techniques for creative output",
       "Generate high-quality visual concepts using Midjourney and DALL-E",
@@ -61,50 +61,51 @@ const GenerativeAICreativePrototyping = () => {
     curriculum: [
       {
         week: 1,
-        title: "AI Fundamentals & Prompt Engineering",
+        title: "AI Basics for Creatives",
         topics: [
-          "Introduction to generative AI and its creative applications",
-          "Understanding different AI models and their strengths",
-          "Master prompt engineering techniques for visual generation",
-          "Creating effective prompts for different design styles",
-          "Ethics and best practices in AI-generated content"
+          "Intro to diffusion models (Stable Diffusion, DALL·E)",
+          "Prompt engineering for designers",
+          "Ethical considerations in AI-generated art",
+          "Understanding AI model capabilities and limitations",
+          "Setting up your AI creative toolkit"
         ],
-        tools: ["ChatGPT", "Basic Prompting", "AI Ethics Guidelines"]
+        tools: ["Stable Diffusion", "DALL·E", "MidJourney", "ChatGPT"]
       },
       {
         week: 2,
-        title: "Advanced Visual AI Tools Mastery",
+        title: "Prototyping with AI",
         topics: [
-          "Midjourney advanced techniques and style consistency",
-          "DALL-E 3 for precise visual concept generation",
-          "Stable Diffusion workflows and customization",
-          "Image-to-image transformations and editing",
-          "Creating cohesive visual narratives with AI"
+          "AI-assisted storyboarding (RunwayML Gen-2)",
+          "Custom GPTs for design automation",
+          "Rapid iteration with AI feedback",
+          "Creating dynamic prototypes with AI",
+          "Workflow optimization techniques"
         ],
-        tools: ["Midjourney", "DALL-E 3", "Stable Diffusion", "Image Editing AI"]
+        tools: ["RunwayML Gen-2", "Custom GPTs", "MidJourney", "Figma"]
       },
       {
         week: 3,
-        title: "Creative Workflow Integration & Portfolio Development",
+        title: "Advanced AI Integration",
         topics: [
-          "Building efficient AI-powered design workflows",
-          "Integrating AI tools with traditional design software",
-          "Quality control and refinement techniques",
-          "Portfolio development strategies for AI creative work",
-          "Client presentation and commercial applications"
+          "AI + 3D tools (Blender, Spline)",
+          "Legal aspects (copyright, licensing)",
+          "Final project: AI-powered product concept",
+          "Professional presentation techniques",
+          "Building your AI design portfolio"
         ],
-        tools: ["Adobe Creative Suite", "Figma", "Portfolio Platforms", "Workflow Automation"]
+        tools: ["Blender", "Spline", "RunwayML", "Adobe Creative Suite"]
       }
     ],
     softwareTools: [
-      "Midjourney",
-      "DALL-E 3",
-      "Stable Diffusion",
+      "MidJourney",
+      "RunwayML",
       "ChatGPT",
-      "Adobe Photoshop",
-      "Adobe Illustrator",
+      "Stable Diffusion",
+      "DALL·E",
+      "Blender",
+      "Spline",
       "Figma",
-      "RunwayML"
+      "Adobe Creative Suite"
     ],
     
     // Target Audience
