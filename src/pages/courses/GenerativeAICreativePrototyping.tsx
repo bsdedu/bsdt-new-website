@@ -115,10 +115,7 @@ const GenerativeAICreativePrototyping = () => {
       audiences: [
         "Graphic Designers seeking to accelerate creative ideation",
         "UI/UX Designers wanting to prototype concepts faster",
-        "Marketing Professionals creating visual content at scale",
-        "Creative Directors exploring AI-powered workflows",
-        "Freelancers looking to increase productivity and output",
-        "Students preparing for AI-integrated design careers"
+        "Creative Directors exploring AI-powered workflows"
       ]
     },
     
