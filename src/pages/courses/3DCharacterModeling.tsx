@@ -9,7 +9,7 @@ const ThreeDCharacterModeling = () => {
     
     // Banner Section
     courseTitle: "3D Character Modeling for Games",
-    heroImage: "/lovable-uploads/8259c7b2-4ba9-4f25-b0db-d58a47f1f432.png",
+    heroImage: "/lovable-uploads/6bd71db9-4448-445b-8a9a-4d6c5a133ec7.png",
     duration: "6 Weeks",
     format: "Live + Recorded Sessions",
     
