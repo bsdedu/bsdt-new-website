@@ -35,9 +35,9 @@ const GenerativeAICreativePrototyping = () => {
     // Key Details
     details: {
       schedule: {
-        startDate: "February 15, 2025",
-        endDate: "March 8, 2025",
-        sessionTimings: "7:00 PM - 9:00 PM IST",
+        startDate: "October 6, 2025",
+        endDate: "October 24, 2025",
+        sessionTimings: "7:00 PM - 8:30 PM IST",
         format: "Live Online + Recorded Sessions"
       },
       pricing: {
