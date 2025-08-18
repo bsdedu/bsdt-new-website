@@ -41,8 +41,8 @@ const BIMInteriorsSmallProjects = () => {
         format: "Live Online + Recorded Sessions"
       },
       pricing: {
-        originalPrice: 22999,
-        discountedPrice: 15999,
+        originalPrice: 17999,
+        discountedPrice: 14999,
         currency: "₹",
         paymentOptions: [
           "Full payment discount available",
