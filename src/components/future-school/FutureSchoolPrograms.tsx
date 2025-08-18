@@ -107,7 +107,7 @@ export const FutureSchoolPrograms: React.FC = () => {
       nextBatch: 'Apr 2025',
       skills: ['Anatomy & Base Meshes', 'Costume Sculpting', 'PBR Texturing', 'UE5 Integration'],
       href: '/courses/3d-character-modeling',
-      image: gameEnvironmentImage
+      image: '/lovable-uploads/aca5675e-3451-4c80-898b-86837bebbd40.png'
     },
     {
       title: 'Brand Identity and Packaging Design',
