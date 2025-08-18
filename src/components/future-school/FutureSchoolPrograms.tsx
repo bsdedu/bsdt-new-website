@@ -34,7 +34,7 @@ export const FutureSchoolPrograms: React.FC = () => {
       nextBatch: 'Feb 2025',
       skills: ['Midjourney', 'DALL-E', 'Stable Diffusion', 'AI Prompting'],
       href: '/courses/generative-ai-creative-prototyping',
-      image: '/lovable-uploads/155b1f2e-965b-46e8-928f-c3d34129800f.png'
+      image: '/lovable-uploads/795fe519-55eb-4d58-93f1-cb2b4dbb38f8.png'
     },
     {
       title: 'VR/AR Prototyping with Unity & Unreal',
