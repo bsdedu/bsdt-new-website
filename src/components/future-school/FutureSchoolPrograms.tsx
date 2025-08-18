@@ -44,7 +44,7 @@ export const FutureSchoolPrograms: React.FC = () => {
       nextBatch: 'Mar 2025',
       skills: ['Unity 3D', 'Unreal Engine', 'VR Development', 'AR Frameworks'],
       href: '/courses/vr-ar-prototyping',
-      image: vrArImage
+      image: '/lovable-uploads/d193ede3-8300-4e5a-baf1-d4bf89f2b3a5.png'
     },
     {
       title: 'Parametric Design with Rhino & Grasshopper',
