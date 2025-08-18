@@ -35,14 +35,14 @@ const UIDesignSystemsFigma = () => {
     // Key Details
     details: {
       schedule: {
-        startDate: "March 15, 2025",
-        endDate: "April 26, 2025",
-        sessionTimings: "7:00 PM - 9:00 PM IST",
+        startDate: "October 6, 2025",
+        endDate: "November 14, 2025",
+        sessionTimings: "7:00 PM - 8:30 PM IST",
         format: "Live Online + Recorded Sessions"
       },
       pricing: {
-        originalPrice: 24999,
-        discountedPrice: 16999,
+        originalPrice: 17999,
+        discountedPrice: 14999,
         currency: "₹",
         paymentOptions: [
           "Full payment discount available",

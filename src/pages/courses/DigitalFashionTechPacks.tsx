@@ -35,14 +35,14 @@ const DigitalFashionTechPacks = () => {
     // Key Details
     details: {
       schedule: {
-        startDate: "June 15, 2025",
-        endDate: "July 27, 2025",
-        sessionTimings: "7:00 PM - 9:00 PM IST",
+        startDate: "October 6, 2025",
+        endDate: "November 14, 2025",
+        sessionTimings: "7:00 PM - 8:30 PM IST",
         format: "Live Online + Recorded Sessions"
       },
       pricing: {
-        originalPrice: 28999,
-        discountedPrice: 19999,
+        originalPrice: 17999,
+        discountedPrice: 14999,
         currency: "₹",
         paymentOptions: [
           "Full payment discount available",

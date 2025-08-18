@@ -35,19 +35,19 @@ const AppliedAIDesignAutomation = () => {
     // Key Details
     details: {
       schedule: {
-        startDate: "July 15, 2025",
-        endDate: "August 26, 2025",
-        sessionTimings: "7:00 PM - 9:00 PM IST",
-        format: "Live Online + Recorded"
+        startDate: "October 6, 2025",
+        endDate: "November 14, 2025",
+        sessionTimings: "7:00 PM - 8:30 PM IST",
+        format: "Live Online + Recorded Sessions"
       },
       pricing: {
-        originalPrice: 24999,
+        originalPrice: 17999,
         discountedPrice: 14999,
         currency: "₹",
         paymentOptions: [
-          "Full payment discount",
-          "EMI options available",
-          "Corporate discounts"
+          "Full payment discount available",
+          "EMI options with 0% interest",
+          "Student and group discounts"
         ]
       },
       certification: {

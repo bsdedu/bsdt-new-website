@@ -35,14 +35,14 @@ const BrandIdentityPackaging = () => {
     // Key Details
     details: {
       schedule: {
-        startDate: "May 15, 2025",
-        endDate: "June 26, 2025",
-        sessionTimings: "7:00 PM - 9:00 PM IST",
+        startDate: "October 6, 2025",
+        endDate: "November 14, 2025",
+        sessionTimings: "7:00 PM - 8:30 PM IST",
         format: "Live Online + Recorded Sessions"
       },
       pricing: {
-        originalPrice: 26999,
-        discountedPrice: 18999,
+        originalPrice: 17999,
+        discountedPrice: 14999,
         currency: "₹",
         paymentOptions: [
           "Full payment discount available",
