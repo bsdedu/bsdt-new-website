@@ -97,7 +97,7 @@ export const FutureSchoolPrograms: React.FC = () => {
       nextBatch: 'Mar 2025',
       skills: ['Atomic Design', 'Auto-Layout', 'Micro-interactions', 'Accessibility'],
       href: '/courses/ui-design-systems-figma',
-      image: uiUxDesignImage
+      image: '/lovable-uploads/1a38e9e2-9507-47f1-ac8c-6b27dd035d70.png'
     },
     {
       title: '3D Character Modeling for Games',
