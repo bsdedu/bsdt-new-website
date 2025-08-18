@@ -9,7 +9,7 @@ const BrandIdentityPackaging = () => {
     
     // Banner Section
     courseTitle: "Brand Identity and Packaging Design",
-    heroImage: "/lovable-uploads/c8fcc582-5196-4c26-8020-688dde63ac20.png",
+    heroImage: "/lovable-uploads/22a8a67b-c9dd-4192-a253-82fe5df59663.png",
     duration: "6 Weeks",
     format: "Live + Recorded Sessions",
     
