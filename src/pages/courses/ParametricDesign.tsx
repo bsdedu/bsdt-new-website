@@ -9,7 +9,7 @@ const ParametricDesign = () => {
     
     // Banner Section
     courseTitle: "Parametric Design with Rhino & Grasshopper",
-    heroImage: "/lovable-uploads/5655348f-74a4-4e19-950c-a0ddf5033990.png",
+    heroImage: "/lovable-uploads/40369392-d84e-4b29-aea9-4ee40eba5760.png",
     duration: "3 Weeks",
     format: "Live + Recorded Sessions",
     
