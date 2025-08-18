@@ -117,7 +117,7 @@ export const FutureSchoolPrograms: React.FC = () => {
       nextBatch: 'May 2025',
       skills: ['Brand Strategy', 'Visual Identity', 'Packaging Design', 'Brand Guidelines'],
       href: '/courses/brand-identity-packaging',
-      image: lightingDesignImage
+      image: '/lovable-uploads/52303123-8dab-4df3-a37c-1ce0d26ef9be.png'
     },
     {
       title: 'Digital Fashion Illustration and Tech Packs',
