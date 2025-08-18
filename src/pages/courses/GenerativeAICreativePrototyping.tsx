@@ -9,7 +9,7 @@ const GenerativeAICreativePrototyping = () => {
     
     // Banner Section
     courseTitle: "Generative AI for Creative Prototyping",
-    heroImage: "/lovable-uploads/54a69888-0e41-480f-9108-7ee87a9a6233.png",
+    heroImage: "/lovable-uploads/ea033f17-c4be-4859-aeef-08588a89ad64.png",
     duration: "3 Weeks",
     format: "Live + Recorded Sessions",
     
