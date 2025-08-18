@@ -127,7 +127,7 @@ export const FutureSchoolPrograms: React.FC = () => {
       nextBatch: 'Jun 2025',
       skills: ['Digital Rendering', 'Technical Drawing', 'CLO3D', 'Sustainable Materials'],
       href: '/courses/digital-fashion-tech-packs',
-      image: fashionTechImage
+      image: '/lovable-uploads/ccd9c039-96bb-40bc-b3ec-473fb0ef25a5.png'
     },
     {
       title: 'Applied AI for Design Automation',
