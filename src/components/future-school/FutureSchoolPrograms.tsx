@@ -74,7 +74,7 @@ export const FutureSchoolPrograms: React.FC = () => {
       nextBatch: 'Jun 2025',
       skills: ['User Interviews', 'Usability Testing', 'Data Analysis', 'Research Methods'],
       href: '/courses/ux-research-sprint',
-      image: uxResearchImage
+      image: '/lovable-uploads/ff7c749b-ea87-4e5c-bf16-6fd29cec9fce.png'
     }
   ];
 
