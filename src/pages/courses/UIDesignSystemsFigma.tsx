@@ -9,7 +9,7 @@ const UIDesignSystemsFigma = () => {
     
     // Banner Section
     courseTitle: "UI Design Systems and Figma Mastery",
-    heroImage: "/lovable-uploads/c3b32610-9bae-436f-b869-1ba4450f79ac.png",
+    heroImage: "/lovable-uploads/3d3be47f-75fb-4bff-9852-85fd1522f752.png",
     duration: "6 Weeks",
     format: "Live + Recorded Sessions",
     
