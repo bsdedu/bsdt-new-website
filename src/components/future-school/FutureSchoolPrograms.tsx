@@ -137,7 +137,7 @@ export const FutureSchoolPrograms: React.FC = () => {
       nextBatch: 'Jul 2025',
       skills: ['Prompt Engineering', 'AI-Assisted 3D', 'Legal Considerations', 'Custom AI'],
       href: '/courses/applied-ai-design-automation',
-      image: aiOptimizationImage
+      image: '/lovable-uploads/d4326cf8-dd03-41dd-a050-849044927c8a.png'
     }
   ];
 
