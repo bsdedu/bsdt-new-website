@@ -54,7 +54,7 @@ export const FutureSchoolPrograms: React.FC = () => {
       nextBatch: 'Apr 2025',
       skills: ['Rhino 3D', 'Grasshopper', 'Parametric Modeling', 'Algorithmic Design'],
       href: '/courses/parametric-design',
-      image: parametricDesignImage
+      image: '/lovable-uploads/c78a5d5a-8108-4ba0-920c-d04b3d3ace91.png'
     },
     {
       title: 'Motion Design Essentials',
