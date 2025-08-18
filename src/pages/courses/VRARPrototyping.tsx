@@ -35,13 +35,13 @@ const VRARPrototyping = () => {
     // Key Details
     details: {
       schedule: {
-        startDate: "March 15, 2025",
-        endDate: "April 5, 2025",
-        sessionTimings: "7:00 PM - 9:00 PM IST",
+        startDate: "October 6, 2025",
+        endDate: "October 24, 2025",
+        sessionTimings: "7:00 PM - 8:30 PM IST",
         format: "Live Online + Recorded Sessions"
       },
       pricing: {
-        originalPrice: 13999,
+        originalPrice: 9999,
         discountedPrice: 7999,
         currency: "₹",
         paymentOptions: [

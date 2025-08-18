@@ -35,14 +35,14 @@ const MotionDesignEssentials = () => {
     // Key Details
     details: {
       schedule: {
-        startDate: "May 15, 2025",
-        endDate: "June 5, 2025",
-        sessionTimings: "7:00 PM - 9:00 PM IST",
+        startDate: "October 6, 2025",
+        endDate: "October 24, 2025",
+        sessionTimings: "7:00 PM - 8:30 PM IST",
         format: "Live Online + Recorded Sessions"
       },
       pricing: {
-        originalPrice: 11999,
-        discountedPrice: 6999,
+        originalPrice: 9999,
+        discountedPrice: 7999,
         currency: "₹",
         paymentOptions: [
           "Full payment discount available",
