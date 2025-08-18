@@ -41,8 +41,8 @@ const GenerativeAICreativePrototyping = () => {
         format: "Live Online + Recorded Sessions"
       },
       pricing: {
-        originalPrice: 12999,
-        discountedPrice: 6999,
+        originalPrice: 9999,
+        discountedPrice: 7999,
         currency: "₹",
         paymentOptions: [
           "Full payment discount available",
