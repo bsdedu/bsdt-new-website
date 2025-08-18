@@ -64,7 +64,7 @@ export const FutureSchoolPrograms: React.FC = () => {
       nextBatch: 'May 2025',
       skills: ['After Effects', 'Cinema 4D', 'Motion Graphics', 'Animation Principles'],
       href: '/courses/motion-design-essentials',
-      image: motionDesignImage
+      image: '/lovable-uploads/bcae81f7-dc14-4ae7-8802-362e21c8b7e3.png'
     },
     {
       title: 'UX Research Sprint',
