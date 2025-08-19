@@ -93,7 +93,16 @@ const diplomaPrograms: Program[] = [
     isFeatured: true,
     duration: "8 months",
     href: "/academics/professional-diploma-in-interior-design"
-  }, 
+  },
+  {
+    icon: <Building2 className="w-6 h-6 text-bsd-orange" />,
+    title: "Master Diploma in Interior Design",
+    description: "An advanced master-level diploma program for comprehensive interior design expertise, covering advanced space planning, project management, and design leadership. Available in Online & Offline modes.",
+    color: "from-bsd-orange/20 to-bsd-orange/5",
+    isFeatured: true,
+    duration: "12 months",
+    href: "/academics/master-diploma-in-interior-design"
+  },
   {
     icon: <Monitor className="w-6 h-6 text-bsd-orange" />,
     title: "Professional Diploma in Visual Communication + UI & UX",
