@@ -3,6 +3,7 @@ import { RevealSection } from '@/components/ui-elements/RevealSection';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Clock, Calendar, Award, Building2 } from 'lucide-react';
+import masterResidentialHero from '@/assets/master-residential-design-hero.jpg';
 
 export const HeroSection: React.FC = () => {
   return (
@@ -17,17 +18,17 @@ export const HeroSection: React.FC = () => {
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-bsd-gray leading-tight">
                 Master Diploma in <br />
-                <span className="text-bsd-orange">Interior Design</span>
+                <span className="text-bsd-orange">Advanced Residential Design</span>
               </h1>
               
               <p className="text-lg text-foreground/70 max-w-xl">
-                An advanced master-level program that develops comprehensive expertise in interior design, combining advanced space planning, project management, design leadership, and cutting-edge visualization technologies for creating innovative interior environments.
+                An advanced 18-month program that develops comprehensive expertise in residential design, combining advanced space planning, construction detailing, building systems, and project management for creating innovative residential environments and housing solutions.
               </p>
               
               <div className="flex flex-wrap gap-6 py-4">
                 <div className="flex items-center gap-2">
                   <Clock className="w-5 h-5 text-bsd-orange" />
-                  <span className="text-sm font-medium">12 months</span>
+                  <span className="text-sm font-medium">18 months</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Calendar className="w-5 h-5 text-bsd-orange" />
@@ -58,8 +59,8 @@ export const HeroSection: React.FC = () => {
               
               <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/20">
                 <img 
-                  src="/lovable-uploads/interior-design-hero.jpg" 
-                  alt="Master Interior Design Program" 
+                  src={masterResidentialHero} 
+                  alt="Master Diploma in Advanced Residential Design Program" 
                   className="w-full h-64 object-cover rounded-xl"
                 />
                 <div className="flex justify-center -mt-6">

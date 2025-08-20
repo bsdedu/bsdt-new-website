@@ -15,12 +15,12 @@ const DiplomaProgramMasterInteriorDesign: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Master Diploma in Interior Design | BSD Design School</title>
+        <title>Master Diploma in Advanced Residential Design | BSD Design School</title>
         <meta 
           name="description" 
-          content="An advanced master-level diploma program in interior design that provides comprehensive expertise in space planning, project management, design leadership, and advanced visualization skills for creating innovative interior spaces." 
+          content="An advanced 18-month master-level diploma program in residential design that provides comprehensive expertise in space planning, construction detailing, building systems, and project management for creating innovative residential environments and housing solutions." 
         />
-        <meta name="keywords" content="master diploma interior design, advanced interior design, space planning, project management, design leadership, visualization, interior architecture, BSD Design School" />
+        <meta name="keywords" content="master diploma residential design, advanced residential design, space planning, construction detailing, building systems, project management, residential architecture, housing design, BSD Design School" />
         <link rel="canonical" href="/academics/master-diploma-in-interior-design" />
       </Helmet>
       
