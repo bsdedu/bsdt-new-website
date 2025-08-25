@@ -24,8 +24,8 @@ export const BeyondCurriculumOverview: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div className="relative rounded-2xl overflow-hidden h-[500px]">
               <img 
-                src="/lovable-uploads/66c6a931-8ba1-4c13-8f59-bcb925328891.png" 
-                alt="Beyond Curriculum Activities" 
+                src="/lovable-uploads/713b1994-e654-4d9f-85e6-7980a9fdea3c.png" 
+                alt="Students collaborating in skill development activities" 
                 className="w-full h-full object-cover" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
