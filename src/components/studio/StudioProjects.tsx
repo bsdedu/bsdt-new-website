@@ -43,7 +43,7 @@ export const StudioProjects: React.FC = () => {
       title: "Mr. Shankar Prasad Residence",
       client: "Mr. Shankar Prasad",
       description: "Complete architectural design and interior renovation of a family residence, incorporating traditional elements with contemporary living requirements.",
-      image: "/lovable-uploads/cfb45146-ec9d-434c-9b60-ee146c328146.png",
+      image: "/lovable-uploads/cac01043-f439-47a5-b149-4f3671523b24.png",
       program: "Architecture & Interior Design"
     },
     {
