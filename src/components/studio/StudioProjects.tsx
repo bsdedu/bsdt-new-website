@@ -64,7 +64,7 @@ export const StudioProjects: React.FC = () => {
       title: "Project 5",
       client: "Confidential Client",
       description: "Innovative residential design project showcasing cutting-edge architectural solutions and premium interior design concepts for modern living.",
-      image: "/lovable-uploads/c9727b90-962e-4b3e-be56-d9c05c7ddcbb.png",
+      image: "/lovable-uploads/cdd68fbe-7528-442e-9924-1870ab349cd6.png",
       program: "Architecture & Interior Design"
     },
     {
