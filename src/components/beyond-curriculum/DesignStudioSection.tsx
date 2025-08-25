@@ -83,8 +83,8 @@ export const DesignStudioSection: React.FC = () => {
 
             <div className="relative rounded-2xl overflow-hidden h-[600px]">
               <img 
-                src="/lovable-uploads/c1b6a8e1-981e-4ce5-b0b1-cab0978b0556.png" 
-                alt="Design Studio Session" 
+                src="/lovable-uploads/e155e509-59d8-4fcc-99bd-921efe113141.png" 
+                alt="Design Studio Collaborative Session" 
                 className="w-full h-full object-cover" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
