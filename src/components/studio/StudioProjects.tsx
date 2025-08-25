@@ -68,7 +68,7 @@ export const StudioProjects: React.FC = () => {
       program: "Architecture & Interior Design"
     },
     {
-      title: "Project 6",
+      title: "Mr. Arvind Sharma Residence",
       client: "Confidential Client",
       description: "Architectural and interior design project featuring sustainable building practices and contemporary design aesthetics for residential spaces.",
       image: "/lovable-uploads/c1dbf83d-e91f-4476-88aa-db5a2b5b8eb9.png",
