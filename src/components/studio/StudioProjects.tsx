@@ -33,46 +33,46 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, client, description, i
 export const StudioProjects: React.FC = () => {
   const projects: ProjectCardProps[] = [
     {
-      title: "Urban Renewal Campaign",
-      client: "Bangalore Municipal Corporation",
-      description: "A comprehensive visual identity and awareness campaign for urban renewal initiatives in Bangalore, focusing on sustainability and community engagement.",
+      title: "Le Roma",
+      client: "Private Residential Client",
+      description: "Contemporary residential villa design featuring modern architectural elements with luxurious interior spaces that blend functionality with aesthetic appeal.",
       image: "/lovable-uploads/c72be9c4-87fc-415a-a4fb-8e3db30e45cf.png",
-      program: "Graphic Design"
+      program: "Architecture & Interior Design"
     },
     {
-      title: "Tech Innovation Center",
-      client: "Infosys Foundation",
-      description: "Interior design concept and implementation for a technology innovation center that fosters collaboration and creativity for tech startups.",
+      title: "Mr. Shankar Prasad Residence",
+      client: "Mr. Shankar Prasad",
+      description: "Complete architectural design and interior renovation of a family residence, incorporating traditional elements with contemporary living requirements.",
       image: "/lovable-uploads/cfb45146-ec9d-434c-9b60-ee146c328146.png",
-      program: "Interior Design"
+      program: "Architecture & Interior Design"
     },
     {
-      title: "Heritage Conservation AR Experience",
-      client: "Karnataka Tourism",
-      description: "An interactive augmented reality experience showcasing Karnataka's historical monuments, allowing virtual exploration and educational content delivery.",
+      title: "Ranipet Residence",
+      client: "Private Family",
+      description: "Residential architectural project featuring sustainable design principles and modern interior spaces tailored for multi-generational living.",
       image: "/lovable-uploads/b3d5489b-605a-4870-b280-525a1b456ebb.png",
-      program: "Animation & Game Design"
+      program: "Architecture & Interior Design"
     },
     {
-      title: "Sustainable Housing Prototype",
-      client: "Green Living Foundation",
-      description: "Architectural design for modular, sustainable housing units that utilize local materials and passive cooling techniques for affordable urban housing.",
+      title: "Kodai Residence",
+      client: "Private Client - Kodaikanal",
+      description: "Hill station residence design that harmonizes with the natural landscape while providing contemporary amenities and sophisticated interior design.",
       image: "/lovable-uploads/4c8b3b7b-db32-48d5-af5a-b34c4f832998.png",
-      program: "Architectural Design"
+      program: "Architecture & Interior Design"
     },
     {
-      title: "E-Commerce User Experience Redesign",
-      client: "Local Crafts Marketplace",
-      description: "Complete UX/UI redesign of an e-commerce platform dedicated to local artisans, resulting in 40% increase in user engagement and sales.",
+      title: "Project 5",
+      client: "Confidential Client",
+      description: "Innovative residential design project showcasing cutting-edge architectural solutions and premium interior design concepts for modern living.",
       image: "/lovable-uploads/c9727b90-962e-4b3e-be56-d9c05c7ddcbb.png",
-      program: "UI/UX Design"
+      program: "Architecture & Interior Design"
     },
     {
-      title: "Healthcare Monitoring Application",
-      client: "Bangalore Medical Association",
-      description: "Mobile application development for patient monitoring and healthcare management, with data analytics dashboard for healthcare providers.",
+      title: "Project 6",
+      client: "Confidential Client",
+      description: "Architectural and interior design project featuring sustainable building practices and contemporary design aesthetics for residential spaces.",
       image: "/lovable-uploads/c0c5b503-eeb4-4331-ae7e-38ef5d9f2675.png",
-      program: "Computer Science"
+      program: "Architecture & Interior Design"
     }
   ];
 
@@ -86,7 +86,7 @@ export const StudioProjects: React.FC = () => {
               Real Projects, Real Impact
             </h2>
             <p className="mt-4 text-foreground/70">
-              Our students work on actual client projects that make a difference in the industry and community, building professional portfolios before graduation.
+              Studio BSD - Design Studio Architecture & Interior Practice showcases real residential and commercial projects, delivering professional architectural and interior design solutions that impact communities and create lasting value.
             </p>
           </div>
         </RevealSection>
