@@ -36,7 +36,7 @@ export const StudioProjects: React.FC = () => {
       title: "Le Roma",
       client: "Private Residential Client",
       description: "Contemporary residential villa design featuring modern architectural elements with luxurious interior spaces that blend functionality with aesthetic appeal.",
-      image: "/lovable-uploads/c72be9c4-87fc-415a-a4fb-8e3db30e45cf.png",
+      image: "/lovable-uploads/918ba3b8-127b-49f0-b63b-6ef8a1ab1a92.png",
       program: "Architecture & Interior Design"
     },
     {
