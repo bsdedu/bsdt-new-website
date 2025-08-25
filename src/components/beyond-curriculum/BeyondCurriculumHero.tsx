@@ -38,7 +38,7 @@ export const BeyondCurriculumHero: React.FC = () => {
           <RevealSection direction="left">
             <div className="relative rounded-2xl overflow-hidden shadow-lg h-[500px]">
               <img 
-                src="/lovable-uploads/713b1994-e654-4d9f-85e6-7980a9fdea3c.png" 
+                src="/lovable-uploads/6d8d88e3-fefb-4dec-bb83-381239d87851.png" 
                 alt="Students engaged in beyond curriculum activities" 
                 className="w-full h-full object-cover" 
               />
