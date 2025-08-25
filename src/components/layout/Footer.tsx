@@ -141,11 +141,24 @@ No.4/3, Opposite B.D.S Nagar, Devanna Compound, K.Narayanapura, Kothanur Post, B
               Visit our campus to experience our world-class facilities and vibrant learning environment.
             </p>
             <div className="aspect-video rounded-lg overflow-hidden h-58">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.531860116302!2d77.64088777532129!3d13.065443187258602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae19fca05a7085%3A0x32d325d7452e1509!2sBangalore%20School%20of%20Design%20%26%20Technology!5e0!3m2!1sen!2sin!4v1741951831100!5m2!1sen!2sin" width="100%" height="100%" style={{
-              border: 0
-              }} allowFullScreen loading="lazy" referrerPolicy="no-referrer" title="BSDT Campus Map" className="w-full h-full" sandbox="allow-same-origin allow-scripts allow-popups allow-top-navigation" />
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.5318599157263!2d77.6434627!3d13.065443199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae19fca05a7085%3A0x32d325d7452e1509!2sBangalore%20School%20of%20Design%20%26%20Technology!5e0!3m2!1sen!2sin!4v1756108168210!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="BSDT Campus Map"
+                className="w-full h-full"
+              />
             </div>
-            <a href="https://goo.gl/maps/HEWypUEL8RdSy61u6" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm font-medium text-bsd-orange hover:text-bsd-orange/80 transition-colors">
+            <a
+              href="https://goo.gl/maps/HEWypUEL8RdSy61u6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-sm font-medium text-bsd-orange hover:text-bsd-orange/80 transition-colors"
+            >
               <span className="border-b border-current">Get Directions</span>
             </a>
           </div>
