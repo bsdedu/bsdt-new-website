@@ -114,7 +114,7 @@ export const StudioFacilities: React.FC = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                 <div className="relative rounded-2xl overflow-hidden h-[400px]">
                   <img 
-                    src="/lovable-uploads/741db2ef-80d9-44dd-b7f0-cb1942734763.png" 
+                    src="/lovable-uploads/dce99f67-73af-4190-8a19-c901c906a8da.png" 
                     alt="Maker Space at BSD" 
                     className="w-full h-full object-cover" 
                   />
