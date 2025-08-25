@@ -61,7 +61,7 @@ export const StudioProjects: React.FC = () => {
       program: "Architecture & Interior Design"
     },
     {
-      title: "Project 5",
+      title: "Mr. Kushal Residence",
       client: "Confidential Client",
       description: "Innovative residential design project showcasing cutting-edge architectural solutions and premium interior design concepts for modern living.",
       image: "/lovable-uploads/cdd68fbe-7528-442e-9924-1870ab349cd6.png",
