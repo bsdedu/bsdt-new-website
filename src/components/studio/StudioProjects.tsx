@@ -50,7 +50,7 @@ export const StudioProjects: React.FC = () => {
       title: "Heritage Conservation AR Experience",
       client: "Karnataka Tourism",
       description: "An interactive augmented reality experience showcasing Karnataka's historical monuments, allowing virtual exploration and educational content delivery.",
-      image: "/lovable-uploads/23609cd5-2cbf-4e98-8211-0b953a25a5c3.png",
+      image: "/lovable-uploads/b3d5489b-605a-4870-b280-525a1b456ebb.png",
       program: "Animation & Game Design"
     },
     {
