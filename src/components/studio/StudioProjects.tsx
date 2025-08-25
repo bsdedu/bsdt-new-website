@@ -57,7 +57,7 @@ export const StudioProjects: React.FC = () => {
       title: "Kodai Residence",
       client: "Private Client - Kodaikanal",
       description: "Hill station residence design that harmonizes with the natural landscape while providing contemporary amenities and sophisticated interior design.",
-      image: "/lovable-uploads/4c8b3b7b-db32-48d5-af5a-b34c4f832998.png",
+      image: "/lovable-uploads/7eb832e9-ae86-4bce-88ef-63ca26082c4c.png",
       program: "Architecture & Interior Design"
     },
     {
