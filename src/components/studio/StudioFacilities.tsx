@@ -34,8 +34,8 @@ export const StudioFacilities: React.FC = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                 <div className="relative rounded-2xl overflow-hidden h-[400px]">
                   <img 
-                    src="/lovable-uploads/a9c8ce1e-1529-470a-8999-acff7698cf4f.png" 
-                    alt="Design Studio at BSD" 
+                    src="/lovable-uploads/10ba06b9-0a9d-4f58-8392-2ed8031273e0.png" 
+                    alt="Professional Design Studio office culture at BSD" 
                     className="w-full h-full object-cover" 
                   />
                 </div>
