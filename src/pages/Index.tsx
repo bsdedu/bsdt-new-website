@@ -94,8 +94,7 @@ const Index = () => {
           <UpcomingEventsSection />
           <GallerySection />
           <CollaborationsSection />
-          <EnquiryFormSection />
-          <ContactSection />
+          <EnquiryFormSection /> 
           <FloatingEnquiryForm />
         </main>
         

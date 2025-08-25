@@ -40,12 +40,23 @@ export const FloatingEnquiryForm = () => {
     setIsExpanded(false);
   };
 
+  const loadNoPaperFormsScript = () => {
+    const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.async = true;
+    script.src = "https://widgets.in5.nopaperforms.com/emwgts.js";
+    document.body.appendChild(script);
+  };
+
   return (
     <>
       {/* Trigger button */}
       <div className="fixed right-0 top-1/2 -translate-y-1/2 z-[99999]">
         <button
-          onClick={() => setIsExpanded(true)}
+          onClick={() => {
+            setIsExpanded(true);
+            loadNoPaperFormsScript();
+          }}
           className={cn(
             "bg-bsd-orange text-white px-2 py-4 rounded-l-lg writing-vertical whitespace-nowrap text-sm sticky top-0",
             "hover:bg-bsd-orange/90 transition-colors flex items-center gap-1"
@@ -67,32 +78,12 @@ export const FloatingEnquiryForm = () => {
             >
               <X className="w-5 h-5" />
             </button>
-            <h3 className="text-lg font-semibold text-bsd-gray mb-4">Quick Enquiry</h3>
-            <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-                <FormItem>
-                  <FormControl>
-                    <Input placeholder="Your Name" {...form.register("name")} />
-                  </FormControl>
-                </FormItem>
-
-                <FormItem>
-                  <FormControl>
-                    <Input type="email" placeholder="Email Address" {...form.register("email")} />
-                  </FormControl>
-                </FormItem>
-
-                <FormItem>
-                  <FormControl>
-                    <Input placeholder="Phone Number" {...form.register("phone")} />
-                  </FormControl>
-                </FormItem>
-
-                <Button type="submit" className="w-full bg-bsd-orange hover:bg-bsd-orange/90">
-                  Submit Enquiry
-                </Button>
-              </form>
-            </Form>
+            {/*<h3 className="text-lg font-semibold text-bsd-gray mb-4">Quick Enquiry</h3> */}
+            <div
+              className="npf_wgts"
+              data-height="400px"
+              data-w="14fe90258f1849328c9ebb3adc9782bb"
+            ></div>
           </div>
         </div>
       )}

@@ -8,6 +8,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import { FloatingEnquiryForm } from "./components/ui-elements/FloatingEnquiryForm";
 import { FloatingCallCTA } from "./components/ui-elements/FloatingCallCTA";
 import { FloatingWhatsAppCTA } from "./components/ui-elements/FloatingWhatsAppCTA";
+import { FloatingScrollToTop } from "./components/ui-elements/FloatingScrollToTop";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import AboutBSDT from "./pages/AboutBSDT";
@@ -154,6 +155,7 @@ const App = () => {
             <FloatingEnquiryForm />
             <FloatingCallCTA />
             <FloatingWhatsAppCTA />
+            <FloatingScrollToTop/>
           </BrowserRouter>
         </TooltipProvider>
       </HelmetProvider>

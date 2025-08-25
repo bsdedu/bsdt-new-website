@@ -14,10 +14,23 @@ export const EnquiryFormSection: React.FC<{ programSpecific?: boolean }> = ({ pr
   
   // Check if form was previously submitted
   useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.async = true;
+    script.src = 'https://widgets.in5.nopaperforms.com/emwgts.js';
+    document.body.appendChild(script);
+    
     const hasSubmitted = localStorage.getItem('enquiryFormSubmitted') === 'true';
     if (hasSubmitted) {
       setFormSubmitted(true);
     }
+
+    return () => {
+      const scripts = document.querySelectorAll('script[src="https://widgets.in5.nopaperforms.com/emwgts.js"]');
+      scripts.forEach(script => {
+        document.body.removeChild(script);
+      });
+    };
   }, []);
   
   const handleFormSubmitSuccess = () => {
@@ -55,23 +68,8 @@ export const EnquiryFormSection: React.FC<{ programSpecific?: boolean }> = ({ pr
           {/* Enquiry Form */}
           <RevealSection direction="left" className="lg:col-span-3">
            
-            <Card className="bg-white shadow-md border-0">
-              <div className="p-6 md:p-8">
-                <h3 className="text-xl font-semibold mb-6 text-bsd-gray flex items-center">
-                  <BookOpen className="w-5 h-5 mr-2 text-bsd-orange" />
-                  Enquire Now & Get Brochure
-                </h3>
-                
-                {formSubmitted ? (
-                  <EnquirySuccess />
-                ) : (
-                  <EnquiryForm 
-                    programSpecific={programSpecific} 
-                    onSubmitSuccess={handleFormSubmitSuccess} 
-                  />
-                )}
-              </div>
-            </Card>
+          <div className="npf_wgts" data-height="500px" data-w="14fe90258f1849328c9ebb3adc9782bb"></div>
+           
           </RevealSection>
         </div>
       </div>
