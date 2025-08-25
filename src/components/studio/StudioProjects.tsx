@@ -50,7 +50,7 @@ export const StudioProjects: React.FC = () => {
       title: "Ranipet Residence",
       client: "Private Family",
       description: "Residential architectural project featuring sustainable design principles and modern interior spaces tailored for multi-generational living.",
-      image: "/lovable-uploads/b3d5489b-605a-4870-b280-525a1b456ebb.png",
+      image: "/lovable-uploads/f123a461-0061-4939-b7ba-0d09d696b98c.png",
       program: "Architecture & Interior Design"
     },
     {
