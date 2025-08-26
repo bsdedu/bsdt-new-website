@@ -3,7 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom"; // Updated import
-import { HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 import { FloatingEnquiryForm } from "./components/ui-elements/FloatingEnquiryForm";
 import { FloatingCallCTA } from "./components/ui-elements/FloatingCallCTA";
 import { FloatingWhatsAppCTA } from "./components/ui-elements/FloatingWhatsAppCTA";
@@ -87,6 +87,65 @@ const App = () => {
     return (
     <QueryClientProvider client={queryClient}>
       <HelmetProvider>
+        <Helmet>
+          {/* Google Analytics Tracking Code */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+          <script>
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'YOUR_TRACKING_ID');
+            `}
+          </script>
+
+          {/* Google Analytics Tracking Code */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-190728701-1"></script>
+          <script>
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'UA-190728701-1');
+            `}
+          </script>
+
+          {/* Google Analytics Tracking Code */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-VGCYQEDD1H"></script>
+          <script>
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-VGCYQEDD1H');
+            `}
+          </script>
+
+          {/* Slick Carousel */}
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+
+          {/* Google Ads Tracking Code */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=AW-818483430"></script>
+          <script>
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-818483430');
+            `}
+          </script>
+
+          {/* Google Tag Manager */}
+          <script>
+            {`
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-KFM8NXD');
+            `}
+          </script>
+        </Helmet>
         <TooltipProvider>
           <Toaster />
           <Sonner />
