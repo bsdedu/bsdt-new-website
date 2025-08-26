@@ -1,9 +1,8 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"; // Updated import
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom"; // Updated import
 import { HelmetProvider } from 'react-helmet-async';
 import { FloatingEnquiryForm } from "./components/ui-elements/FloatingEnquiryForm";
 import { FloatingCallCTA } from "./components/ui-elements/FloatingCallCTA";
@@ -64,6 +63,16 @@ console.log("App component loaded");
 
 const queryClient = new QueryClient();
 
+const ScrollToTop: React.FC = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
 const App = () => {
   useEffect(() => {
     console.log("App component mounted");
@@ -82,6 +91,7 @@ const App = () => {
           <Toaster />
           <Sonner />
           <BrowserRouter>
+            <ScrollToTop />
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/about" element={<AboutBSDT />} />
