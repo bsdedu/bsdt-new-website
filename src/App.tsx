@@ -58,6 +58,7 @@ import BrandIdentityPackaging from "./pages/courses/BrandIdentityPackaging";
 import DigitalFashionTechPacks from "./pages/courses/DigitalFashionTechPacks";
 import AppliedAIDesignAutomation from "./pages/courses/AppliedAIDesignAutomation";
 import { useEffect } from "react";
+import Contact from "./pages/Contact";
 
 console.log("App component loaded");
 
@@ -217,6 +218,7 @@ const App = () => {
               <Route path="/courses/brand-identity-packaging" element={<BrandIdentityPackaging />} />
               <Route path="/courses/digital-fashion-tech-packs" element={<DigitalFashionTechPacks />} />
               <Route path="/courses/applied-ai-design-automation" element={<AppliedAIDesignAutomation />} />
+              <Route path="/contact" element={<Contact />} />
               
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />

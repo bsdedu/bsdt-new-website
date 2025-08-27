@@ -22,7 +22,7 @@ export const FloatingScrollToTop: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <div className={cn("fixed bottom-8 z-[99999]", isMobile ? "right-4" : "right-5")} >
+    <div className={cn("fixed bottom-8 z-[99999]", isMobile ? "right-4" : "right-8")} >
       <button
         onClick={scrollToTop}
         className={cn(
