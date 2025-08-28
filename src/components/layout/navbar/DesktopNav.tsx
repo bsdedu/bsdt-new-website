@@ -46,10 +46,11 @@ export const DesktopNav: React.FC<DesktopNavProps> = ({ navStructure }) => {
           Schedule Visit
         </AnimatedButton>
         <AnimatedButton 
-          size="sm" 
-          className="bg-bsd-orange text-white hover:bg-bsd-orange/90"
-          onClick={() => setIsModalOpen(true)}
-        >
+           size="sm" 
+           className="bg-bsd-orange text-white hover:bg-bsd-orange/90"
+           href="https://apply.bsd.edu.in/"
+           target="_blank"
+           rel="noopener noreferrer">
           Apply Now
         </AnimatedButton>
       </div>

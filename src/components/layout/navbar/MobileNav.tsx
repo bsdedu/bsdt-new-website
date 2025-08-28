@@ -54,10 +54,9 @@ export const MobileNav: React.FC<MobileNavProps> = ({
           <li className="pt-3">
             <AnimatedButton 
               className="w-full bg-bsd-orange text-white hover:bg-bsd-orange/90"
-              onClick={() => {
-                setIsModalOpen(true);
-                setIsMenuOpen(false);
-              }}
+              href="https://apply.bsd.edu.in/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Apply Now
             </AnimatedButton>
