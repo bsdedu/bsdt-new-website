@@ -36,15 +36,28 @@ export const MobileNavItem: React.FC<MobileNavItemProps> = ({ item, onItemClick 
   };
 
   if (item.type === 'link') {
+    const isExternal = /^https?:\/\//.test(item.href);
     return (
       <li>
-        <a 
-          href={item.href} 
-          className="block py-2 text-bsd-gray hover:text-bsd-orange transition-colors" 
-          onClick={onItemClick}
-        >
-          {item.name}
-        </a>
+        {isExternal ? (
+          <a 
+            href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block py-2 text-bsd-gray hover:text-bsd-orange transition-colors" 
+            onClick={onItemClick}
+          >
+            {item.name}
+          </a>
+        ) : (
+          <Link
+            to={item.href}
+            className="block py-2 text-bsd-gray hover:text-bsd-orange transition-colors"
+            onClick={onItemClick}
+          >
+            {item.name}
+          </Link>
+        )}
       </li>
     );
   } 

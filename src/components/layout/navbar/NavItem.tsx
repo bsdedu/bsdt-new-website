@@ -29,19 +29,36 @@ type NavItemProps = {
 
 export const NavItem: React.FC<NavItemProps> = ({ item }) => {
   if (item.type === 'link') {
+    const isExternal = /^https?:\/\//.test(item.href);
     return (
       <NavigationMenuItem>
-        <a 
-          href={item.href} 
-          className={cn(
-            "relative text-sm text-bsd-gray hover:text-bsd-orange transition-colors",
-            "after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-bsd-orange after:transition-all after:duration-300",
-            "hover:after:w-full",
-            item.name === 'Futr School' ? 'font-bold' : 'font-medium'
-          )}
-        >
-          {item.name}
-        </a>
+        {isExternal ? (
+          <a
+            href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={cn(
+              "relative text-sm text-bsd-gray hover:text-bsd-orange transition-colors",
+              "after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-bsd-orange after:transition-all after:duration-300",
+              "hover:after:w-full",
+              item.name === 'Futr School' ? 'font-bold' : 'font-medium'
+            )}
+          >
+            {item.name}
+          </a>
+        ) : (
+          <Link
+            to={item.href}
+            className={cn(
+              "relative text-sm text-bsd-gray hover:text-bsd-orange transition-colors",
+              "after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-bsd-orange after:transition-all after:duration-300",
+              "hover:after:w-full",
+              item.name === 'Futr School' ? 'font-bold' : 'font-medium'
+            )}
+          >
+            {item.name}
+          </Link>
+        )}
       </NavigationMenuItem>
     );
   } 
