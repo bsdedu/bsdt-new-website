@@ -53,7 +53,7 @@ export const navStructure: NavStructure[] = [
   },
   {
     name: 'Futr School',
-    href: '/future-school',
+    href: 'https://futrschool.edmingle.com/',
     type: 'link'
   },
   {
