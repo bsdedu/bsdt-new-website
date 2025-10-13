@@ -82,12 +82,7 @@ export const UpcomingEventsSection: React.FC = () => {
                 
                 <CardContent className="p-6">
                   <p className="text-bsd-gray/80 mb-6">{event.description}</p>
-                  <div className="flex justify-between items-center">
-                    <a href={event.registerLink} target="_blank" rel="noopener noreferrer">
-                      <AnimatedButton>
-                        Register Now
-                      </AnimatedButton>
-                    </a>
+                  <div className="flex justify-center">
                     <Button variant="ghost" className="text-bsd-gray hover:text-bsd-orange">
                       Learn More
                     </Button>
