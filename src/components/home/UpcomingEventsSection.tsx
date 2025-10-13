@@ -81,12 +81,7 @@ export const UpcomingEventsSection: React.FC = () => {
                 </div>
                 
                 <CardContent className="p-6">
-                  <p className="text-bsd-gray/80 mb-6">{event.description}</p>
-                  <div className="flex justify-center">
-                    <Button variant="ghost" className="text-bsd-gray hover:text-bsd-orange">
-                      Learn More
-                    </Button>
-                  </div>
+                  <p className="text-bsd-gray/80">{event.description}</p>
                 </CardContent>
               </Card>)}
           </div>
