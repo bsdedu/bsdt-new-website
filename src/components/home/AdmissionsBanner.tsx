@@ -30,9 +30,15 @@ export const AdmissionsBanner = () => {
                 className="flex gap-16"
               >
                 {[...Array(8)].map((_, i) => (
-                  <h2 key={i} className="text-4xl md:text-5xl font-bold text-[#00008B] tracking-wide">
+                  <a 
+                    key={i} 
+                    href="https://bangaloreschoolofdesigntech.edmingle.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-4xl md:text-5xl font-bold text-[#00008B] tracking-wide hover:opacity-80 transition-opacity"
+                  >
                     ADMISSIONS OPEN FOR DIPLOMA PROGRAMS
-                  </h2>
+                  </a>
                 ))}
               </motion.div>
             </div>
