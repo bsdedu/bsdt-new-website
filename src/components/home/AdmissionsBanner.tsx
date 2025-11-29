@@ -44,12 +44,12 @@ export const AdmissionsBanner = () => {
             </div>
           </div>
 
-          {/* Secondary Scrolling Text - Opposite Direction */}
+          {/* Secondary Scrolling Text - Same Direction */}
           <div className="w-full overflow-hidden mt-4">
             <div className="flex whitespace-nowrap">
               <motion.div
                 animate={{
-                  x: [-2000, 0],
+                  x: [0, -2000],
                 }}
                 transition={{
                   x: {
