@@ -22,7 +22,7 @@ export const AdmissionsBanner = () => {
           className="flex gap-16"
         >
           {[...Array(8)].map((_, i) => (
-            <span key={i} className="text-2xl md:text-3xl font-bold text-white tracking-wide">
+            <span key={i} className="text-2xl md:text-3xl font-bold text-blue-950 tracking-wide">
               {text}
             </span>
           ))}
