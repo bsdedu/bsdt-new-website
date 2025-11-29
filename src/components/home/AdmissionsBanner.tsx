@@ -54,7 +54,7 @@ export const AdmissionsBanner = () => {
           </div>
           
           {/* Stationary Footer */}
-          <p className="text-sm md:text-base text-[#00008B] text-center px-4 mt-8">
+          <p className="text-sm md:text-base text-[#00008B] text-center px-4 mt-12">
             Our satellite partners in Delhi, Hyderabad, Coimbatore and Chattisgarh.
           </p>
         </div>
