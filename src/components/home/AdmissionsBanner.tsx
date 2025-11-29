@@ -2,15 +2,16 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 export const AdmissionsBanner = () => {
+  const programs = [
+    { name: "Professional Diploma in Interior Design", url: "https://bangaloreschoolofdesigntech.edmingle.com/" },
+    { name: "Professional diploma in Visual Communication Design + UI UX", url: "https://bangaloreschoolofdesigntech.edmingle.com/" },
+    { name: "Post Graduate Diploma in Landscape Design", url: "https://bangaloreschoolofdesigntech.edmingle.com/" }
+  ];
+
   return (
-    <a 
-      href="https://bangaloreschoolofdesigntech.edmingle.com/" 
-      target="_blank" 
-      rel="noopener noreferrer"
-      className="block"
-    >
-      <section className="relative overflow-hidden bg-bsd-orange py-16 cursor-pointer hover:bg-bsd-orange/90 transition-colors">
-        <div className="flex flex-col items-center gap-4">
+    <div className="block">
+      <section className="relative overflow-hidden bg-bsd-orange py-16 transition-colors">
+        <div className="flex flex-col items-center gap-6">
           {/* Scrolling Header */}
           <div className="w-full overflow-hidden">
             <div className="flex whitespace-nowrap">
@@ -37,10 +38,20 @@ export const AdmissionsBanner = () => {
             </div>
           </div>
           
-          {/* Stationary Subtitle */}
-          <p className="text-lg md:text-xl text-[#00008B] text-center px-4">
-            Professional Diploma in Interior Design, Professional diploma in Graphic Design, Post Graduate Diploma in Landscape Design
-          </p>
+          {/* Stationary Subtitle - Clickable Program Links */}
+          <div className="flex flex-wrap justify-center gap-4 px-4">
+            {programs.map((program, index) => (
+              <a
+                key={index}
+                href={program.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-[#00008B] px-6 py-3 rounded-full font-semibold text-sm md:text-base hover:bg-white/90 transition-colors"
+              >
+                {program.name}
+              </a>
+            ))}
+          </div>
           
           {/* Stationary Footer */}
           <p className="text-sm md:text-base text-[#00008B] text-center px-4">
@@ -48,6 +59,6 @@ export const AdmissionsBanner = () => {
           </p>
         </div>
       </section>
-    </a>
+    </div>
   );
 };
