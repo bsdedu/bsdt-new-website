@@ -11,7 +11,7 @@ export const AdmissionsBanner = () => {
       rel="noopener noreferrer"
       className="block"
     >
-      <section className="relative overflow-hidden bg-bsd-orange py-10 cursor-pointer hover:bg-bsd-orange/90 transition-colors">
+      <section className="relative overflow-hidden bg-bsd-orange py-16 cursor-pointer hover:bg-bsd-orange/90 transition-colors">
         <div className="flex whitespace-nowrap">
           <motion.div
             animate={{
