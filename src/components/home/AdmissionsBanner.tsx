@@ -43,6 +43,35 @@ export const AdmissionsBanner = () => {
               </motion.div>
             </div>
           </div>
+
+          {/* Secondary Scrolling Text - Opposite Direction */}
+          <div className="w-full overflow-hidden mt-4">
+            <div className="flex whitespace-nowrap">
+              <motion.div
+                animate={{
+                  x: [-2000, 0],
+                }}
+                transition={{
+                  x: {
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    duration: 25,
+                    ease: "linear",
+                  },
+                }}
+                className="flex gap-16"
+              >
+                {[...Array(8)].map((_, i) => (
+                  <span 
+                    key={i} 
+                    className="text-2xl md:text-3xl font-bold text-[#00008B] tracking-wide"
+                  >
+                    Learn from anywhere via satellite centers across India
+                  </span>
+                ))}
+              </motion.div>
+            </div>
+          </div>
           
           {/* Stationary Subtitle - Clickable Program Links */}
           <div className="flex flex-wrap justify-center gap-4 px-4 mt-12 mb-8">
