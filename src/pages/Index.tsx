@@ -13,6 +13,7 @@ import { InfoGraphicsSection } from '../components/home/InfoGraphicsSection';
 import { GallerySection } from '../components/home/GallerySection';
 import { UpcomingEventsSection } from '../components/home/UpcomingEventsSection';
 import { FloatingEnquiryForm } from '../components/ui-elements/FloatingEnquiryForm';
+import { AdmissionsBanner } from '../components/home/AdmissionsBanner';
 
 const Index = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -87,6 +88,7 @@ const Index = () => {
           </div>
           
           <HeroSection />
+          <AdmissionsBanner />
           <ProgramsSection />
           <InfoGraphicsSection />
           <WhyChooseSection />
