@@ -11,9 +11,9 @@ export const AdmissionsBanner = () => {
   return (
     <div className="block">
       <section className="relative overflow-hidden bg-bsd-orange py-16 transition-colors">
-        <div className="flex flex-col items-center gap-6">
+        <div className="flex flex-col items-center gap-8">
           {/* Scrolling Header */}
-          <div className="w-full overflow-hidden">
+          <div className="w-full overflow-hidden -mt-4">
             <div className="flex whitespace-nowrap">
               <motion.div
                 animate={{
@@ -30,7 +30,7 @@ export const AdmissionsBanner = () => {
                 className="flex gap-16"
               >
                 {[...Array(8)].map((_, i) => (
-                  <h2 key={i} className="text-3xl md:text-4xl font-bold text-[#00008B] tracking-wide">
+                  <h2 key={i} className="text-4xl md:text-5xl font-bold text-[#00008B] tracking-wide">
                     ADMISSIONS OPEN FOR DIPLOMA PROGRAMS
                   </h2>
                 ))}
@@ -54,7 +54,7 @@ export const AdmissionsBanner = () => {
           </div>
           
           {/* Stationary Footer */}
-          <p className="text-sm md:text-base text-[#00008B] text-center px-4">
+          <p className="text-sm md:text-base text-[#00008B] text-center px-4 mt-4">
             Our satellite partners in Delhi, Hyderabad, Coimbatore and Chattisgarh.
           </p>
         </div>
