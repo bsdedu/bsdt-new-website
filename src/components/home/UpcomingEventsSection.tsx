@@ -58,7 +58,7 @@ export const UpcomingEventsSection: React.FC = () => {
               Join Us
             </Badge>
             <h2 className="text-2xl md:text-3xl font-display font-bold tracking-tight text-bsd-gray">
-              Upcoming Events
+              Events at BSDT
             </h2>
             <p className="mt-4 text-bsd-gray/70 max-w-2xl mx-auto">
               Explore our upcoming open days and webinars to learn more about our programs, meet our faculty, and experience the BSDT difference.
