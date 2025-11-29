@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 export const AdmissionsBanner = () => {
   const programs = [
     { name: "Professional Diploma in Interior Design", url: "https://bangaloreschoolofdesigntech.edmingle.com/course/InteriorDesign-94698" },
-    { name: "Professional diploma in Visual Communication Design + UI UX", url: "https://bangaloreschoolofdesigntech.edmingle.com/" },
+    { name: "Professional diploma in Visual Communication Design + UI UX", url: "https://bangaloreschoolofdesigntech.edmingle.com/course/GraphicInteractionDesign-94925" },
     { name: "Post Graduate Diploma in Landscape Design", url: "https://bangaloreschoolofdesigntech.edmingle.com/" }
   ];
 
