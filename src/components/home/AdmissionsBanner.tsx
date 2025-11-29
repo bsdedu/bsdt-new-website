@@ -13,7 +13,7 @@ export const AdmissionsBanner = () => {
       <section className="relative overflow-hidden bg-bsd-orange py-16 transition-colors">
         <div className="flex flex-col items-center gap-8">
           {/* Scrolling Header */}
-          <div className="w-full overflow-hidden -mt-4">
+          <div className="w-full overflow-hidden -mt-8">
             <div className="flex whitespace-nowrap">
               <motion.div
                 animate={{
