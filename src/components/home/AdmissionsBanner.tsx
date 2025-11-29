@@ -46,7 +46,7 @@ export const AdmissionsBanner = () => {
                 href={program.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-[#00008B] px-6 py-3 rounded-full font-semibold text-sm md:text-base hover:bg-white/90 transition-colors"
+                className="bg-white text-[#00008B] px-8 py-4 rounded-full font-semibold text-base md:text-lg hover:bg-white/90 transition-colors"
               >
                 {program.name}
               </a>
