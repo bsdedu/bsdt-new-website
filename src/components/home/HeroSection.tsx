@@ -115,7 +115,7 @@ export const HeroSection: React.FC = () => {
               <AnimatedButton 
                 variant="outline" 
                 size="lg" 
-                onClick={() => scrollToSection('about')}
+                onClick={() => window.open('https://www.bsd.edu.in/student-experience', '_blank', 'noopener,noreferrer')}
               >
                 Take a Virtual Tour
               </AnimatedButton>
