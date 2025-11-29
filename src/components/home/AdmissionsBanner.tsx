@@ -37,7 +37,7 @@ export const AdmissionsBanner = () => {
                     rel="noopener noreferrer"
                     className="text-4xl md:text-5xl font-bold text-[#00008B] tracking-wide hover:opacity-80 transition-opacity"
                   >
-                    ADMISSIONS OPEN FOR DIPLOMA PROGRAMS
+                    ADMISSIONS OPEN FOR DIPLOMA HYBRID PROGRAMS
                   </a>
                 ))}
               </motion.div>
