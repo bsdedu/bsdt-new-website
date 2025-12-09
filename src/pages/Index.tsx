@@ -55,17 +55,43 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Bangalore School of Design & Technology | Premier Design & Tech Education</title>
-        <meta name="description" content="Leading design and technology education in Bangalore. Offering undergraduate programs in Interior Design, Graphic Design, Animation, BCA, Computer Science, and professional diplomas." />
-        <meta name="keywords" content="design school Bangalore, technology education, interior design course, graphic design, animation, BCA, computer science, BSDT" />
-        <meta property="og:title" content="Bangalore School of Design & Technology | Premier Design & Tech Education" />
-        <meta property="og:description" content="Leading design and technology education in Bangalore. Offering undergraduate programs in Interior Design, Graphic Design, Animation, BCA, Computer Science, and professional diplomas." />
+        <title>Bangalore School of Design & Technology | Best Design College in Bangalore</title>
+        <meta name="description" content="BSDT is Bangalore's leading design & technology college. Offering BBA Interior Design, BVA Visual Communication, BCA UI/UX, BSc Animation & Game Design. Industry-focused curriculum, 95% placement rate. Apply now!" />
+        <meta name="keywords" content="best design college Bangalore, interior design course Bangalore, graphic design college, animation course, BCA UI UX, visual communication, game design, BSDT, design school India, technology education Bangalore" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta property="og:title" content="BSDT - Best Design & Technology College in Bangalore" />
+        <meta property="og:description" content="Transform your creative passion into a successful career. Explore our industry-focused programs in Interior Design, Visual Communication, Animation, Game Design & Computer Applications." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://bsdt.ac.in/" />
+        <meta property="og:image" content="https://bsdt.ac.in/og-image.png" />
+        <meta property="og:locale" content="en_IN" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Bangalore School of Design & Technology | Premier Design & Tech Education" />
-        <meta name="twitter:description" content="Leading design and technology education in Bangalore. Offering undergraduate programs in Interior Design, Graphic Design, Animation, BCA, Computer Science, and professional diplomas." />
+        <meta name="twitter:title" content="BSDT - Best Design & Technology College in Bangalore" />
+        <meta name="twitter:description" content="Transform your creative passion into a successful career. Industry-focused design & technology programs with 95% placement rate." />
+        <meta name="twitter:image" content="https://bsdt.ac.in/og-image.png" />
         <link rel="canonical" href="https://bsdt.ac.in/" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "EducationalOrganization",
+            "name": "Bangalore School of Design & Technology",
+            "alternateName": "BSDT",
+            "url": "https://bsdt.ac.in",
+            "logo": "https://bsdt.ac.in/favicon.png",
+            "description": "Premier design and technology education institution in Bangalore offering undergraduate and diploma programs.",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Bangalore",
+              "addressRegion": "Karnataka",
+              "addressCountry": "IN"
+            },
+            "sameAs": [
+              "https://www.facebook.com/bsdtindia",
+              "https://www.instagram.com/bsdt_india",
+              "https://www.linkedin.com/school/bsdt"
+            ]
+          })}
+        </script>
       </Helmet>
       
       <div className={`min-h-screen flex flex-col transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
