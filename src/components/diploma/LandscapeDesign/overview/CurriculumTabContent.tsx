@@ -8,27 +8,27 @@ export const CurriculumTabContent: React.FC = () => {
     <TabsContent value="curriculum" className="mt-0">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <CurriculumCard
-          title="Foundation Modules"
+          title="Semester 1: Foundation"
           moduleNumber={1}
           modules={[
-            "History & Theory of Landscape Architecture",
-            "Plant Materials & Ecology",
-            "Landscape Design Fundamentals",
+            "Design Fundamentals & Spatial Composition",
+            "Plant Materials & Ecological Planning",
             "Site Analysis & Planning",
+            "AutoCAD for Landscape Design",
             "Drawing & Visual Communication",
-            "Digital Tools for Landscape Design",
+            "Design Studio Projects I",
           ]}
         />
         <CurriculumCard
-          title="Advanced Modules"
+          title="Semester 2: Advanced"
           moduleNumber={2}
           modules={[
-            "Urban Landscape Design",
-            "Sustainable Landscape Practices",
-            "Landscape Construction & Materials",
-            "Grading, Drainage & Stormwater Management",
-            "Professional Practice & Project Management",
-            "Capstone Design Project",
+            "SketchUp & 3D Visualization",
+            "Planting Design & Material Applications",
+            "Cost Estimation & Project Management",
+            "Residential, Public & Commercial Landscapes",
+            "Portfolio Development",
+            "Final Design Projects & Presentations",
           ]}
         />
       </div>

@@ -10,30 +10,30 @@ export const LearningOutcomesTabContent: React.FC = () => {
         <div className="space-y-6">
           <LearningOutcome
             title="Design Proficiency"
-            description="Create comprehensive landscape designs that integrate aesthetics, function, and sustainability principles."
+            description="Develop landscape solutions for residential, public, and commercial environments through studio-style projects."
           />
           <LearningOutcome
-            title="Plant Knowledge"
-            description="Select and apply appropriate plant materials based on site conditions, design intent, and ecological considerations."
+            title="Plant & Ecological Knowledge"
+            description="Master planting design, ecological planning, and site-responsive design practices through field-based learning."
           />
           <LearningOutcome
-            title="Technical Expertise"
-            description="Develop technical documentation including grading plans, planting plans, and construction details."
+            title="Software Proficiency"
+            description="Build strong technical skills in AutoCAD, SketchUp, and other digital tools essential to professional practice."
           />
         </div>
 
         <div className="space-y-6">
           <LearningOutcome
-            title="Visual Communication"
-            description="Express design ideas effectively through hand drawing, digital rendering, and 3D visualization techniques."
+            title="Field-Based Learning"
+            description="Gain hands-on experience through site studies, plant nursery visits, material yard visits, and ecological studies."
           />
           <LearningOutcome
-            title="Sustainable Design Approach"
-            description="Apply ecological principles and sustainable strategies to create environmentally responsible landscapes."
+            title="Cost Estimation"
+            description="Learn material applications and cost estimation techniques for professional landscape project management."
           />
           <LearningOutcome
             title="Professional Portfolio"
-            description="Create a professional design portfolio showcasing a range of landscape design projects and skills."
+            description="Continuous portfolio development throughout the year with guided critiques and presentations."
           />
         </div>
       </div>
