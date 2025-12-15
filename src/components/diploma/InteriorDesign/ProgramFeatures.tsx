@@ -28,9 +28,9 @@ export const ProgramFeatures: React.FC = () => {
                 <div className="w-12 h-12 rounded-xl bg-bsd-orange/10 flex items-center justify-center mb-4">
                   <Clock className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-xl font-bold text-bsd-gray mb-3">Accelerated Learning</h3>
+                <h3 className="text-xl font-bold text-bsd-gray mb-3">Hybrid Learning Model</h3>
                 <p className="text-foreground/70">
-                  Complete a comprehensive professional diploma in just 12 months, with focused, intensive coursework in interior design.
+                  Blend online flexibility with on-ground experience. Access offline learning in Bangalore or through Satellite Centres in 4 cities.
                 </p>
               </CardContent>
             </Card>
@@ -40,9 +40,9 @@ export const ProgramFeatures: React.FC = () => {
                 <div className="w-12 h-12 rounded-xl bg-bsd-orange/10 flex items-center justify-center mb-4">
                   <Home className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-xl font-bold text-bsd-gray mb-3">Practical Studio Experience</h3>
+                <h3 className="text-xl font-bold text-bsd-gray mb-3">Real Site Exposure</h3>
                 <p className="text-foreground/70">
-                  Work in professionally equipped design studios with the latest software and resources for interior design projects.
+                  Site visits, industry walkthroughs, practical demonstrations, and in-person reviews facilitated by professional designers.
                 </p>
               </CardContent>
             </Card>
@@ -52,9 +52,9 @@ export const ProgramFeatures: React.FC = () => {
                 <div className="w-12 h-12 rounded-xl bg-bsd-orange/10 flex items-center justify-center mb-4">
                   <Briefcase className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-xl font-bold text-bsd-gray mb-3">Industry Collaborations</h3>
+                <h3 className="text-xl font-bold text-bsd-gray mb-3">Industry-Standard Software</h3>
                 <p className="text-foreground/70">
-                  Work on real projects with industry partners and gain practical experience through internships with design firms.
+                  Hands-on training in AutoCAD, SketchUp, and other professional tools used in the interior design industry.
                 </p>
               </CardContent>
             </Card>
@@ -64,9 +64,9 @@ export const ProgramFeatures: React.FC = () => {
                 <div className="w-12 h-12 rounded-xl bg-bsd-orange/10 flex items-center justify-center mb-4">
                   <Users className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-xl font-bold text-bsd-gray mb-3">Small Batch Sizes</h3>
+                <h3 className="text-xl font-bold text-bsd-gray mb-3">Expert Faculty</h3>
                 <p className="text-foreground/70">
-                  Benefit from personalized attention with small class sizes, allowing for individualized feedback and mentoring.
+                  Learn from experienced architects, interior designers, and engineers who guide you through technical and creative aspects.
                 </p>
               </CardContent>
             </Card>
@@ -76,9 +76,9 @@ export const ProgramFeatures: React.FC = () => {
                 <div className="w-12 h-12 rounded-xl bg-bsd-orange/10 flex items-center justify-center mb-4">
                   <Lightbulb className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-xl font-bold text-bsd-gray mb-3">Project-Based Learning</h3>
+                <h3 className="text-xl font-bold text-bsd-gray mb-3">Studio-Style Projects</h3>
                 <p className="text-foreground/70">
-                  Complete comprehensive interior design projects for various spaces, building a professional portfolio throughout the course.
+                  Design Studio projects help convert ideas into fully developed design solutions with guided critiques and structured feedback.
                 </p>
               </CardContent>
             </Card>
@@ -90,7 +90,7 @@ export const ProgramFeatures: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-bsd-gray mb-3">Industry Certification</h3>
                 <p className="text-foreground/70">
-                  Graduate with a professional diploma recognized by the interior design industry, plus additional software certifications.
+                  Receive a Certificate in Interior Design from Futr School in collaboration with BSDT and ATMOS Design Labs.
                 </p>
               </CardContent>
             </Card>
