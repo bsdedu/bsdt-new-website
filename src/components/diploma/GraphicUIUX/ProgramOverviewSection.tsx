@@ -14,10 +14,10 @@ export const ProgramOverviewSection: React.FC = () => {
           <div className="text-center max-w-3xl mx-auto mb-12">
             <Badge variant="bsdOrange" className="mb-4">PROGRAM OVERVIEW</Badge>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
-              Professional Diploma in Graphic Design + UI/UX
+              Professional Diploma in Visual Communication + UI UX
             </h2>
             <p className="mt-4 text-foreground/70">
-              A specialized diploma program that integrates traditional graphic design principles with modern UI/UX practices, preparing students for the evolving digital design landscape.
+              This one-year hybrid programme combines live online learning with hands-on offline sessions, covering visual communication, typography, branding, advertising, digital media, and UI/UX fundamentals.
             </p>
           </div>
         </RevealSection>
@@ -29,9 +29,9 @@ export const ProgramOverviewSection: React.FC = () => {
                 <div className="w-12 h-12 mx-auto rounded-full bg-bsd-orange/10 flex items-center justify-center mb-4">
                   <PenTool className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-xl font-semibold text-bsd-gray mb-3">Graphic Design Fundamentals</h3>
+                <h3 className="text-xl font-semibold text-bsd-gray mb-3">Visual Communication</h3>
                 <p className="text-foreground/70">
-                  Master visual communication principles, typography, color theory, and composition techniques essential for effective graphic design.
+                  Master typography, branding strategies, advertising, and digital media through comprehensive visual communication training.
                 </p>
               </div>
             </div>
@@ -41,9 +41,9 @@ export const ProgramOverviewSection: React.FC = () => {
                 <div className="w-12 h-12 mx-auto rounded-full bg-bsd-orange/10 flex items-center justify-center mb-4">
                   <Layers className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-xl font-semibold text-bsd-gray mb-3">Digital Design Tools</h3>
+                <h3 className="text-xl font-semibold text-bsd-gray mb-3">Adobe Creative Suite</h3>
                 <p className="text-foreground/70">
-                  Learn industry-standard software including Adobe Creative Suite (Photoshop, Illustrator, InDesign) and digital prototyping tools.
+                  Develop technical proficiency through extensive training in Adobe Creative Suite, prototyping tools, and industry-standard software.
                 </p>
               </div>
             </div>
@@ -53,9 +53,9 @@ export const ProgramOverviewSection: React.FC = () => {
                 <div className="w-12 h-12 mx-auto rounded-full bg-bsd-orange/10 flex items-center justify-center mb-4">
                   <MousePointer className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-xl font-semibold text-bsd-gray mb-3">UI/UX Design</h3>
+                <h3 className="text-xl font-semibold text-bsd-gray mb-3">Hybrid Learning</h3>
                 <p className="text-foreground/70">
-                  Develop skills in user interface design, user experience principles, wireframing, prototyping, and user-centered design methodologies.
+                  Online theory and software skills combined with real-world creative practice through offline sessions at Bangalore or Satellite Centres.
                 </p>
               </div>
             </div>
@@ -77,16 +77,24 @@ export const ProgramOverviewSection: React.FC = () => {
                 <Card className="p-6">
                   <h3 className="text-xl font-bold text-bsd-gray mb-4 flex items-center">
                     <span className="w-8 h-8 rounded-full bg-bsd-orange text-white flex items-center justify-center mr-3 text-sm">1</span>
-                    Graphic Design Modules
+                    Semester 1: Foundation
                   </h3>
                   <ul className="space-y-3">
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Typography & Visual Communication</span>
+                      <span>Visual Communication Fundamentals</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Color Theory & Composition</span>
+                      <span>Typography & Color Theory</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Branding Strategies & Identity Design</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Adobe Creative Suite (Photoshop, Illustrator)</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
@@ -94,15 +102,7 @@ export const ProgramOverviewSection: React.FC = () => {
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Brand Identity Design</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Print & Publication Design</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Adobe Creative Suite (Photoshop, Illustrator, InDesign)</span>
+                      <span>Studio Projects & Critiques</span>
                     </li>
                   </ul>
                 </Card>
@@ -110,32 +110,32 @@ export const ProgramOverviewSection: React.FC = () => {
                 <Card className="p-6">
                   <h3 className="text-xl font-bold text-bsd-gray mb-4 flex items-center">
                     <span className="w-8 h-8 rounded-full bg-bsd-orange text-white flex items-center justify-center mr-3 text-sm">2</span>
-                    UI/UX Design Modules
+                    Semester 2: Advanced
                   </h3>
                   <ul className="space-y-3">
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>UI Design Principles & Elements</span>
+                      <span>UI/UX Fundamentals & Principles</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Wireframing & Prototyping</span>
+                      <span>Wireframing & Prototyping Tools</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>User Research & Testing Methods</span>
+                      <span>Advertising & Digital Media</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Responsive Web Design</span>
+                      <span>Design Sprints & Branding Exercises</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Mobile App Interface Design</span>
+                      <span>Portfolio Development</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Figma, Adobe XD & Prototyping Tools</span>
+                      <span>Final Presentations & Design Reviews</span>
                     </li>
                   </ul>
                 </Card>

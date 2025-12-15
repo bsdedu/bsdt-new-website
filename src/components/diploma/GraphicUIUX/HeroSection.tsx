@@ -11,28 +11,28 @@ export const HeroSection: React.FC = () => {
       <div className="container mx-auto px-6 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <Badge variant="bsdOrange" className="mb-2">Professional Diploma Program</Badge>
+            <Badge variant="bsdOrange" className="mb-2">Hybrid Diploma Program</Badge>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-bsd-gray">
               Professional Diploma in<br />
-              <span className="text-bsd-orange">Visual Communication + UI/UX</span>
+              <span className="text-bsd-orange">Visual Communication + UI UX</span>
             </h1>
             
             <p className="text-lg text-foreground/80 max-w-xl">
-              A comprehensive professional diploma program that combines visual communication fundamentals with user interface and experience design principles for digital platforms.
+              Join from anywhere. This one-year hybrid programme combines live online learning with hands-on offline sessions at our Bangalore campus and Satellite Centres in Chhattisgarh, Hyderabad, Delhi & Coimbatore.
             </p>
             
             <div className="flex flex-wrap gap-6 pt-2">
               <div className="flex items-center">
                 <Clock className="w-5 h-5 text-bsd-orange mr-2" />
-                <span className="text-bsd-gray font-medium">8 Months Duration</span>
+                <span className="text-bsd-gray font-medium">1 Year (2 Semesters)</span>
               </div>
               <div className="flex items-center">
                 <Calendar className="w-5 h-5 text-bsd-orange mr-2" />
-                <span className="text-bsd-gray font-medium">Intakes: Aug, Nov, Feb & May</span>
+                <span className="text-bsd-gray font-medium">Batches: FEB | MAY | AUG | NOV</span>
               </div>
               <div className="flex items-center">
                 <Award className="w-5 h-5 text-bsd-orange mr-2" />
-                <span className="text-bsd-gray font-medium">Professional Certificate Recognised by BSDT</span>
+                <span className="text-bsd-gray font-medium">Certificate by Futr School + BSDT + ATMOS</span>
               </div>
             </div>
             

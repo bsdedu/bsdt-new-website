@@ -70,17 +70,17 @@ export const AdmissionsInfo: React.FC = () => {
                   
                   <div>
                     <h4 className="font-semibold text-bsd-gray">Program Structure</h4>
-                    <p className="text-foreground/70">Online & offline classroom sessions, practical workshops, industry projects, portfolio development</p>
+                    <p className="text-foreground/70">Hybrid learning: Live online classes + offline sessions at Bangalore campus or Satellite Centres (Chhattisgarh, Hyderabad, Delhi, Coimbatore)</p>
                   </div>
                   
                   <div>
                     <h4 className="font-semibold text-bsd-gray">Class Schedule</h4>
-                    <p className="text-foreground/70">Weekday classes (Wed, Thru & Fri, 09:30 AM to 4:30 PM)</p>
+                    <p className="text-foreground/70">Wed, Thu & Fri, 9:30 AM to 4:30 PM IST (Online) + Scheduled offline activities</p>
                   </div>
                   
                   <div>
                     <h4 className="font-semibold text-bsd-gray">Intake Dates</h4>
-                    <p className="text-foreground/70">January and July each year</p>
+                    <p className="text-foreground/70">February, May, August & November each year</p>
                   </div>
                 </div>
               </CardContent>
