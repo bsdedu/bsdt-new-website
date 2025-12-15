@@ -17,7 +17,7 @@ export const ProgramOverviewSection: React.FC = () => {
               Professional Diploma in Interior Design
             </h2>
             <p className="mt-4 text-foreground/70">
-              A specialized diploma program that focuses on interior design principles, space planning, materials, and techniques for creating aesthetically pleasing and functional living and working environments.
+              This one-year hybrid programme blends live online learning with essential real-world exposure through our Bangalore campus and Satellite Partner Centres in Chhattisgarh, Hyderabad, Delhi, and Coimbatore.
             </p>
           </div>
         </RevealSection>
@@ -29,9 +29,9 @@ export const ProgramOverviewSection: React.FC = () => {
                 <div className="w-12 h-12 mx-auto rounded-full bg-bsd-orange/10 flex items-center justify-center mb-4">
                   <Home className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-xl font-semibold text-bsd-gray mb-3">Interior Design Fundamentals</h3>
+                <h3 className="text-xl font-semibold text-bsd-gray mb-3">Design Fundamentals</h3>
                 <p className="text-foreground/70">
-                  Master space planning, color theory, lighting design, and furniture arrangement principles essential for effective interior design.
+                  Master design fundamentals, colour theory, space planning, materials and finishes, along with residential topics like kitchens, bathrooms, and home offices.
                 </p>
               </div>
             </div>
@@ -43,7 +43,7 @@ export const ProgramOverviewSection: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-bsd-gray mb-3">Technical Skills</h3>
                 <p className="text-foreground/70">
-                  Learn industry-standard software including AutoCAD, SketchUp, 3D Max, and visualization tools for creating professional interior design presentations.
+                  Develop strong technical skills through hands-on training in AutoCAD, SketchUp, and other professional tools used in the industry.
                 </p>
               </div>
             </div>
@@ -53,9 +53,9 @@ export const ProgramOverviewSection: React.FC = () => {
                 <div className="w-12 h-12 mx-auto rounded-full bg-bsd-orange/10 flex items-center justify-center mb-4">
                   <Palette className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-xl font-semibold text-bsd-gray mb-3">Materials & Finishes</h3>
+                <h3 className="text-xl font-semibold text-bsd-gray mb-3">Hybrid Learning</h3>
                 <p className="text-foreground/70">
-                  Develop expertise in selecting appropriate materials, finishes, fixtures, and furnishings for various interior design applications.
+                  Experience comprehensive online learning plus practical on-ground exposure through site visits, industry walkthroughs, and in-person reviews.
                 </p>
               </div>
             </div>
@@ -77,20 +77,12 @@ export const ProgramOverviewSection: React.FC = () => {
                 <Card className="p-6">
                   <h3 className="text-xl font-bold text-bsd-gray mb-4 flex items-center">
                     <span className="w-8 h-8 rounded-full bg-bsd-orange text-white flex items-center justify-center mr-3 text-sm">1</span>
-                    Core Design Modules
+                    Semester 1: Foundation
                   </h3>
                   <ul className="space-y-3">
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Interior Design Theory & Principles</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Color Theory & Material Selection</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Drafting & Technical Drawing</span>
+                      <span>Design Fundamentals & Colour Theory</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
@@ -98,11 +90,19 @@ export const ProgramOverviewSection: React.FC = () => {
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Lighting Design</span>
+                      <span>Materials & Finishes</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Ergonomics & Anthropometrics</span>
+                      <span>AutoCAD for Interior Design</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Residential Design: Kitchens & Bathrooms</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Design Studio Projects</span>
                     </li>
                   </ul>
                 </Card>
@@ -110,32 +110,32 @@ export const ProgramOverviewSection: React.FC = () => {
                 <Card className="p-6">
                   <h3 className="text-xl font-bold text-bsd-gray mb-4 flex items-center">
                     <span className="w-8 h-8 rounded-full bg-bsd-orange text-white flex items-center justify-center mr-3 text-sm">2</span>
-                    Technical & Application Modules
+                    Semester 2: Advanced
                   </h3>
                   <ul className="space-y-3">
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>AutoCAD for Interior Design</span>
+                      <span>SketchUp & 3D Visualization</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>3D Visualization & Rendering</span>
+                      <span>Residential Design: Wardrobes & Home Offices</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Materials & Finishes</span>
+                      <span>Commercial Interior Design</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Sustainable Design Practices</span>
+                      <span>Industry & Vendor Walkthroughs</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Residential & Commercial Design</span>
+                      <span>Portfolio Development</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Project Management & Client Relations</span>
+                      <span>Final Design Projects & Presentations</span>
                     </li>
                   </ul>
                 </Card>

@@ -66,22 +66,22 @@ export const AdmissionsInfo: React.FC = () => {
                 <div className="space-y-4">
                   <div>
                     <h4 className="font-semibold text-bsd-gray">Duration</h4>
-                    <p className="text-foreground/70">8 months (2 Semesters)</p>
+                    <p className="text-foreground/70">1 Year (2 Semesters)</p>
                   </div>
                   
                   <div>
                     <h4 className="font-semibold text-bsd-gray">Program Structure</h4>
-                    <p className="text-foreground/70">Online & offline classroom sessions, practical workshops, design studio projects, portfolio development</p>
+                    <p className="text-foreground/70">Hybrid learning: Live online classes + offline sessions at Bangalore campus or Satellite Centres (Chhattisgarh, Hyderabad, Delhi, Coimbatore)</p>
                   </div>
                   
                   <div>
                     <h4 className="font-semibold text-bsd-gray">Class Schedule</h4>
-                    <p className="text-foreground/70">Weekday classes (Mon, Tue & Thu, 09:30 AM to 4:30 PM)</p>
+                    <p className="text-foreground/70">Wed, Thu & Fri, 9:30 AM to 4:30 PM IST (Online) + Scheduled offline activities</p>
                   </div>
                   
                   <div>
                     <h4 className="font-semibold text-bsd-gray">Intake Dates</h4>
-                    <p className="text-foreground/70">January and July each year</p>
+                    <p className="text-foreground/70">February, May, August & November each year</p>
                   </div>
                 </div>
               </CardContent>
