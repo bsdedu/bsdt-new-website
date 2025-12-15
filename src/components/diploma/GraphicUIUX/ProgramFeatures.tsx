@@ -28,9 +28,9 @@ export const ProgramFeatures: React.FC = () => {
                 <div className="w-12 h-12 rounded-xl bg-bsd-orange/10 flex items-center justify-center mb-4">
                   <Clock className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-xl font-bold text-bsd-gray mb-3">Accelerated Learning</h3>
+                <h3 className="text-xl font-bold text-bsd-gray mb-3">Hybrid Learning Model</h3>
                 <p className="text-foreground/70">
-                  Complete a comprehensive professional diploma in just 12 months, with focused, intensive coursework that prepares you for industry roles quickly.
+                  Online flexibility with real-world creative practice. Access offline sessions at Bangalore campus or 4 Satellite Centres.
                 </p>
               </CardContent>
             </Card>
@@ -40,9 +40,9 @@ export const ProgramFeatures: React.FC = () => {
                 <div className="w-12 h-12 rounded-xl bg-bsd-orange/10 flex items-center justify-center mb-4">
                   <Laptop className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-xl font-bold text-bsd-gray mb-3">Industry-Aligned Curriculum</h3>
+                <h3 className="text-xl font-bold text-bsd-gray mb-3">Industry-Standard Tools</h3>
                 <p className="text-foreground/70">
-                  Curriculum developed with input from industry professionals to ensure you learn the most relevant and in-demand skills for today's job market.
+                  Extensive training in Adobe Creative Suite, prototyping software, and other tools used by professional designers.
                 </p>
               </CardContent>
             </Card>
@@ -52,9 +52,9 @@ export const ProgramFeatures: React.FC = () => {
                 <div className="w-12 h-12 rounded-xl bg-bsd-orange/10 flex items-center justify-center mb-4">
                   <Briefcase className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-xl font-bold text-bsd-gray mb-3">Internship Opportunities</h3>
+                <h3 className="text-xl font-bold text-bsd-gray mb-3">Agency Workflow Exposure</h3>
                 <p className="text-foreground/70">
-                  Gain real-world experience through our network of partner companies, with internship placements to build your portfolio and professional connections.
+                  Offline sessions at Satellite Centres provide exposure to actual agency workflows and creative environments.
                 </p>
               </CardContent>
             </Card>
@@ -64,9 +64,9 @@ export const ProgramFeatures: React.FC = () => {
                 <div className="w-12 h-12 rounded-xl bg-bsd-orange/10 flex items-center justify-center mb-4">
                   <Users className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-xl font-bold text-bsd-gray mb-3">Small Batch Sizes</h3>
+                <h3 className="text-xl font-bold text-bsd-gray mb-3">Expert Mentorship</h3>
                 <p className="text-foreground/70">
-                  Limited class sizes ensure personalized attention from instructors, creating an optimal learning environment for skill development.
+                  Learn from practising graphic designers, visual communication experts, and interaction design specialists.
                 </p>
               </CardContent>
             </Card>
@@ -76,9 +76,9 @@ export const ProgramFeatures: React.FC = () => {
                 <div className="w-12 h-12 rounded-xl bg-bsd-orange/10 flex items-center justify-center mb-4">
                   <Lightbulb className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-xl font-bold text-bsd-gray mb-3">Project-Based Learning</h3>
+                <h3 className="text-xl font-bold text-bsd-gray mb-3">Studio-Style Projects</h3>
                 <p className="text-foreground/70">
-                  Complete real-world projects throughout the course to build a professional portfolio that demonstrates your abilities to potential employers.
+                  Transform concepts into compelling visual and interactive design solutions through guided critiques and presentations.
                 </p>
               </CardContent>
             </Card>
@@ -90,7 +90,7 @@ export const ProgramFeatures: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-bsd-gray mb-3">Industry Certification</h3>
                 <p className="text-foreground/70">
-                  Graduate with a professional diploma recognized by the design industry, plus additional certifications in software tools from Adobe and Figma.
+                  Receive a Certificate in Graphic Design & Interaction Design from Futr School in collaboration with BSDT and ATMOS.
                 </p>
               </CardContent>
             </Card>
