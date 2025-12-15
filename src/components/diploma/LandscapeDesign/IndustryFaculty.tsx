@@ -15,7 +15,7 @@ export const IndustryFaculty: React.FC = () => {
               Learn From Industry Leaders
             </h2>
             <p className="mt-4 text-foreground/70">
-              Our Landscape Design program is led by professionals with extensive industry experience who are passionate about nurturing the next generation of landscape architects and designers.
+              The programme is taught by experienced architects, landscape designers, and engineers who bring technical expertise, ecological insight, and professional mentorship. Offline sessions are led by local practitioners providing real-world exposure to field conditions and site-responsive design practices.
             </p>
           </div>
         </RevealSection>

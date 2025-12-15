@@ -2,8 +2,7 @@
 import React from 'react';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { TreeDeciduous, Clock, Calendar, Award } from "lucide-react";
-import { Link } from 'react-router-dom';
+import { TreeDeciduous, Clock, Calendar, Award, MapPin } from "lucide-react";
 
 export const HeroSection: React.FC = () => {
   return (
@@ -11,28 +10,32 @@ export const HeroSection: React.FC = () => {
       <div className="container mx-auto px-6 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <Badge variant="bsdOrange" className="mb-2">Professional Diploma Program</Badge>
+            <Badge variant="bsdOrange" className="mb-2">Hybrid Diploma Program</Badge>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-bsd-gray">
-              Professional Diploma in<br />
+              Professional Post Graduate Diploma in<br />
               <span className="text-bsd-orange">Landscape Design</span>
             </h1>
             
             <p className="text-lg text-foreground/80 max-w-xl">
-              An intensive professional program focusing on landscape architecture, urban planning, and sustainable design principles for creating harmonious outdoor environments.
+              A one-year hybrid program blending live online classes with offline, real-world learning at our Bangalore campus or Satellite Partner Centres in Chhattisgarh, Hyderabad, Delhi & Coimbatore.
             </p>
             
             <div className="flex flex-wrap gap-6 pt-2">
               <div className="flex items-center">
                 <Clock className="w-5 h-5 text-bsd-orange mr-2" />
-                <span className="text-bsd-gray font-medium">8 Months Duration</span>
+                <span className="text-bsd-gray font-medium">1 Year (2 Semesters)</span>
               </div>
               <div className="flex items-center">
                 <Calendar className="w-5 h-5 text-bsd-orange mr-2" />
-                <span className="text-bsd-gray font-medium">Intakes: Aug, Nov, Feb & May</span>
+                <span className="text-bsd-gray font-medium">Batches: FEB | MAY | AUG | NOV</span>
+              </div>
+              <div className="flex items-center">
+                <MapPin className="w-5 h-5 text-bsd-orange mr-2" />
+                <span className="text-bsd-gray font-medium">Online + Offline (Bangalore & Satellite Centres)</span>
               </div>
               <div className="flex items-center">
                 <Award className="w-5 h-5 text-bsd-orange mr-2" />
-                <span className="text-bsd-gray font-medium">Professional Certificate Recognised by BSDT</span>
+                <span className="text-bsd-gray font-medium">Certificate by Futr School + BSDT + ATMOS</span>
               </div>
             </div>
             
@@ -41,7 +44,7 @@ export const HeroSection: React.FC = () => {
                 Download Brochure
               </Button>
               <a 
-                href="https://apply.bsd.edu.in/" 
+                href="https://futrschool.edmingle.com/course/LandscapeDesign-94776" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >

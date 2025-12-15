@@ -17,10 +17,10 @@ export const ProgramOverviewSection: React.FC = () => {
           <div className="text-center max-w-3xl mx-auto mb-12">
             <Badge variant="bsdOrange" className="mb-4">PROGRAM OVERVIEW</Badge>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
-              Post Graduate Diploma in Landscape Design
+              Professional Post Graduate Diploma in Landscape Design
             </h2>
             <p className="mt-4 text-foreground/70">
-              A comprehensive program that equips students with the knowledge and skills to design sustainable, functional, and aesthetically pleasing outdoor spaces across various scales and contexts.
+              This one-year hybrid program blends live online classes with offline, real-world learning at our Bangalore campus or Satellite Partner Centres in Chhattisgarh, Hyderabad, Delhi & Coimbatore. Online sessions cover core areas including design fundamentals, planting design, ecological planning, site planning, material applications, and cost estimation.
             </p>
           </div>
         </RevealSection>
@@ -29,18 +29,18 @@ export const ProgramOverviewSection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <OverviewCard
               icon={<PenTool className="w-6 h-6 text-bsd-orange" />}
-              title="Design Principles"
-              description="Master the fundamental principles of landscape architecture, spatial composition, and visual aesthetics essential for creating harmonious outdoor environments."
+              title="Design Fundamentals"
+              description="Master the core areas of landscape design including design fundamentals, planting design, ecological planning, site planning, and material applications."
             />
             <OverviewCard
               icon={<Leaf className="w-6 h-6 text-bsd-orange" />}
-              title="Ecological Knowledge"
-              description="Develop understanding of plant materials, ecosystems, and sustainable practices for environmentally responsible landscape design solutions."
+              title="Software Proficiency"
+              description="Build strong technical proficiency through hands-on training in AutoCAD, SketchUp, and other digital tools essential to professional landscape practice."
             />
             <OverviewCard
               icon={<Mountain className="w-6 h-6 text-bsd-orange" />}
-              title="Technical Skills"
-              description="Learn site analysis, grading, drainage, construction methods, and digital visualization tools used in professional landscape design practice."
+              title="Studio Projects"
+              description="Develop landscape solutions for residential, public, and commercial environments through Design Studio projects, supported by critiques and structured feedback."
             />
           </div>
         </RevealSection>
