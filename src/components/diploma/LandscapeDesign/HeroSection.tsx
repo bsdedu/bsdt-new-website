@@ -40,9 +40,16 @@ export const HeroSection: React.FC = () => {
             </div>
             
             <div className="flex flex-wrap gap-4 pt-4">
-              <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white">
-                Download Brochure
-              </Button>
+              <a 
+                href="/brochures/PG_Diploma_in_Landscape_Design_Brochure_2026.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                download
+              >
+                <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white">
+                  Download Brochure
+                </Button>
+              </a>
               <a 
                 href="https://futrschool.edmingle.com/course/LandscapeDesign-94776" 
                 target="_blank" 
