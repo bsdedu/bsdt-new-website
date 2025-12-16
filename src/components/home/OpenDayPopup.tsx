@@ -71,9 +71,11 @@ export const OpenDayPopup = () => {
           <Button
             variant="outline"
             className="w-full"
-            onClick={handleClose}
+            asChild
           >
-            Learn more
+            <a href="/open-day" onClick={handleClose}>
+              Learn more
+            </a>
           </Button>
         </div>
       </DialogContent>
