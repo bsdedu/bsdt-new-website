@@ -35,7 +35,7 @@ export const OpenDayPopup = () => {
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-center text-bsd-orange">
-            🎉 Open Day at BSDT
+            🎉 Open Day
           </DialogTitle>
           <DialogDescription className="text-center text-base pt-2">
             Experience our campus, meet faculty & explore programs
@@ -45,7 +45,7 @@ export const OpenDayPopup = () => {
         <div className="space-y-4 py-4">
           <div className="flex items-center gap-3 text-foreground">
             <Calendar className="h-5 w-5 text-bsd-orange" />
-            <span className="font-medium">Saturday, January 25th, 2025</span>
+            <span className="font-medium">Thursday, 5th February, 2026</span>
           </div>
           
           <div className="flex items-center gap-3 text-foreground">
@@ -55,7 +55,7 @@ export const OpenDayPopup = () => {
           
           <div className="flex items-center gap-3 text-foreground">
             <MapPin className="h-5 w-5 text-bsd-orange" />
-            <span className="font-medium">BSDT Campus, Bangalore</span>
+            <span className="font-medium">Citrine Hotel, Sheshadripuram, Bangalore</span>
           </div>
         </div>
 
