@@ -64,7 +64,7 @@ export const UpcomingEventsSection: React.FC = () => {
       date: "11th - 14th December, 2025",
       time: "10:00 AM - 6:00 PM",
       description: "Bangalore's premier design conference bringing together industry experts, alumni, and students for inspiring talks, workshops, and networking opportunities.",
-      imageSrc: "/placeholder.svg",
+      imageSrc: "/lovable-uploads/designuru-2025.jpg",
       registerLink: "/register-designuru"
     },
     {
