@@ -17,7 +17,7 @@ export const ProgramOverviewSection: React.FC = () => {
               Professional Diploma in Interior Design
             </h2>
             <p className="mt-4 text-foreground/70">
-              This one-year hybrid programme blends live online learning with essential real-world exposure through our Bangalore campus and Satellite Partner Centres in Chhattisgarh, Hyderabad, Delhi, and Coimbatore.
+              This 8-month hybrid programme blends live online learning with essential real-world exposure through our Bangalore campus and Satellite Partner Centres in Chhattisgarh, Hyderabad, Delhi, and Coimbatore.
             </p>
           </div>
         </RevealSection>

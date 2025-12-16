@@ -20,7 +20,7 @@ export const ProgramOverviewSection: React.FC = () => {
               Professional Post Graduate Diploma in Landscape Design
             </h2>
             <p className="mt-4 text-foreground/70">
-              This one-year hybrid program blends live online classes with offline, real-world learning at our Bangalore campus or Satellite Partner Centres in Chhattisgarh, Hyderabad, Delhi & Coimbatore. Online sessions cover core areas including design fundamentals, planting design, ecological planning, site planning, material applications, and cost estimation.
+              This 8-month hybrid program blends live online classes with offline, real-world learning at our Bangalore campus or Satellite Partner Centres in Chhattisgarh, Hyderabad, Delhi & Coimbatore. Online sessions cover core areas including design fundamentals, planting design, ecological planning, site planning, material applications, and cost estimation.
             </p>
           </div>
         </RevealSection>
