@@ -74,7 +74,7 @@ export const UpcomingEventsSection: React.FC = () => {
       date: "7th & 8th November, 2025",
       time: "8:00 AM - 5:00 PM",
       description: "Annual sports day celebrating athletic excellence and team spirit. Featuring inter-batch competitions, fun games, and awards ceremony.",
-      imageSrc: "/placeholder.svg",
+      imageSrc: "/lovable-uploads/sports-day.jpg",
       registerLink: "/register-sports-day"
     },
     {
