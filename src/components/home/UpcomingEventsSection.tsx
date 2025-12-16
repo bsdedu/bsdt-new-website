@@ -35,30 +35,7 @@ export const UpcomingEventsSection: React.FC = () => {
       featured: true
     },
     {
-      id: "2", 
-      title: "Teachers Day",
-      type: "open-day",
-      date: "5th September, 2025",
-      time: "9:00 AM - 6:00 PM",
-      description: "Celebrate and honor our dedicated faculty members who shape the future designers. Join us for special presentations, appreciation events, and faculty showcases.",
-      imageSrc: "/lovable-uploads/2c70e2d5-549c-43bd-bd5f-ef047b51dc10.png",
-      registerLink: "/register-teachers-day"
-    },
-    {
-      id: "3",
-      title: "Mozaic",
-      type: "open-day", 
-      date: "12th October, 2025",
-      time: "11:00 AM - 8:00 PM",
-      description: "Our annual design festival showcasing student creativity through exhibitions, competitions, workshops, and cultural performances. Experience the vibrant design community at BSD.",
-      imageSrc: "/lovable-uploads/8405d26f-8d85-4e74-80b6-0ebc8ae470d3.png",
-      registerLink: "/register-mozaic"
-    }
-  ];
-
-  const additionalEvents: Event[] = [
-    {
-      id: "4",
+      id: "2",
       title: "Designuru 2025",
       type: "open-day",
       date: "11th - 14th December, 2025",
@@ -68,7 +45,20 @@ export const UpcomingEventsSection: React.FC = () => {
       registerLink: "/register-designuru"
     },
     {
-      id: "5",
+      id: "3",
+      title: "End-Sem Jury",
+      type: "open-day",
+      date: "November 2025",
+      time: "9:00 AM - 4:00 PM",
+      description: "Semester-end jury presentations showcasing student projects across all programs. An opportunity to witness creative excellence and innovative design solutions.",
+      imageSrc: "/lovable-uploads/end-sem-jury.jpg",
+      registerLink: "/register-end-sem-jury"
+    }
+  ];
+
+  const additionalEvents: Event[] = [
+    {
+      id: "4",
       title: "Sports Day",
       type: "open-day",
       date: "7th & 8th November, 2025",
@@ -78,14 +68,24 @@ export const UpcomingEventsSection: React.FC = () => {
       registerLink: "/register-sports-day"
     },
     {
-      id: "6",
-      title: "End-Sem Jury",
+      id: "5", 
+      title: "Teachers Day",
       type: "open-day",
-      date: "November 2025",
-      time: "9:00 AM - 4:00 PM",
-      description: "Semester-end jury presentations showcasing student projects across all programs. An opportunity to witness creative excellence and innovative design solutions.",
-      imageSrc: "/lovable-uploads/end-sem-jury.jpg",
-      registerLink: "/register-end-sem-jury"
+      date: "5th September, 2025",
+      time: "9:00 AM - 6:00 PM",
+      description: "Celebrate and honor our dedicated faculty members who shape the future designers. Join us for special presentations, appreciation events, and faculty showcases.",
+      imageSrc: "/lovable-uploads/2c70e2d5-549c-43bd-bd5f-ef047b51dc10.png",
+      registerLink: "/register-teachers-day"
+    },
+    {
+      id: "6",
+      title: "Mozaic",
+      type: "open-day", 
+      date: "12th October, 2025",
+      time: "11:00 AM - 8:00 PM",
+      description: "Our annual design festival showcasing student creativity through exhibitions, competitions, workshops, and cultural performances. Experience the vibrant design community at BSD.",
+      imageSrc: "/lovable-uploads/8405d26f-8d85-4e74-80b6-0ebc8ae470d3.png",
+      registerLink: "/register-mozaic"
     }
   ];
 
