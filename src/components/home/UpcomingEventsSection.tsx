@@ -25,7 +25,7 @@ export const UpcomingEventsSection: React.FC = () => {
       date: "7th February, 2026",
       time: "10AM to 4PM",
       description: "Experience our campus, meet faculty & explore programs. Join us for this special occasion designed for prospective students and their families.",
-      imageSrc: "/lovable-uploads/4e0c1fb9-f311-4f95-a90f-cc833365c95c.png",
+      imageSrc: "/lovable-uploads/open-day-event.png",
       registerLink: "https://www.bsd.edu.in/open-day",
       featured: true
     },
