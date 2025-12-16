@@ -73,7 +73,7 @@ export const OpenDayPopup = () => {
             className="w-full"
             onClick={handleClose}
           >
-            Maybe Later
+            Learn more
           </Button>
         </div>
       </DialogContent>
