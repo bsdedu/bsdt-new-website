@@ -64,7 +64,7 @@ export const OpenDayPopup = () => {
             className="w-full bg-bsd-orange hover:bg-bsd-orange/90 text-white"
             asChild
           >
-            <a href="/plan-a-visit" onClick={handleClose}>
+            <a href="https://forms.gle/eBseES87FVJ3u1tx8" target="_blank" rel="noopener noreferrer" onClick={handleClose}>
               Register Now
             </a>
           </Button>
