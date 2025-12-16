@@ -23,39 +23,23 @@ type Program = {
 
 const undergraduatePrograms: Program[] = [
   {
-    icon: <Building2 className="w-6 h-6 text-bsd-orange" />,
-    title: "B.Des in Architectural Construction Design",
-    description: "A 4-year program focusing on innovative architectural design principles, integrating sustainable practices with cutting-edge computational design tools.",
-    color: "from-bsd-orange/20 to-bsd-orange/5",
-    isFeatured: true,
-    duration: "4 years",
-    href: "/programs/bdes-architectural-construction"
-  }, 
-  {
-    icon: <LayoutDashboard className="w-6 h-6 text-bsd-orange" />,
-    title: "B.Des in Interaction & Experience Design",
-    description: "A 4-year program teaching students to create intuitive digital interfaces and meaningful user experiences using advanced UX methodologies and AI tools.",
-    color: "from-bsd-orange/20 to-bsd-orange/5",
-    isFeatured: true,
-    duration: "4 years",
-    href: "/academics/b-des-interaction-and-experience-design"
-  }, 
-  {
     icon: <PenTool className="w-6 h-6 text-bsd-orange" />,
     title: "B.Sc Interior Design",
     description: "A 3-year program that combines aesthetic principles with functional design to create compelling and sustainable interior spaces.",
-    color: "from-bsd-gray/15 to-bsd-gray/5",
+    color: "from-bsd-orange/20 to-bsd-orange/5",
+    isFeatured: true,
     duration: "3 years",
     href: "/academics/bsc-interior-design"
-  }, 
+  },
   {
     icon: <Monitor className="w-6 h-6 text-bsd-orange" />,
     title: "BVA Graphic & Communication Design",
     description: "A 4-year program teaching visual storytelling, brand identity, and digital media design using industry-standard tools and AI-assisted workflows.",
-    color: "from-bsd-gray/15 to-bsd-gray/5",
+    color: "from-bsd-orange/20 to-bsd-orange/5",
+    isFeatured: true,
     duration: "4 years",
     href: "/academics/bva-graphic-design"
-  }, 
+  },
   {
     icon: <Gamepad className="w-6 h-6 text-bsd-orange" />,
     title: "BVA Animation & Game Design",
@@ -63,7 +47,7 @@ const undergraduatePrograms: Program[] = [
     color: "from-bsd-gray/15 to-bsd-gray/5",
     duration: "4 years",
     href: "/bva-animation-and-multimedia-game-design"
-  }, 
+  },
   {
     icon: <Code className="w-6 h-6 text-bsd-orange" />,
     title: "BCA with UI/UX & AI/ML",
@@ -72,7 +56,7 @@ const undergraduatePrograms: Program[] = [
     duration: "3 years",
     addons: "UI/UX & AI/ML",
     href: "/academics/b-computer-application-ui-ux"
-  }, 
+  },
   {
     icon: <Cpu className="w-6 h-6 text-bsd-orange" />,
     title: "B.Sc Computer Science",
