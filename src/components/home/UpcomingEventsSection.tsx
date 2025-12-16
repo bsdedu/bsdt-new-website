@@ -20,13 +20,13 @@ export const UpcomingEventsSection: React.FC = () => {
   const upcomingEvents: Event[] = [
     {
       id: "1",
-      title: "Freshers Day",
+      title: "OPEN DAY",
       type: "open-day",
-      date: "16th August, 2025",
-      time: "10AM to 2PM",
-      description: "Welcome new students to BSD with fun activities, orientation sessions, and networking opportunities. Start your design journey with your fellow freshers!",
+      date: "7th February, 2026",
+      time: "10AM to 4PM",
+      description: "Experience our campus, meet faculty & explore programs. Join us for this special occasion designed for prospective students and their families.",
       imageSrc: "/lovable-uploads/4e0c1fb9-f311-4f95-a90f-cc833365c95c.png",
-      registerLink: "/register-freshers",
+      registerLink: "https://www.bsd.edu.in/open-day",
       featured: true
     },
     {
@@ -68,22 +68,32 @@ export const UpcomingEventsSection: React.FC = () => {
 
         <RevealSection delay={200}>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {upcomingEvents.map(event => <Card key={event.id} isHoverable className={`overflow-hidden ${event.featured ? 'border-bsd-orange/20 shadow' : ''}`}>
-                <div className="relative h-64 sm:h-80 md:h-96 overflow-hidden">
-                  <img src={event.imageSrc} alt={event.title} className="w-full h-full object-cover object-right transition-transform duration-500 hover:scale-105" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex flex-col justify-end p-6">
-                    <h3 className="text-xl md:text-2xl font-semibold text-white mb-2">{event.title}</h3>
-                    <div className="flex items-center gap-2 text-white">
-                      <Calendar className="w-4 h-4" />
-                      <span className="text-sm font-medium">{event.date} | {event.time}</span>
+            {upcomingEvents.map(event => (
+              <a 
+                key={event.id}
+                href={event.registerLink}
+                target={event.registerLink.startsWith('http') ? '_blank' : '_self'}
+                rel={event.registerLink.startsWith('http') ? 'noopener noreferrer' : undefined}
+                className="block"
+              >
+                <Card isHoverable className={`overflow-hidden ${event.featured ? 'border-bsd-orange/20 shadow' : ''}`}>
+                  <div className="relative h-64 sm:h-80 md:h-96 overflow-hidden">
+                    <img src={event.imageSrc} alt={event.title} className="w-full h-full object-cover object-right transition-transform duration-500 hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex flex-col justify-end p-6">
+                      <h3 className="text-xl md:text-2xl font-semibold text-white mb-2">{event.title}</h3>
+                      <div className="flex items-center gap-2 text-white">
+                        <Calendar className="w-4 h-4" />
+                        <span className="text-sm font-medium">{event.date} | {event.time}</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-                
-                <CardContent className="p-6">
-                  <p className="text-bsd-gray/80">{event.description}</p>
-                </CardContent>
-              </Card>)}
+                  
+                  <CardContent className="p-6">
+                    <p className="text-bsd-gray/80">{event.description}</p>
+                  </CardContent>
+                </Card>
+              </a>
+            ))}
           </div>
 
           <div className="flex justify-center mt-12">
