@@ -28,7 +28,7 @@ const OpenDay = () => {
                   <span className="text-white">OPEN DAY</span>
                 </h1>
                 <p className="text-2xl md:text-3xl font-semibold mb-4">
-                  Thursday, 5th February 2026
+                  Friday, 7th February 2026
                 </p>
                 <p className="text-lg md:text-xl opacity-90">
                   Citrine Hotel, Sheshadripuram, Bangalore
@@ -56,7 +56,7 @@ const OpenDay = () => {
                     Open Day 2026
                   </h2>
                   <p className="text-muted-foreground mb-4 leading-relaxed">
-                    We are delighted to announce our upcoming Open Day Event, scheduled for Thursday, 5th February 2026. This special occasion is designed for prospective students and their families, providing a unique opportunity to explore all that BSDT has to offer.
+                    We are delighted to announce our upcoming Open Day Event, scheduled for Friday, 7th February 2026. This special occasion is designed for prospective students and their families, providing a unique opportunity to explore all that BSDT has to offer.
                   </p>
                   <p className="text-muted-foreground mb-4 leading-relaxed">
                     During the Open Day, attendees will have the chance to tour our campus, engage with faculty and staff, and gain valuable insights into our diverse range of design programs. Participants will also learn about our commitment to academic excellence, student support services, and the vibrant community life that defines BSDT.
@@ -220,7 +220,7 @@ const OpenDay = () => {
                   <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-muted-foreground">
                     <div className="flex items-center gap-2">
                       <Calendar className="w-5 h-5 text-bsd-orange" />
-                      <span>Thursday, 5th February 2026</span>
+                      <span>Friday, 7th February 2026</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Clock className="w-5 h-5 text-bsd-orange" />

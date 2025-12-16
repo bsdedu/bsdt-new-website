@@ -45,7 +45,7 @@ export const OpenDayPopup = () => {
         <div className="space-y-4 py-4">
           <div className="flex items-center gap-3 text-foreground">
             <Calendar className="h-5 w-5 text-bsd-orange" />
-            <span className="font-medium">Thursday, 5th February, 2026</span>
+            <span className="font-medium">Friday, 7th February, 2026</span>
           </div>
           
           <div className="flex items-center gap-3 text-foreground">
