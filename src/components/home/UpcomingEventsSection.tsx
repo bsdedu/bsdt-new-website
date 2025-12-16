@@ -31,7 +31,7 @@ export const UpcomingEventsSection: React.FC = () => {
       time: "10AM to 4PM",
       description: "Experience our campus, meet faculty & explore programs. Join us for this special occasion designed for prospective students and their families.",
       imageSrc: "/lovable-uploads/open-day-event.png",
-      registerLink: "https://www.bsd.edu.in/open-day",
+      registerLink: "/open-day",
       featured: true
     },
     {
