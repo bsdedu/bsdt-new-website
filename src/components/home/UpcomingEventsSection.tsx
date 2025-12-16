@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "../ui-elements/Card";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
-import { Calendar } from "lucide-react";
+import { Calendar, ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "../ui/button";
+
 interface Event {
   id: string;
   title: string;
@@ -16,7 +17,11 @@ interface Event {
   registerLink: string;
   featured?: boolean;
 }
+
 export const UpcomingEventsSection: React.FC = () => {
+  const [showAllEvents, setShowAllEvents] = useState(false);
+  const moreEventsRef = useRef<HTMLDivElement>(null);
+
   const upcomingEvents: Event[] = [
     {
       id: "1",
@@ -50,6 +55,76 @@ export const UpcomingEventsSection: React.FC = () => {
       registerLink: "/register-mozaic"
     }
   ];
+
+  const additionalEvents: Event[] = [
+    {
+      id: "4",
+      title: "Designuru 2025",
+      type: "open-day",
+      date: "15th November, 2025",
+      time: "10:00 AM - 6:00 PM",
+      description: "Bangalore's premier design conference bringing together industry experts, alumni, and students for inspiring talks, workshops, and networking opportunities.",
+      imageSrc: "/placeholder.svg",
+      registerLink: "/register-designuru"
+    },
+    {
+      id: "5",
+      title: "Sports Day",
+      type: "open-day",
+      date: "20th December, 2025",
+      time: "8:00 AM - 5:00 PM",
+      description: "Annual sports day celebrating athletic excellence and team spirit. Featuring inter-batch competitions, fun games, and awards ceremony.",
+      imageSrc: "/placeholder.svg",
+      registerLink: "/register-sports-day"
+    },
+    {
+      id: "6",
+      title: "End-Sem Jury",
+      type: "open-day",
+      date: "10th January, 2026",
+      time: "9:00 AM - 4:00 PM",
+      description: "Semester-end jury presentations showcasing student projects across all programs. An opportunity to witness creative excellence and innovative design solutions.",
+      imageSrc: "/placeholder.svg",
+      registerLink: "/register-end-sem-jury"
+    }
+  ];
+
+  const handleViewAllEvents = () => {
+    setShowAllEvents(!showAllEvents);
+    if (!showAllEvents) {
+      setTimeout(() => {
+        moreEventsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  };
+
+  const renderEventCard = (event: Event) => (
+    <a 
+      key={event.id}
+      href={event.registerLink}
+      target={event.registerLink.startsWith('http') ? '_blank' : '_self'}
+      rel={event.registerLink.startsWith('http') ? 'noopener noreferrer' : undefined}
+      className="block"
+    >
+      <Card isHoverable className={`overflow-hidden ${event.featured ? 'border-bsd-orange/20 shadow' : ''}`}>
+        <div className="relative h-64 sm:h-80 md:h-96 overflow-hidden">
+          <img src={event.imageSrc} alt={event.title} className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex flex-col justify-end p-6">
+            <h3 className="text-xl md:text-2xl font-semibold text-white mb-2">{event.title}</h3>
+            <div className="flex items-center gap-2 text-white">
+              <Calendar className="w-4 h-4" />
+              <span className="text-sm font-medium">{event.date} | {event.time}</span>
+            </div>
+          </div>
+        </div>
+        
+        <CardContent className="p-6">
+          <p className="text-bsd-gray/80">{event.description}</p>
+        </CardContent>
+      </Card>
+    </a>
+  );
+
   return <section id="events" className="bg-[#F6F6F7] py-[30px]">
       <div className="container mx-auto px-6 md:px-8 max-w-6xl">
         <RevealSection>
@@ -68,37 +143,30 @@ export const UpcomingEventsSection: React.FC = () => {
 
         <RevealSection delay={200}>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {upcomingEvents.map(event => (
-              <a 
-                key={event.id}
-                href={event.registerLink}
-                target={event.registerLink.startsWith('http') ? '_blank' : '_self'}
-                rel={event.registerLink.startsWith('http') ? 'noopener noreferrer' : undefined}
-                className="block"
-              >
-                <Card isHoverable className={`overflow-hidden ${event.featured ? 'border-bsd-orange/20 shadow' : ''}`}>
-                  <div className="relative h-64 sm:h-80 md:h-96 overflow-hidden">
-                    <img src={event.imageSrc} alt={event.title} className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex flex-col justify-end p-6">
-                      <h3 className="text-xl md:text-2xl font-semibold text-white mb-2">{event.title}</h3>
-                      <div className="flex items-center gap-2 text-white">
-                        <Calendar className="w-4 h-4" />
-                        <span className="text-sm font-medium">{event.date} | {event.time}</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <CardContent className="p-6">
-                    <p className="text-bsd-gray/80">{event.description}</p>
-                  </CardContent>
-                </Card>
-              </a>
-            ))}
+            {upcomingEvents.map(renderEventCard)}
           </div>
 
+          {showAllEvents && (
+            <div ref={moreEventsRef} className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
+              {additionalEvents.map(renderEventCard)}
+            </div>
+          )}
+
           <div className="flex justify-center mt-12">
-            <Button variant="outline" className="border-bsd-orange/30 text-bsd-gray hover:bg-bsd-orange/10">
-              View All Events
+            <Button 
+              variant="outline" 
+              className="border-bsd-orange/30 text-bsd-gray hover:bg-bsd-orange/10"
+              onClick={handleViewAllEvents}
+            >
+              {showAllEvents ? (
+                <>
+                  Show Less <ChevronUp className="ml-2 w-4 h-4" />
+                </>
+              ) : (
+                <>
+                  View All Events <ChevronDown className="ml-2 w-4 h-4" />
+                </>
+              )}
             </Button>
           </div>
         </RevealSection>
