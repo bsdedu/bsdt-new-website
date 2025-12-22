@@ -114,8 +114,8 @@ const Index = () => {
             />
           </div>
           
-          <HeroSection />
           <AdmissionsBanner />
+          <HeroSection />
           <ProgramsSection />
           <InfoGraphicsSection />
           <WhyChooseSection />
