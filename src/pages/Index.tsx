@@ -97,7 +97,6 @@ const Index = () => {
       
       <div className={`min-h-screen flex flex-col transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
         <Navbar />
-        <AdmissionsBanner />
         
         <main>
           <div className="fixed inset-0 -z-50 overflow-hidden pointer-events-none">
