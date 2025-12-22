@@ -10,10 +10,10 @@ export const AdmissionsBanner = () => {
 
   return (
     <div className="block">
-      <section className="relative overflow-hidden bg-bsd-orange py-16 transition-colors">
-        <div className="flex flex-col items-center justify-center gap-8 text-center">
+      <section className="relative overflow-hidden bg-bsd-orange py-4 transition-colors">
+        <div className="flex flex-col items-center justify-center gap-3 text-center">
           {/* Scrolling Header */}
-          <div className="w-full overflow-hidden -mt-8">
+          <div className="w-full overflow-hidden">
             <div className="flex whitespace-nowrap">
               <motion.div
                 animate={{
@@ -35,7 +35,7 @@ export const AdmissionsBanner = () => {
                     href="https://bangaloreschoolofdesigntech.edmingle.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-4xl md:text-5xl font-bold text-[#00008B] tracking-wide hover:opacity-80 transition-opacity"
+                    className="text-xl md:text-2xl font-bold text-[#00008B] tracking-wide hover:opacity-80 transition-opacity"
                   >
                     ADMISSIONS OPEN FOR DIPLOMA HYBRID PROGRAMS
                   </a>
@@ -43,54 +43,25 @@ export const AdmissionsBanner = () => {
               </motion.div>
             </div>
           </div>
-
-          {/* Secondary Scrolling Text - Same Direction */}
-          <div className="w-full overflow-hidden mt-4">
-            <div className="flex whitespace-nowrap">
-              <motion.div
-                animate={{
-                  x: [0, -2000],
-                }}
-                transition={{
-                  x: {
-                    repeat: Infinity,
-                    repeatType: "loop",
-                    duration: 25,
-                    ease: "linear",
-                  },
-                }}
-                className="flex gap-16"
-              >
-                {[...Array(8)].map((_, i) => (
-                  <span 
-                    key={i} 
-                    className="text-2xl md:text-3xl font-bold text-[#00008B] tracking-wide"
-                  >
-                    Learn from anywhere via satellite centers across India
-                  </span>
-                ))}
-              </motion.div>
-            </div>
-          </div>
           
-          {/* Stationary Subtitle - Clickable Program Links */}
-          <div className="flex flex-wrap justify-center gap-4 px-4 mt-12 mb-8">
+          {/* Program Links */}
+          <div className="flex flex-wrap justify-center gap-2 px-4">
             {programs.map((program, index) => (
               <a
                 key={index}
                 href={program.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-[#00008B] px-8 py-4 rounded-full font-semibold text-base md:text-lg hover:bg-white/90 transition-colors"
+                className="bg-white text-[#00008B] px-4 py-2 rounded-full font-medium text-sm hover:bg-white/90 transition-colors"
               >
                 {program.name}
               </a>
             ))}
           </div>
           
-          {/* Stationary Footer */}
-          <p className="text-base md:text-lg text-[#00008B] text-center px-4 mt-12">
-            Our satellite partners in Delhi, Hyderabad, Coimbatore and Chattisgarh.
+          {/* Footer */}
+          <p className="text-xs md:text-sm text-[#00008B] text-center px-4">
+            Satellite partners in Delhi, Hyderabad, Coimbatore and Chattisgarh
           </p>
         </div>
       </section>
