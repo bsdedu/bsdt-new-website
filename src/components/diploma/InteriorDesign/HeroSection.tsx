@@ -1,13 +1,16 @@
+
 import React from 'react';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Monitor, Clock, Calendar, Award } from "lucide-react";
 import { Link } from 'react-router-dom';
+
 export const HeroSection: React.FC = () => {
-  return <section className="relative bg-gradient-to-b from-bsd-light-gray to-white py-20 overflow-hidden">
+  return (
+    <section className="relative bg-gradient-to-b from-bsd-light-gray to-white py-20 overflow-hidden">
       <div className="container mx-auto px-6 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6 mx-px my-[20px]">
+          <div className="space-y-6">
             <Badge variant="bsdOrange" className="mb-2">Hybrid Diploma Program</Badge>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-bsd-gray">
               Professional Diploma in<br />
@@ -39,7 +42,11 @@ export const HeroSection: React.FC = () => {
                   Download Brochure
                 </Button>
               </a>
-              <a href="https://apply.bsd.edu.in/" target="_blank" rel="noopener noreferrer">
+              <a 
+                href="https://apply.bsd.edu.in/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
                 <Button size="lg" variant="outline" className="border-bsd-orange text-bsd-orange hover:bg-bsd-orange/10">
                   Apply Now
                 </Button>
@@ -55,7 +62,11 @@ export const HeroSection: React.FC = () => {
               <div className="absolute top-0 right-0 w-24 h-24 bg-bsd-orange/10 rounded-bl-[100px]"></div>
               <div className="p-6">
                 <div className="rounded-xl overflow-hidden">
-                  <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80" alt="Interior Design Diploma" className="w-full h-[350px] object-cover" />
+                  <img 
+                    src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80" 
+                    alt="Interior Design Diploma" 
+                    className="w-full h-[350px] object-cover"
+                  />
                 </div>
                 
                 <div className="flex justify-center -mt-6">
@@ -70,5 +81,6 @@ export const HeroSection: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
