@@ -37,12 +37,7 @@ export const HeroSection: React.FC = () => {
             </div>
             
             <div className="flex flex-wrap gap-4 pt-4">
-              <a 
-                href="/brochures/Diploma_in_Interior_Design_Brochure_2026.pdf" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                download
-              >
+              <a href="#enquiry-form">
                 <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white">
                   Download Brochure
                 </Button>
