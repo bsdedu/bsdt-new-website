@@ -28,11 +28,6 @@ export const HeroSection: React.FC = () => {
     title: "Open Day (2026)",
     subtitle: "International Mentorship",
     description: "\"Your future starts here. 🚀 Step inside, explore our campus, and see where your passion can take you. #OpenDay #FutureReady\""
-  }, {
-    image: "/lovable-uploads/4825af86-9e9e-4ba0-9f35-6dc7889f93ad.png",
-    title: "Celebrate Your Success",
-    subtitle: "95% Placement Rate",
-    description: "Join our legacy of successful graduates who are now leading designers at top companies worldwide."
   }];
   const startAutoPlay = useCallback(() => {
     if (intervalRef.current) {
