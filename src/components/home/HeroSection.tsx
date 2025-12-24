@@ -18,7 +18,7 @@ export const HeroSection: React.FC = () => {
   const heroSlides: HeroSlide[] = [
     {
       image: "/lovable-uploads/fc9c4875-4b4b-44a9-b8ad-3eb5db1ed2cc.png",
-      title: "UG ADMISSIONS OPEN",
+      title: "2026\nUG ADMISSIONS OPEN",
       subtitle: "Admissions Open 2025-26",
       description: "\"Your blueprint for a successful creative career.\""
     },
@@ -113,7 +113,7 @@ export const HeroSection: React.FC = () => {
                 {currentSlideData.subtitle}
               </span>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-tight mb-4">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-tight mb-4 whitespace-pre-line">
                 {currentSlideData.title}
               </h1>
               
