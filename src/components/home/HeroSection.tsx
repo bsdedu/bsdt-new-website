@@ -112,7 +112,7 @@ export const HeroSection: React.FC = () => {
                   });
                 }
               }}>
-                  Explore Programs
+                  ​Learn more  
                 </Button>
               </div>
             </div>
