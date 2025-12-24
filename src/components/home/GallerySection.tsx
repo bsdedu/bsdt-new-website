@@ -638,18 +638,6 @@ export const GallerySection: React.FC = () => {
           </Tabs>
         </RevealSection>
 
-        <RevealSection delay={300}>
-          <div className="mt-16 text-center">
-            <a 
-              href="#" 
-              className="inline-flex items-center text-sm font-medium text-bsd-orange hover:text-bsd-orange/80 transition-colors"
-            >
-              <span className="border-b border-current transition-all duration-300 hover:pb-1">
-                View Full Gallery
-              </span>
-            </a>
-          </div>
-        </RevealSection>
       </div>
 
       {/* YouTube Video Modal */}
