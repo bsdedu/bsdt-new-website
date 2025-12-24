@@ -133,7 +133,7 @@ export const HeroSection: React.FC = () => {
                   size="lg"
                   variant="outline"
                   className="border-2 border-[#f5f5f0] bg-[#f5f5f0] text-black hover:bg-white hover:border-white transition-all duration-300 font-semibold px-8"
-                  onClick={() => window.location.href = '/apply'}
+                  onClick={() => window.open("https://apply.bsd.edu.in/", "_blank", "noopener noreferrer")}
                 >
                   APPLY NOW
                 </Button>
