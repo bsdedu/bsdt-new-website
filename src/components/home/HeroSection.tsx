@@ -113,15 +113,8 @@ export const HeroSection: React.FC = () => {
                 {currentSlideData.subtitle}
               </span>
               
-              <h1 className="font-display font-bold text-white leading-tight mb-4">
-                {currentSlideData.title.includes('\n') ? (
-                  <>
-                    <span className="block text-5xl md:text-6xl lg:text-7xl">{currentSlideData.title.split('\n')[0]}</span>
-                    <span className="block text-2xl md:text-3xl lg:text-4xl mt-2">{currentSlideData.title.split('\n')[1]}</span>
-                  </>
-                ) : (
-                  <span className="text-4xl md:text-5xl lg:text-6xl">{currentSlideData.title}</span>
-                )}
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-tight mb-4 whitespace-pre-line">
+                {currentSlideData.title}
               </h1>
               
               <p className="text-lg text-white/80 mb-8">
