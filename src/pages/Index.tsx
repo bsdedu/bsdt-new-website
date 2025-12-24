@@ -16,7 +16,7 @@ import { FloatingEnquiryForm } from '../components/ui-elements/FloatingEnquiryFo
 import { AdmissionsBanner } from '../components/home/AdmissionsBanner';
 import { OpenDayPopup } from '../components/home/OpenDayPopup';
 
-import { FloatingWhatsApp } from '../components/home/FloatingWhatsApp';
+
 
 const Index = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -127,7 +127,7 @@ const Index = () => {
           <EnquiryFormSection /> 
           <FloatingEnquiryForm />
           
-          <FloatingWhatsApp />
+          
           <OpenDayPopup />
         </main>
         
