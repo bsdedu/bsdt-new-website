@@ -94,7 +94,7 @@ export const HeroSection: React.FC = () => {
               
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" variant="outline" className="border-2 border-[#f5f5f0] bg-[#f5f5f0] text-black hover:bg-white hover:border-white transition-all duration-300 font-semibold px-8" onClick={() => window.open("https://apply.bsd.edu.in/", "_blank", "noopener noreferrer")}>
-                  APPLY NOW
+                  {currentSlide === 2 ? "REGISTER NOW" : "APPLY NOW"}
                 </Button>
                 <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-8" onClick={() => {
                 const section = document.getElementById('programs');
