@@ -23,16 +23,16 @@ export const HeroSection: React.FC = () => {
       description: "\"Your blueprint for a successful creative career.\""
     },
     {
-      image: "/lovable-uploads/0ae77c0c-8ef4-404c-abf0-bb90598dfbf4.png",
-      title: "Learn from Industry Experts",
-      subtitle: "International Mentorship",
-      description: "Get mentored by world-class designers and industry professionals who bring real-world experience to your learning journey."
-    },
-    {
       image: "/lovable-uploads/e48b8c13-052e-4d80-ada8-db3eaf003d21.png",
       title: "Hybrid Diploma Programs",
       subtitle: "Learn From Anywhere",
       description: "Learn From Anywhere\nSatellite Partners In Delhi, Chhattisgarh, Coimbatore And Raipur"
+    },
+    {
+      image: "/lovable-uploads/0ae77c0c-8ef4-404c-abf0-bb90598dfbf4.png",
+      title: "Learn from Industry Experts",
+      subtitle: "International Mentorship",
+      description: "Get mentored by world-class designers and industry professionals who bring real-world experience to your learning journey."
     },
     {
       image: "/lovable-uploads/4825af86-9e9e-4ba0-9f35-6dc7889f93ad.png",
