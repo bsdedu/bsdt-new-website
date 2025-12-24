@@ -25,9 +25,9 @@ export const HeroSection: React.FC = () => {
     description: "Learn From Anywhere\nSatellite Partners In Delhi, Chhattisgarh, Coimbatore And Raipur"
   }, {
     image: "/lovable-uploads/0ae77c0c-8ef4-404c-abf0-bb90598dfbf4.png",
-    title: "Open Day (2026)",
+    title: "Learn from Industry Experts",
     subtitle: "International Mentorship",
-    description: "\"Your future starts here. 🚀 Step inside, explore our campus, and see where your passion can take you. #OpenDay #FutureReady\""
+    description: "Get mentored by world-class designers and industry professionals who bring real-world experience to your learning journey."
   }, {
     image: "/lovable-uploads/4825af86-9e9e-4ba0-9f35-6dc7889f93ad.png",
     title: "Celebrate Your Success",
@@ -93,8 +93,8 @@ export const HeroSection: React.FC = () => {
               </p>
               
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" variant="outline" className="border-2 border-[#f5f5f0] bg-[#f5f5f0] text-black hover:bg-white hover:border-white transition-all duration-300 font-semibold px-8" onClick={() => window.open(currentSlide === 2 ? "https://docs.google.com/forms/d/e/1FAIpQLSfJHlSTNhMYjU9ulXi8JiPPJQW1Jw-C_JiUe7WGiIHIOpKe3Q/viewform" : "https://apply.bsd.edu.in/", "_blank", "noopener noreferrer")}>
-                  {currentSlide === 2 ? "REGISTER NOW" : "APPLY NOW"}
+                <Button size="lg" variant="outline" className="border-2 border-[#f5f5f0] bg-[#f5f5f0] text-black hover:bg-white hover:border-white transition-all duration-300 font-semibold px-8" onClick={() => window.open("https://apply.bsd.edu.in/", "_blank", "noopener noreferrer")}>
+                  APPLY NOW
                 </Button>
                 <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-8" onClick={() => {
                 const section = document.getElementById('programs');
@@ -112,7 +112,7 @@ export const HeroSection: React.FC = () => {
                   });
                 }
               }}>
-                  Explore Programs
+                  ​Learn more  
                 </Button>
               </div>
             </div>
