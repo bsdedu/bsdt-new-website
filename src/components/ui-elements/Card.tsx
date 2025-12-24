@@ -22,7 +22,7 @@ export const Card: React.FC<CardProps> = ({
       className={cn(
         "rounded-2xl overflow-hidden bg-white shadow-sm border border-border/40",
         "transition-all duration-300 ease-out",
-        isHoverable && "hover:shadow-md hover:-translate-y-1 hover:border-bsd-orange/20",
+        isHoverable && "hover:shadow-lg hover:-translate-y-1.5 hover:border-bsd-orange/30 hover:bg-gradient-to-br hover:from-white hover:to-bsd-orange/5 cursor-pointer",
         className
       )}
       onMouseEnter={onMouseEnter}
