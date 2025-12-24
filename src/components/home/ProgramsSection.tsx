@@ -177,7 +177,7 @@ export const ProgramsSection: React.FC = () => {
             </TabsContent>
 
             <TabsContent value="diploma" className="mt-0">
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
                 {diplomaPrograms.map((program) => (
                   <Link key={program.title} to={program.href} className="block h-full">
                     <Card isHoverable className={program.isFeatured ? "border-bsd-orange/20 shadow-md h-full" : "h-full"}>
