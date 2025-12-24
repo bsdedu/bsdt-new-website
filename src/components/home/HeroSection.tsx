@@ -26,7 +26,7 @@ export const HeroSection: React.FC = () => {
   }, {
     image: "/lovable-uploads/0ae77c0c-8ef4-404c-abf0-bb90598dfbf4.png",
     title: "Learn from Industry Experts",
-    subtitle: "International Mentorship",
+    subtitle: "Open Day 2026",
     description: "Get mentored by world-class designers and industry professionals who bring real-world experience to your learning journey."
   }, {
     image: "/lovable-uploads/4825af86-9e9e-4ba0-9f35-6dc7889f93ad.png",
