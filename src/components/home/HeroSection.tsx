@@ -99,6 +99,13 @@ export const HeroSection: React.FC = () => {
                 <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-8" onClick={() => {
                 const section = document.getElementById('programs');
                 if (section) {
+                  // If on Hybrid Diploma slide, trigger the diploma tab
+                  if (currentSlide === 1) {
+                    const diplomaTab = document.querySelector('[data-value="diploma"]') as HTMLButtonElement;
+                    if (diplomaTab) {
+                      diplomaTab.click();
+                    }
+                  }
                   window.scrollTo({
                     top: section.offsetTop - 80,
                     behavior: 'smooth'
