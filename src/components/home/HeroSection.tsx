@@ -132,7 +132,7 @@ export const HeroSection: React.FC = () => {
             <p className="text-sm text-white/70 hidden md:block">Affiliations & Academic Partnerships</p>
             <div className="flex items-center gap-6 lg:gap-10 w-full md:w-auto justify-center md:justify-end overflow-x-auto no-scrollbar">
               <div className="flex flex-col items-center justify-center flex-shrink-0">
-                <img src="/lovable-uploads/b6c8d2f5-ebe8-45b6-98da-bacea2355570.png" alt="Bengaluru North University Logo" className="h-5 md:h-6 object-contain brightness-0 invert" />
+                <img src="/lovable-uploads/b6c8d2f5-ebe8-45b6-98da-bacea2355570.png" alt="Bengaluru North University Logo" className="h-5 md:h-6 object-contain brightness-0 invert opacity-90" />
               </div>
               <div className="flex-shrink-0 flex items-center justify-center">
                 <img src="/lovable-uploads/f284706f-8b61-4bc4-a155-140c043df786.png" alt="College de Paris Logo" className="h-6 md:h-8 object-contain brightness-0 invert opacity-80" />
