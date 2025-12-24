@@ -162,8 +162,8 @@ export const ProgramsSection: React.FC = () => {
           <Tabs defaultValue="undergraduate" value={activeTab} onValueChange={setActiveTab} className="w-full">
             <div className="flex justify-center mb-8">
               <TabsList className="grid grid-cols-2 w-full max-w-md">
-                <TabsTrigger value="undergraduate">Undergraduate</TabsTrigger>
-                <TabsTrigger value="diploma">Diploma Programs</TabsTrigger>
+                <TabsTrigger value="undergraduate" data-value="undergraduate">Undergraduate</TabsTrigger>
+                <TabsTrigger value="diploma" data-value="diploma">Diploma Programs</TabsTrigger>
               </TabsList>
             </div>
 
