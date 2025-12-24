@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader } from "../ui-elements/Card";
 import { RevealSection } from "../ui-elements/RevealSection";
-import { PenTool, Code, Gamepad, Cpu, Building2, LayoutDashboard, Monitor, GraduationCap, Recycle, Bot, Armchair } from "lucide-react";
+import { PenTool, Code, Gamepad, Cpu, Building2, LayoutDashboard, Monitor, GraduationCap, Recycle, Bot, Armchair, Sofa } from "lucide-react";
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -47,6 +47,14 @@ const undergraduatePrograms: Program[] = [
     color: "from-bsd-gray/15 to-bsd-gray/5",
     duration: "4 years",
     href: "/bva-animation-and-multimedia-game-design"
+  },
+  {
+    icon: <Sofa className="w-6 h-6 text-bsd-orange" />,
+    title: "BVA Interior & Spatial Design",
+    description: "A 4-year program focusing on creating innovative interior environments, spatial planning, and experiential design with sustainability principles.",
+    color: "from-bsd-orange/20 to-bsd-orange/5",
+    duration: "4 years",
+    href: "/academics/bva-interior-spatial-design"
   },
   {
     icon: <Code className="w-6 h-6 text-bsd-orange" />,
