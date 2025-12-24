@@ -97,6 +97,10 @@ export const HeroSection: React.FC = () => {
                   {currentSlide === 2 ? "REGISTER NOW" : "APPLY NOW"}
                 </Button>
                 <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-8" onClick={() => {
+                if (currentSlide === 2) {
+                  window.open("https://www.bsd.edu.in/open-day", "_blank", "noopener noreferrer");
+                  return;
+                }
                 const section = document.getElementById('programs');
                 if (section) {
                   // If on Hybrid Diploma slide, trigger the diploma tab
