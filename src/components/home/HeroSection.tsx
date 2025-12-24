@@ -125,7 +125,7 @@ export const HeroSection: React.FC = () => {
                 <Button 
                   size="lg"
                   variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300 font-semibold px-8"
+                  className="border-2 border-[#f5f5f0] bg-[#f5f5f0] text-black hover:bg-white hover:border-white transition-all duration-300 font-semibold px-8"
                   onClick={() => window.location.href = '/apply'}
                 >
                   APPLY NOW
