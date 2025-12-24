@@ -30,7 +30,7 @@ export const HeroSection: React.FC = () => {
     },
     {
       image: "/lovable-uploads/e48b8c13-052e-4d80-ada8-db3eaf003d21.png",
-      title: "HYBRID DIPLOMA PROGRAMS",
+      title: "Innovate with Technology",
       subtitle: "AI-Enhanced Learning",
       description: "Experience cutting-edge curriculum that blends creativity with technology, preparing you for the future of design."
     },
