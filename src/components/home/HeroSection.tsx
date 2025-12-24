@@ -19,7 +19,7 @@ export const HeroSection: React.FC = () => {
     {
       image: "/lovable-uploads/fc9c4875-4b4b-44a9-b8ad-3eb5db1ed2cc.png",
       title: "2026\nUG ADMISSIONS OPEN",
-      subtitle: "Admissions Open 2025-26",
+      subtitle: "Admissions Open 2026-27",
       description: "\"Your blueprint for a successful creative career.\""
     },
     {
