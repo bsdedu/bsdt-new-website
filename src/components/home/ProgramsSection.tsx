@@ -27,7 +27,6 @@ const undergraduatePrograms: Program[] = [
     title: "B.Sc Interior Design",
     description: "A 3-year program that combines aesthetic principles with functional design to create compelling and sustainable interior spaces.",
     color: "from-bsd-orange/20 to-bsd-orange/5",
-    isFeatured: true,
     duration: "3 years",
     href: "/academics/bsc-interior-design"
   },
@@ -36,7 +35,6 @@ const undergraduatePrograms: Program[] = [
     title: "BVA Graphic & Communication Design",
     description: "A 4-year program teaching visual storytelling, brand identity, and digital media design using industry-standard tools and AI-assisted workflows.",
     color: "from-bsd-orange/20 to-bsd-orange/5",
-    isFeatured: true,
     duration: "4 years",
     href: "/academics/bva-graphic-design"
   },
