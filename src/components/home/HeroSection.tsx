@@ -32,7 +32,7 @@ export const HeroSection: React.FC = () => {
       image: "/lovable-uploads/e48b8c13-052e-4d80-ada8-db3eaf003d21.png",
       title: "Hybrid Diploma Programs",
       subtitle: "AI-Enhanced Learning",
-      description: "Experience cutting-edge curriculum that blends creativity with technology, preparing you for the future of design."
+      description: "Learn From Anywhere\nSatellite Partners In Delhi, Chhattisgarh, Coimbatore And Raipur"
     },
     {
       image: "/lovable-uploads/4825af86-9e9e-4ba0-9f35-6dc7889f93ad.png",
