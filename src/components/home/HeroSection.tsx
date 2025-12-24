@@ -27,7 +27,7 @@ export const HeroSection: React.FC = () => {
     image: "/lovable-uploads/0ae77c0c-8ef4-404c-abf0-bb90598dfbf4.png",
     title: "Open Day (2026)",
     subtitle: "International Mentorship",
-    description: "Get mentored by world-class designers and industry professionals who bring real-world experience to your learning journey."
+    description: "\"Your future starts here. 🚀 Step inside, explore our campus, and see where your passion can take you. #OpenDay #FutureReady\""
   }, {
     image: "/lovable-uploads/4825af86-9e9e-4ba0-9f35-6dc7889f93ad.png",
     title: "Celebrate Your Success",
