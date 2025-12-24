@@ -80,7 +80,6 @@ const diplomaPrograms: Program[] = [
     title: "Professional Diploma in Interior Design",
     description: "A professional diploma program focused on teaching interior design principles, space planning, and material selection for various environments. Available in Online & Offline modes.",
     color: "from-bsd-orange/20 to-bsd-orange/5",
-    isFeatured: true,
     duration: "8 months",
     href: "/academics/professional-diploma-in-interior-design"
   },
@@ -89,7 +88,6 @@ const diplomaPrograms: Program[] = [
     title: "Professional Diploma in Visual Communication + UI & UX",
     description: "An integrated program combining visual communication fundamentals with user interface and experience design principles for digital platforms. Available in Online & Offline modes.",
     color: "from-bsd-orange/20 to-bsd-orange/5",
-    isFeatured: true,
     duration: "8 months",
     href: "/academics/professional-diploma-graphics-design-ui-ux"
   },
