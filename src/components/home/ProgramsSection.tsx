@@ -168,40 +168,32 @@ export const ProgramsSection: React.FC = () => {
             </div>
 
             <TabsContent value="undergraduate" className="mt-0">
-              <Carousel className="w-full">
-                <CarouselContent>
-                  {undergraduatePrograms.map((program) => (
-                    <CarouselItem key={program.title} className="md:basis-1/2 lg:basis-1/3">
-                      <Link to={program.href} className="block h-full">
-                        <Card isHoverable className={program.isFeatured ? "border-bsd-orange/20 shadow-md h-full" : "h-full"}>
-                          <CardHeader>
-                            <div className={cn("w-12 h-12 rounded-xl flex items-center justify-center mb-4", "bg-gradient-to-br", program.color)}>
-                              {program.icon}
-                            </div>
-                            <div className="flex flex-wrap items-start gap-2">
-                              <h3 className="text-xl font-semibold text-bsd-gray">{program.title}</h3>
-                              {program.isFeatured && <Badge variant="bsdOrange" className="text-[10px]">Featured</Badge>}
-                              {program.duration && <Badge variant="outline" className="text-[10px] bg-white/50">{program.duration}</Badge>}
-                            </div>
-                            {program.addons && (
-                              <p className="text-sm text-bsd-orange font-medium mt-1">
-                                Specializations: {program.addons}
-                              </p>
-                            )}
-                          </CardHeader>
-                          <CardContent>
-                            <p className="text-foreground/70">{program.description}</p>
-                          </CardContent>
-                        </Card>
-                      </Link>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <div className="flex justify-center mt-4">
-                  <CarouselPrevious className="relative static left-0 right-auto translate-y-0 mr-2" />
-                  <CarouselNext className="relative static left-0 right-auto translate-y-0" />
-                </div>
-              </Carousel>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {undergraduatePrograms.map((program) => (
+                  <Link key={program.title} to={program.href} className="block h-full">
+                    <Card isHoverable className={program.isFeatured ? "border-bsd-orange/20 shadow-md h-full" : "h-full"}>
+                      <CardHeader>
+                        <div className={cn("w-12 h-12 rounded-xl flex items-center justify-center mb-4", "bg-gradient-to-br", program.color)}>
+                          {program.icon}
+                        </div>
+                        <div className="flex flex-wrap items-start gap-2">
+                          <h3 className="text-xl font-semibold text-bsd-gray">{program.title}</h3>
+                          {program.isFeatured && <Badge variant="bsdOrange" className="text-[10px]">Featured</Badge>}
+                          {program.duration && <Badge variant="outline" className="text-[10px] bg-white/50">{program.duration}</Badge>}
+                        </div>
+                        {program.addons && (
+                          <p className="text-sm text-bsd-orange font-medium mt-1">
+                            Specializations: {program.addons}
+                          </p>
+                        )}
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-foreground/70">{program.description}</p>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                ))}
+              </div>
             </TabsContent>
 
             <TabsContent value="diploma" className="mt-0">
