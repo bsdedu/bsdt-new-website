@@ -104,7 +104,6 @@ const diplomaPrograms: Program[] = [
     title: "Master Diploma in Advanced Residential Design",
     description: "An advanced master-level diploma program for comprehensive interior design expertise, covering advanced space planning, project management, and design leadership. Available in Online & Offline modes.",
     color: "from-bsd-orange/20 to-bsd-orange/5",
-    isFeatured: true,
     duration: "12 months",
     href: "/academics/master-diploma-in-interior-design"
   },
