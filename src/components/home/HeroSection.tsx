@@ -20,7 +20,7 @@ export const HeroSection: React.FC = () => {
       image: "/lovable-uploads/fc9c4875-4b4b-44a9-b8ad-3eb5db1ed2cc.png",
       title: "UG ADMISSIONS OPEN",
       subtitle: "Admissions Open 2025-26",
-      description: "Join a community of designers, innovators, and technologists who are shaping the future through creativity and technical excellence."
+      description: "\"Your blueprint for a successful creative career.\""
     },
     {
       image: "/lovable-uploads/0ae77c0c-8ef4-404c-abf0-bb90598dfbf4.png",
