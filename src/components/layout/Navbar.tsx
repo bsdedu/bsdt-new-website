@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import { DesktopNav } from './navbar/DesktopNav';
 import { MobileNav } from './navbar/MobileNav';
 import { navStructure } from './navbar/navData';
-import { AdmissionsBanner } from '../home/AdmissionsBanner';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -56,11 +55,6 @@ export const Navbar: React.FC = () => {
           navStructure={navStructure}
         />
       </header>
-      
-      {/* Admissions Banner - positioned below the fixed navbar */}
-      <div className="pt-16 sm:pt-18 md:pt-20 lg:pt-24">
-        <AdmissionsBanner />
-      </div>
     </>
   );
 };
