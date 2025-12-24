@@ -26,7 +26,7 @@ export const HeroSection: React.FC = () => {
   }, {
     image: "/lovable-uploads/0ae77c0c-8ef4-404c-abf0-bb90598dfbf4.png",
     title: "Open Day (2026)",
-    subtitle: "International Mentorship",
+    subtitle: "Open Day 2026-2027",
     description: "\"Your future starts here. 🚀 Step inside, explore our campus, and see where your passion can take you. #OpenDay #FutureReady\""
   }];
   const startAutoPlay = useCallback(() => {
