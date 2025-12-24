@@ -18,7 +18,7 @@ export const HeroSection: React.FC = () => {
   const heroSlides: HeroSlide[] = [
     {
       image: "/lovable-uploads/fc9c4875-4b4b-44a9-b8ad-3eb5db1ed2cc.png",
-      title: "Design Your Future",
+      title: "UG ADMISSIONS OPEN",
       subtitle: "Admissions Open 2025-26",
       description: "Join a community of designers, innovators, and technologists who are shaping the future through creativity and technical excellence."
     },
