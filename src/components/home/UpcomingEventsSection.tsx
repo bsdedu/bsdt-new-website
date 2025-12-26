@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "../ui-elements/Card";
@@ -21,6 +22,7 @@ interface Event {
 export const UpcomingEventsSection: React.FC = () => {
   const [showAllEvents, setShowAllEvents] = useState(false);
   const moreEventsRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
   const upcomingEvents: Event[] = [
     {
@@ -156,17 +158,9 @@ export const UpcomingEventsSection: React.FC = () => {
             <Button 
               variant="outline" 
               className="border-bsd-orange/30 text-bsd-gray hover:bg-bsd-orange/10"
-              onClick={handleViewAllEvents}
+              onClick={() => navigate('/campus-life-events-activities')}
             >
-              {showAllEvents ? (
-                <>
-                  Show Less <ChevronUp className="ml-2 w-4 h-4" />
-                </>
-              ) : (
-                <>
-                  View All Events <ChevronDown className="ml-2 w-4 h-4" />
-                </>
-              )}
+              View All Events <ChevronDown className="ml-2 w-4 h-4" />
             </Button>
           </div>
         </RevealSection>
