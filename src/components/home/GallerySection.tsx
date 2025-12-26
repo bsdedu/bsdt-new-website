@@ -505,7 +505,7 @@ export const GallerySection: React.FC = () => {
               Experience Our Vibrant Campus
             </h2>
             <p className="mt-4 text-foreground/70">
-              From upcoming events and sports activities to creative showcases and student experiences, our campus life offers a perfect blend of academics and extracurricular activities.
+              From sports activities to creative showcases and student experiences, our campus life offers a perfect blend of academics and extracurricular activities.
             </p>
           </div>
         </RevealSection>
