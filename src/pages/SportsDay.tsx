@@ -18,6 +18,14 @@ const galleryImages = [
   { src: "/lovable-uploads/sports-day-9.jpg", alt: "Group photo of all participants celebrating" },
   { src: "/lovable-uploads/sports-day-10.jpg", alt: "Medal winners group photo with different house teams" },
   { src: "/lovable-uploads/sports-day-11.jpg", alt: "Cricket team celebrating with bat and jersey" },
+  { src: "/lovable-uploads/sports-day-12.jpg", alt: "Football match with players chasing the ball" },
+  { src: "/lovable-uploads/sports-day-13.jpg", alt: "Yellow team players in formation" },
+  { src: "/lovable-uploads/sports-day-14.jpg", alt: "Wide view of football field during match" },
+  { src: "/lovable-uploads/sports-day-15.jpg", alt: "Students playing carrom indoors" },
+  { src: "/lovable-uploads/sports-day-16.jpg", alt: "Cricket team strategy discussion" },
+  { src: "/lovable-uploads/sports-day-17.jpg", alt: "Students walking and relaxing on field" },
+  { src: "/lovable-uploads/sports-day-18.jpg", alt: "Two cricket batsmen on the field" },
+  { src: "/lovable-uploads/sports-day-19.jpg", alt: "Large group celebration with all teams" },
 ];
 
 const SportsDay = () => {
