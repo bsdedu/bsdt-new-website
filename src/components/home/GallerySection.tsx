@@ -18,28 +18,6 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 // Import testimonials data to use for Student Interviews
 import { testimonials } from './TestimonialsSection';
 
-// Updated Events & Activities data with complete upcoming events
-const eventsData = [
-  {
-    type: "image" as const,
-    category: "Events & Activities",
-    image: "/lovable-uploads/4e0c1fb9-f311-4f95-a90f-cc833365c95c.png",
-    caption: "**Freshers Day** - 16th August, 2025 | 10AM to 2PM - Welcome new students to BSD with fun activities, orientation sessions, and networking opportunities. Start your design journey with your fellow freshers!"
-  },
-  {
-    type: "image" as const,
-    category: "Events & Activities",
-    image: "/lovable-uploads/2c70e2d5-549c-43bd-bd5f-ef047b51dc10.png",
-    caption: "**Teachers Day** - 5th September, 2025 | 9:00 AM - 6:00 PM - Celebrate and honor our dedicated faculty members who shape the future designers. Join us for special presentations, appreciation events, and faculty showcases."
-  },
-  {
-    type: "image" as const,
-    category: "Events & Activities",
-    image: "/lovable-uploads/8405d26f-8d85-4e74-80b6-0ebc8ae470d3.png",
-    caption: "**Mozaic** - 12th October, 2025 | 11:00 AM - 8:00 PM - Our annual design festival showcasing student creativity through exhibitions, competitions, workshops, and cultural performances. Experience the vibrant design community at BSD."
-  }
-];
-
 // Gallery items array with the sports events images
 const galleryItems: {
   type: "image" | "video";
@@ -55,9 +33,6 @@ const galleryItems: {
   description?: string;
   techniques?: string[];
 }[] = [
-  // Events & Activities
-  ...eventsData,
-  
   // Sports Events images
   {
     type: "image",
@@ -262,13 +237,13 @@ const studentInterviewItems = testimonials.map(testimonial => ({
 const allGalleryItems = [...galleryItems, ...studentInterviewItems];
 
 // Updated categories to include Events & Activities
-const categories = ["All", "Events & Activities", "Sports Events", "Campus Life", "Student Work", "Student Interviews"];
+const categories = ["All", "Sports Events", "Campus Life", "Student Work", "Student Interviews"];
 
 export const GallerySection: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState("All");
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
-  const [expandedCategories, setExpandedCategories] = useState<string[]>(["Events & Activities"]);
+  const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
   const [expandedStudentWork, setExpandedStudentWork] = useState<number[]>([]);
 
   // Group items by category and take only the first item from each category for the "All" tab
