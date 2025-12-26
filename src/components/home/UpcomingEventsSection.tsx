@@ -1,10 +1,8 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "../ui-elements/Card";
-import { AnimatedButton } from "../ui-elements/AnimatedButton";
-import { Calendar, ChevronDown, ChevronUp } from "lucide-react";
-import { Button } from "../ui/button";
+import { Calendar } from "lucide-react";
 
 interface Event {
   id: string;
@@ -19,17 +17,14 @@ interface Event {
 }
 
 export const UpcomingEventsSection: React.FC = () => {
-  const [showAllEvents, setShowAllEvents] = useState(false);
-  const moreEventsRef = useRef<HTMLDivElement>(null);
-
-  const upcomingEvents: Event[] = [
+  const allEvents: Event[] = [
     {
       id: "1",
       title: "OPEN DAY",
       type: "open-day",
       date: "7th February, 2026",
       time: "10AM to 4PM",
-      description: "Experience our campus, meet faculty & explore programs. Join us for this special occasion designed for prospective students and their families.",
+      description: "Experience our campus, meet faculty & explore programs.",
       imageSrc: "/lovable-uploads/open-day-event.png",
       registerLink: "/open-day",
       featured: true
@@ -40,7 +35,7 @@ export const UpcomingEventsSection: React.FC = () => {
       type: "open-day",
       date: "11th - 14th December, 2025",
       time: "10:00 AM - 6:00 PM",
-      description: "Bangalore's premier design conference bringing together industry experts, alumni, and students for inspiring talks, workshops, and networking opportunities.",
+      description: "Bangalore's premier design conference with industry experts and workshops.",
       imageSrc: "/lovable-uploads/designuru-2025.jpg",
       registerLink: "/register-designuru"
     },
@@ -50,20 +45,17 @@ export const UpcomingEventsSection: React.FC = () => {
       type: "open-day",
       date: "November 2025",
       time: "9:00 AM - 4:00 PM",
-      description: "Semester-end jury presentations showcasing student projects across all programs. An opportunity to witness creative excellence and innovative design solutions.",
+      description: "Semester-end jury presentations showcasing student projects.",
       imageSrc: "/lovable-uploads/end-sem-jury.jpg",
       registerLink: "/register-end-sem-jury"
-    }
-  ];
-
-  const additionalEvents: Event[] = [
+    },
     {
       id: "4",
       title: "Sports Day",
       type: "open-day",
       date: "7th & 8th November, 2025",
       time: "8:00 AM - 5:00 PM",
-      description: "Annual sports day celebrating athletic excellence and team spirit. Featuring inter-batch competitions, fun games, and awards ceremony.",
+      description: "Annual sports day celebrating athletic excellence and team spirit.",
       imageSrc: "/lovable-uploads/sports-day.jpg",
       registerLink: "/register-sports-day"
     },
@@ -73,7 +65,7 @@ export const UpcomingEventsSection: React.FC = () => {
       type: "open-day",
       date: "5th September, 2025",
       time: "9:00 AM - 6:00 PM",
-      description: "Celebrate and honor our dedicated faculty members who shape the future designers. Join us for special presentations, appreciation events, and faculty showcases.",
+      description: "Celebrate and honor our dedicated faculty members.",
       imageSrc: "/lovable-uploads/2c70e2d5-549c-43bd-bd5f-ef047b51dc10.png",
       registerLink: "/register-teachers-day"
     },
@@ -83,20 +75,11 @@ export const UpcomingEventsSection: React.FC = () => {
       type: "open-day", 
       date: "12th October, 2025",
       time: "11:00 AM - 8:00 PM",
-      description: "Our annual design festival showcasing student creativity through exhibitions, competitions, workshops, and cultural performances. Experience the vibrant design community at BSD.",
+      description: "Our annual design festival with exhibitions and performances.",
       imageSrc: "/lovable-uploads/8405d26f-8d85-4e74-80b6-0ebc8ae470d3.png",
       registerLink: "/register-mozaic"
     }
   ];
-
-  const handleViewAllEvents = () => {
-    setShowAllEvents(!showAllEvents);
-    if (!showAllEvents) {
-      setTimeout(() => {
-        moreEventsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 100);
-    }
-  };
 
   const renderEventCard = (event: Event) => (
     <a 
@@ -107,19 +90,19 @@ export const UpcomingEventsSection: React.FC = () => {
       className="block"
     >
       <Card isHoverable className={`overflow-hidden ${event.featured ? 'border-bsd-orange/20 shadow' : ''}`}>
-        <div className="relative h-64 sm:h-80 md:h-96 overflow-hidden">
+        <div className="relative h-40 sm:h-48 overflow-hidden">
           <img src={event.imageSrc} alt={event.title} className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex flex-col justify-end p-6">
-            <h3 className="text-xl md:text-2xl font-semibold text-white mb-2">{event.title}</h3>
-            <div className="flex items-center gap-2 text-white">
-              <Calendar className="w-4 h-4" />
-              <span className="text-sm font-medium">{event.date} | {event.time}</span>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-4">
+            <h3 className="text-base md:text-lg font-semibold text-white mb-1">{event.title}</h3>
+            <div className="flex items-center gap-1.5 text-white">
+              <Calendar className="w-3 h-3" />
+              <span className="text-xs font-medium">{event.date}</span>
             </div>
           </div>
         </div>
         
-        <CardContent className="p-6">
-          <p className="text-bsd-gray/80">{event.description}</p>
+        <CardContent className="p-4">
+          <p className="text-sm text-bsd-gray/80 line-clamp-2">{event.description}</p>
         </CardContent>
       </Card>
     </a>
@@ -128,7 +111,7 @@ export const UpcomingEventsSection: React.FC = () => {
   return <section id="events" className="bg-[#F6F6F7] py-[30px]">
       <div className="container mx-auto px-6 md:px-8 max-w-6xl">
         <RevealSection>
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <Badge variant="bsdOrange" className="mb-2">
               Join Us
             </Badge>
@@ -142,32 +125,8 @@ export const UpcomingEventsSection: React.FC = () => {
         </RevealSection>
 
         <RevealSection delay={200}>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {upcomingEvents.map(renderEventCard)}
-          </div>
-
-          {showAllEvents && (
-            <div ref={moreEventsRef} className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
-              {additionalEvents.map(renderEventCard)}
-            </div>
-          )}
-
-          <div className="flex justify-center mt-12">
-            <Button 
-              variant="outline" 
-              className="border-bsd-orange/30 text-bsd-gray hover:bg-bsd-orange/10"
-              onClick={handleViewAllEvents}
-            >
-              {showAllEvents ? (
-                <>
-                  Show Less <ChevronUp className="ml-2 w-4 h-4" />
-                </>
-              ) : (
-                <>
-                  View All Events <ChevronDown className="ml-2 w-4 h-4" />
-                </>
-              )}
-            </Button>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {allEvents.map(renderEventCard)}
           </div>
         </RevealSection>
       </div>
