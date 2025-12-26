@@ -146,6 +146,29 @@ export const UpcomingEventsSection: React.FC = () => {
             {upcomingEvents.map(renderEventCard)}
           </div>
 
+          {showAllEvents && (
+            <div ref={moreEventsRef} className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
+              {additionalEvents.map(renderEventCard)}
+            </div>
+          )}
+
+          <div className="flex justify-center mt-12">
+            <Button 
+              variant="outline" 
+              className="border-bsd-orange/30 text-bsd-gray hover:bg-bsd-orange/10"
+              onClick={handleViewAllEvents}
+            >
+              {showAllEvents ? (
+                <>
+                  Show Less <ChevronUp className="ml-2 w-4 h-4" />
+                </>
+              ) : (
+                <>
+                  View All Events <ChevronDown className="ml-2 w-4 h-4" />
+                </>
+              )}
+            </Button>
+          </div>
         </RevealSection>
       </div>
     </section>;
