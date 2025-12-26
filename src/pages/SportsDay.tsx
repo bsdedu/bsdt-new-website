@@ -16,6 +16,8 @@ const galleryImages = [
   { src: "/lovable-uploads/sports-day-7.jpg", alt: "Students walking on the sports field" },
   { src: "/lovable-uploads/sports-day-8.jpg", alt: "Cricket batsmen during a match" },
   { src: "/lovable-uploads/sports-day-9.jpg", alt: "Group photo of all participants celebrating" },
+  { src: "/lovable-uploads/sports-day-10.jpg", alt: "Medal winners group photo with different house teams" },
+  { src: "/lovable-uploads/sports-day-11.jpg", alt: "Cricket team celebrating with bat and jersey" },
 ];
 
 const SportsDay = () => {
