@@ -46,7 +46,7 @@ export const UpcomingEventsSection: React.FC = () => {
         "/lovable-uploads/designuru-7.jpg",
         "/lovable-uploads/designuru-8.jpg"
       ],
-      registerLink: "/register-designuru"
+      registerLink: "/designuru-2025"
     },
     {
       id: "3",

@@ -45,6 +45,7 @@ import EventsActivities from "./pages/EventsActivities";
 import StudentExperience from "./pages/StudentExperience";
 import FutureSchool from "./pages/FutureSchool";
 import OpenDay from "./pages/OpenDay";
+import Designuru2025 from "./pages/Designuru2025";
 // Course Imports - 3 Week Programs
 import GenerativeAICreativePrototyping from "./pages/courses/GenerativeAICreativePrototyping";
 import VRARPrototyping from "./pages/courses/VRARPrototyping";
@@ -205,6 +206,7 @@ const App = () => {
               {/* Future School Route */}
               <Route path="/future-school" element={<FutureSchool />} />
               <Route path="/open-day" element={<OpenDay />} />
+              <Route path="/designuru-2025" element={<Designuru2025 />} />
               
               {/* Course Routes - 3 Week Programs */}
               <Route path="/courses/generative-ai-creative-prototyping" element={<GenerativeAICreativePrototyping />} />
