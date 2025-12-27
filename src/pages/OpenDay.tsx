@@ -4,10 +4,8 @@ import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import { Calendar, Clock, MapPin, Users, BookOpen, Building, MessageCircle, Mail, Phone } from 'lucide-react';
-
 const OpenDay = () => {
-  return (
-    <>
+  return <>
       <Helmet>
         <title>Open Day 2026 | Bangalore School of Design & Technology</title>
         <meta name="description" content="Join us for BSDT Open Day on 5th February 2026. Tour our campus, meet faculty, explore design programs and discover opportunities at Bangalore's premier design school." />
@@ -30,9 +28,7 @@ const OpenDay = () => {
                 <p className="text-2xl md:text-3xl font-semibold mb-4">
                   Saturday, 24th January 2026
                 </p>
-                <p className="text-lg md:text-xl opacity-90">
-                  Bangalore School of Design and Technology
-                </p>
+                <p className="text-lg md:text-xl opacity-90"> VENUE : Bangalore School of Design and Technology</p>
               </div>
             </div>
           </section>
@@ -178,11 +174,7 @@ const OpenDay = () => {
               <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
                 We look forward to welcoming you to our Open Day event and helping you take the first step toward a bright future in design. Join us and discover the opportunities that await you at BSDT!
               </p>
-              <Button
-                size="lg"
-                className="bg-white text-bsd-orange hover:bg-white/90 font-semibold px-8 py-6 text-lg"
-                asChild
-              >
+              <Button size="lg" className="bg-white text-bsd-orange hover:bg-white/90 font-semibold px-8 py-6 text-lg" asChild>
                 <a href="/plan-a-visit">Register for Open Day</a>
               </Button>
             </div>
@@ -200,17 +192,11 @@ const OpenDay = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                  <a
-                    href="mailto:admissions@bsd.edu.in"
-                    className="flex items-center justify-center gap-3 text-bsd-orange hover:underline"
-                  >
+                  <a href="mailto:admissions@bsd.edu.in" className="flex items-center justify-center gap-3 text-bsd-orange hover:underline">
                     <Mail className="w-5 h-5" />
                     admissions@bsd.edu.in
                   </a>
-                  <a
-                    href="tel:+919019006066"
-                    className="flex items-center justify-center gap-3 text-bsd-orange hover:underline"
-                  >
+                  <a href="tel:+919019006066" className="flex items-center justify-center gap-3 text-bsd-orange hover:underline">
                     <Phone className="w-5 h-5" />
                     +91 90190 06066
                   </a>
@@ -239,8 +225,6 @@ const OpenDay = () => {
 
         <Footer />
       </div>
-    </>
-  );
+    </>;
 };
-
 export default OpenDay;
