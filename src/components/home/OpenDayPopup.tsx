@@ -43,7 +43,7 @@ export const OpenDayPopup = () => {
           
           <div className="flex items-center gap-3 text-foreground">
             <MapPin className="h-5 w-5 text-bsd-orange" />
-            <span className="font-medium">Bangalore school of design and technology , Kotnoor, Bangalore</span>
+            <span className="font-medium">Bangalore School of Design and Technology</span>
           </div>
         </div>
 
