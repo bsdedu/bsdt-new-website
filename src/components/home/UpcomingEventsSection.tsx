@@ -22,7 +22,7 @@ export const UpcomingEventsSection: React.FC = () => {
       id: "1",
       title: "OPEN DAY",
       type: "open-day",
-      date: "7th February, 2026",
+      date: "24th January, 2026",
       time: "10AM to 4PM",
       description: "Experience our campus, meet faculty & explore programs.",
       imageSrc: "/lovable-uploads/open-day-event.png",
