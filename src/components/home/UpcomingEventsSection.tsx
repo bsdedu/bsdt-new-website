@@ -55,7 +55,18 @@ export const UpcomingEventsSection: React.FC = () => {
       date: "November 2025",
       time: "9:00 AM - 4:00 PM",
       description: "Semester-end jury presentations showcasing student projects.",
-      imageSrc: "/lovable-uploads/end-sem-jury.jpg",
+      imageSrc: [
+        "/lovable-uploads/end-sem-jury-1.jpg",
+        "/lovable-uploads/end-sem-jury-2.jpg",
+        "/lovable-uploads/end-sem-jury-3.jpg",
+        "/lovable-uploads/end-sem-jury-4.jpg",
+        "/lovable-uploads/end-sem-jury-5.jpg",
+        "/lovable-uploads/end-sem-jury-6.jpg",
+        "/lovable-uploads/end-sem-jury-7.jpg",
+        "/lovable-uploads/end-sem-jury-8.jpg",
+        "/lovable-uploads/end-sem-jury-9.jpg",
+        "/lovable-uploads/end-sem-jury-10.jpg"
+      ],
       registerLink: "/register-end-sem-jury"
     },
     {
