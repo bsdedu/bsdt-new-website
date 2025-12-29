@@ -10,7 +10,7 @@ import { ContactSection } from '../components/home/ContactSection';
 import { EnquiryFormSection } from '../components/home/EnquiryFormSection';
 import { CollaborationsSection } from '../components/home/CollaborationsSection';
 import { InfoGraphicsSection } from '../components/home/InfoGraphicsSection';
-import { GallerySection } from '../components/home/GallerySection';
+
 import { UpcomingEventsSection } from '../components/home/UpcomingEventsSection';
 import { FloatingEnquiryForm } from '../components/ui-elements/FloatingEnquiryForm';
 import { AdmissionsBanner } from '../components/home/AdmissionsBanner';
@@ -122,7 +122,7 @@ const Index = () => {
           <WhyChooseSection />
           <AIEnhancedLearningSection />
           <UpcomingEventsSection />
-          <GallerySection />
+          
           <CollaborationsSection />
           <EnquiryFormSection /> 
           <FloatingEnquiryForm />
