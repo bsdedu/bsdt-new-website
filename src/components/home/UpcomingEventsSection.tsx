@@ -67,7 +67,7 @@ export const UpcomingEventsSection: React.FC = () => {
         "/lovable-uploads/end-sem-jury-9.jpg",
         "/lovable-uploads/end-sem-jury-10.jpg"
       ],
-      registerLink: "/register-end-sem-jury"
+      registerLink: "/end-sem-jury"
     },
     {
       id: "4",
