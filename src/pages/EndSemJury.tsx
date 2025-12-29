@@ -17,6 +17,12 @@ const galleryImages = [
   { src: "/lovable-uploads/end-sem-jury-8.jpg", alt: "Architecture student presenting floor plans" },
   { src: "/lovable-uploads/end-sem-jury-9.jpg", alt: "Jury members reviewing architectural drawings" },
   { src: "/lovable-uploads/end-sem-jury-10.jpg", alt: "Students viewing project models and presentations" },
+  { src: "/lovable-uploads/end-sem-jury-11.jpg", alt: "Student project presentation and critique session" },
+  { src: "/lovable-uploads/end-sem-jury-12.jpg", alt: "Design project evaluation by jury panel" },
+  { src: "/lovable-uploads/end-sem-jury-13.jpg", alt: "Creative work showcase and feedback" },
+  { src: "/lovable-uploads/end-sem-jury-14.jpg", alt: "Jury review of student design work" },
+  { src: "/lovable-uploads/end-sem-jury-15.jpg", alt: "Project presentation to industry experts" },
+  { src: "/lovable-uploads/end-sem-jury-16.jpg", alt: "Final semester project evaluation" },
 ];
 
 const EndSemJury = () => {
