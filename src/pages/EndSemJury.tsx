@@ -15,8 +15,6 @@ const galleryImages = [
   { src: "/lovable-uploads/end-sem-jury-6.jpg", alt: "Case study overview presentation" },
   { src: "/lovable-uploads/end-sem-jury-7.jpg", alt: "The Living Kitchen project presentation" },
   { src: "/lovable-uploads/end-sem-jury-8.jpg", alt: "Architecture student presenting floor plans" },
-  { src: "/lovable-uploads/end-sem-jury-9.jpg", alt: "Jury members reviewing architectural drawings" },
-  { src: "/lovable-uploads/end-sem-jury-10.jpg", alt: "Students viewing project models and presentations" },
   { src: "/lovable-uploads/end-sem-jury-11.jpg", alt: "Student project presentation and critique session" },
   { src: "/lovable-uploads/end-sem-jury-12.jpg", alt: "Design project evaluation by jury panel" },
   { src: "/lovable-uploads/end-sem-jury-13.jpg", alt: "Creative work showcase and feedback" },
