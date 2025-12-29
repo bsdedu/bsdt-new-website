@@ -4,14 +4,14 @@ import { FacultyMember } from '../types';
 export const technologyFaculty: FacultyMember[] = [
   {
     id: 4,
-    name: "Harish Narayan",
-    role: "Faculty, UI/UX Design & Product Management",
-    bio: "A skilled product manager specializing in UI/UX and collaboration tools. With a post-graduate degree in Management from Great Lakes Institute and a bachelor's in Instrumentation Technology from M S Ramaiah Institute, his expertise in user experience and metrics has led to significant contributions in the tech industry.",
-    imageUrl: "/lovable-uploads/ba42a875-3428-489e-84f5-b44223159d85.png",
+    name: "Vinutha Eedith Carter",
+    role: "Assistant Professor",
+    bio: "With a Master's degree in Computer Science, she has a strong academic foundation in computing and software development. Her areas of expertise include programming languages such as Python, Java, and SQL. She is committed to fostering a clear understanding of core concepts and practical skills, creating an engaging and effective learning environment for students.",
+    imageUrl: "/lovable-uploads/vinutha-eedith-carter.jpg",
     department: 'Technology',
-    qualifications: "PG in Management, Great Lakes Institute; B.Tech, M S Ramaiah Institute",
-    specialization: "UI/UX Design, Product Management, Collaboration Tools",
-    achievements: "Significant contributions to tech industry products"
+    qualifications: "M.Sc. in Computer Science",
+    specialization: "Python, Java, SQL, Software Development",
+    achievements: "Strong focus on practical skills and effective learning environments"
   },
   {
     id: 5,
