@@ -11,7 +11,8 @@ export const technologyFaculty: FacultyMember[] = [
     department: 'Technology',
     qualifications: "M.Sc. in Computer Science",
     specialization: "Python, Java, SQL, Software Development",
-    achievements: "Strong focus on practical skills and effective learning environments"
+    achievements: "Strong focus on practical skills and effective learning environments",
+    grayscalePhoto: true
   },
   {
     id: 5,
