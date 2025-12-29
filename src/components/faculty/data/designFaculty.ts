@@ -5,7 +5,7 @@ export const designFaculty: FacultyMember[] = [
     id: 1,
     name: "Dipti Dineshwar",
     role: "Senior Design Faculty",
-    bio: "An architect from BMS School of Architecture with experience in Bangalore and Jaipur. Dipti leads academic programs at BSD, helping students develop design skills through workshops and projects. She specializes in design theory and architectural history, with a Harvard certification in 'The Architectural Imagination'.",
+    bio: "Dipti is an architect from BMS School of Architecture with professional experience in Bangalore and Jaipur. She currently leads academic programs at BSD, where she mentors students in developing strong design thinking through workshops, studios, and research-driven projects.\nHer work is grounded in design theory and architectural history, supported by a Harvard certification in The Architectural Imagination and an MSc in Architectural History and Theory from the University of Edinburgh. At Edinburgh, she pursued advanced study in research methods and paradigms, architectural texts and theories, museum building culture, and Victorian architecture, and completed a dissertation on the psychology of religious spaces.\nHer academic and professional interests explore how architecture operates at the intersection of culture, history, and human experience.",
     imageUrl: "/lovable-uploads/796f352b-67e6-4210-9634-1eebb7b9b5eb.png",
     department: 'Design',
     qualifications: "B.Arch, BMS School of Architecture",
