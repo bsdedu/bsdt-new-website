@@ -11,9 +11,10 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card } from "../ui-elements/Card";
-import { Play, GalleryHorizontal, Calendar, ChevronDown } from "lucide-react";
+import { Play, GalleryHorizontal, Calendar, ChevronDown, X } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 // Import testimonials data to use for Student Interviews
 import { testimonials } from './TestimonialsSection';
@@ -245,6 +246,15 @@ export const GallerySection: React.FC = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
   const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
   const [expandedStudentWork, setExpandedStudentWork] = useState<number[]>([]);
+  const [selectedImage, setSelectedImage] = useState<{ src: string; caption: string } | null>(null);
+
+  const handleImageClick = (imageSrc: string, caption: string) => {
+    setSelectedImage({ src: imageSrc, caption });
+  };
+
+  const closeImageModal = () => {
+    setSelectedImage(null);
+  };
 
   // Group items by category and take only the first item from each category for the "All" tab
   const previewItems: Record<string, typeof allGalleryItems[0]> = {};
@@ -428,9 +438,16 @@ export const GallerySection: React.FC = () => {
         {items.map((item, index) => (
           <div 
             key={index} 
-            className="group relative"
+            className="group relative cursor-pointer"
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
+            onClick={() => {
+              if (item.type === "image" && item.image) {
+                handleImageClick(item.image, item.caption);
+              } else if (item.type === "video" && item.videoId) {
+                handleVideoClick(item.videoId);
+              }
+            }}
           >
             <Card isHoverable className="overflow-hidden h-full">
               <div className="relative aspect-video overflow-hidden">
@@ -447,10 +464,7 @@ export const GallerySection: React.FC = () => {
                       alt={item.caption} 
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div 
-                      className="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer"
-                      onClick={() => item.videoId && handleVideoClick(item.videoId)}
-                    >
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/30">
                       <div className="bg-white/90 rounded-full p-3 transition-transform duration-300 group-hover:scale-110">
                         <Play className="h-8 w-8 text-bsd-orange" fill="currentColor" />
                       </div>
@@ -636,6 +650,32 @@ export const GallerySection: React.FC = () => {
           </div>
         </div>
       )}
+
+      {/* Image Lightbox Modal */}
+      <Dialog open={!!selectedImage} onOpenChange={closeImageModal}>
+        <DialogContent className="max-w-4xl p-0 bg-transparent border-none">
+          <div className="relative">
+            <button 
+              className="absolute -top-10 right-0 text-white hover:text-bsd-orange z-10"
+              onClick={closeImageModal}
+            >
+              <X className="h-6 w-6" />
+            </button>
+            {selectedImage && (
+              <div className="bg-white rounded-lg overflow-hidden shadow-2xl">
+                <img 
+                  src={selectedImage.src} 
+                  alt={selectedImage.caption} 
+                  className="w-full h-auto max-h-[80vh] object-contain"
+                />
+                <div className="p-4">
+                  <p className="text-sm text-gray-600">{selectedImage.caption}</p>
+                </div>
+              </div>
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
