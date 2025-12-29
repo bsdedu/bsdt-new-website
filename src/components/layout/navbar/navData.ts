@@ -48,11 +48,6 @@ export const navStructure: NavStructure[] = [
     ]
   },
   {
-    name: 'Futr School',
-    href: 'https://futrschool.edmingle.com/',
-    type: 'link'
-  },
-  {
     name: 'Admissions',
     href: '#admissions',
     type: 'dropdown',
@@ -86,5 +81,10 @@ export const navStructure: NavStructure[] = [
       { name: 'About BSDT', href: '/about' },
       { name: 'Leadership & Governance', href: '/leadership' }
     ]
+  },
+  {
+    name: 'Futr School',
+    href: 'https://futrschool.edmingle.com/',
+    type: 'link'
   }
 ];
