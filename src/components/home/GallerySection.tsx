@@ -236,11 +236,11 @@ const studentInterviewItems = testimonials.map(testimonial => ({
 // Combine the gallery items with student interviews
 const allGalleryItems = [...galleryItems, ...studentInterviewItems];
 
-// Updated categories to include Events & Activities
-const categories = ["All", "Sports Events", "Campus Life", "Student Work", "Student Interviews"];
+// Updated categories without "All" option
+const categories = ["Sports Events", "Campus Life", "Student Work", "Student Interviews"];
 
 export const GallerySection: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeCategory, setActiveCategory] = useState("Sports Events");
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
   const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
