@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "../ui-elements/Card";
-import { Calendar, ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Calendar, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 interface Event {
   id: string;
   title: string;
@@ -43,33 +45,6 @@ export const UpcomingEventsSection: React.FC = () => {
     description: "Semester-end jury presentations showcasing student projects.",
     imageSrc: ["/lovable-uploads/end-sem-jury-1.jpg", "/lovable-uploads/end-sem-jury-2.jpg", "/lovable-uploads/end-sem-jury-3.jpg", "/lovable-uploads/end-sem-jury-4.jpg", "/lovable-uploads/end-sem-jury-5.jpg", "/lovable-uploads/end-sem-jury-6.jpg", "/lovable-uploads/end-sem-jury-7.jpg", "/lovable-uploads/end-sem-jury-8.jpg", "/lovable-uploads/end-sem-jury-9.jpg", "/lovable-uploads/end-sem-jury-10.jpg"],
     registerLink: "/end-sem-jury"
-  }, {
-    id: "4",
-    title: "Sports Day",
-    type: "open-day",
-    date: "7th & 8th November, 2025",
-    time: "8:00 AM - 5:00 PM",
-    description: "Annual sports day celebrating athletic excellence and team spirit.",
-    imageSrc: ["/lovable-uploads/sports-day-1.jpg", "/lovable-uploads/sports-day-2.jpg", "/lovable-uploads/sports-day-3.jpg", "/lovable-uploads/sports-day-4.jpg", "/lovable-uploads/sports-day-5.jpg", "/lovable-uploads/sports-day-6.jpg", "/lovable-uploads/sports-day-7.jpg", "/lovable-uploads/sports-day-8.jpg", "/lovable-uploads/sports-day-9.jpg"],
-    registerLink: "/sports-day"
-  }, {
-    id: "5",
-    title: "Teachers Day",
-    type: "open-day",
-    date: "5th September, 2025",
-    time: "9:00 AM - 6:00 PM",
-    description: "Celebrate and honor our dedicated faculty members.",
-    imageSrc: "/lovable-uploads/2c70e2d5-549c-43bd-bd5f-ef047b51dc10.png",
-    registerLink: "/register-teachers-day"
-  }, {
-    id: "6",
-    title: "Mozaic",
-    type: "open-day",
-    date: "12th October, 2025",
-    time: "11:00 AM - 8:00 PM",
-    description: "Our annual design festival with exhibitions and performances.",
-    imageSrc: "/lovable-uploads/8405d26f-8d85-4e74-80b6-0ebc8ae470d3.png",
-    registerLink: "/register-mozaic"
   }];
   const ImageCarousel = ({
     images,
@@ -148,6 +123,14 @@ export const UpcomingEventsSection: React.FC = () => {
         <RevealSection delay={200}>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {allEvents.map(renderEventCard)}
+          </div>
+          <div className="text-center mt-8">
+            <Button asChild variant="outline" className="group">
+              <Link to="/campus-life/events-activities#campus-events">
+                View More Events
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </Button>
           </div>
         </RevealSection>
       </div>
