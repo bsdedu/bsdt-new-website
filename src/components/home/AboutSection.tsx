@@ -2,10 +2,12 @@
 import React, { useState } from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { AnimatedButton } from "../ui-elements/AnimatedButton";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Play } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 export const AboutSection: React.FC = () => {
+  const [videoHovered, setVideoHovered] = useState(false);
   const [activeFeature, setActiveFeature] = useState<number | null>(null);
   
   return (
@@ -18,9 +20,41 @@ export const AboutSection: React.FC = () => {
       </div>
 
       <div className="container mx-auto px-6 md:px-8 my-[20px]">
-        <div className="max-w-3xl mx-auto">
-          <RevealSection direction="up" scale={true}>
-            <div className="space-y-6 text-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <RevealSection direction="right" scale={true}>
+            <div className="space-y-4 mb-2">
+              <Badge variant="bsdOrange">Campus Life</Badge>
+              <h3 className="text-2xl md:text-3xl font-display font-bold text-bsd-gray flex items-center gap-2">
+                <Play className="w-6 h-6 text-bsd-orange" /> 
+                Experience BSDT Campus Life
+              </h3>
+              <p className="text-foreground/70">Take a virtual tour of our vibrant campus and see what makes BSD the perfect place for your creative journey.</p>
+            </div>
+            <div 
+              id="campus-life-video"
+              className={`relative rounded-2xl overflow-hidden shadow-xl border border-border/30 mt-4 transition-transform duration-500 ${videoHovered ? 'scale-[1.02]' : ''}`}
+              onMouseEnter={() => setVideoHovered(true)}
+              onMouseLeave={() => setVideoHovered(false)}
+            >
+              <AspectRatio ratio={16 / 9}>
+                <iframe src="https://www.youtube.com/embed/bWy4EH-B3tw" title="BSDT Campus Life Video" className="w-full h-full" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+              </AspectRatio>
+
+              {/* Play button overlay */}
+              <div className={`absolute inset-0 bg-black/10 flex items-center justify-center transition-opacity duration-300 ${videoHovered ? 'opacity-0' : 'opacity-100'}`}>
+                <div className="w-16 h-16 bg-white/80 rounded-full flex items-center justify-center transition-transform duration-500 transform hover:scale-110">
+                  <Play className="w-8 h-8 text-bsd-orange ml-1" />
+                </div>
+              </div>
+
+              {/* Image decoration */}
+              <div className="absolute -top-6 -right-6 w-32 h-32 bg-bsd-orange/10 rounded-full blur-xl opacity-60"></div>
+              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-bsd-gray/10 rounded-full blur-xl opacity-60"></div>
+            </div>
+          </RevealSection>
+
+          <RevealSection direction="left" scale={true}>
+            <div className="space-y-6 max-w-xl">
               <Badge variant="bsdOrange">
                 About BSD
               </Badge>
@@ -29,7 +63,7 @@ export const AboutSection: React.FC = () => {
               </h2>
               <p className="text-foreground/70">For over 8 years, BSDT has been at the forefront of design and technology education in India. Our innovative curriculum, industry partnerships, and state-of-the-art facilities create an environment where creativity and technical skills flourish.</p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-left max-w-2xl mx-auto">
+              <div className="space-y-3 pt-2">
                 {["Industry-experienced faculty", "State-of-the-art labs and studios", "Strong industry connections", "Hands-on project-based learning"].map((item, index) => (
                   <div 
                     key={index} 
