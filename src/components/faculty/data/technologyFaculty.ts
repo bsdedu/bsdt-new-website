@@ -7,12 +7,11 @@ export const technologyFaculty: FacultyMember[] = [
     name: "Vinutha Eedith Carter",
     role: "Assistant Professor",
     bio: "With a Master's degree in Computer Science, she has a strong academic foundation in computing and software development. Her areas of expertise include programming languages such as Python, Java, and SQL. She is committed to fostering a clear understanding of core concepts and practical skills, creating an engaging and effective learning environment for students.",
-    imageUrl: "/lovable-uploads/vinutha-eedith-carter.jpg",
+    imageUrl: "/lovable-uploads/vinutha-eedith-carter.png",
     department: 'Technology',
     qualifications: "M.Sc. in Computer Science",
     specialization: "Python, Java, SQL, Software Development",
-    achievements: "Strong focus on practical skills and effective learning environments",
-    grayscalePhoto: true
+    achievements: "Strong focus on practical skills and effective learning environments"
   },
   {
     id: 5,
