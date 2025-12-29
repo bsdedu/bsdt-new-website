@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { EventsActivitiesHero } from '@/components/events-activities/EventsActivitiesHero';
-import { UpcomingEventsSection } from '@/components/home/UpcomingEventsSection';
+import { CampusLifeEventsSection } from '@/components/events-activities/CampusLifeEventsSection';
 import { EventsOverview } from '@/components/events-activities/EventsOverview';
 import { EventsGallery } from '@/components/events-activities/EventsGallery';
 import { JoinEventsSection } from '@/components/events-activities/JoinEventsSection';
@@ -25,7 +25,7 @@ const EventsActivities: React.FC = () => {
       
       <main>
         <EventsActivitiesHero />
-        <UpcomingEventsSection />
+        <CampusLifeEventsSection />
         <EventsOverview />
         <EventsGallery />
         <JoinEventsSection />
