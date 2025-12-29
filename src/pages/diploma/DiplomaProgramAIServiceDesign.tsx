@@ -5,7 +5,7 @@ import { Footer } from '@/components/layout/Footer';
 import { HeroSection } from '@/components/diploma/AIServiceDesign/HeroSection';
 import { ProgramOverviewSection } from '@/components/diploma/AIServiceDesign/ProgramOverviewSection';
 import { ProgramFeatures } from '@/components/diploma/AIServiceDesign/ProgramFeatures';
-import { IndustryFaculty } from '@/components/diploma/AIServiceDesign/IndustryFaculty';
+
 import { AdmissionsInfo } from '@/components/diploma/AIServiceDesign/AdmissionsInfo';
 import { BatchScheduleSection } from '@/components/diploma/shared/BatchScheduleSection';
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
@@ -30,7 +30,6 @@ const DiplomaProgramAIServiceDesign: React.FC = () => {
         <ProgramOverviewSection />
         <BatchScheduleSection />
         <ProgramFeatures />
-        <IndustryFaculty />
         <AdmissionsInfo />
         <EnquiryFormSection />
       </main>
