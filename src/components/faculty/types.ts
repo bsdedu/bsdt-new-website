@@ -16,4 +16,5 @@ export interface FacultyMember {
   qualifications?: string;
   specialization?: string;
   achievements?: string;
+  grayscalePhoto?: boolean;
 }

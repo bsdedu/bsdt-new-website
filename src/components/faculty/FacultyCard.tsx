@@ -18,7 +18,7 @@ export const FacultyCard: React.FC<FacultyCardProps> = ({ faculty }) => {
             <AvatarImage 
               src={faculty.imageUrl} 
               alt={faculty.name}
-              className="object-cover object-center w-full h-full grayscale"
+              className={`object-cover object-center w-full h-full ${faculty.grayscalePhoto ? 'grayscale' : ''}`}
             />
             <AvatarFallback className="text-2xl font-medium">
               {faculty.name.split(' ').map(n => n[0]).join('')}
