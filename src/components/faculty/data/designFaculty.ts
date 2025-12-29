@@ -101,17 +101,6 @@ export const designFaculty: FacultyMember[] = [
     achievements: "Contributions to sustainable EV bicycle project at IIT Bombay"
   },
   {
-    id: 107,
-    name: "Piyush Kanti Mahapatra",
-    role: "Faculty, Visual Design",
-    bio: "With 4+ years in digital brand management, Piyush combines industry experience as a Visual Designer with three years of teaching in Art and Design. Skilled in Adobe Creative Cloud, he brings a strategic approach to design that balances aesthetics with brand objectives. His background in both professional and academic environments enriches his collaborative approach to creative problem-solving.",
-    imageUrl: "/lovable-uploads/4a5d1ae8-5e3a-4e3d-929d-14b52fde7bbb.png",
-    department: 'Design',
-    qualifications: "Degree in Visual Design",
-    specialization: "Digital Brand Management, Visual Design",
-    achievements: "4+ years in digital brand management, 3 years teaching experience"
-  },
-  {
     id: 108,
     name: "Er. Ritesh L",
     role: "Faculty, Landscape Engineering",
