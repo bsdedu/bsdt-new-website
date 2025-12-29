@@ -58,9 +58,6 @@ const EndSemJury = () => {
                 <p className="text-xl md:text-2xl font-semibold mb-4">
                   Showcasing Student Excellence
                 </p>
-                <p className="text-lg md:text-xl opacity-90 mb-2">
-                  November 2025
-                </p>
                 <p className="text-base md:text-lg opacity-80">
                   BSDT Campus
                 </p>
@@ -238,10 +235,6 @@ const EndSemJury = () => {
               </h2>
               
               <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-10">
-                <div className="flex items-center gap-3">
-                  <Calendar className="w-6 h-6" />
-                  <span className="text-lg">November 2025</span>
-                </div>
                 <div className="flex items-center gap-3">
                   <Clock className="w-6 h-6" />
                   <span className="text-lg">9:00 AM - 4:00 PM</span>
