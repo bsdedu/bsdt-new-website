@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "../ui-elements/Card";
@@ -17,17 +17,6 @@ interface Event {
   featured?: boolean;
 }
 export const UpcomingEventsSection: React.FC = () => {
-  const navigate = useNavigate();
-
-  const handleViewMoreClick = () => {
-    navigate('/campus-life/events-activities');
-    setTimeout(() => {
-      const element = document.getElementById('campus-events');
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }, 100);
-  };
   const allEvents: Event[] = [{
     id: "1",
     title: "OPEN DAY",
@@ -136,9 +125,11 @@ export const UpcomingEventsSection: React.FC = () => {
             {allEvents.map(renderEventCard)}
           </div>
           <div className="text-center mt-8">
-            <Button variant="outline" className="group" onClick={handleViewMoreClick}>
-              View More Events
-              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            <Button asChild variant="outline" className="group">
+              <Link to="/campus-life/events-activities#campus-events">
+                View More Events
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </Button>
           </div>
         </RevealSection>
