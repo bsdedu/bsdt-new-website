@@ -246,8 +246,8 @@ export const CourseFacultySection: React.FC = () => {
                 </div>
                 <div className="relative">
                   <img 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" 
-                    alt="Faculty member working on design" 
+                    src="/lovable-uploads/faculty-expertise-group.jpg" 
+                    alt="BSD Faculty team" 
                     className="rounded-lg shadow-lg w-full h-80 object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
