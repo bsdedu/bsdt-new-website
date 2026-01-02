@@ -25,21 +25,5 @@ export const internationalFaculty: FacultyMember[] = [
     bio: "Ar. Shanumathi Mageshwar brings extensive expertise in architectural design and spatial planning to the international faculty. With a strong background in sustainable design practices and innovative architectural solutions, she has contributed to numerous projects that blend functionality with aesthetic excellence. Her approach emphasizes the integration of traditional design principles with contemporary architectural practices, making her a valuable mentor for students exploring the intersection of culture and modern design.",
     imageUrl: "/lovable-uploads/0209fd90-e2e4-44a5-8c8b-54faee4eec30.png",
     department: "International Faculty"
-  },
-  {
-    id: 4,
-    name: "Tricia Carrey",
-    role: "International Faculty", 
-    bio: "Creative and experienced UX designer with a passion for solving complex design challenges. Skilled in conducting user research, creating user flows and wireframes, and designing intuitive and engaging interfaces. Proficient in industry-standard design tools such as Sketch, Adobe XD, and InVision. Strong collaborator with excellent communication skills and a proven track record of delivering high-quality design solutions on time and within budget.",
-    imageUrl: "/lovable-uploads/7557c7a0-23b4-445a-bec3-752b10dfdca6.png",
-    department: "International Faculty"
-  },
-  {
-    id: 5,
-    name: "Scott Warren",
-    role: "International Faculty",
-    bio: "Highly skilled UI designer with 25+ years of experience designing intuitive, user-friendly interfaces for web and mobile applications. Proficient in creating wireframes, prototypes, and design specifications using tools such as Sketch, Adobe XD, and Figma. Proven track record of collaborating with cross-functional teams to deliver exceptional user experiences that meet business objectives. Strong understanding of design principles, typography, and color theory. Passionate about staying up-to-date with the latest design trends and technologies.",
-    imageUrl: "/lovable-uploads/54f14e6d-f61c-456d-8b67-0efe131659a3.png",
-    department: "International Faculty"
   }
 ];
