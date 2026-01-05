@@ -15,14 +15,14 @@ export const technologyFaculty: FacultyMember[] = [
   },
   {
     id: 5,
-    name: "J. Sheeba Selvapattu",
-    role: "Faculty, Computer Science & Cybersecurity",
-    bio: "With a Master's in Information Technology and currently pursuing a Ph.D. in Computer Science, Sheeba brings 4.5 years of experience as a researcher and academician. Her expertise in cybersecurity, cloud computing, and programming languages like Python and Java, along with several Scopus-indexed research publications, enriches the learning experience.",
-    imageUrl: "/lovable-uploads/121fd226-ad55-481d-b095-79c9e4765b16.png",
+    name: "Anusha R",
+    role: "Faculty, Computer Applications",
+    bio: "She has earned a Master's degree in Computer Applications (MCA) and possesses a comprehensive understanding of core computing principles. Her academic approach emphasizes structured learning, conceptual depth, and the practical application of knowledge. She is dedicated to fostering an effective and disciplined learning environment that supports academic growth and skill enhancement among students.",
+    imageUrl: "/lovable-uploads/anusha-r.jpg",
     department: 'Technology',
-    qualifications: "M.Tech in Information Technology, Pursuing Ph.D. in Computer Science",
-    specialization: "Cybersecurity, Cloud Computing, Python, Java",
-    achievements: "Scopus-indexed research publications, 4.5 years as researcher and academician"
+    qualifications: "MCA",
+    specialization: "Core Computing Principles, Practical Application of Knowledge",
+    achievements: "Dedicated to structured learning and academic growth"
   },
   {
     id: 6,
