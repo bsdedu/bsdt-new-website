@@ -30,7 +30,7 @@ export const KeyStats: React.FC = () => {
   const stats = [
     { label: 'Years of Design Excellence', value: 30, icon: <Award className="w-6 h-6 text-bsd-orange" />, suffix: '+' },
     { label: 'Students Enrolled', value: 500, icon: <Users className="w-6 h-6 text-bsd-orange" />, suffix: '+' },
-    { label: 'Placement Rate', value: 92, icon: <Briefcase className="w-6 h-6 text-bsd-orange" />, suffix: '%' },
+    { label: 'Placement Rate', value: 97, icon: <Briefcase className="w-6 h-6 text-bsd-orange" />, suffix: '%' },
     { label: 'Industry Partners', value: 50, icon: <Building className="w-6 h-6 text-bsd-orange" />, suffix: '+' },
   ];
 
