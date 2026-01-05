@@ -68,7 +68,6 @@ export const navStructure: NavStructure[] = [
     items: [
       { name: 'Student Clubs', href: '/student-clubs' },
       { name: 'Student Experience', href: '/student-experience' },
-      { name: 'Sports Facility', href: '/sports-facilities' },
       { name: 'Events & Activities', href: '/campus-life/events-activities' },
       { name: 'Hostel & Transport', href: '/housing-transport' }
     ]
