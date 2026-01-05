@@ -15,10 +15,10 @@ interface CareerData {
 
 // Export the careerData so it can be imported in other components
 export const careerData: CareerData[] = [
-  { field: 'UX/UI Design', growth: 85, color: '#F97316', icon: <PenTool className="w-5 h-5" /> },
-  { field: 'Interior Design', growth: 72, color: '#8B5CF6', icon: <Home className="w-5 h-5" /> },
-  { field: 'Game Design', growth: 78, color: '#0EA5E9', icon: <Gamepad className="w-5 h-5" /> },
-  { field: 'Graphic Design', growth: 70, color: '#EC4899', icon: <Paintbrush className="w-5 h-5" /> },
+  { field: 'UX/UI Design', growth: 90, color: '#F97316', icon: <PenTool className="w-5 h-5" /> },
+  { field: 'Interior Design', growth: 77, color: '#8B5CF6', icon: <Home className="w-5 h-5" /> },
+  { field: 'Game Design', growth: 83, color: '#0EA5E9', icon: <Gamepad className="w-5 h-5" /> },
+  { field: 'Graphic Design', growth: 75, color: '#EC4899', icon: <Paintbrush className="w-5 h-5" /> },
 ];
 
 interface Props {
