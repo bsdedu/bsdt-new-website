@@ -14,6 +14,17 @@ export const technologyFaculty: FacultyMember[] = [
     achievements: "Strong focus on practical skills and effective learning environments"
   },
   {
+    id: 5,
+    name: "Anusha R",
+    role: "Faculty, Computer Applications",
+    bio: "She has earned a Master's degree in Computer Applications (MCA) and possesses a comprehensive understanding of core computing principles. Her academic approach emphasizes structured learning, conceptual depth, and the practical application of knowledge. She is dedicated to fostering an effective and disciplined learning environment that supports academic growth and skill enhancement among students.",
+    imageUrl: "/lovable-uploads/anusha-r.jpg",
+    department: 'Technology',
+    qualifications: "MCA",
+    specialization: "Computer Applications, Core Computing Principles",
+    achievements: "Dedicated to structured learning and practical application"
+  },
+  {
     id: 6,
     name: "Shyni K C",
     role: "Faculty, Computer Applications",
