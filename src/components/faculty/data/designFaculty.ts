@@ -144,4 +144,15 @@ export const designFaculty: FacultyMember[] = [
     specialization: "User Research, Wireframing, Prototyping, Interaction Design, Branding, Visual Communication",
     achievements: "Blends theoretical knowledge with real-world applications in UI/UX and Graphic Design"
   },
+  {
+    id: 21,
+    name: "Aravind T.S.",
+    role: "Assistant Professor, Architect & Urban Planner",
+    bio: "Aravind T.S. is an Assistant Professor at Bangalore School of Design, an Architect and Urban Planner with over 5 years of combined academic and professional experience. He holds a B.Arch from Avani Institute of Design and an M.Plan from NIT Calicut, with academic focus on resilience planning, transit-oriented development, smart cities, and sustainable urban systems. A co-founder of Sthayi Architects, his practice and teaching integrate architectural design, urban planning, and real-world project experience, emphasizing context-responsive and socially responsible design.",
+    imageUrl: "/faculty/aravind-ts.jpeg",
+    department: 'Design',
+    qualifications: "B.Arch, Avani Institute of Design; M.Plan, NIT Calicut",
+    specialization: "Resilience Planning, Transit-Oriented Development, Smart Cities, Sustainable Urban Systems",
+    achievements: "Co-founder of Sthayi Architects, 5+ years of academic and professional experience"
+  },
 ];
