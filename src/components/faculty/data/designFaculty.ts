@@ -155,4 +155,15 @@ export const designFaculty: FacultyMember[] = [
     specialization: "Resilience Planning, Transit-Oriented Development, Smart Cities, Sustainable Urban Systems",
     achievements: "Co-founder of Sthayi Architects, 5+ years of academic and professional experience"
   },
+  {
+    id: 22,
+    name: "Ar. Gayathri S Raj",
+    role: "Assistant Professor, Urban Design",
+    bio: "A passionate academician and designer with 8 years of industrial experience including 4 years in academia. Her academic and industry exposure enables bridging design theory with practical application. As an educator, she focuses on guiding students through the design process with an emphasis on spatial planning, functionality and real-world relevance.",
+    imageUrl: "/faculty/gayathri-s-raj.jpg",
+    department: 'Design',
+    qualifications: "B.Arch, M.Arch (Urban Design)",
+    specialization: "Urban Design, Spatial Planning, Design Theory",
+    achievements: "8 years of industry experience, 4 years in academia"
+  },
 ];
