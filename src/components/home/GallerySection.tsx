@@ -500,15 +500,131 @@ export const GallerySection: React.FC = () => {
         </RevealSection>
 
         <RevealSection delay={100}>
-          {/* Mobile View: Carousel */}
-          <div className="md:hidden">
-            {renderGalleryItems(filteredItems, true)}
-          </div>
+          <Tabs defaultValue="All" className="w-full" onValueChange={setActiveCategory}>
+            <TabsList className="flex flex-wrap justify-center gap-1 mb-12 bg-transparent h-auto p-1">
+              {categories.map((category) => (
+                <TabsTrigger 
+                  key={category} 
+                  value={category}
+                  className="px-4 py-2 rounded-full text-sm data-[state=active]:bg-bsd-orange data-[state=active]:text-white data-[state=active]:shadow-sm data-[state=inactive]:bg-bsd-light-gray data-[state=inactive]:text-bsd-gray hover:bg-bsd-orange/20"
+                >
+                  {category}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+            
+            {/* Content for All tab - One item per category in a single row */}
+            <TabsContent value="All" className="mt-0">
+              {/* Mobile View - Carousel */}
+              <div className="md:hidden">
+                <Carousel className="w-full">
+                  <CarouselContent>
+                    {Object.entries(previewItems).map(([category, item], index) => (
+                      <CarouselItem key={index}>
+                        <div className="p-1">
+                          <Card isHoverable className="overflow-hidden">
+                            <div className="relative aspect-video overflow-hidden">
+                              {item.type === "image" ? (
+                                <img 
+                                  src={item.image} 
+                                  alt={item.caption} 
+                                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                                />
+                              ) : (
+                                <>
+                                  <img 
+                                    src={item.thumbnail} 
+                                    alt={item.caption} 
+                                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                                  />
+                                  <div 
+                                    className="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer group"
+                                    onClick={() => item.videoId && handleVideoClick(item.videoId)}
+                                  >
+                                    <div className="bg-white/90 rounded-full p-3 transition-transform duration-300 group-hover:scale-110">
+                                      <Play className="h-8 w-8 text-bsd-orange" fill="currentColor" />
+                                    </div>
+                                  </div>
+                                </>
+                              )}
+                              <div className="absolute top-3 left-3">
+                                <Badge variant="bsdOrange" className="bg-bsd-orange/90 text-white px-2 py-1 text-xs">
+                                  {category}
+                                </Badge>
+                              </div>
+                            </div>
+                          </Card>
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="left-2 bg-white/80" />
+                  <CarouselNext className="right-2 bg-white/80" />
+                </Carousel>
+              </div>
 
-          {/* Desktop View: Grid */}
-          <div className="hidden md:block">
-            {renderGalleryItems(filteredItems)}
-          </div>
+              {/* Desktop View - Centered Grid */}
+              <div className="hidden md:block">
+                <div className="flex justify-center">
+                  <div className="grid grid-cols-5 gap-6 max-w-5xl">
+                    {Object.entries(previewItems).map(([category, item], index) => (
+                      <div key={index} className="group relative">
+                        <Card isHoverable className="overflow-hidden h-full">
+                          <div className="relative aspect-video overflow-hidden">
+                            {item.type === "image" ? (
+                              <img 
+                                src={item.image} 
+                                alt={item.caption} 
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                              />
+                            ) : (
+                              <>
+                                <img 
+                                  src={item.thumbnail} 
+                                  alt={item.caption} 
+                                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
+                                <div 
+                                  className="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer"
+                                  onClick={() => item.videoId && handleVideoClick(item.videoId)}
+                                >
+                                  <div className="bg-white/90 rounded-full p-3 transition-transform duration-300 group-hover:scale-110">
+                                    <Play className="h-8 w-8 text-bsd-orange" fill="currentColor" />
+                                  </div>
+                                </div>
+                              </>
+                            )}
+                            <div className="absolute top-3 left-3">
+                              <Badge variant="bsdOrange" className="bg-bsd-orange/90 text-white px-2 py-1 text-xs">
+                                {category}
+                              </Badge>
+                            </div>
+                          </div>
+                        </Card>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </TabsContent>
+            
+            {/* Content for specific category tabs */}
+            <TabsContent value={activeCategory} className="mt-0">
+              {activeCategory !== "All" && (
+                <>
+                  {/* Mobile View: Carousel */}
+                  <div className="md:hidden">
+                    {renderGalleryItems(filteredItems, true)}
+                  </div>
+
+                  {/* Desktop View: Grid */}
+                  <div className="hidden md:block">
+                    {renderGalleryItems(filteredItems)}
+                  </div>
+                </>
+              )}
+            </TabsContent>
+          </Tabs>
         </RevealSection>
 
       </div>
