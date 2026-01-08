@@ -175,7 +175,7 @@ const OpenDay = () => {
                 We look forward to welcoming you to our Open Day event and helping you take the first step toward a bright future in design. Join us and discover the opportunities that await you at BSDT!
               </p>
               <Button size="lg" className="bg-white text-bsd-orange hover:bg-white/90 font-semibold px-8 py-6 text-lg" asChild>
-                <a href="/plan-a-visit">Register for Open Day</a>
+                <a href="https://forms.gle/eBseES87FVJ3u1tx8" target="_blank" rel="noopener noreferrer">Register for Open Day</a>
               </Button>
             </div>
           </section>
