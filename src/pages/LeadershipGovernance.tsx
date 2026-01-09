@@ -165,7 +165,8 @@ const LeadershipGovernance = () => {
       members: ["Ar Preethi Dineshwar (Chair)", "Librarian", "Faculty Representatives", "Student Representatives"]
     },
     {
-      name: "Anti-Ragging Committee",
+      name: "Anti-Ragging Cell",
+      description: "Anti-Ragging Cell is dedicated to maintaining a safe and respectful campus by preventing and addressing all forms of ragging through awareness, monitoring, and timely action, while ensuring the well-being and dignity of every student in a positive and inclusive learning environment.",
       members: ["Mr Sharan Desai (Chair)", "Faculty Members", "Administrative Staff", "Student Representatives"]
     },
     {
