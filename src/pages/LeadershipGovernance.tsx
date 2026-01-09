@@ -8,6 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent, CardHeader } from '@/components/ui-elements/Card';
 import { UserIcon, GraduationCap, Users, Shield, Award, Flag, Briefcase, HandshakeIcon } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import diptiImage from '@/assets/leadership/dipti.png';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 const LeadershipGovernance = () => {
@@ -49,6 +50,12 @@ const LeadershipGovernance = () => {
       position: "Principal",
       bio: "A specialist in Urban Design & City Planning, Sharan Desai is committed to fostering design innovation that impacts society. His leadership in academic excellence, events, and industry collaborations strengthens BSDT's position as a premier institution in Design & Tech education.",
       image: "/lovable-uploads/4683ed3e-a48d-4e31-a73d-8ad155b2ae4f.png"
+    },
+    {
+      name: "Dipti",
+      position: "Director of Institutional Management",
+      bio: "Dipti is an architect and Academic Lead at BSD, where she mentors students in design thinking and research-driven practice. Her professional experience in Bangalore and Jaipur is backed by an MSc in Architectural History and Theory from the University of Edinburgh and a Harvard certification in The Architectural Imagination. Specializing in the psychology of religious spaces and Victorian architecture, Dipti focuses her work on the intersection of culture, history, and the human experience.",
+      image: diptiImage
     }
   ];
 
