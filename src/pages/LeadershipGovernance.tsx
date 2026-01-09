@@ -9,6 +9,7 @@ import { Card, CardContent, CardHeader } from '@/components/ui-elements/Card';
 import { UserIcon, GraduationCap, Users, Shield, Award, Flag, Briefcase, HandshakeIcon } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import diptiImage from '@/assets/leadership/dipti.png';
+import riteshImage from '@/assets/leadership/ritesh.png';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 const LeadershipGovernance = () => {
@@ -50,6 +51,12 @@ const LeadershipGovernance = () => {
       position: "Principal",
       bio: "A specialist in Urban Design & City Planning, Sharan Desai is committed to fostering design innovation that impacts society. His leadership in academic excellence, events, and industry collaborations strengthens BSDT's position as a premier institution in Design & Tech education.",
       image: "/lovable-uploads/4683ed3e-a48d-4e31-a73d-8ad155b2ae4f.png"
+    },
+    {
+      name: "Er. Ritesh L",
+      position: "Vice Principal",
+      bio: "A gold medalist in M.Tech (Structures) from SJB Institute of Technology, Ritesh combines engineering expertise with landscape design thinking. He has published in international journals and conducted seminars on innovative construction practices for outdoor spaces. He bridges the gap between creative landscape design and technical implementation, teaching students how to integrate structural principles with ecological vision.",
+      image: riteshImage
     },
     {
       name: "Ar. Dipti Dineshwar",
