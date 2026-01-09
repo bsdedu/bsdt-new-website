@@ -55,7 +55,7 @@ const LeadershipGovernance = () => {
     {
       name: "Er. Ritesh L",
       position: "Vice Principal",
-      bio: "Ritesh, a gold medalist in M.Tech (Structures) from SJB Institute of Technology, brings a rare blend of engineering excellence and landscape design insight to academic leadership. With publications in reputed international journals and extensive experience conducting seminars on innovative construction practices for outdoor environments, he stands at the intersection of technical precision and creative vision. As Vice Principal, he is committed to bridging the gap between structural engineering and ecological design, mentoring students to thoughtfully integrate sound engineering principles with sustainable and imaginative landscape concepts.",
+      bio: "Ritesh, a gold medalist in M.Tech (Structures) from SJB Institute of Technology, blends engineering excellence with landscape design expertise. With publications in international journals and experience conducting seminars on innovative construction practices, he brings both technical precision and creative vision to his role. As Vice Principal, he guides students to integrate structural principles with sustainable and imaginative landscape design.",
       image: riteshImage
     },
     {
