@@ -151,7 +151,8 @@ const LeadershipGovernance = () => {
   // Committees data
   const committees = [
     {
-      name: "Academic Planning Committee",
+      name: "Samata Cell",
+      description: "The Samata Cell is committed to promoting equality, inclusion, and mutual respect across the institution. It works to create a safe, fair, and discrimination-free learning environment for students, faculty, and staff. The Cell also provides guidance, support, and redressal mechanisms to ensure that every voice is heard and valued.",
       members: ["Mr Sharan Desai (Chair)", "Ar Preethi Dineshwar", "Ar Dipti Dineshwar", "Mr Ritesh L"]
     },
     {
@@ -353,7 +354,10 @@ const LeadershipGovernance = () => {
                 {committees.map((committee, index) => (
                   <Card key={index} isHoverable className="border-0">
                     <CardHeader>
-                      <h3 className="font-semibold text-bsd-gray mb-3">{committee.name}</h3>
+                      <h3 className="font-semibold text-bsd-gray mb-2">{committee.name}</h3>
+                      {committee.description && (
+                        <p className="text-sm text-bsd-gray/70 mb-3">{committee.description}</p>
+                      )}
                       <div className="flex flex-wrap gap-2">
                         {committee.members.map((member, idx) => (
                           <span key={idx} className="text-sm bg-bsd-orange/10 text-bsd-gray/80 px-3 py-1 rounded-full">
