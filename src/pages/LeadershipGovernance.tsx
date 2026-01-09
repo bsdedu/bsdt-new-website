@@ -148,6 +148,34 @@ const LeadershipGovernance = () => {
     }
   ];
 
+  // Committees data
+  const committees = [
+    {
+      name: "Academic Planning Committee",
+      members: ["Mr Sharan Desai (Chair)", "Ar Preethi Dineshwar", "Ar Dipti Dineshwar", "Mr Ritesh L"]
+    },
+    {
+      name: "Examination Committee",
+      members: ["Mr Ritesh L (Chair)", "Ar Dipti Dineshwar", "Faculty Representatives"]
+    },
+    {
+      name: "Library Committee",
+      members: ["Ar Preethi Dineshwar (Chair)", "Librarian", "Faculty Representatives", "Student Representatives"]
+    },
+    {
+      name: "Anti-Ragging Committee",
+      members: ["Mr Sharan Desai (Chair)", "Faculty Members", "Administrative Staff", "Student Representatives"]
+    },
+    {
+      name: "Grievance Redressal Committee",
+      members: ["Ar Preethi Dineshwar (Chair)", "Senior Faculty Members", "Administrative Representative"]
+    },
+    {
+      name: "Internal Quality Assurance Cell (IQAC)",
+      members: ["Mr Sharan Desai (Chair)", "Ar Dipti Dineshwar", "Industry Expert", "Alumni Representative"]
+    }
+  ];
+
   // Core Values Section - Updated
   const coreValues = [
     {
@@ -250,9 +278,10 @@ const LeadershipGovernance = () => {
                 
                 <div className="flex flex-col items-center">
                   <Tabs defaultValue="governing" className="w-full max-w-4xl">
-                    <TabsList className="w-full grid grid-cols-2 mb-8">
-                      <TabsTrigger value="governing" className="text-base">Board of Governing Council</TabsTrigger>
+                    <TabsList className="w-full grid grid-cols-3 mb-8">
+                      <TabsTrigger value="governing" className="text-base">Governing Council</TabsTrigger>
                       <TabsTrigger value="academic" className="text-base">Academic Council</TabsTrigger>
+                      <TabsTrigger value="committees" className="text-base">Committees</TabsTrigger>
                     </TabsList>
                     
                     <TabsContent value="governing" className="w-full">
@@ -298,6 +327,28 @@ const LeadershipGovernance = () => {
                                   <h3 className="font-semibold text-bsd-gray">{member.name}</h3>
                                   <p className="text-sm text-bsd-gray/70">{member.position}</p>
                                 </div>
+                              </div>
+                            </CardHeader>
+                          </Card>
+                        ))}
+                      </div>
+                    </TabsContent>
+
+                    <TabsContent value="committees" className="w-full">
+                      <p className="text-bsd-gray/80 mb-8 max-w-3xl">
+                        Our institutional committees ensure effective functioning across academic, administrative, and student welfare domains. Each committee plays a vital role in maintaining quality standards and fostering a supportive learning environment.
+                      </p>
+                      <div className="grid md:grid-cols-2 gap-4">
+                        {committees.map((committee, index) => (
+                          <Card key={index} isHoverable className="border-0">
+                            <CardHeader>
+                              <h3 className="font-semibold text-bsd-gray mb-3">{committee.name}</h3>
+                              <div className="flex flex-wrap gap-2">
+                                {committee.members.map((member, idx) => (
+                                  <span key={idx} className="text-sm bg-bsd-orange/10 text-bsd-gray/80 px-3 py-1 rounded-full">
+                                    {member}
+                                  </span>
+                                ))}
                               </div>
                             </CardHeader>
                           </Card>
