@@ -53,16 +53,16 @@ const LeadershipGovernance = () => {
       image: "/lovable-uploads/4683ed3e-a48d-4e31-a73d-8ad155b2ae4f.png"
     },
     {
-      name: "Er. Ritesh L",
-      position: "Vice Principal",
-      bio: "Ritesh, a gold medalist in M.Tech (Structures) from SJB Institute of Technology, blends engineering excellence with landscape design expertise. With publications in international journals and experience conducting seminars on innovative construction practices, he brings both technical precision and creative vision to his role. As Vice Principal, he guides students to integrate structural principles with sustainable and imaginative landscape design.",
-      image: riteshImage
-    },
-    {
       name: "Ar. Dipti Dineshwar",
       position: "Director of Institutional Management",
       bio: "Dipti is an architect and Director of Institutional Management at BSD, leading academic planning and institutional development. With professional experience in Bangalore and Jaipur, she holds an MSc in Architectural History and Theory from the University of Edinburgh and a Harvard certification in The Architectural Imagination. Her interests in the psychology of religious spaces and Victorian architecture shape her focus on culture, history, and human-centered design within architectural education.",
       image: diptiImage
+    },
+    {
+      name: "Er. Ritesh L",
+      position: "Vice Principal",
+      bio: "Ritesh, a gold medalist in M.Tech (Structures) from SJB Institute of Technology, blends engineering excellence with landscape design expertise. With publications in international journals and experience conducting seminars on innovative construction practices, he brings both technical precision and creative vision to his role. As Vice Principal, he guides students to integrate structural principles with sustainable and imaginative landscape design.",
+      image: riteshImage
     }
   ];
 
