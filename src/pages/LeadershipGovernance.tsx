@@ -161,8 +161,9 @@ const LeadershipGovernance = () => {
       members: ["Mr Ritesh L (Chair)", "Ar Dipti Dineshwar", "Faculty Representatives"]
     },
     {
-      name: "Library Committee",
-      members: ["Ar Preethi Dineshwar (Chair)", "Librarian", "Faculty Representatives", "Student Representatives"]
+      name: "Women's Cell",
+      description: "Women's Cell is committed to creating a supportive, safe, and empowering environment for women within the institution by promoting gender equality, respect, and well-being, and by ensuring that every woman feels valued, confident, and encouraged to thrive academically, professionally, and personally.",
+      members: ["Ar Preethi Dineshwar (Chair)", "Faculty Representatives", "Student Representatives"]
     },
     {
       name: "Anti-Ragging Cell",
