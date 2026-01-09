@@ -176,7 +176,8 @@ const LeadershipGovernance = () => {
       members: ["Ar Preethi Dineshwar (Chair)", "Senior Faculty Members", "Administrative Representative"]
     },
     {
-      name: "Internal Quality Assurance Cell (IQAC)",
+      name: "Student Support and Liaison Committee (SSLC)",
+      description: "Student Support and Liaison Committee (SSLC) works to strengthen student well-being and institutional communication by providing guidance, support, and effective coordination between students and the administration, while fostering a positive academic experience and helping students navigate their educational journey with confidence.",
       members: ["Mr Sharan Desai (Chair)", "Ar Dipti Dineshwar", "Industry Expert", "Alumni Representative"]
     }
   ];
