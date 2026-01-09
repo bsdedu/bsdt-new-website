@@ -151,8 +151,8 @@ const LeadershipGovernance = () => {
   // Committees data
   const committees = [
     {
-      name: "Anti-Sexual Harassment Cell (ARIVU)",
-      members: ["Upholds dignity, safety & gender equality", "Awareness, support & fair inquiry processes", "Secure & inclusive campus environment"]
+      name: "Academic Planning Committee",
+      members: ["Mr Sharan Desai (Chair)", "Ar Preethi Dineshwar", "Ar Dipti Dineshwar", "Mr Ritesh L"]
     },
     {
       name: "Examination Committee",
@@ -173,10 +173,6 @@ const LeadershipGovernance = () => {
     {
       name: "Internal Quality Assurance Cell (IQAC)",
       members: ["Mr Sharan Desai (Chair)", "Ar Dipti Dineshwar", "Industry Expert", "Alumni Representative"]
-    },
-    {
-      name: "Samata Cell",
-      members: ["Promotes equality, inclusion & mutual respect", "Safe & discrimination-free environment", "Guidance, support & redressal mechanisms"]
     }
   ];
 
