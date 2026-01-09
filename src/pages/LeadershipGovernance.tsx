@@ -35,12 +35,6 @@ const LeadershipGovernance = () => {
       image: "/lovable-uploads/d1e69b3a-6ece-40bb-ba92-363b7d0f3758.png"
     },
     {
-      name: "Karthik Nandakumar",
-      position: "Secretary & Treasurer",
-      bio: "Karthik Nandakumar oversees BSDT's daily operations, financial planning, and long-term strategy. With a Master's in Finance & Management from the University of Exeter, he ensures efficient resource allocation, institutional growth, and operational excellence.",
-      image: "/lovable-uploads/66c6a931-8ba1-4c13-8f59-bcb925328891.png"
-    },
-    {
       name: "Ar. Preethi Dineshwar",
       position: "Director of Academics",
       bio: "An accomplished architect and academician, Ar. Preethi Dineshwar has been at BSDT since its inception. With over 25 years of experience in architecture and nearly a decade in education, she plays a pivotal role in curriculum development, faculty mentorship, and student engagement.",
