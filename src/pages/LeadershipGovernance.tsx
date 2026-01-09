@@ -156,7 +156,8 @@ const LeadershipGovernance = () => {
       members: ["Mr Sharan Desai (Chair)", "Ar Preethi Dineshwar", "Ar Dipti Dineshwar", "Mr Ritesh L"]
     },
     {
-      name: "Examination Committee",
+      name: "Arivu Cell",
+      description: "Anti-Sexual Harassment Cell (ARIVU) is dedicated to upholding dignity, safety, and gender equality within the institution, working to prevent, address, and redress cases of sexual harassment through awareness, timely support, and fair inquiry processes, and ensuring a secure, respectful, and inclusive campus environment for all students, faculty, and staff.",
       members: ["Mr Ritesh L (Chair)", "Ar Dipti Dineshwar", "Faculty Representatives"]
     },
     {
