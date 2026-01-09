@@ -278,10 +278,9 @@ const LeadershipGovernance = () => {
                 
                 <div className="flex flex-col items-center">
                   <Tabs defaultValue="governing" className="w-full max-w-4xl">
-                    <TabsList className="w-full grid grid-cols-3 mb-8">
+                    <TabsList className="w-full grid grid-cols-2 mb-8">
                       <TabsTrigger value="governing" className="text-base">Governing Council</TabsTrigger>
                       <TabsTrigger value="academic" className="text-base">Academic Council</TabsTrigger>
-                      <TabsTrigger value="committees" className="text-base">Committees</TabsTrigger>
                     </TabsList>
                     
                     <TabsContent value="governing" className="w-full">
@@ -334,29 +333,37 @@ const LeadershipGovernance = () => {
                       </div>
                     </TabsContent>
 
-                    <TabsContent value="committees" className="w-full">
-                      <p className="text-bsd-gray/80 mb-8 max-w-3xl">
-                        Our institutional committees ensure effective functioning across academic, administrative, and student welfare domains. Each committee plays a vital role in maintaining quality standards and fostering a supportive learning environment.
-                      </p>
-                      <div className="grid md:grid-cols-2 gap-4">
-                        {committees.map((committee, index) => (
-                          <Card key={index} isHoverable className="border-0">
-                            <CardHeader>
-                              <h3 className="font-semibold text-bsd-gray mb-3">{committee.name}</h3>
-                              <div className="flex flex-wrap gap-2">
-                                {committee.members.map((member, idx) => (
-                                  <span key={idx} className="text-sm bg-bsd-orange/10 text-bsd-gray/80 px-3 py-1 rounded-full">
-                                    {member}
-                                  </span>
-                                ))}
-                              </div>
-                            </CardHeader>
-                          </Card>
-                        ))}
-                      </div>
-                    </TabsContent>
                   </Tabs>
                 </div>
+              </div>
+            </div>
+          </RevealSection>
+
+          {/* Committees Section */}
+          <RevealSection>
+            <div className="container mx-auto px-6 md:px-8 py-16">
+              <div className="flex items-center gap-3 mb-8">
+                <Users className="h-6 w-6 text-bsd-orange" />
+                <h2 className="text-3xl font-bold text-bsd-gray">Committees</h2>
+              </div>
+              <p className="text-bsd-gray/80 mb-8 max-w-3xl">
+                Our institutional committees ensure effective functioning across academic, administrative, and student welfare domains. Each committee plays a vital role in maintaining quality standards and fostering a supportive learning environment.
+              </p>
+              <div className="grid md:grid-cols-3 gap-6">
+                {committees.map((committee, index) => (
+                  <Card key={index} isHoverable className="border-0">
+                    <CardHeader>
+                      <h3 className="font-semibold text-bsd-gray mb-3">{committee.name}</h3>
+                      <div className="flex flex-wrap gap-2">
+                        {committee.members.map((member, idx) => (
+                          <span key={idx} className="text-sm bg-bsd-orange/10 text-bsd-gray/80 px-3 py-1 rounded-full">
+                            {member}
+                          </span>
+                        ))}
+                      </div>
+                    </CardHeader>
+                  </Card>
+                ))}
               </div>
             </div>
           </RevealSection>
