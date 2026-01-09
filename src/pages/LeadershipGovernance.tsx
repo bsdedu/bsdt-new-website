@@ -173,6 +173,10 @@ const LeadershipGovernance = () => {
     {
       name: "Internal Quality Assurance Cell (IQAC)",
       members: ["Mr Sharan Desai (Chair)", "Ar Dipti Dineshwar", "Industry Expert", "Alumni Representative"]
+    },
+    {
+      name: "Samata Cell",
+      members: ["Promotes equality, inclusion & mutual respect", "Safe & discrimination-free environment", "Guidance, support & redressal mechanisms"]
     }
   ];
 
