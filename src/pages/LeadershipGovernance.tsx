@@ -43,7 +43,7 @@ const LeadershipGovernance = () => {
     {
       name: "Ar. Dipti Dineshwar",
       position: "Director of Institutional Management",
-      bio: "Dipti is an architect and Director of Institutional Management at BSD, leading academic planning and institutional development. With professional experience in Bangalore and Jaipur, she holds an MSc in Architectural History and Theory from the University of Edinburgh and a Harvard certification in The Architectural Imagination. Her interests in the psychology of religious spaces and Victorian architecture shape her focus on culture, history, and human-centered design within architectural education.",
+      bio: "Dipti leads academic planning and institutional growth with a strong focus on culture, history, and human-centered design. She works closely with faculty and administration to shape curriculum frameworks, strengthen academic systems, and nurture an environment where learning remains thoughtful, contextual, and deeply connected to human experience.",
       image: diptiImage
     },
     {
