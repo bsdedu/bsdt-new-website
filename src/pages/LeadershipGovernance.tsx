@@ -47,16 +47,16 @@ const LeadershipGovernance = () => {
       image: "/lovable-uploads/0d8d1a0c-c39b-4ddf-baa2-5736fc824c3d.png"
     },
     {
-      name: "Sharan Desai",
-      position: "Principal",
-      bio: "A specialist in Urban Design & City Planning, Sharan Desai is committed to fostering design innovation that impacts society. His leadership in academic excellence, events, and industry collaborations strengthens BSDT's position as a premier institution in Design & Tech education.",
-      image: "/lovable-uploads/4683ed3e-a48d-4e31-a73d-8ad155b2ae4f.png"
-    },
-    {
       name: "Ar. Dipti Dineshwar",
       position: "Director of Institutional Management",
       bio: "Dipti is an architect and Director of Institutional Management at BSD, leading academic planning and institutional development. With professional experience in Bangalore and Jaipur, she holds an MSc in Architectural History and Theory from the University of Edinburgh and a Harvard certification in The Architectural Imagination. Her interests in the psychology of religious spaces and Victorian architecture shape her focus on culture, history, and human-centered design within architectural education.",
       image: diptiImage
+    },
+    {
+      name: "Sharan Desai",
+      position: "Principal",
+      bio: "A specialist in Urban Design & City Planning, Sharan Desai is committed to fostering design innovation that impacts society. His leadership in academic excellence, events, and industry collaborations strengthens BSDT's position as a premier institution in Design & Tech education.",
+      image: "/lovable-uploads/4683ed3e-a48d-4e31-a73d-8ad155b2ae4f.png"
     },
     {
       name: "Er. Ritesh L",
