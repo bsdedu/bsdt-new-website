@@ -361,7 +361,7 @@ const LeadershipGovernance = () => {
                       <TabsTrigger value="arivu" className="text-xs md:text-base">Arivu Cell</TabsTrigger>
                       <TabsTrigger value="womens" className="text-xs md:text-base">Women's Cell</TabsTrigger>
                       <TabsTrigger value="antiragging" className="text-xs md:text-base">Anti-Ragging</TabsTrigger>
-                      <TabsTrigger value="teaching" className="text-xs md:text-base">Teaching</TabsTrigger>
+                      <TabsTrigger value="teaching" className="text-xs md:text-base">Teaching Committee</TabsTrigger>
                       <TabsTrigger value="sslc" className="text-xs md:text-base">SSLC</TabsTrigger>
                     </TabsList>
                     
