@@ -345,34 +345,60 @@ const LeadershipGovernance = () => {
             </div>
           </RevealSection>
 
-          {/* Committees Section */}
+          {/* Cells & Committees Section */}
           <RevealSection>
-            <div className="container mx-auto px-6 md:px-8 py-16">
-              <div className="flex items-center gap-3 mb-8">
-                <Users className="h-6 w-6 text-bsd-orange" />
-                <h2 className="text-3xl font-bold text-bsd-gray">Committees</h2>
-              </div>
-              <p className="text-bsd-gray/80 mb-8 max-w-3xl">
-                Our institutional committees ensure effective functioning across academic, administrative, and student welfare domains. Each committee plays a vital role in maintaining quality standards and fostering a supportive learning environment.
-              </p>
-              <div className="grid md:grid-cols-3 gap-6">
-                {committees.map((committee, index) => (
-                  <Card key={index} isHoverable className="border-0">
-                    <CardHeader>
-                      <h3 className="font-semibold text-bsd-gray mb-2">{committee.name}</h3>
-                      {committee.description && (
-                        <p className="text-sm text-bsd-gray/70 mb-3">{committee.description}</p>
-                      )}
-                      <div className="flex flex-wrap gap-2">
-                        {committee.members.map((member, idx) => (
-                          <span key={idx} className="text-sm bg-bsd-orange/10 text-bsd-gray/80 px-3 py-1 rounded-full">
-                            {member}
-                          </span>
-                        ))}
-                      </div>
-                    </CardHeader>
-                  </Card>
-                ))}
+            <div className="bg-gray-50 py-16">
+              <div className="container mx-auto px-6 md:px-8">
+                <div className="flex items-center gap-3 mb-12">
+                  <Users className="h-6 w-6 text-bsd-orange" />
+                  <h2 className="text-3xl font-bold text-bsd-gray">Cells & Committees</h2>
+                </div>
+                
+                <div className="flex flex-col items-center">
+                  <Tabs defaultValue="samata" className="w-full max-w-4xl">
+                    <TabsList className="w-full grid grid-cols-3 md:grid-cols-6 mb-8">
+                      <TabsTrigger value="samata" className="text-xs md:text-base">Samata Cell</TabsTrigger>
+                      <TabsTrigger value="arivu" className="text-xs md:text-base">Arivu Cell</TabsTrigger>
+                      <TabsTrigger value="womens" className="text-xs md:text-base">Women's Cell</TabsTrigger>
+                      <TabsTrigger value="antiragging" className="text-xs md:text-base">Anti-Ragging</TabsTrigger>
+                      <TabsTrigger value="teaching" className="text-xs md:text-base">Teaching</TabsTrigger>
+                      <TabsTrigger value="sslc" className="text-xs md:text-base">SSLC</TabsTrigger>
+                    </TabsList>
+                    
+                    {committees.map((committee, index) => (
+                      <TabsContent 
+                        key={index} 
+                        value={['samata', 'arivu', 'womens', 'antiragging', 'teaching', 'sslc'][index]} 
+                        className="w-full"
+                      >
+                        <p className="text-bsd-gray/80 mb-8 max-w-3xl">
+                          {committee.description}
+                        </p>
+                        <div className="grid md:grid-cols-3 gap-4">
+                          {committee.members.map((member, idx) => (
+                            <Card key={idx} isHoverable className="border-0">
+                              <CardHeader>
+                                <div className="flex items-center gap-3 mb-1">
+                                  <Avatar className="h-10 w-10 bg-bsd-orange/10">
+                                    <AvatarFallback className="text-bsd-orange">
+                                      {member.split(' ').filter(n => !n.includes('(')).slice(0, 2).map(n => n[0]).join('')}
+                                    </AvatarFallback>
+                                  </Avatar>
+                                  <div>
+                                    <h3 className="font-semibold text-bsd-gray">{member.replace(/\s*\(.*?\)\s*/g, '')}</h3>
+                                    <p className="text-sm text-bsd-gray/70">
+                                      {member.match(/\((.*?)\)/)?.[1] || 'Member'}
+                                    </p>
+                                  </div>
+                                </div>
+                              </CardHeader>
+                            </Card>
+                          ))}
+                        </div>
+                      </TabsContent>
+                    ))}
+                  </Tabs>
+                </div>
               </div>
             </div>
           </RevealSection>
