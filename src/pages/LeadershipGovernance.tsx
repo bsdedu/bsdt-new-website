@@ -173,7 +173,7 @@ const LeadershipGovernance = () => {
     {
       name: "Teaching Committee",
       description: "Teaching Committee plays a key role in strengthening academic quality by meeting annually to review teaching practices, evaluate curriculum effectiveness, and recommend improvements aligned with evolving industry standards and student needs, while continuously working to enhance learning outcomes and academic excellence across the institution.",
-      members: ["Ar Preethi Dineshwar (Chair)", "Senior Faculty Members", "Administrative Representative"]
+      members: ["Ar Preethi Dineshwar (Member)", "Ar Dipti Dineshwar (Member)", "Er Ritesh L (Member)", "Ar Bhavna (Member)", "Mr Yogesh (Member)", "Ms Niharika (Member)", "Ms Fathima (Member)"]
     },
     {
       name: "Student Support and Liaison Committee (SSLC)",
