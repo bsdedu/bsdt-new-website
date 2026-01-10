@@ -163,7 +163,7 @@ const LeadershipGovernance = () => {
     {
       name: "Women's Cell",
       description: "Women's Cell is committed to creating a supportive, safe, and empowering environment for women within the institution by promoting gender equality, respect, and well-being, and by ensuring that every woman feels valued, confident, and encouraged to thrive academically, professionally, and personally.",
-      members: ["Ar Preethi Dineshwar (Head)", "Ar Hema Wadikar (Faculty Representative)", "Aasritha Upadhyayula (Faculty Representative)", "Devanshi (BSc 2 Student Representative)"]
+      members: ["Ar Preethi Dineshwar (Head)", "Ar Hema Wadikar (Faculty Representative)", "Aasritha Upadhyayula (Faculty Representative)", "Devanshi (BSc 2 Student Representative)", "Renuka (BSc 4 Student Representative)", "Amrita (BSc 6 Student Representative)", "Palak Kaur (BVA 2 Student Representative)", "Fiza Sultana (BVA ID 4 Student Representative)", "Charitha (BVA GD 4 Student Representative)", "Amrita (BVA ID 6 Student Representative)", "Rebecca (BDes 2 Student Representative)", "Haripriya (BCA 2 Student Representative)"]
     },
     {
       name: "Anti-Ragging Cell",
