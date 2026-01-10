@@ -178,7 +178,7 @@ const LeadershipGovernance = () => {
     {
       name: "Student Support and Liaison Committee (SSLC)",
       description: "Student Support and Liaison Committee (SSLC) works to strengthen student well-being and institutional communication by providing guidance, support, and effective coordination between students and the administration, while fostering a positive academic experience and helping students navigate their educational journey with confidence.",
-      members: ["Parvathy (Member)", "Arvind (Member)", "Amal (Member)", "Ritesh (Member)", "Dipti (Member)", "Vinod (Member)", "Mamatha (Member)", "Praisy Varghese (Member)", "Mansi Shrivastava (Member)", "Sandesh D (Member)"]
+      members: ["Parvathy (Member)", "Arvind (Member)", "Amal (Member)", "Ritesh (Member)", "Ar Dipti Dineshwar (Member)", "Vinod (Member)", "Mamatha (Member)", "Praisy Varghese (Member)", "Mansi Shrivastava (Member)", "Sandesh D (Member)"]
     }
   ];
 
