@@ -158,7 +158,7 @@ const LeadershipGovernance = () => {
     {
       name: "Arivu Cell",
       description: "Anti-Sexual Harassment Cell (ARIVU) is dedicated to upholding dignity, safety, and gender equality within the institution, working to prevent, address, and redress cases of sexual harassment through awareness, timely support, and fair inquiry processes, and ensuring a secure, respectful, and inclusive campus environment for all students, faculty, and staff.",
-      members: ["Ar Preethi Dineshwar (Chairperson)", "Mr Ritesh L", "Ar Dipti Dineshwar", "Faculty Representatives"]
+      members: ["Ar Preethi Dineshwar (Chairperson)", "Adv. Ruth Thomas (Advocate)", "Ar Dipti Dineshwar (Member)", "Mrs Mamatha A (Member)", "Ar Bhavna Raghavan (Member)", "Mrs Priya (Member)", "Mrs G Lakshmi (Member)"]
     },
     {
       name: "Women's Cell",
