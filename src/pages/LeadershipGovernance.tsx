@@ -153,7 +153,7 @@ const LeadershipGovernance = () => {
     {
       name: "Samata Cell",
       description: "The Samata Cell is committed to promoting equality, inclusion, and mutual respect across the institution. It works to create a safe, fair, and discrimination-free learning environment for students, faculty, and staff. The Cell also provides guidance, support, and redressal mechanisms to ensure that every voice is heard and valued.",
-      members: ["Mr Sharan Desai (Chair)", "Ar Preethi Dineshwar", "Ar Dipti Dineshwar", "Mr Ritesh L"]
+      members: ["Mr Sharan Desai (Chairperson)", "Ar Preethi Dineshwar", "Ar Dipti Dineshwar", "Mr Ritesh L"]
     },
     {
       name: "Arivu Cell",
