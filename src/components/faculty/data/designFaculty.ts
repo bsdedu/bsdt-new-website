@@ -90,6 +90,17 @@ export const designFaculty: FacultyMember[] = [
     achievements: "Founded DTALE design studio, led 50+ projects across multiple sectors"
   },
   {
+    id: 107,
+    name: "Ms Bhumika",
+    role: "Senior Faculty",
+    bio: "A dedicated design professional bringing expertise and passion to design education at BSDT. Her teaching approach focuses on nurturing creativity and developing practical skills that prepare students for successful careers in the design industry.",
+    imageUrl: "/lovable-uploads/bhumika-faculty.jpeg",
+    department: 'Design',
+    qualifications: "Design Education Professional",
+    specialization: "Design Education, Creative Development",
+    achievements: "Dedicated to mentoring the next generation of designers"
+  },
+  {
     id: 106,
     name: "Amlan Jyothi Bharali",
     role: "Faculty, Interaction Design",
