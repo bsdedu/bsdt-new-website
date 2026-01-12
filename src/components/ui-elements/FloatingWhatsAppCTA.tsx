@@ -39,7 +39,7 @@ export const FloatingWhatsAppCTA: React.FC = () => {
           <div className="bg-white p-4 rounded-lg shadow-lg max-w-[230px] animate-scale-in">
             <p className="text-sm font-medium text-bsd-gray mb-3">Chat with us on WhatsApp!</p>
             <a 
-              href="https://wa.me/917204006339" 
+              href="https://wa.me/919620202871" 
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600 transition-colors w-full"
