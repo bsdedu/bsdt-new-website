@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils';
 export const FloatingWhatsApp: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isPulsing, setIsPulsing] = useState(true);
-  const whatsappNumber = "917204006339";
+  const whatsappNumber = "919620202871";
   const whatsappMessage = "Hello! I'm interested in learning more about BSDT programs.";
   useEffect(() => {
     const timer = setTimeout(() => {
