@@ -63,15 +63,6 @@ const undergraduatePrograms: Program[] = [
     addons: "UI/UX & AI/ML",
     href: "/academics/b-computer-application-ui-ux"
   },
-  {
-    icon: <Cpu className="w-6 h-6 text-bsd-orange" />,
-    title: "B.Sc Computer Science",
-    description: "A 3-year program with specializations in Data Analytics and Cyber Security, equipping students with skills to address evolving technological challenges.",
-    color: "from-bsd-gray/15 to-bsd-gray/5",
-    duration: "3 years",
-    addons: "Data Analytics & Cyber Security",
-    href: "/programs/bsc-cs-analytics-security"
-  }
 ];
 
 const diplomaPrograms: Program[] = [
