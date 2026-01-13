@@ -5,7 +5,24 @@ export const graphicProjects: ProjectCollection = {
   branding: [
     { 
       id: "1", 
-      title: "Graphic Design & Communication Portfolio", 
+      title: "Typography Design Portfolio", 
+      description: "A comprehensive typography portfolio showcasing dynamic typography, grids, and experimental typographic design explorations.",
+      student: "Nidhi Pastey", 
+      year: "2024", 
+      semester: "4th Semester", 
+      image: "/lovable-uploads/gd-typography-nidhi-1.jpg",
+      images: [
+        "/lovable-uploads/gd-typography-nidhi-1.jpg",
+        "/lovable-uploads/gd-typography-nidhi-2.jpg",
+        "/lovable-uploads/gd-typography-nidhi-3.jpg",
+        "/lovable-uploads/gd-typography-nidhi-4.jpg",
+        "/lovable-uploads/gd-typography-nidhi-5.jpg",
+        "/lovable-uploads/gd-typography-nidhi-6.jpg"
+      ]
+    },
+    { 
+      id: "2", 
+      title: "Graphic Design & Communication Portfolio",
       description: "A comprehensive portfolio showcasing ad campaigns, storyboards, and visual communication projects including Adidas advertisement concepts.",
       student: "Nidhi Pastey", 
       year: "2024", 
@@ -21,7 +38,7 @@ export const graphicProjects: ProjectCollection = {
       ]
     },
     { 
-      id: "2",
+      id: "3",
       title: "A Kingdom Far Far Away", 
       description: "A storybook animation with an originally written story about King Shock and Jerome the Goblin, inspired by G-Shock watch features. Scenes designed on Illustrator and animated in After Effects.",
       student: "Diploma Student", 
@@ -38,7 +55,7 @@ export const graphicProjects: ProjectCollection = {
       ]
     },
     { 
-      id: "3", 
+      id: "4",
       title: "G-Shock Advertisement", 
       description: "A product advertisement for Casio G-Shock watches. Shoots cut, edited and composed on Premier Pro, with overlay effects added in After Effects.",
       student: "Diploma Student", 
@@ -55,7 +72,7 @@ export const graphicProjects: ProjectCollection = {
       ]
     },
     { 
-      id: "4",
+      id: "5",
       title: "MBTI Personality Magazine", 
       description: "A magazine based on Myers-Briggs 16 personality types with original illustrations and a digital quiz. Helps readers discover their personality type.",
       student: "Diploma Student", 
