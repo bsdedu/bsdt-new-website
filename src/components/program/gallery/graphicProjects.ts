@@ -41,6 +41,24 @@ export const graphicProjects: ProjectCollection = {
         "/lovable-uploads/gd-ad-commercial-6.jpg"
       ]
     },
+    { 
+      id: "7", 
+      title: "MBTI Personality Magazine", 
+      description: "A magazine based on Myers-Briggs 16 personality types with original illustrations and a digital quiz. Helps readers discover their personality type.",
+      student: "Diploma Student", 
+      year: "2024", 
+      semester: "2nd Semester", 
+      image: "/lovable-uploads/gd-magazine-1.jpg",
+      images: [
+        "/lovable-uploads/gd-magazine-1.jpg",
+        "/lovable-uploads/gd-magazine-2.jpg",
+        "/lovable-uploads/gd-magazine-3.jpg",
+        "/lovable-uploads/gd-magazine-4.jpg",
+        "/lovable-uploads/gd-magazine-5.jpg",
+        "/lovable-uploads/gd-magazine-6.jpg",
+        "/lovable-uploads/gd-magazine-7.jpg"
+      ]
+    },
   ],
   digital: [
     { id: "1", title: "Mobile App UI Design", student: "Kiran Kumar", year: "2023", image: "https://images.unsplash.com/photo-1616469829941-c7200edec809?w=800&auto=format&fit=crop" },
