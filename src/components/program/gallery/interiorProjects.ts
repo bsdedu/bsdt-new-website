@@ -16,6 +16,17 @@ export const interiorProjects: ProjectCollection = {
         "/lovable-uploads/interior-sattva-resort-1.jpg"
       ]
     },
+    { 
+      id: "int-eco-resort", 
+      title: "Eco Resort Design", 
+      description: "An eco-friendly resort design concept featuring sustainable materials and integration with natural surroundings.",
+      student: "Interior Design Student", 
+      year: "2024", 
+      image: "/lovable-uploads/interior-eco-resort-1.jpg",
+      images: [
+        "/lovable-uploads/interior-eco-resort-1.jpg"
+      ]
+    },
   ],
   commercial: [
     { 
