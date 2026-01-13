@@ -9,6 +9,23 @@ export const graphicProjects: ProjectCollection = {
     { id: "4", title: "Artisanal Coffee Branding", student: "Vikram Reddy", year: "2022", image: "/lovable-uploads/ef3ea604-aaf8-4387-99a1-55ac188ac260.png" },
     { 
       id: "5", 
+      title: "Graphic Design & Communication Portfolio", 
+      description: "A comprehensive portfolio showcasing ad campaigns, storyboards, and visual communication projects including Adidas advertisement concepts.",
+      student: "Nidhi Pastey", 
+      year: "2024", 
+      semester: "4th Semester", 
+      image: "/lovable-uploads/gd-portfolio-nidhi-1.jpg",
+      images: [
+        "/lovable-uploads/gd-portfolio-nidhi-1.jpg",
+        "/lovable-uploads/gd-portfolio-nidhi-2.jpg",
+        "/lovable-uploads/gd-portfolio-nidhi-3.jpg",
+        "/lovable-uploads/gd-portfolio-nidhi-4.jpg",
+        "/lovable-uploads/gd-portfolio-nidhi-5.jpg",
+        "/lovable-uploads/gd-portfolio-nidhi-6.jpg"
+      ]
+    },
+    { 
+      id: "6",
       title: "A Kingdom Far Far Away", 
       description: "A storybook animation with an originally written story about King Shock and Jerome the Goblin, inspired by G-Shock watch features. Scenes designed on Illustrator and animated in After Effects.",
       student: "Diploma Student", 
@@ -25,7 +42,7 @@ export const graphicProjects: ProjectCollection = {
       ]
     },
     { 
-      id: "6", 
+      id: "7", 
       title: "G-Shock Advertisement", 
       description: "A product advertisement for Casio G-Shock watches. Shoots cut, edited and composed on Premier Pro, with overlay effects added in After Effects.",
       student: "Diploma Student", 
@@ -42,7 +59,7 @@ export const graphicProjects: ProjectCollection = {
       ]
     },
     { 
-      id: "7", 
+      id: "8",
       title: "MBTI Personality Magazine", 
       description: "A magazine based on Myers-Briggs 16 personality types with original illustrations and a digital quiz. Helps readers discover their personality type.",
       student: "Diploma Student", 
