@@ -5,6 +5,17 @@ import { ProjectCollection } from './types';
 export const interiorProjects: ProjectCollection = {
   residential: [
     { id: "3", title: "Contemporary Villa Interior", student: "Meera Krishnan", year: "2022", image: "/lovable-uploads/23609cd5-2cbf-4e98-8211-0b953a25a5c3.png" },
+    { 
+      id: "int-sattva-resort", 
+      title: "Resort Sattva - Typical Room Layout", 
+      description: "A resort room design featuring rendered flooring layout with detailed section drawings and spatial planning.",
+      student: "Interior Design Student", 
+      year: "2024", 
+      image: "/lovable-uploads/interior-sattva-resort-1.jpg",
+      images: [
+        "/lovable-uploads/interior-sattva-resort-1.jpg"
+      ]
+    },
   ],
   commercial: [
     { 
