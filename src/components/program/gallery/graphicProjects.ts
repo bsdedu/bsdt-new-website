@@ -24,6 +24,23 @@ export const graphicProjects: ProjectCollection = {
         "/lovable-uploads/gd-character-animation-6.jpg"
       ]
     },
+    { 
+      id: "6", 
+      title: "G-Shock Advertisement", 
+      description: "A product advertisement for Casio G-Shock watches. Shoots cut, edited and composed on Premier Pro, with overlay effects added in After Effects.",
+      student: "Diploma Student", 
+      year: "2024", 
+      semester: "2nd Semester", 
+      image: "/lovable-uploads/gd-ad-commercial-1.jpg",
+      images: [
+        "/lovable-uploads/gd-ad-commercial-1.jpg",
+        "/lovable-uploads/gd-ad-commercial-2.jpg",
+        "/lovable-uploads/gd-ad-commercial-3.jpg",
+        "/lovable-uploads/gd-ad-commercial-4.jpg",
+        "/lovable-uploads/gd-ad-commercial-5.jpg",
+        "/lovable-uploads/gd-ad-commercial-6.jpg"
+      ]
+    },
   ],
   digital: [
     { id: "1", title: "Mobile App UI Design", student: "Kiran Kumar", year: "2023", image: "https://images.unsplash.com/photo-1616469829941-c7200edec809?w=800&auto=format&fit=crop" },
