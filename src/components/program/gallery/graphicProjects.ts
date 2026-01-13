@@ -7,6 +7,23 @@ export const graphicProjects: ProjectCollection = {
     { id: "2", title: "Tech Startup Branding", student: "Arjun Mehta", year: "2023", image: "/lovable-uploads/e50eadd7-d31e-4b3e-a69a-e005ba9bd014.png" },
     { id: "3", title: "Startup Branding", student: "Tanu & Mayank", year: "2024", semester: "6th Semester", image: "/lovable-uploads/9e6beab0-9d49-4293-b06d-e13fb0eaf57b.png" },
     { id: "4", title: "Artisanal Coffee Branding", student: "Vikram Reddy", year: "2022", image: "/lovable-uploads/ef3ea604-aaf8-4387-99a1-55ac188ac260.png" },
+    { 
+      id: "5", 
+      title: "A Kingdom Far Far Away", 
+      description: "A storybook animation with an originally written story about King Shock and Jerome the Goblin, inspired by G-Shock watch features. Scenes designed on Illustrator and animated in After Effects.",
+      student: "Diploma Student", 
+      year: "2024", 
+      semester: "2nd Semester", 
+      image: "/lovable-uploads/gd-character-animation-1.jpg",
+      images: [
+        "/lovable-uploads/gd-character-animation-1.jpg",
+        "/lovable-uploads/gd-character-animation-2.jpg",
+        "/lovable-uploads/gd-character-animation-3.jpg",
+        "/lovable-uploads/gd-character-animation-4.jpg",
+        "/lovable-uploads/gd-character-animation-5.jpg",
+        "/lovable-uploads/gd-character-animation-6.jpg"
+      ]
+    },
   ],
   digital: [
     { id: "1", title: "Mobile App UI Design", student: "Kiran Kumar", year: "2023", image: "https://images.unsplash.com/photo-1616469829941-c7200edec809?w=800&auto=format&fit=crop" },
