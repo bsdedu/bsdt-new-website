@@ -27,6 +27,17 @@ export const interiorProjects: ProjectCollection = {
         "/lovable-uploads/interior-eco-resort-1.jpg"
       ]
     },
+    { 
+      id: "int-sattva-japandi", 
+      title: "Resort Sattva - Japandi Design", 
+      description: "A Japandi-inspired resort interior featuring reflected ceiling plan, furniture layout, and ground floor design.",
+      student: "Interior Design Student", 
+      year: "2024", 
+      image: "/lovable-uploads/interior-sattva-japandi-1.jpg",
+      images: [
+        "/lovable-uploads/interior-sattva-japandi-1.jpg"
+      ]
+    },
   ],
   commercial: [
     { 
