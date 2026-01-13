@@ -4,7 +4,7 @@ import { Card } from "../../ui-elements/Card";
 import { Badge } from "@/components/ui/badge";
 import { Project } from './types';
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { X } from "lucide-react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 interface ProjectCardProps {
   project: Project;
@@ -12,6 +12,22 @@ interface ProjectCardProps {
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Use images array if available, otherwise use single image
+  const allImages = project.images && project.images.length > 0 
+    ? project.images 
+    : [project.image];
+
+  const handlePrev = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setCurrentImageIndex((prev) => (prev === 0 ? allImages.length - 1 : prev - 1));
+  };
+
+  const handleNext = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setCurrentImageIndex((prev) => (prev === allImages.length - 1 ? 0 : prev + 1));
+  };
 
   return (
     <>
@@ -43,6 +59,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             {project.semester && (
               <p className="text-xs text-foreground/60 mt-1">{project.semester}</p>
             )}
+            {allImages.length > 1 && (
+              <p className="text-xs text-foreground/50 mt-1">{allImages.length} pages</p>
+            )}
           </div>
         </Card>
       </div>
@@ -55,12 +74,32 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           >
             <X className="h-5 w-5" />
           </button>
+          
           <div className="relative">
             <img 
-              src={project.image} 
-              alt={project.title} 
+              src={allImages[currentImageIndex]} 
+              alt={`${project.title} - Page ${currentImageIndex + 1}`} 
               className="w-full h-auto max-h-[80vh] object-contain"
             />
+            
+            {/* Navigation arrows for multi-image projects */}
+            {allImages.length > 1 && (
+              <>
+                <button
+                  onClick={handlePrev}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 z-50 rounded-full bg-white/10 p-3 text-white hover:bg-white/20 transition-colors"
+                >
+                  <ChevronLeft className="h-6 w-6" />
+                </button>
+                <button
+                  onClick={handleNext}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 z-50 rounded-full bg-white/10 p-3 text-white hover:bg-white/20 transition-colors"
+                >
+                  <ChevronRight className="h-6 w-6" />
+                </button>
+              </>
+            )}
+            
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
               <h3 className="text-xl font-semibold text-white">{project.title}</h3>
               <p className="text-white/80 mt-1">{project.student} • {project.year}</p>
@@ -69,6 +108,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               )}
               {project.description && (
                 <p className="text-white/70 mt-2">{project.description}</p>
+              )}
+              {allImages.length > 1 && (
+                <p className="text-white/60 text-sm mt-2">
+                  Page {currentImageIndex + 1} of {allImages.length}
+                </p>
               )}
             </div>
           </div>
