@@ -2,13 +2,14 @@
 // Define common types for the student gallery components
 
 export interface Project {
-  id: string; // Changed from number to string to match the architectural projects format
+  id: string;
   title: string;
-  description?: string; // Make description optional
+  description?: string;
   student: string;
   year: string;
-  semester?: string; // Make semester optional
+  semester?: string;
   image: string;
+  images?: string[]; // Support for multiple images per project
 }
 
 export interface ProjectCategory {
