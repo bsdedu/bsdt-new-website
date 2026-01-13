@@ -87,15 +87,17 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               <>
                 <button
                   onClick={handlePrev}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 z-50 rounded-full bg-white/10 p-3 text-white hover:bg-white/20 transition-colors"
+                  className="absolute left-2 top-1/2 -translate-y-1/2 z-[100] rounded-full bg-white/90 p-3 text-black shadow-lg hover:bg-white transition-colors"
+                  type="button"
                 >
-                  <ChevronLeft className="h-6 w-6" />
+                  <ChevronLeft className="h-8 w-8" />
                 </button>
                 <button
                   onClick={handleNext}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 z-50 rounded-full bg-white/10 p-3 text-white hover:bg-white/20 transition-colors"
+                  className="absolute right-14 top-1/2 -translate-y-1/2 z-[100] rounded-full bg-white/90 p-3 text-black shadow-lg hover:bg-white transition-colors"
+                  type="button"
                 >
-                  <ChevronRight className="h-6 w-6" />
+                  <ChevronRight className="h-8 w-8" />
                 </button>
               </>
             )}
