@@ -8,7 +8,6 @@ import { StudentWorksGallery } from "@/components/program/StudentWorksGallery";
 import { HeroSection } from "@/components/program/animation-game/HeroSection";
 import { ProgramOverviewSection } from "@/components/program/animation-game/ProgramOverviewSection";
 import { CustomFacultySection } from "@/components/program/animation-game/CustomFacultySection";
-import { StudioSection } from "@/components/program/animation-game/StudioSection";
 
 const ProgramAnimationGameDesign = () => {
   return (
@@ -28,7 +27,6 @@ const ProgramAnimationGameDesign = () => {
         category="animation"
       />
       <CustomFacultySection />
-      <StudioSection />
       <EnquiryFormSection />
       
       <Footer />
