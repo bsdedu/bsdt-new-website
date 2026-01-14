@@ -29,14 +29,15 @@ export const interiorProjects: ProjectCollection = {
       ]
     },
     { 
-      id: "int-eco-resort", 
-      title: "Eco Resort Design", 
-      description: "An eco-friendly resort design concept featuring sustainable materials and integration with natural surroundings.",
-      student: "Interior Design Student", 
+      id: "int-sahana-hotel-design", 
+      title: "Interior Design Renovation: Hotel Design", 
+      description: "A comprehensive hotel interior renovation project showcasing spatial planning and design solutions for hospitality environments.",
+      student: "Sahana Kashyap", 
       year: "2024", 
-      image: "/lovable-uploads/interior-eco-resort-1.jpg",
+      semester: "6th Semester",
+      image: "/lovable-uploads/sahana-hotel-design.jpg",
       images: [
-        "/lovable-uploads/interior-eco-resort-1.jpg"
+        "/lovable-uploads/sahana-hotel-design.jpg"
       ]
     },
     { 
