@@ -17,6 +17,18 @@ export const interiorProjects: ProjectCollection = {
       ]
     },
     { 
+      id: "int-interior-detailing", 
+      title: "Interior Detailing - Residential Project", 
+      description: "Comprehensive interior working drawings including master bedroom sections, elevations, plans, material palettes, and detailed product specifications for fixtures.",
+      student: "BVA ISD Students", 
+      year: "2024", 
+      semester: "5th-6th Semester",
+      image: "/lovable-uploads/interior-detailing-project.jpg",
+      images: [
+        "/lovable-uploads/interior-detailing-project.jpg"
+      ]
+    },
+    { 
       id: "int-sattva-resort", 
       title: "Resort Sattva - Typical Room Layout", 
       description: "A resort room design featuring rendered flooring layout with detailed section drawings and spatial planning.",
