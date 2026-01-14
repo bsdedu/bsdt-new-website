@@ -2,7 +2,7 @@ import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui-elements/Card";
-import { Quote, Award, Users, BookOpen } from "lucide-react";
+import { Award, Users, BookOpen } from "lucide-react";
 
 export const CustomFacultySection: React.FC = () => {
   const facultyHighlights = [
@@ -145,38 +145,6 @@ export const CustomFacultySection: React.FC = () => {
           </div>
         </RevealSection>
 
-        <RevealSection delay={300}>
-          <Card className="bg-gradient-to-br from-bsd-orange/5 to-bsd-gray/5 border-0">
-            <CardContent className="p-8 md:p-12">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div>
-                  <Quote className="w-12 h-12 text-bsd-orange mb-6" />
-                  <blockquote className="text-lg text-foreground/80 mb-6 italic">
-                    "Spatial design is about creating environments that enhance human experience. Our students learn to think beyond aesthetics – they design spaces that improve how people live, work, and interact."
-                  </blockquote>
-                  <div>
-                    <h4 className="font-semibold text-bsd-gray">Faculty Expertise Areas</h4>
-                    <ul className="mt-3 space-y-1 text-foreground/70">
-                      <li>• Sustainable Interior Design & Green Building</li>
-                      <li>• Spatial Psychology & Human-Centered Design</li>
-                      <li>• Advanced Materials & Construction Technology</li>
-                      <li>• Digital Design & BIM Implementation</li>
-                      <li>• Heritage Conservation & Adaptive Reuse</li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="relative">
-                  <img 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" 
-                    alt="Faculty member working on interior design" 
-                    className="rounded-lg shadow-lg w-full h-80 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </RevealSection>
       </div>
     </section>
   );
