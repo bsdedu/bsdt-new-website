@@ -29,17 +29,6 @@ export const interiorProjects: ProjectCollection = {
       ]
     },
     { 
-      id: "int-sattva-resort", 
-      title: "Resort Sattva - Typical Room Layout", 
-      description: "A resort room design featuring rendered flooring layout with detailed section drawings and spatial planning.",
-      student: "Interior Design Student", 
-      year: "2024", 
-      image: "/lovable-uploads/interior-sattva-resort-1.jpg",
-      images: [
-        "/lovable-uploads/interior-sattva-resort-1.jpg"
-      ]
-    },
-    { 
       id: "int-eco-resort", 
       title: "Eco Resort Design", 
       description: "An eco-friendly resort design concept featuring sustainable materials and integration with natural surroundings.",
