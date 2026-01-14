@@ -39,19 +39,14 @@ export const graphicProjects: ProjectCollection = {
     },
     { 
       id: "3",
-      title: "A Kingdom Far Far Away", 
-      description: "A storybook animation with an originally written story about King Shock and Jerome the Goblin, inspired by G-Shock watch features. Scenes designed on Illustrator and animated in After Effects.",
-      student: "Diploma Student", 
+      title: "Dino Twist - Brand Identity", 
+      description: "A playful beverage brand identity featuring cute dinosaur mascots, vibrant neon-line patterns, and bold typography. Complete branding includes logo variations, illustrations, and packaging design.",
+      student: "Syed Umar", 
       year: "2024", 
-      semester: "2nd Semester", 
-      image: "/lovable-uploads/gd-character-animation-1.jpg",
+      semester: "3rd Semester", 
+      image: "/lovable-uploads/dino-twist-branding.jpg",
       images: [
-        "/lovable-uploads/gd-character-animation-1.jpg",
-        "/lovable-uploads/gd-character-animation-2.jpg",
-        "/lovable-uploads/gd-character-animation-3.jpg",
-        "/lovable-uploads/gd-character-animation-4.jpg",
-        "/lovable-uploads/gd-character-animation-5.jpg",
-        "/lovable-uploads/gd-character-animation-6.jpg"
+        "/lovable-uploads/dino-twist-branding.jpg"
       ]
     },
     { 
