@@ -8,7 +8,7 @@ import { ProjectCategoryTabs } from "@/components/program/interior-design/Projec
 import { HeroSection } from "@/components/program/interior-design/HeroSection";
 import { ProgramOverviewSection } from "@/components/program/interior-design/ProgramOverviewSection";
 import { CustomFacultySection } from "@/components/program/interior-design/CustomFacultySection";
-import { StudentLearningSection } from "@/components/program/StudentLearningSection";
+import { InteriorStudentLearningSection } from "@/components/program/interior-design/InteriorStudentLearningSection";
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
 
@@ -24,7 +24,7 @@ const ProgramInteriorDesign = () => {
 
       <HeroSection />
       <ProgramOverviewSection />
-      <StudentLearningSection />
+      <InteriorStudentLearningSection />
       
       <section className="py-16 bg-bsd-light-gray">
         <div className="container mx-auto px-6 md:px-8">
