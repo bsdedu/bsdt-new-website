@@ -20,24 +20,9 @@ export const HeroSection: React.FC = () => {
 
   const heroImages = [
     {
-      src: "https://images.unsplash.com/photo-1586717799252-bd134ad00e26?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-      alt: "Product Design Studio",
-      caption: "Designing products that enhance human experience"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&auto=format&fit=crop",
-      alt: "Industrial Design Workshop",
-      caption: "Create innovative industrial products and solutions"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&auto=format&fit=crop",
-      alt: "Product Prototyping Lab",
-      caption: "Build and test product prototypes with advanced tools"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1555664424-778a1e5e1b48?w=800&auto=format&fit=crop",
-      alt: "Consumer Product Design",
-      caption: "Design consumer products that solve everyday problems"
+      src: "/lovable-uploads/product-design-hero.png",
+      alt: "Product Design Studio Workshop",
+      caption: "Collaborative product design and prototyping"
     }
   ];
 
