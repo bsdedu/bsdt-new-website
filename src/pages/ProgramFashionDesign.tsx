@@ -8,6 +8,7 @@ import { FashionFacultySection } from '@/components/program/fashion-design/Fashi
 import { FashionStudioSection } from '@/components/program/fashion-design/FashionStudioSection';
 import { StudentWorksGallery } from '@/components/program/StudentWorksGallery';
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
+import { StudentLearningSection } from '@/components/program/StudentLearningSection';
 
 const ProgramFashionDesign: React.FC = () => {
   return (
@@ -27,6 +28,7 @@ const ProgramFashionDesign: React.FC = () => {
       <main>
         <HeroSection />
         <ProgramOverviewSection />
+        <StudentLearningSection />
         <FashionFacultySection />
         <FashionStudioSection />
         <StudentWorksGallery 

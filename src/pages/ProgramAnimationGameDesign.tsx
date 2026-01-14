@@ -8,6 +8,7 @@ import { StudentWorksGallery } from "@/components/program/StudentWorksGallery";
 import { HeroSection } from "@/components/program/animation-game/HeroSection";
 import { ProgramOverviewSection } from "@/components/program/animation-game/ProgramOverviewSection";
 import { CustomFacultySection } from "@/components/program/animation-game/CustomFacultySection";
+import { StudentLearningSection } from "@/components/program/StudentLearningSection";
 
 const ProgramAnimationGameDesign = () => {
   return (
@@ -21,7 +22,8 @@ const ProgramAnimationGameDesign = () => {
 
       <HeroSection />
       <ProgramOverviewSection />
-      <StudentWorksGallery 
+      <StudentLearningSection />
+      <StudentWorksGallery
         title="Animation & Game Design Student Projects"
         description="Explore the creative works of our Animation & Game Design students, showcasing their skills in 2D/3D animation, game development, and character design."
         category="animation"
