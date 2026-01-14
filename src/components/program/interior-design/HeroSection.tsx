@@ -9,24 +9,9 @@ import { Calendar, GraduationCap, BookOpen, Users, BriefcaseBusiness, Award, Bui
 export const HeroSection: React.FC = () => {
   const heroImages = [
     {
-      src: "/lovable-uploads/8c6af2d4-79fa-42a5-8f81-fecc0d4bbee6.png",
-      alt: "Modern Retail Interior Design",
-      caption: "Design innovative retail and commercial spaces"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop",
-      alt: "Residential Interior Design",
-      caption: "Create beautiful and functional living spaces"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&auto=format&fit=crop",
-      alt: "Office Interior Design",
-      caption: "Transform workspace environments for productivity"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?w=800&auto=format&fit=crop",
-      alt: "Hospitality Interior Design",
-      caption: "Design exceptional hospitality and dining experiences"
+      src: "/lovable-uploads/interior-design-hero.png",
+      alt: "Interior Design Studio Workshop",
+      caption: "Collaborative interior design learning environment"
     }
   ];
 
