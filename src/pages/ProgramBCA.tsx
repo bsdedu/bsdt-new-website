@@ -8,7 +8,6 @@ import { StudentWorksGallery } from "@/components/program/StudentWorksGallery";
 import { HeroSection } from "@/components/program/bca/HeroSection";
 import { ProgramOverviewSection } from "@/components/program/bca/ProgramOverviewSection";
 import { CustomFacultySection } from "@/components/program/bca/CustomFacultySection";
-import { StudioSection } from "@/components/program/bca/StudioSection";
 
 const ProgramBCA = () => {
   return (
@@ -28,7 +27,6 @@ const ProgramBCA = () => {
         category="uiux"
       />
       <CustomFacultySection />
-      <StudioSection />
       <EnquiryFormSection />
       
       <Footer />
