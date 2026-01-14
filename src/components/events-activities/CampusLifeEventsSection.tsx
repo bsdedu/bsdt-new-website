@@ -108,6 +108,24 @@ export const CampusLifeEventsSection: React.FC = () => {
       description: "Our annual design festival with exhibitions and performances.",
       imageSrc: "/lovable-uploads/8405d26f-8d85-4e74-80b6-0ebc8ae470d3.png",
       registerLink: "/register-mozaic"
+    },
+    {
+      id: "7",
+      title: "BDS Frames",
+      type: "open-day",
+      date: "8th May, 2024",
+      time: "10:00 AM - 5:00 PM",
+      description: "An immersive showcase of student creativity featuring art exhibitions, craft stalls, interactive games, and project displays.",
+      imageSrc: [
+        "/lovable-uploads/bds-frames-1.jpg",
+        "/lovable-uploads/bds-frames-2.jpg",
+        "/lovable-uploads/bds-frames-3.jpg",
+        "/lovable-uploads/bds-frames-4.jpg",
+        "/lovable-uploads/bds-frames-5.jpg",
+        "/lovable-uploads/bds-frames-6.jpg",
+        "/lovable-uploads/bds-frames-7.jpg"
+      ],
+      registerLink: "/bds-frames"
     }
   ];
 
