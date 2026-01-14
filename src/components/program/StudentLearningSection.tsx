@@ -23,22 +23,22 @@ export const StudentLearningSection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="relative group overflow-hidden rounded-xl shadow-lg">
               <img 
-                src="/lovable-uploads/1597e85c-9001-4ca7-bad1-23f442ef2c46.png" 
-                alt="Students collaborating on design projects with faculty guidance" 
+                src="/lovable-uploads/graphic-students-1.jpg" 
+                alt="Graphic design students in collaborative discussion session" 
                 className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-bsd-gray/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <h3 className="font-semibold mb-1">Faculty Mentorship</h3>
-                  <p className="text-sm opacity-90">One-on-one guidance from industry experts</p>
+                  <h3 className="font-semibold mb-1">Collaborative Learning</h3>
+                  <p className="text-sm opacity-90">Group discussions and peer learning sessions</p>
                 </div>
               </div>
             </div>
 
             <div className="relative group overflow-hidden rounded-xl shadow-lg">
               <img 
-                src="/lovable-uploads/d1c8421a-7e9c-4617-bea7-2d63f830c507.png" 
-                alt="Students working on design concepts and layouts" 
+                src="/lovable-uploads/graphic-students-2.jpg" 
+                alt="Students reviewing design concepts together" 
                 className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-bsd-gray/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -51,28 +51,28 @@ export const StudentLearningSection: React.FC = () => {
 
             <div className="relative group overflow-hidden rounded-xl shadow-lg">
               <img 
-                src="/lovable-uploads/276ed623-1f52-4bf9-9c24-ed45c553845d.png" 
-                alt="Students reviewing and discussing design work" 
+                src="/lovable-uploads/graphic-students-3.jpg" 
+                alt="Student researching design inspiration on computer" 
                 className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-bsd-gray/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <h3 className="font-semibold mb-1">Project Review</h3>
-                  <p className="text-sm opacity-90">Peer feedback and design critique sessions</p>
+                  <h3 className="font-semibold mb-1">Creative Research</h3>
+                  <p className="text-sm opacity-90">Exploring design trends and inspiration</p>
                 </div>
               </div>
             </div>
 
             <div className="relative group overflow-hidden rounded-xl shadow-lg">
               <img 
-                src="/lovable-uploads/7173c77f-042d-40e3-b875-c88be912795f.png" 
-                alt="Students showcasing their work in the design studio" 
+                src="/lovable-uploads/graphic-students-4.jpg" 
+                alt="Faculty conducting UX design lecture with heuristic evaluation" 
                 className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-bsd-gray/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <h3 className="font-semibold mb-1">Studio Showcase</h3>
-                  <p className="text-sm opacity-90">Presenting final projects and achievements</p>
+                  <h3 className="font-semibold mb-1">Expert Sessions</h3>
+                  <p className="text-sm opacity-90">Industry-focused UX/UI design lectures</p>
                 </div>
               </div>
             </div>
