@@ -41,12 +41,12 @@ export const CustomFacultySection: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="/lovable-uploads/4a5d1ae8-5e3a-4e3d-929d-14b52fde7bbb.png" alt="Piyush Kanti Mahapatra" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/94870121-42f6-48a4-ba7d-955284a194f6.png" alt="Amlan Jyothi Bharali" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Piyush Kanti Mahapatra</h3>
-                  <p className="text-sm text-bsd-orange">Faculty, Visual Design</p>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Amlan Jyothi Bharali</h3>
+                  <p className="text-sm text-bsd-orange">Faculty, Interaction Design</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    With 4+ years in digital brand management, Piyush combines industry experience as a Visual Designer with three years of teaching in Art and Design. Skilled in Adobe Creative Cloud, he brings a strategic approach to design that balances aesthetics with brand objectives. His background in both professional and academic environments enriches his collaborative approach to creative problem-solving.
+                    Dedicated to exploring relationships between form and various contexts, Amlan brings expertise in Product and UI/UX Design. His portfolio includes a website for a design-focused educational institution, a mobile app for the transgender community, a dashboard UI for an electric sports car at IIT Guwahati, and contributions to a sustainable bamboo EV bicycle project at IIT Bombay.
                   </p>
                 </div>
               </CardContent>
