@@ -7,7 +7,6 @@ import { StudentWorksGallery } from "@/components/program/StudentWorksGallery";
 import { HeroSection } from "@/components/program/interior-spatial/HeroSection";
 import { ProgramOverviewSection } from "@/components/program/interior-spatial/ProgramOverviewSection";
 import { CustomFacultySection } from "@/components/program/interior-spatial/CustomFacultySection";
-import { StudioSection } from "@/components/program/interior-spatial/StudioSection";
 import { StudentLearningSection } from "@/components/program/StudentLearningSection";
 
 const ProgramInteriorSpatialDesign = () => {
@@ -29,7 +28,6 @@ const ProgramInteriorSpatialDesign = () => {
         category="residential"
       />
       <CustomFacultySection />
-      <StudioSection />
       <EnquiryFormSection />
       
       <Footer />
