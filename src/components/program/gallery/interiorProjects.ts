@@ -5,6 +5,18 @@ import { ProjectCollection } from './types';
 export const interiorProjects: ProjectCollection = {
   residential: [
     { 
+      id: "int-sanajana-cultural-centre", 
+      title: "Community Cultural Centre", 
+      description: "A cultural centre design featuring traditional wood carving details, floor plans, sections, and waiting area designs with rustic elements.",
+      student: "Sanajana R", 
+      year: "2024", 
+      semester: "6th Semester",
+      image: "/lovable-uploads/sanajana-community-cultural-centre.jpg",
+      images: [
+        "/lovable-uploads/sanajana-community-cultural-centre.jpg"
+      ]
+    },
+    { 
       id: "int-sattva-resort", 
       title: "Resort Sattva - Typical Room Layout", 
       description: "A resort room design featuring rendered flooring layout with detailed section drawings and spatial planning.",
