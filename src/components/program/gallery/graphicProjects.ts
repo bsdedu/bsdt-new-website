@@ -17,19 +17,14 @@ export const graphicProjects: ProjectCollection = {
     },
     { 
       id: "2", 
-      title: "Graphic Design & Communication Portfolio",
-      description: "A comprehensive portfolio showcasing ad campaigns, storyboards, and visual communication projects including Adidas advertisement concepts.",
-      student: "Nidhi Pastey", 
-      year: "2024", 
-      semester: "4th Semester", 
-      image: "/lovable-uploads/gd-portfolio-nidhi-1.jpg",
+      title: "World of Gears - Brand Identity",
+      description: "A comprehensive branding project for sustainable supply chains, bridging local practices and global standards. Includes logo design, typography systems, and brand guidelines.",
+      student: "World of Gear Team", 
+      year: "2022", 
+      semester: "BVA GD6", 
+      image: "/lovable-uploads/gd-world-of-gears.jpg",
       images: [
-        "/lovable-uploads/gd-portfolio-nidhi-1.jpg",
-        "/lovable-uploads/gd-portfolio-nidhi-2.jpg",
-        "/lovable-uploads/gd-portfolio-nidhi-3.jpg",
-        "/lovable-uploads/gd-portfolio-nidhi-4.jpg",
-        "/lovable-uploads/gd-portfolio-nidhi-5.jpg",
-        "/lovable-uploads/gd-portfolio-nidhi-6.jpg"
+        "/lovable-uploads/gd-world-of-gears.jpg"
       ]
     },
     { 
