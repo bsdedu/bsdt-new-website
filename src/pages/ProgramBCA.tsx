@@ -8,6 +8,7 @@ import { StudentWorksGallery } from "@/components/program/StudentWorksGallery";
 import { HeroSection } from "@/components/program/bca/HeroSection";
 import { ProgramOverviewSection } from "@/components/program/bca/ProgramOverviewSection";
 import { CustomFacultySection } from "@/components/program/bca/CustomFacultySection";
+import { StudentLearningSection } from "@/components/program/StudentLearningSection";
 
 const ProgramBCA = () => {
   return (
@@ -21,7 +22,8 @@ const ProgramBCA = () => {
 
       <HeroSection />
       <ProgramOverviewSection />
-      <StudentWorksGallery 
+      <StudentLearningSection />
+      <StudentWorksGallery
         title="BCA Student Projects"
         description="Explore the innovative projects created by our BCA students, showcasing their expertise in UI/UX design, AI/ML applications, and web development."
         category="uiux"

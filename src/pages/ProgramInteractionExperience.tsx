@@ -9,6 +9,7 @@ import { HeroSection } from "@/components/program/interaction-experience/HeroSec
 import { ProgramOverviewSection } from "@/components/program/interaction-experience/ProgramOverviewSection";
 import { CustomFacultySection } from "@/components/program/interaction-experience/CustomFacultySection";
 import { StudioSection } from "@/components/program/interaction-experience/StudioSection";
+import { StudentLearningSection } from "@/components/program/StudentLearningSection";
 
 const ProgramInteractionExperience = () => {
   return (
@@ -22,7 +23,8 @@ const ProgramInteractionExperience = () => {
 
       <HeroSection />
       <ProgramOverviewSection />
-      <StudentWorksGallery 
+      <StudentLearningSection />
+      <StudentWorksGallery
         title="Interaction & Experience Design Student Projects"
         description="Explore the innovative works of our Interaction & Experience Design students, showcasing their skills in UX research, UI design, and interactive prototyping."
         category="ux"

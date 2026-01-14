@@ -6,6 +6,7 @@ import { HeroSection } from '@/components/program/product-design/HeroSection';
 import { ProgramOverviewSection } from '@/components/program/product-design/ProgramOverviewSection';
 import { CustomFacultySection } from '@/components/program/interior-spatial/CustomFacultySection';
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
+import { StudentLearningSection } from '@/components/program/StudentLearningSection';
 
 const ProgramProductDesign: React.FC = () => {
   return (
@@ -25,6 +26,7 @@ const ProgramProductDesign: React.FC = () => {
       <main>
         <HeroSection />
         <ProgramOverviewSection />
+        <StudentLearningSection />
         <CustomFacultySection />
         <EnquiryFormSection />
       </main>

@@ -9,6 +9,7 @@ import { HeroSection } from "../components/program/architectural-design/HeroSect
 import { ProgramOverviewSection } from "../components/program/architectural-design/ProgramOverviewSection";
 import { CustomFacultySection } from "../components/program/architectural-design/CustomFacultySection";
 import { StudioSection } from "../components/program/architectural-design/StudioSection";
+import { StudentLearningSection } from "../components/program/StudentLearningSection";
 
 const ProgramArchitecturalDesign = () => {
   return (
@@ -31,7 +32,8 @@ const ProgramArchitecturalDesign = () => {
 
       <HeroSection />
       <ProgramOverviewSection />
-      <StudentWorksGallery 
+      <StudentLearningSection />
+      <StudentWorksGallery
         title="Architectural Design Student Projects"
         description="Explore the innovative architectural works of our students, showcasing their skills in sustainable design, space planning, and construction technology."
         category="architecture"
