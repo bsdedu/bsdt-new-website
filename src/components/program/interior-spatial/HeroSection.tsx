@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui-elements/Card";
 import { AnimatedButton } from "@/components/ui-elements/AnimatedButton";
 import { Calendar, GraduationCap, BookOpen, Users, BriefcaseBusiness, Award, Building2, BrainCircuit } from "lucide-react";
+import interiorSpatialHero from "@/assets/interior-spatial-hero.png";
 
 export const HeroSection: React.FC = () => {
   const handleApplyClick = () => {
@@ -20,24 +21,9 @@ export const HeroSection: React.FC = () => {
 
   const heroImages = [
     {
-      src: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1158&q=80",
-      alt: "Interior & Spatial Design Studio",
+      src: interiorSpatialHero,
+      alt: "Interior & Spatial Design Studio Workshop",
       caption: "Creating functional, aesthetic spaces through spatial innovation"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?w=800&auto=format&fit=crop",
-      alt: "Commercial Space Design",
-      caption: "Design innovative commercial and retail environments"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&auto=format&fit=crop",
-      alt: "Residential Interior Design",
-      caption: "Create personalized living spaces that reflect lifestyle"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&auto=format&fit=crop",
-      alt: "Architectural Integration",
-      caption: "Integrate interior design with architectural elements"
     }
   ];
 
