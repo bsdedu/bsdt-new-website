@@ -74,6 +74,18 @@ export const graphicProjects: ProjectCollection = {
         "/lovable-uploads/gd-magazine-7.jpg"
       ]
     },
+    { 
+      id: "6",
+      title: "RE: Managing Plastics in Bengaluru", 
+      description: "A design research project exploring sustainable packaging solutions in Bengaluru cafes. Includes case studies, surveys, interviews, and insights on plastic waste management and alternatives.",
+      student: "Winola Caroline", 
+      year: "2022", 
+      semester: "BVA GD7", 
+      image: "/lovable-uploads/gd-plastics-winola.jpg",
+      images: [
+        "/lovable-uploads/gd-plastics-winola.jpg"
+      ]
+    },
   ],
   digital: [
     { id: "1", title: "Mobile App UI Design", student: "Kiran Kumar", year: "2023", image: "https://images.unsplash.com/photo-1616469829941-c7200edec809?w=800&auto=format&fit=crop" },
