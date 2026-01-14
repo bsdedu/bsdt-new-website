@@ -7,7 +7,6 @@ import { EnquiryFormSection } from "@/components/home/EnquiryFormSection";
 import { HeroSection } from "@/components/program/bsc-cs/HeroSection";
 import { ProgramOverviewSection } from "@/components/program/bsc-cs/ProgramOverviewSection";
 import { CustomFacultySection } from "@/components/program/bsc-cs/CustomFacultySection";
-import { StudioSection } from "@/components/program/bsc-cs/StudioSection";
 
 const ProgramBScCS = () => {
   return (
@@ -22,7 +21,6 @@ const ProgramBScCS = () => {
       <HeroSection />
       <ProgramOverviewSection />
       <CustomFacultySection />
-      <StudioSection />
       <EnquiryFormSection />
       
       <Footer />
