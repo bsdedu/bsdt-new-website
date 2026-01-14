@@ -5,19 +5,14 @@ export const graphicProjects: ProjectCollection = {
   branding: [
     { 
       id: "1", 
-      title: "Typography Design Portfolio", 
-      description: "A comprehensive typography portfolio showcasing dynamic typography, grids, and experimental typographic design explorations.",
-      student: "Nidhi Pastey", 
-      year: "2024", 
-      semester: "4th Semester", 
-      image: "/lovable-uploads/gd-typography-nidhi-1.jpg",
+      title: "Community Water Distribution in Bangalore", 
+      description: "A design research project analyzing water scarcity and distribution conflicts in Bangalore, proposing models for equitable water distribution, sustainable use, and transparent governance.",
+      student: "Mayur Deep", 
+      year: "2022", 
+      semester: "BVA GD71", 
+      image: "/lovable-uploads/gd-water-distribution-mayur.jpg",
       images: [
-        "/lovable-uploads/gd-typography-nidhi-1.jpg",
-        "/lovable-uploads/gd-typography-nidhi-2.jpg",
-        "/lovable-uploads/gd-typography-nidhi-3.jpg",
-        "/lovable-uploads/gd-typography-nidhi-4.jpg",
-        "/lovable-uploads/gd-typography-nidhi-5.jpg",
-        "/lovable-uploads/gd-typography-nidhi-6.jpg"
+        "/lovable-uploads/gd-water-distribution-mayur.jpg"
       ]
     },
     { 
