@@ -41,12 +41,12 @@ export const CustomFacultySection: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="/lovable-uploads/4a5d1ae8-5e3a-4e3d-929d-14b52fde7bbb.png" alt="Piyush Kanti Mahapatra" className="w-full h-full object-cover" />
+                    <img src="/lovable-uploads/4a5d1ae8-5e3a-4e3d-929d-14b52fde7bbb.png" alt="Amlan Jyothi Bharali" className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Piyush Kanti Mahapatra</h3>
+                  <h3 className="text-lg font-semibold text-bsd-gray">Amlan Jyothi Bharali</h3>
                   <p className="text-sm text-bsd-orange">Faculty, Visual Design</p>
                   <p className="mt-4 text-sm text-foreground/70">
-                    With 4+ years in digital brand management, Piyush combines industry experience as a Visual Designer with three years of teaching in Art and Design. Skilled in Adobe Creative Cloud, he brings a strategic approach to design that balances aesthetics with brand objectives. His background in both professional and academic environments enriches his collaborative approach to creative problem-solving.
+                    Amlan brings expertise in visual design and digital brand management. Skilled in Adobe Creative Cloud, he combines industry experience with a passion for teaching, helping students develop a strategic approach to design that balances aesthetics with brand objectives.
                   </p>
                 </div>
               </CardContent>
