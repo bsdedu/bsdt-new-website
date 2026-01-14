@@ -138,7 +138,12 @@ export const CampusLifeEventsSection: React.FC = () => {
         "/lovable-uploads/bds-frames-4.jpg",
         "/lovable-uploads/bds-frames-5.jpg",
         "/lovable-uploads/bds-frames-6.jpg",
-        "/lovable-uploads/bds-frames-7.jpg"
+        "/lovable-uploads/bds-frames-7.jpg",
+        "/lovable-uploads/bds-frames-8.jpg",
+        "/lovable-uploads/bds-frames-9.jpg",
+        "/lovable-uploads/bds-frames-10.jpg",
+        "/lovable-uploads/bds-frames-11.jpg",
+        "/lovable-uploads/bds-frames-12.jpg"
       ],
       viewOnly: true
     }
