@@ -21,24 +21,9 @@ export const HeroSection: React.FC = () => {
 
   const heroImages = [
     {
-      src: "https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
-      alt: "Graphic Design Studio",
-      caption: "Visual storytelling, branding, and digital design expertise"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=800&auto=format&fit=crop",
-      alt: "Brand Identity Design",
-      caption: "Create powerful brand identities and visual communication"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1587440871875-191322ee64b0?w=800&auto=format&fit=crop",
-      alt: "Digital Design Workspace",
-      caption: "Master digital design tools and modern design techniques"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&auto=format&fit=crop",
-      alt: "Print and Publication Design",
-      caption: "Explore print media, typography, and publication design"
+      src: "/lovable-uploads/graphic-design-hero.png",
+      alt: "Graphic Design Studio Workshop",
+      caption: "Collaborative graphic design learning environment"
     }
   ];
 
