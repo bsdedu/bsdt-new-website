@@ -7,8 +7,7 @@ import { StudentWorksGallery } from "@/components/program/StudentWorksGallery";
 import { HeroSection } from "@/components/program/interior-spatial/HeroSection";
 import { ProgramOverviewSection } from "@/components/program/interior-spatial/ProgramOverviewSection";
 import { CustomFacultySection } from "@/components/program/interior-spatial/CustomFacultySection";
-import { StudentLearningSection } from "@/components/program/StudentLearningSection";
-
+import { BVAInteriorStudentLearningSection } from "@/components/program/interior-spatial/BVAInteriorStudentLearningSection";
 const ProgramInteriorSpatialDesign = () => {
   return (
     <>
@@ -21,7 +20,7 @@ const ProgramInteriorSpatialDesign = () => {
 
       <HeroSection />
       <ProgramOverviewSection />
-      <StudentLearningSection />
+      <BVAInteriorStudentLearningSection />
       <StudentWorksGallery 
         title="Interior & Spatial Design Student Projects"
         description="Explore the innovative works of our Interior & Spatial Design students, showcasing their expertise in spatial planning, interior design, and sustainable solutions."
