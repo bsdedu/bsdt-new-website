@@ -12,8 +12,9 @@ interface Event {
   time: string;
   description: string;
   imageSrc: string | string[];
-  registerLink: string;
+  registerLink?: string;
   featured?: boolean;
+  viewOnly?: boolean;
 }
 
 export const CampusLifeEventsSection: React.FC = () => {
@@ -97,7 +98,7 @@ export const CampusLifeEventsSection: React.FC = () => {
       time: "9:00 AM - 6:00 PM",
       description: "Celebrate and honor our dedicated faculty members.",
       imageSrc: "/lovable-uploads/2c70e2d5-549c-43bd-bd5f-ef047b51dc10.png",
-      registerLink: "/register-teachers-day"
+      viewOnly: true
     },
     {
       id: "6",
@@ -107,7 +108,7 @@ export const CampusLifeEventsSection: React.FC = () => {
       time: "11:00 AM - 8:00 PM",
       description: "Our annual design festival with exhibitions and performances.",
       imageSrc: "/lovable-uploads/8405d26f-8d85-4e74-80b6-0ebc8ae470d3.png",
-      registerLink: "/register-mozaic"
+      viewOnly: true
     },
     {
       id: "7",
@@ -125,7 +126,7 @@ export const CampusLifeEventsSection: React.FC = () => {
         "/lovable-uploads/bds-frames-6.jpg",
         "/lovable-uploads/bds-frames-7.jpg"
       ],
-      registerLink: "/bds-frames"
+      viewOnly: true
     }
   ];
 
@@ -193,43 +194,55 @@ export const CampusLifeEventsSection: React.FC = () => {
   const renderEventCard = (event: Event) => {
     const isCarousel = Array.isArray(event.imageSrc);
 
+    const cardContent = (
+      <Card
+        isHoverable
+        className={`overflow-hidden ${event.featured ? 'border-bsd-orange/20 shadow' : ''}`}
+      >
+        <div className="relative h-40 sm:h-48 overflow-hidden">
+          {isCarousel ? (
+            <ImageCarousel images={event.imageSrc as string[]} alt={event.title} />
+          ) : (
+            <img
+              src={event.imageSrc as string}
+              alt={event.title}
+              className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
+            />
+          )}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-4 pointer-events-none">
+            <h3 className="text-base md:text-lg font-semibold text-white mb-1">
+              {event.title}
+            </h3>
+            <div className="flex items-center gap-1.5 text-white">
+              <Calendar className="w-3 h-3" />
+              <span className="text-xs font-medium">{event.date}</span>
+            </div>
+          </div>
+        </div>
+
+        <CardContent className="p-4">
+          <p className="text-sm text-bsd-gray/80 line-clamp-2">{event.description}</p>
+        </CardContent>
+      </Card>
+    );
+
+    if (event.viewOnly) {
+      return (
+        <div key={event.id} className="block cursor-default">
+          {cardContent}
+        </div>
+      );
+    }
+
     return (
       <a
         key={event.id}
         href={event.registerLink}
-        target={event.registerLink.startsWith('http') ? '_blank' : '_self'}
-        rel={event.registerLink.startsWith('http') ? 'noopener noreferrer' : undefined}
+        target={event.registerLink?.startsWith('http') ? '_blank' : '_self'}
+        rel={event.registerLink?.startsWith('http') ? 'noopener noreferrer' : undefined}
         className="block"
       >
-        <Card
-          isHoverable
-          className={`overflow-hidden ${event.featured ? 'border-bsd-orange/20 shadow' : ''}`}
-        >
-          <div className="relative h-40 sm:h-48 overflow-hidden">
-            {isCarousel ? (
-              <ImageCarousel images={event.imageSrc as string[]} alt={event.title} />
-            ) : (
-              <img
-                src={event.imageSrc as string}
-                alt={event.title}
-                className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
-              />
-            )}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-4 pointer-events-none">
-              <h3 className="text-base md:text-lg font-semibold text-white mb-1">
-                {event.title}
-              </h3>
-              <div className="flex items-center gap-1.5 text-white">
-                <Calendar className="w-3 h-3" />
-                <span className="text-xs font-medium">{event.date}</span>
-              </div>
-            </div>
-          </div>
-
-          <CardContent className="p-4">
-            <p className="text-sm text-bsd-gray/80 line-clamp-2">{event.description}</p>
-          </CardContent>
-        </Card>
+        {cardContent}
       </a>
     );
   };
