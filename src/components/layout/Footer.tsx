@@ -66,12 +66,6 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/academics/b-des-interaction-and-experience-design" className="text-sm text-white/80 hover:text-white transition-colors flex items-center">
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  Popular Programs
-                </Link>
-              </li>
-              <li>
                 <Link to="/admissions/application-process" className="text-sm text-white/80 hover:text-white transition-colors flex items-center">
                   <ExternalLink className="w-4 h-4 mr-2" />
                   Admissions
