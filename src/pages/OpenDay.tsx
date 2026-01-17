@@ -244,7 +244,7 @@ const OpenDay = () => {
             </div>
           </section>
 
-          {/* Highlights Section */}
+          {/* Why Attend Section */}
           <section className="py-16 md:py-24 bg-background">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
@@ -258,9 +258,9 @@ const OpenDay = () => {
                       <span className="text-white font-bold">1</span>
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold mb-2 text-foreground">Explore Your Interests</h3>
+                      <h3 className="text-lg font-semibold mb-2 text-foreground">Clarity Before Choosing</h3>
                       <p className="text-muted-foreground">
-                        Discover the wide range of academic programs and majors we offer to help you pursue your passions and career goals in design and technology.
+                        Get a complete understanding of our programs, faculty, and campus environment before making your decision.
                       </p>
                     </div>
                   </div>
@@ -270,9 +270,9 @@ const OpenDay = () => {
                       <span className="text-white font-bold">2</span>
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold mb-2 text-foreground">Experience Campus Life</h3>
+                      <h3 className="text-lg font-semibold mb-2 text-foreground">Early Career Decision</h3>
                       <p className="text-muted-foreground">
-                        Picture yourself as a student on our campus. Explore the facilities and resources available to support your academic journey.
+                        Take the first step towards your design career with expert guidance and personalized counseling.
                       </p>
                     </div>
                   </div>
@@ -282,9 +282,21 @@ const OpenDay = () => {
                       <span className="text-white font-bold">3</span>
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold mb-2 text-foreground">Get Personalized Advice</h3>
+                      <h3 className="text-lg font-semibold mb-2 text-foreground">Scholarships and Fee Guidance</h3>
                       <p className="text-muted-foreground">
-                        Whether you're a high school student or looking to upskill, our experts will be here to provide tailored guidance for your design career.
+                        Learn about available scholarships, fee structures, and financial assistance options for your education.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4 p-6 bg-muted/30 rounded-xl">
+                    <div className="w-10 h-10 bg-bsd-orange rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold">4</span>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2 text-foreground">On Spot Admission and Early Bird Benefits</h3>
+                      <p className="text-muted-foreground">
+                        Avail exclusive early bird discounts and complete your admission process on the same day.
                       </p>
                     </div>
                   </div>
