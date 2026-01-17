@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
 import { Button } from '@/components/ui/button';
-import { Calendar, Clock, MapPin, Users, BookOpen, Building, MessageCircle, Mail, Phone } from 'lucide-react';
+import { Calendar, Clock, MapPin, Users, BookOpen, Building, MessageCircle, Mail, Phone, Presentation, Briefcase, FolderOpen, Network } from 'lucide-react';
 import openDayHero from '@/assets/open-day-hero.jpg';
 import openDayOverview from '@/assets/open-day-overview.jpg';
 import openDay2018 from '@/assets/open-day-2018.mp4';
@@ -157,51 +157,85 @@ const OpenDay = () => {
             </div>
           </section>
 
-          <section className="py-16 md:py-24 bg-muted/30">
+          <section className="py-16 md:py-24 bg-bsd-orange">
             <div className="container mx-auto px-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
-                Explore Our Campus and Resources
-              </h2>
-
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-                <div className="bg-background rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                  <div className="w-14 h-14 bg-bsd-orange/10 rounded-full flex items-center justify-center mb-4">
-                    <Building className="w-7 h-7 text-bsd-orange" />
+              <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                {/* Campus and Studio Tours */}
+                <div className="bg-amber-100 rounded-xl p-6">
+                  <div className="flex items-start gap-4">
+                    <Building className="w-10 h-10 text-bsd-orange flex-shrink-0" />
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-800 mb-2">Campus and Studio Tours</h3>
+                      <p className="text-gray-700">
+                        Step inside real classrooms, labs, and creative studios.
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-foreground">Explore Our Campus</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Tour BSDT's beautiful campus and discover the facilities and resources that support student success.
-                  </p>
                 </div>
 
-                <div className="bg-background rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                  <div className="w-14 h-14 bg-bsd-orange/10 rounded-full flex items-center justify-center mb-4">
-                    <Users className="w-7 h-7 text-bsd-orange" />
+                {/* Live Workshops & Demos */}
+                <div className="bg-amber-100 rounded-xl p-6">
+                  <div className="flex items-start gap-4">
+                    <Presentation className="w-10 h-10 text-bsd-orange flex-shrink-0" />
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-800 mb-2">Live Workshops & Demos</h3>
+                      <p className="text-gray-700">
+                        Experience hands-on sessions across design and technology.
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-foreground">Engage with Faculty</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Meet our faculty and staff, experience campus life, and feel the vibrant BSDT community.
-                  </p>
                 </div>
 
-                <div className="bg-background rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                  <div className="w-14 h-14 bg-bsd-orange/10 rounded-full flex items-center justify-center mb-4">
-                    <BookOpen className="w-7 h-7 text-bsd-orange" />
+                {/* Faculty & Mentor Interactions */}
+                <div className="bg-amber-100 rounded-xl p-6">
+                  <div className="flex items-start gap-4">
+                    <Users className="w-10 h-10 text-bsd-orange flex-shrink-0" />
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-800 mb-2">Faculty & Mentor Interactions</h3>
+                      <p className="text-gray-700">
+                        Engage directly with educators and industry mentors.
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-foreground">Discover Programs</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Learn about our diverse academic programs and majors, aligning with your career goals and passions.
-                  </p>
                 </div>
 
-                <div className="bg-background rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                  <div className="w-14 h-14 bg-bsd-orange/10 rounded-full flex items-center justify-center mb-4">
-                    <MessageCircle className="w-7 h-7 text-bsd-orange" />
+                {/* Career & Portfolio Guidance */}
+                <div className="bg-amber-100 rounded-xl p-6">
+                  <div className="flex items-start gap-4">
+                    <Briefcase className="w-10 h-10 text-bsd-orange flex-shrink-0" />
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-800 mb-2">Career & Portfolio Guidance</h3>
+                      <p className="text-gray-700">
+                        Get clarity on careers and building a strong portfolio.
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-foreground">Get Personalized Guidance</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Receive tailored advice from our faculty members to help plan your educational journey.
-                  </p>
+                </div>
+
+                {/* Student Work Showcases */}
+                <div className="bg-amber-100 rounded-xl p-6">
+                  <div className="flex items-start gap-4">
+                    <FolderOpen className="w-10 h-10 text-bsd-orange flex-shrink-0" />
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-800 mb-2">Student Work Showcases</h3>
+                      <p className="text-gray-700">
+                        Explore portfolios, projects, and real student outcomes.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Peer Networking */}
+                <div className="bg-amber-100 rounded-xl p-6">
+                  <div className="flex items-start gap-4">
+                    <Network className="w-10 h-10 text-bsd-orange flex-shrink-0" />
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-800 mb-2">Peer Networking</h3>
+                      <p className="text-gray-700">
+                        Meet future classmates and like-minded creators.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
