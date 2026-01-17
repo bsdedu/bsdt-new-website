@@ -39,7 +39,10 @@ const OpenDay = () => {
                 <p className="text-2xl md:text-3xl font-semibold mb-4">
                   Saturday, 24th January 2026
                 </p>
-                <p className="text-lg md:text-xl opacity-90">VENUE : Bangalore School of Design and Technology</p>
+                <p className="text-lg md:text-xl opacity-90 mb-8">VENUE : Bangalore School of Design and Technology</p>
+                <Button size="lg" className="bg-bsd-orange text-white hover:bg-bsd-orange/90 font-semibold px-8 py-6 text-lg" asChild>
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfJHlSTNhMYjU9ulXi8JiPPJQW1Jw-C_JiUe7WGiIHIOpKe3Q/viewform" target="_blank" rel="noopener noreferrer">Register Now</a>
+                </Button>
               </div>
             </div>
           </section>
@@ -315,7 +318,7 @@ const OpenDay = () => {
                 We look forward to welcoming you to our Open Day event and helping you take the first step toward a bright future in design. Join us and discover the opportunities that await you at BSDT!
               </p>
               <Button size="lg" className="bg-white text-bsd-orange hover:bg-white/90 font-semibold px-8 py-6 text-lg" asChild>
-                <a href="https://forms.gle/eBseES87FVJ3u1tx8" target="_blank" rel="noopener noreferrer">Register for Open Day</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfJHlSTNhMYjU9ulXi8JiPPJQW1Jw-C_JiUe7WGiIHIOpKe3Q/viewform" target="_blank" rel="noopener noreferrer">Register for Open Day</a>
               </Button>
             </div>
           </section>
