@@ -88,7 +88,13 @@ export const HeroSection: React.FC = () => {
               </p>
               
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" variant="outline" className="border-2 border-[#f5f5f0] bg-[#f5f5f0] text-black hover:bg-white hover:border-white transition-all duration-300 font-semibold px-8" onClick={() => window.open("https://apply.bsd.edu.in/", "_blank", "noopener noreferrer")}>
+                <Button size="lg" variant="outline" className="border-2 border-[#f5f5f0] bg-[#f5f5f0] text-black hover:bg-white hover:border-white transition-all duration-300 font-semibold px-8" onClick={() => {
+                  if (currentSlide === 2) {
+                    window.open("https://docs.google.com/forms/d/e/1FAIpQLSfJHlSTNhMYjU9ulXi8JiPPJQW1Jw-C_JiUe7WGiIHIOpKe3Q/viewform", "_blank", "noopener noreferrer");
+                  } else {
+                    window.open("https://apply.bsd.edu.in/", "_blank", "noopener noreferrer");
+                  }
+                }}>
                   {currentSlide === 2 ? "REGISTER NOW" : "APPLY NOW"}
                 </Button>
                 <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-8" onClick={() => {
