@@ -84,7 +84,7 @@ const OpenDay = () => {
                 Relive the excitement from our previous Open Day events
               </p>
 
-              <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                 {/* Open Day 2018 */}
                 <div className="rounded-xl overflow-hidden shadow-lg">
                   <video 
