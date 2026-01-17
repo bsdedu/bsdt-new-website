@@ -10,6 +10,10 @@ import openDay2018 from '@/assets/open-day-2018.mp4';
 import openDay2019 from '@/assets/open-day-2019.mp4';
 import openDay2020 from '@/assets/open-day-2020.mp4';
 import openDay2023 from '@/assets/open-day-2023.mp4';
+import openDay2018Poster from '@/assets/open-day-2018-poster.jpg';
+import openDay2019Poster from '@/assets/open-day-2019-poster.jpg';
+import openDay2020Poster from '@/assets/open-day-2020-poster.jpg';
+import openDay2023Poster from '@/assets/open-day-2023-poster.jpg';
 
 const OpenDay = () => {
   return <>
@@ -91,7 +95,7 @@ const OpenDay = () => {
                     src={openDay2018} 
                     controls 
                     className="w-full aspect-video object-cover"
-                    poster=""
+                    poster={openDay2018Poster}
                   >
                     Your browser does not support the video tag.
                   </video>
@@ -105,6 +109,7 @@ const OpenDay = () => {
                     src={openDay2019} 
                     controls 
                     className="w-full aspect-video object-cover"
+                    poster={openDay2019Poster}
                   >
                     Your browser does not support the video tag.
                   </video>
@@ -118,6 +123,7 @@ const OpenDay = () => {
                     src={openDay2020} 
                     controls 
                     className="w-full aspect-video object-cover"
+                    poster={openDay2020Poster}
                   >
                     Your browser does not support the video tag.
                   </video>
@@ -131,6 +137,7 @@ const OpenDay = () => {
                     src={openDay2023} 
                     controls 
                     className="w-full aspect-video object-cover"
+                    poster={openDay2023Poster}
                   >
                     Your browser does not support the video tag.
                   </video>
