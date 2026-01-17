@@ -4,6 +4,8 @@ import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import { Calendar, Clock, MapPin, Users, BookOpen, Building, MessageCircle, Mail, Phone } from 'lucide-react';
+import openDayHero from '@/assets/open-day-hero.jpg';
+
 const OpenDay = () => {
   return <>
       <Helmet>
@@ -16,10 +18,14 @@ const OpenDay = () => {
 
         <main className="flex-grow">
           {/* Hero Section */}
-          <section className="relative bg-gradient-to-br from-bsd-orange via-bsd-orange to-orange-600 text-white py-20 md:py-32">
-            <div className="absolute inset-0 bg-black/20"></div>
+          <section className="relative text-white py-20 md:py-32 min-h-[60vh] flex items-center">
+            <div 
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${openDayHero})` }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
             <div className="container mx-auto px-4 relative z-10">
-              <div className="max-w-4xl mx-auto text-center">
+              <div className="max-w-4xl">
                 <p className="text-lg md:text-xl font-medium mb-4 opacity-90">Unique Opportunity</p>
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
                   EXPLORE... <br />
@@ -28,7 +34,7 @@ const OpenDay = () => {
                 <p className="text-2xl md:text-3xl font-semibold mb-4">
                   Saturday, 24th January 2026
                 </p>
-                <p className="text-lg md:text-xl opacity-90"> VENUE : Bangalore School of Design and Technology</p>
+                <p className="text-lg md:text-xl opacity-90">VENUE : Bangalore School of Design and Technology</p>
               </div>
             </div>
           </section>
