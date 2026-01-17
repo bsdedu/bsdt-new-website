@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Calendar, Clock, MapPin, Users, BookOpen, Building, MessageCircle, Mail, Phone } from 'lucide-react';
 import openDayHero from '@/assets/open-day-hero.jpg';
 import openDayOverview from '@/assets/open-day-overview.jpg';
+import openDay2018 from '@/assets/open-day-2018.mp4';
 
 const OpenDay = () => {
   return <>
@@ -81,9 +82,19 @@ const OpenDay = () => {
               </p>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                {/* Video placeholder 1 */}
-                <div className="aspect-video bg-muted rounded-xl flex items-center justify-center border-2 border-dashed border-muted-foreground/30">
-                  <p className="text-muted-foreground text-sm">Video coming soon</p>
+                {/* Open Day 2018 */}
+                <div className="rounded-xl overflow-hidden shadow-lg">
+                  <video 
+                    src={openDay2018} 
+                    controls 
+                    className="w-full aspect-video object-cover"
+                    poster=""
+                  >
+                    Your browser does not support the video tag.
+                  </video>
+                  <div className="bg-background p-3">
+                    <p className="font-semibold text-foreground">Open Day 2018</p>
+                  </div>
                 </div>
                 {/* Video placeholder 2 */}
                 <div className="aspect-video bg-muted rounded-xl flex items-center justify-center border-2 border-dashed border-muted-foreground/30">
