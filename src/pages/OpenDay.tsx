@@ -7,6 +7,8 @@ import { Calendar, Clock, MapPin, Users, BookOpen, Building, MessageCircle, Mail
 import openDayHero from '@/assets/open-day-hero.jpg';
 import openDayOverview from '@/assets/open-day-overview.jpg';
 import openDay2018 from '@/assets/open-day-2018.mp4';
+import openDay2019 from '@/assets/open-day-2019.mp4';
+import openDay2020 from '@/assets/open-day-2020.mp4';
 
 const OpenDay = () => {
   return <>
@@ -96,13 +98,31 @@ const OpenDay = () => {
                     <p className="font-semibold text-foreground">Open Day 2018</p>
                   </div>
                 </div>
-                {/* Video placeholder 2 */}
-                <div className="aspect-video bg-muted rounded-xl flex items-center justify-center border-2 border-dashed border-muted-foreground/30">
-                  <p className="text-muted-foreground text-sm">Video coming soon</p>
+                {/* Open Day 2019 */}
+                <div className="rounded-xl overflow-hidden shadow-lg">
+                  <video 
+                    src={openDay2019} 
+                    controls 
+                    className="w-full aspect-video object-cover"
+                  >
+                    Your browser does not support the video tag.
+                  </video>
+                  <div className="bg-background p-3">
+                    <p className="font-semibold text-foreground">Open Day 2019</p>
+                  </div>
                 </div>
-                {/* Video placeholder 3 */}
-                <div className="aspect-video bg-muted rounded-xl flex items-center justify-center border-2 border-dashed border-muted-foreground/30">
-                  <p className="text-muted-foreground text-sm">Video coming soon</p>
+                {/* Open Day 2020 */}
+                <div className="rounded-xl overflow-hidden shadow-lg">
+                  <video 
+                    src={openDay2020} 
+                    controls 
+                    className="w-full aspect-video object-cover"
+                  >
+                    Your browser does not support the video tag.
+                  </video>
+                  <div className="bg-background p-3">
+                    <p className="font-semibold text-foreground">Open Day 2020</p>
+                  </div>
                 </div>
               </div>
             </div>
