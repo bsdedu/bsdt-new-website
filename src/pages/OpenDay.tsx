@@ -9,6 +9,7 @@ import openDayOverview from '@/assets/open-day-overview.jpg';
 import openDay2018 from '@/assets/open-day-2018.mp4';
 import openDay2019 from '@/assets/open-day-2019.mp4';
 import openDay2020 from '@/assets/open-day-2020.mp4';
+import openDay2023 from '@/assets/open-day-2023.mp4';
 
 const OpenDay = () => {
   return <>
@@ -122,6 +123,19 @@ const OpenDay = () => {
                   </video>
                   <div className="bg-background p-3">
                     <p className="font-semibold text-foreground">Open Day 2020</p>
+                  </div>
+                </div>
+                {/* Open Day 2023 */}
+                <div className="rounded-xl overflow-hidden shadow-lg">
+                  <video 
+                    src={openDay2023} 
+                    controls 
+                    className="w-full aspect-video object-cover"
+                  >
+                    Your browser does not support the video tag.
+                  </video>
+                  <div className="bg-background p-3">
+                    <p className="font-semibold text-foreground">Open Day 2023</p>
                   </div>
                 </div>
               </div>
