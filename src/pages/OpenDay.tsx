@@ -70,7 +70,33 @@ const OpenDay = () => {
             </div>
           </section>
 
-          {/* What to Explore Section */}
+          {/* Open Days Rewind Section */}
+          <section className="py-16 md:py-24 bg-muted/30">
+            <div className="container mx-auto px-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">
+                Open Days Rewind
+              </h2>
+              <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+                Relive the excitement from our previous Open Day events
+              </p>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                {/* Video placeholder 1 */}
+                <div className="aspect-video bg-muted rounded-xl flex items-center justify-center border-2 border-dashed border-muted-foreground/30">
+                  <p className="text-muted-foreground text-sm">Video coming soon</p>
+                </div>
+                {/* Video placeholder 2 */}
+                <div className="aspect-video bg-muted rounded-xl flex items-center justify-center border-2 border-dashed border-muted-foreground/30">
+                  <p className="text-muted-foreground text-sm">Video coming soon</p>
+                </div>
+                {/* Video placeholder 3 */}
+                <div className="aspect-video bg-muted rounded-xl flex items-center justify-center border-2 border-dashed border-muted-foreground/30">
+                  <p className="text-muted-foreground text-sm">Video coming soon</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
           <section className="py-16 md:py-24 bg-muted/30">
             <div className="container mx-auto px-4">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
