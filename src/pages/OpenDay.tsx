@@ -159,14 +159,14 @@ const OpenDay = () => {
 
           <section className="py-16 md:py-24 bg-bsd-orange">
             <div className="container mx-auto px-4">
-              <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                 {/* Campus and Studio Tours */}
-                <div className="bg-amber-100 rounded-xl p-6">
-                  <div className="flex items-start gap-4">
-                    <Building className="w-10 h-10 text-bsd-orange flex-shrink-0" />
+                <div className="bg-amber-100 rounded-2xl p-8">
+                  <div className="flex items-start gap-5">
+                    <Building className="w-12 h-12 text-bsd-orange flex-shrink-0" />
                     <div>
-                      <h3 className="text-xl font-bold text-gray-800 mb-2">Campus and Studio Tours</h3>
-                      <p className="text-gray-700">
+                      <h3 className="text-2xl font-bold text-gray-800 mb-3">Campus and Studio Tours</h3>
+                      <p className="text-gray-700 text-lg">
                         Step inside real classrooms, labs, and creative studios.
                       </p>
                     </div>
@@ -174,12 +174,12 @@ const OpenDay = () => {
                 </div>
 
                 {/* Live Workshops & Demos */}
-                <div className="bg-amber-100 rounded-xl p-6">
-                  <div className="flex items-start gap-4">
-                    <Presentation className="w-10 h-10 text-bsd-orange flex-shrink-0" />
+                <div className="bg-amber-100 rounded-2xl p-8">
+                  <div className="flex items-start gap-5">
+                    <Presentation className="w-12 h-12 text-bsd-orange flex-shrink-0" />
                     <div>
-                      <h3 className="text-xl font-bold text-gray-800 mb-2">Live Workshops & Demos</h3>
-                      <p className="text-gray-700">
+                      <h3 className="text-2xl font-bold text-gray-800 mb-3">Live Workshops & Demos</h3>
+                      <p className="text-gray-700 text-lg">
                         Experience hands-on sessions across design and technology.
                       </p>
                     </div>
@@ -187,12 +187,12 @@ const OpenDay = () => {
                 </div>
 
                 {/* Faculty & Mentor Interactions */}
-                <div className="bg-amber-100 rounded-xl p-6">
-                  <div className="flex items-start gap-4">
-                    <Users className="w-10 h-10 text-bsd-orange flex-shrink-0" />
+                <div className="bg-amber-100 rounded-2xl p-8">
+                  <div className="flex items-start gap-5">
+                    <Users className="w-12 h-12 text-bsd-orange flex-shrink-0" />
                     <div>
-                      <h3 className="text-xl font-bold text-gray-800 mb-2">Faculty & Mentor Interactions</h3>
-                      <p className="text-gray-700">
+                      <h3 className="text-2xl font-bold text-gray-800 mb-3">Faculty & Mentor Interactions</h3>
+                      <p className="text-gray-700 text-lg">
                         Engage directly with educators and industry mentors.
                       </p>
                     </div>
@@ -200,12 +200,12 @@ const OpenDay = () => {
                 </div>
 
                 {/* Career & Portfolio Guidance */}
-                <div className="bg-amber-100 rounded-xl p-6">
-                  <div className="flex items-start gap-4">
-                    <Briefcase className="w-10 h-10 text-bsd-orange flex-shrink-0" />
+                <div className="bg-amber-100 rounded-2xl p-8">
+                  <div className="flex items-start gap-5">
+                    <Briefcase className="w-12 h-12 text-bsd-orange flex-shrink-0" />
                     <div>
-                      <h3 className="text-xl font-bold text-gray-800 mb-2">Career & Portfolio Guidance</h3>
-                      <p className="text-gray-700">
+                      <h3 className="text-2xl font-bold text-gray-800 mb-3">Career & Portfolio Guidance</h3>
+                      <p className="text-gray-700 text-lg">
                         Get clarity on careers and building a strong portfolio.
                       </p>
                     </div>
@@ -213,12 +213,12 @@ const OpenDay = () => {
                 </div>
 
                 {/* Student Work Showcases */}
-                <div className="bg-amber-100 rounded-xl p-6">
-                  <div className="flex items-start gap-4">
-                    <FolderOpen className="w-10 h-10 text-bsd-orange flex-shrink-0" />
+                <div className="bg-amber-100 rounded-2xl p-8">
+                  <div className="flex items-start gap-5">
+                    <FolderOpen className="w-12 h-12 text-bsd-orange flex-shrink-0" />
                     <div>
-                      <h3 className="text-xl font-bold text-gray-800 mb-2">Student Work Showcases</h3>
-                      <p className="text-gray-700">
+                      <h3 className="text-2xl font-bold text-gray-800 mb-3">Student Work Showcases</h3>
+                      <p className="text-gray-700 text-lg">
                         Explore portfolios, projects, and real student outcomes.
                       </p>
                     </div>
@@ -226,12 +226,12 @@ const OpenDay = () => {
                 </div>
 
                 {/* Peer Networking */}
-                <div className="bg-amber-100 rounded-xl p-6">
-                  <div className="flex items-start gap-4">
-                    <Network className="w-10 h-10 text-bsd-orange flex-shrink-0" />
+                <div className="bg-amber-100 rounded-2xl p-8">
+                  <div className="flex items-start gap-5">
+                    <Network className="w-12 h-12 text-bsd-orange flex-shrink-0" />
                     <div>
-                      <h3 className="text-xl font-bold text-gray-800 mb-2">Peer Networking</h3>
-                      <p className="text-gray-700">
+                      <h3 className="text-2xl font-bold text-gray-800 mb-3">Peer Networking</h3>
+                      <p className="text-gray-700 text-lg">
                         Meet future classmates and like-minded creators.
                       </p>
                     </div>
