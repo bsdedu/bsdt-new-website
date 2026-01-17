@@ -5,6 +5,7 @@ import { Footer } from '../components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import { Calendar, Clock, MapPin, Users, BookOpen, Building, MessageCircle, Mail, Phone } from 'lucide-react';
 import openDayHero from '@/assets/open-day-hero.jpg';
+import openDayOverview from '@/assets/open-day-overview.jpg';
 
 const OpenDay = () => {
   return <>
@@ -43,14 +44,12 @@ const OpenDay = () => {
           <section className="py-16 md:py-24 bg-background">
             <div className="container mx-auto px-4">
               <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-                <div className="bg-bsd-orange/10 rounded-2xl p-8 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-32 h-32 md:w-40 md:h-40 mx-auto bg-bsd-orange rounded-full flex items-center justify-center mb-4">
-                      <Calendar className="w-16 h-16 md:w-20 md:h-20 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-bsd-orange">BSDT</h3>
-                    <p className="text-lg font-semibold text-foreground">OPEN DAY</p>
-                  </div>
+                <div className="rounded-2xl overflow-hidden">
+                  <img 
+                    src={openDayOverview} 
+                    alt="Student viewing design projects at BSDT Open Day" 
+                    className="w-full h-full object-cover aspect-[4/3]"
+                  />
                 </div>
 
                 <div>
