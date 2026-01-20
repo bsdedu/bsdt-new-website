@@ -144,12 +144,6 @@ export const ScholarshipInfo = () => {
                   </div>
                 </div>
               </CardContent>
-              <CardFooter>
-                <Button variant="outline" size="sm" className="w-full">
-                  Apply Now
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </CardFooter>
             </Card>
             
             <Card className="border-l-4 border-l-bsd-gray">
@@ -178,12 +172,6 @@ export const ScholarshipInfo = () => {
                   </div>
                 </div>
               </CardContent>
-              <CardFooter>
-                <Button variant="outline" size="sm" className="w-full">
-                  <Download className="mr-2 h-4 w-4" />
-                  Download Loan Guide
-                </Button>
-              </CardFooter>
             </Card>
           </div>
           
