@@ -26,7 +26,7 @@ const undergraduatePrograms: Program[] = [
     description: "A 3-year program that combines aesthetic principles with functional design to create compelling and sustainable interior spaces.",
     color: "from-bsd-orange/20 to-bsd-orange/5",
     duration: "3 years",
-    href: "/programs/bsc-interior-design"
+    href: "/academics/bsc-interior-design"
   },
   {
     icon: <Monitor className="w-6 h-6 text-bsd-orange" />,
@@ -43,6 +43,14 @@ const undergraduatePrograms: Program[] = [
     color: "from-bsd-gray/15 to-bsd-gray/5",
     duration: "4 years",
     href: "/bva-animation-and-multimedia-game-design"
+  },
+  {
+    icon: <Armchair className="w-6 h-6 text-bsd-orange" />,
+    title: "BVA Interior & Spatial Design",
+    description: "A 4-year program focusing on creating innovative interior environments, spatial planning, and experiential design with sustainability principles.",
+    color: "from-bsd-orange/20 to-bsd-orange/5",
+    duration: "4 years",
+    href: "/academics/bva-interior-spatial-design"
   },
   {
     icon: <Code className="w-6 h-6 text-bsd-orange" />,
