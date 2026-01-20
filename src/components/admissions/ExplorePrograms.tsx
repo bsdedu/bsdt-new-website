@@ -5,7 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, PenTool, Monitor, Gamepad, Code, Building2, LayoutDashboard, GraduationCap, Recycle, Bot, Armchair } from 'lucide-react';
+import { ArrowRight, PenTool, Monitor, Gamepad, Code, Building2, LayoutDashboard, GraduationCap, Armchair } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 
@@ -64,12 +64,36 @@ const undergraduatePrograms: Program[] = [
 
 const diplomaPrograms: Program[] = [
   {
+    icon: <PenTool className="w-6 h-6 text-bsd-orange" />,
+    title: "Professional Diploma in Interior Design",
+    description: "A professional diploma program focused on teaching interior design principles, space planning, and material selection for various environments. Available in Online & Offline modes.",
+    color: "from-bsd-orange/20 to-bsd-orange/5",
+    duration: "8 months",
+    href: "/academics/professional-diploma-in-interior-design"
+  },
+  {
     icon: <Monitor className="w-6 h-6 text-bsd-orange" />,
     title: "Professional Diploma in Visual Communication + UI & UX",
-    description: "An integrated program combining visual communication fundamentals with user interface and experience design principles for digital platforms.",
+    description: "An integrated program combining visual communication fundamentals with user interface and experience design principles for digital platforms. Available in Online & Offline modes.",
     color: "from-bsd-orange/20 to-bsd-orange/5",
-    duration: "1 year",
+    duration: "8 months",
     href: "/academics/professional-diploma-graphics-design-ui-ux"
+  },
+  {
+    icon: <GraduationCap className="w-6 h-6 text-bsd-orange" />,
+    title: "Professional Diploma in Landscape Design",
+    description: "A professional diploma program focused on sustainable landscape design, environmental planning, and outdoor space development. Available in Online & Offline modes.",
+    color: "from-bsd-gray/15 to-bsd-gray/5",
+    duration: "8 months",
+    href: "/academics/post-graduate-diploma-in-landscape-design"
+  },
+  {
+    icon: <Building2 className="w-6 h-6 text-bsd-orange" />,
+    title: "Master Diploma in Advanced Residential Design",
+    description: "An advanced master-level diploma program for comprehensive interior design expertise, covering advanced space planning, project management, and design leadership. Available in Online & Offline modes.",
+    color: "from-bsd-orange/20 to-bsd-orange/5",
+    duration: "12 months",
+    href: "/academics/master-diploma-in-interior-design"
   },
   {
     icon: <LayoutDashboard className="w-6 h-6 text-bsd-orange" />,
@@ -78,46 +102,6 @@ const diplomaPrograms: Program[] = [
     color: "from-bsd-gray/15 to-bsd-gray/5",
     duration: "6 months",
     href: "/academics/diploma-in-hci-for-ui-ux"
-  },
-  {
-    icon: <PenTool className="w-6 h-6 text-bsd-orange" />,
-    title: "Professional Diploma in Interior Design",
-    description: "A professional diploma program focused on teaching interior design principles, space planning, and material selection for various environments.",
-    color: "from-bsd-orange/20 to-bsd-orange/5",
-    duration: "1 year",
-    href: "/academics/professional-diploma-in-interior-design"
-  },
-  {
-    icon: <GraduationCap className="w-6 h-6 text-bsd-orange" />,
-    title: "Post Grad Diploma in Landscape Design",
-    description: "A postgraduate diploma program focused on sustainable landscape design, environmental planning, and outdoor space development.",
-    color: "from-bsd-gray/15 to-bsd-gray/5",
-    duration: "1 year",
-    href: "/academics/post-graduate-diploma-in-landscape-design"
-  },
-  {
-    icon: <Recycle className="w-6 h-6 text-bsd-orange" />,
-    title: "Professional Dip. in Sustainable System & Circular Design",
-    description: "A comprehensive program focused on sustainable design principles, circular economy concepts, and environmentally conscious design solutions.",
-    color: "from-bsd-orange/20 to-bsd-orange/5",
-    duration: "1 year",
-    href: "/academics/professional-diploma-sustainable-circular-design"
-  },
-  {
-    icon: <Bot className="w-6 h-6 text-bsd-orange" />,
-    title: "Professional Dip. in AI & Integrated Service Design",
-    description: "An innovative program combining artificial intelligence technologies with service design methodologies for creating intelligent user experiences.",
-    color: "from-bsd-gray/15 to-bsd-gray/5",
-    duration: "1 year",
-    href: "/academics/professional-diploma-ai-service-design"
-  },
-  {
-    icon: <Armchair className="w-6 h-6 text-bsd-orange" />,
-    title: "Professional Dip. in Furniture Design",
-    description: "A specialized program focusing on furniture design principles, materials knowledge, manufacturing processes, and contemporary design trends.",
-    color: "from-bsd-orange/20 to-bsd-orange/5",
-    duration: "1 year",
-    href: "/academics/professional-diploma-furniture-design"
   }
 ];
 
