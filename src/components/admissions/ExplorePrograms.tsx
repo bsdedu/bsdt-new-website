@@ -2,10 +2,8 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader } from '@/components/ui-elements/Card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { ArrowRight, PenTool, Monitor, Gamepad, Code, Building2, LayoutDashboard, GraduationCap, Armchair } from 'lucide-react';
+import { PenTool, Monitor, Gamepad, Code, Building2, LayoutDashboard, GraduationCap, Armchair } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 
@@ -113,79 +111,55 @@ export const ExplorePrograms: React.FC = () => {
       <Tabs defaultValue="undergraduate" value={activeTab} onValueChange={setActiveTab} className="w-full">
         <div className="flex justify-center mb-8">
           <TabsList className="grid grid-cols-2 w-full max-w-md">
-            <TabsTrigger value="undergraduate">Undergraduate Programs</TabsTrigger>
+            <TabsTrigger value="undergraduate">Undergraduate</TabsTrigger>
             <TabsTrigger value="diploma">Diploma Programs</TabsTrigger>
           </TabsList>
         </div>
 
         <TabsContent value="undergraduate" className="mt-0">
-          <Carousel className="w-full">
-            <CarouselContent>
-              {undergraduatePrograms.map((program, idx) => (
-                <CarouselItem key={idx} className="md:basis-1/2 lg:basis-1/3">
-                  <Link to={program.href} className="block h-full">
-                    <Card isHoverable className="h-full">
-                      <CardHeader>
-                        <div className={cn("w-12 h-12 rounded-xl flex items-center justify-center mb-4", "bg-gradient-to-br", program.color)}>
-                          {program.icon}
-                        </div>
-                        <div className="flex flex-wrap items-start gap-2">
-                          <h3 className="text-xl font-semibold text-bsd-gray">{program.title}</h3>
-                          <Badge variant="outline" className="text-[10px] bg-white/50">{program.duration}</Badge>
-                        </div>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-foreground/70 mb-4">{program.description}</p>
-                        <div className="flex items-center text-bsd-orange text-sm font-medium">
-                          <span>View Program Details</span>
-                          <ArrowRight className="ml-2 h-4 w-4" />
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </Link>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <div className="flex justify-center mt-4">
-              <CarouselPrevious className="relative static left-0 right-auto translate-y-0 mr-2" />
-              <CarouselNext className="relative static left-0 right-auto translate-y-0" />
-            </div>
-          </Carousel>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
+            {undergraduatePrograms.map((program) => (
+              <Link key={program.title} to={program.href} className="block h-full">
+                <Card isHoverable className="h-full">
+                  <CardHeader className="p-4">
+                    <div className={cn("w-10 h-10 rounded-lg flex items-center justify-center mb-3", "bg-gradient-to-br", program.color)}>
+                      {program.icon}
+                    </div>
+                    <div className="flex flex-wrap items-start gap-1">
+                      <h3 className="text-sm font-semibold text-bsd-gray leading-tight">{program.title}</h3>
+                    </div>
+                    <Badge variant="outline" className="text-[8px] mt-1 bg-white/50">{program.duration}</Badge>
+                  </CardHeader>
+                  <CardContent className="p-4 pt-0">
+                    <p className="text-foreground/70 text-xs line-clamp-3">{program.description}</p>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div>
         </TabsContent>
 
         <TabsContent value="diploma" className="mt-0">
-          <Carousel className="w-full">
-            <CarouselContent>
-              {diplomaPrograms.map((program, idx) => (
-                <CarouselItem key={idx} className="md:basis-1/2 lg:basis-1/3">
-                  <Link to={program.href} className="block h-full">
-                    <Card isHoverable className="h-full">
-                      <CardHeader>
-                        <div className={cn("w-12 h-12 rounded-xl flex items-center justify-center mb-4", "bg-gradient-to-br", program.color)}>
-                          {program.icon}
-                        </div>
-                        <div className="flex flex-wrap items-start gap-2">
-                          <h3 className="text-xl font-semibold text-bsd-gray">{program.title}</h3>
-                          <Badge variant="outline" className="text-[10px] bg-white/50">{program.duration}</Badge>
-                        </div>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-foreground/70 mb-4">{program.description}</p>
-                        <div className="flex items-center text-bsd-orange text-sm font-medium">
-                          <span>View Program Details</span>
-                          <ArrowRight className="ml-2 h-4 w-4" />
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </Link>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <div className="flex justify-center mt-4">
-              <CarouselPrevious className="relative static left-0 right-auto translate-y-0 mr-2" />
-              <CarouselNext className="relative static left-0 right-auto translate-y-0" />
-            </div>
-          </Carousel>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
+            {diplomaPrograms.map((program) => (
+              <Link key={program.title} to={program.href} className="block h-full">
+                <Card isHoverable className="h-full">
+                  <CardHeader className="p-4">
+                    <div className={cn("w-10 h-10 rounded-lg flex items-center justify-center mb-3", "bg-gradient-to-br", program.color)}>
+                      {program.icon}
+                    </div>
+                    <div className="flex flex-wrap items-start gap-1">
+                      <h3 className="text-sm font-semibold text-bsd-gray leading-tight">{program.title}</h3>
+                    </div>
+                    <Badge variant="outline" className="text-[8px] mt-1 bg-white/50">{program.duration}</Badge>
+                  </CardHeader>
+                  <CardContent className="p-4 pt-0">
+                    <p className="text-foreground/70 text-xs line-clamp-3">{program.description}</p>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div>
         </TabsContent>
       </Tabs>
     </div>
