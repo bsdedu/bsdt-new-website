@@ -190,9 +190,13 @@ export const ScholarshipInfo = () => {
           <div className="mt-6 text-center">
             <p className="text-sm text-muted-foreground max-w-2xl mx-auto mb-4">
               For detailed information about our need-based financial support programs and eligibility criteria, 
-              please contact our admissions office or schedule a consultation with our financial aid counselor.
+              please contact our admissions office.
             </p>
-            <Button>Schedule a Financial Aid Consultation</Button>
+            <Button asChild>
+              <a href="https://wa.me/919620202871" target="_blank" rel="noopener noreferrer">
+                Contact Us
+              </a>
+            </Button>
           </div>
         </TabsContent>
       </Tabs>
