@@ -76,12 +76,6 @@ export const ScholarshipInfo = () => {
                   </div>
                 </div>
               </CardContent>
-              <CardFooter>
-                <Button variant="outline" size="sm" className="w-full">
-                  Learn More
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </CardFooter>
             </Card>
             
             <Card className="border-l-4 border-l-bsd-orange">
