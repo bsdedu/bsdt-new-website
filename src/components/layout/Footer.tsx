@@ -80,7 +80,7 @@ export const Footer: React.FC = () => {
               <li>
                 <Link to="/admissions/fees-scholarships" className="text-sm text-white/80 hover:text-white transition-colors flex items-center">
                   <ExternalLink className="w-4 h-4 mr-2" />
-                  Fees & Scholarships
+                  Scholarships
                 </Link>
               </li>
               <li>
