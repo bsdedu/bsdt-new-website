@@ -43,7 +43,7 @@ export const FeesTable = () => {
       <CardHeader className="space-y-1">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
-            <CardTitle className="text-2xl text-bsd-gray font-display">Fee Structure for Academic Year 2025-2026</CardTitle>
+            <CardTitle className="text-2xl text-bsd-gray font-display sr-only">Programs</CardTitle>
             <CardDescription className="mt-2">
               {getSubtitle(activeTab)}
             </CardDescription>
