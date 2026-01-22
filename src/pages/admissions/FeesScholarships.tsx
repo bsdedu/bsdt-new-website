@@ -13,7 +13,7 @@ const FeesScholarships = () => {
   return (
     <>
       <Helmet>
-        <title>Fees & Scholarships | BSDT</title>
+        <title>Scholarships | BSDT</title>
         <meta name="description" content="Detailed information about program fees, payment schedules, and scholarship opportunities at Bangalore School of Design & Technology." />
       </Helmet>
       
@@ -23,7 +23,7 @@ const FeesScholarships = () => {
         <div className="container mx-auto px-6">
           <RevealSection>
             <div className="max-w-3xl mx-auto text-center mt-8 mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold text-bsd-gray mb-4">Fees & Scholarships</h1>
+              <h1 className="text-4xl md:text-5xl font-bold text-bsd-gray mb-4">Scholarships</h1>
               <p className="text-lg text-foreground/70">
                 Comprehensive details on program fees, payment structures, and scholarship opportunities 
                 for the academic year 2025-2026.
