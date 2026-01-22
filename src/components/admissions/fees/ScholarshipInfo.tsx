@@ -85,8 +85,8 @@ export const ScholarshipInfo = () => {
                     <span className="text-sm">₹25,000 one-time waiver</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Medal className="h-4 w-4 text-bsd-orange" />
-                    <span className="text-sm">Apply before March 31, 2025</span>
+                    <Bookmark className="h-4 w-4 text-bsd-orange" />
+                    <span className="text-sm">First semester fee reduction</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Bookmark className="h-4 w-4 text-bsd-orange" />
