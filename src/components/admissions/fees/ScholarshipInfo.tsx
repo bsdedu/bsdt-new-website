@@ -89,8 +89,8 @@ export const ScholarshipInfo = () => {
                     <span className="text-sm">First semester fee reduction</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Bookmark className="h-4 w-4 text-bsd-orange" />
-                    <span className="text-sm">First semester fee reduction</span>
+                    <Medal className="h-4 w-4 text-bsd-orange" />
+                    <span className="text-sm">Based on portfolio assessment</span>
                   </div>
                 </div>
               </CardContent>
