@@ -4,11 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { RevealSection } from '@/components/ui-elements/RevealSection';
-import { FeesTable } from '@/components/admissions/fees/FeesTable';
-import { AdditionalFeesInfo } from '@/components/admissions/fees/AdditionalFeesInfo';
 import { ScholarshipInfo } from '@/components/admissions/fees/ScholarshipInfo';
-import { Separator } from '@/components/ui/separator';
-
 const FeesScholarships = () => {
   return (
     <>
@@ -32,18 +28,6 @@ const FeesScholarships = () => {
           </RevealSection>
 
           <RevealSection delay={100}>
-            <FeesTable />
-          </RevealSection>
-          
-          <Separator className="my-12" />
-          
-          <RevealSection delay={200}>
-            <AdditionalFeesInfo />
-          </RevealSection>
-          
-          <Separator className="my-12" />
-          
-          <RevealSection delay={300}>
             <ScholarshipInfo />
           </RevealSection>
         </div>
