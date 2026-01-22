@@ -69,7 +69,7 @@ const ApplicationProcess = () => {
                         </a>
                         <Link to="/admissions/fees-scholarships">
                           <Button size="lg" variant="outline" className="border-bsd-orange text-bsd-orange hover:bg-bsd-orange/10">
-                            View Fees & Scholarships
+                            View Scholarships
                           </Button>
                         </Link>
                       </div>
