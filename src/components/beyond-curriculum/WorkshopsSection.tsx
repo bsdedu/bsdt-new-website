@@ -39,7 +39,7 @@ export const WorkshopsSection: React.FC = () => {
     {
       title: "Architectural Model Making",
       description: "Hands-on workshop teaching architectural students the art of creating precise, professional physical models using various materials.",
-      image: "/lovable-uploads/c83c596d-add8-4ab2-a74f-1dc8c849424e.png",
+      image: "/lovable-uploads/architectural-model-making.jpg",
       category: "Architecture"
     },
     {
