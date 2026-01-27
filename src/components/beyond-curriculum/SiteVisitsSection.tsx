@@ -57,7 +57,7 @@ export const SiteVisitsSection: React.FC = () => {
       title: "Technology Hubs",
       description: "Visits to technology centers and innovation hubs where students witness cutting-edge applications of digital design and development.",
       icon: <Cpu className="w-5 h-5 text-bsd-orange" />,
-      image: "/lovable-uploads/f41aeb18-b8b9-48e3-9212-ce854e1b4ea9.png"
+      image: "/lovable-uploads/technology-hubs-visit.jpg"
     }
   ];
 
