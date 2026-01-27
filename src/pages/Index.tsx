@@ -14,7 +14,7 @@ import { GallerySection } from '../components/home/GallerySection';
 import { UpcomingEventsSection } from '../components/home/UpcomingEventsSection';
 import { FloatingEnquiryForm } from '../components/ui-elements/FloatingEnquiryForm';
 import { AdmissionsBanner } from '../components/home/AdmissionsBanner';
-import { OpenDayPopup } from '../components/home/OpenDayPopup';
+
 
 
 
@@ -127,8 +127,6 @@ const Index = () => {
           <EnquiryFormSection /> 
           <FloatingEnquiryForm />
           
-          
-          <OpenDayPopup />
         </main>
         
         <Footer />
