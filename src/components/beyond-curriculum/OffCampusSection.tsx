@@ -25,8 +25,8 @@ export const OffCampusSection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="relative rounded-2xl overflow-hidden h-[450px]">
               <img 
-                src="/lovable-uploads/afbe5d7f-0f77-458a-a6ab-59ecf5a77828.png" 
-                alt="Students at industry visit" 
+                src="/lovable-uploads/off-campus-exhibition.jpg" 
+                alt="Students at art exhibition visit"
                 className="w-full h-full object-cover" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
