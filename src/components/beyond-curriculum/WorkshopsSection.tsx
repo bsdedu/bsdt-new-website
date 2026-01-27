@@ -33,7 +33,7 @@ export const WorkshopsSection: React.FC = () => {
     {
       title: "Digital Illustration Masterclass",
       description: "A comprehensive workshop on creating professional digital illustrations using industry-standard software, led by renowned illustrators.",
-      image: "/lovable-uploads/9c640781-a1d2-49e1-a459-0cce96593567.png",
+      image: "/lovable-uploads/digital-illustration-masterclass.jpg",
       category: "Graphic Design"
     },
     {
