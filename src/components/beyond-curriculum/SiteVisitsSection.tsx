@@ -142,7 +142,7 @@ export const SiteVisitsSection: React.FC = () => {
               
               <div className="relative rounded-2xl overflow-hidden h-[400px]">
                 <img 
-                  src="/lovable-uploads/fb4bedc7-ed6b-470b-82fe-e714ed5d7d6a.png" 
+                  src="/lovable-uploads/site-visit-process.jpg" 
                   alt="Students on site visit" 
                   className="w-full h-full object-cover" 
                 />
