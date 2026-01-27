@@ -51,7 +51,7 @@ export const SiteVisitsSection: React.FC = () => {
       title: "Design Studios",
       description: "Tours of professional design studios where students observe workflow organization, client interaction, and creative collaboration in action.",
       icon: <PenTool className="w-5 h-5 text-bsd-orange" />,
-      image: "/lovable-uploads/f8cc79a4-4428-4787-83df-808a715df0a1.png"
+      image: "/lovable-uploads/design-studios-visit.jpg"
     },
     {
       title: "Technology Hubs",
