@@ -45,7 +45,7 @@ export const SiteVisitsSection: React.FC = () => {
       title: "Manufacturing Facilities",
       description: "Exploration of production facilities to understand materials, manufacturing processes, and quality control systems for product design.",
       icon: <Hammer className="w-5 h-5 text-bsd-orange" />,
-      image: "/lovable-uploads/cd3d39f9-b653-4797-bdd2-ac99084ae0ec.png"
+      image: "/lovable-uploads/manufacturing-facilities-visit.jpg"
     },
     {
       title: "Design Studios",
