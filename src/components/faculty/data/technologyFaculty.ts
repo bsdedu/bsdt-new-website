@@ -26,13 +26,13 @@ export const technologyFaculty: FacultyMember[] = [
   },
   {
     id: 6,
-    name: "Shyni K C",
+    name: "Fathima Zahra",
     role: "Faculty, Computer Applications",
-    bio: "An experienced educator with 18 years of teaching experience, Shyni holds a Master's in Computer Applications and a Bachelor's in Mathematics. Her strong foundation in computational thinking and problem-solving drives her passion for mathematics and computer science education, empowering students with critical thinking skills relevant to the evolving tech industry.",
-    imageUrl: "/lovable-uploads/3e1b6482-f28a-4680-9931-2f728b80d0eb.png",
+    bio: "A seasoned educator with 18 years of teaching experience, Fathima holds a Bachelor's and Master's degree in Computer Science along with a B.Ed. in Computer Science. Her academic interests include programming across multiple languages and database design. She is deeply committed to student-centered learning and to fostering critical thinking, analytical skills, and technical proficiency in computer science.",
+    imageUrl: "/lovable-uploads/fathima-zahra.jpg",
     department: 'Technology',
-    qualifications: "MCA, B.Sc. in Mathematics",
-    specialization: "Computer Applications, Mathematics, Computational Thinking",
-    achievements: "18 years of teaching experience"
+    qualifications: "M.Sc. in Computer Science, B.Ed. in Computer Science",
+    specialization: "Programming Languages, Database Design, Computer Science Education",
+    achievements: "18 years of teaching experience, expertise in classroom management and curriculum delivery"
   },
 ];
