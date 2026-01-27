@@ -26,7 +26,7 @@ export const OffCampusSection: React.FC = () => {
             <div className="relative rounded-2xl overflow-hidden h-[450px]">
               <img 
                 src="/lovable-uploads/off-campus-exhibition.jpg" 
-                alt="Students visiting manufacturing facility"
+                alt="Students at art exhibition visit"
                 className="w-full h-full object-cover" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
