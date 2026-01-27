@@ -39,7 +39,7 @@ export const SiteVisitsSection: React.FC = () => {
       title: "Architectural Landmarks",
       description: "Visits to significant architectural sites where students analyze design principles, structural solutions, and contextual integration of buildings.",
       icon: <Building className="w-5 h-5 text-bsd-orange" />,
-      image: "/lovable-uploads/e89cc1d4-b789-4ae4-8c9a-5d9bb88744cd.png"
+      image: "/lovable-uploads/architectural-landmarks-visit.jpg"
     },
     {
       title: "Manufacturing Facilities",
