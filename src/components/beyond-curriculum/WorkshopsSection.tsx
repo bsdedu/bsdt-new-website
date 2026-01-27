@@ -51,7 +51,7 @@ export const WorkshopsSection: React.FC = () => {
     {
       title: "3D Animation Fundamentals",
       description: "Workshop covering the principles of 3D animation, including modeling, rigging, texturing, and rendering techniques.",
-      image: "/lovable-uploads/e5c57c3a-3200-49fc-a10d-80ac615c7c0d.png",
+      image: "/lovable-uploads/3d-animation-fundamentals.jpg",
       category: "Animation"
     }
   ];
