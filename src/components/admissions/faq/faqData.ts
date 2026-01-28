@@ -37,7 +37,7 @@ export const faqData: FAQCategory[] = [
     questions: [
       {
         question: "What programs does BSDT offer?",
-        answer: "BSDT offers a range of undergraduate and postgraduate programs in design and technology, including Interior Design, Graphic Design, Animation & Multimedia, BCA with UI/UX specialization, B.Sc Computer Science with various specializations, Architectural Design, Interaction & Experience Design, and various professional diploma courses."
+        answer: "BSDT offers a range of undergraduate and postgraduate programs in design and technology, including Interior Design, Graphic Design, Animation & Multimedia, BCA with UI/UX specialization, and various professional diploma courses."
       },
       {
         question: "What is the 'Beyond Curriculum' approach?",
@@ -58,7 +58,7 @@ export const faqData: FAQCategory[] = [
     questions: [
       {
         question: "What is the fee structure for different programs?",
-        answer: "Fee structures vary by program. For example, B.Sc. Interior Design & Decoration has a total fee of ₹4,90,000 for the 3-year program, while B. Des (Hons.) Interaction and Experience Design has a total fee of ₹7,50,000 for the 4-year program. Please visit our Fees & Scholarships page for detailed information."
+        answer: "Fee structures vary by program. For example, B.Sc. Interior Design & Decoration has a total fee of ₹4,90,000 for the 3-year program. Please visit our Fees & Scholarships page for detailed information."
       },
       {
         question: "Is there a registration fee?",

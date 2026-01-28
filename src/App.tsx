@@ -20,8 +20,6 @@ import ProgramGraphicDesign from "./pages/ProgramGraphicDesign";
 import ProgramAnimationGameDesign from "./pages/ProgramAnimationGameDesign";
 import ProgramBCA from "./pages/ProgramBCA";
 import ProgramBScCS from "./pages/ProgramBScCS";
-import ProgramInteractionExperience from "./pages/ProgramInteractionExperience";
-import ProgramArchitecturalDesign from "./pages/ProgramArchitecturalDesign";
 import ProgramInteriorSpatialDesign from "./pages/ProgramInteriorSpatialDesign";
 import DiplomaProgramGraphicUIUX from "./pages/diploma/DiplomaProgramGraphicUIUX";
 import DiplomaProgramInteriorDesign from "./pages/diploma/DiplomaProgramInteriorDesign";
@@ -168,10 +166,7 @@ const App = () => {
               <Route path="/bva-animation-and-multimedia-game-design" element={<ProgramAnimationGameDesign />} />
               <Route path="/academics/b-computer-application-ui-ux" element={<ProgramBCA />} />
               <Route path="/programs/bsc-cs-analytics-security" element={<ProgramBScCS />} />
-              <Route path="/academics/b-des-interaction-and-experience-design" element={<ProgramInteractionExperience />} />
-              <Route path="/academics/b-des-architectural-design" element={<ProgramArchitecturalDesign />} />
               <Route path="/academics/bva-interior-spatial-design" element={<ProgramInteriorSpatialDesign />} />
-              <Route path="/programs/bdes-architectural-construction" element={<ProgramArchitecturalDesign />} />
               <Route path="/placement-report" element={<PlacementReport />} />
               
               {/* Diploma Program Routes */}
