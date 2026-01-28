@@ -54,20 +54,6 @@ export const feeStructureData: FeeStructure = {
       semesterFees: [15833, 45833, 45833, 45833, 45833, 45833, null, null]
     },
     {
-      name: "B. Des (Hons.) Architectural Design Construction",
-      duration: "4 Years",
-      semesters: 8,
-      totalFee: 700000,
-      semesterFees: [57500, 87500, 87500, 87500, 87500, 87500, 87500, 87500]
-    },
-    {
-      name: "B. Des (Hons.) Interaction and Experience Design",
-      duration: "4 Years",
-      semesters: 8,
-      totalFee: 750000,
-      semesterFees: [63750, 93750, 93750, 93750, 93750, 93750, 93750, 93750]
-    },
-    {
       name: "Professional Diploma in Interior Design",
       duration: "1 Year",
       semesters: 2,
