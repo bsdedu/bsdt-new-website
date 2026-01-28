@@ -28,5 +28,10 @@
   ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
+  ],
+  "routes": [
+    { "src": "/academics/b-des-interaction-and-experience-design", "status": 410 },
+    { "src": "/academics/b-des-architectural-design", "status": 410 },
+    { "src": "/programs/bdes-architectural-construction", "status": 410 }
   ]
 }
