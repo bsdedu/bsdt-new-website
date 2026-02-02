@@ -491,18 +491,6 @@ const LeadershipGovernance = () => {
             </div>
           </RevealSection>
 
-          {/* Contact CTA */}
-          <RevealSection>
-            <div className="container mx-auto px-6 md:px-8 py-16 text-center">
-              <h2 className="text-3xl font-bold text-bsd-gray mb-6">Connect With Our Leadership</h2>
-              <p className="text-lg text-bsd-gray/80 max-w-2xl mx-auto mb-8">
-                Have questions for our leadership team or interested in potential collaborations? We'd be happy to hear from you.
-              </p>
-              <button className="bg-bsd-orange hover:bg-bsd-orange/90 text-white px-8 py-3 rounded-md font-medium transition-colors">
-                Contact Us
-              </button>
-            </div>
-          </RevealSection>
         </main>
 
         <Footer />
