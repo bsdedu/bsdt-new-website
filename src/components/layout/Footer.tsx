@@ -106,8 +106,8 @@ export const Footer: React.FC = () => {
             <h4 className="text-sm font-semibold uppercase tracking-wider text-bsd-orange">Contact</h4>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
-No.4/3, Opposite B.D.S Nagar, Devanna Compound, K.Narayanapura, Kothanur Post, Bangalore – 560077                <MapPin className="w-5 h-5 text-bsd-orange mt-0.5" />
-                <span className="text-sm text-white/80"></span>
+                <MapPin className="w-5 h-5 text-bsd-orange mt-0.5" />
+                <span className="text-sm text-white/80">186, K Narayanapura Main Rd, BDS Nagar, Narayanapura, Bengaluru, Karnataka 560077</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-bsd-orange" />
