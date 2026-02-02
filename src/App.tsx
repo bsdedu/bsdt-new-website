@@ -62,7 +62,7 @@ import AppliedAIDesignAutomation from "./pages/courses/AppliedAIDesignAutomation
 import { useEffect } from "react";
 import Contact from "./pages/Contact";
 
-console.log("App component loaded");
+
 
 const queryClient = new QueryClient();
 
@@ -77,14 +77,6 @@ const ScrollToTop: React.FC = () => {
 };
 
 const App = () => {
-  useEffect(() => {
-    console.log("App component mounted");
-    return () => {
-      console.log("App component unmounted");
-    };
-  }, []);
-
-  console.log("App rendering");
   
   try {
     return (
@@ -246,12 +238,10 @@ const App = () => {
       </HelmetProvider>
       </QueryClientProvider>
     );
-  } catch (error) {
-    console.error("Error in App component:", error);
+  } catch {
     return <div style={{ padding: '20px', textAlign: 'center', color: 'red' }}>
       <h2>App Error</h2>
       <p>Something went wrong. Please refresh the page.</p>
-      <pre>{String(error)}</pre>
     </div>;
   }
 };

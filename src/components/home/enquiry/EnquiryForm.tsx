@@ -41,8 +41,7 @@ export const EnquiryForm: React.FC<EnquiryFormProps> = ({ programSpecific = fals
     }
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+  function onSubmit(_values: z.infer<typeof formSchema>) {
     // Set the form submitted flag in localStorage
     localStorage.setItem('enquiryFormSubmitted', 'true');
     onSubmitSuccess();
