@@ -39,7 +39,7 @@ const Contact: React.FC = () => {
               <strong>Email:</strong> enquiry@bsd.edu.in | admissions@bsd.edu.in
             </li>
             <li className="text-gray-700">
-              <strong>Address:</strong> No.4/3, Opposite B.D.S Nagar, Devanna Compound, K.Narayanapura, Kothanur Post, Bangalore – 560077
+              <strong>Address:</strong> 186, K Narayanapura Main Rd, BDS Nagar, Narayanapura, Bengaluru, Karnataka 560077
             </li>
           </ul>
         </div>

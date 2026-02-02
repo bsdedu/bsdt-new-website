@@ -62,8 +62,8 @@ const ScheduleVisit = () => {
                     <h3 className="text-xl font-semibold">Address:</h3>
                     <p className="text-foreground/80">
                       Bangalore School of Design & Technology<br />
-                      No.4/3, Opposite B.D.S Nagar, Devanna Compound,<br />
-                      K.Narayanapura, Kothanur Post, Bangalore – 560077
+                      186, K Narayanapura Main Rd, BDS Nagar,<br />
+                      Narayanapura, Bengaluru, Karnataka 560077
                     </p>
                   </div>
                   <div className="mt-4">
