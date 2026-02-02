@@ -74,7 +74,7 @@ export const StudioFacilities: React.FC = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                 <div className="relative rounded-2xl overflow-hidden h-[400px]">
                   <img 
-                    src="/lovable-uploads/digital-creative-lab.heic" 
+                    src="/lovable-uploads/digital-creative-lab.jpeg" 
                     alt="Digital Creative Lab at BSD" 
                     className="w-full h-full object-cover"
                   />
