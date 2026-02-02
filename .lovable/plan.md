@@ -1,51 +1,62 @@
 
-# Fixing Custom Domain Not Updating
+# Investigation Complete: Custom Domain Serving Stale Content
 
-## Problem Identified
-The root domain `bsd.edu.in` (without the "www" prefix) is still showing the old website with "BVA Product Design" in the Programs menu. Meanwhile:
-- `www.bsd.edu.in` - Shows the updated Lovable site
-- `bsdt-new-website.lovable.app` - Shows the updated Lovable site
-- `bsd.edu.in` (no www) - Shows the OLD version with Product Design
+## Problem Confirmed
+After investigating, I've confirmed:
+- **Source code is correct**: `navData.ts` does NOT contain "BVA Product Design"
+- **Lovable preview is correct**: `bsdt-new-website.lovable.app` shows the updated navigation (no Product Design)
+- **Custom domain is stale**: `www.bsd.edu.in` is serving an older version with "BVA Product Design" in the Programs menu
 
-## Root Cause
-The root domain `bsd.edu.in` is either:
-1. Not added as a custom domain in Lovable (only `www.bsd.edu.in` was added)
-2. Still pointing to the old hosting provider's server via DNS
+This is not a code issue - the source code has been fixed correctly. The problem is that the **custom domain is not serving the latest published build**.
+
+## Root Cause Analysis
+There are three possible causes:
+
+### 1. Project Not Re-Published After Code Changes (Most Likely)
+When code changes are made in Lovable, they are deployed to the preview automatically, but the **published site requires clicking "Update"** in the publish dialog. If this wasn't done after removing "BVA Product Design", the custom domain will still serve the old version.
+
+### 2. CDN/Proxy Caching (If Using Cloudflare)
+If the domain is behind Cloudflare (orange cloud enabled), cached JavaScript files could be serving stale navigation data.
+
+### 3. DNS Misconfiguration
+The root domain `bsd.edu.in` may be pointing somewhere different than `www.bsd.edu.in`.
 
 ## Solution Steps
 
-### Step 1: Check Lovable Domain Settings
-1. Go to your Lovable project **Settings > Domains**
-2. Look for which domains are connected:
-   - If only `www.bsd.edu.in` is listed, you need to add `bsd.edu.in` separately
-   - Both domains need to be added to Lovable for both to work
+### Step 1: Re-Publish the Project
+1. In Lovable, click the **"Publish"** button (top-right corner)
+2. Click **"Update"** to push the latest code to production
+3. Wait 1-2 minutes for deployment to complete
 
-### Step 2: Add Root Domain to Lovable
-1. In Settings > Domains, click **Connect Domain**
-2. Enter `bsd.edu.in` (without www)
-3. Follow the setup instructions
-4. Set one domain as **Primary** so the other redirects to it (typically www should redirect to non-www or vice versa)
+### Step 2: Verify Both Domains Are Connected
+1. Go to **Settings > Domains** in Lovable
+2. Ensure both `bsd.edu.in` AND `www.bsd.edu.in` are listed and show "Active" status
+3. If only one is listed, add the other using "Connect Domain"
 
-### Step 3: Update DNS Records
-At your DNS provider (GoDaddy, Cloudflare, etc.), ensure:
-- **A Record for @ (root)**: Points to `185.158.133.1` (Lovable's IP)
-- **A Record for www**: Points to `185.158.133.1`
-- **TXT Record for _lovable**: Contains the verification code from Lovable
+### Step 3: If Using Cloudflare - Purge Cache
+1. Log into Cloudflare dashboard
+2. Select the `bsd.edu.in` domain
+3. Go to **Caching > Configuration**
+4. Click **"Purge Everything"**
+5. Wait 2-3 minutes and test again in incognito mode
 
-### Step 4: Clear CDN Cache (if applicable)
-If using Cloudflare or another CDN:
-1. Log into your CDN dashboard
-2. Go to Caching settings
-3. Click "Purge Everything"
-4. Wait a few minutes and test again
+### Step 4: Verify DNS Records
+Ensure both domains point to Lovable's IP (`185.158.133.1`):
+- **A Record for @**: `185.158.133.1`
+- **A Record for www**: `185.158.133.1`
 
-### Step 5: Verify After DNS Propagation
-DNS changes can take up to 24-48 hours to propagate globally. Test using:
-- [DNSChecker.org](https://dnschecker.org/#A/bsd.edu.in) to verify A record points to 185.158.133.1
-- Open `https://bsd.edu.in` in incognito mode to test
+Use [DNSChecker.org](https://dnschecker.org/#A/bsd.edu.in) to verify.
 
-## Expected Result
-After completing these steps, both `bsd.edu.in` and `www.bsd.edu.in` will serve the updated Lovable website, and "BVA Product Design" will no longer appear in the Programs menu.
+## Expected Outcome
+After re-publishing and purging any CDN cache, `www.bsd.edu.in` will show the same navigation as `bsdt-new-website.lovable.app` - with "BVA Product Design" removed from the Programs menu.
 
-## No Code Changes Required
-This is purely a DNS/domain configuration issue. The Lovable codebase is already correct - "BVA Product Design" has been successfully removed from the navigation data.
+## Technical Details
+The navigation structure is defined in `src/components/layout/navbar/navData.ts`. Current UG Degree Programs in the source:
+1. B.Sc Interior Design
+2. BVA Graphic & Communication Design
+3. BVA Interior & Spatial Design
+4. BVA Animation & Game Design
+5. BCA with UI/UX & AI/ML
+6. BCA with Data Analytics & Cyber Security
+
+"BVA Product Design" was removed from this file and a 410 status code was added in `vercel.json` for the old URL.
