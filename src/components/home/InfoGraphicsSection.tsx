@@ -26,16 +26,12 @@ export const InfoGraphicsSection: React.FC = () => {
 
   // Function to handle smooth scrolling to enquiry form section
   const scrollToEnquiryForm = () => {
-    console.log("Attempting to scroll to #enquiry-form");
     const section = document.getElementById('enquiry-form');
     if (section) {
-      console.log("Found enquiry form section, scrolling to it");
       window.scrollTo({
         top: section.offsetTop - 80, // Offset for header
         behavior: 'smooth',
       });
-    } else {
-      console.log("Enquiry form section not found");
     }
   };
 
@@ -60,8 +56,7 @@ export const InfoGraphicsSection: React.FC = () => {
             setChartKey(Date.now());
           }
         })
-        .catch(error => {
-          console.error("Failed to load career data:", error);
+        .catch(() => {
           // Use fallback data
           if (mounted.current) {
             setChartData(fallbackChartData);
@@ -73,8 +68,7 @@ export const InfoGraphicsSection: React.FC = () => {
             setIsLoading(false);
           }
         });
-    } catch (error) {
-      console.error("Error importing chart data:", error);
+    } catch {
       if (mounted.current) {
         setChartData(fallbackChartData);
         setIsLoading(false);

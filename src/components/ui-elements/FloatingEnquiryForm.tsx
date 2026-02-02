@@ -30,8 +30,7 @@ export const FloatingEnquiryForm = () => {
     },
   });
 
-  const onSubmit = (data: FormData) => {
-    console.log(data);
+  const onSubmit = (_data: FormData) => {
     toast({
       title: "Thanks for your enquiry!",
       description: "We'll get back to you soon.",
