@@ -184,6 +184,9 @@ const App = () => {
             <Route path="/academics/master-diploma-in-interior-design" element={<DiplomaProgramMasterInteriorDesign />} />
               
               {/* Admissions Routes */}
+              {/* Backwards-compatible redirect (legacy URL) */}
+              <Route path="/admissions/studio-bsd" element={<Navigate to="/studio-bsd" replace />} />
+              <Route path="/admissions/studio-bsd/*" element={<Navigate to="/studio-bsd" replace />} />
               <Route path="/admissions/application-process" element={<ApplicationProcess />} />
               <Route path="/admissions/fees-scholarships" element={<FeesScholarships />} />
               <Route path="/plan-a-visit" element={<ScheduleVisit />} />
