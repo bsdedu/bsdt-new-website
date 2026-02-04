@@ -59,24 +59,14 @@ const StudentSpotlight: React.FC = () => {
                 Celebrating creativity and innovation. Explore the outstanding projects and portfolios 
                 created by our talented students across all design disciplines.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <AnimatedButton 
-                  href="https://apply.bsd.edu.in/" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-bsd-orange text-white hover:bg-bsd-orange/90"
-                >
-                  Apply Now
-                </AnimatedButton>
-                <AnimatedButton 
-                  href="#student-works" 
-                  variant="outline" 
-                  className="border-white text-white hover:bg-white/10"
-                  hoverEffect="scale"
-                >
-                  View Projects
-                </AnimatedButton>
-              </div>
+              <AnimatedButton 
+                href="https://apply.bsd.edu.in/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-bsd-orange text-white hover:bg-bsd-orange/90"
+              >
+                Apply Now
+              </AnimatedButton>
             </div>
           </div>
         </section>
