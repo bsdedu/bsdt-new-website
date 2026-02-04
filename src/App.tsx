@@ -39,6 +39,7 @@ import FAQs from "./pages/admissions/FAQs";
 import PlacementReport from "./pages/PlacementReport";
 import HostelTransport from "./pages/campus-life/HostelTransport";
 import StudentClubs from "./pages/campus-life/StudentClubs";
+import StudentSpotlight from "./pages/campus-life/StudentSpotlight";
 import EventsActivities from "./pages/EventsActivities";
 import StudentExperience from "./pages/StudentExperience";
 import FutureSchool from "./pages/FutureSchool";
@@ -203,6 +204,7 @@ const App = () => {
               {/* Campus Life Routes */}
               <Route path="/housing-transport" element={<HostelTransport />} />
               <Route path="/student-clubs" element={<StudentClubs />} />
+              <Route path="/student-spotlight" element={<StudentSpotlight />} />
               <Route path="/campus-life/events-activities" element={<EventsActivities />} />
               <Route path="/student-experience" element={<StudentExperience />} />
               
