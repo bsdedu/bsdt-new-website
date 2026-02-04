@@ -40,7 +40,6 @@ import PlacementReport from "./pages/PlacementReport";
 import HostelTransport from "./pages/campus-life/HostelTransport";
 import StudentClubs from "./pages/campus-life/StudentClubs";
 import EventsActivities from "./pages/EventsActivities";
-import StudentWorks from "./pages/campus-life/StudentWorks";
 import StudentExperience from "./pages/StudentExperience";
 import FutureSchool from "./pages/FutureSchool";
 import OpenDay from "./pages/OpenDay";
@@ -205,7 +204,6 @@ const App = () => {
               <Route path="/housing-transport" element={<HostelTransport />} />
               <Route path="/student-clubs" element={<StudentClubs />} />
               <Route path="/campus-life/events-activities" element={<EventsActivities />} />
-              <Route path="/campus-life/student-works" element={<StudentWorks />} />
               <Route path="/student-experience" element={<StudentExperience />} />
               
               {/* Future School Route */}

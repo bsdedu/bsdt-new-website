@@ -6,12 +6,12 @@ import { HeroSection } from '../components/home/HeroSection';
 import { ProgramsSection } from '../components/home/ProgramsSection';
 import { WhyChooseSection } from '../components/home/WhyChooseSection';
 import { AIEnhancedLearningSection } from '../components/home/AIEnhancedLearningSection';
-import { StudentSpotlightSection } from '../components/home/StudentSpotlightSection';
 import { ContactSection } from '../components/home/ContactSection';
 import { EnquiryFormSection } from '../components/home/EnquiryFormSection';
 import { CollaborationsSection } from '../components/home/CollaborationsSection';
 import { InfoGraphicsSection } from '../components/home/InfoGraphicsSection';
 import { GallerySection } from '../components/home/GallerySection';
+import { UpcomingEventsSection } from '../components/home/UpcomingEventsSection';
 import { FloatingEnquiryForm } from '../components/ui-elements/FloatingEnquiryForm';
 import { AdmissionsBanner } from '../components/home/AdmissionsBanner';
 
@@ -121,7 +121,7 @@ const Index = () => {
           <InfoGraphicsSection />
           <WhyChooseSection />
           <AIEnhancedLearningSection />
-          <StudentSpotlightSection />
+          <UpcomingEventsSection />
           <GallerySection />
           <CollaborationsSection />
           <EnquiryFormSection /> 
