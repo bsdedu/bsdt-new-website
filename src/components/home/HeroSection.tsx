@@ -25,9 +25,9 @@ export const HeroSection: React.FC = () => {
     description: "Learn From Anywhere\nSatellite Partners In Delhi, Chhattisgarh, Coimbatore And Raipur"
   }, {
     image: "/lovable-uploads/e48b8c13-052e-4d80-ada8-db3eaf003d21.png",
-    title: "Open Day (2026)",
-    subtitle: "Open Day 2026-2027",
-    description: "\"Your future starts here. 🚀 Step inside, explore our campus, and see where your passion can take you. #OpenDay #FutureReady\""
+    title: "Student Spotlight",
+    subtitle: "Celebrating Creativity",
+    description: "Explore exceptional student works across design disciplines. See how our students turn creative visions into stunning portfolios."
   }];
   const startAutoPlay = useCallback(() => {
     if (intervalRef.current) {
@@ -89,17 +89,13 @@ export const HeroSection: React.FC = () => {
               
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" variant="outline" className="border-2 border-[#f5f5f0] bg-[#f5f5f0] text-black hover:bg-white hover:border-white transition-all duration-300 font-semibold px-8" onClick={() => {
-                  if (currentSlide === 2) {
-                    window.open("https://docs.google.com/forms/d/e/1FAIpQLSfJHlSTNhMYjU9ulXi8JiPPJQW1Jw-C_JiUe7WGiIHIOpKe3Q/viewform", "_blank", "noopener noreferrer");
-                  } else {
-                    window.open("https://apply.bsd.edu.in/", "_blank", "noopener noreferrer");
-                  }
+                  window.open("https://apply.bsd.edu.in/", "_blank", "noopener noreferrer");
                 }}>
-                  {currentSlide === 2 ? "REGISTER NOW" : "APPLY NOW"}
+                  APPLY NOW
                 </Button>
                 <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-8" onClick={() => {
                 if (currentSlide === 2) {
-                  window.open("https://www.bsd.edu.in/open-day", "_blank", "noopener noreferrer");
+                  window.location.href = "/student-spotlight";
                   return;
                 }
                 const section = document.getElementById('programs');
@@ -117,7 +113,7 @@ export const HeroSection: React.FC = () => {
                   });
                 }
               }}>
-                  {currentSlide === 2 ? "Learn More" : "Explore Programs"}
+                  {currentSlide === 2 ? "View Student Works" : "Explore Programs"}
                 </Button>
               </div>
             </div>

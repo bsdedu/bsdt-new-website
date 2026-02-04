@@ -66,6 +66,7 @@ export const navStructure: NavStructure[] = [
     href: '#campus-life',
     type: 'dropdown',
     items: [
+      { name: 'Student Spotlight', href: '/student-spotlight' },
       { name: 'Student Clubs', href: '/student-clubs' },
       { name: 'Student Experience', href: '/student-experience' },
       { name: 'Events & Activities', href: '/campus-life/events-activities' },
