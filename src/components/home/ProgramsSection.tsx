@@ -63,6 +63,15 @@ const undergraduatePrograms: Program[] = [
     addons: "UI/UX & AI/ML",
     href: "/academics/b-computer-application-ui-ux"
   },
+  {
+    icon: <Cpu className="w-6 h-6 text-bsd-orange" />,
+    title: "BCA with Data Analytics & Cyber Security",
+    description: "A 3-year program focused on data analytics, cybersecurity fundamentals, and application development for tech-driven careers.",
+    color: "from-bsd-orange/20 to-bsd-orange/5",
+    duration: "3 years",
+    addons: "Data Analytics & Cyber Security",
+    href: "/academics/bca-data-analytics-cyber-security"
+  },
 ];
 
 const diplomaPrograms: Program[] = [
