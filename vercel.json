@@ -30,9 +30,9 @@
     { "source": "/(.*)", "destination": "/" }
   ],
   "redirects": [
-    { "source": "/academics/b-des-interaction-and-experience-design", "statusCode": 410 },
-    { "source": "/academics/b-des-architectural-design", "statusCode": 410 },
-    { "source": "/programs/bdes-architectural-construction", "statusCode": 410 },
-    { "source": "/academics/bva-product-design", "statusCode": 410 }
+    { "source": "/academics/b-des-interaction-and-experience-design", "destination": "/gone", "statusCode": 410 },
+    { "source": "/academics/b-des-architectural-design", "destination": "/gone", "statusCode": 410 },
+    { "source": "/programs/bdes-architectural-construction", "destination": "/gone", "statusCode": 410 },
+    { "source": "/academics/bva-product-design", "destination": "/gone", "statusCode": 410 }
   ]
 }
