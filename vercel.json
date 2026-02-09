@@ -29,10 +29,10 @@
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
   ],
-  "routes": [
-    { "src": "/academics/b-des-interaction-and-experience-design", "status": 410 },
-    { "src": "/academics/b-des-architectural-design", "status": 410 },
-    { "src": "/programs/bdes-architectural-construction", "status": 410 },
-    { "src": "/academics/bva-product-design", "status": 410 }
+  "redirects": [
+    { "source": "/academics/b-des-interaction-and-experience-design", "statusCode": 410 },
+    { "source": "/academics/b-des-architectural-design", "statusCode": 410 },
+    { "source": "/programs/bdes-architectural-construction", "statusCode": 410 },
+    { "source": "/academics/bva-product-design", "statusCode": 410 }
   ]
 }
