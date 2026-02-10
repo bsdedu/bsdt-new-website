@@ -34,7 +34,7 @@ export const AdmissionsInfo: React.FC = () => {
                     <Clock className="w-5 h-5 text-bsd-orange mr-3 mt-0.5 flex-shrink-0" />
                     <div>
                       <span className="font-medium text-bsd-gray">Duration:</span>
-                      <span className="text-foreground/70 ml-2">1 Year (2 Semesters)</span>
+                      <span className="text-foreground/70 ml-2">12 Months (2 Semesters)</span>
                     </div>
                   </li>
                   <li className="flex items-start">

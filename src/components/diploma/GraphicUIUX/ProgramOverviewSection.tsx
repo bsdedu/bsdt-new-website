@@ -17,7 +17,7 @@ export const ProgramOverviewSection: React.FC = () => {
               Professional Diploma in Visual Communication + UI UX
             </h2>
             <p className="mt-4 text-foreground/70">
-              This 8-month hybrid programme combines live online learning with hands-on offline sessions, covering visual communication, typography, branding, advertising, digital media, and UI/UX fundamentals.
+              This 12-month hybrid programme combines live online learning with hands-on offline sessions, covering visual communication, typography, branding, advertising, digital media, and UI/UX fundamentals.
             </p>
           </div>
         </RevealSection>

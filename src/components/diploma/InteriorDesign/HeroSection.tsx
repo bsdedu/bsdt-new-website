@@ -18,13 +18,13 @@ export const HeroSection: React.FC = () => {
             </h1>
             
             <p className="text-lg text-foreground/80 max-w-xl">
-              Join from anywhere. This one-year hybrid programme blends live online learning with real-world exposure through our Bangalore campus and Satellite Centres in Chhattisgarh, Hyderabad, Delhi & Coimbatore.
+              Join from anywhere. This 12-month hybrid programme blends live online learning with real-world exposure through our Bangalore campus and Satellite Centres in Chhattisgarh, Hyderabad, Delhi & Coimbatore.
             </p>
             
             <div className="flex flex-wrap gap-6 pt-2">
               <div className="flex items-center">
                 <Clock className="w-5 h-5 text-bsd-orange mr-2" />
-                <span className="text-bsd-gray font-medium">8 Months</span>
+                <span className="text-bsd-gray font-medium">12 Months</span>
               </div>
               <div className="flex items-center">
                 <Calendar className="w-5 h-5 text-bsd-orange mr-2" />
