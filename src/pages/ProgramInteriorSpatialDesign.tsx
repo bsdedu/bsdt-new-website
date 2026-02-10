@@ -6,7 +6,7 @@ import { EnquiryFormSection } from "@/components/home/EnquiryFormSection";
 import { StudentWorksGallery } from "@/components/program/StudentWorksGallery";
 import { HeroSection } from "@/components/program/interior-spatial/HeroSection";
 import { ProgramOverviewSection } from "@/components/program/interior-spatial/ProgramOverviewSection";
-import { CustomFacultySection } from "@/components/program/interior-spatial/CustomFacultySection";
+
 import { BVAInteriorStudentLearningSection } from "@/components/program/interior-spatial/BVAInteriorStudentLearningSection";
 import { SkillEnhancingElectivesSection } from "@/components/program/SkillEnhancingElectivesSection";
 const ProgramInteriorSpatialDesign = () => {
@@ -28,7 +28,7 @@ const ProgramInteriorSpatialDesign = () => {
         category="residential"
       />
       <SkillEnhancingElectivesSection programKey="bva-interior-spatial-design" />
-      <CustomFacultySection />
+      
       <EnquiryFormSection />
       
       <Footer />

@@ -6,7 +6,7 @@ import { Footer } from '@/components/layout/Footer';
 import { HeroSection } from '@/components/diploma/LandscapeDesign/HeroSection';
 import { ProgramOverviewSection } from '@/components/diploma/LandscapeDesign/ProgramOverviewSection';
 import { ProgramFeatures } from '@/components/diploma/LandscapeDesign/ProgramFeatures';
-import { IndustryFaculty } from '@/components/diploma/LandscapeDesign/IndustryFaculty';
+
 
 import { BatchScheduleSection } from '@/components/diploma/shared/BatchScheduleSection';
 import { HybridLearningSection } from '@/components/diploma/shared/HybridLearningSection';
@@ -31,7 +31,7 @@ const DiplomaProgramLandscapeDesign: React.FC = () => {
         <HybridLearningSection />
         <BatchScheduleSection />
         <ProgramFeatures />
-        <IndustryFaculty />
+        
         
         <EnquiryFormSection />
       </main>

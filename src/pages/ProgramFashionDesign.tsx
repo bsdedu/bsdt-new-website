@@ -4,7 +4,7 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { HeroSection } from '@/components/program/fashion-design/HeroSection';
 import { ProgramOverviewSection } from '@/components/program/fashion-design/ProgramOverviewSection';
-import { FashionFacultySection } from '@/components/program/fashion-design/FashionFacultySection';
+
 import { FashionStudioSection } from '@/components/program/fashion-design/FashionStudioSection';
 import { StudentWorksGallery } from '@/components/program/StudentWorksGallery';
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
@@ -30,7 +30,7 @@ const ProgramFashionDesign: React.FC = () => {
         <HeroSection />
         <ProgramOverviewSection />
         <StudentLearningSection />
-        <FashionFacultySection />
+        
         <FashionStudioSection />
         <StudentWorksGallery 
           title="Fashion Design Student Projects"
