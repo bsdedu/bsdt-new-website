@@ -5,7 +5,7 @@ import { Footer } from '@/components/layout/Footer';
 import { HeroSection } from '@/components/diploma/FashionDesign/HeroSection';
 import { ProgramOverviewSection } from '@/components/diploma/FashionDesign/ProgramOverviewSection';
 import { ProgramFeatures } from '@/components/diploma/FashionDesign/ProgramFeatures';
-import { IndustryFaculty } from '@/components/diploma/FashionDesign/IndustryFaculty';
+
 
 import { BatchScheduleSection } from '@/components/diploma/shared/BatchScheduleSection';
 import { HybridLearningSection } from '@/components/diploma/shared/HybridLearningSection';
@@ -32,7 +32,7 @@ const DiplomaProgramFashionDesign: React.FC = () => {
         <HybridLearningSection />
         <BatchScheduleSection />
         <ProgramFeatures />
-        <IndustryFaculty />
+        
         
         <EnquiryFormSection />
       </main>

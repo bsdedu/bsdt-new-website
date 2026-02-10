@@ -5,7 +5,7 @@ import { Footer } from '@/components/layout/Footer';
 import { HeroSection } from '@/components/diploma/AIServiceDesign/HeroSection';
 import { ProgramOverviewSection } from '@/components/diploma/AIServiceDesign/ProgramOverviewSection';
 import { ProgramFeatures } from '@/components/diploma/AIServiceDesign/ProgramFeatures';
-import { IndustryFaculty } from '@/components/diploma/AIServiceDesign/IndustryFaculty';
+
 
 import { BatchScheduleSection } from '@/components/diploma/shared/BatchScheduleSection';
 import { HybridLearningSection } from '@/components/diploma/shared/HybridLearningSection';
@@ -32,7 +32,7 @@ const DiplomaProgramAIServiceDesign: React.FC = () => {
         <HybridLearningSection />
         <BatchScheduleSection />
         <ProgramFeatures />
-        <IndustryFaculty />
+        
         
         <EnquiryFormSection />
       </main>

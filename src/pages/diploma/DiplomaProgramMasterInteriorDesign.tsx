@@ -5,7 +5,7 @@ import { Footer } from '@/components/layout/Footer';
 import { HeroSection } from '@/components/diploma/MasterInteriorDesign/HeroSection';
 import { ProgramOverviewSection } from '@/components/diploma/MasterInteriorDesign/ProgramOverviewSection';
 import { ProgramFeatures } from '@/components/diploma/MasterInteriorDesign/ProgramFeatures';
-import { IndustryFaculty } from '@/components/diploma/MasterInteriorDesign/IndustryFaculty';
+
 
 import { StudentLearningSection } from '@/components/program/StudentLearningSection';
 import { BatchScheduleSection } from '@/components/diploma/shared/BatchScheduleSection';
@@ -33,7 +33,7 @@ const DiplomaProgramMasterInteriorDesign: React.FC = () => {
         <HybridLearningSection />
         <BatchScheduleSection />
         <ProgramFeatures />
-        <IndustryFaculty />
+        
         
         <EnquiryFormSection />
       </main>

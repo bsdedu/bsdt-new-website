@@ -6,7 +6,7 @@ import { Footer } from '@/components/layout/Footer';
 import { HeroSection } from '@/components/diploma/HCIUIUX/HeroSection';
 import { ProgramOverviewSection } from '@/components/diploma/HCIUIUX/ProgramOverviewSection';
 import { ProgramFeatures } from '@/components/diploma/HCIUIUX/ProgramFeatures';
-import { IndustryFaculty } from '@/components/diploma/HCIUIUX/IndustryFaculty';
+
 
 import { BatchScheduleSection } from '@/components/diploma/shared/BatchScheduleSection';
 import { HybridLearningSection } from '@/components/diploma/shared/HybridLearningSection';
@@ -31,7 +31,7 @@ const DiplomaProgramHCIUIUX: React.FC = () => {
         <HybridLearningSection />
         <BatchScheduleSection />
         <ProgramFeatures />
-        <IndustryFaculty />
+        
         
         <EnquiryFormSection />
       </main>

@@ -7,7 +7,7 @@ import { EnquiryFormSection } from "@/components/home/EnquiryFormSection";
 import { StudentWorksGallery } from "@/components/program/StudentWorksGallery";
 import { HeroSection } from "@/components/program/graphic-design/HeroSection";
 import { ProgramOverviewSection } from "@/components/program/graphic-design/ProgramOverviewSection";
-import { CustomFacultySection } from "@/components/program/graphic-design/CustomFacultySection";
+
 import { StudentLearningSection } from "@/components/program/StudentLearningSection";
 import { SkillEnhancingElectivesSection } from "@/components/program/SkillEnhancingElectivesSection";
 
@@ -30,7 +30,7 @@ const ProgramGraphicDesign = () => {
         category="branding"
       />
       <SkillEnhancingElectivesSection programKey="bva-graphic-design" />
-      <CustomFacultySection />
+      
       <EnquiryFormSection />
       
       <Footer />

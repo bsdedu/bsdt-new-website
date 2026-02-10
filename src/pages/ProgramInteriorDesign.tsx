@@ -7,7 +7,7 @@ import { EnquiryFormSection } from "@/components/home/EnquiryFormSection";
 import { ProjectCategoryTabs } from "@/components/program/interior-design/ProjectCategoryTabs";
 import { HeroSection } from "@/components/program/interior-design/HeroSection";
 import { ProgramOverviewSection } from "@/components/program/interior-design/ProgramOverviewSection";
-import { CustomFacultySection } from "@/components/program/interior-design/CustomFacultySection";
+
 import { InteriorStudentLearningSection } from "@/components/program/interior-design/InteriorStudentLearningSection";
 import { SkillEnhancingElectivesSection } from "@/components/program/SkillEnhancingElectivesSection";
 import { RevealSection } from "@/components/ui-elements/RevealSection";
@@ -48,7 +48,7 @@ const ProgramInteriorDesign = () => {
       </section>
       
       <SkillEnhancingElectivesSection programKey="bsc-interior-design" />
-      <CustomFacultySection />
+      
       <EnquiryFormSection />
       
       <Footer />
