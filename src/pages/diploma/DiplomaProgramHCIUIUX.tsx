@@ -8,6 +8,7 @@ import { ProgramOverviewSection } from '@/components/diploma/HCIUIUX/ProgramOver
 import { ProgramFeatures } from '@/components/diploma/HCIUIUX/ProgramFeatures';
 import { IndustryFaculty } from '@/components/diploma/HCIUIUX/IndustryFaculty';
 import { AdmissionsInfo } from '@/components/diploma/HCIUIUX/AdmissionsInfo';
+import { HybridLearningSection } from '@/components/diploma/shared/HybridLearningSection';
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
 
 const DiplomaProgramHCIUIUX: React.FC = () => {
@@ -26,6 +27,7 @@ const DiplomaProgramHCIUIUX: React.FC = () => {
       <main>
         <HeroSection />
         <ProgramOverviewSection />
+        <HybridLearningSection />
         <ProgramFeatures />
         <IndustryFaculty />
         <AdmissionsInfo />

@@ -8,6 +8,7 @@ import { ProgramFeatures } from '@/components/diploma/SustainableCircularDesign/
 
 import { AdmissionsInfo } from '@/components/diploma/SustainableCircularDesign/AdmissionsInfo';
 import { BatchScheduleSection } from '@/components/diploma/shared/BatchScheduleSection';
+import { HybridLearningSection } from '@/components/diploma/shared/HybridLearningSection';
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
 
 const DiplomaProgramSustainableCircularDesign: React.FC = () => {
@@ -28,6 +29,7 @@ const DiplomaProgramSustainableCircularDesign: React.FC = () => {
       <main>
         <HeroSection />
         <ProgramOverviewSection />
+        <HybridLearningSection />
         <BatchScheduleSection />
         <ProgramFeatures />
         <AdmissionsInfo />

@@ -17,7 +17,7 @@ export const HeroSection: React.FC = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <Badge variant="secondary" className="w-fit">
-                AI & SERVICE DESIGN PROGRAM
+                HYBRID DIPLOMA PROGRAM
               </Badge>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
@@ -28,8 +28,7 @@ export const HeroSection: React.FC = () => {
               </h1>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Master the intersection of artificial intelligence and service design to create intelligent, 
-                user-centered experiences that transform how businesses deliver value in the digital age.
+                Join from anywhere. This 8-month hybrid programme blends live online learning with real-world exposure through our Bangalore campus and Satellite Centres in Chhattisgarh, Hyderabad, Delhi & Coimbatore.
               </p>
             </div>
 

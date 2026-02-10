@@ -15,6 +15,7 @@ type Program = {
   color: string;
   duration: string;
   href: string;
+  addons?: string;
 };
 
 const undergraduatePrograms: Program[] = [
@@ -67,6 +68,7 @@ const diplomaPrograms: Program[] = [
     description: "A professional diploma program focused on teaching interior design principles, space planning, and material selection for various environments. Available in Online & Offline modes.",
     color: "from-bsd-orange/20 to-bsd-orange/5",
     duration: "12 months",
+    addons: "Hybrid – Online & Offline",
     href: "/academics/professional-diploma-in-interior-design"
   },
   {
@@ -75,6 +77,7 @@ const diplomaPrograms: Program[] = [
     description: "An integrated program combining visual communication fundamentals with user interface and experience design principles for digital platforms. Available in Online & Offline modes.",
     color: "from-bsd-orange/20 to-bsd-orange/5",
     duration: "12 months",
+    addons: "Hybrid – Online & Offline",
     href: "/academics/professional-diploma-graphics-design-ui-ux"
   },
   {
@@ -83,6 +86,7 @@ const diplomaPrograms: Program[] = [
     description: "A professional diploma program focused on sustainable landscape design, environmental planning, and outdoor space development. Available in Online & Offline modes.",
     color: "from-bsd-gray/15 to-bsd-gray/5",
     duration: "12 months",
+    addons: "Hybrid – Online & Offline",
     href: "/academics/post-graduate-diploma-in-landscape-design"
   },
   {
@@ -91,6 +95,7 @@ const diplomaPrograms: Program[] = [
     description: "An advanced master-level diploma program for comprehensive interior design expertise, covering advanced space planning, project management, and design leadership. Available in Online & Offline modes.",
     color: "from-bsd-orange/20 to-bsd-orange/5",
     duration: "18 months",
+    addons: "Hybrid – Online & Offline",
     href: "/academics/master-diploma-in-interior-design"
   },
   {
@@ -99,6 +104,7 @@ const diplomaPrograms: Program[] = [
     description: "A specialized program teaching user interface and experience design methodologies, prototyping, and usability testing for digital products.",
     color: "from-bsd-gray/15 to-bsd-gray/5",
     duration: "12 months",
+    addons: "Hybrid – Online & Offline",
     href: "/academics/diploma-in-hci-for-ui-ux"
   }
 ];
@@ -152,6 +158,11 @@ export const ExplorePrograms: React.FC = () => {
                       <h3 className="text-sm font-semibold text-bsd-gray leading-tight">{program.title}</h3>
                     </div>
                     <Badge variant="outline" className="text-[8px] mt-1 bg-white/50">{program.duration}</Badge>
+                    {program.addons && (
+                      <p className="text-xs text-bsd-orange font-medium mt-1">
+                        {program.addons}
+                      </p>
+                    )}
                   </CardHeader>
                   <CardContent className="p-4 pt-0">
                     <p className="text-foreground/70 text-xs line-clamp-3">{program.description}</p>

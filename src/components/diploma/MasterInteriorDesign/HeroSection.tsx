@@ -13,7 +13,7 @@ export const HeroSection: React.FC = () => {
           <RevealSection>
             <div className="space-y-6">
               <Badge variant="bsdOrange" className="mb-4">
-                Master Diploma Program
+                Hybrid Master Diploma Program
               </Badge>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-bsd-gray leading-tight">

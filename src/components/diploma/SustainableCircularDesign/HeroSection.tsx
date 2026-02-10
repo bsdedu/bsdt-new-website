@@ -11,14 +11,14 @@ export const HeroSection: React.FC = () => {
       <div className="container mx-auto px-6 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <Badge variant="bsdOrange" className="mb-2">Professional Diploma Program</Badge>
+            <Badge variant="bsdOrange" className="mb-2">Hybrid Diploma Program</Badge>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-bsd-gray">
               Professional Diploma in<br />
               <span className="text-bsd-orange">Sustainable System & Circular Design</span>
             </h1>
             
             <p className="text-lg text-foreground/80 max-w-xl">
-              A comprehensive program focusing on sustainable design practices, circular economy principles, and environmentally responsible design solutions for a greener future.
+              Join from anywhere. This 12-month hybrid programme blends live online learning with real-world exposure through our Bangalore campus and Satellite Centres in Chhattisgarh, Hyderabad, Delhi & Coimbatore.
             </p>
             
             <div className="flex flex-wrap gap-6 pt-2">

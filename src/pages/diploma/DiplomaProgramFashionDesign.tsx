@@ -8,6 +8,7 @@ import { ProgramFeatures } from '@/components/diploma/FashionDesign/ProgramFeatu
 import { IndustryFaculty } from '@/components/diploma/FashionDesign/IndustryFaculty';
 import { AdmissionsInfo } from '@/components/diploma/FashionDesign/AdmissionsInfo';
 import { BatchScheduleSection } from '@/components/diploma/shared/BatchScheduleSection';
+import { HybridLearningSection } from '@/components/diploma/shared/HybridLearningSection';
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
 
 const DiplomaProgramFashionDesign: React.FC = () => {
@@ -28,6 +29,7 @@ const DiplomaProgramFashionDesign: React.FC = () => {
       <main>
         <HeroSection />
         <ProgramOverviewSection />
+        <HybridLearningSection />
         <BatchScheduleSection />
         <ProgramFeatures />
         <IndustryFaculty />
