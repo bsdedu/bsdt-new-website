@@ -11,7 +11,7 @@ export const CurriculumTab: React.FC = () => {
         <div className="text-center">
           <h3 className="text-2xl font-bold text-bsd-gray mb-4">Master Diploma Curriculum Structure</h3>
           <p className="text-foreground/70 max-w-3xl mx-auto">
-            A comprehensive 18-month program structured into three progressive semesters that build advanced expertise in residential design, construction, and project management.
+            A comprehensive 12-month program structured into three progressive semesters that build advanced expertise in residential design, construction, and project management.
           </p>
         </div>
 
@@ -314,7 +314,7 @@ export const CurriculumTab: React.FC = () => {
           <CardContent>
             <div className="text-center mb-6">
               <p className="text-foreground/70">
-                By the end of the 18 months, graduates will be able to:
+                By the end of the 12 months, graduates will be able to:
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-8">
