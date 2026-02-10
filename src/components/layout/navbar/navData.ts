@@ -56,6 +56,7 @@ export const navStructure: NavStructure[] = [
       { name: 'Scholarships', href: '/admissions/fees-scholarships' },
       { name: 'Schedule a Campus Visit', href: '/plan-a-visit' },
       { name: 'Faculty', href: '/faculty' },
+      { name: 'Skill-Enhancing Electives', href: '/academics/skill-enhancing-electives' },
       { name: 'Studio BSD', href: '/studio-bsd' },
       { name: 'We Go Beyond Curriculum', href: '/we-go-beyond-curriculum' },
       { name: 'FAQs', href: '/request-information' }
