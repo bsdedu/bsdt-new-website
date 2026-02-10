@@ -8,6 +8,7 @@ import { ProgramFeatures } from '@/components/diploma/AIServiceDesign/ProgramFea
 
 import { AdmissionsInfo } from '@/components/diploma/AIServiceDesign/AdmissionsInfo';
 import { BatchScheduleSection } from '@/components/diploma/shared/BatchScheduleSection';
+import { HybridLearningSection } from '@/components/diploma/shared/HybridLearningSection';
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
 
 const DiplomaProgramAIServiceDesign: React.FC = () => {
@@ -28,6 +29,7 @@ const DiplomaProgramAIServiceDesign: React.FC = () => {
       <main>
         <HeroSection />
         <ProgramOverviewSection />
+        <HybridLearningSection />
         <BatchScheduleSection />
         <ProgramFeatures />
         <AdmissionsInfo />

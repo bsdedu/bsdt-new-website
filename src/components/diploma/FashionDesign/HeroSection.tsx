@@ -11,7 +11,7 @@ export const HeroSection: React.FC = () => {
           {/* Left Content */}
           <div className="space-y-8">
             <Badge variant="outline" className="w-fit">
-              PROFESSIONAL DIPLOMA PROGRAM
+              HYBRID DIPLOMA PROGRAM
             </Badge>
             
             <div className="space-y-6">
@@ -21,9 +21,7 @@ export const HeroSection: React.FC = () => {
               </h1>
               
               <p className="text-lg text-muted-foreground max-w-2xl">
-                Master the art of fashion design with our intensive professional diploma program. 
-                Learn garment construction, fashion illustration, textile design, and industry trends 
-                from experienced fashion professionals in our comprehensive 8-month program.
+                Join from anywhere. This 8-month hybrid programme blends live online learning with hands-on offline sessions at our Bangalore campus and Satellite Centres in Chhattisgarh, Hyderabad, Delhi & Coimbatore.
               </p>
             </div>
             
