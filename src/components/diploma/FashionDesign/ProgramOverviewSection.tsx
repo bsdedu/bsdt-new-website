@@ -1,72 +1,53 @@
 import React from 'react';
-import { Badge } from '@/components/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { RevealSection } from '@/components/ui-elements/RevealSection';
+import { RevealSection } from "@/components/ui-elements/RevealSection";
+import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CurriculumTab } from './overview-tabs/CurriculumTab';
 import { LearningOutcomesTab } from './overview-tabs/LearningOutcomesTab';
 import { CareerPathsTab } from './overview-tabs/CareerPathsTab';
 import { SoftwareToolsTab } from './overview-tabs/SoftwareToolsTab';
 
 export const ProgramOverviewSection: React.FC = () => {
-  const highlights = [
-    "Industry-focused curriculum designed by fashion professionals",
-    "Hands-on garment construction and pattern making experience",
-    "Fashion illustration and digital design mastery",
-    "Textile knowledge and sustainable fashion practices",
-    "Portfolio development for fashion industry entry",
-    "Collaboration with fashion brands and designers"
-  ];
-
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section className="py-16 bg-white">
+      <div className="container mx-auto px-6 md:px-8">
         <RevealSection>
-          <div className="text-center mb-16">
-            <Badge variant="outline" className="mb-4">
-              PROGRAM OVERVIEW
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <Badge variant="bsdOrange" className="mb-4">PROGRAM OVERVIEW</Badge>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
               Master Fashion Design in 8 Months
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
+            <p className="mt-4 text-foreground/70">
               Our intensive Professional Diploma in Fashion Design combines creative expression 
               with technical expertise, preparing you for a successful career in the fashion industry.
             </p>
-            
-            {/* Program Highlights */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
-              {highlights.map((highlight, index) => (
-                <div key={index} className="flex items-center gap-2 text-left">
-                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
-                  <span className="text-sm text-muted-foreground">{highlight}</span>
-                </div>
-              ))}
-            </div>
           </div>
         </RevealSection>
 
-        <RevealSection delay={0.2}>
+        <RevealSection delay={100}>
           <Tabs defaultValue="curriculum" className="w-full">
-            <TabsList className="grid w-full grid-cols-4 mb-8">
-              <TabsTrigger value="curriculum">Curriculum</TabsTrigger>
-              <TabsTrigger value="outcomes">Learning Outcomes</TabsTrigger>
-              <TabsTrigger value="careers">Career Paths</TabsTrigger>
-              <TabsTrigger value="tools">Design Tools</TabsTrigger>
-            </TabsList>
+            <div className="flex justify-center mb-8">
+              <TabsList className="grid w-full max-w-xl grid-cols-4">
+                <TabsTrigger value="curriculum">Curriculum</TabsTrigger>
+                <TabsTrigger value="outcomes">Learning Outcomes</TabsTrigger>
+                <TabsTrigger value="careers">Career Paths</TabsTrigger>
+                <TabsTrigger value="tools">Design Tools</TabsTrigger>
+              </TabsList>
+            </div>
             
-            <TabsContent value="curriculum">
+            <TabsContent value="curriculum" className="mt-0">
               <CurriculumTab />
             </TabsContent>
             
-            <TabsContent value="outcomes">
+            <TabsContent value="outcomes" className="mt-0">
               <LearningOutcomesTab />
             </TabsContent>
             
-            <TabsContent value="careers">
+            <TabsContent value="careers" className="mt-0">
               <CareerPathsTab />
             </TabsContent>
             
-            <TabsContent value="tools">
+            <TabsContent value="tools" className="mt-0">
               <SoftwareToolsTab />
             </TabsContent>
           </Tabs>

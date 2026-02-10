@@ -1,90 +1,78 @@
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Calendar, Clock, Award, Download, ArrowRight } from 'lucide-react';
+import { Scissors, Clock, Calendar, Award } from 'lucide-react';
 
 export const HeroSection: React.FC = () => {
   return (
-    <section className="min-h-screen bg-gradient-to-br from-primary/5 via-background to-accent/5 flex items-center">
-      <div className="container mx-auto px-4 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="space-y-8">
-            <Badge variant="outline" className="w-fit">
-              HYBRID DIPLOMA PROGRAM
-            </Badge>
+    <section className="relative bg-gradient-to-b from-bsd-light-gray to-white py-20 overflow-hidden">
+      <div className="container mx-auto px-6 md:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
+            <Badge variant="bsdOrange" className="mb-2">Hybrid Diploma Program</Badge>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-bsd-gray">
+              Professional Diploma in<br />
+              <span className="text-bsd-orange">Fashion Design</span>
+            </h1>
             
-            <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                Professional Diploma in{' '}
-                <span className="text-primary">Fashion Design</span>
-              </h1>
-              
-              <p className="text-lg text-muted-foreground max-w-2xl">
-                Join from anywhere. This 8-month hybrid programme blends live online learning with hands-on offline sessions at our Bangalore campus and Satellite Centres in Chhattisgarh, Hyderabad, Delhi & Coimbatore.
-              </p>
-            </div>
+            <p className="text-lg text-foreground/80 max-w-xl">
+              Join from anywhere. This 8-month hybrid programme blends live online learning with hands-on offline sessions at our Bangalore campus and Satellite Centres in Chhattisgarh, Hyderabad, Delhi & Coimbatore.
+            </p>
             
-            {/* Program Details */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="flex items-center gap-2 p-4 bg-background/50 rounded-lg border">
-                <Clock className="h-5 w-5 text-primary" />
-                <div>
-                  <p className="font-medium">8 Months</p>
-                  <p className="text-sm text-muted-foreground">Duration</p>
-                </div>
+            <div className="flex flex-wrap gap-6 pt-2">
+              <div className="flex items-center">
+                <Clock className="w-5 h-5 text-bsd-orange mr-2" />
+                <span className="text-bsd-gray font-medium">8 Months</span>
               </div>
-              
-              <div className="flex items-center gap-2 p-4 bg-background/50 rounded-lg border">
-                <Calendar className="h-5 w-5 text-primary" />
-                <div>
-                  <p className="font-medium">Aug/Dec/Apr</p>
-                  <p className="text-sm text-muted-foreground">Intakes</p>
-                </div>
+              <div className="flex items-center">
+                <Calendar className="w-5 h-5 text-bsd-orange mr-2" />
+                <span className="text-bsd-gray font-medium">Batches: FEB | MAY | AUG | NOV</span>
               </div>
-              
-              <div className="flex items-center gap-2 p-4 bg-background/50 rounded-lg border">
-                <Award className="h-5 w-5 text-primary" />
-                <div>
-                  <p className="font-medium">Professional</p>
-                  <p className="text-sm text-muted-foreground">Certificate</p>
-                </div>
+              <div className="flex items-center">
+                <Award className="w-5 h-5 text-bsd-orange mr-2" />
+                <span className="text-bsd-gray font-medium">Certificate by Futr School + BSDT + ATMOS</span>
               </div>
             </div>
             
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="group">
-                <Download className="h-4 w-4 mr-2" />
-                Download Brochure
-              </Button>
-              <Button variant="outline" size="lg" className="group">
-                Apply Now
-                <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
+            <div className="flex flex-wrap gap-4 pt-4">
+              <a href="#enquiry-form">
+                <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white">
+                  Download Brochure
+                </Button>
+              </a>
+              <a 
+                href="https://apply.bsd.edu.in/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <Button size="lg" variant="outline" className="border-bsd-orange text-bsd-orange hover:bg-bsd-orange/10">
+                  Apply Now
+                </Button>
+              </a>
             </div>
           </div>
           
-          {/* Right Visual */}
           <div className="relative">
-            <div className="relative bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-8 overflow-hidden">
-              {/* Decorative Elements */}
-              <div className="absolute top-4 right-4 w-20 h-20 bg-primary/20 rounded-full blur-xl"></div>
-              <div className="absolute bottom-4 left-4 w-32 h-32 bg-accent/20 rounded-full blur-xl"></div>
-              
-              {/* Fashion Design Visual */}
-              <div className="relative z-10 text-center space-y-6">
-                <div className="w-48 h-48 mx-auto bg-gradient-to-br from-primary to-primary/70 rounded-full flex items-center justify-center">
-                  <img
-                    src="/src/assets/fashion-design-hero.jpg"
-                    alt="Fashion Design Studio"
-                    className="w-32 h-32 rounded-full object-cover shadow-xl"
+            <div className="absolute -top-10 -right-10 w-40 h-40 bg-bsd-orange/10 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-bsd-orange/10 rounded-full blur-3xl"></div>
+            
+            <div className="relative bg-white rounded-2xl shadow-xl overflow-hidden border border-bsd-orange/10">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-bsd-orange/10 rounded-bl-[100px]"></div>
+              <div className="p-6">
+                <div className="rounded-xl overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1474&q=80" 
+                    alt="Fashion Design Diploma" 
+                    className="w-full h-[350px] object-cover"
                   />
                 </div>
                 
-                <div className="space-y-2">
-                  <h3 className="text-xl font-semibold">Fashion Design Excellence</h3>
-                  <p className="text-muted-foreground">Creative Innovation & Technical Mastery</p>
+                <div className="flex justify-center -mt-6">
+                  <div className="bg-white rounded-full p-2 shadow-md">
+                    <div className="bg-bsd-orange/10 rounded-full p-3">
+                      <Scissors className="w-8 h-8 text-bsd-orange" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

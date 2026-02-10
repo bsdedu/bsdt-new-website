@@ -30,7 +30,6 @@ const DiplomaProgramInteriorDesign: React.FC = () => {
         <HeroSection />
         <ProgramOverviewSection />
         <HybridLearningSection />
-        <StudentLearningSection />
         <BatchScheduleSection />
         <ProgramFeatures />
         <IndustryFaculty />
