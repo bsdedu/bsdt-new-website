@@ -9,6 +9,7 @@ import { HeroSection } from "@/components/program/graphic-design/HeroSection";
 import { ProgramOverviewSection } from "@/components/program/graphic-design/ProgramOverviewSection";
 import { CustomFacultySection } from "@/components/program/graphic-design/CustomFacultySection";
 import { StudentLearningSection } from "@/components/program/StudentLearningSection";
+import { SkillEnhancingElectivesSection } from "@/components/program/SkillEnhancingElectivesSection";
 
 const ProgramGraphicDesign = () => {
   return (
@@ -28,6 +29,7 @@ const ProgramGraphicDesign = () => {
         description="Explore the creative works of our Graphic Design students, showcasing their expertise in branding, digital design, and print media."
         category="branding"
       />
+      <SkillEnhancingElectivesSection programKey="bva-graphic-design" />
       <CustomFacultySection />
       <EnquiryFormSection />
       

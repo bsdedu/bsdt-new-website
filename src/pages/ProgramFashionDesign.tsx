@@ -9,6 +9,7 @@ import { FashionStudioSection } from '@/components/program/fashion-design/Fashio
 import { StudentWorksGallery } from '@/components/program/StudentWorksGallery';
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
 import { StudentLearningSection } from '@/components/program/StudentLearningSection';
+import { SkillEnhancingElectivesSection } from '@/components/program/SkillEnhancingElectivesSection';
 
 const ProgramFashionDesign: React.FC = () => {
   return (
@@ -36,6 +37,7 @@ const ProgramFashionDesign: React.FC = () => {
           description="Explore the creative works and fashion collections designed by our talented students"
           category="fashion-design"
         />
+        <SkillEnhancingElectivesSection programKey="bsc-fashion-design" />
         <EnquiryFormSection />
       </main>
       

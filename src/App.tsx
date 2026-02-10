@@ -47,6 +47,7 @@ import OpenDay from "./pages/OpenDay";
 import Designuru2025 from "./pages/Designuru2025";
 import SportsDay from "./pages/SportsDay";
 import EndSemJury from "./pages/EndSemJury";
+import SkillEnhancingElectives from "./pages/SkillEnhancingElectives";
 // Course Imports - 3 Week Programs
 import GenerativeAICreativePrototyping from "./pages/courses/GenerativeAICreativePrototyping";
 import VRARPrototyping from "./pages/courses/VRARPrototyping";
@@ -172,6 +173,7 @@ const App = () => {
               <Route path="/programs/bsc-cs-analytics-security" element={<ProgramBScCS />} />
               <Route path="/academics/bva-interior-spatial-design" element={<ProgramInteriorSpatialDesign />} />
               <Route path="/placement-report" element={<PlacementReport />} />
+              <Route path="/academics/skill-enhancing-electives" element={<SkillEnhancingElectives />} />
               
               {/* Diploma Program Routes */}
               <Route path="/academics/professional-diploma-graphics-design-ui-ux" element={<DiplomaProgramGraphicUIUX />} />

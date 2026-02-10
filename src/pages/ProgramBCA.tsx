@@ -9,6 +9,7 @@ import { HeroSection } from "@/components/program/bca/HeroSection";
 import { ProgramOverviewSection } from "@/components/program/bca/ProgramOverviewSection";
 import { CustomFacultySection } from "@/components/program/bca/CustomFacultySection";
 import { StudentLearningSection } from "@/components/program/StudentLearningSection";
+import { SkillEnhancingElectivesSection } from "@/components/program/SkillEnhancingElectivesSection";
 
 const ProgramBCA = () => {
   return (
@@ -28,6 +29,7 @@ const ProgramBCA = () => {
         description="Explore the innovative projects created by our BCA students, showcasing their expertise in UI/UX design, AI/ML applications, and web development."
         category="uiux"
       />
+      <SkillEnhancingElectivesSection programKey="bca-uiux" />
       <CustomFacultySection />
       <EnquiryFormSection />
       

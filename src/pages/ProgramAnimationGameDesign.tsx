@@ -9,6 +9,7 @@ import { HeroSection } from "@/components/program/animation-game/HeroSection";
 import { ProgramOverviewSection } from "@/components/program/animation-game/ProgramOverviewSection";
 import { CustomFacultySection } from "@/components/program/animation-game/CustomFacultySection";
 import { StudentLearningSection } from "@/components/program/StudentLearningSection";
+import { SkillEnhancingElectivesSection } from "@/components/program/SkillEnhancingElectivesSection";
 
 const ProgramAnimationGameDesign = () => {
   return (
@@ -28,6 +29,7 @@ const ProgramAnimationGameDesign = () => {
         description="Explore the creative works of our Animation & Game Design students, showcasing their skills in 2D/3D animation, game development, and character design."
         category="animation"
       />
+      <SkillEnhancingElectivesSection programKey="bva-animation-game-design" />
       <CustomFacultySection />
       <EnquiryFormSection />
       
