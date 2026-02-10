@@ -6,7 +6,7 @@ import { CheckCircle } from 'lucide-react';
 import { CurriculumTab } from './overview-tabs/CurriculumTab';
 import { LearningOutcomesTab } from './overview-tabs/LearningOutcomesTab';
 import { CareerPathsTab } from './overview-tabs/CareerPathsTab';
-import { SoftwareToolsTab } from './overview-tabs/SoftwareToolsTab';
+
 
 export const ProgramOverviewSection: React.FC = () => {
   return (
@@ -78,11 +78,10 @@ export const ProgramOverviewSection: React.FC = () => {
 
         <RevealSection delay={300}>
           <Tabs defaultValue="curriculum" className="w-full">
-            <TabsList className="grid w-full grid-cols-4">
+            <TabsList className="grid w-full grid-cols-3">
               <TabsTrigger value="curriculum">Curriculum</TabsTrigger>
               <TabsTrigger value="learning-outcomes">Learning Outcomes</TabsTrigger>
               <TabsTrigger value="career-paths">Career Paths</TabsTrigger>
-              <TabsTrigger value="software-tools">Software & Tools</TabsTrigger>
             </TabsList>
             
             <TabsContent value="curriculum" className="mt-8">
@@ -95,10 +94,6 @@ export const ProgramOverviewSection: React.FC = () => {
             
             <TabsContent value="career-paths" className="mt-8">
               <CareerPathsTab />
-            </TabsContent>
-            
-            <TabsContent value="software-tools" className="mt-8">
-              <SoftwareToolsTab />
             </TabsContent>
           </Tabs>
         </RevealSection>
