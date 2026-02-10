@@ -7,7 +7,7 @@ import { HeroSection } from '@/components/diploma/GraphicUIUX/HeroSection';
 import { ProgramOverviewSection } from '@/components/diploma/GraphicUIUX/ProgramOverviewSection';
 import { ProgramFeatures } from '@/components/diploma/GraphicUIUX/ProgramFeatures';
 import { IndustryFaculty } from '@/components/diploma/GraphicUIUX/IndustryFaculty';
-import { AdmissionsInfo } from '@/components/diploma/GraphicUIUX/AdmissionsInfo';
+
 import { BatchScheduleSection } from '@/components/diploma/shared/BatchScheduleSection';
 import { HybridLearningSection } from '@/components/diploma/shared/HybridLearningSection';
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
@@ -32,7 +32,7 @@ const DiplomaProgramGraphicUIUX: React.FC = () => {
         <BatchScheduleSection />
         <ProgramFeatures />
         <IndustryFaculty />
-        <AdmissionsInfo />
+        
         <EnquiryFormSection />
       </main>
       

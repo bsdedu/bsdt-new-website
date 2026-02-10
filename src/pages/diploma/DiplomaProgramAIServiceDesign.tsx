@@ -6,7 +6,7 @@ import { HeroSection } from '@/components/diploma/AIServiceDesign/HeroSection';
 import { ProgramOverviewSection } from '@/components/diploma/AIServiceDesign/ProgramOverviewSection';
 import { ProgramFeatures } from '@/components/diploma/AIServiceDesign/ProgramFeatures';
 import { IndustryFaculty } from '@/components/diploma/AIServiceDesign/IndustryFaculty';
-import { AdmissionsInfo } from '@/components/diploma/AIServiceDesign/AdmissionsInfo';
+
 import { BatchScheduleSection } from '@/components/diploma/shared/BatchScheduleSection';
 import { HybridLearningSection } from '@/components/diploma/shared/HybridLearningSection';
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
@@ -33,7 +33,7 @@ const DiplomaProgramAIServiceDesign: React.FC = () => {
         <BatchScheduleSection />
         <ProgramFeatures />
         <IndustryFaculty />
-        <AdmissionsInfo />
+        
         <EnquiryFormSection />
       </main>
       

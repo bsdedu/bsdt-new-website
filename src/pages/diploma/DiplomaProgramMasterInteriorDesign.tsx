@@ -6,7 +6,7 @@ import { HeroSection } from '@/components/diploma/MasterInteriorDesign/HeroSecti
 import { ProgramOverviewSection } from '@/components/diploma/MasterInteriorDesign/ProgramOverviewSection';
 import { ProgramFeatures } from '@/components/diploma/MasterInteriorDesign/ProgramFeatures';
 import { IndustryFaculty } from '@/components/diploma/MasterInteriorDesign/IndustryFaculty';
-import { AdmissionsInfo } from '@/components/diploma/MasterInteriorDesign/AdmissionsInfo';
+
 import { StudentLearningSection } from '@/components/program/StudentLearningSection';
 import { BatchScheduleSection } from '@/components/diploma/shared/BatchScheduleSection';
 import { HybridLearningSection } from '@/components/diploma/shared/HybridLearningSection';
@@ -34,7 +34,7 @@ const DiplomaProgramMasterInteriorDesign: React.FC = () => {
         <BatchScheduleSection />
         <ProgramFeatures />
         <IndustryFaculty />
-        <AdmissionsInfo />
+        
         <EnquiryFormSection />
       </main>
       
