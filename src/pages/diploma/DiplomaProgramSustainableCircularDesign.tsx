@@ -6,7 +6,7 @@ import { HeroSection } from '@/components/diploma/SustainableCircularDesign/Hero
 import { ProgramOverviewSection } from '@/components/diploma/SustainableCircularDesign/ProgramOverviewSection';
 import { ProgramFeatures } from '@/components/diploma/SustainableCircularDesign/ProgramFeatures';
 import { IndustryFaculty } from '@/components/diploma/SustainableCircularDesign/IndustryFaculty';
-import { AdmissionsInfo } from '@/components/diploma/SustainableCircularDesign/AdmissionsInfo';
+
 import { BatchScheduleSection } from '@/components/diploma/shared/BatchScheduleSection';
 import { HybridLearningSection } from '@/components/diploma/shared/HybridLearningSection';
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
@@ -33,7 +33,7 @@ const DiplomaProgramSustainableCircularDesign: React.FC = () => {
         <BatchScheduleSection />
         <ProgramFeatures />
         <IndustryFaculty />
-        <AdmissionsInfo />
+        
         <EnquiryFormSection />
       </main>
       

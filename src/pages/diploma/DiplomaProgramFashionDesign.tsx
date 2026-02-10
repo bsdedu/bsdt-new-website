@@ -6,7 +6,7 @@ import { HeroSection } from '@/components/diploma/FashionDesign/HeroSection';
 import { ProgramOverviewSection } from '@/components/diploma/FashionDesign/ProgramOverviewSection';
 import { ProgramFeatures } from '@/components/diploma/FashionDesign/ProgramFeatures';
 import { IndustryFaculty } from '@/components/diploma/FashionDesign/IndustryFaculty';
-import { AdmissionsInfo } from '@/components/diploma/FashionDesign/AdmissionsInfo';
+
 import { BatchScheduleSection } from '@/components/diploma/shared/BatchScheduleSection';
 import { HybridLearningSection } from '@/components/diploma/shared/HybridLearningSection';
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
@@ -33,7 +33,7 @@ const DiplomaProgramFashionDesign: React.FC = () => {
         <BatchScheduleSection />
         <ProgramFeatures />
         <IndustryFaculty />
-        <AdmissionsInfo />
+        
         <EnquiryFormSection />
       </main>
       

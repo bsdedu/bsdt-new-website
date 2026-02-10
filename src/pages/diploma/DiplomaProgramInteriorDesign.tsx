@@ -7,8 +7,6 @@ import { HeroSection } from '@/components/diploma/InteriorDesign/HeroSection';
 import { ProgramOverviewSection } from '@/components/diploma/InteriorDesign/ProgramOverviewSection';
 import { ProgramFeatures } from '@/components/diploma/InteriorDesign/ProgramFeatures';
 import { IndustryFaculty } from '@/components/diploma/InteriorDesign/IndustryFaculty';
-import { AdmissionsInfo } from '@/components/diploma/InteriorDesign/AdmissionsInfo';
-import { StudentLearningSection } from '@/components/program/StudentLearningSection';
 import { BatchScheduleSection } from '@/components/diploma/shared/BatchScheduleSection';
 import { HybridLearningSection } from '@/components/diploma/shared/HybridLearningSection';
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
@@ -33,7 +31,7 @@ const DiplomaProgramInteriorDesign: React.FC = () => {
         <BatchScheduleSection />
         <ProgramFeatures />
         <IndustryFaculty />
-        <AdmissionsInfo />
+        
         <EnquiryFormSection />
       </main>
       

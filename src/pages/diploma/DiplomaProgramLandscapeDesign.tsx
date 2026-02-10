@@ -7,7 +7,7 @@ import { HeroSection } from '@/components/diploma/LandscapeDesign/HeroSection';
 import { ProgramOverviewSection } from '@/components/diploma/LandscapeDesign/ProgramOverviewSection';
 import { ProgramFeatures } from '@/components/diploma/LandscapeDesign/ProgramFeatures';
 import { IndustryFaculty } from '@/components/diploma/LandscapeDesign/IndustryFaculty';
-import { AdmissionsInfo } from '@/components/diploma/LandscapeDesign/AdmissionsInfo';
+
 import { BatchScheduleSection } from '@/components/diploma/shared/BatchScheduleSection';
 import { HybridLearningSection } from '@/components/diploma/shared/HybridLearningSection';
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
@@ -32,7 +32,7 @@ const DiplomaProgramLandscapeDesign: React.FC = () => {
         <BatchScheduleSection />
         <ProgramFeatures />
         <IndustryFaculty />
-        <AdmissionsInfo />
+        
         <EnquiryFormSection />
       </main>
       
