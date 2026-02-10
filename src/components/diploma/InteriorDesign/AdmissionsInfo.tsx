@@ -66,7 +66,7 @@ export const AdmissionsInfo: React.FC = () => {
                 <div className="space-y-4">
                   <div>
                     <h4 className="font-semibold text-bsd-gray">Duration</h4>
-                    <p className="text-foreground/70">1 Year (2 Semesters)</p>
+                    <p className="text-foreground/70">12 Months (2 Semesters)</p>
                   </div>
                   
                   <div>

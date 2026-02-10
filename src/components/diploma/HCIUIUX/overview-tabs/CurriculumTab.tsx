@@ -13,7 +13,7 @@ export const CurriculumTab: React.FC = () => {
         <CardContent>
           <div className="space-y-6">
             <p className="text-foreground/70">
-              The Professional Diploma in HCI for UI/UX is a 6-month comprehensive program divided into modules that build upon each other. Each module combines theoretical knowledge with practical applications to ensure a well-rounded skill set.
+              The Professional Diploma in HCI for UI/UX is a 12-month comprehensive program divided into modules that build upon each other. Each module combines theoretical knowledge with practical applications to ensure a well-rounded skill set.
             </p>
             
             <div className="space-y-4">
