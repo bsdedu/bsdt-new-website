@@ -8,6 +8,7 @@ import { HeroSection } from "@/components/program/bsc-cs/HeroSection";
 import { ProgramOverviewSection } from "@/components/program/bsc-cs/ProgramOverviewSection";
 import { CustomFacultySection } from "@/components/program/bsc-cs/CustomFacultySection";
 import { StudentLearningSection } from "@/components/program/StudentLearningSection";
+import { SkillEnhancingElectivesSection } from "@/components/program/SkillEnhancingElectivesSection";
 
 const ProgramBScCS = () => {
   return (
@@ -22,6 +23,7 @@ const ProgramBScCS = () => {
       <HeroSection />
       <ProgramOverviewSection />
       <StudentLearningSection />
+      <SkillEnhancingElectivesSection programKey="bca-data-analytics" />
       <CustomFacultySection />
       <EnquiryFormSection />
       

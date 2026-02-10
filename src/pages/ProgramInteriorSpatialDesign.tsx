@@ -8,6 +8,7 @@ import { HeroSection } from "@/components/program/interior-spatial/HeroSection";
 import { ProgramOverviewSection } from "@/components/program/interior-spatial/ProgramOverviewSection";
 import { CustomFacultySection } from "@/components/program/interior-spatial/CustomFacultySection";
 import { BVAInteriorStudentLearningSection } from "@/components/program/interior-spatial/BVAInteriorStudentLearningSection";
+import { SkillEnhancingElectivesSection } from "@/components/program/SkillEnhancingElectivesSection";
 const ProgramInteriorSpatialDesign = () => {
   return (
     <>
@@ -26,6 +27,7 @@ const ProgramInteriorSpatialDesign = () => {
         description="Explore the innovative works of our Interior & Spatial Design students, showcasing their expertise in spatial planning, interior design, and sustainable solutions."
         category="residential"
       />
+      <SkillEnhancingElectivesSection programKey="bva-interior-spatial-design" />
       <CustomFacultySection />
       <EnquiryFormSection />
       
