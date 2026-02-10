@@ -27,6 +27,8 @@ const ProgramInteriorDesign = () => {
       <ProgramOverviewSection />
       <InteriorStudentLearningSection />
       
+      <SkillEnhancingElectivesSection programKey="bsc-interior-design" />
+      
       <section className="py-16 bg-bsd-light-gray">
         <div className="container mx-auto px-6 md:px-8">
           <RevealSection>
@@ -46,8 +48,6 @@ const ProgramInteriorDesign = () => {
           </RevealSection>
         </div>
       </section>
-      
-      <SkillEnhancingElectivesSection programKey="bsc-interior-design" />
       
       <EnquiryFormSection />
       
