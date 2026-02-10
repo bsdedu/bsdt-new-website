@@ -80,7 +80,7 @@ const diplomaPrograms: Program[] = [
     title: "Professional Diploma in Interior Design",
     description: "A professional diploma program focused on teaching interior design principles, space planning, and material selection for various environments. Available in Online & Offline modes.",
     color: "from-bsd-orange/20 to-bsd-orange/5",
-    duration: "8 months",
+    duration: "1 year",
     href: "/academics/professional-diploma-in-interior-design"
   },
   {
@@ -88,7 +88,7 @@ const diplomaPrograms: Program[] = [
     title: "Professional Diploma in Visual Communication + UI & UX",
     description: "An integrated program combining visual communication fundamentals with user interface and experience design principles for digital platforms. Available in Online & Offline modes.",
     color: "from-bsd-orange/20 to-bsd-orange/5",
-    duration: "8 months",
+    duration: "1 year",
     href: "/academics/professional-diploma-graphics-design-ui-ux"
   },
   {
@@ -96,7 +96,7 @@ const diplomaPrograms: Program[] = [
     title: "Professional Diploma in Landscape Design",
     description: "A professional diploma program focused on sustainable landscape design, environmental planning, and outdoor space development. Available in Online & Offline modes.",
     color: "from-bsd-gray/15 to-bsd-gray/5",
-    duration: "8 months",
+    duration: "1 year",
     href: "/academics/post-graduate-diploma-in-landscape-design"
   },
   {
@@ -104,7 +104,7 @@ const diplomaPrograms: Program[] = [
     title: "Master Diploma in Advanced Residential Design",
     description: "An advanced master-level diploma program for comprehensive interior design expertise, covering advanced space planning, project management, and design leadership. Available in Online & Offline modes.",
     color: "from-bsd-orange/20 to-bsd-orange/5",
-    duration: "12 months",
+    duration: "18 months",
     href: "/academics/master-diploma-in-interior-design"
   },
   {
@@ -112,7 +112,7 @@ const diplomaPrograms: Program[] = [
     title: "Professional Diploma in UI & UX",
     description: "A specialized program teaching user interface and experience design methodologies, prototyping, and usability testing for digital products.",
     color: "from-bsd-gray/15 to-bsd-gray/5",
-    duration: "6 months",
+    duration: "1 year",
     href: "/academics/diploma-in-hci-for-ui-ux"
   },
 ];
