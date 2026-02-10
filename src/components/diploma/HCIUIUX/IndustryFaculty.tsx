@@ -21,7 +21,7 @@ export const IndustryFaculty: React.FC = () => {
         </RevealSection>
 
         <RevealSection delay={100}>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card>
               <CardContent className="pt-6">
                 <div className="text-center">
@@ -47,21 +47,6 @@ export const IndustryFaculty: React.FC = () => {
                   <p className="text-sm text-bsd-orange">Faculty, Interaction Design</p>
                   <p className="mt-4 text-sm text-foreground/70">
                     Dedicated to exploring relationships between form and various contexts, Amlan brings expertise in Product and UI/UX Design. His portfolio includes a website for a design-focused educational institution, a mobile app for the transgender community, a dashboard UI for an electric sports car at IIT Guwahati, and contributions to a sustainable bamboo EV bicycle project at IIT Bombay.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-            
-            <Card>
-              <CardContent className="pt-6">
-                <div className="text-center">
-                  <div className="w-24 h-24 mx-auto bg-bsd-light-gray rounded-full mb-4 overflow-hidden">
-                    <img src="/lovable-uploads/18447800-f016-4625-b117-1b07598c7e08.png" alt="Piyush Kanti Mahapatra" className="w-full h-full object-cover" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-bsd-gray">Piyush Kanti Mahapatra</h3>
-                  <p className="text-sm text-bsd-orange">Faculty, Visual Design</p>
-                  <p className="mt-4 text-sm text-foreground/70">
-                    With 4+ years in digital brand management, Piyush combines industry experience as a Visual Designer with three years of teaching in Art and Design. Skilled in Adobe Creative Cloud, he brings a strategic approach to design that balances aesthetics with brand objectives. His background in both professional and academic environments enriches his collaborative approach to creative problem-solving.
                   </p>
                 </div>
               </CardContent>
