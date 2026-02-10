@@ -24,12 +24,12 @@ const ProgramGraphicDesign = () => {
       <HeroSection />
       <ProgramOverviewSection />
       <StudentLearningSection />
+      <SkillEnhancingElectivesSection programKey="bva-graphic-design" />
       <StudentWorksGallery 
         title="Graphic Design Student Projects"
         description="Explore the creative works of our Graphic Design students, showcasing their expertise in branding, digital design, and print media."
         category="branding"
       />
-      <SkillEnhancingElectivesSection programKey="bva-graphic-design" />
       
       <EnquiryFormSection />
       

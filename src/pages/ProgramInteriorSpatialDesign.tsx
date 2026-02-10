@@ -22,12 +22,12 @@ const ProgramInteriorSpatialDesign = () => {
       <HeroSection />
       <ProgramOverviewSection />
       <BVAInteriorStudentLearningSection />
+      <SkillEnhancingElectivesSection programKey="bva-interior-spatial-design" />
       <StudentWorksGallery 
         title="Interior & Spatial Design Student Projects"
         description="Explore the innovative works of our Interior & Spatial Design students, showcasing their expertise in spatial planning, interior design, and sustainable solutions."
         category="residential"
       />
-      <SkillEnhancingElectivesSection programKey="bva-interior-spatial-design" />
       
       <EnquiryFormSection />
       

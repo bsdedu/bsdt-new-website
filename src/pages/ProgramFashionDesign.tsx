@@ -31,13 +31,13 @@ const ProgramFashionDesign: React.FC = () => {
         <ProgramOverviewSection />
         <StudentLearningSection />
         
+        <SkillEnhancingElectivesSection programKey="bsc-fashion-design" />
         <FashionStudioSection />
         <StudentWorksGallery 
           title="Fashion Design Student Projects"
           description="Explore the creative works and fashion collections designed by our talented students"
           category="fashion-design"
         />
-        <SkillEnhancingElectivesSection programKey="bsc-fashion-design" />
         <EnquiryFormSection />
       </main>
       
