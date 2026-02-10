@@ -1,90 +1,81 @@
 import React from 'react';
-import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Calendar, Clock, Award, Download, ExternalLink } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Bot, Clock, Calendar, Award } from 'lucide-react';
 
 export const HeroSection: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-primary/5">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-5" />
-      <div className="absolute top-20 right-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-20 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <Badge variant="secondary" className="w-fit">
-                HYBRID DIPLOMA PROGRAM
-              </Badge>
-              
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                Professional Diploma in{' '}
-                <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                  AI & Integrated Service Design
-                </span>
-              </h1>
-              
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Join from anywhere. This 8-month hybrid programme blends live online learning with real-world exposure through our Bangalore campus and Satellite Centres in Chhattisgarh, Hyderabad, Delhi & Coimbatore.
-              </p>
-            </div>
-
-            {/* Program highlights */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="flex items-center gap-2 p-3 rounded-lg bg-card/50">
-                <Clock className="h-5 w-5 text-primary" />
-                <div>
-                  <p className="font-semibold text-sm">Duration</p>
-                  <p className="text-xs text-muted-foreground">8 Months</p>
-                </div>
+    <section className="relative bg-gradient-to-b from-bsd-light-gray to-white py-20 overflow-hidden">
+      <div className="container mx-auto px-6 md:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
+            <Badge variant="bsdOrange" className="mb-2">Hybrid Diploma Program</Badge>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-bsd-gray">
+              Professional Diploma in<br />
+              <span className="text-bsd-orange">AI & Integrated Service Design</span>
+            </h1>
+            
+            <p className="text-lg text-foreground/80 max-w-xl">
+              Join from anywhere. This 8-month hybrid programme blends live online learning with real-world exposure through our Bangalore campus and Satellite Centres in Chhattisgarh, Hyderabad, Delhi & Coimbatore.
+            </p>
+            
+            <div className="flex flex-wrap gap-6 pt-2">
+              <div className="flex items-center">
+                <Clock className="w-5 h-5 text-bsd-orange mr-2" />
+                <span className="text-bsd-gray font-medium">8 Months</span>
               </div>
-              
-              <div className="flex items-center gap-2 p-3 rounded-lg bg-card/50">
-                <Calendar className="h-5 w-5 text-primary" />
-                <div>
-                  <p className="font-semibold text-sm">Next Intake</p>
-                  <p className="text-xs text-muted-foreground">January 2025</p>
-                </div>
+              <div className="flex items-center">
+                <Calendar className="w-5 h-5 text-bsd-orange mr-2" />
+                <span className="text-bsd-gray font-medium">Batches: FEB | MAY | AUG | NOV</span>
               </div>
-              
-              <div className="flex items-center gap-2 p-3 rounded-lg bg-card/50">
-                <Award className="h-5 w-5 text-primary" />
-                <div>
-                  <p className="font-semibold text-sm">Recognition</p>
-                  <p className="text-xs text-muted-foreground">Industry Certified</p>
-                </div>
+              <div className="flex items-center">
+                <Award className="w-5 h-5 text-bsd-orange mr-2" />
+                <span className="text-bsd-gray font-medium">Certificate by Futr School + BSDT + ATMOS</span>
               </div>
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="gap-2">
-                <Download className="h-4 w-4" />
-                Download Brochure
-              </Button>
-              <Button variant="outline" size="lg" className="gap-2">
-                <ExternalLink className="h-4 w-4" />
-                Apply Now
-              </Button>
-            </div>
-          </div>
-
-          {/* Image */}
-          <div className="relative">
-            <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src="/src/assets/ai-service-design-hero.jpg"
-                alt="AI Service Design Illustration"
-                className="w-full h-auto"
-              />
             </div>
             
-            {/* Floating elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-xl" />
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-secondary/20 rounded-full blur-xl" />
+            <div className="flex flex-wrap gap-4 pt-4">
+              <a href="#enquiry-form">
+                <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white">
+                  Download Brochure
+                </Button>
+              </a>
+              <a 
+                href="https://apply.bsd.edu.in/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <Button size="lg" variant="outline" className="border-bsd-orange text-bsd-orange hover:bg-bsd-orange/10">
+                  Apply Now
+                </Button>
+              </a>
+            </div>
+          </div>
+          
+          <div className="relative">
+            <div className="absolute -top-10 -right-10 w-40 h-40 bg-bsd-orange/10 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-bsd-orange/10 rounded-full blur-3xl"></div>
+            
+            <div className="relative bg-white rounded-2xl shadow-xl overflow-hidden border border-bsd-orange/10">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-bsd-orange/10 rounded-bl-[100px]"></div>
+              <div className="p-6">
+                <div className="rounded-xl overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=1474&q=80" 
+                    alt="AI & Integrated Service Design Diploma" 
+                    className="w-full h-[350px] object-cover"
+                  />
+                </div>
+                
+                <div className="flex justify-center -mt-6">
+                  <div className="bg-white rounded-full p-2 shadow-md">
+                    <div className="bg-bsd-orange/10 rounded-full p-3">
+                      <Bot className="w-8 h-8 text-bsd-orange" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
