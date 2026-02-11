@@ -16,6 +16,10 @@ import electiveBems from "@/assets/elective-bems.jpg";
 import electiveBim from "@/assets/elective-bim.jpg";
 import electiveVfx from "@/assets/elective-vfx.jpg";
 import elective3dAsset from "@/assets/elective-3d-asset.jpg";
+import electiveHero from "@/assets/elective-hero.jpg";
+import electiveCertificate from "@/assets/elective-certificate.jpg";
+import electiveSketching from "@/assets/elective-hands-sketching.jpg";
+import electivePresentation from "@/assets/elective-presentation.jpg";
 
 const electiveImages: Record<string, string> = {
   "elective-1": electiveFigma,
@@ -39,22 +43,22 @@ const SkillEnhancingElectives = () => {
 
       <main>
         {/* Hero Section */}
-        <section className="relative pt-28 pb-16 bg-gradient-to-br from-bsd-light-gray to-white overflow-hidden">
-          <div className="absolute inset-0 -z-10">
-            <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-bsd-orange/5 blur-3xl opacity-60" />
-            <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-bsd-gray/5 blur-3xl opacity-60" />
+        <section className="relative text-white pt-28 md:pt-36 pb-16 md:pb-24 overflow-hidden">
+          <div className="absolute inset-0">
+            <img src={electiveHero} alt="Design school campus with students" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-r from-bsd-gray/90 via-bsd-gray/70 to-transparent" />
           </div>
-          <div className="container mx-auto px-6 md:px-8">
+          <div className="container mx-auto px-6 md:px-8 relative z-10">
             <RevealSection>
-              <div className="max-w-4xl mx-auto text-center">
+              <div className="max-w-4xl">
                 <Badge variant="bsdOrange" className="mb-4">UNDERGRADUATE CURRICULUM</Badge>
-                <h1 className="text-4xl md:text-5xl font-display font-bold text-bsd-gray mb-6">
+                <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">
                   Skill-Enhancing Electives
                 </h1>
-                <p className="text-xl text-foreground/70 mb-4">
+                <p className="text-xl text-white/80 mb-4">
                   A Pathway to Future-Ready Designers
                 </p>
-                <p className="text-foreground/70 max-w-3xl mx-auto">
+                <p className="text-white/70 max-w-3xl">
                   At Bangalore School of Design and Technology, Skill-Enhancing Electives are embedded into the undergraduate curriculum to bridge the gap between academic learning and real-world practice. While a design degree builds strong conceptual foundations, industry-ready skills are what enhance confidence, specialization, and employability.
                 </p>
               </div>
@@ -72,32 +76,39 @@ const SkillEnhancingElectives = () => {
             </RevealSection>
 
             <RevealSection delay={100}>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                <div className="flex items-start space-x-3 bg-bsd-light-gray rounded-xl p-6">
-                  <div className="w-10 h-10 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0">
-                    <BookOpen className="w-5 h-5 text-bsd-orange" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-bsd-gray">2 Mandatory Electives</h4>
-                    <p className="text-sm text-foreground/70 mt-1">One elective in the second year and one in the third year</p>
-                  </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                {/* Left: Image */}
+                <div className="rounded-2xl overflow-hidden shadow-lg">
+                  <img src={electiveCertificate} alt="Students receiving certificates" className="w-full h-full object-cover" />
                 </div>
-                <div className="flex items-start space-x-3 bg-bsd-light-gray rounded-xl p-6">
-                  <div className="w-10 h-10 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0">
-                    <Award className="w-5 h-5 text-bsd-orange" />
+                {/* Right: Info cards */}
+                <div className="flex flex-col gap-6 justify-center">
+                  <div className="flex items-start space-x-3 bg-bsd-light-gray rounded-xl p-6">
+                    <div className="w-10 h-10 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0">
+                      <BookOpen className="w-5 h-5 text-bsd-orange" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-bsd-gray">2 Mandatory Electives</h4>
+                      <p className="text-sm text-foreground/70 mt-1">One elective in the second year and one in the third year</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-bsd-gray">Certificate on Completion</h4>
-                    <p className="text-sm text-foreground/70 mt-1">Successfully complete the course and final assessment to earn a certificate</p>
+                  <div className="flex items-start space-x-3 bg-bsd-light-gray rounded-xl p-6">
+                    <div className="w-10 h-10 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0">
+                      <Award className="w-5 h-5 text-bsd-orange" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-bsd-gray">Certificate on Completion</h4>
+                      <p className="text-sm text-foreground/70 mt-1">Successfully complete the course and final assessment to earn a certificate</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start space-x-3 bg-bsd-light-gray rounded-xl p-6">
-                  <div className="w-10 h-10 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-5 h-5 text-bsd-orange" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-bsd-gray">45 Hours Each</h4>
-                    <p className="text-sm text-foreground/70 mt-1">Each elective runs for one semester with a 3-week intensive structure</p>
+                  <div className="flex items-start space-x-3 bg-bsd-light-gray rounded-xl p-6">
+                    <div className="w-10 h-10 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-5 h-5 text-bsd-orange" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-bsd-gray">45 Hours Each</h4>
+                      <p className="text-sm text-foreground/70 mt-1">Each elective runs for one semester with a 3-week intensive structure</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -143,6 +154,17 @@ const SkillEnhancingElectives = () => {
                 </CardContent>
               </Card>
             </RevealSection>
+          </div>
+        </section>
+
+        {/* Visual Break - Sketching */}
+        <section className="relative h-64 md:h-80 overflow-hidden">
+          <img src={electiveSketching} alt="Student sketching design concepts" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-bsd-gray/40" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <p className="text-white text-2xl md:text-3xl font-display font-bold text-center px-4">
+              Where Creativity Meets Industry Skills
+            </p>
           </div>
         </section>
 
@@ -342,6 +364,17 @@ const SkillEnhancingElectives = () => {
                 ))}
               </Tabs>
             </RevealSection>
+          </div>
+        </section>
+
+        {/* Visual Break - Presentation */}
+        <section className="relative h-64 md:h-80 overflow-hidden">
+          <img src={electivePresentation} alt="Students presenting design projects" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-bsd-gray/40" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <p className="text-white text-2xl md:text-3xl font-display font-bold text-center px-4">
+              From Classroom to Career-Ready
+            </p>
           </div>
         </section>
 
