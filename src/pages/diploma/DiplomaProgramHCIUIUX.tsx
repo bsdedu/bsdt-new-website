@@ -10,6 +10,7 @@ import { ProgramFeatures } from '@/components/diploma/HCIUIUX/ProgramFeatures';
 
 import { BatchScheduleSection } from '@/components/diploma/shared/BatchScheduleSection';
 import { HybridLearningSection } from '@/components/diploma/shared/HybridLearningSection';
+import { CertificationPathwaySection } from '@/components/diploma/shared/CertificationPathwaySection';
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
 
 const DiplomaProgramHCIUIUX: React.FC = () => {
@@ -31,6 +32,7 @@ const DiplomaProgramHCIUIUX: React.FC = () => {
         <HybridLearningSection />
         <BatchScheduleSection />
         <ProgramFeatures />
+        <CertificationPathwaySection />
         
         
         <EnquiryFormSection />
