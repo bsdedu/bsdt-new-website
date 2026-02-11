@@ -30,7 +30,7 @@ export const navStructure: NavStructure[] = [
           
           { name: 'BVA Animation & Game Design', href: '/bva-animation-and-multimedia-game-design' },
           { name: 'BCA with UI/UX & AI/ML', href: '/academics/b-computer-application-ui-ux' },
-          { name: 'BCA with Data Analytics & Cyber Security', href: '/programs/bsc-cs-analytics-security' }
+          { name: 'BCA with Data Analytics & Cyber Security', href: '/academics/bca-data-analytics-cyber-security' }
         ]
       },
       {
