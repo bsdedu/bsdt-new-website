@@ -11,7 +11,7 @@ export const HeroSection: React.FC = () => {
       <div className="container mx-auto px-6 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <Badge variant="bsdOrange" className="mb-2">Hybrid Diploma Program</Badge>
+            
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-bsd-gray">
               Professional Diploma in<br />
               <span className="text-bsd-orange">Visual Communication + UI UX</span>
