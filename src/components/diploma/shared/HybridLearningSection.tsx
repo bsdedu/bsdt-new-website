@@ -12,10 +12,10 @@ export const HybridLearningSection: React.FC = () => {
           <div className="text-center max-w-3xl mx-auto mb-12">
             <Badge variant="bsdOrange" className="mb-4">HYBRID LEARNING MODEL</Badge>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
-              Learn Anywhere, Experience Everywhere
+              Learn From Anywhere
             </h2>
             <p className="mt-4 text-foreground/70">
-              Our hybrid learning model blends live online classes with real-world offline experiences, giving you the flexibility to learn from anywhere while gaining hands-on exposure at our campus and satellite centres.
+              BSDT's diploma programs follow a thoughtfully designed hybrid format that combines online academic delivery with guided offline engagement. Structured semesters, faculty-led modules, and continuous assessment are supported by on-ground mentor sessions, site visits, and hands-on activities— ensuring flexibility without compromising depth, discipline, or real-world exposure.
             </p>
           </div>
         </RevealSection>
