@@ -2,7 +2,7 @@
 import React from 'react';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Monitor, Clock, Calendar, Award } from "lucide-react";
+import { Monitor, Clock, Calendar } from "lucide-react";
 import { Link } from 'react-router-dom';
 
 export const HeroSection: React.FC = () => {
@@ -29,10 +29,6 @@ export const HeroSection: React.FC = () => {
               <div className="flex items-center">
                 <Calendar className="w-5 h-5 text-bsd-orange mr-2" />
                 <span className="text-bsd-gray font-medium">Batches: FEB | MAY | AUG | NOV</span>
-              </div>
-              <div className="flex items-center">
-                <Award className="w-5 h-5 text-bsd-orange mr-2" />
-                <span className="text-bsd-gray font-medium">Certificate by Futr School + BSDT + ATMOS</span>
               </div>
             </div>
             
