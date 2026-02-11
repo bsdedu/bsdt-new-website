@@ -6,7 +6,7 @@ import { TreeDeciduous, Clock, Calendar, MapPin } from "lucide-react";
 
 export const HeroSection: React.FC = () => {
   return (
-    <section className="relative bg-gradient-to-b from-bsd-light-gray to-white py-20 overflow-hidden">
+    <section className="relative bg-gradient-to-b from-bsd-light-gray to-white pt-28 pb-20 overflow-hidden">
       <div className="container mx-auto px-6 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
