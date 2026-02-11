@@ -4,12 +4,16 @@ import { Badge } from "@/components/ui/badge";
 import { BookOpen, Palette, Globe } from "lucide-react";
 import { Card, CardHeader, CardContent } from "../ui-elements/Card";
 import { Link } from "react-router-dom";
+import advantageElectives from "@/assets/advantage-electives.jpg";
+import advantageStudio from "@/assets/advantage-studio.jpg";
+import advantageBeyond from "@/assets/advantage-beyond.jpg";
 
 interface AdvantageCardProps {
   icon: React.ReactNode;
   title: string;
   description: string;
   href: string;
+  image: string;
   index: number;
 }
 
@@ -18,6 +22,7 @@ const AdvantageCard: React.FC<AdvantageCardProps> = ({
   title,
   description,
   href,
+  image,
   index
 }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -26,10 +31,18 @@ const AdvantageCard: React.FC<AdvantageCardProps> = ({
     <Link to={href}>
       <Card 
         isHoverable 
-        className={`h-full transition-all duration-500 cursor-pointer ${isHovered ? 'shadow-lg shadow-bsd-orange/10 -translate-y-2' : ''}`}
+        className={`h-full transition-all duration-500 cursor-pointer overflow-hidden ${isHovered ? 'shadow-lg shadow-bsd-orange/10 -translate-y-2' : ''}`}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
+        <div className="relative w-full aspect-[16/9] overflow-hidden">
+          <img 
+            src={image} 
+            alt={title} 
+            className={`w-full h-full object-cover transition-transform duration-700 ${isHovered ? 'scale-110' : 'scale-100'}`}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+        </div>
         <CardHeader>
           <div className={`w-14 h-14 rounded-full flex items-center justify-center mb-4 transition-all duration-500 ${isHovered ? 'bg-bsd-orange text-white' : 'bg-bsd-orange/10'}`}>
             {icon}
@@ -52,19 +65,22 @@ export const WhyChooseSection: React.FC = () => {
       icon: <BookOpen className="w-7 h-7 text-bsd-orange" />,
       title: "Skill-Enhancing Electives",
       description: "Industry-relevant certificate electives embedded into undergraduate programs — from Figma-based digital presentation to BIM, VFX, and design entrepreneurship.",
-      href: "/academics/skill-enhancing-electives"
+      href: "/academics/skill-enhancing-electives",
+      image: advantageElectives
     },
     {
       icon: <Palette className="w-7 h-7 text-bsd-orange" />,
       title: "Studio BSD",
       description: "State-of-the-art design studios, digital labs, and innovation spaces equipped with professional-grade tools for hands-on creative exploration.",
-      href: "/studio-bsd"
+      href: "/studio-bsd",
+      image: advantageStudio
     },
     {
       icon: <Globe className="w-7 h-7 text-bsd-orange" />,
       title: "We Go Beyond Curriculum",
       description: "Off-campus learning, industry-led workshops, educational site visits, and global exposure opportunities that extend learning far beyond the classroom.",
-      href: "/we-go-beyond-curriculum"
+      href: "/we-go-beyond-curriculum",
+      image: advantageBeyond
     }
   ];
 
@@ -98,6 +114,7 @@ export const WhyChooseSection: React.FC = () => {
                   title={item.title} 
                   description={item.description} 
                   href={item.href}
+                  image={item.image}
                   index={index} 
                 />
               </RevealSection>
