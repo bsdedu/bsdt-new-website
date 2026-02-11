@@ -10,6 +10,21 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader } from "@/components/ui-elements/Card";
 import { Check, BookOpen, Award, GraduationCap, Clock, Users, Target, Calendar } from "lucide-react";
 import { electivesData, electiveSchedule } from "@/data/electivesData";
+import electiveFigma from "@/assets/elective-figma.jpg";
+import electiveEntrepreneurship from "@/assets/elective-entrepreneurship.jpg";
+import electiveBems from "@/assets/elective-bems.jpg";
+import electiveBim from "@/assets/elective-bim.jpg";
+import electiveVfx from "@/assets/elective-vfx.jpg";
+import elective3dAsset from "@/assets/elective-3d-asset.jpg";
+
+const electiveImages: Record<string, string> = {
+  "elective-1": electiveFigma,
+  "elective-2": electiveEntrepreneurship,
+  "elective-3": electiveBems,
+  "elective-4": electiveBim,
+  "elective-5": electiveVfx,
+  "elective-6": elective3dAsset,
+};
 
 const SkillEnhancingElectives = () => {
   return (
@@ -159,7 +174,14 @@ const SkillEnhancingElectives = () => {
                   <TabsContent key={elective.id} value={elective.id} className="mt-0">
                     <div className="space-y-8">
                       {/* Elective Header */}
-                      <Card>
+                      <Card className="overflow-hidden">
+                        <div className="aspect-[3/1] w-full overflow-hidden">
+                          <img 
+                            src={electiveImages[elective.id]} 
+                            alt={elective.title} 
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
                         <CardContent className="p-6 md:p-8">
                           <div className="flex flex-wrap items-center gap-2 mb-4">
                             <Badge variant="bsdOrange">{elective.semester}</Badge>
