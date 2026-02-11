@@ -170,7 +170,7 @@ const App = () => {
               
               <Route path="/bva-animation-and-multimedia-game-design" element={<ProgramAnimationGameDesign />} />
               <Route path="/academics/b-computer-application-ui-ux" element={<ProgramBCA />} />
-              <Route path="/programs/bsc-cs-analytics-security" element={<ProgramBScCS />} />
+              <Route path="/academics/bca-data-analytics-cyber-security" element={<ProgramBScCS />} />
               <Route path="/academics/bva-interior-spatial-design" element={<ProgramInteriorSpatialDesign />} />
               <Route path="/placement-report" element={<PlacementReport />} />
               <Route path="/academics/skill-enhancing-electives" element={<SkillEnhancingElectives />} />
