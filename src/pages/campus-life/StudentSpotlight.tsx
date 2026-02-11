@@ -10,6 +10,7 @@ import { graphicProjects } from '@/components/program/gallery/graphicProjects';
 import { interiorProjects } from '@/components/program/gallery/interiorProjects';
 import { animationProjects } from '@/components/program/gallery/animationProjects';
 import { AnimatedButton } from '@/components/ui-elements/AnimatedButton';
+import studentSpotlightHero from '@/assets/student-spotlight-hero.jpg';
 
 const StudentSpotlight: React.FC = () => {
   // Collect featured projects from all categories
@@ -47,8 +48,11 @@ const StudentSpotlight: React.FC = () => {
         <Navbar />
 
         {/* Hero Section */}
-        <section className="relative bg-bsd-gray text-white pt-28 md:pt-36 pb-16 md:pb-24">
-          <div className="absolute inset-0 bg-gradient-to-br from-bsd-gray via-bsd-gray/95 to-bsd-orange/20" />
+        <section className="relative text-white pt-28 md:pt-36 pb-16 md:pb-24 overflow-hidden">
+          <div className="absolute inset-0">
+            <img src={studentSpotlightHero} alt="Student working on design project" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-r from-bsd-gray/90 via-bsd-gray/70 to-transparent" />
+          </div>
           <div className="container mx-auto px-6 md:px-8 relative z-10">
             <div className="max-w-3xl">
               <Badge variant="bsdOrange" className="mb-4">CAMPUS LIFE</Badge>
