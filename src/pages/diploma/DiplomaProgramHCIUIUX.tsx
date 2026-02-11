@@ -30,9 +30,9 @@ const DiplomaProgramHCIUIUX: React.FC = () => {
         <HeroSection />
         <ProgramOverviewSection />
         <HybridLearningSection />
+        <CertificationPathwaySection />
         <BatchScheduleSection />
         <ProgramFeatures />
-        <CertificationPathwaySection />
         
         
         <EnquiryFormSection />
