@@ -5,7 +5,7 @@ import { Footer } from '@/components/layout/Footer';
 import { Badge } from '@/components/ui/badge';
 import { RevealSection } from '@/components/ui-elements/RevealSection';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import { ProjectCarousel } from '@/components/program/gallery/ProjectCarousel';
+import { ProjectCard } from '@/components/program/gallery/ProjectCard';
 import { graphicProjects } from '@/components/program/gallery/graphicProjects';
 import { interiorProjects } from '@/components/program/gallery/interiorProjects';
 import { animationProjects } from '@/components/program/gallery/animationProjects';
@@ -109,7 +109,11 @@ const StudentSpotlight: React.FC = () => {
 
                 <TabsContent value="graphic" className="mt-0">
                   {graphicWorks.length > 0 ? (
-                    <ProjectCarousel projects={graphicWorks} />
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                      {graphicWorks.map(project => (
+                        <ProjectCard key={project.id} project={project} />
+                      ))}
+                    </div>
                   ) : (
                     <div className="text-center p-8 bg-muted/20 rounded-lg">
                       <p className="text-foreground/70">Projects coming soon...</p>
@@ -119,7 +123,11 @@ const StudentSpotlight: React.FC = () => {
 
                 <TabsContent value="interior" className="mt-0">
                   {interiorWorks.length > 0 ? (
-                    <ProjectCarousel projects={interiorWorks} />
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                      {interiorWorks.map(project => (
+                        <ProjectCard key={project.id} project={project} />
+                      ))}
+                    </div>
                   ) : (
                     <div className="text-center p-8 bg-muted/20 rounded-lg">
                       <p className="text-foreground/70">Projects coming soon...</p>
@@ -129,7 +137,11 @@ const StudentSpotlight: React.FC = () => {
 
                 <TabsContent value="animation" className="mt-0">
                   {animationWorks.length > 0 ? (
-                    <ProjectCarousel projects={animationWorks} />
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                      {animationWorks.map(project => (
+                        <ProjectCard key={project.id} project={project} />
+                      ))}
+                    </div>
                   ) : (
                     <div className="text-center p-8 bg-muted/20 rounded-lg">
                       <p className="text-foreground/70">Projects coming soon...</p>
