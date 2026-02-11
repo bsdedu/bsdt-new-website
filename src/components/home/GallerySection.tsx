@@ -324,9 +324,6 @@ export const GallerySection: React.FC = () => {
                         </>
                       )}
                     </div>
-                    <div className="p-4">
-                      <p className="text-sm text-gray-600">{item.caption}</p>
-                    </div>
                   </Card>
                 </div>
               </CarouselItem>
@@ -458,9 +455,6 @@ export const GallerySection: React.FC = () => {
                   </>
                 )}
               </div>
-              <div className="p-4">
-                <p className="text-sm text-gray-600">{item.caption}</p>
-              </div>
             </Card>
           </div>
         ))}
@@ -557,9 +551,6 @@ export const GallerySection: React.FC = () => {
                   alt={selectedImage.caption} 
                   className="w-full h-auto max-h-[80vh] object-contain"
                 />
-                <div className="p-4">
-                  <p className="text-sm text-gray-600">{selectedImage.caption}</p>
-                </div>
               </div>
             )}
           </div>
