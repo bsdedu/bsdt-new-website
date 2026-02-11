@@ -2,7 +2,7 @@
 import React from 'react';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { TreeDeciduous, Clock, Calendar, Award, MapPin } from "lucide-react";
+import { TreeDeciduous, Clock, Calendar, MapPin } from "lucide-react";
 
 export const HeroSection: React.FC = () => {
   return (
@@ -32,10 +32,6 @@ export const HeroSection: React.FC = () => {
               <div className="flex items-center">
                 <MapPin className="w-5 h-5 text-bsd-orange mr-2" />
                 <span className="text-bsd-gray font-medium">Online + Offline (Bangalore & Satellite Centres)</span>
-              </div>
-              <div className="flex items-center">
-                <Award className="w-5 h-5 text-bsd-orange mr-2" />
-                <span className="text-bsd-gray font-medium">Certificate by Futr School + BSDT + ATMOS</span>
               </div>
             </div>
             

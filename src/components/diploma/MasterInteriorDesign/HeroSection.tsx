@@ -1,7 +1,7 @@
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Building2, Clock, Calendar, Award } from 'lucide-react';
+import { Building2, Clock, Calendar } from 'lucide-react';
 import masterResidentialHero from '@/assets/master-residential-design-hero.jpg';
 
 export const HeroSection: React.FC = () => {
@@ -28,10 +28,6 @@ export const HeroSection: React.FC = () => {
               <div className="flex items-center">
                 <Calendar className="w-5 h-5 text-bsd-orange mr-2" />
                 <span className="text-bsd-gray font-medium">Batches: FEB | MAY | AUG | NOV</span>
-              </div>
-              <div className="flex items-center">
-                <Award className="w-5 h-5 text-bsd-orange mr-2" />
-                <span className="text-bsd-gray font-medium">Master Diploma Certificate</span>
               </div>
             </div>
             

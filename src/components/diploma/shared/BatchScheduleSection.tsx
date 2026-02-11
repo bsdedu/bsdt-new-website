@@ -131,48 +131,6 @@ export const BatchScheduleSection: React.FC = () => {
           </div>
         </RevealSection>
 
-        <RevealSection delay={200}>
-          <div className="mb-8">
-            <h3 className="text-2xl font-semibold text-bsd-gray text-center mb-8">
-              Choose Your Preferred Batch
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {batches.map((batch, index) => (
-                <Card key={batch.name} className={index < 2 ? "border-bsd-orange/20 bg-bsd-orange/5" : "border-bsd-gray/20"}>
-                  <CardHeader>
-                    <div className="flex items-center space-x-3">
-                      <div className={`w-10 h-10 rounded-lg ${index < 2 ? 'bg-bsd-orange/20' : 'bg-bsd-gray/20'} flex items-center justify-center`}>
-                        <Calendar className={`w-5 h-5 ${index < 2 ? 'text-bsd-orange' : 'text-bsd-gray'}`} />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-bsd-gray">{batch.name}</h4>
-                        <p className="text-sm text-foreground/60">Starts in {batch.startMonth}</p>
-                      </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-4">
-                      <div>
-                        <h5 className="font-medium text-sm text-bsd-gray mb-2">Semester 1</h5>
-                        <div className="text-sm space-y-1">
-                          <p><span className="font-medium">Classes:</span> {batch.semester1.classes}</p>
-                          <p><span className="font-medium">Assessment:</span> {batch.semester1.assessments}</p>
-                        </div>
-                      </div>
-                      <div>
-                        <h5 className="font-medium text-sm text-bsd-gray mb-2">Semester 2</h5>
-                        <div className="text-sm space-y-1">
-                          <p><span className="font-medium">Classes:</span> {batch.semester2.classes}</p>
-                          <p><span className="font-medium">Assessment:</span> {batch.semester2.assessments}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </RevealSection>
 
         <RevealSection delay={300}>
           <Card className="bg-gradient-to-r from-bsd-orange/10 to-bsd-gray/10 border-bsd-orange/20">
