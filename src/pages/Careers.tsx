@@ -69,30 +69,26 @@ const Careers: React.FC = () => {
 
       <main>
         {/* Hero Section */}
-        <section className="relative bg-bsd-gray pt-32 pb-20 overflow-hidden">
-          <div className="container mx-auto px-6 md:px-8">
+        <section className="relative pt-32 pb-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <img
+              src={careersHero}
+              alt="Creative professionals collaborating at BSDT"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-bsd-gray/80" />
+          </div>
+          <div className="container mx-auto px-6 md:px-8 relative z-10">
             <RevealSection>
               <Badge variant="bsdOrange" className="mb-4">CAREERS</Badge>
             </RevealSection>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-6">
-              <RevealSection delay={100}>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-white leading-tight">
-                  BSDT is a growing family of people with a{' '}
-                  <span className="text-bsd-orange">common goal</span>
-                </h1>
-              </RevealSection>
-
-              <RevealSection delay={200}>
-                <div className="rounded-2xl overflow-hidden shadow-xl">
-                  <img
-                    src={careersHero}
-                    alt="Creative professionals collaborating at BSDT"
-                    className="w-full h-[350px] object-cover"
-                  />
-                </div>
-              </RevealSection>
-            </div>
+            <RevealSection delay={100}>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-white leading-tight max-w-3xl">
+                BSDT is a growing family of people with a{' '}
+                <span className="text-bsd-orange">common goal</span>
+              </h1>
+            </RevealSection>
           </div>
         </section>
 
