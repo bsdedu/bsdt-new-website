@@ -74,7 +74,7 @@ const Careers: React.FC = () => {
             <img
               src={careersHero}
               alt="Creative professionals collaborating at BSDT"
-              className="w-full h-full object-cover object-bottom"
+              className="w-full h-full object-cover object-top"
             />
             <div className="absolute inset-0 bg-bsd-gray/80" />
           </div>
