@@ -7,6 +7,7 @@ import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Briefcase, Users, Heart, GraduationCap, MapPin, Mail } from 'lucide-react';
 import careersHero from '@/assets/careers-hero.jpg';
 
@@ -177,11 +178,27 @@ const Careers: React.FC = () => {
                         </div>
                         <p className="text-sm text-foreground/50">{position.department}</p>
                       </div>
-                      <a href={`mailto:vinodkumar@bsd.edu.in?subject=${encodeURIComponent(`Job Application – ${position.title}`)}`} className="mt-5 block">
-                        <Button className="bg-bsd-orange hover:bg-bsd-orange/90 text-white w-full">
-                          Apply Now
-                        </Button>
-                      </a>
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <Button className="bg-bsd-orange hover:bg-bsd-orange/90 text-white w-full mt-5">
+                            Apply Now
+                          </Button>
+                        </DialogTrigger>
+                        <DialogContent className="sm:max-w-md">
+                          <DialogHeader>
+                            <DialogTitle>Apply for {position.title}</DialogTitle>
+                            <DialogDescription>
+                              Please send your resume to the email address below with the subject line: <strong>Job Application – {position.title}</strong>
+                            </DialogDescription>
+                          </DialogHeader>
+                          <div className="flex items-center gap-3 p-4 bg-bsd-orange/5 rounded-lg border border-bsd-orange/10">
+                            <Mail className="w-5 h-5 text-bsd-orange flex-shrink-0" />
+                            <a href={`mailto:vinodkumar@bsd.edu.in?subject=${encodeURIComponent(`Job Application – ${position.title}`)}`} className="text-bsd-orange font-medium hover:underline">
+                              vinodkumar@bsd.edu.in
+                            </a>
+                          </div>
+                        </DialogContent>
+                      </Dialog>
                     </CardContent>
                   </Card>
                 </RevealSection>
