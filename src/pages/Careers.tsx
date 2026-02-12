@@ -177,7 +177,7 @@ const Careers: React.FC = () => {
                         </div>
                         <p className="text-sm text-foreground/50">{position.department}</p>
                       </div>
-                      <a href="mailto:vinodkumar@bsd.edu.in" className="mt-5 block">
+                      <a href={`mailto:vinodkumar@bsd.edu.in?subject=${encodeURIComponent(`Job Application – ${position.title}`)}`} className="mt-5 block">
                         <Button className="bg-bsd-orange hover:bg-bsd-orange/90 text-white w-full">
                           Apply Now
                         </Button>
