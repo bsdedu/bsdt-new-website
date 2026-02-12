@@ -159,30 +159,29 @@ const Careers: React.FC = () => {
               </div>
             </RevealSection>
 
-            <div className="max-w-3xl mx-auto space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {openPositions.map((position, index) => (
                 <RevealSection key={index} delay={index * 80}>
-                  <Card className="hover:shadow-md transition-shadow">
-                    <CardContent className="p-6">
-                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                        <div>
-                          <h3 className="text-lg font-semibold text-bsd-gray">{position.title}</h3>
-                          <div className="flex flex-wrap items-center gap-3 mt-2 text-sm text-foreground/60">
-                            <span className="flex items-center gap-1">
-                              <Briefcase className="w-4 h-4" /> {position.department}
-                            </span>
-                            <span className="flex items-center gap-1">
-                              <MapPin className="w-4 h-4" /> {position.location}
-                            </span>
-                            <Badge variant="secondary" className="text-xs">{position.type}</Badge>
-                          </div>
+                  <Card className="h-full hover:shadow-lg transition-shadow border-t-4 border-t-bsd-orange">
+                    <CardContent className="p-6 flex flex-col h-full">
+                      <div className="flex-1">
+                        <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-4">
+                          <Briefcase className="w-6 h-6 text-bsd-orange" />
                         </div>
-                        <a href="mailto:vinodkumar@bsd.edu.in" className="shrink-0">
-                          <Button className="bg-bsd-orange hover:bg-bsd-orange/90 text-white">
-                            Apply Now
-                          </Button>
-                        </a>
+                        <h3 className="text-lg font-semibold text-bsd-gray mb-3">{position.title}</h3>
+                        <div className="flex flex-wrap items-center gap-3 text-sm text-foreground/60 mb-2">
+                          <span className="flex items-center gap-1">
+                            <MapPin className="w-4 h-4" /> {position.location}
+                          </span>
+                          <Badge variant="secondary" className="text-xs">{position.type}</Badge>
+                        </div>
+                        <p className="text-sm text-foreground/50">{position.department}</p>
                       </div>
+                      <a href="mailto:vinodkumar@bsd.edu.in" className="mt-5 block">
+                        <Button className="bg-bsd-orange hover:bg-bsd-orange/90 text-white w-full">
+                          Apply Now
+                        </Button>
+                      </a>
                     </CardContent>
                   </Card>
                 </RevealSection>
