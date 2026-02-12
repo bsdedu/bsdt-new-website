@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import bengaluruNorthLogo from "@/assets/bengaluru-north-university-logo.png";
+import electiveHero from "@/assets/advantage-electives.jpg";
 interface HeroSlide {
   image: string;
   title: string;
@@ -28,6 +29,11 @@ export const HeroSection: React.FC = () => {
     title: "Student Spotlight",
     subtitle: "Celebrating Creativity",
     description: "Explore exceptional student works across design disciplines. See how our students turn creative visions into stunning portfolios."
+  }, {
+    image: electiveHero,
+    title: "Skill-Enhancing Electives",
+    subtitle: "Industry-Ready Skills",
+    description: "Two mandatory certificate courses embedded in the UG curriculum — bridging academic foundations with real-world industry practice."
   }];
   const startAutoPlay = useCallback(() => {
     if (intervalRef.current) {
@@ -109,6 +115,10 @@ export const HeroSection: React.FC = () => {
                   window.location.href = "/student-spotlight";
                   return;
                 }
+                if (currentSlide === 3) {
+                  window.location.href = "/academics/skill-enhancing-electives";
+                  return;
+                }
                 const section = document.getElementById('programs');
                 if (section) {
                   // If on Hybrid Diploma slide, trigger the diploma tab
@@ -124,7 +134,7 @@ export const HeroSection: React.FC = () => {
                   });
                 }
               }}>
-                  {currentSlide === 2 ? "View Student Works" : "Explore Programs"}
+                  {currentSlide === 2 ? "View Student Works" : currentSlide === 3 ? "Explore Electives" : "Explore Programs"}
                 </Button>
               </div>
             </div>
