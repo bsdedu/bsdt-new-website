@@ -25,20 +25,8 @@ const Careers: React.FC = () => {
       location: 'Bangalore',
     },
     {
-      title: 'Lab Instructor – Animation & Game Design',
-      department: 'Academics',
-      type: 'Full-time',
-      location: 'Bangalore',
-    },
-    {
       title: 'Admissions Counsellor',
       department: 'Admissions',
-      type: 'Full-time',
-      location: 'Bangalore',
-    },
-    {
-      title: 'Marketing Executive',
-      department: 'Marketing',
       type: 'Full-time',
       location: 'Bangalore',
     },
@@ -189,7 +177,7 @@ const Careers: React.FC = () => {
                             <Badge variant="secondary" className="text-xs">{position.type}</Badge>
                           </div>
                         </div>
-                        <a href="mailto:hr@bsdt.ac.in" className="shrink-0">
+                        <a href="mailto:vinodkumar@bsd.edu.in" className="shrink-0">
                           <Button className="bg-bsd-orange hover:bg-bsd-orange/90 text-white">
                             Apply Now
                           </Button>
@@ -208,9 +196,9 @@ const Careers: React.FC = () => {
                 <p className="text-foreground/70 mb-4">
                   Send your resume to us and we'll keep you in mind for future opportunities.
                 </p>
-                <a href="mailto:hr@bsdt.ac.in">
+                <a href="mailto:vinodkumar@bsd.edu.in">
                   <Button variant="outline" className="border-bsd-orange text-bsd-orange hover:bg-bsd-orange/10">
-                    Email hr@bsdt.ac.in
+                    Email vinodkumar@bsd.edu.in
                   </Button>
                 </a>
               </div>
