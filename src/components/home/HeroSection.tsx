@@ -83,10 +83,21 @@ export const HeroSection: React.FC = () => {
                   </> : <span className="text-3xl md:text-4xl lg:text-5xl">{currentSlideData.title}</span>}
               </h1>
               
-              <p className="text-lg text-white/80 mb-8">
+              <p className="text-lg text-white/80 mb-6">
                 {currentSlideData.description}
               </p>
-              
+
+              {currentSlide === 0 && (
+                <div className="flex items-center gap-3 mb-6 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3 border border-white/15">
+                  <div className="w-8 h-8 rounded-full bg-bsd-orange/20 flex items-center justify-center flex-shrink-0">
+                    <span className="text-bsd-orange text-sm font-bold">✦</span>
+                  </div>
+                  <p className="text-sm text-white/90">
+                    <span className="font-semibold text-white">Skill-Enhancing Electives</span> — 2 mandatory certificate courses embedded in UG curriculum for industry-ready skills
+                  </p>
+                </div>
+              )}
+
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" variant="outline" className="border-2 border-[#f5f5f0] bg-[#f5f5f0] text-black hover:bg-white hover:border-white transition-all duration-300 font-semibold px-8" onClick={() => {
                   window.open("https://apply.bsd.edu.in/", "_blank", "noopener noreferrer");
