@@ -80,7 +80,8 @@ export const navStructure: NavStructure[] = [
     type: 'dropdown',
     items: [
       { name: 'About BSDT', href: '/about' },
-      { name: 'Leadership & Governance', href: '/leadership' }
+      { name: 'Leadership & Governance', href: '/leadership' },
+      { name: 'Careers', href: '/careers' }
     ]
   },
   {

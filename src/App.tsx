@@ -48,6 +48,7 @@ import Designuru2025 from "./pages/Designuru2025";
 import SportsDay from "./pages/SportsDay";
 import EndSemJury from "./pages/EndSemJury";
 import SkillEnhancingElectives from "./pages/SkillEnhancingElectives";
+import Careers from "./pages/Careers";
 // Course Imports - 3 Week Programs
 import GenerativeAICreativePrototyping from "./pages/courses/GenerativeAICreativePrototyping";
 import VRARPrototyping from "./pages/courses/VRARPrototyping";
@@ -164,6 +165,7 @@ const App = () => {
               <Route path="/about" element={<AboutBSDT />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/leadership" element={<LeadershipGovernance />} />
+              <Route path="/careers" element={<Careers />} />
               <Route path="/academics/bsc-interior-design" element={<ProgramInteriorDesign />} />
               <Route path="/academics/bsc-fashion-design" element={<ProgramFashionDesign />} />
               <Route path="/academics/bva-graphic-design" element={<ProgramGraphicDesign />} />
