@@ -15,7 +15,7 @@ const OpenDay = () => {
   return <>
       <Helmet>
         <title>Open Day 2026 | Bangalore School of Design & Technology</title>
-        <meta name="description" content="Join us for BSDT Open Day on 5th February 2026. Tour our campus, meet faculty, explore design programs and discover opportunities at Bangalore's premier design school." />
+        <meta name="description" content="Join us for the next BSDT Open Day. Tour our campus, meet faculty, explore design programs and discover opportunities at Bangalore's premier design school." />
       </Helmet>
 
       <div className="min-h-screen flex flex-col">
@@ -37,7 +37,7 @@ const OpenDay = () => {
                   <span className="text-white">OPEN DAY</span>
                 </h1>
                 <p className="text-2xl md:text-3xl font-semibold mb-4">
-                  Saturday, 24th January 2026
+                  Coming Soon...
                 </p>
                 <p className="text-lg md:text-xl opacity-90 mb-8">VENUE : Bangalore School of Design and Technology</p>
                 <Button size="lg" className="bg-bsd-orange text-white hover:bg-bsd-orange/90 font-semibold px-8 py-6 text-lg" asChild>
@@ -64,7 +64,7 @@ const OpenDay = () => {
                     Open Day 2026
                   </h2>
                   <p className="text-muted-foreground mb-4 leading-relaxed">
-                    We are delighted to announce our upcoming Open Day Event, scheduled for Saturday, 24th January 2026. This special occasion is designed for prospective students and their families, providing a unique opportunity to explore all that BSDT has to offer.
+                    We are delighted to announce our upcoming Open Day Event. Date coming soon! This special occasion is designed for prospective students and their families, providing a unique opportunity to explore all that BSDT has to offer.
                   </p>
                   <p className="text-muted-foreground mb-4 leading-relaxed">
                     During the Open Day, attendees will have the chance to tour our campus, engage with faculty and staff, and gain valuable insights into our diverse range of design programs. Participants will also learn about our commitment to academic excellence, student support services, and the vibrant community life that defines BSDT.
@@ -346,14 +346,10 @@ const OpenDay = () => {
                 </div>
 
                 <div className="mt-12 p-6 bg-muted/30 rounded-xl">
-                  <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-muted-foreground">
+                   <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-muted-foreground">
                     <div className="flex items-center gap-2">
                       <Calendar className="w-5 h-5 text-bsd-orange" />
-                      <span>Saturday, 24th January 2026</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Clock className="w-5 h-5 text-bsd-orange" />
-                      <span>10:00 AM - 4:00 PM</span>
+                      <span>Coming Soon...</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <MapPin className="w-5 h-5 text-bsd-orange" />

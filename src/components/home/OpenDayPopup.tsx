@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
-import { Calendar, Clock, MapPin } from 'lucide-react';
+import { Calendar, MapPin } from 'lucide-react';
 export const OpenDayPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
@@ -33,12 +33,7 @@ export const OpenDayPopup = () => {
         <div className="space-y-4 py-4">
           <div className="flex items-center gap-3 text-foreground">
             <Calendar className="h-5 w-5 text-bsd-orange" />
-            <span className="font-medium">Saturday, 24th January, 2026</span>
-          </div>
-          
-          <div className="flex items-center gap-3 text-foreground">
-            <Clock className="h-5 w-5 text-bsd-orange" />
-            <span className="font-medium">10:00 AM - 4:00 PM</span>
+            <span className="font-medium">Coming Soon...</span>
           </div>
           
           <div className="flex items-center gap-3 text-foreground">
