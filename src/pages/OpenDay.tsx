@@ -6,10 +6,6 @@ import { Button } from '@/components/ui/button';
 import { Calendar, Clock, MapPin, Users, BookOpen, Building, MessageCircle, Mail, Phone, Presentation, Briefcase, FolderOpen, Network } from 'lucide-react';
 import openDayHero from '@/assets/open-day-hero.jpg';
 import openDayOverview from '@/assets/open-day-overview.jpg';
-const openDay2018 = '/videos/open-day-2018.mp4';
-const openDay2019 = '/videos/open-day-2019.mp4';
-const openDay2020 = '/videos/open-day-2020.mp4';
-const openDay2023 = '/videos/open-day-2023.mp4';
 
 const OpenDay = () => {
   return <>
@@ -84,78 +80,27 @@ const OpenDay = () => {
                 Open Days Rewind
               </h2>
               <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-                Relive the excitement from our previous Open Day events
+                Highlights from our previous Open Day events
               </p>
 
               <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                {/* Open Day 2018 */}
-                <div className="rounded-xl overflow-hidden shadow-lg">
-                  <video 
-                    src={openDay2018} 
-                    controls 
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    className="w-full aspect-video object-cover"
-                  >
-                    Your browser does not support the video tag.
-                  </video>
-                  <div className="bg-background p-3">
-                    <p className="font-semibold text-foreground">Open Day 2018</p>
+                {[
+                  { year: "2018", image: "/lovable-uploads/0ae77c0c-8ef4-404c-abf0-bb90598dfbf4.png" },
+                  { year: "2019", image: "/lovable-uploads/e48b8c13-052e-4d80-ada8-db3eaf003d21.png" },
+                  { year: "2020", image: "/lovable-uploads/fc9c4875-4b4b-44a9-b8ad-3eb5db1ed2cc.png" },
+                  { year: "2023", image: "/lovable-uploads/0ae77c0c-8ef4-404c-abf0-bb90598dfbf4.png" },
+                ].map((event) => (
+                  <div key={event.year} className="rounded-xl overflow-hidden shadow-lg">
+                    <img
+                      src={event.image}
+                      alt={`Open Day ${event.year}`}
+                      className="w-full aspect-video object-cover"
+                    />
+                    <div className="bg-background p-3">
+                      <p className="font-semibold text-foreground">Open Day {event.year}</p>
+                    </div>
                   </div>
-                </div>
-                {/* Open Day 2019 */}
-                <div className="rounded-xl overflow-hidden shadow-lg">
-                  <video 
-                    src={openDay2019} 
-                    controls 
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    className="w-full aspect-video object-cover"
-                  >
-                    Your browser does not support the video tag.
-                  </video>
-                  <div className="bg-background p-3">
-                    <p className="font-semibold text-foreground">Open Day 2019</p>
-                  </div>
-                </div>
-                {/* Open Day 2020 */}
-                <div className="rounded-xl overflow-hidden shadow-lg">
-                  <video 
-                    src={openDay2020} 
-                    controls 
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    className="w-full aspect-video object-cover"
-                  >
-                    Your browser does not support the video tag.
-                  </video>
-                  <div className="bg-background p-3">
-                    <p className="font-semibold text-foreground">Open Day 2020</p>
-                  </div>
-                </div>
-                {/* Open Day 2023 */}
-                <div className="rounded-xl overflow-hidden shadow-lg">
-                  <video 
-                    src={openDay2023} 
-                    controls 
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    className="w-full aspect-video object-cover"
-                  >
-                    Your browser does not support the video tag.
-                  </video>
-                  <div className="bg-background p-3">
-                    <p className="font-semibold text-foreground">Open Day 2023</p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </section>
