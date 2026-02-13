@@ -6,10 +6,10 @@ import { Button } from '@/components/ui/button';
 import { Calendar, Clock, MapPin, Users, BookOpen, Building, MessageCircle, Mail, Phone, Presentation, Briefcase, FolderOpen, Network } from 'lucide-react';
 import openDayHero from '@/assets/open-day-hero.jpg';
 import openDayOverview from '@/assets/open-day-overview.jpg';
-import openDay2018 from '@/assets/open-day-2018.mp4';
-import openDay2019 from '@/assets/open-day-2019.mp4';
-import openDay2020 from '@/assets/open-day-2020.mp4';
-import openDay2023 from '@/assets/open-day-2023.mp4';
+const openDay2018 = '/videos/open-day-2018.mp4';
+const openDay2019 = '/videos/open-day-2019.mp4';
+const openDay2020 = '/videos/open-day-2020.mp4';
+const openDay2023 = '/videos/open-day-2023.mp4';
 
 const OpenDay = () => {
   return <>
