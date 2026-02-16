@@ -122,7 +122,15 @@ export const CampusLifeEventsSection: React.FC = () => {
         "/lovable-uploads/teachers-day-7.jpg",
         "/lovable-uploads/teachers-day-8.jpg",
         "/lovable-uploads/teachers-day-9.jpg",
-        "/lovable-uploads/teachers-day-10.jpg"
+        "/lovable-uploads/teachers-day-10.jpg",
+        "/lovable-uploads/teachers-day-11.jpg",
+        "/lovable-uploads/teachers-day-12.jpg",
+        "/lovable-uploads/teachers-day-13.jpg",
+        "/lovable-uploads/teachers-day-14.jpg",
+        "/lovable-uploads/teachers-day-15.jpg",
+        "/lovable-uploads/teachers-day-16.jpg",
+        "/lovable-uploads/teachers-day-17.jpg",
+        "/lovable-uploads/teachers-day-18.jpg"
       ],
       viewOnly: true
     },
