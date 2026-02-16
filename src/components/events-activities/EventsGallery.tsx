@@ -14,7 +14,7 @@ interface Event {
   date: string;
   time: string;
   description: string;
-  imageSrc: string;
+  imageSrc: string | string[];
   registerLink: string;
   featured?: boolean;
 }
@@ -39,7 +39,19 @@ export const EventsGallery: React.FC = () => {
       date: "5th September, 2025",
       time: "9:00 AM - 6:00 PM",
       description: "Celebrate and honor our dedicated faculty members who shape the future designers. Join us for special presentations, appreciation events, and faculty showcases.",
-      imageSrc: "/lovable-uploads/2c70e2d5-549c-43bd-bd5f-ef047b51dc10.png",
+      imageSrc: [
+        "/lovable-uploads/2c70e2d5-549c-43bd-bd5f-ef047b51dc10.png",
+        "/lovable-uploads/teachers-day-1.jpg",
+        "/lovable-uploads/teachers-day-2.jpg",
+        "/lovable-uploads/teachers-day-3.jpg",
+        "/lovable-uploads/teachers-day-4.jpg",
+        "/lovable-uploads/teachers-day-5.jpg",
+        "/lovable-uploads/teachers-day-6.jpg",
+        "/lovable-uploads/teachers-day-7.jpg",
+        "/lovable-uploads/teachers-day-8.jpg",
+        "/lovable-uploads/teachers-day-9.jpg",
+        "/lovable-uploads/teachers-day-10.jpg"
+      ],
       registerLink: "/register-teachers-day"
     },
     {
@@ -82,8 +94,8 @@ export const EventsGallery: React.FC = () => {
                 className="block"
               >
                 <Card isHoverable className={`overflow-hidden ${event.featured ? 'border-bsd-orange/20 shadow' : ''}`}>
-                  <div className="relative h-64 sm:h-80 md:h-96 overflow-hidden">
-                    <img src={event.imageSrc} alt={event.title} className="w-full h-full object-cover object-right transition-transform duration-500 hover:scale-105" />
+                    <div className="relative h-64 sm:h-80 md:h-96 overflow-hidden">
+                      <img src={Array.isArray(event.imageSrc) ? event.imageSrc[0] : event.imageSrc} alt={event.title} className="w-full h-full object-cover object-right transition-transform duration-500 hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex flex-col justify-end p-6">
                       <h3 className="text-xl md:text-2xl font-semibold text-white">{event.title}</h3>
                     </div>
