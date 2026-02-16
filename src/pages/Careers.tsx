@@ -233,26 +233,82 @@ const Careers: React.FC = () => {
               </div>
             </RevealSection>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-              {[
-                {
-                  quote: "BSDT gives me the freedom to blend real-world projects into my teaching. The energy students bring to the studio every day is what makes this place truly special.",
-                  name: "Arun Murugesan",
-                  role: "Program Head, UI/UX Design",
-                },
-                {
-                  quote: "Working here feels like being part of a design movement. The institution genuinely invests in faculty growth and encourages us to push creative boundaries.",
-                  name: "Amlan Jyothi Bharali",
-                  role: "Faculty, Interaction Design",
-                },
-                {
-                  quote: "What drew me to BSDT was the culture of collaboration. Faculty, students, and industry professionals all come together to create something meaningful.",
-                  name: "Giuseppe Morando",
-                  role: "International Faculty",
-                },
-              ].map((testimonial, index) => (
-                <RevealSection key={index} delay={index * 100}>
-                  <Card className="h-full">
+            <div className="relative overflow-hidden">
+              <div className="flex gap-6 animate-[scroll_30s_linear_infinite] w-max">
+                {[
+                  {
+                    quote: "BSDT gives me the freedom to blend real-world projects into my teaching. The energy students bring to the studio every day is what makes this place truly special.",
+                    name: "Arun Murugesan",
+                    role: "Program Head, UI/UX Design",
+                  },
+                  {
+                    quote: "Working here feels like being part of a design movement. The institution genuinely invests in faculty growth and encourages us to push creative boundaries.",
+                    name: "Amlan Jyothi Bharali",
+                    role: "Faculty, Interaction Design",
+                  },
+                  {
+                    quote: "What drew me to BSDT was the culture of collaboration. Faculty, students, and industry professionals all come together to create something meaningful.",
+                    name: "Giuseppe Morando",
+                    role: "International Faculty",
+                  },
+                  {
+                    quote: "The interdisciplinary approach at BSDT allows me to connect architecture with digital design. Students here are encouraged to think beyond conventional boundaries.",
+                    name: "Ar. Shanumathi Mageshwar",
+                    role: "International Faculty",
+                  },
+                  {
+                    quote: "Teaching at BSDT is incredibly fulfilling. The infrastructure and creative environment empower faculty to experiment with new pedagogies and design methodologies.",
+                    name: "Shruti Sundar",
+                    role: "International Faculty",
+                  },
+                  {
+                    quote: "BSDT's commitment to bridging academia and industry is unmatched. I get to bring my professional experience directly into the classroom and see students thrive.",
+                    name: "Joanna Frank",
+                    role: "International Faculty",
+                  },
+                  {
+                    quote: "The supportive leadership and passionate student community make every day at BSDT inspiring. It's a place where both educators and learners grow together.",
+                    name: "Fathima Zahra",
+                    role: "Faculty, Technology",
+                  },
+                ].concat([
+                  {
+                    quote: "BSDT gives me the freedom to blend real-world projects into my teaching. The energy students bring to the studio every day is what makes this place truly special.",
+                    name: "Arun Murugesan",
+                    role: "Program Head, UI/UX Design",
+                  },
+                  {
+                    quote: "Working here feels like being part of a design movement. The institution genuinely invests in faculty growth and encourages us to push creative boundaries.",
+                    name: "Amlan Jyothi Bharali",
+                    role: "Faculty, Interaction Design",
+                  },
+                  {
+                    quote: "What drew me to BSDT was the culture of collaboration. Faculty, students, and industry professionals all come together to create something meaningful.",
+                    name: "Giuseppe Morando",
+                    role: "International Faculty",
+                  },
+                  {
+                    quote: "The interdisciplinary approach at BSDT allows me to connect architecture with digital design. Students here are encouraged to think beyond conventional boundaries.",
+                    name: "Ar. Shanumathi Mageshwar",
+                    role: "International Faculty",
+                  },
+                  {
+                    quote: "Teaching at BSDT is incredibly fulfilling. The infrastructure and creative environment empower faculty to experiment with new pedagogies and design methodologies.",
+                    name: "Shruti Sundar",
+                    role: "International Faculty",
+                  },
+                  {
+                    quote: "BSDT's commitment to bridging academia and industry is unmatched. I get to bring my professional experience directly into the classroom and see students thrive.",
+                    name: "Joanna Frank",
+                    role: "International Faculty",
+                  },
+                  {
+                    quote: "The supportive leadership and passionate student community make every day at BSDT inspiring. It's a place where both educators and learners grow together.",
+                    name: "Fathima Zahra",
+                    role: "Faculty, Technology",
+                  },
+                ]).map((testimonial, index) => (
+                  <Card key={index} className="min-w-[350px] max-w-[350px] flex-shrink-0">
                     <CardContent className="p-6 flex flex-col h-full">
                       <Quote className="w-8 h-8 text-bsd-orange/30 mb-4" />
                       <p className="text-foreground/80 italic flex-1 mb-6">
@@ -264,8 +320,8 @@ const Careers: React.FC = () => {
                       </div>
                     </CardContent>
                   </Card>
-                </RevealSection>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </section>

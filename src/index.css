@@ -136,3 +136,12 @@
     @apply hover:text-bsd-orange hover:bg-bsd-light-gray;
   }
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
