@@ -182,6 +182,25 @@ export const CampusLifeEventsSection: React.FC = () => {
         "/lovable-uploads/bds-frames-12.jpg"
       ],
       viewOnly: true
+    },
+    {
+      id: "8",
+      title: "Paradigm",
+      type: "open-day",
+      date: "2025",
+      time: "",
+      description: "A celebration of design thinking, innovation, and creative exploration.",
+      imageSrc: [
+        "/lovable-uploads/paradigm-1.jpg",
+        "/lovable-uploads/paradigm-2.jpg",
+        "/lovable-uploads/paradigm-3.jpg",
+        "/lovable-uploads/paradigm-4.jpg",
+        "/lovable-uploads/paradigm-5.jpg",
+        "/lovable-uploads/paradigm-6.jpg",
+        "/lovable-uploads/paradigm-7.jpg",
+        "/lovable-uploads/paradigm-8.jpg"
+      ],
+      viewOnly: true
     }
   ];
 
