@@ -8,7 +8,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
-import { Briefcase, Users, Heart, GraduationCap, MapPin, Mail } from 'lucide-react';
+import { Briefcase, Users, Heart, GraduationCap, MapPin, Mail, Quote } from 'lucide-react';
 import careersHero from '@/assets/careers-hero.jpg';
 
 const Careers: React.FC = () => {
@@ -215,6 +215,58 @@ const Careers: React.FC = () => {
                 </a>
               </div>
             </RevealSection>
+          </div>
+        </section>
+
+        {/* Voices of Our Faculty */}
+        <section className="py-16 bg-bsd-light-gray">
+          <div className="container mx-auto px-6 md:px-8">
+            <RevealSection>
+              <div className="text-center max-w-3xl mx-auto mb-12">
+                <Badge variant="bsdOrange" className="mb-4">TESTIMONIALS</Badge>
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
+                  Voices of Our Faculty
+                </h2>
+                <p className="mt-4 text-foreground/70">
+                  Hear from the people who make BSDT a rewarding place to teach, create, and grow.
+                </p>
+              </div>
+            </RevealSection>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              {[
+                {
+                  quote: "BSDT gives me the freedom to blend real-world projects into my teaching. The energy students bring to the studio every day is what makes this place truly special.",
+                  name: "Arun Murugesan",
+                  role: "Program Head, UI/UX Design",
+                },
+                {
+                  quote: "Working here feels like being part of a design movement. The institution genuinely invests in faculty growth and encourages us to push creative boundaries.",
+                  name: "Amlan Jyothi Bharali",
+                  role: "Faculty, Interaction Design",
+                },
+                {
+                  quote: "What drew me to BSDT was the culture of collaboration. Faculty, students, and industry professionals all come together to create something meaningful.",
+                  name: "Giuseppe Morando",
+                  role: "International Faculty",
+                },
+              ].map((testimonial, index) => (
+                <RevealSection key={index} delay={index * 100}>
+                  <Card className="h-full">
+                    <CardContent className="p-6 flex flex-col h-full">
+                      <Quote className="w-8 h-8 text-bsd-orange/30 mb-4" />
+                      <p className="text-foreground/80 italic flex-1 mb-6">
+                        "{testimonial.quote}"
+                      </p>
+                      <div className="border-t border-border pt-4">
+                        <p className="font-semibold text-bsd-gray">{testimonial.name}</p>
+                        <p className="text-sm text-bsd-orange">{testimonial.role}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </RevealSection>
+              ))}
+            </div>
           </div>
         </section>
 
