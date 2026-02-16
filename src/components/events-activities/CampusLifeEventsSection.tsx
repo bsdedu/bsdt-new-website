@@ -150,7 +150,13 @@ export const CampusLifeEventsSection: React.FC = () => {
         "/lovable-uploads/mozaic-5.jpg",
         "/lovable-uploads/mozaic-6.jpg",
         "/lovable-uploads/mozaic-7.jpg",
-        "/lovable-uploads/mozaic-8.jpg"
+        "/lovable-uploads/mozaic-8.jpg",
+        "/lovable-uploads/mozaic-9.jpg",
+        "/lovable-uploads/mozaic-10.jpg",
+        "/lovable-uploads/mozaic-11.jpg",
+        "/lovable-uploads/mozaic-12.jpg",
+        "/lovable-uploads/mozaic-13.jpg",
+        "/lovable-uploads/mozaic-14.jpg"
       ],
       viewOnly: true
     },
