@@ -111,7 +111,19 @@ export const CampusLifeEventsSection: React.FC = () => {
       date: "5th September, 2025",
       time: "9:00 AM - 6:00 PM",
       description: "Celebrate and honor our dedicated faculty members.",
-      imageSrc: "/lovable-uploads/2c70e2d5-549c-43bd-bd5f-ef047b51dc10.png",
+      imageSrc: [
+        "/lovable-uploads/2c70e2d5-549c-43bd-bd5f-ef047b51dc10.png",
+        "/lovable-uploads/teachers-day-1.jpg",
+        "/lovable-uploads/teachers-day-2.jpg",
+        "/lovable-uploads/teachers-day-3.jpg",
+        "/lovable-uploads/teachers-day-4.jpg",
+        "/lovable-uploads/teachers-day-5.jpg",
+        "/lovable-uploads/teachers-day-6.jpg",
+        "/lovable-uploads/teachers-day-7.jpg",
+        "/lovable-uploads/teachers-day-8.jpg",
+        "/lovable-uploads/teachers-day-9.jpg",
+        "/lovable-uploads/teachers-day-10.jpg"
+      ],
       viewOnly: true
     },
     {
