@@ -234,7 +234,7 @@ const Careers: React.FC = () => {
             </RevealSection>
 
             <div className="relative overflow-hidden">
-              <div className="flex gap-6 animate-[scroll_30s_linear_infinite] w-max">
+              <div className="flex gap-6 animate-[scroll_60s_linear_infinite] w-max">
                 {[
                   {
                     quote: "BSDT gives me the freedom to blend real-world projects into my teaching. The energy students bring to the studio every day is what makes this place truly special.",
