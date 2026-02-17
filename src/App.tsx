@@ -49,6 +49,7 @@ import SportsDay from "./pages/SportsDay";
 import EndSemJury from "./pages/EndSemJury";
 import SkillEnhancingElectives from "./pages/SkillEnhancingElectives";
 import Careers from "./pages/Careers";
+import DesignIQQuiz from "./pages/DesignIQQuiz";
 // Course Imports - 3 Week Programs
 import GenerativeAICreativePrototyping from "./pages/courses/GenerativeAICreativePrototyping";
 import VRARPrototyping from "./pages/courses/VRARPrototyping";
@@ -234,6 +235,7 @@ const App = () => {
               <Route path="/courses/digital-fashion-tech-packs" element={<DigitalFashionTechPacks />} />
               <Route path="/courses/applied-ai-design-automation" element={<AppliedAIDesignAutomation />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/design-iq" element={<DesignIQQuiz />} />
               
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
