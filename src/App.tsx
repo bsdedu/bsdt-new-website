@@ -8,6 +8,7 @@ import { FloatingEnquiryForm } from "./components/ui-elements/FloatingEnquiryFor
 import { FloatingCallCTA } from "./components/ui-elements/FloatingCallCTA";
 import { FloatingWhatsAppCTA } from "./components/ui-elements/FloatingWhatsAppCTA";
 import { FloatingScrollToTop } from "./components/ui-elements/FloatingScrollToTop";
+import { QuizPopup } from "./components/ui-elements/QuizPopup";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import AboutBSDT from "./pages/AboutBSDT";
@@ -241,6 +242,7 @@ const App = () => {
               <Route path="*" element={<NotFound />} />
             </Routes>
             <FloatingEnquiryForm />
+            <QuizPopup />
             <FloatingCallCTA />
             <FloatingWhatsAppCTA />
             <FloatingScrollToTop/>
