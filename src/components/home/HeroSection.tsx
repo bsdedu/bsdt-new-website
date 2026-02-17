@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import bengaluruNorthLogo from "@/assets/bengaluru-north-university-logo.png";
 import electiveHero from "@/assets/advantage-electives.jpg";
+import designIqHero from "@/assets/quiz/design-iq-hero.jpg";
 interface HeroSlide {
   image: string;
   title: string;
@@ -35,7 +36,7 @@ export const HeroSection: React.FC = () => {
     subtitle: "Industry-Ready Skills",
     description: "Two mandatory certificate courses embedded in the UG curriculum — bridging academic foundations with real-world industry practice."
   }, {
-    image: "/lovable-uploads/fc9c4875-4b4b-44a9-b8ad-3eb5db1ed2cc.png",
+    image: designIqHero,
     title: "Test Your Design IQ",
     subtitle: "Interactive Quiz",
     description: "Think you know design? Take our quick 10-question quiz and discover your Design IQ score."
