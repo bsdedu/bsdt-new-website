@@ -13,54 +13,66 @@ import QuizResultReveal from "@/components/quiz/QuizResultReveal";
 
 type Tag = "visual" | "ideas" | "logic" | "explorer";
 
-interface QuizOption { text: string; tag: Tag; }
+interface QuizOption { text: string; tag: Tag; image?: string; }
 interface QuizQuestion { question: string; options: QuizOption[]; }
 interface ResultInfo { title: string; desc: string; icon: React.ReactNode; }
 
 const questions: QuizQuestion[] = [
-  { question: "Pick a workspace vibe:", options: [
-    { text: "Minimal + clean", tag: "visual" }, { text: "Colorful + expressive", tag: "ideas" },
-    { text: "Cozy + calm", tag: "explorer" }, { text: "Functional + modern", tag: "logic" },
+  { question: "Pick a workspace vibe you love:", options: [
+    { text: "Minimal + focused", tag: "visual", image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=400&h=300&fit=crop" },
+    { text: "Expressive + artistic", tag: "ideas", image: "https://images.unsplash.com/photo-1526481280695-3c687fd643ed?w=400&h=300&fit=crop" },
+    { text: "Calm + cozy", tag: "explorer", image: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=400&h=300&fit=crop" },
+    { text: "Functional + modern", tag: "logic", image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=400&h=300&fit=crop" },
   ]},
-  { question: "When solving a problem, you usually…", options: [
-    { text: "Sketch ideas first", tag: "visual" }, { text: "Search inspiration online", tag: "ideas" },
-    { text: "Ask people for feedback", tag: "logic" }, { text: "Experiment until it works", tag: "explorer" },
+  { question: "When you face a problem, you usually…", options: [
+    { text: "Sketch ideas first ✏️", tag: "visual" },
+    { text: "Look for inspiration 🔍", tag: "ideas" },
+    { text: "Ask people for feedback 💬", tag: "logic" },
+    { text: "Experiment until it works 🧪", tag: "explorer" },
   ]},
-  { question: "Which word attracts you most?", options: [
-    { text: "Balance", tag: "visual" }, { text: "Story", tag: "ideas" },
-    { text: "Impact", tag: "logic" }, { text: "Innovation", tag: "explorer" },
+  { question: "Pick a poster style that attracts you:", options: [
+    { text: "Clean + minimal", tag: "visual", image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=400&h=300&fit=crop" },
+    { text: "Bold + energetic", tag: "ideas", image: "https://images.unsplash.com/photo-1526481280695-3c687fd643ed?w=400&h=300&fit=crop" },
+    { text: "Dreamy + calm", tag: "explorer", image: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=400&h=300&fit=crop" },
+    { text: "Abstract + experimental", tag: "logic", image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=400&h=300&fit=crop" },
   ]},
-  { question: "Poster design: first thought?", options: [
-    { text: "What should it say?", tag: "logic" }, { text: "What should it look like?", tag: "visual" },
-    { text: "Who is it for?", tag: "ideas" }, { text: "What feeling should it create?", tag: "explorer" },
+  { question: "Poster design: your first thought?", options: [
+    { text: "What should it say? 📝", tag: "logic" },
+    { text: "What should it look like? 🎨", tag: "visual" },
+    { text: "Who is it for? 👥", tag: "ideas" },
+    { text: "What feeling should it create? ❤️", tag: "explorer" },
   ]},
   { question: "Pick a palette you love:", options: [
-    { text: "Soft pastels", tag: "visual" }, { text: "Bold neon", tag: "ideas" },
-    { text: "Earthy tones", tag: "logic" }, { text: "Black & white", tag: "explorer" },
+    { text: "Soft pastels", tag: "visual" },
+    { text: "Bold neon", tag: "ideas" },
+    { text: "Earthy tones", tag: "logic" },
+    { text: "Black & white", tag: "explorer" },
   ]},
   { question: "When you see bad design, you…", options: [
-    { text: "Ignore it", tag: "logic" }, { text: "Notice but move on", tag: "explorer" },
-    { text: "Mentally redesign it", tag: "visual" }, { text: "Feel annoyed 😅", tag: "ideas" },
-  ]},
-  { question: "How detail-oriented are you?", options: [
-    { text: "Not much", tag: "explorer" }, { text: "Sometimes", tag: "logic" },
-    { text: "Very often", tag: "visual" }, { text: "Always!", tag: "ideas" },
+    { text: "Ignore it 😐", tag: "logic" },
+    { text: "Notice but move on 👀", tag: "explorer" },
+    { text: "Mentally redesign it 🧠", tag: "visual" },
+    { text: "Feel annoyed 😅", tag: "ideas" },
   ]},
   { question: "Pick a brand vibe:", options: [
-    { text: "Luxury + premium", tag: "visual" }, { text: "Fun + playful", tag: "ideas" },
-    { text: "Minimal + modern", tag: "logic" }, { text: "Handmade + artistic", tag: "explorer" },
+    { text: "Luxury + premium", tag: "visual" },
+    { text: "Fun + playful", tag: "ideas" },
+    { text: "Clean + modern", tag: "logic" },
+    { text: "Handmade + artistic", tag: "explorer" },
   ]},
   { question: "If you could design anything, you'd choose:", options: [
-    { text: "An app", tag: "logic" }, { text: "A logo", tag: "visual" },
-    { text: "A room", tag: "explorer" }, { text: "An Instagram page", tag: "ideas" },
+    { text: "An app interface 📱", tag: "logic" },
+    { text: "A logo ✨", tag: "visual" },
+    { text: "A dream room 🏠", tag: "explorer" },
+    { text: "A social media page 📸", tag: "ideas" },
   ]},
 ];
 
 const results: Record<Tag, ResultInfo> = {
-  visual: { title: "Visual Thinker", desc: "You naturally notice layouts, balance, and aesthetics. That's one of the strongest designer instincts.", icon: <Palette className="w-12 h-12" /> },
-  ideas: { title: "Idea Generator", desc: "You're full of concepts and imagination. Designers thrive on people like you.", icon: <Lightbulb className="w-12 h-12" /> },
-  logic: { title: "Problem Solver", desc: "You focus on clarity and purpose. That's exactly how professional designers think.", icon: <Puzzle className="w-12 h-12" /> },
-  explorer: { title: "Creative Explorer", desc: "You experiment, play, and try new things. Curiosity is the foundation of innovation.", icon: <Compass className="w-12 h-12" /> },
+  visual: { title: "🌟 Visual Thinker", desc: "You naturally notice layouts, balance, and aesthetics — a true designer instinct.", icon: <Palette className="w-12 h-12" /> },
+  ideas: { title: "🚀 Idea Generator", desc: "Your mind is full of concepts and imagination. Design is where ideas become real careers.", icon: <Lightbulb className="w-12 h-12" /> },
+  logic: { title: "🧩 Problem Solver", desc: "You focus on clarity and purpose — exactly how professional designers work.", icon: <Puzzle className="w-12 h-12" /> },
+  explorer: { title: "🎭 Creative Explorer", desc: "You experiment, play, and try new things. Curiosity is the foundation of design.", icon: <Compass className="w-12 h-12" /> },
 };
 
 const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbyJP0d96AeQ205szWdlr2tbbiIqUkiWXXJRpqhhBYS4nFlaf8D2Ddm-6oSVHTOmxGlq/exec";
@@ -176,14 +188,14 @@ const DesignIQQuiz: React.FC = () => {
           <div className="container mx-auto px-6 text-center relative z-10 py-32">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
               <div className="inline-flex items-center gap-2 bg-bsd-orange/20 text-bsd-orange px-4 py-2 rounded-full text-sm font-medium mb-8">
-                <Sparkles className="w-4 h-4" /> 9 Questions · 2 Minutes
+                <Sparkles className="w-4 h-4" /> 8 Questions · 2 Minutes
               </div>
               <Brain className="w-24 h-24 text-bsd-orange mx-auto mb-8" />
               <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-background mb-6 leading-tight">
                 Test Your <br /><span className="text-bsd-orange">Design IQ</span>
               </h1>
               <p className="text-background/60 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
-                Unlock your creative personality in 9 quick questions. Discover if you're a Visual Thinker, Idea Generator, Problem Solver, or Creative Explorer.
+                Unlock your creative personality in 8 quick questions. Discover if you're a Visual Thinker, Idea Generator, Problem Solver, or Creative Explorer.
               </p>
               <Button
                 size="lg"
@@ -286,9 +298,13 @@ const DesignIQQuiz: React.FC = () => {
                         {questions[currentQ].question}
                       </h2>
 
-                      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      <div className={cn(
+                        "mt-6 grid gap-3",
+                        questions[currentQ].options.some(o => o.image) ? "grid-cols-2" : "grid-cols-1 sm:grid-cols-2"
+                      )}>
                         {questions[currentQ].options.map((opt, i) => {
                           const isSelected = selectedIdx === i;
+                          const hasImage = !!opt.image;
                           return (
                             <motion.button
                               key={i}
@@ -297,7 +313,8 @@ const DesignIQQuiz: React.FC = () => {
                               onClick={() => handleAnswer(opt.tag, i)}
                               disabled={isTransitioning}
                               className={cn(
-                                "text-left border-2 p-5 rounded-2xl font-medium text-foreground flex items-center gap-3 transition-all duration-300 relative overflow-hidden",
+                                "text-left border-2 rounded-2xl font-medium text-foreground transition-all duration-300 relative overflow-hidden",
+                                hasImage ? "flex flex-col p-0" : "flex items-center gap-3 p-5",
                                 isSelected
                                   ? "border-bsd-orange bg-bsd-orange/10 shadow-lg shadow-bsd-orange/20"
                                   : isTransitioning
@@ -314,15 +331,25 @@ const DesignIQQuiz: React.FC = () => {
                                   transition={{ duration: 0.6 }}
                                 />
                               )}
-                              <span className={cn(
-                                "w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold shrink-0 transition-colors duration-300",
-                                isSelected
-                                  ? "bg-bsd-orange text-white"
-                                  : "bg-muted text-muted-foreground"
-                              )}>
-                                {isSelected ? "✓" : optionLabels[i]}
-                              </span>
-                              {opt.text}
+                              {hasImage && (
+                                <img
+                                  src={opt.image}
+                                  alt={opt.text}
+                                  className="w-full h-28 object-cover rounded-t-xl"
+                                  loading="lazy"
+                                />
+                              )}
+                              <div className={cn("flex items-center gap-3", hasImage ? "p-3" : "")}>
+                                <span className={cn(
+                                  "w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold shrink-0 transition-colors duration-300",
+                                  isSelected
+                                    ? "bg-bsd-orange text-white"
+                                    : "bg-muted text-muted-foreground"
+                                )}>
+                                  {isSelected ? "✓" : optionLabels[i]}
+                                </span>
+                                <span className={hasImage ? "text-sm" : ""}>{opt.text}</span>
+                              </div>
                             </motion.button>
                           );
                         })}
