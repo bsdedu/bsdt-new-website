@@ -20,7 +20,7 @@ interface ResultInfo { title: string; desc: string; icon: React.ReactNode; }
 const questions: QuizQuestion[] = [
   { question: "Pick a workspace vibe you love:", options: [
     { text: "Minimal + focused", tag: "visual", image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=400&h=300&fit=crop" },
-    { text: "Expressive + artistic", tag: "ideas", image: "https://images.unsplash.com/photo-1526481280695-3c687fd643ed?w=400&h=300&fit=crop" },
+    { text: "Expressive + artistic", tag: "ideas", image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=400&h=300&fit=crop" },
     { text: "Calm + cozy", tag: "explorer", image: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=400&h=300&fit=crop" },
     { text: "Functional + modern", tag: "logic", image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=400&h=300&fit=crop" },
   ]},
@@ -32,7 +32,7 @@ const questions: QuizQuestion[] = [
   ]},
   { question: "Pick a poster style that attracts you:", options: [
     { text: "Clean + minimal", tag: "visual", image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=400&h=300&fit=crop" },
-    { text: "Bold + energetic", tag: "ideas", image: "https://images.unsplash.com/photo-1526481280695-3c687fd643ed?w=400&h=300&fit=crop" },
+    { text: "Bold + energetic", tag: "ideas", image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=400&h=300&fit=crop" },
     { text: "Dreamy + calm", tag: "explorer", image: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=400&h=300&fit=crop" },
     { text: "Abstract + experimental", tag: "logic", image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=400&h=300&fit=crop" },
   ]},
@@ -226,12 +226,12 @@ const DesignIQQuiz: React.FC = () => {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 30 }}
               transition={{ duration: 0.35, type: "spring", damping: 25 }}
-              className="bg-background rounded-3xl shadow-2xl w-full max-w-2xl relative border border-border overflow-hidden"
+              className="bg-background rounded-3xl shadow-2xl w-full max-w-2xl max-h-[90vh] relative border border-border overflow-hidden flex flex-col"
             >
               {/* Top accent bar */}
               <div className="h-1.5 bg-gradient-to-r from-bsd-orange via-bsd-orange/80 to-bsd-orange/40" />
 
-              <div className="p-8 md:p-10">
+              <div className="p-6 md:p-10 overflow-y-auto flex-1">
                 <button
                   onClick={resetQuiz}
                   className="absolute top-6 right-6 w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-muted/80 transition-colors"
