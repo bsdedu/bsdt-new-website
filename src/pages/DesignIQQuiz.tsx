@@ -392,33 +392,7 @@ const DesignIQQuiz: React.FC = () => {
                       transition={{ duration: 0.5, type: "spring" }}
                       className="text-center py-6 relative overflow-hidden"
                     >
-                      {/* Victory confetti particles */}
-                      <div className="absolute inset-0 pointer-events-none">
-                        {Array.from({ length: 30 }).map((_, i) => (
-                          <motion.div
-                            key={i}
-                            className="absolute w-2.5 h-2.5 rounded-full"
-                            style={{
-                              left: `${50 + (Math.random() - 0.5) * 10}%`,
-                              top: "50%",
-                              backgroundColor: ["hsl(var(--bsd-orange))", "#FFD700", "#FF6B6B", "#4ECDC4", "#A78BFA", "#F472B6", "#34D399"][i % 7],
-                            }}
-                            initial={{ opacity: 1, scale: 0 }}
-                            animate={{
-                              opacity: [1, 1, 0],
-                              scale: [0, 1.2, 0.8],
-                              x: (Math.random() - 0.5) * 350,
-                              y: (Math.random() - 0.7) * 400,
-                              rotate: Math.random() * 720,
-                            }}
-                            transition={{
-                              duration: 1.2 + Math.random() * 0.6,
-                              delay: Math.random() * 0.3,
-                              ease: "easeOut",
-                            }}
-                          />
-                        ))}
-                      </div>
+                      {/* confetti is rendered outside modal below */}
 
                       {/* Radial glow pulse */}
                       <motion.div
@@ -465,6 +439,48 @@ const DesignIQQuiz: React.FC = () => {
               </div>
             </motion.div>
           </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Full-screen falling confetti */}
+      <AnimatePresence>
+        {step === "result" && open && (
+          <div className="fixed inset-0 pointer-events-none z-[60] overflow-hidden">
+            {Array.from({ length: 50 }).map((_, i) => {
+              const left = Math.random() * 100;
+              const size = 6 + Math.random() * 8;
+              const delay = Math.random() * 1.5;
+              const duration = 2.5 + Math.random() * 2;
+              const colors = ["#F28500", "#FFD700", "#FF6B6B", "#4ECDC4", "#A78BFA", "#F472B6", "#34D399"];
+              const isRect = i % 3 !== 0;
+              return (
+                <motion.div
+                  key={i}
+                  className={isRect ? "absolute rounded-sm" : "absolute rounded-full"}
+                  style={{
+                    left: `${left}%`,
+                    top: -20,
+                    width: isRect ? size * 0.6 : size,
+                    height: size,
+                    backgroundColor: colors[i % colors.length],
+                  }}
+                  initial={{ y: -20, opacity: 1, rotate: 0 }}
+                  animate={{
+                    y: "100vh",
+                    opacity: [1, 1, 1, 0],
+                    rotate: (Math.random() - 0.5) * 1080,
+                    x: (Math.random() - 0.5) * 200,
+                  }}
+                  exit={{ opacity: 0 }}
+                  transition={{
+                    duration,
+                    delay,
+                    ease: [0.25, 0.46, 0.45, 0.94],
+                  }}
+                />
+              );
+            })}
+          </div>
         )}
       </AnimatePresence>
     </>
