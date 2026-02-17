@@ -134,7 +134,7 @@ const results: Record<Tag, ResultInfo> = {
   },
 };
 
-const WEBHOOK_URL = "https://hooks.zapier.com/hooks/catch/YOUR-ID-HERE/";
+const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbyJP0d96AeQ205szWdlr2tbbiIqUkiWXXJRpqhhBYS4nFlaf8D2Ddm-6oSVHTOmxGlq/exec";
 
 const optionLabels = ["A", "B", "C", "D"];
 
