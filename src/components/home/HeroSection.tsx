@@ -34,6 +34,11 @@ export const HeroSection: React.FC = () => {
     title: "Skill-Enhancing Electives",
     subtitle: "Industry-Ready Skills",
     description: "Two mandatory certificate courses embedded in the UG curriculum — bridging academic foundations with real-world industry practice."
+  }, {
+    image: "/lovable-uploads/fc9c4875-4b4b-44a9-b8ad-3eb5db1ed2cc.png",
+    title: "Test Your Design IQ",
+    subtitle: "Interactive Quiz",
+    description: "Think you know design? Take our quick 10-question quiz and discover your Design IQ score."
   }];
   const startAutoPlay = useCallback(() => {
     if (intervalRef.current) {
@@ -109,9 +114,12 @@ export const HeroSection: React.FC = () => {
                   window.location.href = "/academics/skill-enhancing-electives";
                   return;
                 }
+                if (currentSlide === 4) {
+                  window.location.href = "/design-iq";
+                  return;
+                }
                 const section = document.getElementById('programs');
                 if (section) {
-                  // If on Hybrid Diploma slide, trigger the diploma tab
                   if (currentSlide === 1) {
                     const diplomaTab = document.querySelector('[data-value="diploma"]') as HTMLButtonElement;
                     if (diplomaTab) {
@@ -124,7 +132,7 @@ export const HeroSection: React.FC = () => {
                   });
                 }
               }}>
-                  {currentSlide === 2 ? "View Student Works" : currentSlide === 3 ? "Explore Electives" : "Explore Programs"}
+                  {currentSlide === 2 ? "View Student Works" : currentSlide === 3 ? "Explore Electives" : currentSlide === 4 ? "Take the Quiz" : "Explore Programs"}
                 </Button>
               </div>
             </div>
