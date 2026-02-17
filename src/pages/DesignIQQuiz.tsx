@@ -442,47 +442,44 @@ const DesignIQQuiz: React.FC = () => {
         )}
       </AnimatePresence>
 
-      {/* Full-screen falling confetti */}
-      <AnimatePresence>
-        {step === "result" && open && (
-          <div className="fixed inset-0 pointer-events-none z-[60] overflow-hidden">
-            {Array.from({ length: 50 }).map((_, i) => {
-              const left = Math.random() * 100;
-              const size = 6 + Math.random() * 8;
-              const delay = Math.random() * 1.5;
-              const duration = 2.5 + Math.random() * 2;
-              const colors = ["#F28500", "#FFD700", "#FF6B6B", "#4ECDC4", "#A78BFA", "#F472B6", "#34D399"];
-              const isRect = i % 3 !== 0;
-              return (
-                <motion.div
-                  key={i}
-                  className={isRect ? "absolute rounded-sm" : "absolute rounded-full"}
-                  style={{
-                    left: `${left}%`,
-                    top: -20,
-                    width: isRect ? size * 0.6 : size,
-                    height: size,
-                    backgroundColor: colors[i % colors.length],
-                  }}
-                  initial={{ y: -20, opacity: 1, rotate: 0 }}
-                  animate={{
-                    y: "100vh",
-                    opacity: [1, 1, 1, 0],
-                    rotate: (Math.random() - 0.5) * 1080,
-                    x: (Math.random() - 0.5) * 200,
-                  }}
-                  exit={{ opacity: 0 }}
-                  transition={{
-                    duration,
-                    delay,
-                    ease: [0.25, 0.46, 0.45, 0.94],
-                  }}
-                />
-              );
-            })}
-          </div>
-        )}
-      </AnimatePresence>
+      {/* Full-screen looping confetti */}
+      {step === "result" && open && (
+        <div className="fixed inset-0 pointer-events-none z-[60] overflow-hidden">
+          <style>{`
+            @keyframes confetti-fall {
+              0% { transform: translateY(-10px) rotate(0deg) translateX(0px); opacity: 1; }
+              85% { opacity: 1; }
+              100% { transform: translateY(100vh) rotate(var(--confetti-rot)) translateX(var(--confetti-drift)); opacity: 0; }
+            }
+          `}</style>
+          {Array.from({ length: 50 }).map((_, i) => {
+            const colors = ["#F28500", "#FFD700", "#FF6B6B", "#4ECDC4", "#A78BFA", "#F472B6", "#34D399"];
+            const left = (i * 7.3 + 3) % 100;
+            const size = 6 + (i % 5) * 2;
+            const duration = 2.5 + (i % 7) * 0.4;
+            const delay = (i % 10) * 0.35;
+            const drift = ((i % 11) - 5) * 30;
+            const rot = ((i % 9) - 4) * 180;
+            const isRect = i % 3 !== 0;
+            return (
+              <div
+                key={i}
+                className={isRect ? "absolute rounded-sm" : "absolute rounded-full"}
+                style={{
+                  left: `${left}%`,
+                  top: -10,
+                  width: isRect ? size * 0.6 : size,
+                  height: size,
+                  backgroundColor: colors[i % colors.length],
+                  animation: `confetti-fall ${duration}s ${delay}s ease-in infinite`,
+                  ["--confetti-drift" as string]: `${drift}px`,
+                  ["--confetti-rot" as string]: `${rot}deg`,
+                }}
+              />
+            );
+          })}
+        </div>
+      )}
     </>
   );
 };
