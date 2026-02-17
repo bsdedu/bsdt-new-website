@@ -390,11 +390,54 @@ const DesignIQQuiz: React.FC = () => {
                       initial={{ opacity: 0, scale: 0.9 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.5, type: "spring" }}
-                      className="text-center py-6"
+                      className="text-center py-6 relative overflow-hidden"
                     >
-                      <div className="w-20 h-20 rounded-3xl bg-bsd-orange/10 flex items-center justify-center mx-auto mb-6 text-bsd-orange">
-                        {finalResult.icon}
+                      {/* Victory confetti particles */}
+                      <div className="absolute inset-0 pointer-events-none">
+                        {Array.from({ length: 30 }).map((_, i) => (
+                          <motion.div
+                            key={i}
+                            className="absolute w-2.5 h-2.5 rounded-full"
+                            style={{
+                              left: `${50 + (Math.random() - 0.5) * 10}%`,
+                              top: "50%",
+                              backgroundColor: ["hsl(var(--bsd-orange))", "#FFD700", "#FF6B6B", "#4ECDC4", "#A78BFA", "#F472B6", "#34D399"][i % 7],
+                            }}
+                            initial={{ opacity: 1, scale: 0 }}
+                            animate={{
+                              opacity: [1, 1, 0],
+                              scale: [0, 1.2, 0.8],
+                              x: (Math.random() - 0.5) * 350,
+                              y: (Math.random() - 0.7) * 400,
+                              rotate: Math.random() * 720,
+                            }}
+                            transition={{
+                              duration: 1.2 + Math.random() * 0.6,
+                              delay: Math.random() * 0.3,
+                              ease: "easeOut",
+                            }}
+                          />
+                        ))}
                       </div>
+
+                      {/* Radial glow pulse */}
+                      <motion.div
+                        className="absolute inset-0 pointer-events-none"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: [0, 0.3, 0] }}
+                        transition={{ duration: 1.5 }}
+                      >
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-bsd-orange/20 blur-3xl" />
+                      </motion.div>
+
+                      <motion.div
+                        className="w-20 h-20 rounded-3xl bg-bsd-orange/10 flex items-center justify-center mx-auto mb-6 text-bsd-orange relative z-10"
+                        initial={{ rotate: -20, scale: 0 }}
+                        animate={{ rotate: 0, scale: 1 }}
+                        transition={{ type: "spring", damping: 10, stiffness: 200, delay: 0.2 }}
+                      >
+                        {finalResult.icon}
+                      </motion.div>
                       <p className="text-sm font-medium text-bsd-orange uppercase tracking-wider mb-2">Your Design Personality</p>
                       <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground">
                         {finalResult.title}
