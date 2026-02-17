@@ -1,137 +1,66 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { Helmet } from "react-helmet-async";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
-import { Brain, ArrowRight, X, Share2, Sparkles, Palette, Lightbulb, Puzzle, Compass } from "lucide-react";
+import { Brain, ArrowRight, X, Sparkles, Palette, Lightbulb, Puzzle, Compass } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useToast } from "@/hooks/use-toast";
+import QuizScoreTracker from "@/components/quiz/QuizScoreTracker";
+import QuizResultReveal from "@/components/quiz/QuizResultReveal";
 
 type Tag = "visual" | "ideas" | "logic" | "explorer";
 
-interface QuizOption {
-  text: string;
-  tag: Tag;
-}
-
-interface QuizQuestion {
-  question: string;
-  options: QuizOption[];
-}
-
-interface ResultInfo {
-  title: string;
-  desc: string;
-  icon: React.ReactNode;
-}
+interface QuizOption { text: string; tag: Tag; }
+interface QuizQuestion { question: string; options: QuizOption[]; }
+interface ResultInfo { title: string; desc: string; icon: React.ReactNode; }
 
 const questions: QuizQuestion[] = [
-  {
-    question: "Pick a workspace vibe:",
-    options: [
-      { text: "Minimal + clean", tag: "visual" },
-      { text: "Colorful + expressive", tag: "ideas" },
-      { text: "Cozy + calm", tag: "explorer" },
-      { text: "Functional + modern", tag: "logic" },
-    ],
-  },
-  {
-    question: "When solving a problem, you usually…",
-    options: [
-      { text: "Sketch ideas first", tag: "visual" },
-      { text: "Search inspiration online", tag: "ideas" },
-      { text: "Ask people for feedback", tag: "logic" },
-      { text: "Experiment until it works", tag: "explorer" },
-    ],
-  },
-  {
-    question: "Which word attracts you most?",
-    options: [
-      { text: "Balance", tag: "visual" },
-      { text: "Story", tag: "ideas" },
-      { text: "Impact", tag: "logic" },
-      { text: "Innovation", tag: "explorer" },
-    ],
-  },
-  {
-    question: "Poster design: first thought?",
-    options: [
-      { text: "What should it say?", tag: "logic" },
-      { text: "What should it look like?", tag: "visual" },
-      { text: "Who is it for?", tag: "ideas" },
-      { text: "What feeling should it create?", tag: "explorer" },
-    ],
-  },
-  {
-    question: "Pick a palette you love:",
-    options: [
-      { text: "Soft pastels", tag: "visual" },
-      { text: "Bold neon", tag: "ideas" },
-      { text: "Earthy tones", tag: "logic" },
-      { text: "Black & white", tag: "explorer" },
-    ],
-  },
-  {
-    question: "When you see bad design, you…",
-    options: [
-      { text: "Ignore it", tag: "logic" },
-      { text: "Notice but move on", tag: "explorer" },
-      { text: "Mentally redesign it", tag: "visual" },
-      { text: "Feel annoyed 😅", tag: "ideas" },
-    ],
-  },
-  {
-    question: "How detail-oriented are you?",
-    options: [
-      { text: "Not much", tag: "explorer" },
-      { text: "Sometimes", tag: "logic" },
-      { text: "Very often", tag: "visual" },
-      { text: "Always!", tag: "ideas" },
-    ],
-  },
-  {
-    question: "Pick a brand vibe:",
-    options: [
-      { text: "Luxury + premium", tag: "visual" },
-      { text: "Fun + playful", tag: "ideas" },
-      { text: "Minimal + modern", tag: "logic" },
-      { text: "Handmade + artistic", tag: "explorer" },
-    ],
-  },
-  {
-    question: "If you could design anything, you'd choose:",
-    options: [
-      { text: "An app", tag: "logic" },
-      { text: "A logo", tag: "visual" },
-      { text: "A room", tag: "explorer" },
-      { text: "An Instagram page", tag: "ideas" },
-    ],
-  },
+  { question: "Pick a workspace vibe:", options: [
+    { text: "Minimal + clean", tag: "visual" }, { text: "Colorful + expressive", tag: "ideas" },
+    { text: "Cozy + calm", tag: "explorer" }, { text: "Functional + modern", tag: "logic" },
+  ]},
+  { question: "When solving a problem, you usually…", options: [
+    { text: "Sketch ideas first", tag: "visual" }, { text: "Search inspiration online", tag: "ideas" },
+    { text: "Ask people for feedback", tag: "logic" }, { text: "Experiment until it works", tag: "explorer" },
+  ]},
+  { question: "Which word attracts you most?", options: [
+    { text: "Balance", tag: "visual" }, { text: "Story", tag: "ideas" },
+    { text: "Impact", tag: "logic" }, { text: "Innovation", tag: "explorer" },
+  ]},
+  { question: "Poster design: first thought?", options: [
+    { text: "What should it say?", tag: "logic" }, { text: "What should it look like?", tag: "visual" },
+    { text: "Who is it for?", tag: "ideas" }, { text: "What feeling should it create?", tag: "explorer" },
+  ]},
+  { question: "Pick a palette you love:", options: [
+    { text: "Soft pastels", tag: "visual" }, { text: "Bold neon", tag: "ideas" },
+    { text: "Earthy tones", tag: "logic" }, { text: "Black & white", tag: "explorer" },
+  ]},
+  { question: "When you see bad design, you…", options: [
+    { text: "Ignore it", tag: "logic" }, { text: "Notice but move on", tag: "explorer" },
+    { text: "Mentally redesign it", tag: "visual" }, { text: "Feel annoyed 😅", tag: "ideas" },
+  ]},
+  { question: "How detail-oriented are you?", options: [
+    { text: "Not much", tag: "explorer" }, { text: "Sometimes", tag: "logic" },
+    { text: "Very often", tag: "visual" }, { text: "Always!", tag: "ideas" },
+  ]},
+  { question: "Pick a brand vibe:", options: [
+    { text: "Luxury + premium", tag: "visual" }, { text: "Fun + playful", tag: "ideas" },
+    { text: "Minimal + modern", tag: "logic" }, { text: "Handmade + artistic", tag: "explorer" },
+  ]},
+  { question: "If you could design anything, you'd choose:", options: [
+    { text: "An app", tag: "logic" }, { text: "A logo", tag: "visual" },
+    { text: "A room", tag: "explorer" }, { text: "An Instagram page", tag: "ideas" },
+  ]},
 ];
 
 const results: Record<Tag, ResultInfo> = {
-  visual: {
-    title: "Visual Thinker",
-    desc: "You naturally notice layouts, balance, and aesthetics. That's one of the strongest designer instincts.",
-    icon: <Palette className="w-12 h-12" />,
-  },
-  ideas: {
-    title: "Idea Generator",
-    desc: "You're full of concepts and imagination. Designers thrive on people like you.",
-    icon: <Lightbulb className="w-12 h-12" />,
-  },
-  logic: {
-    title: "Problem Solver",
-    desc: "You focus on clarity and purpose. That's exactly how professional designers think.",
-    icon: <Puzzle className="w-12 h-12" />,
-  },
-  explorer: {
-    title: "Creative Explorer",
-    desc: "You experiment, play, and try new things. Curiosity is the foundation of innovation.",
-    icon: <Compass className="w-12 h-12" />,
-  },
+  visual: { title: "Visual Thinker", desc: "You naturally notice layouts, balance, and aesthetics. That's one of the strongest designer instincts.", icon: <Palette className="w-12 h-12" /> },
+  ideas: { title: "Idea Generator", desc: "You're full of concepts and imagination. Designers thrive on people like you.", icon: <Lightbulb className="w-12 h-12" /> },
+  logic: { title: "Problem Solver", desc: "You focus on clarity and purpose. That's exactly how professional designers think.", icon: <Puzzle className="w-12 h-12" /> },
+  explorer: { title: "Creative Explorer", desc: "You experiment, play, and try new things. Curiosity is the foundation of innovation.", icon: <Compass className="w-12 h-12" /> },
 };
 
 const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbyJP0d96AeQ205szWdlr2tbbiIqUkiWXXJRpqhhBYS4nFlaf8D2Ddm-6oSVHTOmxGlq/exec";
@@ -144,20 +73,31 @@ const DesignIQQuiz: React.FC = () => {
   const [step, setStep] = useState<"lead" | "quiz" | "result">("lead");
   const [currentQ, setCurrentQ] = useState(0);
   const [lead, setLead] = useState({ name: "", email: "", phone: "" });
-  const [scores, setScores] = useState<Record<Tag, number>>({
-    visual: 0, ideas: 0, logic: 0, explorer: 0,
-  });
+  const [scores, setScores] = useState<Record<Tag, number>>({ visual: 0, ideas: 0, logic: 0, explorer: 0 });
   const [finalResult, setFinalResult] = useState<ResultInfo | null>(null);
+  const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [direction, setDirection] = useState(1);
 
-  const handleAnswer = (tag: Tag) => {
+  const handleAnswer = useCallback((tag: Tag, idx: number) => {
+    if (isTransitioning) return;
+    setSelectedIdx(idx);
+    setIsTransitioning(true);
+
     const newScores = { ...scores, [tag]: scores[tag] + 1 };
     setScores(newScores);
-    if (currentQ + 1 < questions.length) {
-      setCurrentQ(currentQ + 1);
-    } else {
-      finishQuiz(newScores);
-    }
-  };
+
+    setTimeout(() => {
+      setDirection(1);
+      if (currentQ + 1 < questions.length) {
+        setCurrentQ(currentQ + 1);
+      } else {
+        finishQuiz(newScores);
+      }
+      setSelectedIdx(null);
+      setIsTransitioning(false);
+    }, 600);
+  }, [scores, currentQ, isTransitioning]);
 
   const finishQuiz = async (finalScores: Record<Tag, number>) => {
     const topTag = (Object.keys(finalScores) as Tag[]).reduce((a, b) =>
@@ -171,12 +111,8 @@ const DesignIQQuiz: React.FC = () => {
         method: "POST",
         headers: { "Content-Type": "text/plain;charset=utf-8" },
         body: JSON.stringify({
-          name: lead.name,
-          email: lead.email,
-          phone: lead.phone,
-          result: resultData.title,
-          scores: finalScores,
-          timestamp: new Date().toISOString(),
+          name: lead.name, email: lead.email, phone: lead.phone,
+          result: resultData.title, scores: finalScores, timestamp: new Date().toISOString(),
         }),
       });
     } catch (error) {
@@ -198,6 +134,8 @@ const DesignIQQuiz: React.FC = () => {
     setLead({ name: "", email: "", phone: "" });
     setScores({ visual: 0, ideas: 0, logic: 0, explorer: 0 });
     setFinalResult(null);
+    setSelectedIdx(null);
+    setIsTransitioning(false);
     setOpen(false);
   };
 
@@ -210,7 +148,13 @@ const DesignIQQuiz: React.FC = () => {
     }
   };
 
-  const progress = ((currentQ + 1) / questions.length) * 100;
+  const progress = ((currentQ + (selectedIdx !== null ? 1 : 0)) / questions.length) * 100;
+
+  const slideVariants = {
+    enter: (d: number) => ({ x: d > 0 ? 80 : -80, opacity: 0 }),
+    center: { x: 0, opacity: 1 },
+    exit: (d: number) => ({ x: d > 0 ? -80 : 80, opacity: 0 }),
+  };
 
   return (
     <>
@@ -223,7 +167,6 @@ const DesignIQQuiz: React.FC = () => {
 
       <main>
         <section className="relative min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-foreground via-foreground/95 to-bsd-orange/30 overflow-hidden">
-          {/* Decorative blobs */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-bsd-orange/15 blur-3xl animate-pulse" />
             <div className="absolute bottom-10 right-20 w-96 h-96 rounded-full bg-bsd-orange/10 blur-3xl" />
@@ -277,7 +220,6 @@ const DesignIQQuiz: React.FC = () => {
               <div className="h-1.5 bg-gradient-to-r from-bsd-orange via-bsd-orange/80 to-bsd-orange/40" />
 
               <div className="p-8 md:p-10">
-                {/* Close */}
                 <button
                   onClick={resetQuiz}
                   className="absolute top-6 right-6 w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-muted/80 transition-colors"
@@ -286,7 +228,7 @@ const DesignIQQuiz: React.FC = () => {
                   <X className="w-5 h-5" />
                 </button>
 
-                <AnimatePresence mode="wait">
+                <AnimatePresence mode="wait" custom={direction}>
                   {/* LEAD STEP */}
                   {step === "lead" && (
                     <motion.div key="lead" initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -30 }} transition={{ duration: 0.3 }}>
@@ -302,34 +244,11 @@ const DesignIQQuiz: React.FC = () => {
                         Enter your details to receive your quiz result + a free design roadmap.
                       </p>
                       <div className="space-y-4 mt-8">
-                        <Input
-                          placeholder="Your Name *"
-                          value={lead.name}
-                          onChange={(e) => setLead({ ...lead, name: e.target.value })}
-                          className="h-14 text-base rounded-xl border-border/60 px-5"
-                          maxLength={100}
-                        />
-                        <Input
-                          placeholder="Email Address *"
-                          type="email"
-                          value={lead.email}
-                          onChange={(e) => setLead({ ...lead, email: e.target.value })}
-                          className="h-14 text-base rounded-xl border-border/60 px-5"
-                          maxLength={255}
-                        />
-                        <Input
-                          placeholder="Phone (optional)"
-                          type="tel"
-                          value={lead.phone}
-                          onChange={(e) => setLead({ ...lead, phone: e.target.value })}
-                          className="h-14 text-base rounded-xl border-border/60 px-5"
-                          maxLength={20}
-                        />
+                        <Input placeholder="Your Name *" value={lead.name} onChange={(e) => setLead({ ...lead, name: e.target.value })} className="h-14 text-base rounded-xl border-border/60 px-5" maxLength={100} />
+                        <Input placeholder="Email Address *" type="email" value={lead.email} onChange={(e) => setLead({ ...lead, email: e.target.value })} className="h-14 text-base rounded-xl border-border/60 px-5" maxLength={255} />
+                        <Input placeholder="Phone (optional)" type="tel" value={lead.phone} onChange={(e) => setLead({ ...lead, phone: e.target.value })} className="h-14 text-base rounded-xl border-border/60 px-5" maxLength={20} />
                       </div>
-                      <Button
-                        onClick={startQuiz}
-                        className="w-full mt-8 bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold h-14 text-base rounded-xl"
-                      >
+                      <Button onClick={startQuiz} className="w-full mt-8 bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold h-14 text-base rounded-xl">
                         Start My Quiz <ArrowRight className="ml-2 w-5 h-5" />
                       </Button>
                     </motion.div>
@@ -339,10 +258,12 @@ const DesignIQQuiz: React.FC = () => {
                   {step === "quiz" && (
                     <motion.div
                       key={`quiz-${currentQ}`}
-                      initial={{ opacity: 0, x: 40 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -40 }}
-                      transition={{ duration: 0.3 }}
+                      custom={direction}
+                      variants={slideVariants}
+                      initial="enter"
+                      animate="center"
+                      exit="exit"
+                      transition={{ duration: 0.35, type: "spring", damping: 25, stiffness: 200 }}
                     >
                       {/* Progress */}
                       <div className="flex items-center justify-between mb-2">
@@ -353,12 +274,11 @@ const DesignIQQuiz: React.FC = () => {
                           {Math.round(progress)}%
                         </span>
                       </div>
-                      <div className="w-full h-3 bg-muted rounded-full mb-8 overflow-hidden">
+                      <div className="w-full h-3 bg-muted rounded-full mb-6 overflow-hidden">
                         <motion.div
                           className="h-3 bg-gradient-to-r from-bsd-orange to-bsd-orange/70 rounded-full"
-                          initial={{ width: `${((currentQ) / questions.length) * 100}%` }}
                           animate={{ width: `${progress}%` }}
-                          transition={{ duration: 0.5 }}
+                          transition={{ duration: 0.5, ease: "easeOut" }}
                         />
                       </div>
 
@@ -367,78 +287,56 @@ const DesignIQQuiz: React.FC = () => {
                       </h2>
 
                       <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        {questions[currentQ].options.map((opt, i) => (
-                          <motion.button
-                            key={i}
-                            whileHover={{ scale: 1.02 }}
-                            whileTap={{ scale: 0.98 }}
-                            onClick={() => handleAnswer(opt.tag)}
-                            className={cn(
-                              "text-left border-2 border-border/60 p-5 rounded-2xl",
-                              "hover:border-bsd-orange hover:bg-bsd-orange/5 transition-all duration-200",
-                              "font-medium text-foreground flex items-center gap-3"
-                            )}
-                          >
-                            <span className="w-8 h-8 rounded-lg bg-muted flex items-center justify-center text-sm font-bold text-muted-foreground shrink-0">
-                              {optionLabels[i]}
-                            </span>
-                            {opt.text}
-                          </motion.button>
-                        ))}
+                        {questions[currentQ].options.map((opt, i) => {
+                          const isSelected = selectedIdx === i;
+                          return (
+                            <motion.button
+                              key={i}
+                              whileHover={!isTransitioning ? { scale: 1.03 } : {}}
+                              whileTap={!isTransitioning ? { scale: 0.97 } : {}}
+                              onClick={() => handleAnswer(opt.tag, i)}
+                              disabled={isTransitioning}
+                              className={cn(
+                                "text-left border-2 p-5 rounded-2xl font-medium text-foreground flex items-center gap-3 transition-all duration-300 relative overflow-hidden",
+                                isSelected
+                                  ? "border-bsd-orange bg-bsd-orange/10 shadow-lg shadow-bsd-orange/20"
+                                  : isTransitioning
+                                  ? "border-border/30 opacity-40"
+                                  : "border-border/60 hover:border-bsd-orange hover:bg-bsd-orange/5"
+                              )}
+                            >
+                              {/* Selection ripple */}
+                              {isSelected && (
+                                <motion.div
+                                  className="absolute inset-0 bg-bsd-orange/10 rounded-2xl"
+                                  initial={{ scale: 0, opacity: 0.5 }}
+                                  animate={{ scale: 2.5, opacity: 0 }}
+                                  transition={{ duration: 0.6 }}
+                                />
+                              )}
+                              <span className={cn(
+                                "w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold shrink-0 transition-colors duration-300",
+                                isSelected
+                                  ? "bg-bsd-orange text-white"
+                                  : "bg-muted text-muted-foreground"
+                              )}>
+                                {isSelected ? "✓" : optionLabels[i]}
+                              </span>
+                              {opt.text}
+                            </motion.button>
+                          );
+                        })}
                       </div>
+
+                      {/* Score tracker */}
+                      <QuizScoreTracker scores={scores} totalQuestions={questions.length} />
                     </motion.div>
                   )}
 
                   {/* RESULT STEP */}
                   {step === "result" && finalResult && (
-                    <motion.div
-                      key="result"
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, type: "spring" }}
-                      className="text-center py-6 relative overflow-hidden"
-                    >
-                      {/* confetti is rendered outside modal below */}
-
-                      {/* Radial glow pulse */}
-                      <motion.div
-                        className="absolute inset-0 pointer-events-none"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: [0, 0.3, 0] }}
-                        transition={{ duration: 1.5 }}
-                      >
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-bsd-orange/20 blur-3xl" />
-                      </motion.div>
-
-                      <motion.div
-                        className="w-20 h-20 rounded-3xl bg-bsd-orange/10 flex items-center justify-center mx-auto mb-6 text-bsd-orange relative z-10"
-                        initial={{ rotate: -20, scale: 0 }}
-                        animate={{ rotate: 0, scale: 1 }}
-                        transition={{ type: "spring", damping: 10, stiffness: 200, delay: 0.2 }}
-                      >
-                        {finalResult.icon}
-                      </motion.div>
-                      <p className="text-sm font-medium text-bsd-orange uppercase tracking-wider mb-2">Your Design Personality</p>
-                      <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground">
-                        {finalResult.title}
-                      </h2>
-                      <p className="mt-5 text-muted-foreground text-lg leading-relaxed max-w-md mx-auto">
-                        {finalResult.desc}
-                      </p>
-
-                      <Button
-                        className="w-full mt-10 bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold h-14 text-base rounded-xl"
-                        onClick={() => window.open("https://apply.bsd.edu.in/", "_blank")}
-                      >
-                        Book a Free Design Career Call <ArrowRight className="ml-2 w-5 h-5" />
-                      </Button>
-
-                      <button
-                        onClick={handleShare}
-                        className="mt-5 text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-2"
-                      >
-                        <Share2 className="w-4 h-4" /> Share your result with friends
-                      </button>
+                    <motion.div key="result" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}>
+                      <QuizResultReveal result={finalResult} onShare={handleShare} />
                     </motion.div>
                   )}
                 </AnimatePresence>
