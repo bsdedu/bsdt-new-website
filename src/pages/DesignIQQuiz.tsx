@@ -199,14 +199,18 @@ const DesignIQQuiz: React.FC = () => {
     try {
       await fetch(WEBHOOK_URL, {
         method: "POST",
+        mode: "no-cors",
         headers: { "Content-Type": "text/plain;charset=utf-8" },
         body: JSON.stringify({
-          name: lead.name, email: lead.email, phone: lead.phone,
-          result: resultData.title, scores: finalScores, timestamp: new Date().toISOString(),
+          action: "addRow",
+          data: {
+            name: lead.name, email: lead.email, phone: lead.phone,
+            result: resultData.title, scores: JSON.stringify(finalScores), timestamp: new Date().toISOString(),
+          },
         }),
       });
-    } catch (error) {
-      console.error("Webhook error:", error);
+    } catch {
+      // Silently handle webhook errors
     }
   };
 
