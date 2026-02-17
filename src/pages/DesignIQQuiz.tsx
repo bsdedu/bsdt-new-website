@@ -11,6 +11,7 @@ import { useToast } from "@/hooks/use-toast";
 import QuizScoreTracker from "@/components/quiz/QuizScoreTracker";
 import QuizResultReveal from "@/components/quiz/QuizResultReveal";
 
+import designIqHero from "@/assets/quiz/design-iq-hero.jpg";
 // Q1 images
 import q1Minimal from "@/assets/quiz/q1-minimal.jpg";
 import q1Expressive from "@/assets/quiz/q1-expressive.jpg";
@@ -276,10 +277,12 @@ const DesignIQQuiz: React.FC = () => {
                 transition={{ duration: 0.5 }}
                 className="text-center max-w-3xl mx-auto"
               >
-                <div className="inline-flex items-center gap-2 bg-bsd-orange/20 text-bsd-orange px-4 py-2 rounded-full text-sm font-medium mb-8">
+                <div className="relative w-40 h-40 md:w-52 md:h-52 mx-auto mb-8 rounded-full overflow-hidden border-4 border-bsd-orange/30 shadow-2xl shadow-bsd-orange/20">
+                  <img src={designIqHero} alt="Students collaborating on design" className="w-full h-full object-cover" />
+                </div>
+                <div className="inline-flex items-center gap-2 bg-bsd-orange/20 text-bsd-orange px-4 py-2 rounded-full text-sm font-medium mb-6">
                   <Sparkles className="w-4 h-4" /> 9 Questions · 2 Minutes
                 </div>
-                <Brain className="w-24 h-24 text-bsd-orange mx-auto mb-8" />
                 <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-background mb-6 leading-tight">
                   Test Your <br /><span className="text-bsd-orange">Design IQ</span>
                 </h1>
