@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
   email: z.string().email("Please enter a valid email"),
-  phone: z.string().min(10, "Please enter a valid phone number"),
+  phone: z.string().regex(/^\d{10,}$/, "Please enter a valid phone number (digits only, min 10)"),
 });
 
 type FormData = z.infer<typeof formSchema>;
