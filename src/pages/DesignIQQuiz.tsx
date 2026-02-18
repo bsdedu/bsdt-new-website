@@ -197,19 +197,17 @@ const DesignIQQuiz: React.FC = () => {
     setFinalResult(resultData);
     setStep("result");
     try {
-      const payload = new URLSearchParams({
-        name: lead.name,
-        email: lead.email,
-        phone: lead.phone,
-        result: resultData.title,
-        scores: JSON.stringify(finalScores),
-        timestamp: new Date().toISOString(),
-      });
       await fetch(WEBHOOK_URL, {
         method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: payload.toString(),
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify({
+          name: lead.name,
+          email: lead.email,
+          phone: lead.phone,
+          result: resultData.title,
+          scores: finalScores,
+          timestamp: new Date().toISOString(),
+        }),
       });
     } catch {
       // Silently handle webhook errors
