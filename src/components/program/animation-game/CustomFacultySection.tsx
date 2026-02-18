@@ -15,7 +15,7 @@ export const CustomFacultySection: React.FC = () => {
               Learn From Industry Professionals
             </h2>
             <p className="mt-4 text-foreground/70">
-              Our Animation & Game Design program is led by experienced professionals who have worked with leading studios and game developers, bringing real-world knowledge to the classroom.
+              Our Animation & Game Art program is led by experienced professionals who have worked with leading studios and game developers, bringing real-world knowledge to the classroom.
             </p>
           </div>
         </RevealSection>

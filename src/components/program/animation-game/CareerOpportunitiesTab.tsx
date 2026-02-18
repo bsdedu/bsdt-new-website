@@ -9,7 +9,7 @@ export const CareerOpportunitiesTab: React.FC = () => {
       <div className="max-w-3xl mx-auto text-center">
         <h3 className="text-xl font-semibold text-bsd-gray mb-3">Career Paths</h3>
         <p className="text-foreground/70">
-          The BVA Animation & Game Design program prepares graduates for diverse careers in the rapidly growing animation, gaming, and interactive media industries.
+          The BVA Animation & Game Art program prepares graduates for diverse careers in the rapidly growing animation, gaming, and interactive media industries.
         </p>
       </div>
       

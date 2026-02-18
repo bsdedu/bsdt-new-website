@@ -1,7 +1,7 @@
 
 import { ProjectCollection } from './types';
 
-// Animation & Game Design projects
+// Animation & Game Art projects
 export const animationProjects: ProjectCollection = {
   animation: [
     { id: "1", title: "The Good Dinosaur - Character Animation", student: "Krishnakoli", year: "2023", image: "/lovable-uploads/2e4fc407-74e1-4839-9448-8bbcff2a8325.png" },

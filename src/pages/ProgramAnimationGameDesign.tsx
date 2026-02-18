@@ -15,8 +15,8 @@ const ProgramAnimationGameDesign = () => {
   return (
     <>
       <Helmet>
-        <title>BVA Animation & Game Design | BSDT</title>
-        <meta name="description" content="Pursue a Bachelor of Visual Arts in Animation & Game Design at Bangalore School of Design & Technology. Master 2D/3D animation, game development, and interactive storytelling." />
+        <title>BVA Animation & Game Art | BSDT</title>
+        <meta name="description" content="Pursue a Bachelor of Visual Arts in Animation & Game Art at Bangalore School of Design & Technology. Master 2D/3D animation, game development, and interactive storytelling." />
       </Helmet>
 
       <Navbar />
@@ -26,8 +26,8 @@ const ProgramAnimationGameDesign = () => {
       <StudentLearningSection />
       <SkillEnhancingElectivesSection programKey="bva-animation-game-design" />
       <StudentWorksGallery
-        title="Animation & Game Design Student Projects"
-        description="Explore the creative works of our Animation & Game Design students, showcasing their skills in 2D/3D animation, game development, and character design."
+        title="Animation & Game Art Student Projects"
+        description="Explore the creative works of our Animation & Game Art students, showcasing their skills in 2D/3D animation, game development, and character design."
         category="animation"
       />
       

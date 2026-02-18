@@ -9,7 +9,7 @@ export const LearningOutcomesTab: React.FC = () => {
       <div className="space-y-6">
         <h3 className="text-xl font-semibold text-bsd-gray">Key Learning Outcomes</h3>
         <p className="text-foreground/70">
-          Upon successful completion of the BVA Animation & Game Design program, students will have acquired the following skills and competencies:
+          Upon successful completion of the BVA Animation & Game Art program, students will have acquired the following skills and competencies:
         </p>
         
         <ul className="space-y-3">

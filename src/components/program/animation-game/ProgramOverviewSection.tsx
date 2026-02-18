@@ -20,7 +20,7 @@ export const ProgramOverviewSection: React.FC = () => {
               Creating Interactive Digital Experiences
             </h2>
             <p className="mt-4 text-foreground/70">
-              Our BVA in Animation & Game Design program combines artistry with technology, preparing students to create compelling characters, worlds, and stories across animation, games, and interactive media.
+              Our BVA in Animation & Game Art program combines artistry with technology, preparing students to create compelling characters, worlds, and stories across animation, games, and interactive media.
             </p>
           </div>
         </RevealSection>
@@ -45,7 +45,7 @@ export const ProgramOverviewSection: React.FC = () => {
                   <CardContent>
                     <div className="space-y-6">
                       <p className="text-foreground/70">
-                        The BVA Animation & Game Design program is a 4-year full-time undergraduate course divided into 8 semesters. Each semester builds upon the last, developing both artistic skills and technical expertise.
+                        The BVA Animation & Game Art program is a 4-year full-time undergraduate course divided into 8 semesters. Each semester builds upon the last, developing both artistic skills and technical expertise.
                       </p>
                       
                       <div className="space-y-4">
