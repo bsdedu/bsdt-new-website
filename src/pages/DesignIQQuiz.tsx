@@ -140,7 +140,7 @@ const results: Record<Tag, ResultInfo> = {
   explorer: { title: "🎭 Creative Explorer", desc: "You experiment, play, and try new things. That curiosity is the foundation of design.", icon: <Compass className="w-12 h-12" /> },
 };
 
-const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbzdIwJVE3AL30KCrU0ZT_44Xk6ccnPH8WsXzvoNSj3GoOTNSxWWJaQSDxHQO1bdHwzuxg/exec";
+const WEBHOOK_URL = "https://hook.us2.make.com/7x7wia78fz83y3qvwbw9dho61gfq22jr";
 
 const optionLabels = ["A", "B", "C", "D"];
 
@@ -189,30 +189,16 @@ const DesignIQQuiz: React.FC = () => {
     advanceQuestion(newScores);
   }, [scores, currentQ, sliderValue, isTransitioning, advanceQuestion]);
 
-  const sendToSheet = (payload: Record<string, unknown>) => {
-    const iframe = document.createElement("iframe");
-    iframe.name = "quiz-submit-frame";
-    iframe.style.display = "none";
-    document.body.appendChild(iframe);
-
-    const form = document.createElement("form");
-    form.method = "POST";
-    form.action = WEBHOOK_URL;
-    form.target = "quiz-submit-frame";
-
-    const input = document.createElement("input");
-    input.type = "hidden";
-    input.name = "payload";
-    input.value = JSON.stringify(payload);
-    form.appendChild(input);
-
-    document.body.appendChild(form);
-    form.submit();
-
-    setTimeout(() => {
-      document.body.removeChild(form);
-      document.body.removeChild(iframe);
-    }, 5000);
+  const sendToSheet = async (payload: Record<string, unknown>) => {
+    try {
+      await fetch(WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+    } catch (err) {
+      console.error("Webhook send failed:", err);
+    }
   };
 
   const finishQuiz = async (finalScores: Record<Tag, number>) => {
