@@ -37,7 +37,7 @@ const undergraduatePrograms: Program[] = [
   },
   {
     icon: <Gamepad className="w-6 h-6 text-bsd-orange" />,
-    title: "BVA Animation & Game Design",
+    title: "BVA Animation & Game Art",
     description: "A 4-year program where students master 2D/3D animation, game mechanics, and interactive storytelling using cutting-edge technologies.",
     color: "from-bsd-gray/15 to-bsd-gray/5",
     duration: "4 years",

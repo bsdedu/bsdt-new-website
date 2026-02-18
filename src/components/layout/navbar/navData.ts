@@ -28,7 +28,7 @@ export const navStructure: NavStructure[] = [
           { name: 'BVA Graphic & Communication Design', href: '/academics/bva-graphic-design' },
           { name: 'BVA Interior & Spatial Design', href: '/academics/bva-interior-spatial-design' },
           
-          { name: 'BVA Animation & Game Design', href: '/bva-animation-and-multimedia-game-design' },
+          { name: 'BVA Animation & Game Art', href: '/bva-animation-and-multimedia-game-design' },
           { name: 'BCA with UI/UX & AI/ML', href: '/academics/b-computer-application-ui-ux' },
           { name: 'BCA with Data Analytics & Cyber Security', href: '/academics/bca-data-analytics-cyber-security' }
         ]

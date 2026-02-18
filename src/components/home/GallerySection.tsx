@@ -178,7 +178,7 @@ const galleryItems: {
     category: "Student Work",
     image: "/lovable-uploads/d7bb8a42-1bb6-46c9-aa99-2b89caf61b9e.png",
     caption: "Innovative cozy cafe management game with detailed UI/UX design",
-    program: "BVA Animation & Game Design",
+    program: "BVA Animation & Game Art",
     student: "Cael Williams",
     year: "2023",
     semester: "5th Semester",

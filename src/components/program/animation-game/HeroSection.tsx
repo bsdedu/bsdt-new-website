@@ -45,7 +45,7 @@ export const HeroSection: React.FC = () => {
             <div className="space-y-6">
               <Badge variant="bsdOrange" className="mb-2">4-YEAR UNDERGRADUATE PROGRAM</Badge>
               <h1 className="text-4xl md:text-5xl font-display font-bold text-bsd-gray leading-tight">
-                BVA Animation & Game Design
+                BVA Animation & Game Art
               </h1>
               <p className="text-lg text-foreground/80">
                 Master 2D/3D animation, game development, and interactive storytelling. Create immersive digital experiences that entertain, educate, and inspire audiences worldwide.
