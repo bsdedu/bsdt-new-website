@@ -220,6 +220,15 @@ const DesignIQQuiz: React.FC = () => {
       toast({ title: "Missing info", description: "Please enter your name and email to continue.", variant: "destructive" });
       return;
     }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(lead.email.trim())) {
+      toast({ title: "Invalid email", description: "Please enter a valid email address.", variant: "destructive" });
+      return;
+    }
+    if (lead.phone && !/^\d{10,}$/.test(lead.phone.trim())) {
+      toast({ title: "Invalid phone", description: "Please enter a valid phone number (digits only, min 10).", variant: "destructive" });
+      return;
+    }
     setStep("quiz");
   };
 
