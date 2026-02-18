@@ -140,7 +140,7 @@ const results: Record<Tag, ResultInfo> = {
   explorer: { title: "🎭 Creative Explorer", desc: "You experiment, play, and try new things. That curiosity is the foundation of design.", icon: <Compass className="w-12 h-12" /> },
 };
 
-const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbzraHpnsJOYPht6FscEj3uJN0b4K3ln3QA5BNPL0GuGTkhP8wKmmtf2AuMtQuETgTLbUw/exec";
+const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbzdIwJVE3AL30KCrU0ZT_44Xk6ccnPH8WsXzvoNSj3GoOTNSxWWJaQSDxHQO1bdHwzuxg/exec";
 
 const optionLabels = ["A", "B", "C", "D"];
 
@@ -189,6 +189,32 @@ const DesignIQQuiz: React.FC = () => {
     advanceQuestion(newScores);
   }, [scores, currentQ, sliderValue, isTransitioning, advanceQuestion]);
 
+  const sendToSheet = (payload: Record<string, unknown>) => {
+    const iframe = document.createElement("iframe");
+    iframe.name = "quiz-submit-frame";
+    iframe.style.display = "none";
+    document.body.appendChild(iframe);
+
+    const form = document.createElement("form");
+    form.method = "POST";
+    form.action = WEBHOOK_URL;
+    form.target = "quiz-submit-frame";
+
+    const input = document.createElement("input");
+    input.type = "hidden";
+    input.name = "payload";
+    input.value = JSON.stringify(payload);
+    form.appendChild(input);
+
+    document.body.appendChild(form);
+    form.submit();
+
+    setTimeout(() => {
+      document.body.removeChild(form);
+      document.body.removeChild(iframe);
+    }, 5000);
+  };
+
   const finishQuiz = async (finalScores: Record<Tag, number>) => {
     const topTag = (Object.keys(finalScores) as Tag[]).reduce((a, b) =>
       finalScores[a] > finalScores[b] ? a : b
@@ -197,21 +223,16 @@ const DesignIQQuiz: React.FC = () => {
     setFinalResult(resultData);
     setStep("result");
     try {
-      await fetch(WEBHOOK_URL, {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "text/plain;charset=utf-8" },
-        body: JSON.stringify({
-          name: lead.name,
-          email: lead.email,
-          phone: lead.phone,
-          result: resultData.title,
-          scores: finalScores,
-          timestamp: new Date().toISOString(),
-        }),
+      sendToSheet({
+        name: lead.name,
+        email: lead.email,
+        phone: lead.phone,
+        result: resultData.title,
+        scores: finalScores,
+        timestamp: new Date().toISOString(),
       });
-    } catch {
-      // Silently handle webhook errors
+    } catch (err) {
+      console.error("Quiz lead send failed:", err);
     }
   };
 
