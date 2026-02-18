@@ -140,7 +140,7 @@ const results: Record<Tag, ResultInfo> = {
   explorer: { title: "🎭 Creative Explorer", desc: "You experiment, play, and try new things. That curiosity is the foundation of design.", icon: <Compass className="w-12 h-12" /> },
 };
 
-const WEBHOOK_URL = ""; // TODO: Replace with new Google Apps Script deployment URL
+const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbzraHpnsJOYPht6FscEj3uJN0b4K3ln3QA5BNPL0GuGTkhP8wKmmtf2AuMtQuETgTLbUw/exec";
 
 const optionLabels = ["A", "B", "C", "D"];
 
