@@ -28,9 +28,6 @@ export const BeyondCurriculumHero: React.FC = () => {
                 <AnimatedButton asChild>
                   <a href="#enquiry-form" className="hover:no-underline">Schedule a Visit</a>
                 </AnimatedButton>
-                <AnimatedButton variant="outline" asChild>
-                  <a href="#beyond-activities" className="hover:no-underline">Explore Activities</a>
-                </AnimatedButton>
               </div>
             </div>
           </RevealSection>
