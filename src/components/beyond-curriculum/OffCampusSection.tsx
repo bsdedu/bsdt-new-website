@@ -15,6 +15,15 @@ const siteVisitGalleries = [
       { src: "/images/site-visits/bachelors-pad-4.jpg", alt: "Bachelor's Pad site visit - outdoor area tour" },
     ],
   },
+  {
+    title: "Bodycraft Case Study",
+    photos: [
+      { src: "/images/site-visits/bodycraft-1.jpg", alt: "Bodycraft case study - salon station area" },
+      { src: "/images/site-visits/bodycraft-2.jpg", alt: "Bodycraft case study - interior lounge and decor" },
+      { src: "/images/site-visits/bodycraft-3.jpg", alt: "Bodycraft case study - treatment room design" },
+      { src: "/images/site-visits/bodycraft-4.jpg", alt: "Bodycraft case study - reception and lobby" },
+    ],
+  },
 ];
 
 // Flatten all photos for lightbox navigation
