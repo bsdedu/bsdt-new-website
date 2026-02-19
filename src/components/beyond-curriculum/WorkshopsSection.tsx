@@ -60,6 +60,17 @@ const workshopGalleries = [
       { src: "/images/workshops/bridge-9.jpg", alt: "Bridge Building - final load test with full class" },
     ],
   },
+  {
+    title: "Clay Pottery Workshop",
+    photos: [
+      { src: "/images/workshops/clay-1.jpg", alt: "Clay Pottery Workshop - instructor showcasing pottery pieces" },
+      { src: "/images/workshops/clay-2.jpg", alt: "Clay Pottery Workshop - demonstrating clay techniques" },
+      { src: "/images/workshops/clay-3.jpg", alt: "Clay Pottery Workshop - students moulding clay" },
+      { src: "/images/workshops/clay-4.jpg", alt: "Clay Pottery Workshop - student shaping clay on table" },
+      { src: "/images/workshops/clay-5.jpg", alt: "Clay Pottery Workshop - pottery wheel experience" },
+      { src: "/images/workshops/clay-6.jpg", alt: "Clay Pottery Workshop - finished clay sculptures display" },
+    ],
+  },
 ];
 
 const allPhotos = workshopGalleries.flatMap(g => g.photos);
