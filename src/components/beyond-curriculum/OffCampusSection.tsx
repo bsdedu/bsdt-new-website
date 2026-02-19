@@ -58,6 +58,19 @@ const offCampusGalleries = [
       { src: "/images/off-campus/ckp-visit-10.jpg", alt: "CKP visit - green cushion planter sculpture in exhibition hall" },
     ],
   },
+  {
+    title: "HMG Stones",
+    photos: [
+      { src: "/images/off-campus/hmg-stones-1.jpg", alt: "HMG Stones visit - group photo at the HMG Stones showroom" },
+      { src: "/images/off-campus/hmg-stones-2.jpg", alt: "HMG Stones visit - guided presentation in stone quarry gallery" },
+      { src: "/images/off-campus/hmg-stones-3.jpg", alt: "HMG Stones visit - students studying marble and granite slab varieties" },
+      { src: "/images/off-campus/hmg-stones-4.jpg", alt: "HMG Stones visit - examining large exotic stone slab patterns" },
+      { src: "/images/off-campus/hmg-stones-5.jpg", alt: "HMG Stones visit - touring outdoor stone cutting machinery" },
+      { src: "/images/off-campus/hmg-stones-6.jpg", alt: "HMG Stones visit - observing industrial stone processing equipment" },
+      { src: "/images/off-campus/hmg-stones-7.jpg", alt: "HMG Stones visit - group photo at the HMG Stones factory entrance" },
+      { src: "/images/off-campus/hmg-stones-8.jpg", alt: "HMG Stones visit - learning about finished stone flooring products" },
+    ],
+  },
 ];
 
 const allPhotos = offCampusGalleries.flatMap(g => g.photos);
