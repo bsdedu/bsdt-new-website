@@ -4,6 +4,8 @@ import { RevealSection } from '@/components/ui-elements/RevealSection';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui-elements/Card';
 import { Pencil, Lightbulb, Users, Trophy } from 'lucide-react';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
 
 export const DesignStudioSection: React.FC = () => {
   return (
@@ -82,13 +84,28 @@ export const DesignStudioSection: React.FC = () => {
             </div>
 
             <div className="relative rounded-2xl overflow-hidden h-[600px]">
-              <img 
-                src="/lovable-uploads/e155e509-59d8-4fcc-99bd-921efe113141.png" 
-                alt="Design Studio Collaborative Session" 
-                className="w-full h-full object-cover" 
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                <div className="absolute bottom-0 left-0 p-6">
+              <Carousel
+                opts={{ loop: true }}
+                plugins={[Autoplay({ delay: 3000, stopOnInteraction: false }) as any]}
+                className="w-full h-full"
+              >
+                <CarouselContent className="h-[600px]">
+                  {[
+                    { src: "/lovable-uploads/e155e509-59d8-4fcc-99bd-921efe113141.png", alt: "Design Studio Collaborative Session" },
+                    { src: "/images/design-studio-1.jpg", alt: "Design studio presentation session" },
+                    { src: "/images/design-studio-2.jpg", alt: "Design studio group photo" },
+                    { src: "/images/design-studio-3.jpg", alt: "Design studio interactive session" },
+                  ].map((img, i) => (
+                    <CarouselItem key={i} className="h-full">
+                      <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="left-3" />
+                <CarouselNext className="right-3" />
+              </Carousel>
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none">
+                <div className="p-6">
                   <p className="text-white font-medium text-lg">Students develop creative solutions under mentorship of industry professionals</p>
                 </div>
               </div>
