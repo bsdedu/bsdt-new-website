@@ -114,6 +114,16 @@ const siteVisitGalleries = [
       { src: "/images/site-visits/ceramique-tile-5.jpg", alt: "Ceramique Tile Showroom visit - group photo at showroom" },
     ],
   },
+  {
+    title: "Outdoor Connections",
+    photos: [
+      { src: "/images/site-visits/outdoor-connections-1.jpg", alt: "Outdoor Connections visit - group photo at tropical outdoor furniture showroom" },
+      { src: "/images/site-visits/outdoor-connections-2.jpg", alt: "Outdoor Connections visit - students exploring staircase and interior decor" },
+      { src: "/images/site-visits/outdoor-connections-3.jpg", alt: "Outdoor Connections visit - outdoor dining and lounge area tour" },
+      { src: "/images/site-visits/outdoor-connections-4.jpg", alt: "Outdoor Connections visit - indoor presentation and discussion" },
+      { src: "/images/site-visits/outdoor-connections-5.jpg", alt: "Outdoor Connections visit - outdoor living space walkthrough" },
+    ],
+  },
 ];
 
 // Flatten all photos for lightbox navigation
