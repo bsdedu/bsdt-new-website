@@ -1,10 +1,31 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { RevealSection } from '@/components/ui-elements/RevealSection';
 import { Badge } from '@/components/ui/badge';
-import { Map, Briefcase, Clock, Award } from 'lucide-react';
+import { Map, Briefcase, Clock, Award, X, ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
+import { Dialog, DialogContent } from '@/components/ui/dialog';
+
+const offCampusGalleries = [
+  {
+    title: "Coming Soon",
+    photos: [
+      { src: "/placeholder.svg", alt: "Off-campus learning experience" },
+    ],
+  },
+];
+
+const allPhotos = offCampusGalleries.flatMap(g => g.photos);
 
 export const OffCampusSection: React.FC = () => {
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const [activeGallery, setActiveGallery] = useState<number | null>(null);
+  const [showAll, setShowAll] = useState(false);
+
+  const openLightbox = (index: number) => setSelectedImage(index);
+  const closeLightbox = () => setSelectedImage(null);
+  const goToPrev = () => setSelectedImage((prev) => prev !== null ? (prev - 1 + allPhotos.length) % allPhotos.length : null);
+  const goToNext = () => setSelectedImage((prev) => prev !== null ? (prev + 1) % allPhotos.length : null);
+
   return (
     <section id="off-campus" className="py-16 bg-bsd-light-gray">
       <div className="container mx-auto px-6 md:px-8">
@@ -21,7 +42,7 @@ export const OffCampusSection: React.FC = () => {
         </RevealSection>
 
         <RevealSection delay={100}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             <div className="bg-white rounded-xl p-6 shadow-sm">
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-bsd-orange/10 mt-1">
@@ -79,6 +100,130 @@ export const OffCampusSection: React.FC = () => {
             </div>
           </div>
         </RevealSection>
+
+        {/* Off-Campus Gallery */}
+        <RevealSection delay={200}>
+          <div className="mb-8">
+            {activeGallery === null ? (
+              <div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {(showAll ? offCampusGalleries : offCampusGalleries.slice(0, 3)).map((gallery, gIndex) => (
+                    <div
+                      key={gIndex}
+                      className="relative rounded-2xl overflow-hidden cursor-pointer group h-64"
+                      onClick={() => setActiveGallery(gIndex)}
+                    >
+                      <img
+                        src={gallery.photos[0].src}
+                        alt={gallery.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                      <div className="absolute bottom-0 left-0 right-0 p-5">
+                        <h4 className="text-white font-semibold text-lg">{gallery.title}</h4>
+                        <p className="text-white/70 text-sm mt-1">{gallery.photos.length} Photos</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                {!showAll && offCampusGalleries.length > 3 && (
+                  <div className="flex justify-center mt-8">
+                    <button
+                      onClick={() => setShowAll(true)}
+                      className="flex items-center gap-2 px-6 py-3 bg-bsd-orange text-white rounded-full font-medium hover:bg-bsd-orange/90 transition-colors"
+                    >
+                      View More ({offCampusGalleries.length - 3} more)
+                      <ChevronDown className="w-4 h-4" />
+                    </button>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div>
+                <button
+                  onClick={() => setActiveGallery(null)}
+                  className="flex items-center gap-2 text-bsd-orange font-medium mb-6 hover:underline"
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                  Back to all experiences
+                </button>
+                <h4 className="text-xl font-semibold text-bsd-gray mb-4">{offCampusGalleries[activeGallery].title}</h4>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                  {offCampusGalleries[activeGallery].photos.map((photo, index) => {
+                    const globalOffset = offCampusGalleries.slice(0, activeGallery).reduce((acc, g) => acc + g.photos.length, 0);
+                    return (
+                      <div
+                        key={index}
+                        className="relative aspect-square overflow-hidden rounded-xl cursor-pointer group"
+                        onClick={() => openLightbox(globalOffset + index)}
+                      >
+                        <img
+                          src={photo.src}
+                          alt={photo.alt}
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+          </div>
+        </RevealSection>
+
+        {/* Lightbox */}
+        <Dialog open={selectedImage !== null} onOpenChange={() => closeLightbox()}>
+          <DialogContent className="max-w-5xl p-0 bg-black/95 border-none">
+            <div className="relative w-full h-[80vh] flex items-center justify-center">
+              <button
+                onClick={closeLightbox}
+                className="absolute top-4 right-4 z-50 p-2 bg-white/10 hover:bg-white/20 rounded-full transition-colors"
+              >
+                <X className="w-5 h-5 text-white" />
+              </button>
+
+              {allPhotos.length > 1 && (
+                <>
+                  <button
+                    onClick={goToPrev}
+                    className="absolute left-4 z-50 p-2 bg-white/10 hover:bg-white/20 rounded-full transition-colors"
+                  >
+                    <ChevronLeft className="w-6 h-6 text-white" />
+                  </button>
+                  <button
+                    onClick={goToNext}
+                    className="absolute right-4 z-50 p-2 bg-white/10 hover:bg-white/20 rounded-full transition-colors"
+                  >
+                    <ChevronRight className="w-6 h-6 text-white" />
+                  </button>
+                </>
+              )}
+
+              {selectedImage !== null && (
+                <img
+                  src={allPhotos[selectedImage].src}
+                  alt={allPhotos[selectedImage].alt}
+                  className="max-w-full max-h-full object-contain p-4"
+                />
+              )}
+
+              {allPhotos.length > 1 && selectedImage !== null && (
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                  {allPhotos.map((_, i) => (
+                    <button
+                      key={i}
+                      onClick={() => setSelectedImage(i)}
+                      className={`w-2 h-2 rounded-full transition-colors ${i === selectedImage ? 'bg-white' : 'bg-white/40'}`}
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
+          </DialogContent>
+        </Dialog>
       </div>
     </section>
   );
