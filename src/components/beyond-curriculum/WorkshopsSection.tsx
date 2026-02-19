@@ -35,6 +35,17 @@ const workshopGalleries = [
       { src: "/images/workshops/bamboo-app-6.jpg", alt: "Bamboo Applications - group viewing bamboo art pieces" },
     ],
   },
+  {
+    title: "Bonsai Dorjee Workshop",
+    photos: [
+      { src: "/images/workshops/bonsai-1.jpg", alt: "Bonsai Dorjee Workshop - students planting bonsai in ceramic pot" },
+      { src: "/images/workshops/bonsai-2.jpg", alt: "Bonsai Dorjee Workshop - students working with plants and tools" },
+      { src: "/images/workshops/bonsai-3.jpg", alt: "Bonsai Dorjee Workshop - full class session with bonsai plants" },
+      { src: "/images/workshops/bonsai-4.jpg", alt: "Bonsai Dorjee Workshop - instructor Dorjee explaining techniques" },
+      { src: "/images/workshops/bonsai-5.jpg", alt: "Bonsai Dorjee Workshop - Dorjee demonstrating bonsai shaping" },
+      { src: "/images/workshops/bonsai-6.jpg", alt: "Bonsai Dorjee Workshop - finished bonsai tree with wire shaping" },
+    ],
+  },
 ];
 
 const allPhotos = workshopGalleries.flatMap(g => g.photos);
