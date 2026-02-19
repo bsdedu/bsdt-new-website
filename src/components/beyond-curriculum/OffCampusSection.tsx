@@ -46,6 +46,15 @@ const siteVisitGalleries = [
       { src: "/images/site-visits/canara-prints-4.jpg", alt: "Canara Prints visit - post-press finishing" },
     ],
   },
+  {
+    title: "Residential Site Visit",
+    photos: [
+      { src: "/images/site-visits/residential-1.jpg", alt: "Residential site visit - group photo at construction site" },
+      { src: "/images/site-visits/residential-2.jpg", alt: "Residential site visit - interior work in progress" },
+      { src: "/images/site-visits/residential-3.jpg", alt: "Residential site visit - contractor briefing" },
+      { src: "/images/site-visits/residential-4.jpg", alt: "Residential site visit - material discussion" },
+    ],
+  },
 ];
 
 // Flatten all photos for lightbox navigation
