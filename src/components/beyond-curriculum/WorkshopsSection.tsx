@@ -71,6 +71,21 @@ const workshopGalleries = [
       { src: "/images/workshops/clay-6.jpg", alt: "Clay Pottery Workshop - finished clay sculptures display" },
     ],
   },
+  {
+    title: "Coffee Painting Workshop",
+    photos: [
+      { src: "/images/workshops/coffee-1.jpg", alt: "Coffee Painting Workshop - artistic coffee painting of florals and portrait" },
+      { src: "/images/workshops/coffee-2.jpg", alt: "Coffee Painting Workshop - students working on coffee paintings in studio" },
+      { src: "/images/workshops/coffee-3.jpg", alt: "Coffee Painting Workshop - group painting session" },
+      { src: "/images/workshops/coffee-4.jpg", alt: "Coffee Painting Workshop - students painting on floor" },
+      { src: "/images/workshops/coffee-5.jpg", alt: "Coffee Painting Workshop - focused painting with coffee medium" },
+      { src: "/images/workshops/coffee-6.jpg", alt: "Coffee Painting Workshop - student creating detailed portrait" },
+      { src: "/images/workshops/coffee-7.jpg", alt: "Coffee Painting Workshop - students experimenting with coffee shades" },
+      { src: "/images/workshops/coffee-8.jpg", alt: "Coffee Painting Workshop - group discussion while painting" },
+      { src: "/images/workshops/coffee-9.jpg", alt: "Coffee Painting Workshop - detailed eye painting using coffee" },
+      { src: "/images/workshops/coffee-10.jpg", alt: "Coffee Painting Workshop - exhibition of student coffee paintings" },
+    ],
+  },
 ];
 
 const allPhotos = workshopGalleries.flatMap(g => g.photos);
