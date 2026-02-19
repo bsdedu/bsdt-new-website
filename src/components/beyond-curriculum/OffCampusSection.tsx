@@ -56,6 +56,16 @@ const siteVisitGalleries = [
     ],
   },
   {
+    title: "Presidency Cafeteria",
+    photos: [
+      { src: "/images/site-visits/presidency-cafeteria-1.jpg", alt: "Presidency Cafeteria visit - group photo in cafeteria space" },
+      { src: "/images/site-visits/presidency-cafeteria-2.jpg", alt: "Presidency Cafeteria visit - students studying furniture design" },
+      { src: "/images/site-visits/presidency-cafeteria-3.jpg", alt: "Presidency Cafeteria visit - measuring seating structure" },
+      { src: "/images/site-visits/presidency-cafeteria-4.jpg", alt: "Presidency Cafeteria visit - interior ceiling and seating layout" },
+      { src: "/images/site-visits/presidency-cafeteria-5.jpg", alt: "Presidency Cafeteria visit - documenting metal framework details" },
+    ],
+  },
+  {
     title: "Residential Site Visit",
     photos: [
       { src: "/images/site-visits/residential-1.jpg", alt: "Residential site visit - group photo at construction site" },
