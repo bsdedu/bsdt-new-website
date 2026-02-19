@@ -31,6 +31,18 @@ const offCampusGalleries = [
       { src: "/images/off-campus/bangalore-circus-8.jpg", alt: "Bangalore Circus visit - studying retro-themed upcycled interiors" },
     ],
   },
+  {
+    title: "Channapatna Toy Factory",
+    photos: [
+      { src: "/images/off-campus/channapatna-toy-1.jpg", alt: "Channapatna Toy Factory visit - students interacting with artisans at the workshop" },
+      { src: "/images/off-campus/channapatna-toy-2.jpg", alt: "Channapatna Toy Factory visit - examining lacquerware turning process" },
+      { src: "/images/off-campus/channapatna-toy-3.jpg", alt: "Channapatna Toy Factory visit - student trying wood turning on lathe" },
+      { src: "/images/off-campus/channapatna-toy-4.jpg", alt: "Channapatna Toy Factory visit - student showcasing handcrafted lacquer bead" },
+      { src: "/images/off-campus/channapatna-toy-5.jpg", alt: "Channapatna Toy Factory visit - guided tour of factory machinery" },
+      { src: "/images/off-campus/channapatna-toy-6.jpg", alt: "Channapatna Toy Factory visit - observing artisans at wood turning stations" },
+      { src: "/images/off-campus/channapatna-toy-7.jpg", alt: "Channapatna Toy Factory visit - students documenting craft demonstration" },
+    ],
+  },
 ];
 
 const allPhotos = offCampusGalleries.flatMap(g => g.photos);
