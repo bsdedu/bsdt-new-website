@@ -53,7 +53,7 @@ export const navStructure: NavStructure[] = [
     type: 'dropdown',
     items: [
       { name: 'Application Process', href: '/admissions/application-process' },
-      { name: 'Scholarships', href: '/admissions/fees-scholarships' },
+      { name: 'Scholarships & Support', href: '/admissions/fees-scholarships' },
       { name: 'Schedule a Campus Visit', href: '/plan-a-visit' },
       { name: 'Faculty', href: '/faculty' },
       { name: 'Skill-Enhancing Electives', href: '/academics/skill-enhancing-electives' },
