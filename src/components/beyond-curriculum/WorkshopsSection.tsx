@@ -18,6 +18,10 @@ const workshopGalleries = [
       { src: "/images/workshops/bamboo-7.jpg", alt: "Bamboo Workshop - students learning rope knotting techniques" },
       { src: "/images/workshops/bamboo-8.jpg", alt: "Bamboo Workshop - group assembling bamboo structure on floor" },
       { src: "/images/workshops/bamboo-9.jpg", alt: "Bamboo Workshop - collaborative bamboo construction" },
+      { src: "/images/workshops/bamboo-10.jpg", alt: "Bamboo Workshop - installing bamboo panel on scaffolding" },
+      { src: "/images/workshops/bamboo-11.jpg", alt: "Bamboo Workshop - mounting bamboo installation on wall" },
+      { src: "/images/workshops/bamboo-12.jpg", alt: "Bamboo Workshop - students tying bamboo with coir rope outdoors" },
+      { src: "/images/workshops/bamboo-13.jpg", alt: "Bamboo Workshop - assembled bamboo panel with rope binding" },
     ],
   },
 ];
