@@ -94,6 +94,16 @@ const siteVisitGalleries = [
       { src: "/images/site-visits/residential-4.jpg", alt: "Residential site visit - material discussion" },
     ],
   },
+  {
+    title: "Residential Site Visit 2",
+    photos: [
+      { src: "/images/site-visits/residential-2-1.jpg", alt: "Residential site visit 2 - inspecting staircase stonework" },
+      { src: "/images/site-visits/residential-2-2.jpg", alt: "Residential site visit 2 - wall tile installation review" },
+      { src: "/images/site-visits/residential-2-3.jpg", alt: "Residential site visit 2 - exterior facade discussion" },
+      { src: "/images/site-visits/residential-2-4.jpg", alt: "Residential site visit 2 - staircase construction walkthrough" },
+      { src: "/images/site-visits/residential-2-5.jpg", alt: "Residential site visit 2 - terrace flooring inspection" },
+    ],
+  },
 ];
 
 // Flatten all photos for lightbox navigation
