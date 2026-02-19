@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { RevealSection } from '@/components/ui-elements/RevealSection';
 import { Badge } from '@/components/ui/badge';
-import { Map, Briefcase, Clock, Award, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Map, Briefcase, Clock, Award, X, ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 
 const siteVisitGalleries = [
@@ -102,6 +102,7 @@ const allPhotos = siteVisitGalleries.flatMap(g => g.photos);
 export const OffCampusSection: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [activeGallery, setActiveGallery] = useState<number | null>(null);
+  const [showAll, setShowAll] = useState(false);
 
   const openLightbox = (index: number) => setSelectedImage(index);
   const closeLightbox = () => setSelectedImage(null);
@@ -188,26 +189,42 @@ export const OffCampusSection: React.FC = () => {
             <h3 className="text-2xl font-semibold text-bsd-gray text-center mb-8">Site Visit Gallery</h3>
             
             {activeGallery === null ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {siteVisitGalleries.map((gallery, gIndex) => (
-                  <div
-                    key={gIndex}
-                    className="relative rounded-2xl overflow-hidden cursor-pointer group h-64"
-                    onClick={() => setActiveGallery(gIndex)}
-                  >
-                    <img
-                      src={gallery.photos[0].src}
-                      alt={gallery.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-5">
-                      <h4 className="text-white font-semibold text-lg">{gallery.title}</h4>
-                      <p className="text-white/70 text-sm mt-1">{gallery.photos.length} Photos</p>
-                    </div>
+              <div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {(showAll ? siteVisitGalleries : siteVisitGalleries.slice(0, 3)).map((gallery, gIndex) => {
+                    const actualIndex = showAll ? gIndex : gIndex;
+                    return (
+                      <div
+                        key={gIndex}
+                        className="relative rounded-2xl overflow-hidden cursor-pointer group h-64"
+                        onClick={() => setActiveGallery(showAll ? gIndex : gIndex)}
+                      >
+                        <img
+                          src={gallery.photos[0].src}
+                          alt={gallery.title}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                        <div className="absolute bottom-0 left-0 right-0 p-5">
+                          <h4 className="text-white font-semibold text-lg">{gallery.title}</h4>
+                          <p className="text-white/70 text-sm mt-1">{gallery.photos.length} Photos</p>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+                {!showAll && siteVisitGalleries.length > 3 && (
+                  <div className="flex justify-center mt-8">
+                    <button
+                      onClick={() => setShowAll(true)}
+                      className="flex items-center gap-2 px-6 py-3 bg-bsd-orange text-white rounded-full font-medium hover:bg-bsd-orange/90 transition-colors"
+                    >
+                      View More ({siteVisitGalleries.length - 3} more)
+                      <ChevronDown className="w-4 h-4" />
+                    </button>
                   </div>
-                ))}
+                )}
               </div>
             ) : (
               <div>
