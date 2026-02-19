@@ -132,6 +132,16 @@ const offCampusGalleries = [
       { src: "/images/off-campus/rangoli-10.jpg", alt: "Rangoli Metro Art Centre - leaf sketch with real leaf reference" },
     ],
   },
+  {
+    title: "Samsung Opera House",
+    photos: [
+      { src: "/images/off-campus/samsung-opera-1.jpg", alt: "Samsung Opera House - group photo outside the heritage building" },
+      { src: "/images/off-campus/samsung-opera-2.jpg", alt: "Samsung Opera House - interior view of grand hall with ring chandeliers" },
+      { src: "/images/off-campus/samsung-opera-3.jpg", alt: "Samsung Opera House - heritage arched corridor with modern retail displays" },
+      { src: "/images/off-campus/samsung-opera-4.jpg", alt: "Samsung Opera House - group photo on the amphitheatre steps" },
+      { src: "/images/off-campus/samsung-opera-5.jpg", alt: "Samsung Opera House - exploring the showroom with vaulted ceiling lighting" },
+    ],
+  },
 ];
 
 const allPhotos = offCampusGalleries.flatMap(g => g.photos);
