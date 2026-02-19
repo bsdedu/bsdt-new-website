@@ -103,6 +103,20 @@ const offCampusGalleries = [
       { src: "/images/off-campus/ikea-10.jpg", alt: "IKEA visit - exploring textile and rug displays" },
     ],
   },
+  {
+    title: "Outdoor Sketching at Rachanalli Lake",
+    photos: [
+      { src: "/images/off-campus/rachanalli-1.jpg", alt: "Rachanalli Lake - student painting watercolor flowers outdoors" },
+      { src: "/images/off-campus/rachanalli-2.jpg", alt: "Rachanalli Lake - students sketching and painting nature on the lawn" },
+      { src: "/images/off-campus/rachanalli-3.jpg", alt: "Rachanalli Lake - close-up of student drawing tropical plant with colored pencils" },
+      { src: "/images/off-campus/rachanalli-4.jpg", alt: "Rachanalli Lake - student sketching flowers using phone reference" },
+      { src: "/images/off-campus/rachanalli-5.jpg", alt: "Rachanalli Lake - colored pencil sketch of a palm tree" },
+      { src: "/images/off-campus/rachanalli-6.jpg", alt: "Rachanalli Lake - students photographing flowers and plants by the lakeside path" },
+      { src: "/images/off-campus/rachanalli-7.jpg", alt: "Rachanalli Lake - students sketching outdoors on the green lawn" },
+      { src: "/images/off-campus/rachanalli-8.jpg", alt: "Rachanalli Lake - pencil sketch of leaves and branches" },
+      { src: "/images/off-campus/rachanalli-9.jpg", alt: "Rachanalli Lake - group sketching session under the lakeside gazebo" },
+    ],
+  },
 ];
 
 const allPhotos = offCampusGalleries.flatMap(g => g.photos);
