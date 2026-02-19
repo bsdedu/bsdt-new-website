@@ -7,9 +7,15 @@ import { Dialog, DialogContent } from '@/components/ui/dialog';
 
 const offCampusGalleries = [
   {
-    title: "Coming Soon",
+    title: "Bangalore Palace Visit",
     photos: [
-      { src: "/placeholder.svg", alt: "Off-campus learning experience" },
+      { src: "/images/off-campus/bangalore-palace-1.jpg", alt: "Bangalore Palace visit - students exploring gothic archway interior" },
+      { src: "/images/off-campus/bangalore-palace-2.jpg", alt: "Bangalore Palace visit - guided tour of ornate wooden doorways" },
+      { src: "/images/off-campus/bangalore-palace-3.jpg", alt: "Bangalore Palace visit - studying heritage architecture and artwork" },
+      { src: "/images/off-campus/bangalore-palace-4.jpg", alt: "Bangalore Palace visit - group photo at the palace courtyard" },
+      { src: "/images/off-campus/bangalore-palace-5.jpg", alt: "Bangalore Palace visit - walking through decorated corridors" },
+      { src: "/images/off-campus/bangalore-palace-6.jpg", alt: "Bangalore Palace visit - examining intricate wall patterns and chandeliers" },
+      { src: "/images/off-campus/bangalore-palace-7.jpg", alt: "Bangalore Palace visit - group photo in front of the palace" },
     ],
   },
 ];
