@@ -62,7 +62,7 @@ const allPhotos = siteVisitGalleries.flatMap(g => g.photos);
 
 export const OffCampusSection: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
-  const [showAll, setShowAll] = useState(false);
+  const [activeGallery, setActiveGallery] = useState<number | null>(null);
 
   const openLightbox = (index: number) => setSelectedImage(index);
   const closeLightbox = () => setSelectedImage(null);
@@ -147,13 +147,43 @@ export const OffCampusSection: React.FC = () => {
         <RevealSection delay={200}>
           <div className="mb-8">
             <h3 className="text-2xl font-semibold text-bsd-gray text-center mb-8">Site Visit Gallery</h3>
-            {(showAll ? siteVisitGalleries : siteVisitGalleries.slice(0, 1)).map((gallery, gIndex) => {
-              const globalOffset = siteVisitGalleries.slice(0, showAll ? gIndex : 0).reduce((acc, g) => acc + g.photos.length, 0);
-              return (
-                <div key={gIndex} className="mb-10">
-                  <h4 className="text-lg font-medium text-bsd-gray mb-4">{gallery.title}</h4>
-                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {gallery.photos.map((photo, index) => (
+            
+            {activeGallery === null ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {siteVisitGalleries.map((gallery, gIndex) => (
+                  <div
+                    key={gIndex}
+                    className="relative rounded-2xl overflow-hidden cursor-pointer group h-64"
+                    onClick={() => setActiveGallery(gIndex)}
+                  >
+                    <img
+                      src={gallery.photos[0].src}
+                      alt={gallery.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-5">
+                      <h4 className="text-white font-semibold text-lg">{gallery.title}</h4>
+                      <p className="text-white/70 text-sm mt-1">{gallery.photos.length} Photos</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div>
+                <button
+                  onClick={() => setActiveGallery(null)}
+                  className="flex items-center gap-2 text-bsd-orange font-medium mb-6 hover:underline"
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                  Back to all visits
+                </button>
+                <h4 className="text-xl font-semibold text-bsd-gray mb-4">{siteVisitGalleries[activeGallery].title}</h4>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                  {siteVisitGalleries[activeGallery].photos.map((photo, index) => {
+                    const globalOffset = siteVisitGalleries.slice(0, activeGallery).reduce((acc, g) => acc + g.photos.length, 0);
+                    return (
                       <div
                         key={index}
                         className="relative aspect-square overflow-hidden rounded-xl cursor-pointer group"
@@ -167,19 +197,9 @@ export const OffCampusSection: React.FC = () => {
                         />
                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
                       </div>
-                    ))}
-                  </div>
+                    );
+                  })}
                 </div>
-              );
-            })}
-            {siteVisitGalleries.length > 1 && (
-              <div className="text-center mt-6">
-                <button
-                  onClick={() => setShowAll(!showAll)}
-                  className="px-6 py-2.5 rounded-lg bg-bsd-orange text-white font-medium hover:bg-bsd-orange/90 transition-colors"
-                >
-                  {showAll ? 'Show Less' : `View More (${siteVisitGalleries.length - 1} more)`}
-                </button>
               </div>
             )}
           </div>
