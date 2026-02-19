@@ -47,6 +47,16 @@ const siteVisitGalleries = [
     ],
   },
   {
+    title: "Cane Showroom",
+    photos: [
+      { src: "/images/site-visits/cane-showroom-1.jpg", alt: "Cane Showroom visit - artisan demonstrating cane weaving" },
+      { src: "/images/site-visits/cane-showroom-2.jpg", alt: "Cane Showroom visit - students examining cane craftsmanship" },
+      { src: "/images/site-visits/cane-showroom-3.jpg", alt: "Cane Showroom visit - handcrafted cane furniture display" },
+      { src: "/images/site-visits/cane-showroom-4.jpg", alt: "Cane Showroom visit - group photo with cane furniture collection" },
+      { src: "/images/site-visits/cane-showroom-5.jpg", alt: "Cane Showroom visit - students studying cane weaving techniques" },
+    ],
+  },
+  {
     title: "Carpentry Studio",
     photos: [
       { src: "/images/site-visits/carpentry-studio-1.jpg", alt: "Carpentry studio visit - craftsman demonstrating wood joinery" },
