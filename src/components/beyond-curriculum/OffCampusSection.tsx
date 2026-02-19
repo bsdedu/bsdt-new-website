@@ -24,6 +24,15 @@ const siteVisitGalleries = [
       { src: "/images/site-visits/bodycraft-4.jpg", alt: "Bodycraft case study - reception and lobby" },
     ],
   },
+  {
+    title: "Brick Factory Visit",
+    photos: [
+      { src: "/images/site-visits/brick-factory-1.jpg", alt: "Brick factory visit - group photo" },
+      { src: "/images/site-visits/brick-factory-2.jpg", alt: "Brick factory visit - brick making process" },
+      { src: "/images/site-visits/brick-factory-3.jpg", alt: "Brick factory visit - outdoor discussion" },
+      { src: "/images/site-visits/brick-factory-4.jpg", alt: "Brick factory visit - handmade brick crafting" },
+    ],
+  },
 ];
 
 // Flatten all photos for lightbox navigation
