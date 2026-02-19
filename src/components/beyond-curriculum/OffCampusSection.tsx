@@ -47,6 +47,15 @@ const siteVisitGalleries = [
     ],
   },
   {
+    title: "Carpentry Studio",
+    photos: [
+      { src: "/images/site-visits/carpentry-studio-1.jpg", alt: "Carpentry studio visit - craftsman demonstrating wood joinery" },
+      { src: "/images/site-visits/carpentry-studio-2.jpg", alt: "Carpentry studio visit - students learning from master carpenter" },
+      { src: "/images/site-visits/carpentry-studio-3.jpg", alt: "Carpentry studio visit - workshop floor tour" },
+      { src: "/images/site-visits/carpentry-studio-4.jpg", alt: "Carpentry studio visit - group photo with carpenter" },
+    ],
+  },
+  {
     title: "Residential Site Visit",
     photos: [
       { src: "/images/site-visits/residential-1.jpg", alt: "Residential site visit - group photo at construction site" },
