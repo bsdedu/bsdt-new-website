@@ -217,61 +217,8 @@ export const SiteVisitsSection: React.FC = () => {
           </div>
         </RevealSection>
 
-        <RevealSection delay={200}>
-          <div className="mt-12 bg-bsd-light-gray rounded-xl p-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-              <div>
-                <h3 className="text-2xl font-semibold text-bsd-gray mb-4">Site Visit Process</h3>
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 rounded-full bg-bsd-orange flex items-center justify-center text-white font-medium flex-shrink-0">1</div>
-                    <div>
-                      <h4 className="font-medium text-bsd-gray">Pre-Visit Preparation</h4>
-                      <p className="text-sm text-foreground/70 mt-1">Students research the site and prepare specific learning objectives and questions to maximize the educational value of the visit.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 rounded-full bg-bsd-orange flex items-center justify-center text-white font-medium flex-shrink-0">2</div>
-                    <div>
-                      <h4 className="font-medium text-bsd-gray">Guided Exploration</h4>
-                      <p className="text-sm text-foreground/70 mt-1">Faculty members and industry experts guide students through the site, highlighting key features and explaining relevant processes and principles.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 rounded-full bg-bsd-orange flex items-center justify-center text-white font-medium flex-shrink-0">3</div>
-                    <div>
-                      <h4 className="font-medium text-bsd-gray">Interactive Sessions</h4>
-                      <p className="text-sm text-foreground/70 mt-1">Q&A sessions with professionals at the site allow students to gain deeper insights and understand practical applications of their studies.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 rounded-full bg-bsd-orange flex items-center justify-center text-white font-medium flex-shrink-0">4</div>
-                    <div>
-                      <h4 className="font-medium text-bsd-gray">Reflective Analysis</h4>
-                      <p className="text-sm text-foreground/70 mt-1">Following the visit, students document their observations, analyze what they've learned, and apply these insights to their coursework.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="relative rounded-2xl overflow-hidden h-[400px]">
-                <img 
-                  src="/lovable-uploads/site-visit-process.jpg" 
-                  alt="Students on site visit" 
-                  className="w-full h-full object-cover" 
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                  <div className="absolute bottom-0 left-0 p-6">
-                    <p className="text-white font-medium text-lg">Learning through direct observation and professional interaction</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </RevealSection>
-
         {/* Site Visit Gallery */}
-        <RevealSection delay={300}>
+        <RevealSection delay={200}>
           <div className="mt-12">
             {activeGallery === null ? (
               <div>
@@ -340,6 +287,59 @@ export const SiteVisitsSection: React.FC = () => {
                 </div>
               </div>
             )}
+          </div>
+        </RevealSection>
+
+        <RevealSection delay={300}>
+          <div className="mt-12 bg-bsd-light-gray rounded-xl p-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+              <div>
+                <h3 className="text-2xl font-semibold text-bsd-gray mb-4">Site Visit Process</h3>
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-8 h-8 rounded-full bg-bsd-orange flex items-center justify-center text-white font-medium flex-shrink-0">1</div>
+                    <div>
+                      <h4 className="font-medium text-bsd-gray">Pre-Visit Preparation</h4>
+                      <p className="text-sm text-foreground/70 mt-1">Students research the site and prepare specific learning objectives and questions to maximize the educational value of the visit.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-8 h-8 rounded-full bg-bsd-orange flex items-center justify-center text-white font-medium flex-shrink-0">2</div>
+                    <div>
+                      <h4 className="font-medium text-bsd-gray">Guided Exploration</h4>
+                      <p className="text-sm text-foreground/70 mt-1">Faculty members and industry experts guide students through the site, highlighting key features and explaining relevant processes and principles.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-8 h-8 rounded-full bg-bsd-orange flex items-center justify-center text-white font-medium flex-shrink-0">3</div>
+                    <div>
+                      <h4 className="font-medium text-bsd-gray">Interactive Sessions</h4>
+                      <p className="text-sm text-foreground/70 mt-1">Q&A sessions with professionals at the site allow students to gain deeper insights and understand practical applications of their studies.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-8 h-8 rounded-full bg-bsd-orange flex items-center justify-center text-white font-medium flex-shrink-0">4</div>
+                    <div>
+                      <h4 className="font-medium text-bsd-gray">Reflective Analysis</h4>
+                      <p className="text-sm text-foreground/70 mt-1">Following the visit, students document their observations, analyze what they've learned, and apply these insights to their coursework.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="relative rounded-2xl overflow-hidden h-[400px]">
+                <img 
+                  src="/lovable-uploads/site-visit-process.jpg" 
+                  alt="Students on site visit" 
+                  className="w-full h-full object-cover" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                  <div className="absolute bottom-0 left-0 p-6">
+                    <p className="text-white font-medium text-lg">Learning through direct observation and professional interaction</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </RevealSection>
 
