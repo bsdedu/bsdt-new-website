@@ -37,6 +37,12 @@ const siteVisitGalleries = [
       { src: "/images/site-visits/brick-factory-8.jpg", alt: "Brick & timber factory visit - warehouse walkthrough" },
     ],
   },
+  {
+    title: "Canara Prints",
+    photos: [
+      { src: "/images/site-visits/canara-prints-1.jpg", alt: "Canara Prints visit - print production review" },
+    ],
+  },
 ];
 
 // Flatten all photos for lightbox navigation
