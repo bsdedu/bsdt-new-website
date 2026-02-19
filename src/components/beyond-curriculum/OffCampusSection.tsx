@@ -69,6 +69,11 @@ const offCampusGalleries = [
       { src: "/images/off-campus/hmg-stones-6.jpg", alt: "HMG Stones visit - observing industrial stone processing equipment" },
       { src: "/images/off-campus/hmg-stones-7.jpg", alt: "HMG Stones visit - group photo at the HMG Stones factory entrance" },
       { src: "/images/off-campus/hmg-stones-8.jpg", alt: "HMG Stones visit - learning about finished stone flooring products" },
+      { src: "/images/off-campus/hmg-stones-9.jpg", alt: "HMG Stones visit - guided tour of exotic stone slab warehouse" },
+      { src: "/images/off-campus/hmg-stones-10.jpg", alt: "HMG Stones visit - students observing stone cutting and polishing machinery" },
+      { src: "/images/off-campus/hmg-stones-11.jpg", alt: "HMG Stones visit - arriving at the HMG Stones showroom entrance" },
+      { src: "/images/off-campus/hmg-stones-12.jpg", alt: "HMG Stones visit - students and faculty at the stone-clad entrance lobby" },
+      { src: "/images/off-campus/hmg-stones-13.jpg", alt: "HMG Stones visit - exploring backlit onyx and marble display gallery" },
     ],
   },
 ];
