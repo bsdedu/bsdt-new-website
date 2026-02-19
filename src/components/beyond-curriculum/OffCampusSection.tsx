@@ -25,12 +25,16 @@ const siteVisitGalleries = [
     ],
   },
   {
-    title: "Brick Factory Visit",
+    title: "Brick & Timber Factory Visit",
     photos: [
-      { src: "/images/site-visits/brick-factory-1.jpg", alt: "Brick factory visit - group photo" },
-      { src: "/images/site-visits/brick-factory-2.jpg", alt: "Brick factory visit - brick making process" },
-      { src: "/images/site-visits/brick-factory-3.jpg", alt: "Brick factory visit - outdoor discussion" },
-      { src: "/images/site-visits/brick-factory-4.jpg", alt: "Brick factory visit - handmade brick crafting" },
+      { src: "/images/site-visits/brick-factory-1.jpg", alt: "Brick & timber factory visit - group photo" },
+      { src: "/images/site-visits/brick-factory-2.jpg", alt: "Brick & timber factory visit - brick making process" },
+      { src: "/images/site-visits/brick-factory-3.jpg", alt: "Brick & timber factory visit - outdoor discussion" },
+      { src: "/images/site-visits/brick-factory-4.jpg", alt: "Brick & timber factory visit - handmade brick crafting" },
+      { src: "/images/site-visits/brick-factory-5.jpg", alt: "Brick & timber factory visit - timber planing machine" },
+      { src: "/images/site-visits/brick-factory-6.jpg", alt: "Brick & timber factory visit - factory floor tour" },
+      { src: "/images/site-visits/brick-factory-7.jpg", alt: "Brick & timber factory visit - wood processing" },
+      { src: "/images/site-visits/brick-factory-8.jpg", alt: "Brick & timber factory visit - warehouse walkthrough" },
     ],
   },
 ];
