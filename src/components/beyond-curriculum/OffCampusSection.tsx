@@ -76,6 +76,18 @@ const offCampusGalleries = [
       { src: "/images/off-campus/hmg-stones-13.jpg", alt: "HMG Stones visit - exploring backlit onyx and marble display gallery" },
     ],
   },
+  {
+    title: "Indianwood Exhibition",
+    photos: [
+      { src: "/images/off-campus/indianwood-1.jpg", alt: "Indianwood Exhibition - group photo at Bangalore International Exhibition Centre" },
+      { src: "/images/off-campus/indianwood-2.jpg", alt: "Indianwood Exhibition - students viewing intricate wood inlay artwork" },
+      { src: "/images/off-campus/indianwood-3.jpg", alt: "Indianwood Exhibition - exploring Fabio Furnishings upholstery display" },
+      { src: "/images/off-campus/indianwood-4.jpg", alt: "Indianwood Exhibition - admiring suspended wood veneer ceiling installation" },
+      { src: "/images/off-campus/indianwood-5.jpg", alt: "Indianwood Exhibition - browsing curtain and soft furnishing displays" },
+      { src: "/images/off-campus/indianwood-6.jpg", alt: "Indianwood Exhibition - studying fabric patterns and upholstery samples" },
+      { src: "/images/off-campus/indianwood-7.jpg", alt: "Indianwood Exhibition - examining metal coating solution samples" },
+    ],
+  },
 ];
 
 const allPhotos = offCampusGalleries.flatMap(g => g.photos);
