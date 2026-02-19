@@ -88,6 +88,21 @@ const offCampusGalleries = [
       { src: "/images/off-campus/indianwood-7.jpg", alt: "Indianwood Exhibition - examining metal coating solution samples" },
     ],
   },
+  {
+    title: "IKEA Visit",
+    photos: [
+      { src: "/images/off-campus/ikea-1.jpg", alt: "IKEA visit - group photo outside IKEA Home Furnishings store" },
+      { src: "/images/off-campus/ikea-2.jpg", alt: "IKEA visit - students exploring home decor and accessories display" },
+      { src: "/images/off-campus/ikea-3.jpg", alt: "IKEA visit - examining kitchen and dining room setups" },
+      { src: "/images/off-campus/ikea-4.jpg", alt: "IKEA visit - students studying sofa upholstery and materials" },
+      { src: "/images/off-campus/ikea-5.jpg", alt: "IKEA visit - exploring kitchen fixtures and faucet designs" },
+      { src: "/images/off-campus/ikea-6.jpg", alt: "IKEA visit - studying lighting and dining table arrangements" },
+      { src: "/images/off-campus/ikea-7.jpg", alt: "IKEA visit - group photo in textiles section" },
+      { src: "/images/off-campus/ikea-8.jpg", alt: "IKEA visit - group photo in lighting department" },
+      { src: "/images/off-campus/ikea-9.jpg", alt: "IKEA visit - students browsing wall-mounted lighting fixtures" },
+      { src: "/images/off-campus/ikea-10.jpg", alt: "IKEA visit - exploring textile and rug displays" },
+    ],
+  },
 ];
 
 const allPhotos = offCampusGalleries.flatMap(g => g.photos);
