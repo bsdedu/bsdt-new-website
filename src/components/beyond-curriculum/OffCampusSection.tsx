@@ -5,19 +5,28 @@ import { Badge } from '@/components/ui/badge';
 import { Map, Briefcase, Clock, Award, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 
-const siteVisitPhotos = [
-  { src: "/lovable-uploads/off-campus-exhibition.jpg", alt: "Students at art exhibition visit" },
-  // Add more site visit photos here:
-  // { src: "/images/site-visit-example.jpg", alt: "Description of the visit" },
+const siteVisitGalleries = [
+  {
+    title: "Bachelor's Pad",
+    photos: [
+      { src: "/images/site-visits/bachelors-pad-1.jpg", alt: "Bachelor's Pad site visit - living room walkthrough" },
+      { src: "/images/site-visits/bachelors-pad-2.jpg", alt: "Bachelor's Pad site visit - design elements discussion" },
+      { src: "/images/site-visits/bachelors-pad-3.jpg", alt: "Bachelor's Pad site visit - bedroom design review" },
+      { src: "/images/site-visits/bachelors-pad-4.jpg", alt: "Bachelor's Pad site visit - outdoor area tour" },
+    ],
+  },
 ];
+
+// Flatten all photos for lightbox navigation
+const allPhotos = siteVisitGalleries.flatMap(g => g.photos);
 
 export const OffCampusSection: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   const openLightbox = (index: number) => setSelectedImage(index);
   const closeLightbox = () => setSelectedImage(null);
-  const goToPrev = () => setSelectedImage((prev) => prev !== null ? (prev - 1 + siteVisitPhotos.length) % siteVisitPhotos.length : null);
-  const goToNext = () => setSelectedImage((prev) => prev !== null ? (prev + 1) % siteVisitPhotos.length : null);
+  const goToPrev = () => setSelectedImage((prev) => prev !== null ? (prev - 1 + allPhotos.length) % allPhotos.length : null);
+  const goToNext = () => setSelectedImage((prev) => prev !== null ? (prev + 1) % allPhotos.length : null);
 
   return (
     <section id="off-campus" className="py-16 bg-bsd-light-gray">
@@ -97,23 +106,31 @@ export const OffCampusSection: React.FC = () => {
         <RevealSection delay={200}>
           <div className="mb-8">
             <h3 className="text-2xl font-semibold text-bsd-gray text-center mb-8">Site Visit Gallery</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {siteVisitPhotos.map((photo, index) => (
-                <div
-                  key={index}
-                  className="relative aspect-square overflow-hidden rounded-xl cursor-pointer group"
-                  onClick={() => openLightbox(index)}
-                >
-                  <img
-                    src={photo.src}
-                    alt={photo.alt}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+            {siteVisitGalleries.map((gallery, gIndex) => {
+              const globalOffset = siteVisitGalleries.slice(0, gIndex).reduce((acc, g) => acc + g.photos.length, 0);
+              return (
+                <div key={gIndex} className="mb-10">
+                  <h4 className="text-lg font-medium text-bsd-gray mb-4">{gallery.title}</h4>
+                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    {gallery.photos.map((photo, index) => (
+                      <div
+                        key={index}
+                        className="relative aspect-square overflow-hidden rounded-xl cursor-pointer group"
+                        onClick={() => openLightbox(globalOffset + index)}
+                      >
+                        <img
+                          src={photo.src}
+                          alt={photo.alt}
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              ))}
-            </div>
+              );
+            })}
           </div>
         </RevealSection>
 
@@ -128,7 +145,7 @@ export const OffCampusSection: React.FC = () => {
                 <X className="w-5 h-5 text-white" />
               </button>
 
-              {siteVisitPhotos.length > 1 && (
+              {allPhotos.length > 1 && (
                 <>
                   <button
                     onClick={goToPrev}
@@ -147,15 +164,15 @@ export const OffCampusSection: React.FC = () => {
 
               {selectedImage !== null && (
                 <img
-                  src={siteVisitPhotos[selectedImage].src}
-                  alt={siteVisitPhotos[selectedImage].alt}
+                  src={allPhotos[selectedImage].src}
+                  alt={allPhotos[selectedImage].alt}
                   className="max-w-full max-h-full object-contain p-4"
                 />
               )}
 
-              {siteVisitPhotos.length > 1 && selectedImage !== null && (
+              {allPhotos.length > 1 && selectedImage !== null && (
                 <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-                  {siteVisitPhotos.map((_, i) => (
+                  {allPhotos.map((_, i) => (
                     <button
                       key={i}
                       onClick={() => setSelectedImage(i)}
