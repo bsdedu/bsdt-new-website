@@ -36,7 +36,7 @@ export const StudioOverview: React.FC = () => {
                 <p className="text-xl font-medium text-bsd-gray italic">
                   "Studio BSD has transformed how we approach design education – blending classroom learning with professional practice to create graduates who are job-ready from day one."
                 </p>
-                <p className="mt-2 text-bsd-orange">- Prof. Sanjay Jain, Director</p>
+                <p className="mt-2 text-bsd-orange">- Ar.Dineshwar siva , Director</p>
               </div>
             </div>
             
@@ -92,6 +92,6 @@ export const StudioOverview: React.FC = () => {
           </div>
         </RevealSection>
       </div>
-    </section>
-  );
+    </section>);
+
 };
