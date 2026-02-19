@@ -47,6 +47,16 @@ const siteVisitGalleries = [
     ],
   },
   {
+    title: "Sublime Art Gallery",
+    photos: [
+      { src: "/images/site-visits/sublime-art-gallery-1.jpg", alt: "Sublime Art Gallery visit - guided tour of artwork exhibitions" },
+      { src: "/images/site-visits/sublime-art-gallery-2.jpg", alt: "Sublime Art Gallery visit - students studying framed artwork" },
+      { src: "/images/site-visits/sublime-art-gallery-3.jpg", alt: "Sublime Art Gallery visit - observing portrait paintings" },
+      { src: "/images/site-visits/sublime-art-gallery-4.jpg", alt: "Sublime Art Gallery visit - exploring mixed media art collection" },
+      { src: "/images/site-visits/sublime-art-gallery-5.jpg", alt: "Sublime Art Gallery visit - discussion with gallery curator" },
+    ],
+  },
+  {
     title: "Cane Showroom",
     photos: [
       { src: "/images/site-visits/cane-showroom-1.jpg", alt: "Cane Showroom visit - artisan demonstrating cane weaving" },
