@@ -43,6 +43,21 @@ const offCampusGalleries = [
       { src: "/images/off-campus/channapatna-toy-7.jpg", alt: "Channapatna Toy Factory visit - students documenting craft demonstration" },
     ],
   },
+  {
+    title: "CKP Visit",
+    photos: [
+      { src: "/images/off-campus/ckp-visit-1.jpg", alt: "CKP visit - students browsing art gallery with paintings and sculptures" },
+      { src: "/images/off-campus/ckp-visit-2.jpg", alt: "CKP visit - students admiring large Buddha painting and artwork" },
+      { src: "/images/off-campus/ckp-visit-3.jpg", alt: "CKP visit - student examining horse painting and gallery sculptures" },
+      { src: "/images/off-campus/ckp-visit-4.jpg", alt: "CKP visit - students photographing abstract and contemporary artworks" },
+      { src: "/images/off-campus/ckp-visit-5.jpg", alt: "CKP visit - viewing modular leather cushion furniture installation" },
+      { src: "/images/off-campus/ckp-visit-6.jpg", alt: "CKP visit - exploring contemporary art and design exhibition space" },
+      { src: "/images/off-campus/ckp-visit-7.jpg", alt: "CKP visit - studying ceramic vase with rope sculpture artwork" },
+      { src: "/images/off-campus/ckp-visit-8.jpg", alt: "CKP visit - students discussing colorful Gond-style mural painting" },
+      { src: "/images/off-campus/ckp-visit-9.jpg", alt: "CKP visit - group photo at the College of Fine Arts entrance" },
+      { src: "/images/off-campus/ckp-visit-10.jpg", alt: "CKP visit - green cushion planter sculpture in exhibition hall" },
+    ],
+  },
 ];
 
 const allPhotos = offCampusGalleries.flatMap(g => g.photos);
