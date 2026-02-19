@@ -40,6 +40,7 @@ const allPhotos = siteVisitGalleries.flatMap(g => g.photos);
 
 export const OffCampusSection: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const [showAll, setShowAll] = useState(false);
 
   const openLightbox = (index: number) => setSelectedImage(index);
   const closeLightbox = () => setSelectedImage(null);
@@ -124,8 +125,8 @@ export const OffCampusSection: React.FC = () => {
         <RevealSection delay={200}>
           <div className="mb-8">
             <h3 className="text-2xl font-semibold text-bsd-gray text-center mb-8">Site Visit Gallery</h3>
-            {siteVisitGalleries.map((gallery, gIndex) => {
-              const globalOffset = siteVisitGalleries.slice(0, gIndex).reduce((acc, g) => acc + g.photos.length, 0);
+            {(showAll ? siteVisitGalleries : siteVisitGalleries.slice(0, 1)).map((gallery, gIndex) => {
+              const globalOffset = siteVisitGalleries.slice(0, showAll ? gIndex : 0).reduce((acc, g) => acc + g.photos.length, 0);
               return (
                 <div key={gIndex} className="mb-10">
                   <h4 className="text-lg font-medium text-bsd-gray mb-4">{gallery.title}</h4>
@@ -149,6 +150,16 @@ export const OffCampusSection: React.FC = () => {
                 </div>
               );
             })}
+            {siteVisitGalleries.length > 1 && (
+              <div className="text-center mt-6">
+                <button
+                  onClick={() => setShowAll(!showAll)}
+                  className="px-6 py-2.5 rounded-lg bg-bsd-orange text-white font-medium hover:bg-bsd-orange/90 transition-colors"
+                >
+                  {showAll ? 'Show Less' : `View More (${siteVisitGalleries.length - 1} more)`}
+                </button>
+              </div>
+            )}
           </div>
         </RevealSection>
 
