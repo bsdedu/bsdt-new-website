@@ -41,6 +41,9 @@ const siteVisitGalleries = [
     title: "Canara Prints",
     photos: [
       { src: "/images/site-visits/canara-prints-1.jpg", alt: "Canara Prints visit - print production review" },
+      { src: "/images/site-visits/canara-prints-2.jpg", alt: "Canara Prints visit - pre-press briefing" },
+      { src: "/images/site-visits/canara-prints-3.jpg", alt: "Canara Prints visit - offset printing machines" },
+      { src: "/images/site-visits/canara-prints-4.jpg", alt: "Canara Prints visit - post-press finishing" },
     ],
   },
 ];
