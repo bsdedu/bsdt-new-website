@@ -46,6 +46,20 @@ const workshopGalleries = [
       { src: "/images/workshops/bonsai-6.jpg", alt: "Bonsai Dorjee Workshop - finished bonsai tree with wire shaping" },
     ],
   },
+  {
+    title: "Bridge Building",
+    photos: [
+      { src: "/images/workshops/bridge-1.jpg", alt: "Bridge Building - popsicle stick truss structure" },
+      { src: "/images/workshops/bridge-2.jpg", alt: "Bridge Building - students assembling bridge model" },
+      { src: "/images/workshops/bridge-3.jpg", alt: "Bridge Building - testing bridge strength" },
+      { src: "/images/workshops/bridge-4.jpg", alt: "Bridge Building - load testing with stone weight" },
+      { src: "/images/workshops/bridge-5.jpg", alt: "Bridge Building - group load test with heavy stone" },
+      { src: "/images/workshops/bridge-6.jpg", alt: "Bridge Building - class observing bridge stress test" },
+      { src: "/images/workshops/bridge-7.jpg", alt: "Bridge Building - bridge holding concrete block" },
+      { src: "/images/workshops/bridge-8.jpg", alt: "Bridge Building - bridge supporting brick and stone" },
+      { src: "/images/workshops/bridge-9.jpg", alt: "Bridge Building - final load test with full class" },
+    ],
+  },
 ];
 
 const allPhotos = workshopGalleries.flatMap(g => g.photos);
