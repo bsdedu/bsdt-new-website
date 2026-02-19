@@ -7,27 +7,17 @@ import { Dialog, DialogContent } from '@/components/ui/dialog';
 
 const workshopGalleries = [
   {
-    title: "Digital Illustration Masterclass",
+    title: "Bamboo Workshop",
     photos: [
-      { src: "/lovable-uploads/digital-illustration-masterclass.jpg", alt: "Digital Illustration Masterclass - workshop session" },
-    ],
-  },
-  {
-    title: "Architectural Model Making",
-    photos: [
-      { src: "/lovable-uploads/architectural-model-making.jpg", alt: "Architectural Model Making - hands-on workshop" },
-    ],
-  },
-  {
-    title: "UI/UX Design Principles",
-    photos: [
-      { src: "/lovable-uploads/326dbcf6-d2e7-4a16-b000-bbee15c0156c.png", alt: "UI/UX Design Principles - interactive session" },
-    ],
-  },
-  {
-    title: "3D Animation Fundamentals",
-    photos: [
-      { src: "/lovable-uploads/3d-animation-fundamentals.jpg", alt: "3D Animation Fundamentals - workshop demo" },
+      { src: "/images/workshops/bamboo-1.jpg", alt: "Bamboo Workshop - instructor demonstrating bamboo selection" },
+      { src: "/images/workshops/bamboo-2.jpg", alt: "Bamboo Workshop - student lifting bamboo pole" },
+      { src: "/images/workshops/bamboo-3.jpg", alt: "Bamboo Workshop - numbered bamboo pieces laid out" },
+      { src: "/images/workshops/bamboo-4.jpg", alt: "Bamboo Workshop - students crafting bamboo planter" },
+      { src: "/images/workshops/bamboo-5.jpg", alt: "Bamboo Workshop - student wrapping coir rope on bamboo" },
+      { src: "/images/workshops/bamboo-6.jpg", alt: "Bamboo Workshop - team tying bamboo pieces together" },
+      { src: "/images/workshops/bamboo-7.jpg", alt: "Bamboo Workshop - students learning rope knotting techniques" },
+      { src: "/images/workshops/bamboo-8.jpg", alt: "Bamboo Workshop - group assembling bamboo structure on floor" },
+      { src: "/images/workshops/bamboo-9.jpg", alt: "Bamboo Workshop - collaborative bamboo construction" },
     ],
   },
 ];
