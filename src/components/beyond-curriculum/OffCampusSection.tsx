@@ -104,6 +104,16 @@ const siteVisitGalleries = [
       { src: "/images/site-visits/residential-2-5.jpg", alt: "Residential site visit 2 - terrace flooring inspection" },
     ],
   },
+  {
+    title: "Ceramique Tile Showroom",
+    photos: [
+      { src: "/images/site-visits/ceramique-tile-1.jpg", alt: "Ceramique Tile Showroom visit - students learning about tile varieties" },
+      { src: "/images/site-visits/ceramique-tile-2.jpg", alt: "Ceramique Tile Showroom visit - studying decorative tile patterns" },
+      { src: "/images/site-visits/ceramique-tile-3.jpg", alt: "Ceramique Tile Showroom visit - showroom tour with guide" },
+      { src: "/images/site-visits/ceramique-tile-4.jpg", alt: "Ceramique Tile Showroom visit - exploring mosaic and artisan tiles" },
+      { src: "/images/site-visits/ceramique-tile-5.jpg", alt: "Ceramique Tile Showroom visit - group photo at showroom" },
+    ],
+  },
 ];
 
 // Flatten all photos for lightbox navigation
