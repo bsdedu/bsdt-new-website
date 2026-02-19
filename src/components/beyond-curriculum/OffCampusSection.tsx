@@ -18,6 +18,19 @@ const offCampusGalleries = [
       { src: "/images/off-campus/bangalore-palace-7.jpg", alt: "Bangalore Palace visit - group photo in front of the palace" },
     ],
   },
+  {
+    title: "Bangalore Circus",
+    photos: [
+      { src: "/images/off-campus/bangalore-circus-1.jpg", alt: "Bangalore Circus visit - students gathering in colorful creative space" },
+      { src: "/images/off-campus/bangalore-circus-2.jpg", alt: "Bangalore Circus visit - group photo with metal sculpture installation" },
+      { src: "/images/off-campus/bangalore-circus-3.jpg", alt: "Bangalore Circus visit - exploring upcycled interior design elements" },
+      { src: "/images/off-campus/bangalore-circus-4.jpg", alt: "Bangalore Circus visit - students viewing recycled art installations" },
+      { src: "/images/off-campus/bangalore-circus-5.jpg", alt: "Bangalore Circus visit - touring eclectic seating and decor area" },
+      { src: "/images/off-campus/bangalore-circus-6.jpg", alt: "Bangalore Circus visit - guided presentation in creative warehouse" },
+      { src: "/images/off-campus/bangalore-circus-7.jpg", alt: "Bangalore Circus visit - exploring repurposed furniture and fixtures" },
+      { src: "/images/off-campus/bangalore-circus-8.jpg", alt: "Bangalore Circus visit - studying retro-themed upcycled interiors" },
+    ],
+  },
 ];
 
 const allPhotos = offCampusGalleries.flatMap(g => g.photos);
