@@ -117,6 +117,21 @@ const offCampusGalleries = [
       { src: "/images/off-campus/rachanalli-9.jpg", alt: "Rachanalli Lake - group sketching session under the lakeside gazebo" },
     ],
   },
+  {
+    title: "Rangoli Metro Art Centre",
+    photos: [
+      { src: "/images/off-campus/rangoli-1.jpg", alt: "Rangoli Metro Art Centre - student sketching a leaf on sketchpad" },
+      { src: "/images/off-campus/rangoli-2.jpg", alt: "Rangoli Metro Art Centre - students sketching leaves outdoors at the centre" },
+      { src: "/images/off-campus/rangoli-3.jpg", alt: "Rangoli Metro Art Centre - close-up of student tracing a leaf outline" },
+      { src: "/images/off-campus/rangoli-4.jpg", alt: "Rangoli Metro Art Centre - students drawing in the art centre corridor" },
+      { src: "/images/off-campus/rangoli-5.jpg", alt: "Rangoli Metro Art Centre - student sketching a leaf on the steps" },
+      { src: "/images/off-campus/rangoli-6.jpg", alt: "Rangoli Metro Art Centre - vibrant red ginger flower at the centre garden" },
+      { src: "/images/off-campus/rangoli-7.jpg", alt: "Rangoli Metro Art Centre - student drawing plants in the garden" },
+      { src: "/images/off-campus/rangoli-8.jpg", alt: "Rangoli Metro Art Centre - student sketching beside a flower bed" },
+      { src: "/images/off-campus/rangoli-9.jpg", alt: "Rangoli Metro Art Centre - detailed pencil sketch of a leaf" },
+      { src: "/images/off-campus/rangoli-10.jpg", alt: "Rangoli Metro Art Centre - leaf sketch with real leaf reference" },
+    ],
+  },
 ];
 
 const allPhotos = offCampusGalleries.flatMap(g => g.photos);
