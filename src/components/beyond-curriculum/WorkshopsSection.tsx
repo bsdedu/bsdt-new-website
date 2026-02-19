@@ -24,6 +24,17 @@ const workshopGalleries = [
       { src: "/images/workshops/bamboo-13.jpg", alt: "Bamboo Workshop - assembled bamboo panel with rope binding" },
     ],
   },
+  {
+    title: "Bamboo Applications",
+    photos: [
+      { src: "/images/workshops/bamboo-app-1.jpg", alt: "Bamboo Applications - instructor presenting with bamboo products display" },
+      { src: "/images/workshops/bamboo-app-2.jpg", alt: "Bamboo Applications - masterclass on bamboo applications with craft samples" },
+      { src: "/images/workshops/bamboo-app-3.jpg", alt: "Bamboo Applications - classroom session with students" },
+      { src: "/images/workshops/bamboo-app-4.jpg", alt: "Bamboo Applications - instructor interacting with students" },
+      { src: "/images/workshops/bamboo-app-5.jpg", alt: "Bamboo Applications - students examining bamboo craft products" },
+      { src: "/images/workshops/bamboo-app-6.jpg", alt: "Bamboo Applications - group viewing bamboo art pieces" },
+    ],
+  },
 ];
 
 const allPhotos = workshopGalleries.flatMap(g => g.photos);
