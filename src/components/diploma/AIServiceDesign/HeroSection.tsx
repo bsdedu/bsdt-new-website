@@ -16,7 +16,7 @@ export const HeroSection: React.FC = () => {
             </h1>
             
             <p className="text-lg text-foreground/80 max-w-xl">
-              Join from anywhere. This 8-month hybrid programme blends live online learning with real-world exposure through our Bangalore campus and Satellite Centres in Chhattisgarh, Hyderabad, Delhi & Coimbatore.
+              Join from anywhere. This 8-month hybrid programme blends live online learning with real-world exposure through our Bangalore campus and Satellite Centres in Raipur, Hyderabad, Delhi & Coimbatore.
             </p>
             
             <div className="flex flex-wrap gap-6 pt-2">

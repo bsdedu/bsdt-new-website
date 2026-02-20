@@ -74,7 +74,7 @@ export const AdmissionsInfo: React.FC = () => {
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-bsd-orange mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-foreground/70"><strong>Chhattisgarh:</strong> Satellite Partner Centre for site observations and practical demonstrations</span>
+                    <span className="text-foreground/70"><strong>Raipur:</strong> Satellite Partner Centre for site observations and practical demonstrations</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-bsd-orange mr-3 mt-0.5 flex-shrink-0" />

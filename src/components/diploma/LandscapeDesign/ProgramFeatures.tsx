@@ -41,7 +41,7 @@ export const ProgramFeatures: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-bsd-gray mb-3">Offline Access in 5 Cities</h3>
                 <p className="text-foreground/70">
-                  Bangalore campus + Satellite Partner Centres in Chhattisgarh, Hyderabad, Delhi & Coimbatore for site visits and hands-on learning.
+                  Bangalore campus + Satellite Partner Centres in Raipur, Hyderabad, Delhi & Coimbatore for site visits and hands-on learning.
                 </p>
               </CardContent>
             </Card>

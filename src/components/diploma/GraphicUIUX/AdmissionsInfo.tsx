@@ -70,7 +70,7 @@ export const AdmissionsInfo: React.FC = () => {
                   
                   <div>
                     <h4 className="font-semibold text-bsd-gray">Program Structure</h4>
-                    <p className="text-foreground/70">Hybrid learning: Live online classes + offline sessions at Bangalore campus or Satellite Centres (Chhattisgarh, Hyderabad, Delhi, Coimbatore)</p>
+                    <p className="text-foreground/70">Hybrid learning: Live online classes + offline sessions at Bangalore campus or Satellite Centres (Raipur, Hyderabad, Delhi, Coimbatore)</p>
                   </div>
                   
                   <div>
