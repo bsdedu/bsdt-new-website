@@ -33,7 +33,7 @@ const Contact: React.FC = () => {
           </p>
           <ul className="space-y-2">
             <li className="text-gray-700">
-              <strong>Phone:</strong> +91 9620202871 | +91 9845779000
+              <strong>Phone:</strong> +91 9620204693 | +91 9845779000
             </li>
             <li className="text-gray-700">
               <strong>Email:</strong> enquiry@bsd.edu.in | admissions@bsd.edu.in

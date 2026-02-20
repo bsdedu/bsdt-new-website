@@ -163,7 +163,7 @@ export const ScholarshipInfo = () => {
               please contact our admissions office.
             </p>
             <Button asChild>
-              <a href="https://wa.me/919620202871" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/919620204693" target="_blank" rel="noopener noreferrer">
                 Contact Us
               </a>
             </Button>
