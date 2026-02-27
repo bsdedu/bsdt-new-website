@@ -39,11 +39,11 @@ export const FloatingCallCTA: React.FC = () => {
           <div className="bg-white p-4 rounded-lg shadow-lg max-w-[230px] animate-scale-in">
             <p className="text-sm font-medium text-bsd-gray mb-3">Have questions? Call us now!</p>
             <a 
-              href="tel:+919620204693" 
+              href="tel:+919845779000" 
               className="flex items-center justify-center gap-2 bg-bsd-orange text-white py-2 px-4 rounded-md hover:bg-bsd-orange/90 transition-colors w-full"
             >
               <Phone className="h-4 w-4" />
-              +91 9620204693
+              +91 9845779000
             </a>
           </div>
         </div>
