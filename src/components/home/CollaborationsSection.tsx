@@ -126,26 +126,62 @@ export const CollaborationsSection: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 items-center justify-items-center">
-            {[
-              { name: "College de Paris", logo: partnerCollegeDeParis },
-              { name: "École Conte", logo: partnerEcoleConte },
-              { name: "Bengaluru North University", logo: partnerBengaluruNorthUniversity },
-              { name: "Cresta", logo: partnerCresta },
-              { name: "Study in Bali", logo: partnerStudyInBali },
-              { name: "Indian Institute of Interior Designers", logo: partnerIIID },
-              { name: "AICTE", logo: partnerAICTE },
-              { name: "Association of Designers of India", logo: partnerADI },
-              { name: "University of Mysore", logo: partnerUniversityOfMysore },
-            ].map((partner) => (
-              <div key={partner.name} className="bg-white border border-border/40 rounded-xl p-5 flex items-center justify-center h-28 w-full hover:shadow-md transition-shadow">
-                <img
-                  src={partner.logo}
-                  alt={partner.name}
-                  className="max-h-20 max-w-full object-contain"
-                />
-              </div>
-            ))}
+          {/* Mobile carousel (1 logo at a time) */}
+          <div className="md:hidden">
+            <Carousel 
+              opts={{ loop: true, align: "center" }} 
+              plugins={[Autoplay({ delay: 2000, stopOnInteraction: false }) as any]}
+              className="w-full"
+            >
+              <CarouselContent>
+                {[
+                  { name: "College de Paris", logo: partnerCollegeDeParis },
+                  { name: "École Conte", logo: partnerEcoleConte },
+                  { name: "Bengaluru North University", logo: partnerBengaluruNorthUniversity },
+                  { name: "Cresta", logo: partnerCresta },
+                  { name: "Study in Bali", logo: partnerStudyInBali },
+                  { name: "Indian Institute of Interior Designers", logo: partnerIIID },
+                  { name: "AICTE", logo: partnerAICTE },
+                  { name: "Association of Designers of India", logo: partnerADI },
+                  { name: "University of Mysore", logo: partnerUniversityOfMysore },
+                ].map((partner) => (
+                  <CarouselItem key={partner.name} className="basis-full">
+                    <div className="flex items-center justify-center h-28 p-4">
+                      <img src={partner.logo} alt={partner.name} className="h-full w-auto object-contain max-h-24" />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+          </div>
+
+          {/* Desktop carousel (multiple logos at a time) */}
+          <div className="hidden md:block">
+            <Carousel 
+              opts={{ loop: true, align: "center" }} 
+              plugins={[Autoplay({ delay: 2000, stopOnInteraction: false }) as any]}
+              className="w-full"
+            >
+              <CarouselContent>
+                {[
+                  { name: "College de Paris", logo: partnerCollegeDeParis },
+                  { name: "École Conte", logo: partnerEcoleConte },
+                  { name: "Bengaluru North University", logo: partnerBengaluruNorthUniversity },
+                  { name: "Cresta", logo: partnerCresta },
+                  { name: "Study in Bali", logo: partnerStudyInBali },
+                  { name: "Indian Institute of Interior Designers", logo: partnerIIID },
+                  { name: "AICTE", logo: partnerAICTE },
+                  { name: "Association of Designers of India", logo: partnerADI },
+                  { name: "University of Mysore", logo: partnerUniversityOfMysore },
+                ].map((partner) => (
+                  <CarouselItem key={partner.name} className="basis-1/5 md:basis-1/5 lg:basis-1/6">
+                    <div className="flex items-center justify-center h-28 p-4">
+                      <img src={partner.logo} alt={partner.name} className="h-full w-auto object-contain max-h-24" />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
           </div>
         </RevealSection>
       </div>
