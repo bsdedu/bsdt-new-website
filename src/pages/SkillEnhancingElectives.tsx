@@ -16,7 +16,7 @@ import electiveBems from "@/assets/elective-bems.jpg";
 import electiveBim from "@/assets/elective-bim.jpg";
 import electiveVfx from "@/assets/elective-vfx.jpg";
 import elective3dAsset from "@/assets/elective-3d-asset.jpg";
-import electiveHero from "@/assets/elective-hero.jpg";
+import electiveHero from "@/assets/skill-electives-cover.jpg";
 import electiveCertificate from "@/assets/elective-certificate.jpg";
 import electiveSketching from "@/assets/elective-hands-sketching.jpg";
 import electivePresentation from "@/assets/elective-presentation.jpg";
