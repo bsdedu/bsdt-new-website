@@ -55,7 +55,7 @@ export const navStructure: NavStructure[] = [
       { name: 'Application Process', href: '/admissions/application-process' },
       { name: 'Scholarships & Support', href: '/admissions/fees-scholarships' },
       { name: 'Schedule a Campus Visit', href: '/plan-a-visit' },
-      { name: 'Faculty', href: '/faculty' },
+      
       { name: 'Skill-Enhancing Electives', href: '/academics/skill-enhancing-electives' },
       { name: 'Studio BSD', href: '/studio-bsd' },
       { name: 'We Go Beyond Curriculum', href: '/we-go-beyond-curriculum' },
@@ -80,6 +80,7 @@ export const navStructure: NavStructure[] = [
     type: 'dropdown',
     items: [
       { name: 'About BSDT', href: '/about' },
+      { name: 'Our Team', href: '/faculty' },
       { name: 'Leadership & Governance', href: '/leadership' },
       { name: 'Careers', href: '/careers' }
     ]
