@@ -19,6 +19,7 @@ import elective3dAsset from "@/assets/elective-3d-asset.jpg";
 import electiveHero from "@/assets/skill-electives-cover.jpg";
 import electiveCertificate from "@/assets/elective-certificate.jpg";
 import electiveSketching from "@/assets/elective-hands-sketching.jpg";
+import electiveCreativityIndustry from "@/assets/elective-creativity-industry.jpg";
 import electivePresentation from "@/assets/elective-presentation.jpg";
 
 const electiveImages: Record<string, string> = {
@@ -159,7 +160,7 @@ const SkillEnhancingElectives = () => {
 
         {/* Visual Break - Sketching */}
         <section className="relative h-64 md:h-80 overflow-hidden">
-          <img src={electiveSketching} alt="Student sketching design concepts" className="w-full h-full object-cover" />
+          <img src={electiveCreativityIndustry} alt="Students reviewing design work" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-bsd-gray/40" />
           <div className="absolute inset-0 flex items-center justify-center">
             <p className="text-white text-2xl md:text-3xl font-display font-bold text-center px-4">
