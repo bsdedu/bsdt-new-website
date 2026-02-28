@@ -9,6 +9,16 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
+import partnerCollegeDeParis from "@/assets/partner-college-de-paris.png";
+import partnerEcoleConte from "@/assets/partner-ecole-conte.png";
+import partnerBengaluruNorthUniversity from "@/assets/partner-bengaluru-north-university.png";
+import partnerCresta from "@/assets/partner-cresta.png";
+import partnerStudyInBali from "@/assets/partner-study-in-bali.png";
+import partnerIIID from "@/assets/partner-iiid.png";
+import partnerAICTE from "@/assets/partner-aicte.png";
+import partnerADI from "@/assets/partner-adi.png";
+import partnerUniversityOfMysore from "@/assets/partner-university-of-mysore.png";
+
 interface Partner {
   id: string;
   name: string;
@@ -100,6 +110,42 @@ export const CollaborationsSection: React.FC = () => {
                 ))}
               </CarouselContent>
             </Carousel>
+          </div>
+        </RevealSection>
+
+        <RevealSection delay={400}>
+          <div className="text-center mt-16 mb-10">
+            <Badge variant="bsdOrange" className="mb-2">
+              Our Partners & Affiliations
+            </Badge>
+            <h2 className="text-2xl md:text-3xl font-display font-bold tracking-tight text-bsd-gray">
+              Accreditations & Institutional Partners
+            </h2>
+            <p className="mt-4 text-bsd-gray/70 max-w-2xl mx-auto">
+              We are proud to be affiliated with prestigious institutions and organizations worldwide.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 items-center justify-items-center">
+            {[
+              { name: "College de Paris", logo: partnerCollegeDeParis },
+              { name: "École Conte", logo: partnerEcoleConte },
+              { name: "Bengaluru North University", logo: partnerBengaluruNorthUniversity },
+              { name: "Cresta", logo: partnerCresta },
+              { name: "Study in Bali", logo: partnerStudyInBali },
+              { name: "Indian Institute of Interior Designers", logo: partnerIIID },
+              { name: "AICTE", logo: partnerAICTE },
+              { name: "Association of Designers of India", logo: partnerADI },
+              { name: "University of Mysore", logo: partnerUniversityOfMysore },
+            ].map((partner) => (
+              <div key={partner.name} className="bg-white border border-border/40 rounded-xl p-5 flex items-center justify-center h-28 w-full hover:shadow-md transition-shadow">
+                <img
+                  src={partner.logo}
+                  alt={partner.name}
+                  className="max-h-20 max-w-full object-contain"
+                />
+              </div>
+            ))}
           </div>
         </RevealSection>
       </div>
