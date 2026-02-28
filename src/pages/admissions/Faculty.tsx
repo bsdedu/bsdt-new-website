@@ -10,8 +10,8 @@ const Faculty = () => {
   return (
     <>
       <Helmet>
-        <title>Faculty | BSDT</title>
-        <meta name="description" content="Meet the faculty at Bangalore School of Design & Technology - experienced professionals who bring real-world expertise to design education." />
+        <title>Our Team | BSDT</title>
+        <meta name="description" content="Meet the team at Bangalore School of Design & Technology - experienced professionals who bring real-world expertise to design education." />
       </Helmet>
       
       <Navbar />
