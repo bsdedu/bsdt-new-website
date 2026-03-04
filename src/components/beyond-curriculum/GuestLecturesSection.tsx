@@ -52,6 +52,14 @@ import hvacImg3 from '@/assets/guest-lecture-hvac-3.jpg';
 import hvacImg4 from '@/assets/guest-lecture-hvac-4.jpg';
 import hvacImg5 from '@/assets/guest-lecture-hvac-5.jpg';
 import hvacImg6 from '@/assets/guest-lecture-hvac-6.jpg';
+import profdevImg1 from '@/assets/guest-lecture-profdev-1.jpg';
+import profdevImg2 from '@/assets/guest-lecture-profdev-2.jpg';
+import profdevImg3 from '@/assets/guest-lecture-profdev-3.jpg';
+import profdevImg4 from '@/assets/guest-lecture-profdev-4.jpg';
+import profdevImg5 from '@/assets/guest-lecture-profdev-5.jpg';
+import profdevImg6 from '@/assets/guest-lecture-profdev-6.jpg';
+import profdevImg7 from '@/assets/guest-lecture-profdev-7.jpg';
+import profdevImg8 from '@/assets/guest-lecture-profdev-8.jpg';
 
 interface GuestLectureGallery {
   title: string;
@@ -164,6 +172,22 @@ const guestLectureGalleries: GuestLectureGallery[] = [
       { src: hvacImg4, alt: "Plumbing & HVAC lecture - students attending" },
       { src: hvacImg5, alt: "Plumbing & HVAC lecture - HVAC board work" },
       { src: hvacImg6, alt: "Plumbing & HVAC lecture - technical drawings" },
+    ],
+  },
+  {
+    title: "Professional Development",
+    speaker: "Harold",
+    organization: "Industry Professional",
+    date: "November 8, 2021",
+    photos: [
+      { src: profdevImg1, alt: "Professional development lecture - presentation" },
+      { src: profdevImg2, alt: "Professional development lecture - classroom view" },
+      { src: profdevImg3, alt: "Professional development lecture - speaker interaction" },
+      { src: profdevImg4, alt: "Professional development lecture - full audience" },
+      { src: profdevImg5, alt: "Professional development lecture - student engagement" },
+      { src: profdevImg6, alt: "Professional development lecture - session overview" },
+      { src: profdevImg7, alt: "Professional development lecture - Q&A session" },
+      { src: profdevImg8, alt: "Professional development lecture - discussion" },
     ],
   },
 ];
