@@ -40,6 +40,12 @@ import cafeLightingImg6 from '@/assets/guest-lecture-cafe-lighting-6.jpg';
 import cafeLightingImg7 from '@/assets/guest-lecture-cafe-lighting-7.jpg';
 import cafeLightingImg8 from '@/assets/guest-lecture-cafe-lighting-8.jpg';
 import cafeLightingImg9 from '@/assets/guest-lecture-cafe-lighting-9.jpg';
+import pheImg1 from '@/assets/guest-lecture-phe-1.jpg';
+import pheImg2 from '@/assets/guest-lecture-phe-2.jpg';
+import pheImg3 from '@/assets/guest-lecture-phe-3.jpg';
+import pheImg4 from '@/assets/guest-lecture-phe-4.jpg';
+import pheImg5 from '@/assets/guest-lecture-phe-5.jpg';
+import pheImg6 from '@/assets/guest-lecture-phe-6.jpg';
 
 interface GuestLectureGallery {
   title: string;
@@ -124,6 +130,20 @@ const guestLectureGalleries: GuestLectureGallery[] = [
       { src: cafeLightingImg7, alt: "Cafe lighting lecture - product showcase" },
       { src: cafeLightingImg8, alt: "Cafe lighting lecture - presentation" },
       { src: cafeLightingImg9, alt: "Cafe lighting lecture - UGR overview" },
+    ],
+  },
+  {
+    title: "PHE (Public Health Engineering)",
+    speaker: "Abhishek",
+    organization: "PHE Expert",
+    date: "February 19, 2022",
+    photos: [
+      { src: pheImg1, alt: "PHE lecture - whiteboard session" },
+      { src: pheImg2, alt: "PHE lecture - classroom presentation" },
+      { src: pheImg3, alt: "PHE lecture - student engagement" },
+      { src: pheImg4, alt: "PHE lecture - detailed explanation" },
+      { src: pheImg5, alt: "PHE lecture - wide classroom view" },
+      { src: pheImg6, alt: "PHE lecture - interactive session" },
     ],
   },
 ];
