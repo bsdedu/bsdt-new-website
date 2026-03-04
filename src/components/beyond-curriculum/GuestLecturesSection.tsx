@@ -7,6 +7,16 @@ import { User, Calendar, Map, ChevronLeft, ChevronRight } from 'lucide-react';
 import ihsImg1 from '@/assets/guest-lecture-ihs-1.jpg';
 import ihsImg2 from '@/assets/guest-lecture-ihs-2.jpg';
 import ihsImg3 from '@/assets/guest-lecture-ihs-3.jpg';
+import bambooImg1 from '@/assets/guest-lecture-bamboo-1.jpg';
+import bambooImg2 from '@/assets/guest-lecture-bamboo-2.jpg';
+import bambooImg3 from '@/assets/guest-lecture-bamboo-3.jpg';
+import bambooImg4 from '@/assets/guest-lecture-bamboo-4.jpg';
+import bambooImg5 from '@/assets/guest-lecture-bamboo-5.jpg';
+import bambooImg6 from '@/assets/guest-lecture-bamboo-6.jpg';
+import bambooImg7 from '@/assets/guest-lecture-bamboo-7.jpg';
+import bambooImg8 from '@/assets/guest-lecture-bamboo-8.jpg';
+import bambooImg9 from '@/assets/guest-lecture-bamboo-9.jpg';
+import bambooImg10 from '@/assets/guest-lecture-bamboo-10.jpg';
 
 interface LectureCardProps {
   speaker: string;
@@ -103,6 +113,14 @@ export const GuestLecturesSection: React.FC = () => {
       organization: "Legrand (IHS)",
       date: "July 29, 2022",
       images: [ihsImg1, ihsImg2, ihsImg3],
+      location: "BSDT Campus"
+    },
+    {
+      speaker: "Neelam Manjunath",
+      title: "Applications of Bamboo – Master Class on Bamboo",
+      organization: "Bamboo Design Expert",
+      date: "August 13, 2022",
+      images: [bambooImg1, bambooImg2, bambooImg3, bambooImg4, bambooImg5, bambooImg6, bambooImg7, bambooImg8, bambooImg9, bambooImg10],
       location: "BSDT Campus"
     }
   ];
