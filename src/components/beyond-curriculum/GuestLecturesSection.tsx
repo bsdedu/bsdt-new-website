@@ -1,26 +1,74 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { RevealSection } from '@/components/ui-elements/RevealSection';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui-elements/Card';
-import { User, Calendar, Map } from 'lucide-react';
+import { User, Calendar, Map, ChevronLeft, ChevronRight } from 'lucide-react';
+import ihsImg1 from '@/assets/guest-lecture-ihs-1.jpg';
+import ihsImg2 from '@/assets/guest-lecture-ihs-2.jpg';
+import ihsImg3 from '@/assets/guest-lecture-ihs-3.jpg';
 
 interface LectureCardProps {
   speaker: string;
   title: string;
   organization: string;
   date: string;
-  image: string;
+  images: string[];
   location: string;
 }
 
-const LectureCard: React.FC<LectureCardProps> = ({ speaker, title, organization, date, image, location }) => {
+const ImageCarousel: React.FC<{ images: string[]; alt: string }> = ({ images, alt }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    if (images.length <= 1) return;
+    const interval = setInterval(() => {
+      setCurrentIndex(prev => (prev + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  const goToPrev = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setCurrentIndex(prev => (prev - 1 + images.length) % images.length);
+  };
+
+  const goToNext = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setCurrentIndex(prev => (prev + 1) % images.length);
+  };
+
+  return (
+    <div className="relative w-full h-full group">
+      <img src={images[currentIndex]} alt={`${alt} ${currentIndex + 1}`} className="w-full h-full object-cover transition-all duration-500" style={{ minHeight: '200px' }} />
+      {images.length > 1 && (
+        <>
+          <button onClick={goToPrev} className="absolute left-1 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity z-10">
+            <ChevronLeft className="w-4 h-4" />
+          </button>
+          <button onClick={goToNext} className="absolute right-1 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity z-10">
+            <ChevronRight className="w-4 h-4" />
+          </button>
+          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 z-10">
+            {images.map((_, idx) => (
+              <div key={idx} className={`w-1.5 h-1.5 rounded-full transition-colors ${idx === currentIndex ? 'bg-white' : 'bg-white/50'}`} />
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+};
+
+const LectureCard: React.FC<LectureCardProps> = ({ speaker, title, organization, date, images, location }) => {
   return (
     <Card className="border-0 shadow-sm overflow-hidden">
       <div className="grid grid-cols-1 md:grid-cols-3">
         <div className="md:col-span-1">
           <div className="h-full relative">
-            <img src={image} alt={speaker} className="w-full h-full object-cover" style={{ minHeight: '200px' }} />
+            <ImageCarousel images={images} alt={speaker} />
           </div>
         </div>
         <div className="md:col-span-2">
@@ -50,28 +98,12 @@ const LectureCard: React.FC<LectureCardProps> = ({ speaker, title, organization,
 export const GuestLecturesSection: React.FC = () => {
   const lectures: LectureCardProps[] = [
     {
-      speaker: "Rahul Sharma",
-      title: "The Future of Sustainable Design",
-      organization: "Green Design Associates",
-      date: "September 15, 2023",
-      image: "/lovable-uploads/938cccc7-6337-481e-861d-5cedb08cafd7.png",
-      location: "Main Auditorium"
-    },
-    {
-      speaker: "Priya Murthy",
-      title: "Innovation in Digital Interfaces",
-      organization: "UX Lead, Google India",
-      date: "October 22, 2023",
-      image: "/lovable-uploads/9ff3e25b-a93f-40fb-87ff-cd765e063b61.png",
-      location: "Digital Learning Center"
-    },
-    {
-      speaker: "Vikram Desai",
-      title: "Architectural Design Thinking",
-      organization: "Principal Architect, Studio Decode",
-      date: "November 10, 2023",
-      image: "/lovable-uploads/d1e69b3a-6ece-40bb-ba92-363b7d0f3758.png",
-      location: "Design Hub"
+      speaker: "IHS Team",
+      title: "Home Automation & Lighting Management Systems",
+      organization: "Legrand (IHS)",
+      date: "July 29, 2022",
+      images: [ihsImg1, ihsImg2, ihsImg3],
+      location: "BSDT Campus"
     }
   ];
 
