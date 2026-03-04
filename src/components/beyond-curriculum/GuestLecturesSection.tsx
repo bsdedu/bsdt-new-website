@@ -17,6 +17,15 @@ import bambooImg7 from '@/assets/guest-lecture-bamboo-7.jpg';
 import bambooImg8 from '@/assets/guest-lecture-bamboo-8.jpg';
 import bambooImg9 from '@/assets/guest-lecture-bamboo-9.jpg';
 import bambooImg10 from '@/assets/guest-lecture-bamboo-10.jpg';
+import landscapeImg1 from '@/assets/guest-lecture-landscape-1.jpg';
+import landscapeImg2 from '@/assets/guest-lecture-landscape-2.jpg';
+import landscapeImg3 from '@/assets/guest-lecture-landscape-3.jpg';
+import landscapeImg4 from '@/assets/guest-lecture-landscape-4.jpg';
+import landscapeImg5 from '@/assets/guest-lecture-landscape-5.jpg';
+import landscapeImg6 from '@/assets/guest-lecture-landscape-6.jpg';
+import landscapeImg7 from '@/assets/guest-lecture-landscape-7.jpg';
+import landscapeImg8 from '@/assets/guest-lecture-landscape-8.jpg';
+
 
 interface LectureCardProps {
   speaker: string;
@@ -121,6 +130,14 @@ export const GuestLecturesSection: React.FC = () => {
       organization: "Bamboo Design Expert",
       date: "August 13, 2022",
       images: [bambooImg1, bambooImg2, bambooImg3, bambooImg4, bambooImg5, bambooImg6, bambooImg7, bambooImg8, bambooImg9, bambooImg10],
+      location: "BSDT Campus"
+    },
+    {
+      speaker: "Dambol",
+      title: "Interior Landscape – Outside as an Extension of the Home",
+      organization: "Landscape Design Expert",
+      date: "January 30, 2019",
+      images: [landscapeImg1, landscapeImg2, landscapeImg3, landscapeImg4, landscapeImg5, landscapeImg6, landscapeImg7, landscapeImg8],
       location: "BSDT Campus"
     }
   ];
