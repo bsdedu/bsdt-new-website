@@ -60,6 +60,12 @@ import profdevImg5 from '@/assets/guest-lecture-profdev-5.jpg';
 import profdevImg6 from '@/assets/guest-lecture-profdev-6.jpg';
 import profdevImg7 from '@/assets/guest-lecture-profdev-7.jpg';
 import profdevImg8 from '@/assets/guest-lecture-profdev-8.jpg';
+import vrayImg1 from '@/assets/guest-lecture-vray-1.jpg';
+import vrayImg2 from '@/assets/guest-lecture-vray-2.jpg';
+import vrayImg3 from '@/assets/guest-lecture-vray-3.jpg';
+import vrayImg4 from '@/assets/guest-lecture-vray-4.jpg';
+import vrayImg5 from '@/assets/guest-lecture-vray-5.jpg';
+import vrayImg6 from '@/assets/guest-lecture-vray-6.jpg';
 
 interface GuestLectureGallery {
   title: string;
@@ -188,6 +194,20 @@ const guestLectureGalleries: GuestLectureGallery[] = [
       { src: profdevImg6, alt: "Professional development lecture - session overview" },
       { src: profdevImg7, alt: "Professional development lecture - Q&A session" },
       { src: profdevImg8, alt: "Professional development lecture - discussion" },
+    ],
+  },
+  {
+    title: "V-Ray Master Class",
+    speaker: "Rakshan",
+    organization: "V-Ray Expert",
+    date: "April 13, 2019",
+    photos: [
+      { src: vrayImg1, alt: "V-Ray master class - student working" },
+      { src: vrayImg2, alt: "V-Ray master class - lab session" },
+      { src: vrayImg3, alt: "V-Ray master class - instructor guidance" },
+      { src: vrayImg4, alt: "V-Ray master class - group learning" },
+      { src: vrayImg5, alt: "V-Ray master class - hands-on practice" },
+      { src: vrayImg6, alt: "V-Ray master class - screen demonstration" },
     ],
   },
 ];
