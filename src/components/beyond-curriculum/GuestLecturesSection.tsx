@@ -31,6 +31,15 @@ import lightingImg3 from '@/assets/guest-lecture-lighting-3.jpg';
 import lightingImg4 from '@/assets/guest-lecture-lighting-4.jpg';
 import lightingImg5 from '@/assets/guest-lecture-lighting-5.jpg';
 import lightingImg6 from '@/assets/guest-lecture-lighting-6.jpg';
+import cafeLightingImg1 from '@/assets/guest-lecture-cafe-lighting-1.jpg';
+import cafeLightingImg2 from '@/assets/guest-lecture-cafe-lighting-2.jpg';
+import cafeLightingImg3 from '@/assets/guest-lecture-cafe-lighting-3.jpg';
+import cafeLightingImg4 from '@/assets/guest-lecture-cafe-lighting-4.jpg';
+import cafeLightingImg5 from '@/assets/guest-lecture-cafe-lighting-5.jpg';
+import cafeLightingImg6 from '@/assets/guest-lecture-cafe-lighting-6.jpg';
+import cafeLightingImg7 from '@/assets/guest-lecture-cafe-lighting-7.jpg';
+import cafeLightingImg8 from '@/assets/guest-lecture-cafe-lighting-8.jpg';
+import cafeLightingImg9 from '@/assets/guest-lecture-cafe-lighting-9.jpg';
 
 interface GuestLectureGallery {
   title: string;
@@ -98,6 +107,23 @@ const guestLectureGalleries: GuestLectureGallery[] = [
       { src: lightingImg4, alt: "Lighting design lecture - classroom session" },
       { src: lightingImg5, alt: "Lighting design lecture - product showcase" },
       { src: lightingImg6, alt: "Lighting design lecture - ENDO LED overview" },
+    ],
+  },
+  {
+    title: "Lighting for Cafe",
+    speaker: "Industry Expert",
+    organization: "Lighting Design",
+    date: "November 20, 2021",
+    photos: [
+      { src: cafeLightingImg1, alt: "Cafe lighting lecture - classroom session" },
+      { src: cafeLightingImg2, alt: "Cafe lighting lecture - presenter demo" },
+      { src: cafeLightingImg3, alt: "Cafe lighting lecture - lighting demonstration" },
+      { src: cafeLightingImg4, alt: "Cafe lighting lecture - hands-on demo" },
+      { src: cafeLightingImg5, alt: "Cafe lighting lecture - group discussion" },
+      { src: cafeLightingImg6, alt: "Cafe lighting lecture - student interaction" },
+      { src: cafeLightingImg7, alt: "Cafe lighting lecture - product showcase" },
+      { src: cafeLightingImg8, alt: "Cafe lighting lecture - presentation" },
+      { src: cafeLightingImg9, alt: "Cafe lighting lecture - UGR overview" },
     ],
   },
 ];
