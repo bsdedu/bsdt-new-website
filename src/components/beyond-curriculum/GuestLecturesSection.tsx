@@ -1,9 +1,9 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { RevealSection } from '@/components/ui-elements/RevealSection';
 import { Badge } from '@/components/ui/badge';
-import { Card, CardContent } from '@/components/ui-elements/Card';
-import { User, Calendar, Map, ChevronLeft, ChevronRight } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
+import { Dialog, DialogContent } from '@/components/ui/dialog';
 import ihsImg1 from '@/assets/guest-lecture-ihs-1.jpg';
 import ihsImg2 from '@/assets/guest-lecture-ihs-2.jpg';
 import ihsImg3 from '@/assets/guest-lecture-ihs-3.jpg';
@@ -32,129 +32,87 @@ import lightingImg4 from '@/assets/guest-lecture-lighting-4.jpg';
 import lightingImg5 from '@/assets/guest-lecture-lighting-5.jpg';
 import lightingImg6 from '@/assets/guest-lecture-lighting-6.jpg';
 
-
-interface LectureCardProps {
-  speaker: string;
+interface GuestLectureGallery {
   title: string;
+  speaker: string;
   organization: string;
   date: string;
-  images: string[];
-  location: string;
+  photos: { src: string; alt: string }[];
 }
 
-const ImageCarousel: React.FC<{ images: string[]; alt: string }> = ({ images, alt }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+const guestLectureGalleries: GuestLectureGallery[] = [
+  {
+    title: "Home Automation & Lighting Management Systems",
+    speaker: "IHS Team",
+    organization: "Legrand (IHS)",
+    date: "July 29, 2022",
+    photos: [
+      { src: ihsImg1, alt: "IHS guest lecture - home automation presentation" },
+      { src: ihsImg2, alt: "IHS guest lecture - lighting management demo" },
+      { src: ihsImg3, alt: "IHS guest lecture - student interaction" },
+    ],
+  },
+  {
+    title: "Applications of Bamboo – Master Class",
+    speaker: "Neelam Manjunath",
+    organization: "Bamboo Design Expert",
+    date: "August 13, 2022",
+    photos: [
+      { src: bambooImg1, alt: "Bamboo master class - session 1" },
+      { src: bambooImg2, alt: "Bamboo master class - session 2" },
+      { src: bambooImg3, alt: "Bamboo master class - session 3" },
+      { src: bambooImg4, alt: "Bamboo master class - session 4" },
+      { src: bambooImg5, alt: "Bamboo master class - session 5" },
+      { src: bambooImg6, alt: "Bamboo master class - session 6" },
+      { src: bambooImg7, alt: "Bamboo master class - session 7" },
+      { src: bambooImg8, alt: "Bamboo master class - session 8" },
+      { src: bambooImg9, alt: "Bamboo master class - session 9" },
+      { src: bambooImg10, alt: "Bamboo master class - session 10" },
+    ],
+  },
+  {
+    title: "Interior Landscape – Outside as an Extension of the Home",
+    speaker: "Dambol",
+    organization: "Landscape Design Expert",
+    date: "January 30, 2019",
+    photos: [
+      { src: landscapeImg1, alt: "Interior landscape lecture - session 1" },
+      { src: landscapeImg2, alt: "Interior landscape lecture - session 2" },
+      { src: landscapeImg3, alt: "Interior landscape lecture - session 3" },
+      { src: landscapeImg4, alt: "Interior landscape lecture - session 4" },
+      { src: landscapeImg5, alt: "Interior landscape lecture - session 5" },
+      { src: landscapeImg6, alt: "Interior landscape lecture - session 6" },
+      { src: landscapeImg7, alt: "Interior landscape lecture - session 7" },
+      { src: landscapeImg8, alt: "Interior landscape lecture - session 8" },
+    ],
+  },
+  {
+    title: "Lighting Design & Technology",
+    speaker: "Mr. Prabhu",
+    organization: "ENDO Lighting",
+    date: "January 22, 2020",
+    photos: [
+      { src: lightingImg1, alt: "Lighting design lecture - speaker interaction" },
+      { src: lightingImg2, alt: "Lighting design lecture - ENDO presentation" },
+      { src: lightingImg3, alt: "Lighting design lecture - students attending" },
+      { src: lightingImg4, alt: "Lighting design lecture - classroom session" },
+      { src: lightingImg5, alt: "Lighting design lecture - product showcase" },
+      { src: lightingImg6, alt: "Lighting design lecture - ENDO LED overview" },
+    ],
+  },
+];
 
-  useEffect(() => {
-    if (images.length <= 1) return;
-    const interval = setInterval(() => {
-      setCurrentIndex(prev => (prev + 1) % images.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [images.length]);
-
-  const goToPrev = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setCurrentIndex(prev => (prev - 1 + images.length) % images.length);
-  };
-
-  const goToNext = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setCurrentIndex(prev => (prev + 1) % images.length);
-  };
-
-  return (
-    <div className="relative w-full h-full group">
-      <img src={images[currentIndex]} alt={`${alt} ${currentIndex + 1}`} className="w-full h-full object-cover transition-all duration-500" style={{ minHeight: '200px' }} />
-      {images.length > 1 && (
-        <>
-          <button onClick={goToPrev} className="absolute left-1 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity z-10">
-            <ChevronLeft className="w-4 h-4" />
-          </button>
-          <button onClick={goToNext} className="absolute right-1 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity z-10">
-            <ChevronRight className="w-4 h-4" />
-          </button>
-          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 z-10">
-            {images.map((_, idx) => (
-              <div key={idx} className={`w-1.5 h-1.5 rounded-full transition-colors ${idx === currentIndex ? 'bg-white' : 'bg-white/50'}`} />
-            ))}
-          </div>
-        </>
-      )}
-    </div>
-  );
-};
-
-const LectureCard: React.FC<LectureCardProps> = ({ speaker, title, organization, date, images, location }) => {
-  return (
-    <Card className="border-0 shadow-sm overflow-hidden">
-      <div className="grid grid-cols-1 md:grid-cols-3">
-        <div className="md:col-span-1">
-          <div className="h-full relative">
-            <ImageCarousel images={images} alt={speaker} />
-          </div>
-        </div>
-        <div className="md:col-span-2">
-          <CardContent className="p-6">
-            <h3 className="text-xl font-semibold text-bsd-gray mb-1">{title}</h3>
-            <div className="flex items-center gap-2 text-bsd-orange mb-4">
-              <User className="h-4 w-4" />
-              <p className="text-sm font-medium">{speaker}, {organization}</p>
-            </div>
-            <div className="flex flex-wrap gap-4 text-sm text-foreground/70 mb-4">
-              <div className="flex items-center gap-1">
-                <Calendar className="h-4 w-4 text-bsd-orange" />
-                <span>{date}</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <Map className="h-4 w-4 text-bsd-orange" />
-                <span>{location}</span>
-              </div>
-            </div>
-          </CardContent>
-        </div>
-      </div>
-    </Card>
-  );
-};
+const allPhotos = guestLectureGalleries.flatMap(g => g.photos);
 
 export const GuestLecturesSection: React.FC = () => {
-  const lectures: LectureCardProps[] = [
-    {
-      speaker: "IHS Team",
-      title: "Home Automation & Lighting Management Systems",
-      organization: "Legrand (IHS)",
-      date: "July 29, 2022",
-      images: [ihsImg1, ihsImg2, ihsImg3],
-      location: "BSDT Campus"
-    },
-    {
-      speaker: "Neelam Manjunath",
-      title: "Applications of Bamboo – Master Class on Bamboo",
-      organization: "Bamboo Design Expert",
-      date: "August 13, 2022",
-      images: [bambooImg1, bambooImg2, bambooImg3, bambooImg4, bambooImg5, bambooImg6, bambooImg7, bambooImg8, bambooImg9, bambooImg10],
-      location: "BSDT Campus"
-    },
-    {
-      speaker: "Dambol",
-      title: "Interior Landscape – Outside as an Extension of the Home",
-      organization: "Landscape Design Expert",
-      date: "January 30, 2019",
-      images: [landscapeImg1, landscapeImg2, landscapeImg3, landscapeImg4, landscapeImg5, landscapeImg6, landscapeImg7, landscapeImg8],
-      location: "BSDT Campus"
-    },
-    {
-      speaker: "Mr. Prabhu",
-      title: "Lighting Design & Technology",
-      organization: "ENDO Lighting",
-      date: "January 22, 2020",
-      images: [lightingImg1, lightingImg2, lightingImg3, lightingImg4, lightingImg5, lightingImg6],
-      location: "BSDT Campus"
-    }
-  ];
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const [activeGallery, setActiveGallery] = useState<number | null>(null);
+  const [showAll, setShowAll] = useState(false);
+
+  const openLightbox = (index: number) => setSelectedImage(index);
+  const closeLightbox = () => setSelectedImage(null);
+  const goToPrev = () => setSelectedImage((prev) => prev !== null ? (prev - 1 + allPhotos.length) % allPhotos.length : null);
+  const goToNext = () => setSelectedImage((prev) => prev !== null ? (prev + 1) % allPhotos.length : null);
 
   return (
     <section id="guest-lectures" className="py-16 bg-white">
@@ -172,43 +130,131 @@ export const GuestLecturesSection: React.FC = () => {
         </RevealSection>
 
         <RevealSection delay={100}>
-          <div className="space-y-6">
-            {lectures.map((lecture, index) => (
-              <LectureCard key={index} {...lecture} />
-            ))}
+          <div className="mb-8">
+            {activeGallery === null ? (
+              <div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {(showAll ? guestLectureGalleries : guestLectureGalleries.slice(0, 3)).map((gallery, gIndex) => (
+                    <div
+                      key={gIndex}
+                      className="relative rounded-2xl overflow-hidden cursor-pointer group h-64"
+                      onClick={() => setActiveGallery(gIndex)}
+                    >
+                      <img
+                        src={gallery.photos[0].src}
+                        alt={gallery.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                      <div className="absolute bottom-0 left-0 right-0 p-5">
+                        <h4 className="text-white font-semibold text-lg">{gallery.title}</h4>
+                        <p className="text-white/80 text-sm mt-1">{gallery.speaker}, {gallery.organization}</p>
+                        <p className="text-white/60 text-xs mt-0.5">{gallery.date} · {gallery.photos.length} Photos</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                {!showAll && guestLectureGalleries.length > 3 && (
+                  <div className="flex justify-center mt-8">
+                    <button
+                      onClick={() => setShowAll(true)}
+                      className="flex items-center gap-2 px-6 py-3 bg-bsd-orange text-white rounded-full font-medium hover:bg-bsd-orange/90 transition-colors"
+                    >
+                      View More ({guestLectureGalleries.length - 3} more)
+                      <ChevronDown className="w-4 h-4" />
+                    </button>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div>
+                <button
+                  onClick={() => setActiveGallery(null)}
+                  className="flex items-center gap-2 text-bsd-orange font-medium mb-6 hover:underline"
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                  Back to all lectures
+                </button>
+                <h4 className="text-xl font-semibold text-bsd-gray mb-1">{guestLectureGalleries[activeGallery].title}</h4>
+                <p className="text-sm text-foreground/60 mb-4">
+                  {guestLectureGalleries[activeGallery].speaker}, {guestLectureGalleries[activeGallery].organization} · {guestLectureGalleries[activeGallery].date}
+                </p>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                  {guestLectureGalleries[activeGallery].photos.map((photo, index) => {
+                    const globalOffset = guestLectureGalleries.slice(0, activeGallery).reduce((acc, g) => acc + g.photos.length, 0);
+                    return (
+                      <div
+                        key={index}
+                        className="relative aspect-square overflow-hidden rounded-xl cursor-pointer group"
+                        onClick={() => openLightbox(globalOffset + index)}
+                      >
+                        <img
+                          src={photo.src}
+                          alt={photo.alt}
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
           </div>
         </RevealSection>
 
-        <RevealSection delay={200}>
-          <div className="mt-12 bg-bsd-light-gray rounded-xl p-8">
-            <div className="text-center max-w-3xl mx-auto">
-              <h3 className="text-2xl font-semibold text-bsd-gray mb-4">Guest Lecture Program Benefits</h3>
-              <p className="text-foreground/70 mb-8">
-                Our guest lectures expose students to diverse perspectives, industry trends, and professional insights that enhance their understanding of their chosen fields.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="bg-white rounded-lg p-5 shadow-sm">
-                  <h4 className="font-medium text-bsd-gray mb-2">Industry Insights</h4>
-                  <p className="text-sm text-foreground/70">
-                    Students gain firsthand knowledge of current industry practices, challenges, and innovations directly from active professionals.
-                  </p>
+        {/* Lightbox */}
+        <Dialog open={selectedImage !== null} onOpenChange={() => closeLightbox()}>
+          <DialogContent className="max-w-5xl p-0 bg-black/95 border-none">
+            <div className="relative w-full h-[80vh] flex items-center justify-center">
+              <button
+                onClick={closeLightbox}
+                className="absolute top-4 right-4 z-50 p-2 bg-white/10 hover:bg-white/20 rounded-full transition-colors"
+              >
+                <X className="w-5 h-5 text-white" />
+              </button>
+
+              {allPhotos.length > 1 && (
+                <>
+                  <button
+                    onClick={goToPrev}
+                    className="absolute left-4 z-50 p-2 bg-white/10 hover:bg-white/20 rounded-full transition-colors"
+                  >
+                    <ChevronLeft className="w-6 h-6 text-white" />
+                  </button>
+                  <button
+                    onClick={goToNext}
+                    className="absolute right-4 z-50 p-2 bg-white/10 hover:bg-white/20 rounded-full transition-colors"
+                  >
+                    <ChevronRight className="w-6 h-6 text-white" />
+                  </button>
+                </>
+              )}
+
+              {selectedImage !== null && (
+                <img
+                  src={allPhotos[selectedImage].src}
+                  alt={allPhotos[selectedImage].alt}
+                  className="max-w-full max-h-full object-contain p-4"
+                />
+              )}
+
+              {allPhotos.length > 1 && selectedImage !== null && (
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                  {allPhotos.map((_, i) => (
+                    <button
+                      key={i}
+                      onClick={() => setSelectedImage(i)}
+                      className={`w-2 h-2 rounded-full transition-colors ${i === selectedImage ? 'bg-white' : 'bg-white/40'}`}
+                    />
+                  ))}
                 </div>
-                <div className="bg-white rounded-lg p-5 shadow-sm">
-                  <h4 className="font-medium text-bsd-gray mb-2">Career Guidance</h4>
-                  <p className="text-sm text-foreground/70">
-                    Guest speakers provide valuable career advice, sharing personal experiences and pathways to success in various design and technology fields.
-                  </p>
-                </div>
-                <div className="bg-white rounded-lg p-5 shadow-sm">
-                  <h4 className="font-medium text-bsd-gray mb-2">Inspiration & Motivation</h4>
-                  <p className="text-sm text-foreground/70">
-                    Hearing from successful professionals inspires students to set ambitious goals and provides motivation to pursue excellence in their work.
-                  </p>
-                </div>
-              </div>
+              )}
             </div>
-          </div>
-        </RevealSection>
+          </DialogContent>
+        </Dialog>
       </div>
     </section>
   );
