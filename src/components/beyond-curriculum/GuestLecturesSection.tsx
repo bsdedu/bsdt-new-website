@@ -46,6 +46,12 @@ import pheImg3 from '@/assets/guest-lecture-phe-3.jpg';
 import pheImg4 from '@/assets/guest-lecture-phe-4.jpg';
 import pheImg5 from '@/assets/guest-lecture-phe-5.jpg';
 import pheImg6 from '@/assets/guest-lecture-phe-6.jpg';
+import hvacImg1 from '@/assets/guest-lecture-hvac-1.jpg';
+import hvacImg2 from '@/assets/guest-lecture-hvac-2.jpg';
+import hvacImg3 from '@/assets/guest-lecture-hvac-3.jpg';
+import hvacImg4 from '@/assets/guest-lecture-hvac-4.jpg';
+import hvacImg5 from '@/assets/guest-lecture-hvac-5.jpg';
+import hvacImg6 from '@/assets/guest-lecture-hvac-6.jpg';
 
 interface GuestLectureGallery {
   title: string;
@@ -144,6 +150,20 @@ const guestLectureGalleries: GuestLectureGallery[] = [
       { src: pheImg4, alt: "PHE lecture - detailed explanation" },
       { src: pheImg5, alt: "PHE lecture - wide classroom view" },
       { src: pheImg6, alt: "PHE lecture - interactive session" },
+    ],
+  },
+  {
+    title: "Plumbing & HVAC Systems",
+    speaker: "Dinesh & Mahesh",
+    organization: "HVAC & Plumbing Experts",
+    date: "September 14, 2019",
+    photos: [
+      { src: hvacImg1, alt: "Plumbing & HVAC lecture - group photo" },
+      { src: hvacImg2, alt: "Plumbing & HVAC lecture - refrigeration presentation" },
+      { src: hvacImg3, alt: "Plumbing & HVAC lecture - AC systems overview" },
+      { src: hvacImg4, alt: "Plumbing & HVAC lecture - students attending" },
+      { src: hvacImg5, alt: "Plumbing & HVAC lecture - HVAC board work" },
+      { src: hvacImg6, alt: "Plumbing & HVAC lecture - technical drawings" },
     ],
   },
 ];
