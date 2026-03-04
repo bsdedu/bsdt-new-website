@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { RevealSection } from '@/components/ui-elements/RevealSection';
 import { Badge } from '@/components/ui/badge';
-import { X, ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, ChevronDown, Mic, Layers, Users, TrendingUp } from 'lucide-react';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 import ihsImg1 from '@/assets/guest-lecture-ihs-1.jpg';
 import ihsImg2 from '@/assets/guest-lecture-ihs-2.jpg';
@@ -240,6 +240,66 @@ export const GuestLecturesSection: React.FC = () => {
         </RevealSection>
 
         <RevealSection delay={100}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <div className="bg-gray-50 rounded-xl p-6 shadow-sm border border-gray-100">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-bsd-orange/10 mt-1">
+                  <Mic className="w-5 h-5 text-bsd-orange" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-bsd-gray mb-2">Expert Insights & Mentorship</h3>
+                  <p className="text-foreground/70">
+                    Gain invaluable knowledge from seasoned professionals who share their journey, challenges, and success stories, offering mentorship beyond textbooks.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-6 shadow-sm border border-gray-100">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-bsd-orange/10 mt-1">
+                  <Layers className="w-5 h-5 text-bsd-orange" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-bsd-gray mb-2">Specialized Technical Workshops</h3>
+                  <p className="text-foreground/70">
+                    Deep dive into niche subjects and advanced technologies through hands-on masterclasses conducted by domain experts and software specialists.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-6 shadow-sm border border-gray-100">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-bsd-orange/10 mt-1">
+                  <Users className="w-5 h-5 text-bsd-orange" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-bsd-gray mb-2">Interactive Design Dialogues</h3>
+                  <p className="text-foreground/70">
+                    Engage in thought-provoking discussions, Q&A sessions, and critical debates that broaden perspectives and encourage creative thinking.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-6 shadow-sm border border-gray-100">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-bsd-orange/10 mt-1">
+                  <TrendingUp className="w-5 h-5 text-bsd-orange" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-bsd-gray mb-2">Industry Trends & Innovations</h3>
+                  <p className="text-foreground/70">
+                    Stay ahead of the curve by learning about the latest market trends, sustainable practices, and emerging technologies directly from industry pioneers.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </RevealSection>
+
+        <RevealSection delay={200}>
           <div className="mb-8">
             {activeGallery === null ? (
               <div>
