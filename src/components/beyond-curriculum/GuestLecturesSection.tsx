@@ -25,6 +25,12 @@ import landscapeImg5 from '@/assets/guest-lecture-landscape-5.jpg';
 import landscapeImg6 from '@/assets/guest-lecture-landscape-6.jpg';
 import landscapeImg7 from '@/assets/guest-lecture-landscape-7.jpg';
 import landscapeImg8 from '@/assets/guest-lecture-landscape-8.jpg';
+import lightingImg1 from '@/assets/guest-lecture-lighting-1.jpg';
+import lightingImg2 from '@/assets/guest-lecture-lighting-2.jpg';
+import lightingImg3 from '@/assets/guest-lecture-lighting-3.jpg';
+import lightingImg4 from '@/assets/guest-lecture-lighting-4.jpg';
+import lightingImg5 from '@/assets/guest-lecture-lighting-5.jpg';
+import lightingImg6 from '@/assets/guest-lecture-lighting-6.jpg';
 
 
 interface LectureCardProps {
@@ -138,6 +144,14 @@ export const GuestLecturesSection: React.FC = () => {
       organization: "Landscape Design Expert",
       date: "January 30, 2019",
       images: [landscapeImg1, landscapeImg2, landscapeImg3, landscapeImg4, landscapeImg5, landscapeImg6, landscapeImg7, landscapeImg8],
+      location: "BSDT Campus"
+    },
+    {
+      speaker: "Mr. Prabhu",
+      title: "Lighting Design & Technology",
+      organization: "ENDO Lighting",
+      date: "January 22, 2020",
+      images: [lightingImg1, lightingImg2, lightingImg3, lightingImg4, lightingImg5, lightingImg6],
       location: "BSDT Campus"
     }
   ];
