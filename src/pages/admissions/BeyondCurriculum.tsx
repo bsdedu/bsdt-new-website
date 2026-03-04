@@ -6,6 +6,7 @@ import { BeyondCurriculumHero } from '@/components/beyond-curriculum/BeyondCurri
 import { BeyondCurriculumOverview } from '@/components/beyond-curriculum/BeyondCurriculumOverview';
 import { DesignStudioSection } from '@/components/beyond-curriculum/DesignStudioSection';
 import { WorkshopsSection } from '@/components/beyond-curriculum/WorkshopsSection';
+import { GuestLecturesSection } from '@/components/beyond-curriculum/GuestLecturesSection';
 
 import { OffCampusSection } from '@/components/beyond-curriculum/OffCampusSection';
 import { SiteVisitsSection } from '@/components/beyond-curriculum/SiteVisitsSection';
@@ -46,6 +47,7 @@ const BeyondCurriculum = () => {
         <div>
           <WorkshopsSection />
         </div>
+        <GuestLecturesSection />
         
         <OffCampusSection />
         <div ref={siteVisitsRef}>
