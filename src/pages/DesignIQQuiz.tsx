@@ -210,9 +210,6 @@ const DesignIQQuiz: React.FC = () => {
     setStep("result");
     try {
       sendToSheet({
-        name: lead.name,
-        email: lead.email,
-        phone: lead.phone,
         result: resultData.title,
         scores: finalScores,
         timestamp: new Date().toISOString(),
@@ -313,49 +310,15 @@ const DesignIQQuiz: React.FC = () => {
                 <Button
                   size="lg"
                   className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-12 text-lg h-16 rounded-xl shadow-lg shadow-bsd-orange/25"
-                  onClick={() => setStep("lead")}
+                  onClick={() => setStep("quiz")}
                 >
                   <Sparkles className="mr-2 w-5 h-5" /> Start the Quiz <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </motion.div>
             )}
 
-            {/* LEAD FORM */}
-            {step === "lead" && (
-              <motion.div
-                key="lead"
-                initial={{ opacity: 0, x: 60 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -60 }}
-                transition={{ duration: 0.4, type: "spring", damping: 25 }}
-                className="w-full max-w-xl mx-auto"
-              >
-                <div className="bg-background rounded-3xl shadow-2xl border border-border overflow-hidden">
-                  <div className="h-1.5 bg-gradient-to-r from-bsd-orange via-bsd-orange/80 to-bsd-orange/40" />
-                  <div className="p-8 md:p-10">
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="w-12 h-12 rounded-2xl bg-bsd-orange/10 flex items-center justify-center">
-                        <Brain className="w-6 h-6 text-bsd-orange" />
-                      </div>
-                    </div>
-                    <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-4">
-                      Unlock Your Design<br />Personality 🎨
-                    </h2>
-                    <p className="mt-3 text-muted-foreground text-base md:text-lg">
-                      Enter your details to receive your quiz result + a free design roadmap.
-                    </p>
-                    <div className="space-y-4 mt-8">
-                      <Input placeholder="Your Name *" value={lead.name} onChange={(e) => setLead({ ...lead, name: e.target.value })} className="h-14 text-base rounded-xl border-border/60 px-5" maxLength={100} />
-                      <Input placeholder="Email Address *" type="email" value={lead.email} onChange={(e) => setLead({ ...lead, email: e.target.value })} className="h-14 text-base rounded-xl border-border/60 px-5" maxLength={255} />
-                      <Input placeholder="Phone (optional)" type="tel" value={lead.phone} onChange={(e) => setLead({ ...lead, phone: e.target.value })} className="h-14 text-base rounded-xl border-border/60 px-5" maxLength={20} />
-                    </div>
-                    <Button onClick={startQuiz} className="w-full mt-8 bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold h-14 text-base rounded-xl">
-                      Start My Quiz <ArrowRight className="ml-2 w-5 h-5" />
-                    </Button>
-                  </div>
-                </div>
-              </motion.div>
-            )}
+
+
 
             {/* QUIZ QUESTIONS */}
             {step === "quiz" && (
