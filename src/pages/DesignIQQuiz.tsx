@@ -310,44 +310,7 @@ const DesignIQQuiz: React.FC = () => {
                 <Button
                   size="lg"
                   className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-12 text-lg h-16 rounded-xl shadow-lg shadow-bsd-orange/25"
-                   onClick={() => {
-                     setStep("quiz");
-                     // Load NoPaperForms popup widget
-                     const initAndShowPopup = () => {
-                       try {
-                         // @ts-ignore
-                         const widget = new NpfWidgetsInit({
-                           widgetId: "adff9b077808c1fcb8e77a017693b6b9",
-                           baseurl: "widgets.in5.nopaperforms.com",
-                           formTitle: "Enquire Now",
-                           titleColor: "#FF0033",
-                           backgroundColor: "#ddd",
-                           iframeHeight: "500px",
-                           buttonbgColor: "#ff0000",
-                           buttonTextColor: "#FFF",
-                         });
-                         // Manually trigger the popup to show immediately
-                         setTimeout(() => {
-                           widget.showPopup("adff9b077808c1fcb8e77a017693b6b9", "widgets.in5.nopaperforms.com");
-                         }, 300);
-                       } catch (e) {
-                         console.error("NoPaperForms widget error:", e);
-                       }
-                     };
-
-                     const existingScript = document.querySelector('script[src*="npfwpopup.js"]');
-                     if (!existingScript) {
-                       const popupScript = document.createElement("script");
-                       popupScript.src = "https://in5cdn.npfs.co/js/widget/npfwpopup.js";
-                       popupScript.onload = initAndShowPopup;
-                       popupScript.onerror = () => {
-                         console.error("Failed to load NoPaperForms popup script");
-                       };
-                       document.body.appendChild(popupScript);
-                     } else {
-                       initAndShowPopup();
-                     }
-                   }}
+                  onClick={() => setStep("lead")}
                 >
                   <Sparkles className="mr-2 w-5 h-5" /> Start the Quiz <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
