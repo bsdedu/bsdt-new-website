@@ -312,7 +312,6 @@ const DesignIQQuiz: React.FC = () => {
                   size="lg"
                   className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-12 text-lg h-16 rounded-xl shadow-lg shadow-bsd-orange/25"
                    onClick={() => {
-                     let popupSeen = false;
                      let transitioned = false;
 
                      const goToQuiz = () => {
@@ -322,29 +321,60 @@ const DesignIQQuiz: React.FC = () => {
                        setStep("quiz");
                      };
 
-                     // Detect when NPF popup becomes visible, then when it closes/hides → go to quiz
-                     const checkVisibility = () => {
-                       const popupEl = document.querySelector(
-                         '.npfWidget_popup, .npf_popup_overlay, .npfWidgetPopup, [class*="npfW"][class*="popup"], [class*="npfWidget"], .npf_wgts_overlay'
-                       ) as HTMLElement | null;
-                       const npfIframe = document.querySelector(
-                         'iframe[src*="nopaperforms"], iframe[src*="npfs.co"], iframe[src*="in5cdn"]'
-                       ) as HTMLElement | null;
-                       const targetEl = popupEl || npfIframe;
+                     // Snapshot existing body children before NPF popup loads
+                     const existingChildren = new Set(Array.from(document.body.children));
+                     let npfElements: HTMLElement[] = [];
+                     let popupSeen = false;
 
-                       if (targetEl) {
-                         const style = window.getComputedStyle(targetEl);
-                         const isVisible = style.display !== 'none' && style.visibility !== 'hidden' && style.opacity !== '0';
-                         if (isVisible) popupSeen = true;
-                         if (popupSeen && !isVisible) goToQuiz();
+                     const checkForPopup = () => {
+                       // Find any NEW elements added to body after we clicked
+                       const currentChildren = Array.from(document.body.children) as HTMLElement[];
+                       const newElements = currentChildren.filter(el => !existingChildren.has(el));
+                       
+                       // Also look for common NPF patterns anywhere in DOM
+                       const npfBySelector = Array.from(document.querySelectorAll(
+                         '[id*="npf"], [class*="npf"], [id*="nopaperform"], [class*="nopaperform"], ' +
+                         'div[style*="z-index"][style*="position: fixed"], ' +
+                         'div[style*="z-index"][style*="position:fixed"], ' +
+                         'iframe[src*="nopaperforms"], iframe[src*="npfs"], iframe[src*="in5cdn"], iframe[src*="widgets.in5"]'
+                       )) as HTMLElement[];
+
+                       // Combine: new body children + NPF-matched elements
+                       const candidates = [...newElements, ...npfBySelector];
+                       
+                       // Filter to visible overlay-like elements
+                       for (const el of candidates) {
+                         if (el.tagName === 'SCRIPT') continue;
+                         const style = window.getComputedStyle(el);
+                         const isVisible = style.display !== 'none' && style.visibility !== 'hidden' && parseFloat(style.opacity) > 0;
+                         const isOverlay = style.position === 'fixed' || style.position === 'absolute' || el.tagName === 'IFRAME';
+                         
+                         if (isVisible && isOverlay) {
+                           if (!npfElements.includes(el)) npfElements.push(el);
+                           popupSeen = true;
+                         }
                        }
-                       // Popup removed from DOM entirely
-                       if (popupSeen && !targetEl) goToQuiz();
+
+                       // If popup was seen, check if ALL tracked NPF elements are now hidden/removed
+                       if (popupSeen && npfElements.length > 0) {
+                         const allGone = npfElements.every(el => {
+                           if (!document.body.contains(el)) return true;
+                           const style = window.getComputedStyle(el);
+                           return style.display === 'none' || style.visibility === 'hidden' || parseFloat(style.opacity) === 0;
+                         });
+                         if (allGone) {
+                           console.log('[Quiz] NPF popup closed, transitioning to quiz');
+                           goToQuiz();
+                         }
+                       }
                      };
 
-                     const pollInterval = setInterval(checkVisibility, 300);
-                     const observer = new MutationObserver(checkVisibility);
-                     observer.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['style', 'class', 'display'] });
+                     const pollInterval = setInterval(checkForPopup, 400);
+                     const observer = new MutationObserver(checkForPopup);
+                     observer.observe(document.body, { 
+                       childList: true, subtree: true, attributes: true, 
+                       attributeFilter: ['style', 'class', 'display', 'visibility'] 
+                     });
 
                      const cleanup = () => {
                        observer.disconnect();
