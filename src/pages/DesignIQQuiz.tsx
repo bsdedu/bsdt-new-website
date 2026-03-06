@@ -311,54 +311,40 @@ const DesignIQQuiz: React.FC = () => {
                   size="lg"
                   className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-12 text-lg h-16 rounded-xl shadow-lg shadow-bsd-orange/25"
                    onClick={() => {
-                     // Listen for NPF form submission via postMessage
+                     let npfPopupOpened = false;
+
+                     // Watch for NPF popup appearing then disappearing (closes after submit)
+                     const observer = new MutationObserver(() => {
+                       const popup = document.querySelector('.npf-popup-overlay, .npf_popup_overlay, [id*="npf"], [class*="npfPopup"], .npf_wg_popupOverlay');
+                       if (popup && !npfPopupOpened) {
+                         npfPopupOpened = true;
+                       }
+                       // If popup was open and is now gone, user submitted and it closed
+                       if (npfPopupOpened && !popup) {
+                         observer.disconnect();
+                         setStep("quiz");
+                       }
+                     });
+                     observer.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['style', 'class'] });
+
+                     // Also listen for postMessage as backup
                      const handleNpfMessage = (event: MessageEvent) => {
                        try {
                          const data = event.data;
-                         // Check all known NPF postMessage formats
                          if (
-                           data === "npf_form_submitted" ||
-                           data === "formSubmitted" ||
-                           (typeof data === "string" && (data.includes("npf") || data.includes("thankyou") || data.includes("success") || data.includes("submitted"))) ||
-                           (typeof data === "object" && data !== null && (data.type === "npf_form_submitted" || data.formSubmitted || data.status === "submitted"))
+                           (typeof data === "string" && (data.includes("thankyou") || data.includes("success") || data.includes("submitted"))) ||
+                           (typeof data === "object" && data !== null && (data.formSubmitted || data.status === "submitted"))
                          ) {
                            window.removeEventListener("message", handleNpfMessage);
+                           observer.disconnect();
                            setStep("quiz");
                          }
-                       } catch (e) {
-                         // ignore parse errors
-                       }
+                       } catch (e) {}
                      };
                      window.addEventListener("message", handleNpfMessage);
 
-                     // Fallback: Poll for NPF thank-you/success state in the DOM
-                     const pollInterval = setInterval(() => {
-                       // Check for thank you message or success indicators in NPF iframe/popup
-                       const thankYouEl = document.querySelector('[class*="npf"] .thank-you, [class*="npf"] .success, .npf-thank-you, .npf_thankyou');
-                       const npfIframe = document.querySelector('iframe[src*="nopaperforms"], iframe[src*="npfs"]') as HTMLIFrameElement;
-                       
-                       if (thankYouEl) {
-                         clearInterval(pollInterval);
-                         setStep("quiz");
-                         return;
-                       }
-                       
-                       // Check if iframe URL changed to thank you page
-                       if (npfIframe) {
-                         try {
-                           const iframeSrc = npfIframe.src || npfIframe.getAttribute('src') || '';
-                           if (iframeSrc.includes('thankyou') || iframeSrc.includes('success') || iframeSrc.includes('thank-you')) {
-                             clearInterval(pollInterval);
-                             setStep("quiz");
-                           }
-                         } catch (e) {
-                           // Cross-origin - can't read iframe src
-                         }
-                       }
-                     }, 1000);
-
-                     // Clean up polling after 5 minutes
-                     setTimeout(() => clearInterval(pollInterval), 300000);
+                     // Clean up after 10 minutes
+                     setTimeout(() => { observer.disconnect(); window.removeEventListener("message", handleNpfMessage); }, 600000);
 
                      // Load and show NoPaperForms popup widget
                      const initAndShowPopup = () => {
@@ -387,9 +373,7 @@ const DesignIQQuiz: React.FC = () => {
                        const popupScript = document.createElement("script");
                        popupScript.src = "https://in5cdn.npfs.co/js/widget/npfwpopup.js";
                        popupScript.onload = initAndShowPopup;
-                       popupScript.onerror = () => {
-                         console.error("Failed to load NoPaperForms popup script");
-                       };
+                       popupScript.onerror = () => console.error("Failed to load NoPaperForms popup script");
                        document.body.appendChild(popupScript);
                      } else {
                        initAndShowPopup();
