@@ -155,7 +155,7 @@ const DesignIQQuiz: React.FC = () => {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [direction, setDirection] = useState(1);
   const [sliderValue, setSliderValue] = useState(2);
-  const [showFallbackButton, setShowFallbackButton] = useState(false);
+  
 
   const advanceQuestion = useCallback((newScores: Record<Tag, number>) => {
     setTimeout(() => {
@@ -312,118 +312,94 @@ const DesignIQQuiz: React.FC = () => {
                   size="lg"
                   className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-12 text-lg h-16 rounded-xl shadow-lg shadow-bsd-orange/25"
                    onClick={() => {
-                     // Track NPF popup state
                      let npfFormSubmitted = false;
-                     
-                     // Log all postMessages to help debug
-                     const debugMessages = (event: MessageEvent) => {
-                       console.log('[NPF Debug] postMessage received:', event.data, 'origin:', event.origin);
-                       // Try to detect submission from any message from NPF origin
+                     let popupSeen = false;
+                     let transitioned = false;
+
+                     const goToQuiz = () => {
+                       if (transitioned) return;
+                       transitioned = true;
+                       cleanup();
+                       setStep("quiz");
+                     };
+
+                     // Listen for postMessages from NPF
+                     const onMessage = (event: MessageEvent) => {
                        if (event.origin && event.origin.includes('nopaperforms')) {
-                         console.log('[NPF Debug] Message from NPF detected, marking as submitted');
                          npfFormSubmitted = true;
                        }
-                       // Also check data content
                        try {
-                         const data = event.data;
-                         if (typeof data === 'string' && (data.includes('thank') || data.includes('success') || data.includes('submit'))) {
+                         const str = typeof event.data === 'string' ? event.data : JSON.stringify(event.data);
+                         if (str.includes('thank') || str.includes('success') || str.includes('submit')) {
                            npfFormSubmitted = true;
                          }
-                         if (typeof data === 'object' && data !== null) {
-                           const str = JSON.stringify(data);
-                           if (str.includes('thank') || str.includes('success') || str.includes('submit')) {
-                             npfFormSubmitted = true;
-                           }
-                         }
                        } catch(e) {}
+                       // If form submitted and popup was seen, go to quiz
+                       if (npfFormSubmitted) {
+                         // Wait a moment for thank-you message to show, then transition
+                         setTimeout(goToQuiz, 2000);
+                       }
                      };
-                     window.addEventListener("message", debugMessages);
+                     window.addEventListener("message", onMessage);
 
-                     // Detect NPF popup close/submission to transition to quiz
-                      let popupSeen = false;
-                      let transitioned = false;
+                     const checkVisibility = () => {
+                       // Look for NPF popup/overlay elements
+                       const popupEl = document.querySelector(
+                         '.npfWidget_popup, .npf_popup_overlay, .npfWidgetPopup, [class*="npfW"][class*="popup"], [class*="npfWidget"], .npf_wgts_overlay'
+                       ) as HTMLElement | null;
+                       const npfIframe = document.querySelector(
+                         'iframe[src*="nopaperforms"], iframe[src*="npfs.co"], iframe[src*="in5cdn"]'
+                       ) as HTMLElement | null;
+                       const targetEl = popupEl || npfIframe;
 
-                      const goToQuiz = () => {
-                        if (transitioned) return;
-                        transitioned = true;
-                        cleanup();
-                        setStep("quiz");
-                      };
+                       if (targetEl) {
+                         const style = window.getComputedStyle(targetEl);
+                         const isVisible = style.display !== 'none' && style.visibility !== 'hidden' && style.opacity !== '0';
+                         if (isVisible) popupSeen = true;
+                         if (popupSeen && !isVisible) goToQuiz();
+                       }
+                       if (popupSeen && !targetEl) goToQuiz();
 
-                       // Show fallback button after 3 seconds
-                       const fallbackTimeout = setTimeout(() => {
-                         if (!transitioned) {
-                           setShowFallbackButton(true);
+                       // Check thank-you iframe src
+                       document.querySelectorAll('iframe[src*="nopaperforms"], iframe[src*="npfs"]').forEach(iframe => {
+                         const src = iframe.getAttribute('src') || '';
+                         if (src.includes('thankyou') || src.includes('thank-you') || src.includes('success')) {
+                           setTimeout(goToQuiz, 2000);
                          }
-                       }, 3000);
+                       });
 
-                      const checkVisibility = () => {
-                        // Target NPF popup-specific elements (NOT our own container)
-                        const popupOverlay = document.querySelector(
-                          '.npfWidget_popup, .npf_popup_overlay, .npfWidgetPopup, [class*="npfW"][class*="popup"], [class*="npfWidget"], .npf_wgts_overlay'
-                        ) as HTMLElement | null;
-                        
-                        // Also check for any NPF iframe overlay
-                        const npfIframe = document.querySelector(
-                          'iframe[src*="nopaperforms"], iframe[src*="npfs.co"], iframe[src*="in5cdn"]'
-                        ) as HTMLElement | null;
-                        
-                        const targetEl = popupOverlay || npfIframe;
+                       if (npfFormSubmitted && popupSeen) goToQuiz();
+                     };
 
-                        if (targetEl) {
-                          const style = window.getComputedStyle(targetEl);
-                          const isVisible = style.display !== 'none' && 
-                                            style.visibility !== 'hidden' && 
-                                            style.opacity !== '0';
-                          if (isVisible) {
-                            popupSeen = true;
-                            console.log('[NPF Debug] Popup detected as visible');
-                          }
-                          if (popupSeen && !isVisible) {
-                            console.log('[NPF Debug] Popup was visible, now hidden - transitioning');
-                            goToQuiz();
-                          }
-                        }
+                     // Poll every 300ms for faster detection
+                     const pollInterval = setInterval(checkVisibility, 300);
 
-                        // Element fully removed from DOM
-                        if (popupSeen && !targetEl) {
-                          console.log('[NPF Debug] Popup removed from DOM - transitioning');
-                          goToQuiz();
-                        }
+                     // Also watch DOM changes
+                     const observer = new MutationObserver(checkVisibility);
+                     observer.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['style', 'class', 'display'] });
 
-                        // Check for thank-you page in iframes
-                        document.querySelectorAll('iframe[src*="nopaperforms"], iframe[src*="npfs"]').forEach(iframe => {
-                          try {
-                            const src = iframe.getAttribute('src') || '';
-                            if (src.includes('thankyou') || src.includes('thank-you') || src.includes('success')) {
-                              console.log('[NPF Debug] Thank-you iframe detected - transitioning');
-                              goToQuiz();
-                            }
-                          } catch(e) {}
-                        });
-                        
-                        // Check postMessage flag
-                        if (npfFormSubmitted && popupSeen) {
-                          console.log('[NPF Debug] Form submitted via postMessage - transitioning');
-                          goToQuiz();
-                        }
-                      };
+                     // Listen for clicks on the NPF overlay (close button / outside click)
+                     const onDocClick = (e: MouseEvent) => {
+                       if (!popupSeen) return;
+                       const target = e.target as HTMLElement;
+                       // If clicking the overlay backdrop or close button
+                       if (target.classList.contains('npf_popup_overlay') || 
+                           target.classList.contains('npf_wgts_overlay') ||
+                           target.closest('.npfWidget_close') ||
+                           target.closest('[class*="close"]')) {
+                         setTimeout(goToQuiz, 500);
+                       }
+                     };
+                     document.addEventListener('click', onDocClick, true);
 
-                      // Poll every 500ms
-                      const pollInterval = setInterval(checkVisibility, 500);
+                     const cleanup = () => {
+                       observer.disconnect();
+                       clearInterval(pollInterval);
+                       window.removeEventListener("message", onMessage);
+                       document.removeEventListener('click', onDocClick, true);
+                     };
 
-                      // MutationObserver for DOM/style changes
-                      const observer = new MutationObserver(checkVisibility);
-                      observer.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['style', 'class', 'display'] });
-
-                      const cleanup = () => {
-                        observer.disconnect();
-                        clearInterval(pollInterval);
-                        clearTimeout(fallbackTimeout);
-                        window.removeEventListener("message", debugMessages);
-                      };
-
-                      setTimeout(cleanup, 600000);
+                     setTimeout(cleanup, 600000);
 
                      // Load and show NoPaperForms popup widget
                      const initAndShowPopup = () => {
@@ -462,27 +438,6 @@ const DesignIQQuiz: React.FC = () => {
                   <Sparkles className="mr-2 w-5 h-5" /> Start the Quiz <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
                </motion.div>
-            )}
-
-            {/* Fallback button if NPF detection fails */}
-            {step === "hero" && showFallbackButton && (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="fixed bottom-8 left-0 right-0 z-[99999] flex flex-col items-center"
-              >
-                <Button
-                  size="lg"
-                  className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-bold px-10 py-5 text-lg rounded-xl shadow-2xl shadow-bsd-orange/40"
-                  onClick={() => {
-                    setShowFallbackButton(false);
-                    setStep("quiz");
-                  }}
-                >
-                  Continue to Quiz <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-                <p className="text-xs text-background/60 mt-2">Submitted the form? Click to start the quiz.</p>
-              </motion.div>
             )}
 
 
