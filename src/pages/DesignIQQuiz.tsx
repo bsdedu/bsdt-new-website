@@ -323,7 +323,7 @@ const DesignIQQuiz: React.FC = () => {
                        setStep("quiz");
                      };
 
-                     // Listen for postMessages from NPF
+                     // Only transition on confirmed submission via postMessage
                      const onMessage = (event: MessageEvent) => {
                        if (event.origin && event.origin.includes('nopaperforms')) {
                          npfFormSubmitted = true;
@@ -334,16 +334,13 @@ const DesignIQQuiz: React.FC = () => {
                            npfFormSubmitted = true;
                          }
                        } catch(e) {}
-                       // If form submitted and popup was seen, go to quiz
                        if (npfFormSubmitted) {
-                         // Wait a moment for thank-you message to show, then transition
                          setTimeout(goToQuiz, 2000);
                        }
                      };
                      window.addEventListener("message", onMessage);
 
                      const checkVisibility = () => {
-                       // Look for NPF popup/overlay elements
                        const popupEl = document.querySelector(
                          '.npfWidget_popup, .npf_popup_overlay, .npfWidgetPopup, [class*="npfW"][class*="popup"], [class*="npfWidget"], .npf_wgts_overlay'
                        ) as HTMLElement | null;
@@ -356,47 +353,41 @@ const DesignIQQuiz: React.FC = () => {
                          const style = window.getComputedStyle(targetEl);
                          const isVisible = style.display !== 'none' && style.visibility !== 'hidden' && style.opacity !== '0';
                          if (isVisible) popupSeen = true;
-                         if (popupSeen && !isVisible) goToQuiz();
                        }
-                       if (popupSeen && !targetEl) goToQuiz();
 
-                       // Check thank-you iframe src
+                       // Check thank-you iframe src (confirms submission)
                        document.querySelectorAll('iframe[src*="nopaperforms"], iframe[src*="npfs"]').forEach(iframe => {
                          const src = iframe.getAttribute('src') || '';
                          if (src.includes('thankyou') || src.includes('thank-you') || src.includes('success')) {
+                           npfFormSubmitted = true;
                            setTimeout(goToQuiz, 2000);
                          }
                        });
 
-                       if (npfFormSubmitted && popupSeen) goToQuiz();
-                     };
-
-                     // Poll every 300ms for faster detection
-                     const pollInterval = setInterval(checkVisibility, 300);
-
-                     // Also watch DOM changes
-                     const observer = new MutationObserver(checkVisibility);
-                     observer.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['style', 'class', 'display'] });
-
-                     // Listen for clicks on the NPF overlay (close button / outside click)
-                     const onDocClick = (e: MouseEvent) => {
-                       if (!popupSeen) return;
-                       const target = e.target as HTMLElement;
-                       // If clicking the overlay backdrop or close button
-                       if (target.classList.contains('npf_popup_overlay') || 
-                           target.classList.contains('npf_wgts_overlay') ||
-                           target.closest('.npfWidget_close') ||
-                           target.closest('[class*="close"]')) {
-                         setTimeout(goToQuiz, 500);
+                       // Only auto-transition if form was actually submitted AND popup closed
+                       if (npfFormSubmitted && popupSeen) {
+                         const targetNow = document.querySelector(
+                           '.npfWidget_popup, .npf_popup_overlay, .npfWidgetPopup, [class*="npfW"][class*="popup"], [class*="npfWidget"], .npf_wgts_overlay'
+                         ) as HTMLElement | null;
+                         if (!targetNow) {
+                           goToQuiz();
+                         } else {
+                           const style = window.getComputedStyle(targetNow);
+                           if (style.display === 'none' || style.visibility === 'hidden' || style.opacity === '0') {
+                             goToQuiz();
+                           }
+                         }
                        }
                      };
-                     document.addEventListener('click', onDocClick, true);
+
+                     const pollInterval = setInterval(checkVisibility, 300);
+                     const observer = new MutationObserver(checkVisibility);
+                     observer.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['style', 'class', 'display'] });
 
                      const cleanup = () => {
                        observer.disconnect();
                        clearInterval(pollInterval);
                        window.removeEventListener("message", onMessage);
-                       document.removeEventListener('click', onDocClick, true);
                      };
 
                      setTimeout(cleanup, 600000);
