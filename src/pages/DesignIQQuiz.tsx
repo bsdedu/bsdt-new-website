@@ -311,40 +311,78 @@ const DesignIQQuiz: React.FC = () => {
                   size="lg"
                   className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-12 text-lg h-16 rounded-xl shadow-lg shadow-bsd-orange/25"
                    onClick={() => {
-                     let npfPopupOpened = false;
-
-                     // Watch for NPF popup appearing then disappearing (closes after submit)
-                     const observer = new MutationObserver(() => {
-                       const popup = document.querySelector('.npf-popup-overlay, .npf_popup_overlay, [id*="npf"], [class*="npfPopup"], .npf_wg_popupOverlay');
-                       if (popup && !npfPopupOpened) {
-                         npfPopupOpened = true;
+                     // Track NPF popup state
+                     let npfFormSubmitted = false;
+                     
+                     // Log all postMessages to help debug
+                     const debugMessages = (event: MessageEvent) => {
+                       console.log('[NPF Debug] postMessage received:', event.data, 'origin:', event.origin);
+                       // Try to detect submission from any message from NPF origin
+                       if (event.origin && event.origin.includes('nopaperforms')) {
+                         console.log('[NPF Debug] Message from NPF detected, marking as submitted');
+                         npfFormSubmitted = true;
                        }
-                       // If popup was open and is now gone, user submitted and it closed
-                       if (npfPopupOpened && !popup) {
-                         observer.disconnect();
+                       // Also check data content
+                       try {
+                         const data = event.data;
+                         if (typeof data === 'string' && (data.includes('thank') || data.includes('success') || data.includes('submit'))) {
+                           npfFormSubmitted = true;
+                         }
+                         if (typeof data === 'object' && data !== null) {
+                           const str = JSON.stringify(data);
+                           if (str.includes('thank') || str.includes('success') || str.includes('submit')) {
+                             npfFormSubmitted = true;
+                           }
+                         }
+                       } catch(e) {}
+                     };
+                     window.addEventListener("message", debugMessages);
+
+                     // Key approach: when user closes the NPF popup (by clicking X or overlay), 
+                     // proceed to quiz. We detect close by watching for popup removal OR visibility change.
+                     const checkPopupClosed = setInterval(() => {
+                       const popupOverlay = document.querySelector('[class*="npf_wg"], [id*="npf_popup"], [class*="npfPopup"], .npf_popup_overlay, [style*="nopaperforms"]');
+                       const popupVisible = popupOverlay && (popupOverlay as HTMLElement).offsetParent !== null;
+                       
+                       // Check if NPF iframe shows thank you (try reading inner text)
+                       const npfIframes = document.querySelectorAll('iframe[src*="nopaperforms"], iframe[src*="npfs"]');
+                       npfIframes.forEach(iframe => {
+                         try {
+                           const src = iframe.getAttribute('src') || '';
+                           if (src.includes('thankyou') || src.includes('thank-you') || src.includes('success')) {
+                             npfFormSubmitted = true;
+                           }
+                         } catch(e) {}
+                       });
+                     }, 500);
+
+                     // Use MutationObserver to detect popup close (element removed from DOM)
+                     let popupSeen = false;
+                     const observer = new MutationObserver(() => {
+                       // Broad selector for any NPF-related popup elements
+                       const anyNpfEl = document.querySelector('[class*="npf_wg"], [id*="npf"], [class*="npfW"], .npf_popup_overlay');
+                       
+                       if (anyNpfEl) {
+                         popupSeen = true;
+                       }
+                       
+                       // Popup was seen but now gone = closed
+                       if (popupSeen && !anyNpfEl) {
+                         cleanup();
                          setStep("quiz");
                        }
                      });
-                     observer.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['style', 'class'] });
+                     observer.observe(document.body, { childList: true, subtree: true, attributes: true });
 
-                     // Also listen for postMessage as backup
-                     const handleNpfMessage = (event: MessageEvent) => {
-                       try {
-                         const data = event.data;
-                         if (
-                           (typeof data === "string" && (data.includes("thankyou") || data.includes("success") || data.includes("submitted"))) ||
-                           (typeof data === "object" && data !== null && (data.formSubmitted || data.status === "submitted"))
-                         ) {
-                           window.removeEventListener("message", handleNpfMessage);
-                           observer.disconnect();
-                           setStep("quiz");
-                         }
-                       } catch (e) {}
+                     // Cleanup function
+                     const cleanup = () => {
+                       observer.disconnect();
+                       clearInterval(checkPopupClosed);
+                       window.removeEventListener("message", debugMessages);
                      };
-                     window.addEventListener("message", handleNpfMessage);
 
-                     // Clean up after 10 minutes
-                     setTimeout(() => { observer.disconnect(); window.removeEventListener("message", handleNpfMessage); }, 600000);
+                     // Safety: clean up after 10 min
+                     setTimeout(cleanup, 600000);
 
                      // Load and show NoPaperForms popup widget
                      const initAndShowPopup = () => {
