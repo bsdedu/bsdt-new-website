@@ -1,37 +1,58 @@
 
 
-# Replace Quiz Webhook with Make.com
+## Problem Analysis
 
-## Overview
-Switch the quiz lead capture from the Google Apps Script webhook to the Make.com webhook, and simplify the submission code.
+The current code uses a `MutationObserver` that checks if NPF DOM elements are **removed** from the page. However, NoPaperForms doesn't remove its elements from the DOM when the popup closes — it just **hides** them (e.g., `display: none` or `visibility: hidden`). So the condition `popupSeen && !anyNpfEl` never fires, and the user returns to the hero page.
 
-## Changes
+## Solution
 
-### File: `src/pages/DesignIQQuiz.tsx`
+Replace the DOM-removal detection with **visibility-based detection**:
 
-**1. Update webhook URL (line 143)**
-Change from the Google Apps Script URL to:
-`https://hook.us2.make.com/7x7wia78fz83y3qvwbw9dho61gfq22jr`
+1. **In the MutationObserver callback**, instead of checking if NPF elements exist, check if the popup overlay is **visible** (using `offsetParent`, `display`, `opacity`, or `visibility` CSS checks).
 
-**2. Replace `sendToSheet` function (lines 192-216)**
-Remove the hidden iframe/form workaround (which was needed for Google Apps Script CORS/redirect issues) and replace with a simple `fetch` POST request. Make.com webhooks accept standard JSON with proper CORS support:
+2. **Flow**:
+   - When NPF popup appears and is visible → mark `popupSeen = true`
+   - When NPF popup element still exists but is now **hidden** → trigger `setStep("quiz")`
+
+3. **Concrete check**: Query for NPF overlay elements, then check computed style or inline style for `display: none`, `visibility: hidden`, or `offsetParent === null`.
+
+4. **Simplify** the overly complex detection code — remove the redundant `checkPopupClosed` interval and iframe URL polling since they don't contribute. Keep only the MutationObserver with visibility checks.
+
+## Key Code Change (lines 360-374)
 
 ```typescript
-const sendToSheet = async (payload: Record<string, unknown>) => {
-  try {
-    await fetch(WEBHOOK_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
-  } catch (err) {
-    console.error("Webhook send failed:", err);
+let popupSeen = false;
+const observer = new MutationObserver(() => {
+  const anyNpfEl = document.querySelector(
+    '[class*="npf_wg"], [id*="npf"], [class*="npfW"], .npf_popup_overlay'
+  ) as HTMLElement | null;
+  
+  if (anyNpfEl) {
+    // Check if it's actually visible
+    const style = window.getComputedStyle(anyNpfEl);
+    const isVisible = style.display !== 'none' && 
+                      style.visibility !== 'hidden' && 
+                      style.opacity !== '0' &&
+                      anyNpfEl.offsetParent !== null;
+    
+    if (isVisible) {
+      popupSeen = true;
+    }
+    
+    // Was visible before, now hidden = popup closed after interaction
+    if (popupSeen && !isVisible) {
+      cleanup();
+      setStep("quiz");
+    }
   }
-};
+  
+  // Element fully removed (fallback)
+  if (popupSeen && !anyNpfEl) {
+    cleanup();
+    setStep("quiz");
+  }
+});
 ```
 
-That's it -- two changes in one file. The payload structure (name, email, phone, result, scores, timestamp) remains identical.
-
-## Make.com Setup Required
-In your Make.com scenario, connect the webhook to a "Google Sheets: Add a Row" module and map the incoming JSON fields (name, email, phone, result, timestamp, scores) to your spreadsheet columns.
+This covers both scenarios: element hidden via CSS **or** removed from DOM.
 
