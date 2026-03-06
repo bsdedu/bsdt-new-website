@@ -311,8 +311,36 @@ const DesignIQQuiz: React.FC = () => {
                   size="lg"
                   className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-12 text-lg h-16 rounded-xl shadow-lg shadow-bsd-orange/25"
                    onClick={() => {
-                     setStep("quiz");
-                     // Load NoPaperForms popup widget
+                     // Listen for NPF form submission via postMessage, then proceed to quiz
+                     const handleNpfMessage = (event: MessageEvent) => {
+                       // NPF sends postMessage on form submission with various formats
+                       if (
+                         event.data === "npf_form_submitted" ||
+                         (typeof event.data === "string" && event.data.includes("npf")) ||
+                         (typeof event.data === "object" && event.data?.type === "npf_form_submitted") ||
+                         (typeof event.data === "string" && event.data.includes("thankyou"))
+                       ) {
+                         window.removeEventListener("message", handleNpfMessage);
+                         setStep("quiz");
+                       }
+                     };
+                     window.addEventListener("message", handleNpfMessage);
+
+                     // Also watch for the popup being closed (user might close without submitting)
+                     // We'll use a MutationObserver to detect when NPF popup is removed/hidden
+                     const observer = new MutationObserver(() => {
+                       const npfPopup = document.querySelector('.npf-popup-overlay, .npf_popup_overlay, [class*="npf"]');
+                       if (!npfPopup) {
+                         // Popup was closed - check if form was likely submitted
+                         // Give a small delay to let postMessage fire first
+                         setTimeout(() => {
+                           observer.disconnect();
+                         }, 500);
+                       }
+                     });
+                     observer.observe(document.body, { childList: true, subtree: true });
+
+                     // Load and show NoPaperForms popup widget
                      const initAndShowPopup = () => {
                        try {
                          // @ts-ignore
