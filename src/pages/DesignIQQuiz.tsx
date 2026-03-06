@@ -312,7 +312,6 @@ const DesignIQQuiz: React.FC = () => {
                   size="lg"
                   className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-12 text-lg h-16 rounded-xl shadow-lg shadow-bsd-orange/25"
                    onClick={() => {
-                     let npfFormSubmitted = false;
                      let popupSeen = false;
                      let transitioned = false;
 
@@ -323,23 +322,7 @@ const DesignIQQuiz: React.FC = () => {
                        setStep("quiz");
                      };
 
-                     // Only transition on confirmed submission via postMessage
-                     const onMessage = (event: MessageEvent) => {
-                       if (event.origin && event.origin.includes('nopaperforms')) {
-                         npfFormSubmitted = true;
-                       }
-                       try {
-                         const str = typeof event.data === 'string' ? event.data : JSON.stringify(event.data);
-                         if (str.includes('thank') || str.includes('success') || str.includes('submit')) {
-                           npfFormSubmitted = true;
-                         }
-                       } catch(e) {}
-                       if (npfFormSubmitted) {
-                         setTimeout(goToQuiz, 2000);
-                       }
-                     };
-                     window.addEventListener("message", onMessage);
-
+                     // Detect when NPF popup becomes visible, then when it closes/hides → go to quiz
                      const checkVisibility = () => {
                        const popupEl = document.querySelector(
                          '.npfWidget_popup, .npf_popup_overlay, .npfWidgetPopup, [class*="npfW"][class*="popup"], [class*="npfWidget"], .npf_wgts_overlay'
@@ -353,31 +336,10 @@ const DesignIQQuiz: React.FC = () => {
                          const style = window.getComputedStyle(targetEl);
                          const isVisible = style.display !== 'none' && style.visibility !== 'hidden' && style.opacity !== '0';
                          if (isVisible) popupSeen = true;
+                         if (popupSeen && !isVisible) goToQuiz();
                        }
-
-                       // Check thank-you iframe src (confirms submission)
-                       document.querySelectorAll('iframe[src*="nopaperforms"], iframe[src*="npfs"]').forEach(iframe => {
-                         const src = iframe.getAttribute('src') || '';
-                         if (src.includes('thankyou') || src.includes('thank-you') || src.includes('success')) {
-                           npfFormSubmitted = true;
-                           setTimeout(goToQuiz, 2000);
-                         }
-                       });
-
-                       // Only auto-transition if form was actually submitted AND popup closed
-                       if (npfFormSubmitted && popupSeen) {
-                         const targetNow = document.querySelector(
-                           '.npfWidget_popup, .npf_popup_overlay, .npfWidgetPopup, [class*="npfW"][class*="popup"], [class*="npfWidget"], .npf_wgts_overlay'
-                         ) as HTMLElement | null;
-                         if (!targetNow) {
-                           goToQuiz();
-                         } else {
-                           const style = window.getComputedStyle(targetNow);
-                           if (style.display === 'none' || style.visibility === 'hidden' || style.opacity === '0') {
-                             goToQuiz();
-                           }
-                         }
-                       }
+                       // Popup removed from DOM entirely
+                       if (popupSeen && !targetEl) goToQuiz();
                      };
 
                      const pollInterval = setInterval(checkVisibility, 300);
@@ -387,7 +349,6 @@ const DesignIQQuiz: React.FC = () => {
                      const cleanup = () => {
                        observer.disconnect();
                        clearInterval(pollInterval);
-                       window.removeEventListener("message", onMessage);
                      };
 
                      setTimeout(cleanup, 600000);
