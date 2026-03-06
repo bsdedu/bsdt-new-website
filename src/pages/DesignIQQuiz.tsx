@@ -350,12 +350,12 @@ const DesignIQQuiz: React.FC = () => {
                         setStep("quiz");
                       };
 
-                      // Show fallback button after 8 seconds
-                      const fallbackTimeout = setTimeout(() => {
-                        if (!transitioned) {
-                          setShowFallbackButton(true);
-                        }
-                      }, 8000);
+                       // Show fallback button after 3 seconds
+                       const fallbackTimeout = setTimeout(() => {
+                         if (!transitioned) {
+                           setShowFallbackButton(true);
+                         }
+                       }, 3000);
 
                       const checkVisibility = () => {
                         // Target NPF popup-specific elements (NOT our own container)
@@ -467,14 +467,13 @@ const DesignIQQuiz: React.FC = () => {
             {/* Fallback button if NPF detection fails */}
             {step === "hero" && showFallbackButton && (
               <motion.div
-                initial={{ opacity: 0, y: 10 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="mt-4 text-center"
+                className="fixed bottom-8 left-0 right-0 z-[99999] flex flex-col items-center"
               >
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="text-base px-8 py-4 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                  className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-bold px-10 py-5 text-lg rounded-xl shadow-2xl shadow-bsd-orange/40"
                   onClick={() => {
                     setShowFallbackButton(false);
                     setStep("quiz");
@@ -482,7 +481,7 @@ const DesignIQQuiz: React.FC = () => {
                 >
                   Continue to Quiz <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
-                <p className="text-xs text-muted-foreground mt-2">Already submitted the form? Click above to continue.</p>
+                <p className="text-xs text-background/60 mt-2">Submitted the form? Click to start the quiz.</p>
               </motion.div>
             )}
 
