@@ -350,12 +350,12 @@ const DesignIQQuiz: React.FC = () => {
                         setStep("quiz");
                       };
 
-                      // Show fallback button after 8 seconds
-                      const fallbackTimeout = setTimeout(() => {
-                        if (!transitioned) {
-                          setShowFallbackButton(true);
-                        }
-                      }, 8000);
+                       // Show fallback button after 3 seconds
+                       const fallbackTimeout = setTimeout(() => {
+                         if (!transitioned) {
+                           setShowFallbackButton(true);
+                         }
+                       }, 3000);
 
                       const checkVisibility = () => {
                         // Target NPF popup-specific elements (NOT our own container)
