@@ -338,8 +338,7 @@ const DesignIQQuiz: React.FC = () => {
                      };
                      window.addEventListener("message", debugMessages);
 
-                     // Key approach: when user closes the NPF popup (by clicking X or overlay), 
-                     // proceed to quiz. We detect close by watching for popup removal OR visibility change.
+                     // Detect NPF popup close/submission to transition to quiz
                       let popupSeen = false;
                       let transitioned = false;
 
@@ -350,44 +349,76 @@ const DesignIQQuiz: React.FC = () => {
                         setStep("quiz");
                       };
 
-                      const checkVisibility = () => {
-                        const anyNpfEl = document.querySelector(
-                          '[class*="npf_wg"], [id*="npf"], [class*="npfW"], .npf_popup_overlay, [style*="nopaperforms"]'
-                        ) as HTMLElement | null;
+                      // Show fallback button after 8 seconds
+                      const fallbackTimeout = setTimeout(() => {
+                        if (!transitioned) {
+                          setShowFallbackButton(true);
+                        }
+                      }, 8000);
 
-                        if (anyNpfEl) {
-                          const style = window.getComputedStyle(anyNpfEl);
+                      const checkVisibility = () => {
+                        // Target NPF popup-specific elements (NOT our own container)
+                        const popupOverlay = document.querySelector(
+                          '.npfWidget_popup, .npf_popup_overlay, .npfWidgetPopup, [class*="npfW"][class*="popup"], [class*="npfWidget"], .npf_wgts_overlay'
+                        ) as HTMLElement | null;
+                        
+                        // Also check for any NPF iframe overlay
+                        const npfIframe = document.querySelector(
+                          'iframe[src*="nopaperforms"], iframe[src*="npfs.co"], iframe[src*="in5cdn"]'
+                        ) as HTMLElement | null;
+                        
+                        const targetEl = popupOverlay || npfIframe;
+
+                        if (targetEl) {
+                          const style = window.getComputedStyle(targetEl);
                           const isVisible = style.display !== 'none' && 
                                             style.visibility !== 'hidden' && 
-                                            style.opacity !== '0' &&
-                                            anyNpfEl.offsetParent !== null;
-                          if (isVisible) popupSeen = true;
-                          if (popupSeen && !isVisible) goToQuiz();
+                                            style.opacity !== '0';
+                          if (isVisible) {
+                            popupSeen = true;
+                            console.log('[NPF Debug] Popup detected as visible');
+                          }
+                          if (popupSeen && !isVisible) {
+                            console.log('[NPF Debug] Popup was visible, now hidden - transitioning');
+                            goToQuiz();
+                          }
                         }
 
-                        if (popupSeen && !anyNpfEl) goToQuiz();
+                        // Element fully removed from DOM
+                        if (popupSeen && !targetEl) {
+                          console.log('[NPF Debug] Popup removed from DOM - transitioning');
+                          goToQuiz();
+                        }
 
-                        // Also check for NPF thank-you page in iframes
+                        // Check for thank-you page in iframes
                         document.querySelectorAll('iframe[src*="nopaperforms"], iframe[src*="npfs"]').forEach(iframe => {
                           try {
                             const src = iframe.getAttribute('src') || '';
                             if (src.includes('thankyou') || src.includes('thank-you') || src.includes('success')) {
+                              console.log('[NPF Debug] Thank-you iframe detected - transitioning');
                               goToQuiz();
                             }
                           } catch(e) {}
                         });
+                        
+                        // Check postMessage flag
+                        if (npfFormSubmitted && popupSeen) {
+                          console.log('[NPF Debug] Form submitted via postMessage - transitioning');
+                          goToQuiz();
+                        }
                       };
 
-                      // Poll every 500ms as primary detection (most reliable for inline style changes)
+                      // Poll every 500ms
                       const pollInterval = setInterval(checkVisibility, 500);
 
-                      // MutationObserver as secondary detection
+                      // MutationObserver for DOM/style changes
                       const observer = new MutationObserver(checkVisibility);
-                      observer.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['style', 'class'] });
+                      observer.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['style', 'class', 'display'] });
 
                       const cleanup = () => {
                         observer.disconnect();
                         clearInterval(pollInterval);
+                        clearTimeout(fallbackTimeout);
                         window.removeEventListener("message", debugMessages);
                       };
 
