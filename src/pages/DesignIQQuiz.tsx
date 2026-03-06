@@ -155,6 +155,7 @@ const DesignIQQuiz: React.FC = () => {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [direction, setDirection] = useState(1);
   const [sliderValue, setSliderValue] = useState(2);
+  const [showFallbackButton, setShowFallbackButton] = useState(false);
 
   const advanceQuestion = useCallback((newScores: Record<Tag, number>) => {
     setTimeout(() => {
@@ -460,6 +461,28 @@ const DesignIQQuiz: React.FC = () => {
                 >
                   <Sparkles className="mr-2 w-5 h-5" /> Start the Quiz <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
+               </motion.div>
+            )}
+
+            {/* Fallback button if NPF detection fails */}
+            {step === "hero" && showFallbackButton && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="mt-4 text-center"
+              >
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="text-base px-8 py-4 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                  onClick={() => {
+                    setShowFallbackButton(false);
+                    setStep("quiz");
+                  }}
+                >
+                  Continue to Quiz <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+                <p className="text-xs text-muted-foreground mt-2">Already submitted the form? Click above to continue.</p>
               </motion.div>
             )}
 
