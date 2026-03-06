@@ -356,22 +356,37 @@ const DesignIQQuiz: React.FC = () => {
                        });
                      }, 500);
 
-                     // Use MutationObserver to detect popup close (element removed from DOM)
-                     let popupSeen = false;
-                     const observer = new MutationObserver(() => {
-                       // Broad selector for any NPF-related popup elements
-                       const anyNpfEl = document.querySelector('[class*="npf_wg"], [id*="npf"], [class*="npfW"], .npf_popup_overlay');
-                       
-                       if (anyNpfEl) {
-                         popupSeen = true;
-                       }
-                       
-                       // Popup was seen but now gone = closed
-                       if (popupSeen && !anyNpfEl) {
-                         cleanup();
-                         setStep("quiz");
-                       }
-                     });
+                      // Use MutationObserver to detect popup close (hidden or removed)
+                      let popupSeen = false;
+                      const observer = new MutationObserver(() => {
+                        const anyNpfEl = document.querySelector(
+                          '[class*="npf_wg"], [id*="npf"], [class*="npfW"], .npf_popup_overlay'
+                        ) as HTMLElement | null;
+                        
+                        if (anyNpfEl) {
+                          const style = window.getComputedStyle(anyNpfEl);
+                          const isVisible = style.display !== 'none' && 
+                                            style.visibility !== 'hidden' && 
+                                            style.opacity !== '0' &&
+                                            anyNpfEl.offsetParent !== null;
+                          
+                          if (isVisible) {
+                            popupSeen = true;
+                          }
+                          
+                          // Was visible before, now hidden = popup closed
+                          if (popupSeen && !isVisible) {
+                            cleanup();
+                            setStep("quiz");
+                          }
+                        }
+                        
+                        // Element fully removed (fallback)
+                        if (popupSeen && !anyNpfEl) {
+                          cleanup();
+                          setStep("quiz");
+                        }
+                      });
                      observer.observe(document.body, { childList: true, subtree: true, attributes: true });
 
                      // Cleanup function
