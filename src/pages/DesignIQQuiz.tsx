@@ -340,64 +340,58 @@ const DesignIQQuiz: React.FC = () => {
 
                      // Key approach: when user closes the NPF popup (by clicking X or overlay), 
                      // proceed to quiz. We detect close by watching for popup removal OR visibility change.
-                     const checkPopupClosed = setInterval(() => {
-                       const popupOverlay = document.querySelector('[class*="npf_wg"], [id*="npf_popup"], [class*="npfPopup"], .npf_popup_overlay, [style*="nopaperforms"]');
-                       const popupVisible = popupOverlay && (popupOverlay as HTMLElement).offsetParent !== null;
-                       
-                       // Check if NPF iframe shows thank you (try reading inner text)
-                       const npfIframes = document.querySelectorAll('iframe[src*="nopaperforms"], iframe[src*="npfs"]');
-                       npfIframes.forEach(iframe => {
-                         try {
-                           const src = iframe.getAttribute('src') || '';
-                           if (src.includes('thankyou') || src.includes('thank-you') || src.includes('success')) {
-                             npfFormSubmitted = true;
-                           }
-                         } catch(e) {}
-                       });
-                     }, 500);
-
-                      // Use MutationObserver to detect popup close (hidden or removed)
                       let popupSeen = false;
-                      const observer = new MutationObserver(() => {
+                      let transitioned = false;
+
+                      const goToQuiz = () => {
+                        if (transitioned) return;
+                        transitioned = true;
+                        cleanup();
+                        setStep("quiz");
+                      };
+
+                      const checkVisibility = () => {
                         const anyNpfEl = document.querySelector(
-                          '[class*="npf_wg"], [id*="npf"], [class*="npfW"], .npf_popup_overlay'
+                          '[class*="npf_wg"], [id*="npf"], [class*="npfW"], .npf_popup_overlay, [style*="nopaperforms"]'
                         ) as HTMLElement | null;
-                        
+
                         if (anyNpfEl) {
                           const style = window.getComputedStyle(anyNpfEl);
                           const isVisible = style.display !== 'none' && 
                                             style.visibility !== 'hidden' && 
                                             style.opacity !== '0' &&
                                             anyNpfEl.offsetParent !== null;
-                          
-                          if (isVisible) {
-                            popupSeen = true;
-                          }
-                          
-                          // Was visible before, now hidden = popup closed
-                          if (popupSeen && !isVisible) {
-                            cleanup();
-                            setStep("quiz");
-                          }
+                          if (isVisible) popupSeen = true;
+                          if (popupSeen && !isVisible) goToQuiz();
                         }
-                        
-                        // Element fully removed (fallback)
-                        if (popupSeen && !anyNpfEl) {
-                          cleanup();
-                          setStep("quiz");
-                        }
-                      });
-                     observer.observe(document.body, { childList: true, subtree: true, attributes: true });
 
-                     // Cleanup function
-                     const cleanup = () => {
-                       observer.disconnect();
-                       clearInterval(checkPopupClosed);
-                       window.removeEventListener("message", debugMessages);
-                     };
+                        if (popupSeen && !anyNpfEl) goToQuiz();
 
-                     // Safety: clean up after 10 min
-                     setTimeout(cleanup, 600000);
+                        // Also check for NPF thank-you page in iframes
+                        document.querySelectorAll('iframe[src*="nopaperforms"], iframe[src*="npfs"]').forEach(iframe => {
+                          try {
+                            const src = iframe.getAttribute('src') || '';
+                            if (src.includes('thankyou') || src.includes('thank-you') || src.includes('success')) {
+                              goToQuiz();
+                            }
+                          } catch(e) {}
+                        });
+                      };
+
+                      // Poll every 500ms as primary detection (most reliable for inline style changes)
+                      const pollInterval = setInterval(checkVisibility, 500);
+
+                      // MutationObserver as secondary detection
+                      const observer = new MutationObserver(checkVisibility);
+                      observer.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['style', 'class'] });
+
+                      const cleanup = () => {
+                        observer.disconnect();
+                        clearInterval(pollInterval);
+                        window.removeEventListener("message", debugMessages);
+                      };
+
+                      setTimeout(cleanup, 600000);
 
                      // Load and show NoPaperForms popup widget
                      const initAndShowPopup = () => {
