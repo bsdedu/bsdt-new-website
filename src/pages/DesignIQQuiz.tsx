@@ -229,7 +229,7 @@ const DesignIQQuiz: React.FC = () => {
       toast({ title: "Invalid email", description: "Please enter a valid email address.", variant: "destructive" });
       return;
     }
-    if (lead.phone && !/^\d{10,}$/.test(lead.phone.trim())) {
+    if (!lead.phone.trim() || !/^\d{10,}$/.test(lead.phone.trim())) {
       toast({ title: "Invalid phone", description: "Please enter a valid phone number (digits only, min 10).", variant: "destructive" });
       return;
     }
@@ -310,50 +310,63 @@ const DesignIQQuiz: React.FC = () => {
                 <Button
                   size="lg"
                   className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-12 text-lg h-16 rounded-xl shadow-lg shadow-bsd-orange/25"
-                   onClick={() => {
-                     setStep("quiz");
-                     // Load NoPaperForms popup widget
-                     const initAndShowPopup = () => {
-                       try {
-                         // @ts-ignore
-                         const widget = new NpfWidgetsInit({
-                           widgetId: "adff9b077808c1fcb8e77a017693b6b9",
-                           baseurl: "widgets.in5.nopaperforms.com",
-                           formTitle: "Enquire Now",
-                           titleColor: "#FF0033",
-                           backgroundColor: "#ddd",
-                           iframeHeight: "500px",
-                           buttonbgColor: "#ff0000",
-                           buttonTextColor: "#FFF",
-                         });
-                         // Manually trigger the popup to show immediately
-                         setTimeout(() => {
-                           widget.showPopup("adff9b077808c1fcb8e77a017693b6b9", "widgets.in5.nopaperforms.com");
-                         }, 300);
-                       } catch (e) {
-                         console.error("NoPaperForms widget error:", e);
-                       }
-                     };
-
-                     const existingScript = document.querySelector('script[src*="npfwpopup.js"]');
-                     if (!existingScript) {
-                       const popupScript = document.createElement("script");
-                       popupScript.src = "https://in5cdn.npfs.co/js/widget/npfwpopup.js";
-                       popupScript.onload = initAndShowPopup;
-                       popupScript.onerror = () => {
-                         console.error("Failed to load NoPaperForms popup script");
-                       };
-                       document.body.appendChild(popupScript);
-                     } else {
-                       initAndShowPopup();
-                     }
-                   }}
+                  onClick={() => setStep("lead")}
                 >
                   <Sparkles className="mr-2 w-5 h-5" /> Start the Quiz <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </motion.div>
             )}
 
+
+            {/* LEAD FORM - Mandatory */}
+            {step === "lead" && (
+              <motion.div
+                key="lead"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -30 }}
+                transition={{ duration: 0.5 }}
+                className="w-full max-w-md mx-auto"
+              >
+                <div className="bg-background rounded-3xl shadow-2xl border border-border overflow-hidden">
+                  <div className="h-1.5 bg-gradient-to-r from-bsd-orange via-bsd-orange/80 to-bsd-orange/40" />
+                  <div className="p-6 md:p-10">
+                    <div className="text-center mb-6">
+                      <Brain className="w-10 h-10 text-bsd-orange mx-auto mb-3" />
+                      <h2 className="text-2xl font-display font-bold text-foreground">Almost there!</h2>
+                      <p className="text-muted-foreground text-sm mt-1">Fill in your details to start the quiz</p>
+                    </div>
+                    <div className="space-y-4">
+                      <Input
+                        placeholder="Full Name *"
+                        value={lead.name}
+                        onChange={(e) => setLead({ ...lead, name: e.target.value })}
+                        className="h-12 rounded-xl"
+                      />
+                      <Input
+                        placeholder="Email Address *"
+                        type="email"
+                        value={lead.email}
+                        onChange={(e) => setLead({ ...lead, email: e.target.value })}
+                        className="h-12 rounded-xl"
+                      />
+                      <Input
+                        placeholder="Phone Number *"
+                        value={lead.phone}
+                        onChange={(e) => setLead({ ...lead, phone: e.target.value })}
+                        className="h-12 rounded-xl"
+                      />
+                    </div>
+                    <Button
+                      onClick={startQuiz}
+                      className="w-full mt-6 bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold h-12 text-base rounded-xl"
+                    >
+                      Start the Quiz <ArrowRight className="ml-2 w-4 h-4" />
+                    </Button>
+                  </div>
+                </div>
+              </motion.div>
+            )}
 
 
 
