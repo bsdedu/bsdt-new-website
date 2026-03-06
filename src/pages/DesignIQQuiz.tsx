@@ -313,48 +313,39 @@ const DesignIQQuiz: React.FC = () => {
                    onClick={() => {
                      setStep("quiz");
                      // Load NoPaperForms popup widget
-                     const existingScript = document.querySelector('script[src*="npfwpopup.js"]');
-                     if (!existingScript) {
-                       const popupScript = document.createElement("script");
-                       popupScript.src = "https://in5cdn.npfs.co/js/widget/npfwpopup.js";
-                       popupScript.onload = () => {
-                         try {
-                           // @ts-ignore
-                           new NpfWidgetsInit({
-                             widgetId: "adff9b077808c1fcb8e77a017693b6b9",
-                             baseurl: "widgets.in5.nopaperforms.com",
-                             formTitle: "Feedback Form",
-                             titleColor: "#FF0033",
-                             backgroundColor: "#ddd",
-                             iframeHeight: "500px",
-                             buttonbgColor: "#ff0000",
-                             buttonTextColor: "#FFF",
-                           });
-                         } catch (e) {
-                           console.error("NoPaperForms widget error:", e);
-                         }
-                       };
-                       popupScript.onerror = () => {
-                         console.error("Failed to load NoPaperForms popup script");
-                       };
-                       document.body.appendChild(popupScript);
-                     } else {
-                       // Script already loaded, re-init widget
+                     const initAndShowPopup = () => {
                        try {
                          // @ts-ignore
-                         new NpfWidgetsInit({
+                         const widget = new NpfWidgetsInit({
                            widgetId: "adff9b077808c1fcb8e77a017693b6b9",
                            baseurl: "widgets.in5.nopaperforms.com",
-                           formTitle: "Feedback Form",
+                           formTitle: "Enquire Now",
                            titleColor: "#FF0033",
                            backgroundColor: "#ddd",
                            iframeHeight: "500px",
                            buttonbgColor: "#ff0000",
                            buttonTextColor: "#FFF",
                          });
+                         // Manually trigger the popup to show immediately
+                         setTimeout(() => {
+                           widget.showPopup("adff9b077808c1fcb8e77a017693b6b9", "widgets.in5.nopaperforms.com");
+                         }, 300);
                        } catch (e) {
-                         console.error("NoPaperForms widget re-init error:", e);
+                         console.error("NoPaperForms widget error:", e);
                        }
+                     };
+
+                     const existingScript = document.querySelector('script[src*="npfwpopup.js"]');
+                     if (!existingScript) {
+                       const popupScript = document.createElement("script");
+                       popupScript.src = "https://in5cdn.npfs.co/js/widget/npfwpopup.js";
+                       popupScript.onload = initAndShowPopup;
+                       popupScript.onerror = () => {
+                         console.error("Failed to load NoPaperForms popup script");
+                       };
+                       document.body.appendChild(popupScript);
+                     } else {
+                       initAndShowPopup();
                      }
                    }}
                 >
