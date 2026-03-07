@@ -247,6 +247,8 @@ const DesignIQQuiz: React.FC = () => {
     setSelectedIdx(null);
     setIsTransitioning(false);
     setSliderValue(2);
+    setNpfLaunched(false);
+    sessionStorage.removeItem("npfLaunched");
   };
 
   const handleShare = () => {
