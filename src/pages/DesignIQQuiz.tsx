@@ -309,118 +309,64 @@ const DesignIQQuiz: React.FC = () => {
                 <p className="text-background/60 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
                   Unlock your creative personality in 9 quick questions. Discover if you're a Visual Thinker, Idea Generator, Problem Solver, or Creative Explorer.
                 </p>
-                <Button
-                  size="lg"
-                  className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-12 text-lg h-16 rounded-xl shadow-lg shadow-bsd-orange/25"
-                   onClick={() => {
-                     let transitioned = false;
 
-                     const goToQuiz = () => {
-                       if (transitioned) return;
-                       transitioned = true;
-                       cleanup();
-                       setStep("quiz");
-                     };
+                {!npfLaunched ? (
+                  <Button
+                    size="lg"
+                    className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-12 text-lg h-16 rounded-xl shadow-lg shadow-bsd-orange/25"
+                    onClick={() => {
+                      setNpfLaunched(true);
 
-                     // Snapshot existing body children before NPF popup loads
-                     const existingChildren = new Set(Array.from(document.body.children));
-                     let npfElements: HTMLElement[] = [];
-                     let popupSeen = false;
+                      const initAndShowPopup = () => {
+                        try {
+                          // @ts-ignore
+                          const widget = new NpfWidgetsInit({
+                            widgetId: "adff9b077808c1fcb8e77a017693b6b9",
+                            baseurl: "widgets.in5.nopaperforms.com",
+                            formTitle: "Enquire Now",
+                            titleColor: "#FF0033",
+                            backgroundColor: "#ddd",
+                            iframeHeight: "500px",
+                            buttonbgColor: "#ff0000",
+                            buttonTextColor: "#FFF",
+                          });
+                          setTimeout(() => {
+                            widget.showPopup("adff9b077808c1fcb8e77a017693b6b9", "widgets.in5.nopaperforms.com");
+                          }, 300);
+                        } catch (e) {
+                          console.error("NoPaperForms widget error:", e);
+                        }
+                      };
 
-                     const checkForPopup = () => {
-                       // Find any NEW elements added to body after we clicked
-                       const currentChildren = Array.from(document.body.children) as HTMLElement[];
-                       const newElements = currentChildren.filter(el => !existingChildren.has(el));
-                       
-                       // Also look for common NPF patterns anywhere in DOM
-                       const npfBySelector = Array.from(document.querySelectorAll(
-                         '[id*="npf"], [class*="npf"], [id*="nopaperform"], [class*="nopaperform"], ' +
-                         'div[style*="z-index"][style*="position: fixed"], ' +
-                         'div[style*="z-index"][style*="position:fixed"], ' +
-                         'iframe[src*="nopaperforms"], iframe[src*="npfs"], iframe[src*="in5cdn"], iframe[src*="widgets.in5"]'
-                       )) as HTMLElement[];
-
-                       // Combine: new body children + NPF-matched elements
-                       const candidates = [...newElements, ...npfBySelector];
-                       
-                       // Filter to visible overlay-like elements
-                       for (const el of candidates) {
-                         if (el.tagName === 'SCRIPT') continue;
-                         const style = window.getComputedStyle(el);
-                         const isVisible = style.display !== 'none' && style.visibility !== 'hidden' && parseFloat(style.opacity) > 0;
-                         const isOverlay = style.position === 'fixed' || style.position === 'absolute' || el.tagName === 'IFRAME';
-                         
-                         if (isVisible && isOverlay) {
-                           if (!npfElements.includes(el)) npfElements.push(el);
-                           popupSeen = true;
-                         }
-                       }
-
-                       // If popup was seen, check if ALL tracked NPF elements are now hidden/removed
-                       if (popupSeen && npfElements.length > 0) {
-                         const allGone = npfElements.every(el => {
-                           if (!document.body.contains(el)) return true;
-                           const style = window.getComputedStyle(el);
-                           return style.display === 'none' || style.visibility === 'hidden' || parseFloat(style.opacity) === 0;
-                         });
-                         if (allGone) {
-                           console.log('[Quiz] NPF popup closed, transitioning to quiz');
-                           goToQuiz();
-                         }
-                       }
-                     };
-
-                     const pollInterval = setInterval(checkForPopup, 400);
-                     const observer = new MutationObserver(checkForPopup);
-                     observer.observe(document.body, { 
-                       childList: true, subtree: true, attributes: true, 
-                       attributeFilter: ['style', 'class', 'display', 'visibility'] 
-                     });
-
-                     const cleanup = () => {
-                       observer.disconnect();
-                       clearInterval(pollInterval);
-                     };
-
-                     setTimeout(cleanup, 600000);
-
-                     // Load and show NoPaperForms popup widget
-                     const initAndShowPopup = () => {
-                       try {
-                         // @ts-ignore
-                         const widget = new NpfWidgetsInit({
-                           widgetId: "adff9b077808c1fcb8e77a017693b6b9",
-                           baseurl: "widgets.in5.nopaperforms.com",
-                           formTitle: "Enquire Now",
-                           titleColor: "#FF0033",
-                           backgroundColor: "#ddd",
-                           iframeHeight: "500px",
-                           buttonbgColor: "#ff0000",
-                           buttonTextColor: "#FFF",
-                         });
-                         setTimeout(() => {
-                           widget.showPopup("adff9b077808c1fcb8e77a017693b6b9", "widgets.in5.nopaperforms.com");
-                         }, 300);
-                       } catch (e) {
-                         console.error("NoPaperForms widget error:", e);
-                       }
-                     };
-
-                     const existingScript = document.querySelector('script[src*="npfwpopup.js"]');
-                     if (!existingScript) {
-                       const popupScript = document.createElement("script");
-                       popupScript.src = "https://in5cdn.npfs.co/js/widget/npfwpopup.js";
-                       popupScript.onload = initAndShowPopup;
-                       popupScript.onerror = () => console.error("Failed to load NoPaperForms popup script");
-                       document.body.appendChild(popupScript);
-                     } else {
-                       initAndShowPopup();
-                     }
-                   }}
-                >
-                  <Sparkles className="mr-2 w-5 h-5" /> Start the Quiz <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-               </motion.div>
+                      const existingScript = document.querySelector('script[src*="npfwpopup.js"]');
+                      if (!existingScript) {
+                        const popupScript = document.createElement("script");
+                        popupScript.src = "https://in5cdn.npfs.co/js/widget/npfwpopup.js";
+                        popupScript.onload = initAndShowPopup;
+                        popupScript.onerror = () => console.error("Failed to load NoPaperForms popup script");
+                        document.body.appendChild(popupScript);
+                      } else {
+                        initAndShowPopup();
+                      }
+                    }}
+                  >
+                    <Sparkles className="mr-2 w-5 h-5" /> Start the Quiz <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                ) : (
+                  <div className="space-y-4">
+                    <p className="text-background/80 text-base font-medium animate-pulse">
+                      📝 Please fill in the form above, then click below to begin!
+                    </p>
+                    <Button
+                      size="lg"
+                      className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-12 text-lg h-16 rounded-xl shadow-lg shadow-bsd-orange/25"
+                      onClick={() => setStep("quiz")}
+                    >
+                      Continue to Quiz <ArrowRight className="ml-2 w-5 h-5" />
+                    </Button>
+                  </div>
+                )}
+              </motion.div>
             )}
 
 
