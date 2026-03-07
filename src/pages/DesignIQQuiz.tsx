@@ -147,6 +147,7 @@ const optionLabels = ["A", "B", "C", "D"];
 const DesignIQQuiz: React.FC = () => {
   const { toast } = useToast();
   const [step, setStep] = useState<"hero" | "lead" | "quiz" | "result">("hero");
+  const [npfLaunched, setNpfLaunched] = useState(false);
   const [currentQ, setCurrentQ] = useState(0);
   const [lead, setLead] = useState({ name: "", email: "", phone: "" });
   const [scores, setScores] = useState<Record<Tag, number>>({ visual: 0, ideas: 0, logic: 0, explorer: 0 });
