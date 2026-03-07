@@ -315,7 +315,8 @@ const DesignIQQuiz: React.FC = () => {
                     size="lg"
                     className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-12 text-lg h-16 rounded-xl shadow-lg shadow-bsd-orange/25"
                     onClick={() => {
-                      setNpfLaunched(true);
+                       setNpfLaunched(true);
+                       sessionStorage.setItem("npfLaunched", "true");
 
                       const initAndShowPopup = () => {
                         try {
