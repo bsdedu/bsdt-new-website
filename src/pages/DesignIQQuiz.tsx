@@ -335,6 +335,19 @@ const DesignIQQuiz: React.FC = () => {
                           });
                           setTimeout(() => {
                             widget.showPopup("adff9b077808c1fcb8e77a017693b6b9", "widgets.in5.nopaperforms.com");
+                            // Continuously remove close buttons from NPF popup
+                            const removeCloseButtons = () => {
+                              document.querySelectorAll(
+                                '.npfWidgetClose, .npf_close, [class*="npf"] [class*="close"], [class*="npf"] [class*="Close"], [id*="npf"] [class*="close"]'
+                              ).forEach(el => {
+                                (el as HTMLElement).style.display = 'none';
+                                (el as HTMLElement).style.visibility = 'hidden';
+                              });
+                            };
+                            const closeRemover = setInterval(removeCloseButtons, 500);
+                            removeCloseButtons();
+                            // Stop after 2 minutes
+                            setTimeout(() => clearInterval(closeRemover), 120000);
                           }, 300);
                         } catch (e) {
                           console.error("NoPaperForms widget error:", e);
