@@ -147,7 +147,7 @@ const optionLabels = ["A", "B", "C", "D"];
 const DesignIQQuiz: React.FC = () => {
   const { toast } = useToast();
   const [step, setStep] = useState<"hero" | "lead" | "quiz" | "result">("hero");
-  const [npfLaunched, setNpfLaunched] = useState(false);
+  const [npfLaunched, setNpfLaunched] = useState(() => sessionStorage.getItem("npfLaunched") === "true");
   const [currentQ, setCurrentQ] = useState(0);
   const [lead, setLead] = useState({ name: "", email: "", phone: "" });
   const [scores, setScores] = useState<Record<Tag, number>>({ visual: 0, ideas: 0, logic: 0, explorer: 0 });
@@ -247,6 +247,8 @@ const DesignIQQuiz: React.FC = () => {
     setSelectedIdx(null);
     setIsTransitioning(false);
     setSliderValue(2);
+    setNpfLaunched(false);
+    sessionStorage.removeItem("npfLaunched");
   };
 
   const handleShare = () => {
@@ -315,7 +317,8 @@ const DesignIQQuiz: React.FC = () => {
                     size="lg"
                     className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-12 text-lg h-16 rounded-xl shadow-lg shadow-bsd-orange/25"
                     onClick={() => {
-                      setNpfLaunched(true);
+                       setNpfLaunched(true);
+                       sessionStorage.setItem("npfLaunched", "true");
 
                       const initAndShowPopup = () => {
                         try {
