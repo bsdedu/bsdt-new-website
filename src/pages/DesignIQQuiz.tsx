@@ -335,18 +335,44 @@ const DesignIQQuiz: React.FC = () => {
                           });
                           setTimeout(() => {
                             widget.showPopup("adff9b077808c1fcb8e77a017693b6b9", "widgets.in5.nopaperforms.com");
-                            // Continuously remove close buttons from NPF popup
+                            // Aggressively hide ALL close buttons from NPF popup
                             const removeCloseButtons = () => {
-                              document.querySelectorAll(
-                                '.npfWidgetClose, .npf_close, [class*="npf"] [class*="close"], [class*="npf"] [class*="Close"], [id*="npf"] [class*="close"]'
-                              ).forEach(el => {
+                              // Target every possible close button selector
+                              const selectors = [
+                                '.npfWidgetClose', '.npf_close', '.npfW_close', '.npfWclose',
+                                '[class*="npf"] [class*="close"]', '[class*="npf"] [class*="Close"]',
+                                '[id*="npf"] [class*="close"]', '[id*="npf"] [class*="Close"]',
+                                '[class*="npf"] button', '[id*="npf"] button',
+                                '[class*="npf"] a[href*="close"]',
+                                '[class*="npf"] .btn-close',
+                                '[class*="npf"] [aria-label*="close"]',
+                                '[class*="npf"] [aria-label*="Close"]',
+                                '[class*="npf"] [title*="close"]',
+                                '[class*="npf"] [title*="Close"]',
+                              ];
+                              document.querySelectorAll(selectors.join(', ')).forEach(el => {
                                 (el as HTMLElement).style.display = 'none';
                                 (el as HTMLElement).style.visibility = 'hidden';
+                                (el as HTMLElement).style.pointerEvents = 'none';
+                              });
+                              
+                              // Also find any element with × or ✕ text near fixed/absolute positioned NPF overlays
+                              document.querySelectorAll('div[style*="position: fixed"], div[style*="position:fixed"]').forEach(overlay => {
+                                // Find small clickable elements that look like close buttons
+                                overlay.querySelectorAll('span, a, button, div').forEach(el => {
+                                  const text = (el as HTMLElement).innerText?.trim();
+                                  const html = (el as HTMLElement).innerHTML?.trim();
+                                  if (text === '×' || text === '✕' || text === 'X' || text === 'x' || text === '✖' || 
+                                      html === '&times;' || html === '&#10005;' || html === '&#x2715;') {
+                                    (el as HTMLElement).style.display = 'none';
+                                    (el as HTMLElement).style.visibility = 'hidden';
+                                    (el as HTMLElement).style.pointerEvents = 'none';
+                                  }
+                                });
                               });
                             };
-                            const closeRemover = setInterval(removeCloseButtons, 500);
+                            const closeRemover = setInterval(removeCloseButtons, 300);
                             removeCloseButtons();
-                            // Stop after 2 minutes
                             setTimeout(() => clearInterval(closeRemover), 120000);
                           }, 300);
                         } catch (e) {
