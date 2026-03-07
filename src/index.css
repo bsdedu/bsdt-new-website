@@ -147,36 +147,17 @@
 }
 
 /* Hide NPF popup close/X button to make form mandatory */
-.npfWidgetClose,
-.npfW_close,
-.npfWclose,
-.npf_close,
-[class*="npf"] [class*="close"],
-[class*="npf"] [class*="Close"],
-[id*="npf"] [class*="close"],
-[id*="npf"] [class*="Close"],
-[class*="npf"] button[class*="close"],
-[class*="npf"] .btn-close,
-div[class*="npfWidget"] > span:first-child,
-div[class*="npfWidget"] > a:first-child {
+img[id^="npfWdgclose"],
+.npfTitle img {
   display: none !important;
   visibility: hidden !important;
   pointer-events: none !important;
   opacity: 0 !important;
   width: 0 !important;
   height: 0 !important;
-  overflow: hidden !important;
 }
 
-/* Prevent closing NPF popup by clicking the overlay background */
-.npfWidget_popup_overlay,
-.npf_popup_overlay,
-div[class*="npf"][class*="overlay"] {
+/* Prevent closing NPF popup by clicking the backdrop */
+div[id^="popup-back-"] {
   pointer-events: none !important;
-}
-
-.npfWidget_popup_overlay > *,
-.npf_popup_overlay > *,
-div[class*="npf"][class*="overlay"] > * {
-  pointer-events: auto !important;
 }
