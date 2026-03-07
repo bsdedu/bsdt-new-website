@@ -145,3 +145,32 @@
     transform: translateX(-50%);
   }
 }
+
+/* Hide NPF popup close/X button to make form mandatory */
+.npfWidget_popup .npfWidgetClose,
+.npfWidget_popup .npf_close,
+.npfWidget_popup [class*="close"],
+.npfWidget_popup [class*="Close"],
+.npf_popup_overlay .npfWidgetClose,
+.npf_popup_overlay .npf_close,
+.npf_popup_overlay [class*="close"],
+.npf_popup_overlay [class*="Close"],
+div[id*="npf"] [class*="close"],
+div[id*="npf"] [class*="Close"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Prevent closing NPF popup by clicking the overlay background */
+.npfWidget_popup_overlay,
+.npf_popup_overlay,
+div[class*="npf"][class*="overlay"] {
+  pointer-events: none !important;
+}
+
+.npfWidget_popup_overlay > *,
+.npf_popup_overlay > *,
+div[class*="npf"][class*="overlay"] > * {
+  pointer-events: auto !important;
+}
