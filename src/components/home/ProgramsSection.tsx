@@ -114,10 +114,10 @@ const diplomaPrograms: Program[] = [
   {
     icon: <LayoutDashboard className="w-6 h-6 text-bsd-orange" />,
     title: "Professional Diploma in UI & UX",
-    description: "A specialized program teaching user interface and experience design methodologies, prototyping, and usability testing for digital products.",
+    description: "A focused Saturday-only program teaching user interface and experience design methodologies, prototyping, and usability testing for digital products.",
     color: "from-bsd-gray/15 to-bsd-gray/5",
-    duration: "12 months",
-    addons: "Hybrid – Online & Offline",
+    duration: "6 months",
+    addons: "Saturdays Only – Bangalore Campus",
     href: "/academics/diploma-in-hci-for-ui-ux"
   },
 ];
