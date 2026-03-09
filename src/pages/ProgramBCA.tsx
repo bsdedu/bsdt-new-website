@@ -7,8 +7,7 @@ import { EnquiryFormSection } from "@/components/home/EnquiryFormSection";
 import { StudentWorksGallery } from "@/components/program/StudentWorksGallery";
 import { HeroSection } from "@/components/program/bca/HeroSection";
 import { ProgramOverviewSection } from "@/components/program/bca/ProgramOverviewSection";
-
-import { StudentLearningSection } from "@/components/program/StudentLearningSection";
+import { BCAStudentLearningSection } from "@/components/program/bca/BCAStudentLearningSection";
 import { SkillEnhancingElectivesSection } from "@/components/program/SkillEnhancingElectivesSection";
 
 const ProgramBCA = () => {
@@ -23,7 +22,7 @@ const ProgramBCA = () => {
 
       <HeroSection />
       <ProgramOverviewSection />
-      <StudentLearningSection />
+      <BCAStudentLearningSection />
       <SkillEnhancingElectivesSection programKey="bca-uiux" />
       <StudentWorksGallery
         title="BCA Student Projects"

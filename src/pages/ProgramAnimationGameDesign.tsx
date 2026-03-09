@@ -7,8 +7,7 @@ import { EnquiryFormSection } from "@/components/home/EnquiryFormSection";
 import { StudentWorksGallery } from "@/components/program/StudentWorksGallery";
 import { HeroSection } from "@/components/program/animation-game/HeroSection";
 import { ProgramOverviewSection } from "@/components/program/animation-game/ProgramOverviewSection";
-
-import { StudentLearningSection } from "@/components/program/StudentLearningSection";
+import { AnimationStudentLearningSection } from "@/components/program/animation-game/AnimationStudentLearningSection";
 import { SkillEnhancingElectivesSection } from "@/components/program/SkillEnhancingElectivesSection";
 
 const ProgramAnimationGameDesign = () => {
@@ -23,7 +22,7 @@ const ProgramAnimationGameDesign = () => {
 
       <HeroSection />
       <ProgramOverviewSection />
-      <StudentLearningSection />
+      <AnimationStudentLearningSection />
       <SkillEnhancingElectivesSection programKey="bva-animation-game-design" />
       <StudentWorksGallery
         title="Animation & Game Art Student Projects"

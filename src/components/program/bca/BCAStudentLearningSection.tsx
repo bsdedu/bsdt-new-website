@@ -2,12 +2,8 @@
 import React from 'react';
 import { Badge } from "@/components/ui/badge";
 import { RevealSection } from "@/components/ui-elements/RevealSection";
-import bvaInteriorLearning1 from "@/assets/bva-interior-learning-1.jpg";
-import bvaInteriorLearning2 from "@/assets/bva-interior-learning-2.jpg";
-import bvaInteriorLearning3 from "@/assets/bva-interior-learning-3.jpg";
-import bvaInteriorLearning4 from "@/assets/bva-interior-learning-4.jpg";
 
-export const BVAInteriorStudentLearningSection: React.FC = () => {
+export const BCAStudentLearningSection: React.FC = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-6 md:px-8">
@@ -18,41 +14,42 @@ export const BVAInteriorStudentLearningSection: React.FC = () => {
               Students Building, Creating & Exploring
             </h2>
             <p className="mt-4 text-foreground/70">
-              Experience the dynamic learning environment where our interior and spatial design students actively engage in hands-on projects, model-making workshops, and creative exploration.
+              Experience the dynamic learning environment where our BCA students actively engage in coding projects, UI/UX prototyping, and technology-driven problem solving.
             </p>
           </div>
         </RevealSection>
 
         <RevealSection delay={100}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* TODO: Replace with uploaded BCA-specific images */}
             <div className="overflow-hidden rounded-xl shadow-lg">
               <img 
-                src={bvaInteriorLearning1} 
-                alt="Student using precision tools for model making" 
+                src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80" 
+                alt="BCA student coding in computer lab" 
                 className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
 
             <div className="overflow-hidden rounded-xl shadow-lg">
               <img 
-                src={bvaInteriorLearning2} 
-                alt="Students in collaborative studio session" 
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" 
+                alt="Students collaborating on software project" 
                 className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
 
             <div className="overflow-hidden rounded-xl shadow-lg">
               <img 
-                src={bvaInteriorLearning3} 
-                alt="Students brainstorming design concepts" 
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" 
+                alt="Student working on UI/UX prototype" 
                 className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
 
             <div className="overflow-hidden rounded-xl shadow-lg">
               <img 
-                src={bvaInteriorLearning4} 
-                alt="Student working on architectural model" 
+                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" 
+                alt="Tech workshop and presentation session" 
                 className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>

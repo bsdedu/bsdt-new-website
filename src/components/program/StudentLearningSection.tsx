@@ -21,60 +21,36 @@ export const StudentLearningSection: React.FC = () => {
 
         <RevealSection delay={100}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="relative group overflow-hidden rounded-xl shadow-lg">
+            <div className="overflow-hidden rounded-xl shadow-lg">
               <img 
                 src="/lovable-uploads/graphic-students-1.jpg" 
                 alt="Graphic design students in collaborative discussion session" 
-                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-bsd-gray/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <h3 className="font-semibold mb-1">Collaborative Learning</h3>
-                  <p className="text-sm opacity-90">Group discussions and peer learning sessions</p>
-                </div>
-              </div>
             </div>
 
-            <div className="relative group overflow-hidden rounded-xl shadow-lg">
+            <div className="overflow-hidden rounded-xl shadow-lg">
               <img 
                 src="/lovable-uploads/graphic-students-2.jpg" 
                 alt="Students reviewing design concepts together" 
-                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-bsd-gray/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <h3 className="font-semibold mb-1">Design Development</h3>
-                  <p className="text-sm opacity-90">Collaborative brainstorming and concept creation</p>
-                </div>
-              </div>
             </div>
 
-            <div className="relative group overflow-hidden rounded-xl shadow-lg">
+            <div className="overflow-hidden rounded-xl shadow-lg">
               <img 
                 src="/lovable-uploads/graphic-students-3.jpg" 
                 alt="Student researching design inspiration on computer" 
-                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-bsd-gray/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <h3 className="font-semibold mb-1">Creative Research</h3>
-                  <p className="text-sm opacity-90">Exploring design trends and inspiration</p>
-                </div>
-              </div>
             </div>
 
-            <div className="relative group overflow-hidden rounded-xl shadow-lg">
+            <div className="overflow-hidden rounded-xl shadow-lg">
               <img 
                 src="/lovable-uploads/graphic-students-4.jpg" 
                 alt="Faculty conducting UX design lecture with heuristic evaluation" 
-                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-bsd-gray/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <h3 className="font-semibold mb-1">Expert Sessions</h3>
-                  <p className="text-sm opacity-90">Industry-focused UX/UI design lectures</p>
-                </div>
-              </div>
             </div>
           </div>
         </RevealSection>
