@@ -9,15 +9,21 @@ import { ProjectCard } from '@/components/program/gallery/ProjectCard';
 import { graphicProjects } from '@/components/program/gallery/graphicProjects';
 import { interiorProjects } from '@/components/program/gallery/interiorProjects';
 import { animationProjects } from '@/components/program/gallery/animationProjects';
+import { interactionProjects } from '@/components/program/gallery/interactionProjects';
 import { AnimatedButton } from '@/components/ui-elements/AnimatedButton';
 import studentSpotlightHero from '@/assets/student-spotlight-hero.jpg';
 
 const StudentSpotlight: React.FC = () => {
-  // Collect featured projects from all categories
   const graphicWorks = [
     ...(graphicProjects.branding || []),
-    ...(graphicProjects.digital || []),
     ...(graphicProjects.print || []),
+  ];
+  
+  const uiuxWorks = [
+    ...(graphicProjects.digital || []),
+    ...(interactionProjects.ux || []),
+    ...(interactionProjects.ui || []),
+    ...(interactionProjects.interactive || []),
   ];
   
   const interiorWorks = [
