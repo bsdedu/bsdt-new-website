@@ -300,11 +300,10 @@ const AboutBSDT = () => {
                   </AnimatedButton>
                   <AnimatedButton 
                     href="/programs" 
-                    variant="outline" 
-                    className="border-white/30 text-white hover:bg-white/10"
+                    className="bg-bsd-gray text-white hover:bg-bsd-gray/80 px-8 py-3 text-lg"
                     hoverEffect="scale"
                   >
-                    Explore Programs
+                    Explore Programs ✨
                   </AnimatedButton>
                 </div>
               </div>
