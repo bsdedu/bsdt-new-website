@@ -35,8 +35,7 @@ const DiplomaProgramSustainableCircularDesign: React.FC = () => {
         <CertificationPathwaySection />
         <BatchScheduleSection />
         <ProgramFeatures />
-        
-        
+        <StudentWorkGallerySection />
         <EnquiryFormSection />
       </main>
       

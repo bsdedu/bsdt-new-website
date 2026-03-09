@@ -35,8 +35,7 @@ const DiplomaProgramAIServiceDesign: React.FC = () => {
         <CertificationPathwaySection />
         <BatchScheduleSection />
         <ProgramFeatures />
-        
-        
+        <StudentWorkGallerySection />
         <EnquiryFormSection />
       </main>
       
