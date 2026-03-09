@@ -100,12 +100,18 @@ const StudentSpotlight: React.FC = () => {
             <RevealSection delay={100}>
               <Tabs defaultValue="graphic" className="w-full">
                 <div className="flex justify-center mb-8">
-                  <TabsList className="bg-muted/50">
+                  <TabsList className="bg-muted/50 flex-wrap h-auto gap-1">
                     <TabsTrigger value="graphic" className="data-[state=active]:bg-bsd-orange data-[state=active]:text-white">
                       Graphic Design
                     </TabsTrigger>
+                    <TabsTrigger value="uiux" className="data-[state=active]:bg-bsd-orange data-[state=active]:text-white">
+                      UI/UX Design
+                    </TabsTrigger>
                     <TabsTrigger value="interior" className="data-[state=active]:bg-bsd-orange data-[state=active]:text-white">
                       Interior Design
+                    </TabsTrigger>
+                    <TabsTrigger value="landscape" className="data-[state=active]:bg-bsd-orange data-[state=active]:text-white">
+                      Landscape
                     </TabsTrigger>
                     <TabsTrigger value="animation" className="data-[state=active]:bg-bsd-orange data-[state=active]:text-white">
                       Animation & Game
@@ -127,6 +133,20 @@ const StudentSpotlight: React.FC = () => {
                   )}
                 </TabsContent>
 
+                <TabsContent value="uiux" className="mt-0">
+                  {uiuxWorks.length > 0 ? (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                      {uiuxWorks.map(project => (
+                        <ProjectCard key={`uiux-${project.id}`} project={project} />
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="text-center p-8 bg-muted/20 rounded-lg">
+                      <p className="text-foreground/70">Projects coming soon...</p>
+                    </div>
+                  )}
+                </TabsContent>
+
                 <TabsContent value="interior" className="mt-0">
                   {interiorWorks.length > 0 ? (
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -139,6 +159,12 @@ const StudentSpotlight: React.FC = () => {
                       <p className="text-foreground/70">Projects coming soon...</p>
                     </div>
                   )}
+                </TabsContent>
+
+                <TabsContent value="landscape" className="mt-0">
+                  <div className="text-center p-8 bg-muted/20 rounded-lg">
+                    <p className="text-foreground/70">Landscape projects coming soon...</p>
+                  </div>
                 </TabsContent>
 
                 <TabsContent value="animation" className="mt-0">
