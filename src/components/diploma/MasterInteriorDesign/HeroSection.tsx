@@ -1,7 +1,7 @@
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Building2, Clock, Calendar } from 'lucide-react';
+import { Building2 } from 'lucide-react';
 import masterResidentialHero from '@/assets/master-residential-design-hero.jpg';
 
 export const HeroSection: React.FC = () => {
