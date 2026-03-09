@@ -299,7 +299,7 @@ const AboutBSDT = () => {
                     Apply Now <ArrowRight className="w-4 h-4 ml-1" />
                   </AnimatedButton>
                   <AnimatedButton 
-                    href="/programs" 
+                    href="/#programs" 
                     className="bg-bsd-gray text-white hover:bg-bsd-gray/80 px-8 py-3 text-lg"
                     hoverEffect="scale"
                   >
