@@ -11,6 +11,9 @@ export const HeroSection: React.FC = () => {
       <div className="container mx-auto px-6 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
+            <Badge variant="bsdOrange" className="text-sm px-4 py-1.5 bg-amber-500/10 text-amber-600 border-amber-500/30">
+              COMING SOON
+            </Badge>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-bsd-gray">
               Professional Diploma in<br />
@@ -18,21 +21,13 @@ export const HeroSection: React.FC = () => {
             </h1>
             
             <p className="text-lg text-foreground/80 max-w-xl">
-              Join from anywhere. This 12-month hybrid programme blends live online learning with real-world exposure through our Bangalore campus and Satellite Centres in Raipur, Hyderabad, Delhi & Coimbatore.
+              This program is currently under development. Stay tuned for an exciting 12-month hybrid programme blending live online learning with real-world exposure.
             </p>
             
-            
             <div className="flex flex-wrap gap-4 pt-4">
-              <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white">
-                Download Brochure
-              </Button>
-              <a 
-                href="https://apply.bsd.edu.in/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <Button size="lg" variant="outline" className="border-bsd-orange text-bsd-orange hover:bg-bsd-orange/10">
-                  Apply Now
+              <a href="#enquiry-form">
+                <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white">
+                  Register Interest
                 </Button>
               </a>
             </div>
