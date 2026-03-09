@@ -7,7 +7,7 @@ import { EnquiryFormSection } from "@/components/home/EnquiryFormSection";
 import { HeroSection } from "@/components/program/bsc-cs/HeroSection";
 import { ProgramOverviewSection } from "@/components/program/bsc-cs/ProgramOverviewSection";
 
-import { BCAStudentLearningSection } from "@/components/program/bca/BCAStudentLearningSection";
+import { BCAStudentLearningSection } from "@/components/program/bca/BCAam/bca/BCAStudentLearningSection";
 import { SkillEnhancingElectivesSection } from "@/components/program/SkillEnhancingElectivesSection";
 
 const ProgramBScCS = () => {
@@ -21,7 +21,7 @@ const ProgramBScCS = () => {
       <Navbar />
 
       <HeroSection />
-      <ProgramOverviewSection />
+      <ProgramOverviewSection BCA/>
       <StudentLearningSection />
       <SkillEnhancingElectivesSection programKey="bca-data-analytics" />
       
