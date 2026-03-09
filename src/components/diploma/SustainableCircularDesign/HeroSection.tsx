@@ -1,7 +1,7 @@
 import React from 'react';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Recycle, Clock, Calendar } from "lucide-react";
+import { Recycle } from "lucide-react";
 import { Link } from 'react-router-dom';
 import sustainableDesignImage from '@/assets/programs/sustainable-circular-design.jpg';
 
