@@ -2,7 +2,7 @@
 import React from 'react';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Monitor, Clock, Calendar } from "lucide-react";
+import { Monitor } from "lucide-react";
 import { Link } from 'react-router-dom';
 
 export const HeroSection: React.FC = () => {
