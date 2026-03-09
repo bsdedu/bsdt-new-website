@@ -100,18 +100,18 @@ const AboutBSDT = () => {
                     href="https://apply.bsd.edu.in/" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-bsd-orange text-white hover:bg-bsd-orange/90"
+                    className="bg-bsd-orange text-white hover:bg-bsd-orange/90 px-8 py-3 text-lg"
                     hoverEffect="glow"
                   >
-                    Apply Now
+                    Apply Now 🎨
                   </AnimatedButton>
                   <AnimatedButton 
                     href="#our-story" 
                     variant="outline" 
-                    className="border-white/30 text-white hover:bg-white/10"
+                    className="border-white/30 text-white hover:bg-white/10 px-8 py-3 text-lg"
                     hoverEffect="scale"
                   >
-                    Our Story
+                    Our Story ✨
                   </AnimatedButton>
                 </div>
               </RevealSection>
