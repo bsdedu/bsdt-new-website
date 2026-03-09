@@ -2,7 +2,7 @@
 import React from 'react';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { TreeDeciduous, Clock, Calendar, MapPin } from "lucide-react";
+import { TreeDeciduous } from "lucide-react";
 
 export const HeroSection: React.FC = () => {
   return (
