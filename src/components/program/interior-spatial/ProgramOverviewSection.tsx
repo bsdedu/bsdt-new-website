@@ -26,12 +26,12 @@ export const ProgramOverviewSection: React.FC = () => {
 
         <RevealSection delay={100}>
           <Tabs defaultValue="curriculum" className="w-full">
-            <div className="flex justify-center mb-8">
-              <TabsList className="grid grid-cols-4 w-full max-w-3xl">
-                <TabsTrigger value="curriculum">Curriculum</TabsTrigger>
-                <TabsTrigger value="software">Software & AI Tools</TabsTrigger>
-                <TabsTrigger value="outcomes">Learning Outcomes</TabsTrigger>
-                <TabsTrigger value="career">Career Opportunities</TabsTrigger>
+            <div className="flex justify-center mb-8 overflow-x-auto px-1">
+              <TabsList className="grid grid-cols-2 md:grid-cols-4 w-full max-w-3xl gap-1">
+                <TabsTrigger value="curriculum" className="text-xs md:text-sm whitespace-nowrap">Curriculum</TabsTrigger>
+                <TabsTrigger value="software" className="text-xs md:text-sm whitespace-nowrap">Software & AI</TabsTrigger>
+                <TabsTrigger value="outcomes" className="text-xs md:text-sm whitespace-nowrap">Learning Outcomes</TabsTrigger>
+                <TabsTrigger value="career" className="text-xs md:text-sm whitespace-nowrap">Career Paths</TabsTrigger>
               </TabsList>
             </div>
             
