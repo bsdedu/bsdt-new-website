@@ -25,60 +25,36 @@ export const InteriorStudentLearningSection: React.FC = () => {
 
         <RevealSection delay={100}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="relative group overflow-hidden rounded-xl shadow-lg">
+            <div className="overflow-hidden rounded-xl shadow-lg">
               <img 
                 src={interiorLearning1} 
                 alt="Interior design student working on architectural model" 
-                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-bsd-gray/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <h3 className="font-semibold mb-1">Model Making</h3>
-                  <p className="text-sm opacity-90">Hands-on architectural model construction</p>
-                </div>
-              </div>
             </div>
 
-            <div className="relative group overflow-hidden rounded-xl shadow-lg">
+            <div className="overflow-hidden rounded-xl shadow-lg">
               <img 
                 src={interiorLearning2} 
                 alt="Student researching interior design concepts in library" 
-                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-bsd-gray/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <h3 className="font-semibold mb-1">Research & Theory</h3>
-                  <p className="text-sm opacity-90">Exploring design literature and concepts</p>
-                </div>
-              </div>
             </div>
 
-            <div className="relative group overflow-hidden rounded-xl shadow-lg">
+            <div className="overflow-hidden rounded-xl shadow-lg">
               <img 
                 src={interiorLearning3} 
                 alt="Students reviewing floor plans and interior sketches" 
-                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-bsd-gray/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <h3 className="font-semibold mb-1">Design Development</h3>
-                  <p className="text-sm opacity-90">Floor planning and interior sketching sessions</p>
-                </div>
-              </div>
             </div>
 
-            <div className="relative group overflow-hidden rounded-xl shadow-lg">
+            <div className="overflow-hidden rounded-xl shadow-lg">
               <img 
                 src={interiorLearning4} 
                 alt="Students collaborating on design concepts" 
-                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-bsd-gray/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <h3 className="font-semibold mb-1">Collaborative Learning</h3>
-                  <p className="text-sm opacity-90">Group discussions and peer learning sessions</p>
-                </div>
-              </div>
             </div>
           </div>
         </RevealSection>
