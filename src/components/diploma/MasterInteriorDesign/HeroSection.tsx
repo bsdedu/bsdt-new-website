@@ -20,16 +20,6 @@ export const HeroSection: React.FC = () => {
               An advanced 12-month hybrid programme that develops comprehensive expertise in residential design, combining advanced space planning, construction detailing, and project management through online and offline learning.
             </p>
             
-            <div className="flex flex-wrap gap-6 pt-2">
-              <div className="flex items-center">
-                <Clock className="w-5 h-5 text-bsd-orange mr-2" />
-                <span className="text-bsd-gray font-medium">12 Months</span>
-              </div>
-              <div className="flex items-center">
-                <Calendar className="w-5 h-5 text-bsd-orange mr-2" />
-                <span className="text-bsd-gray font-medium">Batches: FEB | MAY | AUG | NOV</span>
-              </div>
-            </div>
             
             <div className="flex flex-wrap gap-4 pt-4">
               <a href="#enquiry-form">

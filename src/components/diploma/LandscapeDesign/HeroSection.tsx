@@ -20,20 +20,6 @@ export const HeroSection: React.FC = () => {
               A 12-month hybrid program blending live online classes with offline, real-world learning at our Bangalore campus or Satellite Partner Centres in Raipur, Hyderabad, Delhi & Coimbatore.
             </p>
             
-            <div className="flex flex-wrap gap-6 pt-2">
-              <div className="flex items-center">
-                <Clock className="w-5 h-5 text-bsd-orange mr-2" />
-                <span className="text-bsd-gray font-medium">12 Months</span>
-              </div>
-              <div className="flex items-center">
-                <Calendar className="w-5 h-5 text-bsd-orange mr-2" />
-                <span className="text-bsd-gray font-medium">Batches: FEB | MAY | AUG | NOV</span>
-              </div>
-              <div className="flex items-center">
-                <MapPin className="w-5 h-5 text-bsd-orange mr-2" />
-                <span className="text-bsd-gray font-medium">Online + Offline (Bangalore & Satellite Centres)</span>
-              </div>
-            </div>
             
             <div className="flex flex-wrap gap-4 pt-4">
               <a href="#enquiry-form">
