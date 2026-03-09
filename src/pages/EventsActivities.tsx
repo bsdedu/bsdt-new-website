@@ -26,7 +26,6 @@ const EventsActivities: React.FC = () => {
         <EventsActivitiesHero />
         <CampusLifeEventsSection />
         <EventsOverview />
-        <EventsGallery />
         <JoinEventsSection />
         <EnquiryFormSection />
       </main>
