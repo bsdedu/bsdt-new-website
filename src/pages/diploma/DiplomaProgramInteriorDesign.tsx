@@ -10,6 +10,7 @@ import { ProgramFeatures } from '@/components/diploma/InteriorDesign/ProgramFeat
 import { BatchScheduleSection } from '@/components/diploma/shared/BatchScheduleSection';
 import { HybridLearningSection } from '@/components/diploma/shared/HybridLearningSection';
 import { CertificationPathwaySection } from '@/components/diploma/shared/CertificationPathwaySection';
+import { StudentWorkGallerySection } from '@/components/diploma/shared/StudentWorkGallerySection';
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
 
 const DiplomaProgramInteriorDesign: React.FC = () => {
@@ -32,8 +33,7 @@ const DiplomaProgramInteriorDesign: React.FC = () => {
         <CertificationPathwaySection />
         <BatchScheduleSection />
         <ProgramFeatures />
-        
-        
+        <StudentWorkGallerySection />
         <EnquiryFormSection />
       </main>
       
