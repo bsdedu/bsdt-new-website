@@ -94,12 +94,17 @@ export const EnquiryForm: React.FC<EnquiryFormProps> = ({ programSpecific = fals
                 <FormControl>
                   <select className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" {...field}>
                     <option value="">Select a course</option>
-                    <option value="UG Interior Design">UG Interior Design</option>
-                    <option value="UG Fashion Design">UG Fashion Design</option>
-                    <option value="P.Diploma Interior Design">P.Diploma Interior Design</option>
-                    <option value="P.Diploma Graphic Design">P.Diploma Graphic Design + UI & UX</option>
-                    <option value="P.Diploma UI UX">P.Diploma UI & UX</option>
-                    <option value="PG.Diploma Landscape Design">PG.Diploma Landscape Design</option>
+                    <optgroup label="Undergraduate Programs">
+                      <option value="UG Interior Design">UG Interior Design</option>
+                      <option value="UG Fashion Design">UG Fashion Design</option>
+                    </optgroup>
+                    <optgroup label="Diploma Programs">
+                      <option value="P.Diploma Interior Design">P.Diploma Interior Design</option>
+                      <option value="P.Diploma Graphic Design">P.Diploma Graphic Design + UI & UX</option>
+                      <option value="PG.Diploma Landscape Design">PG.Diploma Landscape Design</option>
+                      <option value="Master Diploma Interior Design">Master Diploma in Advanced Residential Design</option>
+                      <option value="P.Diploma UI UX">P.Diploma UI & UX</option>
+                    </optgroup>
                   </select>
                 </FormControl>
                 <FormMessage />
