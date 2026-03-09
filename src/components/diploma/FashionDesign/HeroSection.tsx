@@ -1,7 +1,7 @@
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Scissors, Clock, Calendar } from 'lucide-react';
+import { Scissors } from 'lucide-react';
 
 export const HeroSection: React.FC = () => {
   return (
@@ -19,16 +19,6 @@ export const HeroSection: React.FC = () => {
               Join from anywhere. This 8-month hybrid programme blends live online learning with hands-on offline sessions at our Bangalore campus and Satellite Centres in Raipur, Hyderabad, Delhi & Coimbatore.
             </p>
             
-            <div className="flex flex-wrap gap-6 pt-2">
-              <div className="flex items-center">
-                <Clock className="w-5 h-5 text-bsd-orange mr-2" />
-                <span className="text-bsd-gray font-medium">8 Months</span>
-              </div>
-              <div className="flex items-center">
-                <Calendar className="w-5 h-5 text-bsd-orange mr-2" />
-                <span className="text-bsd-gray font-medium">Batches: FEB | MAY | AUG | NOV</span>
-              </div>
-            </div>
             
             <div className="flex flex-wrap gap-4 pt-4">
               <a href="#enquiry-form">

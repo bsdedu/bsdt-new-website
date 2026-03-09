@@ -1,7 +1,7 @@
 import React from 'react';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Recycle, Clock, Calendar } from "lucide-react";
+import { Recycle } from "lucide-react";
 import { Link } from 'react-router-dom';
 import sustainableDesignImage from '@/assets/programs/sustainable-circular-design.jpg';
 
@@ -21,16 +21,6 @@ export const HeroSection: React.FC = () => {
               Join from anywhere. This 12-month hybrid programme blends live online learning with real-world exposure through our Bangalore campus and Satellite Centres in Raipur, Hyderabad, Delhi & Coimbatore.
             </p>
             
-            <div className="flex flex-wrap gap-6 pt-2">
-              <div className="flex items-center">
-                <Clock className="w-5 h-5 text-bsd-orange mr-2" />
-                <span className="text-bsd-gray font-medium">12 Months Duration</span>
-              </div>
-              <div className="flex items-center">
-                <Calendar className="w-5 h-5 text-bsd-orange mr-2" />
-                <span className="text-bsd-gray font-medium">Intakes: Jan, May & Sep</span>
-              </div>
-            </div>
             
             <div className="flex flex-wrap gap-4 pt-4">
               <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white">
