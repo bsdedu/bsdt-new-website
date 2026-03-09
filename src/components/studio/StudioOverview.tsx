@@ -82,9 +82,9 @@ export const StudioOverview: React.FC = () => {
                   <div className="w-12 h-12 rounded-full bg-bsd-orange/10 flex items-center justify-center mb-4">
                     <Lightbulb className="w-6 h-6 text-bsd-orange" />
                   </div>
-                  <h3 className="text-xl font-semibold text-bsd-gray mb-2">Innovation Hub</h3>
+                  <h3 className="text-xl font-semibold text-bsd-gray mb-2">Networking Opportunities</h3>
                   <p className="text-foreground/70">
-                    A collaborative environment that fosters creativity, innovation, and interdisciplinary approaches.
+                    A collaborative environment that fosters creativity, networking, and interdisciplinary approaches.
                   </p>
                 </CardContent>
               </Card>
