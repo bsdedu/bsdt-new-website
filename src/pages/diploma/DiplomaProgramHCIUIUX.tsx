@@ -6,11 +6,7 @@ import { Footer } from '@/components/layout/Footer';
 import { HeroSection } from '@/components/diploma/HCIUIUX/HeroSection';
 import { ProgramOverviewSection } from '@/components/diploma/HCIUIUX/ProgramOverviewSection';
 import { ProgramFeatures } from '@/components/diploma/HCIUIUX/ProgramFeatures';
-
-
-import { BatchScheduleSection } from '@/components/diploma/shared/BatchScheduleSection';
-import { HybridLearningSection } from '@/components/diploma/shared/HybridLearningSection';
-import { CertificationPathwaySection } from '@/components/diploma/shared/CertificationPathwaySection';
+import { ScheduleSection } from '@/components/diploma/HCIUIUX/ScheduleSection';
 import { StudentWorkGallerySection } from '@/components/diploma/shared/StudentWorkGallerySection';
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
 
@@ -21,7 +17,7 @@ const DiplomaProgramHCIUIUX: React.FC = () => {
         <title>Professional Diploma in HCI for UI/UX | BSD Design School</title>
         <meta 
           name="description" 
-          content="A specialized professional diploma program in Human-Computer Interaction for UI/UX design that equips students with skills in creating intuitive, user-centered digital experiences." 
+          content="A focused 6-month Saturday-only professional diploma in Human-Computer Interaction for UI/UX design at our Bangalore campus." 
         />
       </Helmet>
       
@@ -30,9 +26,7 @@ const DiplomaProgramHCIUIUX: React.FC = () => {
       <main>
         <HeroSection />
         <ProgramOverviewSection />
-        <HybridLearningSection />
-        <CertificationPathwaySection />
-        <BatchScheduleSection />
+        <ScheduleSection />
         <ProgramFeatures />
         <StudentWorkGallerySection />
         <EnquiryFormSection />
