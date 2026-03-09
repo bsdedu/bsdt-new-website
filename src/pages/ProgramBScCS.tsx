@@ -6,8 +6,7 @@ import { Helmet } from 'react-helmet-async';
 import { EnquiryFormSection } from "@/components/home/EnquiryFormSection";
 import { HeroSection } from "@/components/program/bsc-cs/HeroSection";
 import { ProgramOverviewSection } from "@/components/program/bsc-cs/ProgramOverviewSection";
-
-import { BCAStudentLearningSection } from "@/components/program/bca/BCAam/bca/BCAStudentLearningSection";
+import { BCAStudentLearningSection } from "@/components/program/bca/BCAStudentLearningSection";
 import { SkillEnhancingElectivesSection } from "@/components/program/SkillEnhancingElectivesSection";
 
 const ProgramBScCS = () => {
@@ -21,8 +20,8 @@ const ProgramBScCS = () => {
       <Navbar />
 
       <HeroSection />
-      <ProgramOverviewSection BCA/>
-      <StudentLearningSection />
+      <ProgramOverviewSection />
+      <BCAStudentLearningSection />
       <SkillEnhancingElectivesSection programKey="bca-data-analytics" />
       
       <EnquiryFormSection />
