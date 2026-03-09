@@ -107,8 +107,7 @@ const AboutBSDT = () => {
                   </AnimatedButton>
                   <AnimatedButton 
                     href="#our-story" 
-                    variant="outline" 
-                    className="border-white text-white hover:bg-white/20 px-8 py-3 text-lg"
+                    className="bg-bsd-gray text-white hover:bg-bsd-gray/80 px-8 py-3 text-lg"
                     hoverEffect="scale"
                   >
                     Our Story ✨
