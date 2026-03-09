@@ -13,6 +13,7 @@ import {
   GraduationCap, Briefcase, Building2, Trophy,
   CheckCircle, Play, ArrowRight
 } from 'lucide-react';
+import aboutCover from '@/assets/about-bsdt-cover.jpg';
 
 const stats = [
   { icon: GraduationCap, value: '2000+', label: 'Students Trained' },
