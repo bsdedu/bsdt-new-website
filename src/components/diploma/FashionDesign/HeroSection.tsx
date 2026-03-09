@@ -1,7 +1,7 @@
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Scissors, Clock, Calendar } from 'lucide-react';
+import { Scissors } from 'lucide-react';
 
 export const HeroSection: React.FC = () => {
   return (
