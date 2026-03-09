@@ -18,7 +18,7 @@ export const HeroSection: React.FC = () => {
             </h1>
             
             <p className="text-lg text-foreground/80 max-w-xl">
-              Join from anywhere. This 12-month hybrid programme blends live online learning with real-world exposure through our Bangalore campus and Satellite Centres in Raipur, Hyderabad, Delhi & Coimbatore.
+              A focused 6-month weekend program designed for working professionals and graduates. Classes are held every Saturday at our Bangalore campus, giving you hands-on UI/UX skills without disrupting your weekday schedule.
             </p>
             
             
