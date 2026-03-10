@@ -21,6 +21,9 @@ type FormData = z.infer<typeof formSchema>;
 export const FloatingEnquiryForm = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const { toast } = useToast();
+  const location = useLocation();
+
+  if (location.pathname === '/design-iq') return null;
 
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
