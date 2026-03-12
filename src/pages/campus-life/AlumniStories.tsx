@@ -49,6 +49,16 @@ const alumniVideos: AlumniVideo[] = [
     videoSrc: "/videos/alumni-3.mp4",
     thumbnail: "/images/alumni-thumb-3.jpg",
     quote: "The mentorship and creative environment at BSDT were truly transformative."
+  },
+  {
+    name: "Sakshi Deshpande",
+    batch: "2021",
+    program: "Professional Diploma in Interior Design",
+    currentRole: "Interior Designer",
+    company: "",
+    videoSrc: "/videos/alumni-4.mp4",
+    thumbnail: "/images/alumni-thumb-4.jpg",
+    quote: "BSDT's professional diploma program equipped me with the skills to excel in interior design."
   }
 ];
 
