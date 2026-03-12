@@ -23,7 +23,7 @@ const Index = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isHydrated, setIsHydrated] = useState(false);
   const observersRef = useRef<IntersectionObserver[]>([]);
-  const timersRef = useRef<NodeJS.Timeout[]>([]);
+  const timersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
 
   useEffect(() => {
     setIsHydrated(true);
