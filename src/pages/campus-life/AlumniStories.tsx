@@ -113,10 +113,15 @@ const AlumniStories = () => {
                           onClick={() => setPlayingIndex(index)}
                           className="w-full h-full relative cursor-pointer"
                         >
-                          <img
-                            src={alumni.thumbnail}
-                            alt={`${alumni.name} testimonial`}
+                          <video
+                            src={alumni.videoSrc}
+                            muted
+                            preload="metadata"
                             className="w-full h-full object-cover"
+                            onLoadedData={(e) => {
+                              const video = e.target as HTMLVideoElement;
+                              video.currentTime = 0.5;
+                            }}
                           />
                           <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
                             <div className="text-center">
