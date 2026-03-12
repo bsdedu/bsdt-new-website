@@ -59,6 +59,16 @@ const alumniVideos: AlumniVideo[] = [
     videoSrc: "/videos/alumni-4.mp4",
     thumbnail: "/images/alumni-thumb-4.jpg",
     quote: "BSDT's professional diploma program equipped me with the skills to excel in interior design."
+  },
+  {
+    name: "Srujana Saklesh",
+    batch: "2022",
+    program: "BSc Interior Design",
+    currentRole: "Interior Designer",
+    company: "",
+    videoSrc: "/videos/alumni-5.mp4",
+    thumbnail: "/images/alumni-thumb-5.jpg",
+    quote: "BSDT helped me build a strong foundation for my career in interior design."
   }
 ];
 
