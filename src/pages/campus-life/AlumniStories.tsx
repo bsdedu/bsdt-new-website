@@ -37,7 +37,7 @@ const alumniVideos: AlumniVideo[] = [
     currentRole: "UI/UX Designer",
     company: "Flipkart",
     videoSrc: "/videos/alumni-2.mp4",
-    thumbnail: "",
+    thumbnail: "/images/alumni-thumb-2.jpg",
     quote: "The hands-on projects and industry exposure at BSDT prepared me for the real world."
   },
   {
