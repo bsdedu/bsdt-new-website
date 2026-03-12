@@ -113,7 +113,12 @@ const AlumniStories = () => {
                           onClick={() => setPlayingIndex(index)}
                           className="w-full h-full relative cursor-pointer"
                         >
-                          <div className="absolute inset-0 bg-gradient-to-br from-bsd-orange/20 to-bsd-gray/30 flex items-center justify-center">
+                          <img
+                            src={alumni.thumbnail}
+                            alt={`${alumni.name} testimonial`}
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
                             <div className="text-center">
                               <div className="w-16 h-16 rounded-full bg-bsd-orange/90 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                                 <Play className="w-7 h-7 text-white ml-1" />
