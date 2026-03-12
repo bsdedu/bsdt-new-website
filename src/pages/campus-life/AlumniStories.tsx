@@ -31,21 +31,21 @@ const alumniVideos: AlumniVideo[] = [
     quote: "BSDT gave me the foundation to turn my passion into a thriving career in design."
   },
   {
-    name: "Alumni 2",
-    batch: "2022",
-    program: "BVA Graphic & Communication Design",
-    currentRole: "UI/UX Designer",
-    company: "Flipkart",
+    name: "Swaroop",
+    batch: "2019",
+    program: "BSc Interior Design",
+    currentRole: "Masters Graduate",
+    company: "University of UK",
     videoSrc: "/videos/alumni-2.mp4",
     thumbnail: "/images/alumni-thumb-2.jpg",
-    quote: "The hands-on projects and industry exposure at BSDT prepared me for the real world."
+    quote: "BSDT laid the perfect groundwork for me to pursue my Masters in the UK."
   },
   {
-    name: "Alumni 3",
-    batch: "2023",
-    program: "BCA with UI/UX & AI/ML",
-    currentRole: "Product Designer",
-    company: "Thence",
+    name: "Muskaan Sehra",
+    batch: "2024",
+    program: "BVA Interior & Spatial Design",
+    currentRole: "Interior Designer",
+    company: "Celebrity Designer Studio",
     videoSrc: "/videos/alumni-3.mp4",
     thumbnail: "/images/alumni-thumb-3.jpg",
     quote: "The mentorship and creative environment at BSDT were truly transformative."
