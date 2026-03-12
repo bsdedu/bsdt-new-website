@@ -47,7 +47,7 @@ const alumniVideos: AlumniVideo[] = [
     currentRole: "Product Designer",
     company: "Thence",
     videoSrc: "/videos/alumni-3.mp4",
-    thumbnail: "",
+    thumbnail: "/images/alumni-thumb-3.jpg",
     quote: "The mentorship and creative environment at BSDT were truly transformative."
   }
 ];
