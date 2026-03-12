@@ -91,7 +91,6 @@ const OpenDay = () => {
                   { year: "2023", image: "/lovable-uploads/0ae77c0c-8ef4-404c-abf0-bb90598dfbf4.png" },
                   { year: "2025 (24th Jan)", image: "", video: "/videos/open-day-2025.mp4" },
                 ] as { year: string; image: string; video?: string }[]).map((event) => (
-                ].map((event) => (
                   <div key={event.year} className="rounded-xl overflow-hidden shadow-lg">
                     {event.video ? (
                       <video
