@@ -84,11 +84,13 @@ const OpenDay = () => {
               </p>
 
               <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                {[
+                {([
                   { year: "2018", image: "/lovable-uploads/0ae77c0c-8ef4-404c-abf0-bb90598dfbf4.png" },
                   { year: "2019", image: "/lovable-uploads/e48b8c13-052e-4d80-ada8-db3eaf003d21.png" },
                   { year: "2020", image: "/lovable-uploads/fc9c4875-4b4b-44a9-b8ad-3eb5db1ed2cc.png" },
                   { year: "2023", image: "/lovable-uploads/0ae77c0c-8ef4-404c-abf0-bb90598dfbf4.png" },
+                  { year: "2025 (24th Jan)", image: "", video: "/videos/open-day-2025.mp4" },
+                ] as { year: string; image: string; video?: string }[]).map((event) => (
                 ].map((event) => (
                   <div key={event.year} className="rounded-xl overflow-hidden shadow-lg">
                     {event.video ? (
