@@ -116,11 +116,11 @@ const AlumniStories = () => {
                           <video
                             src={alumni.videoSrc}
                             muted
-                            preload="metadata"
+                            preload="auto"
                             className="w-full h-full object-cover"
-                            onLoadedData={(e) => {
+                            onLoadedMetadata={(e) => {
                               const video = e.target as HTMLVideoElement;
-                              video.currentTime = 0.5;
+                              video.currentTime = video.duration / 2;
                             }}
                           />
                           <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
