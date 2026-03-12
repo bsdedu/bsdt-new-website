@@ -214,6 +214,7 @@ const App = () => {
               <Route path="/student-spotlight" element={<StudentSpotlight />} />
               <Route path="/campus-life/events-activities" element={<EventsActivities />} />
               <Route path="/student-experience" element={<StudentExperience />} />
+              <Route path="/alumni-stories" element={<AlumniStories />} />
               
               {/* Future School Route */}
               <Route path="/future-school" element={<FutureSchool />} />
