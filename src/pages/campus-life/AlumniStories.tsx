@@ -21,11 +21,11 @@ interface AlumniVideo {
 
 const alumniVideos: AlumniVideo[] = [
   {
-    name: "Alumni 1",
+    name: "Sruthi",
     batch: "2023",
-    program: "B.Sc Interior Design",
-    currentRole: "Senior Interior Designer",
-    company: "Livspace",
+    program: "Diploma in Landscape Design",
+    currentRole: "Landscape Designer",
+    company: "Indavilla Design Studio",
     videoSrc: "/videos/alumni-1.mp4",
     thumbnail: "/images/alumni-thumb-1.jpg",
     quote: "BSDT gave me the foundation to turn my passion into a thriving career in design."
