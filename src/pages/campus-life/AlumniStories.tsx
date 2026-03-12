@@ -49,6 +49,16 @@ const alumniVideos: AlumniVideo[] = [
     videoSrc: "/videos/alumni-3.mp4",
     thumbnail: "/images/alumni-thumb-3.jpg",
     quote: "The mentorship and creative environment at BSDT were truly transformative."
+  },
+  {
+    name: "Sakshi Deshpande",
+    batch: "2021",
+    program: "Professional Diploma in Interior Design",
+    currentRole: "Interior Designer",
+    company: "",
+    videoSrc: "/videos/alumni-4.mp4",
+    thumbnail: "/images/alumni-thumb-4.jpg",
+    quote: "BSDT's professional diploma program equipped me with the skills to excel in interior design."
   }
 ];
 
@@ -143,7 +153,7 @@ const AlumniStories = () => {
                       </div>
                       <p className="text-sm text-foreground/60 mb-1">{alumni.program}</p>
                       <p className="text-sm font-medium text-bsd-orange mb-3">
-                        {alumni.currentRole} at {alumni.company}
+                        {alumni.currentRole}{alumni.company ? ` at ${alumni.company}` : ''}
                       </p>
                       <div className="flex items-start gap-2 pt-3 border-t border-border/50">
                         <Quote className="w-4 h-4 text-bsd-orange/50 flex-shrink-0 mt-0.5" />
