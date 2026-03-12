@@ -37,9 +37,9 @@ export const CampusLifeEventsSection: React.FC = () => {
       id: "1",
       title: "OPEN DAY",
       type: "open-day",
-      date: "Coming Soon...",
-      time: "",
-      description: "Experience our campus, meet faculty & explore programs.",
+      date: "24th January, 2025",
+      time: "9:00 AM - 5:00 PM",
+      description: "A day of campus tours, workshops, and faculty interactions at BSDT.",
       imageSrc: "/lovable-uploads/open-day-event.png",
       registerLink: "/open-day",
       featured: true
