@@ -21,64 +21,34 @@ interface AlumniVideo {
 
 const alumniVideos: AlumniVideo[] = [
   {
-    name: "Alumni Name 1",
+    name: "Alumni 1",
     batch: "2023",
     program: "B.Sc Interior Design",
     currentRole: "Senior Interior Designer",
     company: "Livspace",
-    videoSrc: "/videos/alumni-placeholder-1.mp4",
-    thumbnail: "/lovable-uploads/alumni-thumb-placeholder-1.png",
+    videoSrc: "/videos/alumni-1.mp4",
+    thumbnail: "",
     quote: "BSDT gave me the foundation to turn my passion into a thriving career in design."
   },
   {
-    name: "Alumni Name 2",
+    name: "Alumni 2",
     batch: "2022",
     program: "BVA Graphic & Communication Design",
     currentRole: "UI/UX Designer",
     company: "Flipkart",
-    videoSrc: "/videos/alumni-placeholder-2.mp4",
-    thumbnail: "/lovable-uploads/alumni-thumb-placeholder-2.png",
+    videoSrc: "/videos/alumni-2.mp4",
+    thumbnail: "",
     quote: "The hands-on projects and industry exposure at BSDT prepared me for the real world."
   },
   {
-    name: "Alumni Name 3",
+    name: "Alumni 3",
     batch: "2023",
     program: "BCA with UI/UX & AI/ML",
     currentRole: "Product Designer",
     company: "Thence",
-    videoSrc: "/videos/alumni-placeholder-3.mp4",
-    thumbnail: "/lovable-uploads/alumni-thumb-placeholder-3.png",
+    videoSrc: "/videos/alumni-3.mp4",
+    thumbnail: "",
     quote: "The mentorship and creative environment at BSDT were truly transformative."
-  },
-  {
-    name: "Alumni Name 4",
-    batch: "2022",
-    program: "BVA Interior & Spatial Design",
-    currentRole: "Spatial Designer",
-    company: "M Moser Associates",
-    videoSrc: "/videos/alumni-placeholder-4.mp4",
-    thumbnail: "/lovable-uploads/alumni-thumb-placeholder-4.png",
-    quote: "BSDT's curriculum blends creativity with practical skills — exactly what the industry needs."
-  },
-  {
-    name: "Alumni Name 5",
-    batch: "2021",
-    program: "B.Sc Interior Design",
-    currentRole: "Design Lead",
-    company: "Bonito Designs",
-    videoSrc: "/videos/alumni-placeholder-5.mp4",
-    thumbnail: "/lovable-uploads/alumni-thumb-placeholder-5.png",
-    quote: "From student projects to leading a design team — BSDT made it all possible."
-  },
-  {
-    name: "Alumni Name 6",
-    batch: "2023",
-    program: "BVA Graphic & Communication Design",
-    currentRole: "Brand Designer",
-    company: "Lollypop Design",
-    videoSrc: "/videos/alumni-placeholder-6.mp4",
-    thumbnail: "/lovable-uploads/alumni-thumb-placeholder-6.png",
-    quote: "The creative community at BSDT pushed me to think beyond boundaries."
   }
 ];
 
