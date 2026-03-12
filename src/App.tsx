@@ -43,6 +43,7 @@ import StudentClubs from "./pages/campus-life/StudentClubs";
 import StudentSpotlight from "./pages/campus-life/StudentSpotlight";
 import EventsActivities from "./pages/EventsActivities";
 import StudentExperience from "./pages/StudentExperience";
+import AlumniStories from "./pages/campus-life/AlumniStories";
 import FutureSchool from "./pages/FutureSchool";
 import OpenDay from "./pages/OpenDay";
 import Designuru2025 from "./pages/Designuru2025";
