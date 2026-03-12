@@ -27,7 +27,7 @@ const alumniVideos: AlumniVideo[] = [
     currentRole: "Senior Interior Designer",
     company: "Livspace",
     videoSrc: "/videos/alumni-1.mp4",
-    thumbnail: "",
+    thumbnail: "/images/alumni-thumb-1.jpg",
     quote: "BSDT gave me the foundation to turn my passion into a thriving career in design."
   },
   {
