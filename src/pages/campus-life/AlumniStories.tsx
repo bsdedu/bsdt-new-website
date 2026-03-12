@@ -5,6 +5,8 @@ import { Footer } from '@/components/layout/Footer';
 import { RevealSection } from '@/components/ui-elements/RevealSection';
 import { Badge } from '@/components/ui/badge';
 import { Play, Quote } from 'lucide-react';
+import { AlumniSuccessStories } from '@/components/placement/AlumniSuccessStories';
+import { TopRecruiters } from '@/components/placement/TopRecruiters';
 
 interface AlumniVideo {
   name: string;
@@ -12,8 +14,8 @@ interface AlumniVideo {
   program: string;
   currentRole: string;
   company: string;
-  videoSrc: string; // placeholder path for now
-  thumbnail: string; // placeholder path
+  videoSrc: string;
+  thumbnail: string;
   quote: string;
 }
 
@@ -86,8 +88,8 @@ const AlumniStories = () => {
   return (
     <>
       <Helmet>
-        <title>Alumni Stories | Bangalore School of Design & Technology</title>
-        <meta name="description" content="Hear from BSDT alumni about their journey, career growth, and how their education at Bangalore School of Design & Technology shaped their professional lives." />
+        <title>Alumni & Placement Stories | Bangalore School of Design & Technology</title>
+        <meta name="description" content="Explore BSDT alumni success stories, placement highlights, top recruiters, and video testimonials from graduates of Bangalore School of Design & Technology." />
         <link rel="canonical" href="https://bsdt.ac.in/alumni-stories" />
       </Helmet>
 
@@ -103,10 +105,10 @@ const AlumniStories = () => {
               <div className="text-center px-6">
                 <Badge variant="bsdOrange" className="mb-4">Campus Life</Badge>
                 <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-4 drop-shadow-lg">
-                  Alumni Stories
+                  Alumni & Placement Stories
                 </h1>
                 <p className="text-xl text-white/90 max-w-2xl mx-auto drop-shadow-md">
-                  Hear directly from our graduates about their BSDT journey and career success
+                  Discover our graduates' career journeys, placement highlights, and the companies that recruit from BSDT
                 </p>
               </div>
             </div>
@@ -127,7 +129,6 @@ const AlumniStories = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {alumniVideos.map((alumni, index) => (
                   <div key={index} className="group rounded-2xl overflow-hidden border border-border/50 bg-card shadow-sm hover:shadow-lg transition-all duration-300">
-                    {/* Video / Thumbnail */}
                     <div className="relative aspect-video bg-muted overflow-hidden">
                       {playingIndex === index ? (
                         <video
@@ -142,7 +143,6 @@ const AlumniStories = () => {
                           onClick={() => setPlayingIndex(index)}
                           className="w-full h-full relative cursor-pointer"
                         >
-                          {/* Placeholder thumbnail */}
                           <div className="absolute inset-0 bg-gradient-to-br from-bsd-orange/20 to-bsd-gray/30 flex items-center justify-center">
                             <div className="text-center">
                               <div className="w-16 h-16 rounded-full bg-bsd-orange/90 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300 shadow-lg">
@@ -154,8 +154,6 @@ const AlumniStories = () => {
                         </button>
                       )}
                     </div>
-
-                    {/* Info */}
                     <div className="p-5">
                       <div className="flex items-center justify-between mb-2">
                         <h3 className="font-bold text-bsd-gray text-lg">{alumni.name}</h3>
@@ -177,6 +175,36 @@ const AlumniStories = () => {
                   </div>
                 ))}
               </div>
+            </div>
+          </RevealSection>
+
+          {/* Placement Success Stories */}
+          <RevealSection direction="up" className="py-16 md:py-20 bg-muted/30">
+            <div className="container mx-auto px-6 md:px-8">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray mb-4">
+                  Placement Success Stories
+                </h2>
+                <p className="text-foreground/70 max-w-2xl mx-auto">
+                  Our graduates consistently secure positions at leading companies with competitive packages.
+                </p>
+              </div>
+              <AlumniSuccessStories />
+            </div>
+          </RevealSection>
+
+          {/* Top Recruiters */}
+          <RevealSection direction="up" className="py-16 md:py-20">
+            <div className="container mx-auto px-6 md:px-8">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray mb-4">
+                  Top Recruiters
+                </h2>
+                <p className="text-foreground/70 max-w-2xl mx-auto">
+                  Leading companies across design, technology, and architecture recruit from BSDT.
+                </p>
+              </div>
+              <TopRecruiters />
             </div>
           </RevealSection>
 
