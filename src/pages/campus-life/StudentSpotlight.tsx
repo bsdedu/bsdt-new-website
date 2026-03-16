@@ -39,6 +39,11 @@ const StudentSpotlight: React.FC = () => {
     ...(animationProjects.character || []),
   ];
 
+  const landscapeWorks = [
+    ...(landscapeProjects.lakefront || []),
+    ...(landscapeProjects.terrace || []),
+    ...(landscapeProjects.alumni || []),
+  ];
   return (
     <>
       <Helmet>
