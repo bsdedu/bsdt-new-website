@@ -136,7 +136,7 @@ const AlumniStories = () => {
                           src={alumni.videoSrc}
                           controls
                           autoPlay
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-contain bg-black"
                           onEnded={() => setPlayingIndex(null)}
                         />
                       ) : (
