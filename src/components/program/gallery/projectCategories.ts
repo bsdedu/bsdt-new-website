@@ -6,6 +6,7 @@ import { bcaProjects } from './bcaProjects';
 import { interactionProjects } from './interactionProjects';
 import { interiorProjects } from './interiorProjects';
 import { architecturalProjects } from './architecturalProjects';
+import { landscapeProjects } from './landscapeProjects';
 
 // Export all project categories for easy access
 export const projectCategories: Record<string, Project[]> = {
