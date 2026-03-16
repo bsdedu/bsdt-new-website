@@ -5,6 +5,7 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { EventsActivitiesHero } from '@/components/events-activities/EventsActivitiesHero';
 import { CampusLifeEventsSection } from '@/components/events-activities/CampusLifeEventsSection';
+import { StudyTourSection } from '@/components/events-activities/StudyTourSection';
 import { EventsOverview } from '@/components/events-activities/EventsOverview';
 import { JoinEventsSection } from '@/components/events-activities/JoinEventsSection';
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
