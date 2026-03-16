@@ -6,6 +6,7 @@ import { bcaProjects } from './bcaProjects';
 import { interactionProjects } from './interactionProjects';
 import { interiorProjects } from './interiorProjects';
 import { architecturalProjects } from './architecturalProjects';
+import { landscapeProjects } from './landscapeProjects';
 
 // Export all project categories for easy access
 export const projectCategories: Record<string, Project[]> = {
@@ -42,6 +43,13 @@ export const projectCategories: Record<string, Project[]> = {
   architectural: architecturalProjects || [],
   construction: [],
   sustainable: [],
+  
+  // Landscape Design categories
+  landscape: [
+    ...(landscapeProjects.lakefront || []),
+    ...(landscapeProjects.terrace || []),
+    ...(landscapeProjects.alumni || []),
+  ],
 };
 
 // Now we need to make sure that the Project type is also defined here

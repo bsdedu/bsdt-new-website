@@ -10,6 +10,7 @@ import { graphicProjects } from '@/components/program/gallery/graphicProjects';
 import { interiorProjects } from '@/components/program/gallery/interiorProjects';
 import { animationProjects } from '@/components/program/gallery/animationProjects';
 import { interactionProjects } from '@/components/program/gallery/interactionProjects';
+import { landscapeProjects } from '@/components/program/gallery/landscapeProjects';
 import { AnimatedButton } from '@/components/ui-elements/AnimatedButton';
 import studentSpotlightHero from '@/assets/student-spotlight-hero.jpg';
 
@@ -38,6 +39,11 @@ const StudentSpotlight: React.FC = () => {
     ...(animationProjects.character || []),
   ];
 
+  const landscapeWorks = [
+    ...(landscapeProjects.lakefront || []),
+    ...(landscapeProjects.terrace || []),
+    ...(landscapeProjects.alumni || []),
+  ];
   return (
     <>
       <Helmet>
@@ -162,9 +168,17 @@ const StudentSpotlight: React.FC = () => {
                 </TabsContent>
 
                 <TabsContent value="landscape" className="mt-0">
-                  <div className="text-center p-8 bg-muted/20 rounded-lg">
-                    <p className="text-foreground/70">Landscape projects coming soon...</p>
-                  </div>
+                  {landscapeWorks.length > 0 ? (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                      {landscapeWorks.map(project => (
+                        <ProjectCard key={project.id} project={project} />
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="text-center p-8 bg-muted/20 rounded-lg">
+                      <p className="text-foreground/70">Landscape projects coming soon...</p>
+                    </div>
+                  )}
                 </TabsContent>
 
                 <TabsContent value="animation" className="mt-0">
