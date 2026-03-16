@@ -48,6 +48,24 @@ const studyTours: StudyTour[] = [
       "/lovable-uploads/kochi-tour-23.png",
     ],
   },
+  {
+    id: "pondicherry-2022",
+    title: "Pondicherry Study Tour",
+    location: "Pondicherry",
+    year: "2022",
+    description: "Students visited key cultural, architectural, and experiential learning sites across Pondicherry and Auroville as part of an immersive study tour.",
+    images: [
+      "/lovable-uploads/pondicherry-tour-1.jpg",
+      "/lovable-uploads/pondicherry-tour-2.jpg",
+      "/lovable-uploads/pondicherry-tour-3.jpg",
+      "/lovable-uploads/pondicherry-tour-4.jpg",
+      "/lovable-uploads/pondicherry-tour-5.jpg",
+      "/lovable-uploads/pondicherry-tour-6.jpg",
+      "/lovable-uploads/pondicherry-tour-7.jpg",
+      "/lovable-uploads/pondicherry-tour-8.jpg",
+      "/lovable-uploads/pondicherry-tour-9.jpg",
+    ],
+  },
 ];
 
 export const StudyTourSection: React.FC = () => {
