@@ -12,6 +12,57 @@ interface PlacementData {
 }
 
 export const placementData: PlacementData = {
+  "Diploma": [
+    {
+      name: "Aditi Sharma",
+      program: "Diploma in Interior Design",
+      company: "Design Studio",
+      companyLogo: "/lovable-uploads/a6458608-c25a-495b-972c-ad8b774093fb.png",
+      salary: "₹3.8 LPA"
+    },
+    {
+      name: "Rahul Verma",
+      program: "Diploma in Interior Design",
+      company: "Design Cafe",
+      companyLogo: "/placeholder.svg",
+      salary: "₹3.5 LPA"
+    },
+    {
+      name: "Sneha Nair",
+      program: "Diploma in Interior Design",
+      company: "Asian Paints",
+      companyLogo: "/placeholder.svg",
+      salary: "₹3.6 LPA"
+    },
+    {
+      name: "Riya Kapoor",
+      program: "Diploma in Visual Communication Design",
+      company: "Pepper Square",
+      companyLogo: "/placeholder.svg",
+      salary: "₹3.6 LPA"
+    },
+    {
+      name: "Aman Gupta",
+      program: "Diploma in Visual Communication Design",
+      company: "Smallcase Design Team",
+      companyLogo: "/placeholder.svg",
+      salary: "₹3.4 LPA"
+    },
+    {
+      name: "Dev Patel",
+      program: "Diploma in Landscape Design",
+      company: "Design Tree Landscape Studio",
+      companyLogo: "/placeholder.svg",
+      salary: "₹3.5 LPA"
+    },
+    {
+      name: "Ananya Das",
+      program: "Diploma in Landscape Design",
+      company: "Landscape India",
+      companyLogo: "/placeholder.svg",
+      salary: "₹3.4 LPA"
+    }
+  ],
   "2025": [
     {
       name: "Fardeen CMA",
@@ -209,57 +260,6 @@ export const placementData: PlacementData = {
       company: "Hexa Design",
       companyLogo: "/lovable-uploads/1e36c4b3-6b23-4c97-91ac-4e38c1cf44a0.png",
       salary: "₹5.5 LPA"
-    }
-  ],
-  "Diploma": [
-    {
-      name: "Aditi Sharma",
-      program: "Diploma in Interior Design",
-      company: "Design Studio",
-      companyLogo: "/lovable-uploads/a6458608-c25a-495b-972c-ad8b774093fb.png",
-      salary: "₹3.8 LPA"
-    },
-    {
-      name: "Rahul Verma",
-      program: "Diploma in Interior Design",
-      company: "Design Cafe",
-      companyLogo: "/placeholder.svg",
-      salary: "₹3.5 LPA"
-    },
-    {
-      name: "Sneha Nair",
-      program: "Diploma in Interior Design",
-      company: "Asian Paints",
-      companyLogo: "/placeholder.svg",
-      salary: "₹3.6 LPA"
-    },
-    {
-      name: "Riya Kapoor",
-      program: "Diploma in Visual Communication Design",
-      company: "Pepper Square",
-      companyLogo: "/placeholder.svg",
-      salary: "₹3.6 LPA"
-    },
-    {
-      name: "Aman Gupta",
-      program: "Diploma in Visual Communication Design",
-      company: "Smallcase Design Team",
-      companyLogo: "/placeholder.svg",
-      salary: "₹3.4 LPA"
-    },
-    {
-      name: "Dev Patel",
-      program: "Diploma in Landscape Design",
-      company: "Design Tree Landscape Studio",
-      companyLogo: "/placeholder.svg",
-      salary: "₹3.5 LPA"
-    },
-    {
-      name: "Ananya Das",
-      program: "Diploma in Landscape Design",
-      company: "Landscape India",
-      companyLogo: "/placeholder.svg",
-      salary: "₹3.4 LPA"
     }
   ]
 };
