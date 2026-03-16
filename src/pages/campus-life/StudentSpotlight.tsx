@@ -10,6 +10,7 @@ import { graphicProjects } from '@/components/program/gallery/graphicProjects';
 import { interiorProjects } from '@/components/program/gallery/interiorProjects';
 import { animationProjects } from '@/components/program/gallery/animationProjects';
 import { interactionProjects } from '@/components/program/gallery/interactionProjects';
+import { landscapeProjects } from '@/components/program/gallery/landscapeProjects';
 import { AnimatedButton } from '@/components/ui-elements/AnimatedButton';
 import studentSpotlightHero from '@/assets/student-spotlight-hero.jpg';
 
