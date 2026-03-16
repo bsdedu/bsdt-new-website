@@ -62,6 +62,10 @@ const studyTours: StudyTour[] = [
       "/lovable-uploads/goa-tour-5.jpg",
       "/lovable-uploads/goa-tour-6.jpg",
       "/lovable-uploads/goa-tour-7.jpg",
+      "/lovable-uploads/goa-tour-8.jpg",
+      "/lovable-uploads/goa-tour-9.jpg",
+      "/lovable-uploads/goa-tour-10.jpg",
+      "/lovable-uploads/goa-tour-11.jpg",
     ],
   },
   {
