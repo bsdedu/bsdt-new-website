@@ -70,6 +70,16 @@ const alumniVideos: AlumniVideo[] = [
     videoSrc: "/videos/alumni-5.mp4",
     thumbnail: "/images/alumni-thumb-5.jpg",
     quote: "BSDT helped me build a strong foundation for my career in interior design."
+  },
+  {
+    name: "Shreekara Kulkarni",
+    batch: "2023",
+    program: "Design Program",
+    currentRole: "Design Professional",
+    company: "",
+    videoSrc: "/videos/alumni-6.mp4",
+    thumbnail: "/images/alumni-thumb-6.jpg",
+    quote: "Success begins here! BSDT shaped my journey and helped me grow as a design professional."
   }
 ];
 
