@@ -168,9 +168,17 @@ const StudentSpotlight: React.FC = () => {
                 </TabsContent>
 
                 <TabsContent value="landscape" className="mt-0">
-                  <div className="text-center p-8 bg-muted/20 rounded-lg">
-                    <p className="text-foreground/70">Landscape projects coming soon...</p>
-                  </div>
+                  {landscapeWorks.length > 0 ? (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                      {landscapeWorks.map(project => (
+                        <ProjectCard key={project.id} project={project} />
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="text-center p-8 bg-muted/20 rounded-lg">
+                      <p className="text-foreground/70">Landscape projects coming soon...</p>
+                    </div>
+                  )}
                 </TabsContent>
 
                 <TabsContent value="animation" className="mt-0">
