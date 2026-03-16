@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
+import alumniHero from '@/assets/alumni-hero.jpg';
 import { RevealSection } from '@/components/ui-elements/RevealSection';
 import { Badge } from '@/components/ui/badge';
 import { Play, Quote } from 'lucide-react';
@@ -90,7 +91,7 @@ const AlumniStories = () => {
           {/* Hero Section */}
           <div className="relative h-[300px] md:h-[400px] w-full overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black/70 z-10" />
-            <div className="absolute inset-0 bg-bsd-gray z-0" />
+            <img src={alumniHero} alt="BSDT Alumni Graduation Ceremony" className="absolute inset-0 w-full h-full object-cover z-0" />
             <div className="absolute inset-0 z-20 flex items-center justify-center">
               <div className="text-center px-6">
                 <Badge variant="bsdOrange" className="mb-4">Campus Life</Badge>
