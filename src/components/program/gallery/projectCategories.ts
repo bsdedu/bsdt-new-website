@@ -43,6 +43,13 @@ export const projectCategories: Record<string, Project[]> = {
   architectural: architecturalProjects || [],
   construction: [],
   sustainable: [],
+  
+  // Landscape Design categories
+  landscape: [
+    ...(landscapeProjects.lakefront || []),
+    ...(landscapeProjects.terrace || []),
+    ...(landscapeProjects.alumni || []),
+  ],
 };
 
 // Now we need to make sure that the Project type is also defined here
