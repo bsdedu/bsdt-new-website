@@ -49,6 +49,22 @@ const studyTours: StudyTour[] = [
     ],
   },
   {
+    id: "goa-2024",
+    title: "Goa Study Tour",
+    location: "Goa",
+    year: "2024",
+    description: "Students explored Goa's rich colonial architecture, vibrant art galleries, heritage churches, and street art murals as part of an immersive cultural study tour.",
+    images: [
+      "/lovable-uploads/goa-tour-1.jpg",
+      "/lovable-uploads/goa-tour-2.jpg",
+      "/lovable-uploads/goa-tour-3.jpg",
+      "/lovable-uploads/goa-tour-4.jpg",
+      "/lovable-uploads/goa-tour-5.jpg",
+      "/lovable-uploads/goa-tour-6.jpg",
+      "/lovable-uploads/goa-tour-7.jpg",
+    ],
+  },
+  {
     id: "pondicherry-2022",
     title: "Pondicherry Study Tour",
     location: "Pondicherry",
