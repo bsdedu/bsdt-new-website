@@ -148,7 +148,7 @@ const AlumniStories = () => {
                             src={alumni.videoSrc}
                             muted
                             preload="auto"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-contain bg-black"
                             onLoadedMetadata={(e) => {
                               const video = e.target as HTMLVideoElement;
                               video.currentTime = video.duration / 2;
