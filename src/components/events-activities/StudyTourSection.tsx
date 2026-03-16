@@ -31,6 +31,13 @@ const studyTours: StudyTour[] = [
       "/lovable-uploads/kochi-tour-6.jpg",
       "/lovable-uploads/kochi-tour-7.jpg",
       "/lovable-uploads/kochi-tour-8.jpg",
+      "/lovable-uploads/kochi-tour-9.jpg",
+      "/lovable-uploads/kochi-tour-10.jpg",
+      "/lovable-uploads/kochi-tour-11.jpg",
+      "/lovable-uploads/kochi-tour-12.jpg",
+      "/lovable-uploads/kochi-tour-13.jpg",
+      "/lovable-uploads/kochi-tour-14.jpg",
+      "/lovable-uploads/kochi-tour-15.jpg",
     ],
   },
 ];
