@@ -13,7 +13,7 @@ import partnerCollegeDeParis from "@/assets/partner-college-de-paris.png";
 import partnerEcoleConte from "@/assets/partner-ecole-conte.png";
 import partnerBengaluruNorthUniversity from "@/assets/partner-bengaluru-north-university.png";
 import partnerCresta from "@/assets/partner-cresta.png";
-import partnerStudyInBali from "@/assets/partner-study-in-bali.png";
+
 import partnerIIID from "@/assets/partner-iiid.png";
 import partnerAICTE from "@/assets/partner-aicte.png";
 import partnerADI from "@/assets/partner-adi.png";
