@@ -40,6 +40,11 @@ export const HeroSection: React.FC = () => {
     title: "Test Your Design IQ",
     subtitle: "Interactive Quiz",
     description: "Think you know design? Take our quick 10-question quiz and discover your Design IQ score."
+  }, {
+    image: "/lovable-uploads/open-day-cover.jpg",
+    title: "Open Day — April 18th",
+    subtitle: "You're Invited",
+    description: "Experience our campus, meet faculty & explore programs. Join us on April 18th for a unique opportunity to discover everything BSDT has to offer."
   }];
   const startAutoPlay = useCallback(() => {
     if (intervalRef.current) {
@@ -119,6 +124,10 @@ export const HeroSection: React.FC = () => {
                   window.location.href = "/design-iq";
                   return;
                 }
+                if (currentSlide === 5) {
+                  window.location.href = "/open-day";
+                  return;
+                }
                 const section = document.getElementById('programs');
                 if (section) {
                   if (currentSlide === 1) {
@@ -133,7 +142,7 @@ export const HeroSection: React.FC = () => {
                   });
                 }
               }}>
-                  {currentSlide === 2 ? "View Student Works" : currentSlide === 3 ? "Explore Electives" : currentSlide === 4 ? "Take the Quiz" : "Explore Programs"}
+                  {currentSlide === 2 ? "View Student Works" : currentSlide === 3 ? "Explore Electives" : currentSlide === 4 ? "Take the Quiz" : currentSlide === 5 ? "Register Now" : "Explore Programs"}
                 </Button>
               </div>
             </div>
