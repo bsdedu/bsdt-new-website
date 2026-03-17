@@ -4,7 +4,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Helmet } from 'react-helmet-async';
 import { EnquiryFormSection } from "@/components/home/EnquiryFormSection";
-import { StudentWorksGallery } from "@/components/program/StudentWorksGallery";
+
 import { HeroSection } from "@/components/program/animation-game/HeroSection";
 import { ProgramOverviewSection } from "@/components/program/animation-game/ProgramOverviewSection";
 import { AnimationStudentLearningSection } from "@/components/program/animation-game/AnimationStudentLearningSection";
@@ -24,11 +24,6 @@ const ProgramAnimationGameDesign = () => {
       <ProgramOverviewSection />
       <AnimationStudentLearningSection />
       <SkillEnhancingElectivesSection programKey="bva-animation-game-design" />
-      <StudentWorksGallery
-        title="Animation & Game Art Student Projects"
-        description="Explore the creative works of our Animation & Game Art students, showcasing their skills in 2D/3D animation, game development, and character design."
-        category="animation"
-      />
       
       <EnquiryFormSection />
       

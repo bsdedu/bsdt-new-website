@@ -6,7 +6,7 @@ import { HeroSection } from '@/components/program/fashion-design/HeroSection';
 import { ProgramOverviewSection } from '@/components/program/fashion-design/ProgramOverviewSection';
 
 import { FashionStudioSection } from '@/components/program/fashion-design/FashionStudioSection';
-import { StudentWorksGallery } from '@/components/program/StudentWorksGallery';
+
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
 import { StudentLearningSection } from '@/components/program/StudentLearningSection';
 import { SkillEnhancingElectivesSection } from '@/components/program/SkillEnhancingElectivesSection';
@@ -33,11 +33,6 @@ const ProgramFashionDesign: React.FC = () => {
         
         <SkillEnhancingElectivesSection programKey="bsc-fashion-design" />
         <FashionStudioSection />
-        <StudentWorksGallery 
-          title="Fashion Design Student Projects"
-          description="Explore the creative works and fashion collections designed by our talented students"
-          category="fashion-design"
-        />
         <EnquiryFormSection />
       </main>
       

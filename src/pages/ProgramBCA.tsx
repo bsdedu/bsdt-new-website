@@ -4,7 +4,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Helmet } from 'react-helmet-async';
 import { EnquiryFormSection } from "@/components/home/EnquiryFormSection";
-import { StudentWorksGallery } from "@/components/program/StudentWorksGallery";
+
 import { HeroSection } from "@/components/program/bca/HeroSection";
 import { ProgramOverviewSection } from "@/components/program/bca/ProgramOverviewSection";
 import { BCAStudentLearningSection } from "@/components/program/bca/BCAStudentLearningSection";
@@ -24,11 +24,6 @@ const ProgramBCA = () => {
       <ProgramOverviewSection />
       <BCAStudentLearningSection />
       <SkillEnhancingElectivesSection programKey="bca-uiux" />
-      <StudentWorksGallery
-        title="BCA Student Projects"
-        description="Explore the innovative projects created by our BCA students, showcasing their expertise in UI/UX design, AI/ML applications, and web development."
-        category="uiux"
-      />
       
       <EnquiryFormSection />
       

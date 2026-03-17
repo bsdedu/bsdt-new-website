@@ -3,7 +3,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Helmet } from 'react-helmet-async';
 import { EnquiryFormSection } from "@/components/home/EnquiryFormSection";
-import { StudentWorksGallery } from "@/components/program/StudentWorksGallery";
+
 import { HeroSection } from "@/components/program/interior-spatial/HeroSection";
 import { ProgramOverviewSection } from "@/components/program/interior-spatial/ProgramOverviewSection";
 
@@ -23,11 +23,6 @@ const ProgramInteriorSpatialDesign = () => {
       <ProgramOverviewSection />
       <BVAInteriorStudentLearningSection />
       <SkillEnhancingElectivesSection programKey="bva-interior-spatial-design" />
-      <StudentWorksGallery 
-        title="Interior & Spatial Design Student Projects"
-        description="Explore the innovative works of our Interior & Spatial Design students, showcasing their expertise in spatial planning, interior design, and sustainable solutions."
-        category="residential"
-      />
       
       <EnquiryFormSection />
       
