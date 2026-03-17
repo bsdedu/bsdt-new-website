@@ -4,7 +4,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Helmet } from 'react-helmet-async';
 import { EnquiryFormSection } from "@/components/home/EnquiryFormSection";
-import { StudentWorksGallery } from "@/components/program/StudentWorksGallery";
+
 import { HeroSection } from "@/components/program/graphic-design/HeroSection";
 import { ProgramOverviewSection } from "@/components/program/graphic-design/ProgramOverviewSection";
 
