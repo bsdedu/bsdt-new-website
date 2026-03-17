@@ -33,7 +33,7 @@ const OpenDay = () => {
                   <span className="text-white">OPEN DAY</span>
                 </h1>
                 <p className="text-2xl md:text-3xl font-semibold mb-4">
-                  Coming Soon...
+                  April 18th, 2026
                 </p>
                 <p className="text-lg md:text-xl opacity-90 mb-8">VENUE : Bangalore School of Design and Technology</p>
                 <Button size="lg" className="bg-bsd-orange text-white hover:bg-bsd-orange/90 font-semibold px-8 py-6 text-lg" asChild>
