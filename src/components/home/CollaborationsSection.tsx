@@ -167,7 +167,7 @@ export const CollaborationsSection: React.FC = () => {
                   { name: "École Conte", logo: partnerEcoleConte },
                   { name: "Bengaluru North University", logo: partnerBengaluruNorthUniversity },
                   { name: "Cresta", logo: partnerCresta },
-                  { name: "Study in Bali", logo: partnerStudyInBali },
+                  
                   { name: "Indian Institute of Interior Designers", logo: partnerIIID },
                   { name: "AICTE", logo: partnerAICTE },
                   { name: "Association of Designers of India", logo: partnerADI },
