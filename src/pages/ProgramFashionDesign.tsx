@@ -6,7 +6,7 @@ import { HeroSection } from '@/components/program/fashion-design/HeroSection';
 import { ProgramOverviewSection } from '@/components/program/fashion-design/ProgramOverviewSection';
 
 import { FashionStudioSection } from '@/components/program/fashion-design/FashionStudioSection';
-import { StudentWorksGallery } from '@/components/program/StudentWorksGallery';
+
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
 import { StudentLearningSection } from '@/components/program/StudentLearningSection';
 import { SkillEnhancingElectivesSection } from '@/components/program/SkillEnhancingElectivesSection';
