@@ -28,6 +28,7 @@ const DiplomaProgramHCIUIUX: React.FC = () => {
         <HeroSection />
         <ProgramOverviewSection />
         <ScheduleSection />
+        <HybridLearningSection />
         <ProgramFeatures />
         <StudentWorkGallerySection />
         <EnquiryFormSection />
