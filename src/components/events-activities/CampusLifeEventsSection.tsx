@@ -37,7 +37,7 @@ export const CampusLifeEventsSection: React.FC = () => {
       id: "1",
       title: "OPEN DAY",
       type: "open-day",
-      date: "Coming Soon...",
+      date: "April 18th, 2026",
       time: "",
       description: "Experience our campus, meet faculty & explore programs.",
       imageSrc: "/lovable-uploads/open-day-cover.jpg",
