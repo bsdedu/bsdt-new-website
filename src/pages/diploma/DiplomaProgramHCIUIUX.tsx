@@ -8,7 +8,7 @@ import { ProgramOverviewSection } from '@/components/diploma/HCIUIUX/ProgramOver
 import { ProgramFeatures } from '@/components/diploma/HCIUIUX/ProgramFeatures';
 import { ScheduleSection } from '@/components/diploma/HCIUIUX/ScheduleSection';
 import { HybridLearningSection } from '@/components/diploma/shared/HybridLearningSection';
-import { StudentWorkGallerySection } from '@/components/diploma/shared/StudentWorkGallerySection';
+
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
 
 const DiplomaProgramHCIUIUX: React.FC = () => {
