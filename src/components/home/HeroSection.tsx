@@ -124,6 +124,10 @@ export const HeroSection: React.FC = () => {
                   window.location.href = "/design-iq";
                   return;
                 }
+                if (currentSlide === 5) {
+                  window.location.href = "/open-day";
+                  return;
+                }
                 const section = document.getElementById('programs');
                 if (section) {
                   if (currentSlide === 1) {
