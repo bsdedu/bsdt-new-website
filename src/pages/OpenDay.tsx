@@ -60,7 +60,8 @@ const OpenDay = () => {
                     Open Day 2026
                   </h2>
                   <p className="text-muted-foreground mb-4 leading-relaxed">
-                    We are delighted to announce our upcoming Open Day Event. Date coming soon! This special occasion is designed for prospective students and their families, providing a unique opportunity to explore all that BSDT has to offer.
+                    We are delighted to announce our upcoming Open Day Event on April 18th, 2026! This special occasion is designed for prospective students and their families, providing a unique opportunity to explore all that BSDT has to offer.
+                  </p>
                   </p>
                   <p className="text-muted-foreground mb-4 leading-relaxed">
                     During the Open Day, attendees will have the chance to tour our campus, engage with faculty and staff, and gain valuable insights into our diverse range of design programs. Participants will also learn about our commitment to academic excellence, student support services, and the vibrant community life that defines BSDT.
