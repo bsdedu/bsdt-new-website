@@ -142,7 +142,7 @@ export const HeroSection: React.FC = () => {
                   });
                 }
               }}>
-                  {currentSlide === 2 ? "View Student Works" : currentSlide === 3 ? "Explore Electives" : currentSlide === 4 ? "Take the Quiz" : "Explore Programs"}
+                  {currentSlide === 2 ? "View Student Works" : currentSlide === 3 ? "Explore Electives" : currentSlide === 4 ? "Take the Quiz" : currentSlide === 5 ? "Register Now" : "Explore Programs"}
                 </Button>
               </div>
             </div>
