@@ -140,8 +140,74 @@ const AboutBSDT = () => {
           </div>
         </section>
 
-        {/* Mission & Vision Section */}
+        {/* Our Story Section */}
         <section id="our-story" className="py-20">
+          <div className="container mx-auto px-6 md:px-8">
+            <RevealSection direction="up">
+              <div className="text-center max-w-2xl mx-auto mb-14">
+                <Badge variant="bsdOrange" className="mb-4">Our Story</Badge>
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray mb-4">
+                  The Journey Behind BSDT
+                </h2>
+              </div>
+            </RevealSection>
+
+            <div className="max-w-4xl mx-auto space-y-6">
+              <RevealSection direction="up" delay={100}>
+                <p className="text-foreground/80 leading-relaxed text-lg">
+                  The Bangalore School of Design and Technology (BSDT) was born out of a passion for design and a vision to reshape design education in India.
+                </p>
+              </RevealSection>
+
+              <RevealSection direction="up" delay={150}>
+                <p className="text-foreground/70 leading-relaxed">
+                  Founded by <span className="font-semibold text-bsd-gray">Ar. Dineshwar</span>, a practicing architect with over 25 years of professional experience, BSDT emerged from a deep desire to give back to the creative community. After decades in architectural practice, he stepped into the field of education with the belief that the next generation of designers deserved more than conventional classroom learning.
+                </p>
+              </RevealSection>
+
+              <RevealSection direction="up" delay={200}>
+                <p className="text-foreground/70 leading-relaxed">
+                  However, it soon became evident that design education had remained largely stagnant, often disconnected from the rapidly evolving realities of the industry. With this realization came a bold vision: to create a boutique design school where education would be dynamic, industry-aligned, and deeply rooted in real-world practice.
+                </p>
+              </RevealSection>
+
+              <RevealSection direction="up" delay={250}>
+                <p className="text-foreground/70 leading-relaxed">
+                  BSDT was founded on the idea that future designers must be equipped not only with conceptual knowledge but also with the practical understanding of how design is executed in the real world. The curriculum therefore goes beyond traditional syllabi, incorporating contemporary topics, industry exposure, and hands-on learning that prepares students to confidently step into professional practice.
+                </p>
+              </RevealSection>
+
+              <RevealSection direction="up" delay={300}>
+                <p className="text-foreground/70 leading-relaxed">
+                  This vision found a powerful collaborator in <span className="font-semibold text-bsd-gray">Mr. Praveen Nandakumar</span>, an artist by passion and a firm believer in the transformative potential of design education. Sharing the same conviction that boutique design schools can nurture more thoughtful, skilled, and fulfilled designers, he joined the endeavor to help shape BSDT into a space where creativity, knowledge, and execution come together.
+                </p>
+              </RevealSection>
+
+              <RevealSection direction="up" delay={350}>
+                <p className="text-foreground/70 leading-relaxed">
+                  Together, they laid the foundation for a design school built on mentorship, practice, and meaningful industry connections.
+                </p>
+              </RevealSection>
+
+              <RevealSection direction="up" delay={400}>
+                <p className="text-foreground/70 leading-relaxed">
+                  Since its inception, BSDT has brought together senior practitioners and experts from diverse design disciplines, enabling the institution to grow beyond its roots in architecture and interior design. Today, BSDT continues to expand its horizons, offering learning opportunities across fields such as graphic design, visual communication, landscape design, and more.
+                </p>
+              </RevealSection>
+
+              <RevealSection direction="up" delay={450}>
+                <div className="mt-8 p-6 bg-gradient-to-br from-bsd-orange/5 to-transparent rounded-2xl border border-bsd-orange/10">
+                  <p className="text-foreground/80 leading-relaxed italic text-lg text-center">
+                    At its core, BSDT remains committed to its founding vision: to cultivate designers who think deeply, create boldly, and bring their ideas to life with confidence and skill.
+                  </p>
+                </div>
+              </RevealSection>
+            </div>
+          </div>
+        </section>
+
+        {/* Mission & Vision Section */}
+        <section className="py-20 bg-bsd-light-gray">
           <div className="container mx-auto px-6 md:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <RevealSection direction="right">
