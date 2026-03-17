@@ -24,11 +24,6 @@ const ProgramBCA = () => {
       <ProgramOverviewSection />
       <BCAStudentLearningSection />
       <SkillEnhancingElectivesSection programKey="bca-uiux" />
-      <StudentWorksGallery
-        title="BCA Student Projects"
-        description="Explore the innovative projects created by our BCA students, showcasing their expertise in UI/UX design, AI/ML applications, and web development."
-        category="uiux"
-      />
       
       <EnquiryFormSection />
       

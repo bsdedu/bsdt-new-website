@@ -24,11 +24,6 @@ const ProgramAnimationGameDesign = () => {
       <ProgramOverviewSection />
       <AnimationStudentLearningSection />
       <SkillEnhancingElectivesSection programKey="bva-animation-game-design" />
-      <StudentWorksGallery
-        title="Animation & Game Art Student Projects"
-        description="Explore the creative works of our Animation & Game Art students, showcasing their skills in 2D/3D animation, game development, and character design."
-        category="animation"
-      />
       
       <EnquiryFormSection />
       

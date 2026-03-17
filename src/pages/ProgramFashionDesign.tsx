@@ -33,11 +33,6 @@ const ProgramFashionDesign: React.FC = () => {
         
         <SkillEnhancingElectivesSection programKey="bsc-fashion-design" />
         <FashionStudioSection />
-        <StudentWorksGallery 
-          title="Fashion Design Student Projects"
-          description="Explore the creative works and fashion collections designed by our talented students"
-          category="fashion-design"
-        />
         <EnquiryFormSection />
       </main>
       

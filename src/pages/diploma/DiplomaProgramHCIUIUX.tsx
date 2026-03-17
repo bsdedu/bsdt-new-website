@@ -30,7 +30,7 @@ const DiplomaProgramHCIUIUX: React.FC = () => {
         <ScheduleSection />
         <HybridLearningSection />
         <ProgramFeatures />
-        <StudentWorkGallerySection />
+        
         <EnquiryFormSection />
       </main>
       
