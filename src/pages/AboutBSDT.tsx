@@ -105,13 +105,6 @@ const AboutBSDT = () => {
                   >
                     Apply Now 🎨
                   </AnimatedButton>
-                  <AnimatedButton 
-                    href="#our-story" 
-                    className="bg-bsd-gray text-white hover:bg-bsd-gray/80 px-8 py-3 text-lg"
-                    hoverEffect="scale"
-                  >
-                    Our Story ✨
-                  </AnimatedButton>
                 </div>
               </RevealSection>
             </div>
