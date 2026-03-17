@@ -40,6 +40,11 @@ export const HeroSection: React.FC = () => {
     title: "Test Your Design IQ",
     subtitle: "Interactive Quiz",
     description: "Think you know design? Take our quick 10-question quiz and discover your Design IQ score."
+  }, {
+    image: "/lovable-uploads/open-day-cover.jpg",
+    title: "Open Day — April 18th",
+    subtitle: "You're Invited",
+    description: "Experience our campus, meet faculty & explore programs. Join us on April 18th for a unique opportunity to discover everything BSDT has to offer."
   }];
   const startAutoPlay = useCallback(() => {
     if (intervalRef.current) {
