@@ -2,7 +2,7 @@
 import React from 'react';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Monitor } from "lucide-react";
+import { Monitor, Wifi, MapPin, Calendar, Clock } from "lucide-react";
 import { Link } from 'react-router-dom';
 
 export const HeroSection: React.FC = () => {
@@ -11,7 +11,21 @@ export const HeroSection: React.FC = () => {
       <div className="container mx-auto px-6 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            
+            <div className="flex flex-wrap gap-2">
+              <Badge variant="bsdOrange" className="flex items-center gap-1.5">
+                <Wifi className="w-3 h-3" /> Hybrid – Online & Offline
+              </Badge>
+              <Badge variant="outline" className="flex items-center gap-1.5 border-bsd-orange/30 text-bsd-orange">
+                <Clock className="w-3 h-3" /> 6 Months
+              </Badge>
+              <Badge variant="outline" className="flex items-center gap-1.5 border-bsd-orange/30 text-bsd-orange">
+                <Calendar className="w-3 h-3" /> Saturdays Only
+              </Badge>
+              <Badge variant="outline" className="flex items-center gap-1.5 border-bsd-orange/30 text-bsd-orange">
+                <MapPin className="w-3 h-3" /> Bangalore Campus
+              </Badge>
+            </div>
+
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-bsd-gray">
               Professional Diploma in<br />
               <span className="text-bsd-orange">HCI for UI/UX</span>
@@ -20,7 +34,6 @@ export const HeroSection: React.FC = () => {
             <p className="text-lg text-foreground/80 max-w-xl">
               A focused 6-month weekend program designed for working professionals and graduates. Classes are held every Saturday at our Bangalore campus, giving you hands-on UI/UX skills without disrupting your weekday schedule.
             </p>
-            
             
             <div className="flex flex-wrap gap-4 pt-4">
               <a href="#enquiry-form">
