@@ -20,8 +20,8 @@ const Careers: React.FC = () => {
       location: 'Bangalore',
     },
     {
-      title: 'Assistant Professor – Visual Communication',
-      department: 'Academics',
+      title: 'Content Creator – Fresher',
+      department: 'Marketing',
       type: 'Full-time',
       location: 'Bangalore',
     },
