@@ -40,7 +40,7 @@ export const CampusLifeEventsSection: React.FC = () => {
       date: "Coming Soon...",
       time: "",
       description: "Experience our campus, meet faculty & explore programs.",
-      imageSrc: "/lovable-uploads/open-day-event.png",
+      imageSrc: "/lovable-uploads/open-day-cover.jpg",
       registerLink: "/open-day",
       featured: true
     },
