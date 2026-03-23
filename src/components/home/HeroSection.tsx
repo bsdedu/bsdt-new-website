@@ -19,7 +19,7 @@ export const HeroSection: React.FC = () => {
     image: "/lovable-uploads/open-day-cover.jpg",
     title: "OPEN DAY\nApril 18th",
     subtitle: "You're Invited",
-    description: "Experience our campus, meet faculty & explore programs. Join us on April 18th for a unique opportunity to discover everything BSDT has to offer."
+    description: "Step inside BSDT and experience design education like never before. Tour our studios, interact with faculty, explore programs, and find the creative path that's right for you."
   }, {
     image: "/lovable-uploads/fc9c4875-4b4b-44a9-b8ad-3eb5db1ed2cc.png",
     title: "2026\nUG ADMISSIONS OPEN",
@@ -94,7 +94,10 @@ export const HeroSection: React.FC = () => {
               </span>
               
               <h1 className="font-display font-bold text-white leading-tight mb-4">
-                {currentSlide === 1 ? <>
+                {currentSlide === 0 ? <>
+                    <span className="block text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight uppercase">OPEN DAY</span>
+                    <span className="block text-3xl md:text-4xl lg:text-5xl text-bsd-orange font-semibold mt-1">April 18th</span>
+                  </> : currentSlide === 1 ? <>
                     <span className="block text-2xl md:text-3xl lg:text-4xl text-bsd-orange">2026</span>
                     <span className="block text-4xl md:text-5xl lg:text-6xl">UG ADMISSIONS OPEN</span>
                   </> : <span className="text-3xl md:text-4xl lg:text-5xl whitespace-pre-line">{currentSlideData.title}</span>}
