@@ -16,6 +16,11 @@ export const HeroSection: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const heroSlides: HeroSlide[] = [{
+    image: "/lovable-uploads/open-day-cover.jpg",
+    title: "Open Day — April 18th",
+    subtitle: "You're Invited",
+    description: "Experience our campus, meet faculty & explore programs. Join us on April 18th for a unique opportunity to discover everything BSDT has to offer."
+  }, {
     image: "/lovable-uploads/fc9c4875-4b4b-44a9-b8ad-3eb5db1ed2cc.png",
     title: "2026\nUG ADMISSIONS OPEN",
     subtitle: "Admissions Open 2026-27",
@@ -40,11 +45,6 @@ export const HeroSection: React.FC = () => {
     title: "Test Your Design IQ",
     subtitle: "Interactive Quiz",
     description: "Think you know design? Take our quick 10-question quiz and discover your Design IQ score."
-  }, {
-    image: "/lovable-uploads/open-day-cover.jpg",
-    title: "Open Day — April 18th",
-    subtitle: "You're Invited",
-    description: "Experience our campus, meet faculty & explore programs. Join us on April 18th for a unique opportunity to discover everything BSDT has to offer."
   }];
   const startAutoPlay = useCallback(() => {
     if (intervalRef.current) {
@@ -94,7 +94,7 @@ export const HeroSection: React.FC = () => {
               </span>
               
               <h1 className="font-display font-bold text-white leading-tight mb-4">
-                {currentSlide === 0 ? <>
+                {currentSlide === 1 ? <>
                     <span className="block text-2xl md:text-3xl lg:text-4xl text-bsd-orange">2026</span>
                     <span className="block text-4xl md:text-5xl lg:text-6xl">UG ADMISSIONS OPEN</span>
                   </> : <span className="text-3xl md:text-4xl lg:text-5xl">{currentSlideData.title}</span>}
@@ -106,7 +106,7 @@ export const HeroSection: React.FC = () => {
 
 
               <div className="flex flex-wrap gap-4">
-                {currentSlide === 5 ? (
+                {currentSlide === 0 ? (
                   <>
                     <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-8" onClick={() => {
                       window.open("https://forms.gle/BHq58msTt4XNdsHA7", "_blank", "noopener noreferrer");
@@ -127,19 +127,19 @@ export const HeroSection: React.FC = () => {
                       APPLY NOW
                     </Button>
                     <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-8" onClick={() => {
-                      if (currentSlide === 2) { window.location.href = "/student-spotlight"; return; }
-                      if (currentSlide === 3) { window.location.href = "/academics/skill-enhancing-electives"; return; }
-                      if (currentSlide === 4) { window.location.href = "/design-iq"; return; }
+                      if (currentSlide === 3) { window.location.href = "/student-spotlight"; return; }
+                      if (currentSlide === 4) { window.location.href = "/academics/skill-enhancing-electives"; return; }
+                      if (currentSlide === 5) { window.location.href = "/design-iq"; return; }
                       const section = document.getElementById('programs');
                       if (section) {
-                        if (currentSlide === 1) {
+                        if (currentSlide === 2) {
                           const diplomaTab = document.querySelector('[data-value="diploma"]') as HTMLButtonElement;
                           if (diplomaTab) diplomaTab.click();
                         }
                         window.scrollTo({ top: section.offsetTop - 80, behavior: 'smooth' });
                       }
                     }}>
-                      {currentSlide === 2 ? "View Student Works" : currentSlide === 3 ? "Explore Electives" : currentSlide === 4 ? "Take the Quiz" : "Explore Programs"}
+                      {currentSlide === 3 ? "View Student Works" : currentSlide === 4 ? "Explore Electives" : currentSlide === 5 ? "Take the Quiz" : "Explore Programs"}
                     </Button>
                   </>
                 )}
