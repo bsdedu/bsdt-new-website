@@ -19,7 +19,7 @@ export const HeroSection: React.FC = () => {
     image: "/lovable-uploads/open-day-cover.jpg",
     title: "OPEN DAY\nApril 18th",
     subtitle: "You're Invited",
-    description: "Experience our campus, meet faculty & explore programs. Join us on April 18th for a unique opportunity to discover everything BSDT has to offer."
+    description: "Step inside BSDT and experience design education like never before. Tour our studios, interact with faculty, explore programs, and find the creative path that's right for you."
   }, {
     image: "/lovable-uploads/fc9c4875-4b4b-44a9-b8ad-3eb5db1ed2cc.png",
     title: "2026\nUG ADMISSIONS OPEN",
