@@ -106,44 +106,43 @@ export const HeroSection: React.FC = () => {
 
 
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" variant="outline" className="border-2 border-[#f5f5f0] bg-[#f5f5f0] text-black hover:bg-white hover:border-white transition-all duration-300 font-semibold px-8" onClick={() => {
-                  window.open("https://apply.bsd.edu.in/", "_blank", "noopener noreferrer");
-                }}>
-                  APPLY NOW
-                </Button>
-                <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-8" onClick={() => {
-                if (currentSlide === 2) {
-                  window.location.href = "/student-spotlight";
-                  return;
-                }
-                if (currentSlide === 3) {
-                  window.location.href = "/academics/skill-enhancing-electives";
-                  return;
-                }
-                if (currentSlide === 4) {
-                  window.location.href = "/design-iq";
-                  return;
-                }
-                if (currentSlide === 5) {
-                  window.location.href = "/open-day";
-                  return;
-                }
-                const section = document.getElementById('programs');
-                if (section) {
-                  if (currentSlide === 1) {
-                    const diplomaTab = document.querySelector('[data-value="diploma"]') as HTMLButtonElement;
-                    if (diplomaTab) {
-                      diplomaTab.click();
-                    }
-                  }
-                  window.scrollTo({
-                    top: section.offsetTop - 80,
-                    behavior: 'smooth'
-                  });
-                }
-              }}>
-                  {currentSlide === 2 ? "View Student Works" : currentSlide === 3 ? "Explore Electives" : currentSlide === 4 ? "Take the Quiz" : currentSlide === 5 ? "Register Now" : "Explore Programs"}
-                </Button>
+                {currentSlide === 5 ? (
+                  <>
+                    <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-8" onClick={() => {
+                      window.open("https://forms.gle/BHq58msTt4XNdsHA7", "_blank", "noopener noreferrer");
+                    }}>
+                      Register Now
+                    </Button>
+                    <Button size="lg" variant="outline" className="border-2 border-[#f5f5f0] bg-[#f5f5f0] text-black hover:bg-white hover:border-white transition-all duration-300 font-semibold px-8" onClick={() => {
+                      window.location.href = "/open-day";
+                    }}>
+                      Explore More
+                    </Button>
+                  </>
+                ) : (
+                  <>
+                    <Button size="lg" variant="outline" className="border-2 border-[#f5f5f0] bg-[#f5f5f0] text-black hover:bg-white hover:border-white transition-all duration-300 font-semibold px-8" onClick={() => {
+                      window.open("https://apply.bsd.edu.in/", "_blank", "noopener noreferrer");
+                    }}>
+                      APPLY NOW
+                    </Button>
+                    <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-8" onClick={() => {
+                      if (currentSlide === 2) { window.location.href = "/student-spotlight"; return; }
+                      if (currentSlide === 3) { window.location.href = "/academics/skill-enhancing-electives"; return; }
+                      if (currentSlide === 4) { window.location.href = "/design-iq"; return; }
+                      const section = document.getElementById('programs');
+                      if (section) {
+                        if (currentSlide === 1) {
+                          const diplomaTab = document.querySelector('[data-value="diploma"]') as HTMLButtonElement;
+                          if (diplomaTab) diplomaTab.click();
+                        }
+                        window.scrollTo({ top: section.offsetTop - 80, behavior: 'smooth' });
+                      }
+                    }}>
+                      {currentSlide === 2 ? "View Student Works" : currentSlide === 3 ? "Explore Electives" : currentSlide === 4 ? "Take the Quiz" : "Explore Programs"}
+                    </Button>
+                  </>
+                )}
               </div>
             </div>
           </div>
