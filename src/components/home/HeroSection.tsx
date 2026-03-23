@@ -106,7 +106,7 @@ export const HeroSection: React.FC = () => {
 
 
               <div className="flex flex-wrap gap-4">
-                {currentSlide === 5 ? (
+                {currentSlide === 0 ? (
                   <>
                     <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-8" onClick={() => {
                       window.open("https://forms.gle/BHq58msTt4XNdsHA7", "_blank", "noopener noreferrer");
@@ -127,19 +127,19 @@ export const HeroSection: React.FC = () => {
                       APPLY NOW
                     </Button>
                     <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-8" onClick={() => {
-                      if (currentSlide === 2) { window.location.href = "/student-spotlight"; return; }
-                      if (currentSlide === 3) { window.location.href = "/academics/skill-enhancing-electives"; return; }
-                      if (currentSlide === 4) { window.location.href = "/design-iq"; return; }
+                      if (currentSlide === 3) { window.location.href = "/student-spotlight"; return; }
+                      if (currentSlide === 4) { window.location.href = "/academics/skill-enhancing-electives"; return; }
+                      if (currentSlide === 5) { window.location.href = "/design-iq"; return; }
                       const section = document.getElementById('programs');
                       if (section) {
-                        if (currentSlide === 1) {
+                        if (currentSlide === 2) {
                           const diplomaTab = document.querySelector('[data-value="diploma"]') as HTMLButtonElement;
                           if (diplomaTab) diplomaTab.click();
                         }
                         window.scrollTo({ top: section.offsetTop - 80, behavior: 'smooth' });
                       }
                     }}>
-                      {currentSlide === 2 ? "View Student Works" : currentSlide === 3 ? "Explore Electives" : currentSlide === 4 ? "Take the Quiz" : "Explore Programs"}
+                      {currentSlide === 3 ? "View Student Works" : currentSlide === 4 ? "Explore Electives" : currentSlide === 5 ? "Take the Quiz" : "Explore Programs"}
                     </Button>
                   </>
                 )}
