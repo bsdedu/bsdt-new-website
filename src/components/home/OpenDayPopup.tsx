@@ -44,7 +44,7 @@ export const OpenDayPopup = () => {
 
         <div className="flex flex-col gap-3 pt-2">
           <Button className="w-full bg-bsd-orange hover:bg-bsd-orange/90 text-white" asChild>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfJHlSTNhMYjU9ulXi8JiPPJQW1Jw-C_JiUe7WGiIHIOpKe3Q/viewform" target="_blank" rel="noopener noreferrer" onClick={handleClose}>
+            <a href="https://forms.gle/BHq58msTt4XNdsHA7" target="_blank" rel="noopener noreferrer" onClick={handleClose}>
               Register Now
             </a>
           </Button>
