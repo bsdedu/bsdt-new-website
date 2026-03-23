@@ -16,6 +16,11 @@ export const HeroSection: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const heroSlides: HeroSlide[] = [{
+    image: "/lovable-uploads/open-day-cover.jpg",
+    title: "Open Day — April 18th",
+    subtitle: "You're Invited",
+    description: "Experience our campus, meet faculty & explore programs. Join us on April 18th for a unique opportunity to discover everything BSDT has to offer."
+  }, {
     image: "/lovable-uploads/fc9c4875-4b4b-44a9-b8ad-3eb5db1ed2cc.png",
     title: "2026\nUG ADMISSIONS OPEN",
     subtitle: "Admissions Open 2026-27",
@@ -40,11 +45,6 @@ export const HeroSection: React.FC = () => {
     title: "Test Your Design IQ",
     subtitle: "Interactive Quiz",
     description: "Think you know design? Take our quick 10-question quiz and discover your Design IQ score."
-  }, {
-    image: "/lovable-uploads/open-day-cover.jpg",
-    title: "Open Day — April 18th",
-    subtitle: "You're Invited",
-    description: "Experience our campus, meet faculty & explore programs. Join us on April 18th for a unique opportunity to discover everything BSDT has to offer."
   }];
   const startAutoPlay = useCallback(() => {
     if (intervalRef.current) {
