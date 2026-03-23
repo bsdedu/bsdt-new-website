@@ -36,17 +36,9 @@ const OpenDay = () => {
                   April 18th, 2026
                 </p>
                 <p className="text-lg md:text-xl opacity-90 mb-8">VENUE : Bangalore School of Design and Technology</p>
-                <div className="flex flex-wrap gap-4">
-                  <Button size="lg" className="bg-bsd-orange text-white hover:bg-bsd-orange/90 font-semibold px-8 py-6 text-lg" asChild>
-                    <a href="https://forms.gle/BHq58msTt4XNdsHA7" target="_blank" rel="noopener noreferrer">Register Now</a>
-                  </Button>
-                  <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 font-semibold px-8 py-6 text-lg" onClick={() => {
-                    const overview = document.getElementById('open-day-overview');
-                    if (overview) overview.scrollIntoView({ behavior: 'smooth' });
-                  }}>
-                    Explore More
-                  </Button>
-                </div>
+                <Button size="lg" className="bg-bsd-orange text-white hover:bg-bsd-orange/90 font-semibold px-8 py-6 text-lg" asChild>
+                  <a href="https://forms.gle/BHq58msTt4XNdsHA7" target="_blank" rel="noopener noreferrer">Register Now</a>
+                </Button>
               </div>
             </div>
           </section>
