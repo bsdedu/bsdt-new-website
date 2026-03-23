@@ -17,7 +17,7 @@ export const HeroSection: React.FC = () => {
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const heroSlides: HeroSlide[] = [{
     image: "/lovable-uploads/open-day-cover.jpg",
-    title: "Open Day — April 18th",
+    title: "OPEN DAY\nApril 18th",
     subtitle: "You're Invited",
     description: "Experience our campus, meet faculty & explore programs. Join us on April 18th for a unique opportunity to discover everything BSDT has to offer."
   }, {
