@@ -51,8 +51,8 @@ const values = [
 
 const milestones = [
   { year: '2016', title: 'Founded', description: 'BSDT established with a vision to transform design education in India.' },
-  { year: '2018', title: 'First Graduating Batch', description: 'Our first batch of designers graduated and entered the industry.' },
-  { year: '2020', title: 'Digital Expansion', description: 'Expanded programs to include UI/UX, HCI, and digital design disciplines.' },
+  { year: '2020', title: 'First Graduating Batch', description: 'Our first batch of designers graduated and entered the industry.' },
+  { year: '2021', title: 'Digital Expansion', description: 'Expanded programs to include UI/UX, HCI, and digital design disciplines.' },
   { year: '2022', title: 'Industry Recognition', description: 'Recognized as a leading design institution with top industry partnerships.' },
   { year: '2024', title: 'Campus Upgrade', description: 'State-of-the-art facilities with new labs, studios, and collaborative spaces.' },
 ];
