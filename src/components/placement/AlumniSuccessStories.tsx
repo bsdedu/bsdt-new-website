@@ -8,7 +8,14 @@ import { placementData } from './placementData';
 export const AlumniSuccessStories: React.FC = () => {
   return (
     <div className="space-y-8">
-      {Object.entries(placementData).map(([year, alumni]) => (
+      {Object.entries(placementData)
+        .sort(([a], [b]) => {
+          // "Diploma" always last, then sort years descending
+          if (a === "Diploma") return 1;
+          if (b === "Diploma") return -1;
+          return parseInt(b) - parseInt(a);
+        })
+        .map(([year, alumni]) => (
         <div key={year} className="space-y-4">
           <h3 className="text-2xl font-bold text-bsd-gray">Class of {year}</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
