@@ -146,8 +146,7 @@ const optionLabels = ["A", "B", "C", "D"];
 
 const DesignIQQuiz: React.FC = () => {
   const { toast } = useToast();
-  const [step, setStep] = useState<"hero" | "lead" | "quiz" | "result">("hero");
-  const [npfLaunched, setNpfLaunched] = useState(() => sessionStorage.getItem("npfLaunched") === "true");
+  const [step, setStep] = useState<"hero" | "quiz" | "result">("hero");
   const [currentQ, setCurrentQ] = useState(0);
   const [lead, setLead] = useState({ name: "", email: "", phone: "" });
   const [scores, setScores] = useState<Record<Tag, number>>({ visual: 0, ideas: 0, logic: 0, explorer: 0 });
@@ -241,14 +240,11 @@ const DesignIQQuiz: React.FC = () => {
   const resetQuiz = () => {
     setStep("hero");
     setCurrentQ(0);
-    setLead({ name: "", email: "", phone: "" });
     setScores({ visual: 0, ideas: 0, logic: 0, explorer: 0 });
     setFinalResult(null);
     setSelectedIdx(null);
     setIsTransitioning(false);
     setSliderValue(2);
-    setNpfLaunched(false);
-    sessionStorage.removeItem("npfLaunched");
   };
 
   const handleShare = () => {
@@ -312,86 +308,13 @@ const DesignIQQuiz: React.FC = () => {
                   Unlock your creative personality in 9 quick questions. Discover if you're a Visual Thinker, Idea Generator, Problem Solver, or Creative Explorer.
                 </p>
 
-                {!npfLaunched ? (
-                  <Button
-                    size="lg"
-                    className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-12 text-lg h-16 rounded-xl shadow-lg shadow-bsd-orange/25"
-                    onClick={() => {
-                       setNpfLaunched(true);
-                       sessionStorage.setItem("npfLaunched", "true");
-
-                      const initAndShowPopup = () => {
-                        try {
-                          // @ts-ignore
-                          const widget = new NpfWidgetsInit({
-                            widgetId: "adff9b077808c1fcb8e77a017693b6b9",
-                            baseurl: "widgets.in5.nopaperforms.com",
-                            formTitle: "Enquire Now",
-                            titleColor: "#FF0033",
-                            backgroundColor: "#ddd",
-                            iframeHeight: "500px",
-                            buttonbgColor: "#ff0000",
-                            buttonTextColor: "#FFF",
-                          });
-                          setTimeout(() => {
-                            widget.showPopup("adff9b077808c1fcb8e77a017693b6b9", "widgets.in5.nopaperforms.com");
-                            // Hide the NPF close button and disable backdrop click
-                            const widgetId = "adff9b077808c1fcb8e77a017693b6b9";
-                            const removeCloseButtons = () => {
-                              // Target the exact close button: img#npfWdgclose-{id}
-                              const closeBtn = document.getElementById(`npfWdgclose-${widgetId}`);
-                              if (closeBtn) {
-                                closeBtn.style.display = 'none';
-                                closeBtn.style.visibility = 'hidden';
-                                closeBtn.style.pointerEvents = 'none';
-                              }
-                              // Also hide any img inside .npfTitle
-                              document.querySelectorAll('.npfTitle img').forEach(el => {
-                                (el as HTMLElement).style.display = 'none';
-                              });
-                              // Disable backdrop click to close
-                              const backdrop = document.getElementById(`popup-back-${widgetId}`);
-                              if (backdrop) {
-                                backdrop.style.pointerEvents = 'none';
-                              }
-                            };
-                            const closeRemover = setInterval(removeCloseButtons, 200);
-                            removeCloseButtons();
-                            setTimeout(() => clearInterval(closeRemover), 120000);
-                          }, 300);
-                        } catch (e) {
-                          console.error("NoPaperForms widget error:", e);
-                        }
-                      };
-
-                      const existingScript = document.querySelector('script[src*="npfwpopup.js"]');
-                      if (!existingScript) {
-                        const popupScript = document.createElement("script");
-                        popupScript.src = "https://in5cdn.npfs.co/js/widget/npfwpopup.js";
-                        popupScript.onload = initAndShowPopup;
-                        popupScript.onerror = () => console.error("Failed to load NoPaperForms popup script");
-                        document.body.appendChild(popupScript);
-                      } else {
-                        initAndShowPopup();
-                      }
-                    }}
-                  >
-                    <Sparkles className="mr-2 w-5 h-5" /> Start the Quiz <ArrowRight className="ml-2 w-5 h-5" />
-                  </Button>
-                ) : (
-                  <div className="space-y-4">
-                    <p className="text-background/80 text-base font-medium animate-pulse">
-                      📝 Please fill in the form above, then click below to begin!
-                    </p>
-                    <Button
-                      size="lg"
-                      className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-12 text-lg h-16 rounded-xl shadow-lg shadow-bsd-orange/25"
-                      onClick={() => setStep("quiz")}
-                    >
-                      Continue to Quiz <ArrowRight className="ml-2 w-5 h-5" />
-                    </Button>
-                  </div>
-                )}
+                <Button
+                  size="lg"
+                  className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-12 text-lg h-16 rounded-xl shadow-lg shadow-bsd-orange/25"
+                  onClick={() => setStep("quiz")}
+                >
+                  <Sparkles className="mr-2 w-5 h-5" /> Start the Quiz <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
               </motion.div>
             )}
 
