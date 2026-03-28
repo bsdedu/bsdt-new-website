@@ -4,7 +4,6 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { cn } from "@/lib/utils";
 import { Brain, ArrowRight, Sparkles, Palette, Lightbulb, Puzzle, Compass } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useToast } from "@/hooks/use-toast";
@@ -148,7 +147,6 @@ const DesignIQQuiz: React.FC = () => {
   const { toast } = useToast();
   const [step, setStep] = useState<"hero" | "quiz" | "result">("hero");
   const [currentQ, setCurrentQ] = useState(0);
-  const [scores, setScores] = useState<Record<Tag, number>>({ visual: 0, ideas: 0, logic: 0, explorer: 0 });
   const [scores, setScores] = useState<Record<Tag, number>>({ visual: 0, ideas: 0, logic: 0, explorer: 0 });
   const [finalResult, setFinalResult] = useState<ResultInfo | null>(null);
   const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
