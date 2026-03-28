@@ -14,7 +14,7 @@ export const CertificationPathwaySection: React.FC = () => {
               The 3+1 <span className="text-bsd-orange">Advantage</span>
             </h2>
             <p className="mt-4 text-foreground/70">
-              Following the 12-month academic program (3 semesters of 4 months each), students enter the 3+1 Internship Advantage—three months of industry internship and one month of guided portfolio development. Expert portfolio reviews and dual certification ensure graduates enter the job market with professional validation and a clear competitive edge.
+              Following the 16-month academic program (3 semesters of 4 months each), students enter the 3+1 Internship Advantage—three months of industry internship and one month of guided portfolio development. Expert portfolio reviews and dual certification ensure graduates enter the job market with professional validation and a clear competitive edge. (3 semesters of 4 months each), students enter the 3+1 Internship Advantage—three months of industry internship and one month of guided portfolio development. Expert portfolio reviews and dual certification ensure graduates enter the job market with professional validation and a clear competitive edge.
             </p>
           </div>
         </RevealSection>
