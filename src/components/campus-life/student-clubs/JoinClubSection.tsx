@@ -73,19 +73,6 @@ export const JoinClubSection: React.FC = () => {
               </Accordion>
             </div>
 
-            {/* New Video Section */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4">Student Clubs Highlights</h3>
-              <AspectRatio ratio={16 / 9} className="rounded-lg overflow-hidden">
-                <iframe 
-                  src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
-                  title="BSD Student Clubs Highlights" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                  allowFullScreen 
-                  className="absolute inset-0 w-full h-full"
-                />
-              </AspectRatio>
-            </div>
           </div>
         </div>
       </div>
