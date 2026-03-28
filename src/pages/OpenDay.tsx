@@ -294,9 +294,9 @@ const OpenDay = () => {
                     <Mail className="w-5 h-5" />
                     admissions@bsd.edu.in
                   </a>
-                  <a href="tel:+919019006066" className="flex items-center justify-center gap-3 text-bsd-orange hover:underline">
+                  <a href="tel:+919845779000" className="flex items-center justify-center gap-3 text-bsd-orange hover:underline">
                     <Phone className="w-5 h-5" />
-                    +91 90190 06066
+                    +91 9845779000
                   </a>
                 </div>
 
