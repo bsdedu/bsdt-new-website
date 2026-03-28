@@ -314,7 +314,7 @@ export const CurriculumTab: React.FC = () => {
           <CardContent>
             <div className="text-center mb-6">
               <p className="text-foreground/70">
-                By the end of the 12 months, graduates will be able to:
+                By the end of the 16 months, graduates will be able to:, graduates will be able to:
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-8">
