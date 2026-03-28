@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
 import { cn } from "@/lib/utils";
 import { Brain, ArrowRight, Sparkles, Palette, Lightbulb, Puzzle, Compass } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -148,7 +148,7 @@ const DesignIQQuiz: React.FC = () => {
   const { toast } = useToast();
   const [step, setStep] = useState<"hero" | "quiz" | "result">("hero");
   const [currentQ, setCurrentQ] = useState(0);
-  const [lead, setLead] = useState({ name: "", email: "", phone: "" });
+  const [scores, setScores] = useState<Record<Tag, number>>({ visual: 0, ideas: 0, logic: 0, explorer: 0 });
   const [scores, setScores] = useState<Record<Tag, number>>({ visual: 0, ideas: 0, logic: 0, explorer: 0 });
   const [finalResult, setFinalResult] = useState<ResultInfo | null>(null);
   const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
@@ -220,22 +220,6 @@ const DesignIQQuiz: React.FC = () => {
     }
   };
 
-  const startQuiz = () => {
-    if (!lead.name.trim() || !lead.email.trim()) {
-      toast({ title: "Missing info", description: "Please enter your name and email to continue.", variant: "destructive" });
-      return;
-    }
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(lead.email.trim())) {
-      toast({ title: "Invalid email", description: "Please enter a valid email address.", variant: "destructive" });
-      return;
-    }
-    if (lead.phone && !/^\d{10,}$/.test(lead.phone.trim())) {
-      toast({ title: "Invalid phone", description: "Please enter a valid phone number (digits only, min 10).", variant: "destructive" });
-      return;
-    }
-    setStep("quiz");
-  };
 
   const resetQuiz = () => {
     setStep("hero");
