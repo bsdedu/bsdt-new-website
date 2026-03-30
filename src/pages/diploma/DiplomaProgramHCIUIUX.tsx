@@ -28,11 +28,11 @@ const DiplomaProgramHCIUIUX: React.FC = () => {
       <main>
         <HeroSection />
         <ProgramOverviewSection />
+        <DiplomaPhotosSection />
         <ScheduleSection />
         <HybridLearningSection />
         <ProgramFeatures />
         
-        <DiplomaPhotosSection />
         <EnquiryFormSection />
       </main>
       
