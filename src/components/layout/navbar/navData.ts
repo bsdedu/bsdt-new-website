@@ -36,14 +36,11 @@ export const navStructure: NavStructure[] = [
       {
         title: 'DIPLOMA PROGRAMS',
         items: [
-          { name: 'Professional Dip. Interior Design', href: '/academics/professional-diploma-in-interior-design' },
-          { name: 'Master Diploma in Advanced Residential Design', href: '/academics/master-diploma-in-interior-design' },
-          { name: 'Professional Dip. Visual Communication + UI & UX', href: '/academics/professional-diploma-graphics-design-ui-ux' },
+          { name: 'Professional Dip. in Interior Design', href: '/academics/professional-diploma-in-interior-design' },
+          { name: 'Professional Dip. Visual Communication Design + UI & UX', href: '/academics/professional-diploma-graphics-design-ui-ux' },
+          { name: 'Post Grad Dip. Landscape Design', href: '/academics/post-graduate-diploma-in-landscape-design' },
           { name: 'Professional Dip. in UI & UX', href: '/academics/diploma-in-hci-for-ui-ux' },
-          { name: 'Professional Dip. Fashion Design (Coming Soon)', href: '/academics/professional-diploma-fashion-design' },
-          { name: 'Professional Dip. in Sustainable System & Circular Design (Coming Soon)', href: '/academics/professional-diploma-sustainable-circular-design' },
-          { name: 'Professional Dip. in AI & Integrated Service Design', href: '/academics/professional-diploma-ai-service-design' },
-          { name: 'Post Grad Dip. Landscape Design', href: '/academics/post-graduate-diploma-in-landscape-design' }
+          { name: 'Master Diploma in Advanced Residential Design', href: '/academics/master-diploma-in-interior-design' }
         ]
       }
     ]
