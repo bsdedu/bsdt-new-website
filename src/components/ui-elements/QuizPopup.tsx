@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Sparkles, ArrowRight } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import designIqHero from "@/assets/quiz/design-iq-hero.jpg";
 
 export const QuizPopup: React.FC = () => {
