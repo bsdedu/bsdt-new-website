@@ -37,6 +37,7 @@ const DiplomaProgramMasterInteriorDesign: React.FC = () => {
         <BatchScheduleSection />
         <ProgramFeatures />
         
+        <DiplomaPhotosSection />
         <EnquiryFormSection />
       </main>
       
