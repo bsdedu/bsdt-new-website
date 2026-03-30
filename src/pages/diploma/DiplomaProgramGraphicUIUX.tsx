@@ -14,7 +14,7 @@ import { RevealSection } from '@/components/ui-elements/RevealSection';
 import interiorLearning1 from "@/assets/interior-learning-1.jpg";
 import interiorLearning2 from "@/assets/interior-learning-2.jpg";
 import interiorLearning3 from "@/assets/interior-learning-3.jpg";
-import interiorLearning4 from "@/assets/interior-learning-4.jpg";
+import interiorLearning4 from "@/assets/graphic-uiux-learning-4.png";
 
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
 
