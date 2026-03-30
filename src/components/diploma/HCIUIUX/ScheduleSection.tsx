@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardHeader } from "@/components/ui-elements/Card";
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, Clock, MapPin } from "lucide-react";
+import { Calendar, Clock, MapPin, Wifi } from "lucide-react";
 
 export const ScheduleSection: React.FC = () => {
   return (
@@ -45,10 +45,10 @@ export const ScheduleSection: React.FC = () => {
             <Card className="bg-bsd-orange/5 border-bsd-orange/20 text-center">
               <CardContent className="p-6">
                 <div className="w-14 h-14 rounded-xl bg-bsd-orange/10 flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="w-7 h-7 text-bsd-orange" />
+                  <Wifi className="w-7 h-7 text-bsd-orange" />
                 </div>
-                <h3 className="text-lg font-semibold text-bsd-gray mb-2">Bangalore Campus</h3>
-                <p className="text-sm text-foreground/70">In-person, hands-on learning at our Bangalore campus</p>
+                <h3 className="text-lg font-semibold text-bsd-gray mb-2">Hybrid Learning</h3>
+                <p className="text-sm text-foreground/70">Online & offline sessions at Bangalore campus and satellite centres</p>
               </CardContent>
             </Card>
           </div>
