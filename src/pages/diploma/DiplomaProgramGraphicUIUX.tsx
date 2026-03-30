@@ -11,7 +11,7 @@ import { BatchScheduleSection } from '@/components/diploma/shared/BatchScheduleS
 import { HybridLearningSection } from '@/components/diploma/shared/HybridLearningSection';
 import { CertificationPathwaySection } from '@/components/diploma/shared/CertificationPathwaySection';
 import { RevealSection } from '@/components/ui-elements/RevealSection';
-import interiorLearning1 from "@/assets/interior-learning-1.jpg";
+import interiorLearning1 from "@/assets/graphic-uiux-learning-1.png";
 import interiorLearning2 from "@/assets/graphic-uiux-learning-2.png";
 import interiorLearning3 from "@/assets/graphic-uiux-learning-3.png";
 import interiorLearning4 from "@/assets/graphic-uiux-learning-4.png";
