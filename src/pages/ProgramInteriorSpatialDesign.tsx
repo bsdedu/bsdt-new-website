@@ -21,7 +21,7 @@ const ProgramInteriorSpatialDesign = () => {
 
       <HeroSection />
       <ProgramOverviewSection />
-      <BVAInteriorStudentLearningSection />
+      
       <SkillEnhancingElectivesSection programKey="bva-interior-spatial-design" />
       
       <EnquiryFormSection />
