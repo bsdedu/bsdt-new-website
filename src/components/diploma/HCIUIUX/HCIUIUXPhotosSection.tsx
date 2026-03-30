@@ -2,6 +2,7 @@ import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import hciLearning1 from "@/assets/hci-uiux-learning-1.png";
 import hciLearning2 from "@/assets/hci-uiux-learning-2.png";
+import hciLearning3 from "@/assets/hci-uiux-learning-3.png";
 import hciLearning4 from "@/assets/hci-uiux-learning-4.png";
 
 export const HCIUIUXPhotosSection: React.FC = () => {
@@ -28,8 +29,8 @@ export const HCIUIUXPhotosSection: React.FC = () => {
 
             <div className="overflow-hidden rounded-xl shadow-lg">
               <img 
-                src="/lovable-uploads/graphic-students-3.jpg" 
-                alt="Student researching design inspiration" 
+                src={hciLearning3} 
+                alt="Homepage wireframe and web design sketches" 
                 className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
