@@ -1,5 +1,6 @@
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
+import hciLearning1 from "@/assets/hci-uiux-learning-1.png";
 import hciLearning2 from "@/assets/hci-uiux-learning-2.png";
 import hciLearning4 from "@/assets/hci-uiux-learning-4.png";
 
@@ -11,8 +12,8 @@ export const HCIUIUXPhotosSection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="overflow-hidden rounded-xl shadow-lg">
               <img 
-                src="/lovable-uploads/graphic-students-1.jpg" 
-                alt="Students in collaborative design discussion" 
+                src={hciLearning1} 
+                alt="UX wireframing and interface sketching" 
                 className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
