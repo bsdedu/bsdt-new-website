@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Monitor } from "lucide-react";
 import { Link } from 'react-router-dom';
+import interiorLearning2 from "@/assets/interior-learning-2.jpg";
 
 export const HeroSection: React.FC = () => {
   return (
@@ -49,7 +50,7 @@ export const HeroSection: React.FC = () => {
               <div className="p-6">
                 <div className="rounded-xl overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80" 
+                    src={interiorLearning2} 
                     alt="Interior Design Diploma" 
                     className="w-full h-[350px] object-cover"
                   />
