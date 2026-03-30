@@ -29,8 +29,8 @@ export const BCAStudentLearningSection: React.FC = () => {
 
             <div className="overflow-hidden rounded-xl shadow-lg">
               <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" 
-                alt="Student working on UI/UX prototype" 
+                src="/lovable-uploads/bca-uiux-prototype.png" 
+                alt="Student coding at workstation with multiple screens"
                 className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
