@@ -34,7 +34,19 @@ const DiplomaProgramInteriorDesign: React.FC = () => {
       <main>
         <HeroSection />
         <ProgramOverviewSection />
-        <DiplomaPhotosSection />
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-6 md:px-8">
+            <RevealSection delay={100}>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {[interiorLearning1, interiorLearning2, interiorLearning3, interiorLearning4].map((src, i) => (
+                  <div key={i} className="overflow-hidden rounded-xl shadow-lg">
+                    <img src={src} alt={`Interior design learning ${i + 1}`} className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105" />
+                  </div>
+                ))}
+              </div>
+            </RevealSection>
+          </div>
+        </section>
         <HybridLearningSection />
         <CertificationPathwaySection />
         <BatchScheduleSection />
