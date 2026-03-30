@@ -11,7 +11,7 @@ export const LandscapePhotosSection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="overflow-hidden rounded-xl shadow-lg">
               <img 
-                src="/lovable-uploads/graphic-students-1.jpg" 
+                src={landscapeLearning1} 
                 alt="Students in collaborative design discussion" 
                 className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
               />
