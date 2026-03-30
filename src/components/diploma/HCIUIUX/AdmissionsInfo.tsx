@@ -71,7 +71,7 @@ export const AdmissionsInfo: React.FC = () => {
                   
                   <div>
                     <h4 className="font-semibold text-bsd-gray">Program Structure</h4>
-                    <p className="text-foreground/70">Online & offline classroom sessions, practical workshops, industry projects, portfolio development</p>
+                    <p className="text-foreground/70">Hybrid (online & offline) classroom sessions, practical workshops, industry projects, portfolio development</p>
                   </div>
                   
                   <div>
