@@ -50,7 +50,7 @@ export const StudioTestimonials: React.FC = () => {
       name: "Priya Sharma",
       position: "UX Designer",
       company: "DesignFlex Studios",
-      image: "/lovable-uploads/8b983b3f-fd59-44d3-b5cc-152eeffe62cd.png"
+      image: "/lovable-uploads/priya-sharma.png"
     },
     {
       quote: "The experience I gained at Studio BSD was invaluable. Working alongside industry professionals on real-world projects gave me insights that classroom learning alone could never provide. The mentorship I received shaped my design thinking and professional approach.",
