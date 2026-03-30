@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Monitor } from "lucide-react";
 import { Link } from 'react-router-dom';
+import interiorLearning2 from "@/assets/interior-learning-2.jpg";
 
 export const HeroSection: React.FC = () => {
   return (
