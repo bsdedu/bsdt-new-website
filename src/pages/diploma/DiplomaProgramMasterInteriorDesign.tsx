@@ -32,12 +32,12 @@ const DiplomaProgramMasterInteriorDesign: React.FC = () => {
       <main>
         <HeroSection />
         <ProgramOverviewSection />
+        <DiplomaPhotosSection />
         <HybridLearningSection />
         <CertificationPathwaySection />
         <BatchScheduleSection />
         <ProgramFeatures />
         
-        <DiplomaPhotosSection />
         <EnquiryFormSection />
       </main>
       
