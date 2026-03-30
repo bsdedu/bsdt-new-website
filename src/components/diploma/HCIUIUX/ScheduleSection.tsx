@@ -48,7 +48,7 @@ export const ScheduleSection: React.FC = () => {
                   <Wifi className="w-7 h-7 text-bsd-orange" />
                 </div>
                 <h3 className="text-lg font-semibold text-bsd-gray mb-2">Hybrid Learning</h3>
-                <p className="text-sm text-foreground/70">Online & offline sessions at Bangalore campus and satellite centres</p>
+                <p className="text-sm text-foreground/70">Online & offline sessions at our Bangalore campus</p>
               </CardContent>
             </Card>
           </div>

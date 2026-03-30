@@ -22,7 +22,7 @@ export const HeroSection: React.FC = () => {
                 <Calendar className="w-3 h-3" /> Saturdays Only
               </Badge>
               <Badge variant="outline" className="flex items-center gap-1.5 border-bsd-orange/30 text-bsd-orange">
-                <MapPin className="w-3 h-3" /> Bangalore & Satellite Centres
+                <Wifi className="w-3 h-3" /> Hybrid – Online & Offline
               </Badge>
             </div>
 
@@ -32,7 +32,7 @@ export const HeroSection: React.FC = () => {
             </h1>
             
             <p className="text-lg text-foreground/80 max-w-xl">
-              A focused 6-month weekend program designed for working professionals and graduates. Delivered through a hybrid model combining online sessions with hands-on offline engagement at our Bangalore campus and satellite centres.
+              A focused 6-month weekend program designed for working professionals and graduates. Delivered through a hybrid model combining online sessions with hands-on offline engagement at our Bangalore campus.
             </p>
             
             <div className="flex flex-wrap gap-4 pt-4">
