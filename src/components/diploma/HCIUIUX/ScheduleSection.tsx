@@ -15,7 +15,7 @@ export const ScheduleSection: React.FC = () => {
               Weekend Learning, Real-World Skills
             </h2>
             <p className="mt-4 text-foreground/70">
-              A compact 6-month program with classes every Saturday—designed for working professionals and graduates who want to upskill without leaving their current commitments.
+              A compact 6-month program with classes every Saturday—delivered through a hybrid model combining online learning with hands-on offline sessions.
             </p>
           </div>
         </RevealSection>
