@@ -11,17 +11,6 @@ export const BVAInteriorStudentLearningSection: React.FC = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-6 md:px-8">
-        <RevealSection>
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <Badge variant="bsdOrange" className="mb-4">LEARNING IN ACTION</Badge>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
-              Students Building, Creating & Exploring
-            </h2>
-            <p className="mt-4 text-foreground/70">
-              Experience the dynamic learning environment where our interior and spatial design students actively engage in hands-on projects, model-making workshops, and creative exploration.
-            </p>
-          </div>
-        </RevealSection>
 
         <RevealSection delay={100}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
