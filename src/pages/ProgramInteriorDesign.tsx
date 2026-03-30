@@ -25,7 +25,7 @@ const ProgramInteriorDesign = () => {
 
       <HeroSection />
       <ProgramOverviewSection />
-      <InteriorStudentLearningSection />
+      
       
       <SkillEnhancingElectivesSection programKey="bsc-interior-design" />
       

@@ -23,7 +23,7 @@ const ProgramGraphicDesign = () => {
 
       <HeroSection />
       <ProgramOverviewSection />
-      <StudentLearningSection />
+      
       <SkillEnhancingElectivesSection programKey="bva-graphic-design" />
       
       <EnquiryFormSection />

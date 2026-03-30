@@ -22,7 +22,7 @@ const ProgramAnimationGameDesign = () => {
 
       <HeroSection />
       <ProgramOverviewSection />
-      <AnimationStudentLearningSection />
+      
       <SkillEnhancingElectivesSection programKey="bva-animation-game-design" />
       
       <EnquiryFormSection />

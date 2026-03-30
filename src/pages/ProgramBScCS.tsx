@@ -21,7 +21,7 @@ const ProgramBScCS = () => {
 
       <HeroSection />
       <ProgramOverviewSection />
-      <BCAStudentLearningSection />
+      
       <SkillEnhancingElectivesSection programKey="bca-data-analytics" />
       
       <EnquiryFormSection />
