@@ -7,8 +7,10 @@ import designIqHero from "@/assets/quiz/design-iq-hero.jpg";
 export const QuizPopup: React.FC = () => {
   const [show, setShow] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
+    if (location.pathname !== "/") return;
     const alreadyShown = sessionStorage.getItem("quizPopupShown");
     if (alreadyShown) return;
 
@@ -18,7 +20,7 @@ export const QuizPopup: React.FC = () => {
     }, 4000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [location.pathname]);
 
   const handleTakeQuiz = () => {
     setShow(false);
