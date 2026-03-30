@@ -11,7 +11,7 @@ import { ProgramFeatures } from '@/components/diploma/LandscapeDesign/ProgramFea
 import { BatchScheduleSection } from '@/components/diploma/shared/BatchScheduleSection';
 import { HybridLearningSection } from '@/components/diploma/shared/HybridLearningSection';
 import { CertificationPathwaySection } from '@/components/diploma/shared/CertificationPathwaySection';
-import { DiplomaPhotosSection } from '@/components/diploma/shared/DiplomaPhotosSection';
+import { LandscapePhotosSection } from '@/components/diploma/LandscapeDesign/LandscapePhotosSection';
 
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
 
@@ -31,7 +31,7 @@ const DiplomaProgramLandscapeDesign: React.FC = () => {
       <main>
         <HeroSection />
         <ProgramOverviewSection />
-        <DiplomaPhotosSection />
+        <LandscapePhotosSection />
         <HybridLearningSection />
         <CertificationPathwaySection />
         <BatchScheduleSection />
