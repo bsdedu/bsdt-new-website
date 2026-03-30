@@ -10,7 +10,11 @@ import { ProgramFeatures } from '@/components/diploma/InteriorDesign/ProgramFeat
 import { BatchScheduleSection } from '@/components/diploma/shared/BatchScheduleSection';
 import { HybridLearningSection } from '@/components/diploma/shared/HybridLearningSection';
 import { CertificationPathwaySection } from '@/components/diploma/shared/CertificationPathwaySection';
-import { DiplomaPhotosSection } from '@/components/diploma/shared/DiplomaPhotosSection';
+import { RevealSection } from '@/components/ui-elements/RevealSection';
+import interiorLearning1 from "@/assets/interior-learning-1.jpg";
+import interiorLearning2 from "@/assets/interior-learning-2.jpg";
+import interiorLearning3 from "@/assets/interior-learning-3.jpg";
+import interiorLearning4 from "@/assets/interior-learning-4.jpg";
 
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
 
