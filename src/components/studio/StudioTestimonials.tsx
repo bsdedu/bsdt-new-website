@@ -57,7 +57,7 @@ export const StudioTestimonials: React.FC = () => {
       name: "Karthik Menon",
       position: "Interior Designer",
       company: "Spaces Architecture",
-      image: "/lovable-uploads/938cccc7-6337-481e-861d-5cedb08cafd7.png"
+      image: "/lovable-uploads/karthik-menon.png"
     },
     {
       quote: "As an industry partner who regularly collaborates with Studio BSD, I've been consistently impressed by the professionalism and creativity of the students. The studio bridges education and industry in a way I haven't seen elsewhere, producing graduates who are truly job-ready.",
