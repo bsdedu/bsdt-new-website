@@ -29,7 +29,7 @@ const ProgramFashionDesign: React.FC = () => {
       <main>
         <HeroSection />
         <ProgramOverviewSection />
-        
+        <StudentLearningSection />
         
         <SkillEnhancingElectivesSection programKey="bsc-fashion-design" />
         <FashionStudioSection />

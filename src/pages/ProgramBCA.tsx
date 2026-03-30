@@ -22,7 +22,7 @@ const ProgramBCA = () => {
 
       <HeroSection />
       <ProgramOverviewSection />
-      
+      <BCAStudentLearningSection />
       <SkillEnhancingElectivesSection programKey="bca-uiux" />
       
       <EnquiryFormSection />
