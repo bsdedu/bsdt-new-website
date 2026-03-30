@@ -64,7 +64,7 @@ export const StudioTestimonials: React.FC = () => {
       name: "Rajan Mehta",
       position: "Creative Director",
       company: "InnovateX Digital",
-      image: "/lovable-uploads/15af7636-fa32-410b-9b74-b4e58b0fa90b.png"
+      image: "/lovable-uploads/rajan-mehta.png"
     },
     {
       quote: "Having my architectural design concepts implemented through Studio BSD was an experience that solidified my career path. The guidance from faculty mentors combined with client feedback loops taught me how to translate creative vision into practical, buildable solutions.",
