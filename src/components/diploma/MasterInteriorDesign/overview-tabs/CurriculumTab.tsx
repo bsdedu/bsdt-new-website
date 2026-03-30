@@ -11,7 +11,7 @@ export const CurriculumTab: React.FC = () => {
         <div className="text-center">
           <h3 className="text-2xl font-bold text-bsd-gray mb-4">Master Diploma Curriculum Structure</h3>
           <p className="text-foreground/70 max-w-3xl mx-auto">
-            A comprehensive 16-month program structured into three progressive semesters that build advanced expertise in residential design, construction, and project management. structured into three progressive semesters that build advanced expertise in residential design, construction, and project management.
+            A comprehensive 16-month program structured into three progressive semesters of 4 months each, plus 3 months internship and 1 month portfolio development, building advanced expertise in residential design, construction, and project management.
           </p>
         </div>
 
@@ -20,7 +20,7 @@ export const CurriculumTab: React.FC = () => {
             <CardHeader>
               <div className="flex justify-between items-start">
                 <CardTitle className="text-xl">Semester 1: Foundations of Residential Design</CardTitle>
-                <Badge variant="outline">6 months</Badge>
+                <Badge variant="outline">4 months</Badge>
               </div>
             </CardHeader>
             <CardContent>
@@ -115,7 +115,7 @@ export const CurriculumTab: React.FC = () => {
             <CardHeader>
               <div className="flex justify-between items-start">
                 <CardTitle className="text-xl">Semester 2: Advanced Residential Applications</CardTitle>
-                <Badge variant="outline">6 months</Badge>
+                <Badge variant="outline">4 months</Badge>
               </div>
             </CardHeader>
             <CardContent>
@@ -210,7 +210,7 @@ export const CurriculumTab: React.FC = () => {
             <CardHeader>
               <div className="flex justify-between items-start">
                 <CardTitle className="text-xl">Semester 3: Specialization + Dissertation</CardTitle>
-                <Badge variant="outline">6 months</Badge>
+                <Badge variant="outline">4 months</Badge>
               </div>
             </CardHeader>
             <CardContent>
@@ -314,7 +314,7 @@ export const CurriculumTab: React.FC = () => {
           <CardContent>
             <div className="text-center mb-6">
               <p className="text-foreground/70">
-                By the end of the 16 months, graduates will be able to:, graduates will be able to:
+                By the end of the 16 months, graduates will be able to:
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-8">
