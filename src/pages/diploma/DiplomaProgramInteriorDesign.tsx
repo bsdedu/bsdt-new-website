@@ -10,6 +10,7 @@ import { ProgramFeatures } from '@/components/diploma/InteriorDesign/ProgramFeat
 import { BatchScheduleSection } from '@/components/diploma/shared/BatchScheduleSection';
 import { HybridLearningSection } from '@/components/diploma/shared/HybridLearningSection';
 import { CertificationPathwaySection } from '@/components/diploma/shared/CertificationPathwaySection';
+import { DiplomaPhotosSection } from '@/components/diploma/shared/DiplomaPhotosSection';
 
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
 
@@ -34,6 +35,7 @@ const DiplomaProgramInteriorDesign: React.FC = () => {
         <BatchScheduleSection />
         <ProgramFeatures />
         
+        <DiplomaPhotosSection />
         <EnquiryFormSection />
       </main>
       
