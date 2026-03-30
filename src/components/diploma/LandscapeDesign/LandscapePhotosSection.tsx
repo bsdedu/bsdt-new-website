@@ -2,6 +2,7 @@ import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import landscapeLearning1 from "@/assets/landscape-learning-1.png";
 import landscapeLearning2 from "@/assets/landscape-learning-2.png";
+import landscapeLearning4 from "@/assets/landscape-learning-4.png";
 
 export const LandscapePhotosSection: React.FC = () => {
   return (
@@ -35,8 +36,8 @@ export const LandscapePhotosSection: React.FC = () => {
 
             <div className="overflow-hidden rounded-xl shadow-lg">
               <img 
-                src="/lovable-uploads/graphic-students-4.jpg" 
-                alt="Faculty conducting design lecture session" 
+                src={landscapeLearning4} 
+                alt="Student sketching landscape architectural plans with models" 
                 className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
