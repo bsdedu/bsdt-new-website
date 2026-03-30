@@ -29,8 +29,8 @@ export const AnimationStudentLearningSection: React.FC = () => {
 
             <div className="overflow-hidden rounded-xl shadow-lg">
               <img 
-                src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=800&q=80" 
-                alt="Student creating 3D models in studio" 
+                src="/lovable-uploads/animation-learning-3.png" 
+                alt="Student experiencing VR technology in animation studio"
                 className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
