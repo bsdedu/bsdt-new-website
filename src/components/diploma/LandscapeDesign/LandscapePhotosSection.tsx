@@ -1,5 +1,6 @@
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
+import landscapeLearning1 from "@/assets/landscape-learning-1.png";
 import landscapeLearning2 from "@/assets/landscape-learning-2.png";
 
 export const LandscapePhotosSection: React.FC = () => {
