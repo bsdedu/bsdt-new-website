@@ -2,6 +2,7 @@ import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import masterInteriorLearning1 from "@/assets/master-interior-learning-1.png";
 import masterInteriorLearning2 from "@/assets/master-interior-learning-2.png";
+import masterInteriorLearning4 from "@/assets/master-interior-learning-4.png";
 
 export const MasterInteriorPhotosSection: React.FC = () => {
   return (
@@ -35,8 +36,8 @@ export const MasterInteriorPhotosSection: React.FC = () => {
 
             <div className="overflow-hidden rounded-xl shadow-lg">
               <img 
-                src="/lovable-uploads/graphic-students-4.jpg" 
-                alt="Faculty conducting design lecture session" 
+                src={masterInteriorLearning4} 
+                alt="Tiny house eco design planning with architectural drawings"
                 className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
