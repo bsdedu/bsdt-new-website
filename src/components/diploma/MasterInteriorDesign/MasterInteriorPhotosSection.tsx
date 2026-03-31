@@ -1,5 +1,6 @@
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
+import masterInteriorLearning1 from "@/assets/master-interior-learning-1.png";
 import masterInteriorLearning2 from "@/assets/master-interior-learning-2.png";
 
 export const MasterInteriorPhotosSection: React.FC = () => {
@@ -10,8 +11,8 @@ export const MasterInteriorPhotosSection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="overflow-hidden rounded-xl shadow-lg">
               <img 
-                src="/lovable-uploads/graphic-students-1.jpg" 
-                alt="Students in collaborative design discussion" 
+                src={masterInteriorLearning1} 
+                alt="Residential design planning and architectural blueprints"
                 className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
