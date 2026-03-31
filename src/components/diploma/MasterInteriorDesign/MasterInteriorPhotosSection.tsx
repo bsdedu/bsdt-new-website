@@ -29,8 +29,8 @@ export const MasterInteriorPhotosSection: React.FC = () => {
 
             <div className="overflow-hidden rounded-xl shadow-lg">
               <img 
-                src="/lovable-uploads/graphic-students-3.jpg" 
-                alt="Student researching design inspiration" 
+                src={masterInteriorLearning3} 
+                alt="Residential design workspace with architectural blueprints and tools" 
                 className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
