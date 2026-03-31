@@ -7,7 +7,7 @@ import { ProgramOverviewSection } from '@/components/diploma/MasterInteriorDesig
 import { ProgramFeatures } from '@/components/diploma/MasterInteriorDesign/ProgramFeatures';
 
 
-import { DiplomaPhotosSection } from '@/components/diploma/shared/DiplomaPhotosSection';
+import { MasterInteriorPhotosSection } from '@/components/diploma/MasterInteriorDesign/MasterInteriorPhotosSection';
 import { BatchScheduleSection } from '@/components/diploma/shared/BatchScheduleSection';
 import { HybridLearningSection } from '@/components/diploma/shared/HybridLearningSection';
 import { CertificationPathwaySection } from '@/components/diploma/shared/CertificationPathwaySection';
