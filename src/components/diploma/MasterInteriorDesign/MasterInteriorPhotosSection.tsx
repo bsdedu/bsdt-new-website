@@ -1,5 +1,6 @@
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
+import masterInteriorLearning1 from "@/assets/master-interior-learning-1.png";
 import masterInteriorLearning2 from "@/assets/master-interior-learning-2.png";
 
 export const MasterInteriorPhotosSection: React.FC = () => {
