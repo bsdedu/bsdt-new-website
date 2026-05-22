@@ -189,7 +189,7 @@ const Careers: React.FC = () => {
                           </span>
                           <Badge variant="secondary" className="text-xs">{position.type}</Badge>
                         </div>
-                        <p className="text-sm text-foreground/50">{position.department}</p>
+                        <p className="text-sm text-foreground/50">{position.department} · {position.openings} {position.openings === 1 ? 'opening' : 'openings'}</p>
                       </div>
                       <Dialog>
                         <DialogTrigger asChild>
