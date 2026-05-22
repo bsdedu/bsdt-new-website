@@ -14,22 +14,39 @@ import careersHero from '@/assets/careers-hero.jpg';
 const Careers: React.FC = () => {
   const openPositions = [
     {
-      title: 'Assistant Professor – Interior Design',
+      title: 'Assistant Professor – Interior Design / Architecture',
       department: 'Academics',
       type: 'Full-time',
       location: 'Bangalore',
+      openings: 3,
     },
     {
-      title: 'Content Creator – Fresher',
-      department: 'Marketing',
+      title: 'Assistant Professor – Landscape Design',
+      department: 'Academics',
       type: 'Full-time',
       location: 'Bangalore',
+      openings: 1,
+    },
+    {
+      title: 'Assistant Professor – Visual Design / Communication Design',
+      department: 'Academics',
+      type: 'Full-time',
+      location: 'Bangalore',
+      openings: 2,
+    },
+    {
+      title: 'Assistant Professor – UI/UX Design',
+      department: 'Academics',
+      type: 'Full-time',
+      location: 'Bangalore',
+      openings: 1,
     },
     {
       title: 'Admissions Counsellor',
       department: 'Admissions',
       type: 'Full-time',
       location: 'Bangalore',
+      openings: 1,
     },
   ];
 
@@ -172,7 +189,7 @@ const Careers: React.FC = () => {
                           </span>
                           <Badge variant="secondary" className="text-xs">{position.type}</Badge>
                         </div>
-                        <p className="text-sm text-foreground/50">{position.department}</p>
+                        <p className="text-sm text-foreground/50">{position.department} · {position.openings} {position.openings === 1 ? 'opening' : 'openings'}</p>
                       </div>
                       <Dialog>
                         <DialogTrigger asChild>
