@@ -90,9 +90,6 @@ export const HeroSection: React.FC = () => {
               
               <h1 className="font-display font-bold text-white leading-tight mb-4">
                 {currentSlide === 0 ? <>
-                    <span className="block text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight uppercase">OPEN DAY</span>
-                    <span className="block text-3xl md:text-4xl lg:text-5xl text-bsd-orange font-semibold mt-1">April 18th</span>
-                  </> : currentSlide === 1 ? <>
                     <span className="block text-2xl md:text-3xl lg:text-4xl text-bsd-orange">2026</span>
                     <span className="block text-4xl md:text-5xl lg:text-6xl">UG ADMISSIONS OPEN</span>
                   </> : <span className="text-3xl md:text-4xl lg:text-5xl whitespace-pre-line">{currentSlideData.title}</span>}
