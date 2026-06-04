@@ -16,11 +16,6 @@ export const HeroSection: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const heroSlides: HeroSlide[] = [{
-    image: "/lovable-uploads/open-day-cover.jpg",
-    title: "OPEN DAY\nApril 18th",
-    subtitle: "You're Invited",
-    description: "Step inside BSDT and experience design education like never before. Tour our studios, interact with faculty, explore programs, and find the creative path that's right for you."
-  }, {
     image: "/lovable-uploads/fc9c4875-4b4b-44a9-b8ad-3eb5db1ed2cc.png",
     title: "2026\nUG ADMISSIONS OPEN",
     subtitle: "Admissions Open 2026-27",
@@ -95,9 +90,6 @@ export const HeroSection: React.FC = () => {
               
               <h1 className="font-display font-bold text-white leading-tight mb-4">
                 {currentSlide === 0 ? <>
-                    <span className="block text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight uppercase">OPEN DAY</span>
-                    <span className="block text-3xl md:text-4xl lg:text-5xl text-bsd-orange font-semibold mt-1">April 18th</span>
-                  </> : currentSlide === 1 ? <>
                     <span className="block text-2xl md:text-3xl lg:text-4xl text-bsd-orange">2026</span>
                     <span className="block text-4xl md:text-5xl lg:text-6xl">UG ADMISSIONS OPEN</span>
                   </> : <span className="text-3xl md:text-4xl lg:text-5xl whitespace-pre-line">{currentSlideData.title}</span>}
@@ -109,43 +101,26 @@ export const HeroSection: React.FC = () => {
 
 
               <div className="flex flex-wrap gap-4">
-                {currentSlide === 0 ? (
-                  <>
-                    <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-8" onClick={() => {
-                      window.open("https://forms.gle/BHq58msTt4XNdsHA7", "_blank", "noopener noreferrer");
-                    }}>
-                      Register Now
-                    </Button>
-                    <Button size="lg" variant="outline" className="border-2 border-[#f5f5f0] bg-[#f5f5f0] text-black hover:bg-white hover:border-white transition-all duration-300 font-semibold px-8" onClick={() => {
-                      window.location.href = "/open-day";
-                    }}>
-                      Explore More
-                    </Button>
-                  </>
-                ) : (
-                  <>
-                    <Button size="lg" variant="outline" className="border-2 border-[#f5f5f0] bg-[#f5f5f0] text-black hover:bg-white hover:border-white transition-all duration-300 font-semibold px-8" onClick={() => {
-                      window.open("https://apply.bsd.edu.in/", "_blank", "noopener noreferrer");
-                    }}>
-                      APPLY NOW
-                    </Button>
-                    <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-8" onClick={() => {
-                      if (currentSlide === 3) { window.location.href = "/student-spotlight"; return; }
-                      if (currentSlide === 4) { window.location.href = "/academics/skill-enhancing-electives"; return; }
-                      if (currentSlide === 5) { window.location.href = "/design-iq"; return; }
-                      const section = document.getElementById('programs');
-                      if (section) {
-                        if (currentSlide === 2) {
-                          const diplomaTab = document.querySelector('[data-value="diploma"]') as HTMLButtonElement;
-                          if (diplomaTab) diplomaTab.click();
-                        }
-                        window.scrollTo({ top: section.offsetTop - 80, behavior: 'smooth' });
-                      }
-                    }}>
-                      {currentSlide === 3 ? "View Student Works" : currentSlide === 4 ? "Explore Electives" : currentSlide === 5 ? "Take the Quiz" : "Explore Programs"}
-                    </Button>
-                  </>
-                )}
+                <Button size="lg" variant="outline" className="border-2 border-[#f5f5f0] bg-[#f5f5f0] text-black hover:bg-white hover:border-white transition-all duration-300 font-semibold px-8" onClick={() => {
+                  window.open("https://apply.bsd.edu.in/", "_blank", "noopener noreferrer");
+                }}>
+                  APPLY NOW
+                </Button>
+                <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-8" onClick={() => {
+                  if (currentSlide === 2) { window.location.href = "/student-spotlight"; return; }
+                  if (currentSlide === 3) { window.location.href = "/academics/skill-enhancing-electives"; return; }
+                  if (currentSlide === 4) { window.location.href = "/design-iq"; return; }
+                  const section = document.getElementById('programs');
+                  if (section) {
+                    if (currentSlide === 1) {
+                      const diplomaTab = document.querySelector('[data-value="diploma"]') as HTMLButtonElement;
+                      if (diplomaTab) diplomaTab.click();
+                    }
+                    window.scrollTo({ top: section.offsetTop - 80, behavior: 'smooth' });
+                  }
+                }}>
+                  {currentSlide === 2 ? "View Student Works" : currentSlide === 3 ? "Explore Electives" : currentSlide === 4 ? "Take the Quiz" : "Explore Programs"}
+                </Button>
               </div>
             </div>
           </div>
