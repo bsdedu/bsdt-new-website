@@ -42,6 +42,13 @@ const Careers: React.FC = () => {
       openings: 1,
     },
     {
+      title: 'Growth Marketing Executive',
+      department: 'Marketing',
+      type: 'Full-time (on-site)',
+      location: 'Bangalore',
+      openings: 1,
+    },
+    {
       title: 'Admissions Counsellor',
       department: 'Admissions',
       type: 'Full-time',
