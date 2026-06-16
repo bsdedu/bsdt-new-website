@@ -120,6 +120,15 @@ const diplomaPrograms: Program[] = [
     addons: "Saturdays Only – Bangalore Campus",
     href: "/academics/diploma-in-hci-for-ui-ux"
   },
+  {
+    icon: <Bot className="w-6 h-6 text-bsd-orange" />,
+    title: "Professional Diploma in Generative AI for Design Practice",
+    description: "A 6-month Saturday program integrating AI tools like Midjourney and DALL·E into professional design workflows for production-ready outcomes.",
+    color: "from-bsd-orange/20 to-bsd-orange/5",
+    duration: "6 months",
+    addons: "Saturdays Only – Bangalore Campus",
+    href: "/academics/professional-diploma-generative-ai-design-practice"
+  },
 ];
 
 export const ProgramsSection: React.FC = () => {
