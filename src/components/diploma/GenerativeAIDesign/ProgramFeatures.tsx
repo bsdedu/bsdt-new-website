@@ -16,7 +16,7 @@ export const ProgramFeatures: React.FC = () => {
               What Makes This Program Special
             </h2>
             <p className="mt-4 text-foreground/70">
-              Our Diploma in HCI for UI/UX offers unique advantages designed to fast-track your career in the user experience and interface design industry.
+              Our Professional Diploma in Generative AI for Design Practice is built around real production workflows—giving you a measurable edge in speed, scalability, and creative output.
             </p>
           </div>
         </RevealSection>
