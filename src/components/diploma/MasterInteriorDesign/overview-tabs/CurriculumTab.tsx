@@ -66,86 +66,30 @@ export const CurriculumTab: React.FC = () => {
             <CardContent>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h4 className="font-semibold text-bsd-gray mb-3">Residential Design Studio II – Complex Housing</h4>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                      <span>High-rise housing, group housing, gated communities</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                      <span>Luxury housing vs. affordable housing approaches</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                      <span>Circulation, services core, and parking integration</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                      <span>Sustainable housing models</span>
-                    </li>
-                  </ul>
+                  <h4 className="font-semibold text-bsd-gray mb-3">Residential Design Studio II</h4>
+                  <p className="text-sm text-foreground/80">
+                    Advanced studio projects focused on villas, apartments, complex housing developments, and real-world residential challenges.
+                  </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-bsd-gray mb-3">Construction Detailing & Working Drawings</h4>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                      <span>Staircases, kitchens, bathrooms, balconies, terraces</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                      <span>Doors, windows, joinery, modular furniture integration</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                      <span>Full GFC (Good For Construction) drawing set</span>
-                    </li>
-                  </ul>
+                  <h4 className="font-semibold text-bsd-gray mb-3">Construction Detailing and Working Drawings</h4>
+                  <p className="text-sm text-foreground/80">
+                    Learning architectural detailing, execution drawings, construction documentation, and technical drawing packages.
+                  </p>
                 </div>
               </div>
               <div className="grid md:grid-cols-2 gap-6 mt-6">
                 <div>
-                  <h4 className="font-semibold text-bsd-gray mb-3">Structural & Building Services</h4>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                      <span>Structural basics (RCC framing, foundations, slabs)</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                      <span>Plumbing & water supply systems</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                      <span>Electrical layouts & load distribution</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                      <span>HVAC basics in luxury housing projects</span>
-                    </li>
-                  </ul>
+                  <h4 className="font-semibold text-bsd-gray mb-3">Structural Systems and Building Services</h4>
+                  <p className="text-sm text-foreground/80">
+                    Understanding structural coordination, electrical services, plumbing systems, HVAC basics, and MEP integration.
+                  </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-bsd-gray mb-3">Digital Tools & Professional Practice II</h4>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                      <span>BIM for residences (Revit workflows)</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                      <span>Lumion/Enscape for walkthroughs & visualizations</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                      <span>Contracts & agreements in residential projects</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                      <span>BOQ preparation, estimation & site management</span>
-                    </li>
-                  </ul>
+                  <h4 className="font-semibold text-bsd-gray mb-3">Digital Tools and Professional Practice</h4>
+                  <p className="text-sm text-foreground/80">
+                    Advanced training in BIM workflows, visualization, BOQ preparation, contracts, estimation, and project coordination.
+                  </p>
                 </div>
               </div>
             </CardContent>
