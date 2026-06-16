@@ -129,6 +129,15 @@ const diplomaPrograms: Program[] = [
     addons: "Saturdays Only – Bangalore Campus",
     href: "/academics/professional-diploma-generative-ai-design-practice"
   },
+  {
+    icon: <HardHat className="w-6 h-6 text-bsd-orange" />,
+    title: "Post Graduate Diploma in Integrated Construction Management",
+    description: "A 16-month post graduate diploma covering construction technology, project management, BIM workflows, and site execution for integrated building delivery.",
+    color: "from-bsd-gray/15 to-bsd-gray/5",
+    duration: "16 months",
+    addons: "12 + 4 Internship – Hybrid",
+    href: "/academics/post-graduate-diploma-integrated-construction-management"
+  },
 ];
 
 export const ProgramsSection: React.FC = () => {

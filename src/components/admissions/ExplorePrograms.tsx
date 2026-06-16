@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Card, CardContent, CardHeader } from '@/components/ui-elements/Card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
-import { PenTool, Monitor, Gamepad, Code, Building2, LayoutDashboard, GraduationCap, Armchair, Bot } from 'lucide-react';
+import { PenTool, Monitor, Gamepad, Code, Building2, LayoutDashboard, GraduationCap, Armchair, Bot, HardHat } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 
