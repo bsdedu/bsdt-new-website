@@ -19,7 +19,7 @@ export const CurriculumTab: React.FC = () => {
           <Card>
             <CardHeader>
               <div className="flex justify-between items-start">
-                <CardTitle className="text-xl">Semester 1: Foundations of Residential Design</CardTitle>
+                <CardTitle className="text-xl">Semester 1: Foundations of Residential Design and Architectural Development</CardTitle>
                 <Badge variant="outline">4 months</Badge>
               </div>
             </CardHeader>
