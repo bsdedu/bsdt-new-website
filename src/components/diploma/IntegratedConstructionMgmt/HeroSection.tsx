@@ -1,0 +1,60 @@
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { HardHat } from 'lucide-react';
+import masterResidentialHero from '@/assets/master-residential-design-hero.jpg';
+
+export const HeroSection: React.FC = () => {
+  return (
+    <section className="relative bg-gradient-to-b from-bsd-light-gray to-white pt-32 pb-20 overflow-hidden">
+      <div className="container mx-auto px-6 md:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-bsd-gray">
+              Post Graduate Diploma in<br />
+              <span className="text-bsd-orange">Integrated Construction Management</span>
+            </h1>
+            <p className="text-lg text-foreground/80 max-w-xl">
+              A 16-month (12+4) industry-focused programme that builds professional expertise in construction execution, building systems coordination, BIM workflows, and project management—delivered three days a week with a four-month internship.
+            </p>
+            <div className="flex flex-wrap gap-4 pt-4">
+              <a href="#enquiry-form">
+                <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white">
+                  Download Brochure
+                </Button>
+              </a>
+              <a href="https://apply.bsd.edu.in/" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" variant="outline" className="border-bsd-orange text-bsd-orange hover:bg-bsd-orange/10">
+                  Apply Now
+                </Button>
+              </a>
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="absolute -top-10 -right-10 w-40 h-40 bg-bsd-orange/10 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-bsd-orange/10 rounded-full blur-3xl"></div>
+            <div className="relative bg-white rounded-2xl shadow-xl overflow-hidden border border-bsd-orange/10">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-bsd-orange/10 rounded-bl-[100px]"></div>
+              <div className="p-6">
+                <div className="rounded-xl overflow-hidden">
+                  <img
+                    src={masterResidentialHero}
+                    alt="Post Graduate Diploma in Integrated Construction Management"
+                    className="w-full h-[350px] object-cover"
+                  />
+                </div>
+                <div className="flex justify-center -mt-6">
+                  <div className="bg-white rounded-full p-2 shadow-md">
+                    <div className="bg-bsd-orange/10 rounded-full p-3">
+                      <HardHat className="w-8 h-8 text-bsd-orange" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};

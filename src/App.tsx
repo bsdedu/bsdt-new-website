@@ -31,6 +31,7 @@ import DiplomaProgramAIServiceDesign from "./pages/diploma/DiplomaProgramAIServi
 import DiplomaProgramFashionDesign from "./pages/diploma/DiplomaProgramFashionDesign";
 import DiplomaProgramMasterInteriorDesign from "./pages/diploma/DiplomaProgramMasterInteriorDesign";
 import DiplomaProgramGenerativeAIDesign from "./pages/diploma/DiplomaProgramGenerativeAIDesign";
+import DiplomaProgramIntegratedConstructionMgmt from "./pages/diploma/DiplomaProgramIntegratedConstructionMgmt";
 import ApplicationProcess from "./pages/admissions/ApplicationProcess";
 import FeesScholarships from "./pages/admissions/FeesScholarships";
 import ScheduleVisit from "./pages/admissions/ScheduleVisit";
@@ -192,6 +193,7 @@ const App = () => {
             <Route path="/academics/professional-diploma-fashion-design" element={<DiplomaProgramFashionDesign />} />
             <Route path="/academics/master-diploma-in-interior-design" element={<DiplomaProgramMasterInteriorDesign />} />
             <Route path="/academics/professional-diploma-generative-ai-design-practice" element={<DiplomaProgramGenerativeAIDesign />} />
+            <Route path="/academics/post-graduate-diploma-integrated-construction-management" element={<DiplomaProgramIntegratedConstructionMgmt />} />
               
               {/* Admissions Routes */}
               {/* Backwards-compatible redirect (legacy URL) */}
