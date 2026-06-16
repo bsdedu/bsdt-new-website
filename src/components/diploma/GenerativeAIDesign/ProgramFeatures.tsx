@@ -52,9 +52,9 @@ export const ProgramFeatures: React.FC = () => {
                 <div className="w-12 h-12 rounded-xl bg-bsd-orange/10 flex items-center justify-center mb-4">
                   <BookOpen className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-xl font-bold text-bsd-gray mb-3">Psychological Foundation</h3>
+                <h3 className="text-xl font-bold text-bsd-gray mb-3">Production-First Approach</h3>
                 <p className="text-foreground/70">
-                  Strong focus on cognitive psychology and human behavior principles that underpin successful user experience design.
+                  Rather than isolated tools, you learn how AI plugs into actual design production systems—from concept to client delivery.
                 </p>
               </CardContent>
             </Card>
