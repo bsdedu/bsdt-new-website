@@ -16,7 +16,7 @@ export const ProgramFeatures: React.FC = () => {
               What Makes This Program Special
             </h2>
             <p className="mt-4 text-foreground/70">
-              Our Diploma in HCI for UI/UX offers unique advantages designed to fast-track your career in the user experience and interface design industry.
+              Our Professional Diploma in Generative AI for Design Practice is built around real production workflows—giving you a measurable edge in speed, scalability, and creative output.
             </p>
           </div>
         </RevealSection>
@@ -28,9 +28,9 @@ export const ProgramFeatures: React.FC = () => {
                 <div className="w-12 h-12 rounded-xl bg-bsd-orange/10 flex items-center justify-center mb-4">
                   <Clock className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-xl font-bold text-bsd-gray mb-3">Focused Learning</h3>
+                <h3 className="text-xl font-bold text-bsd-gray mb-3">6-Month Focused Format</h3>
                 <p className="text-foreground/70">
-                  Complete a specialized HCI for UI/UX diploma in 12 months, with intensive coursework that prepares you for industry roles quickly.
+                  Complete the diploma in just 6 months with Saturday-only classes—designed for working professionals and design graduates.
                 </p>
               </CardContent>
             </Card>
@@ -40,9 +40,9 @@ export const ProgramFeatures: React.FC = () => {
                 <div className="w-12 h-12 rounded-xl bg-bsd-orange/10 flex items-center justify-center mb-4">
                   <Laptop className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-xl font-bold text-bsd-gray mb-3">Industry-Aligned Curriculum</h3>
+                <h3 className="text-xl font-bold text-bsd-gray mb-3">AI Tools Across the Stack</h3>
                 <p className="text-foreground/70">
-                  Curriculum developed with input from UX professionals to ensure you learn the most relevant and in-demand skills for today's digital product market.
+                  Hands-on training with Midjourney, DALL·E, Adobe Photoshop, SketchUp, and Autodesk Revit—integrated into real production workflows.
                 </p>
               </CardContent>
             </Card>
@@ -52,9 +52,9 @@ export const ProgramFeatures: React.FC = () => {
                 <div className="w-12 h-12 rounded-xl bg-bsd-orange/10 flex items-center justify-center mb-4">
                   <BookOpen className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-xl font-bold text-bsd-gray mb-3">Psychological Foundation</h3>
+                <h3 className="text-xl font-bold text-bsd-gray mb-3">Production-First Approach</h3>
                 <p className="text-foreground/70">
-                  Strong focus on cognitive psychology and human behavior principles that underpin successful user experience design.
+                  Rather than isolated tools, you learn how AI plugs into actual design production systems—from concept to client delivery.
                 </p>
               </CardContent>
             </Card>
@@ -76,9 +76,9 @@ export const ProgramFeatures: React.FC = () => {
                 <div className="w-12 h-12 rounded-xl bg-bsd-orange/10 flex items-center justify-center mb-4">
                   <Lightbulb className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-xl font-bold text-bsd-gray mb-3">Project-Based Learning</h3>
+                <h3 className="text-xl font-bold text-bsd-gray mb-3">Domain-Focused Tracks</h3>
                 <p className="text-foreground/70">
-                  Complete real-world UX/UI projects throughout the course to build a professional portfolio that demonstrates your abilities to potential employers.
+                  Choose a specialised application track—interiors & architecture, branding, UI/UX, or product & furniture—and build a focused portfolio.
                 </p>
               </CardContent>
             </Card>
