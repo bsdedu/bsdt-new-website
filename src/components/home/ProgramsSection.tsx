@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader } from "../ui-elements/Card";
 import { RevealSection } from "../ui-elements/RevealSection";
-import { PenTool, Code, Gamepad, Cpu, Building2, LayoutDashboard, Monitor, GraduationCap, Recycle, Bot, Armchair, Sofa } from "lucide-react";
+import { PenTool, Code, Gamepad, Cpu, Building2, LayoutDashboard, Monitor, GraduationCap, Recycle, Bot, Armchair, Sofa, HardHat } from "lucide-react";
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
