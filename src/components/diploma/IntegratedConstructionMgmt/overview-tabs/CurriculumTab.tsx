@@ -6,7 +6,7 @@ import { CheckCircle } from 'lucide-react';
 
 const semesters = [
   {
-    title: 'Semester 1: Foundations of Residential Design and Architectural Development',
+    title: 'Semester 1 : Building Systems and Construction Coordination',
     modules: [
       { name: 'Building Services and MEP Systems', desc: 'Understanding mechanical, electrical, and plumbing systems used in modern construction projects.' },
       { name: 'HVAC Fundamentals', desc: 'Learning heating, ventilation, and air-conditioning principles, system components, and practical building applications.' },
