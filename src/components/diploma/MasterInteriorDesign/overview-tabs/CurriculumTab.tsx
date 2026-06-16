@@ -9,7 +9,7 @@ export const CurriculumTab: React.FC = () => {
     <RevealSection>
       <div className="space-y-8">
         <div className="text-center">
-          <h3 className="text-2xl font-bold text-bsd-gray mb-4">Master Diploma Curriculum Structure</h3>
+          <h3 className="text-2xl font-bold text-bsd-gray mb-4">Post Graduate Diploma Curriculum Structure</h3>
           <p className="text-foreground/70 max-w-3xl mx-auto">
             A comprehensive 16-month program structured into three progressive semesters of 4 months each, plus 3 months internship and 1 month portfolio development, building advanced expertise in residential design, construction, and project management.
           </p>

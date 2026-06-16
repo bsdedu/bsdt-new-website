@@ -16,7 +16,7 @@ const DiplomaProgramMasterInteriorDesign: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Master Diploma in Advanced Residential Design | BSD Design School</title>
+        <title>Post Graduate Diploma in Residential Architecture and Design | BSD Design School</title>
         <meta 
           name="description" 
           content="An advanced 16-month master-level diploma program in residential design that provides comprehensive expertise in space planning, construction detailing, building systems, and project management for creating innovative residential environments and housing solutions." 

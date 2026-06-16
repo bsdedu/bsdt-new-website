@@ -21,7 +21,7 @@ export const ProgramOverviewSection: React.FC = () => {
               Master Advanced Interior Design & Leadership
             </h2>
             <p className="text-lg text-foreground/70">
-              Our Master Diploma in Interior Design is an advanced program designed for design professionals and graduates seeking to elevate their expertise in interior design, project management, and design leadership.
+              Our Post Graduate Diploma in Residential Architecture and Design is an advanced program designed for design professionals and graduates seeking to elevate their expertise in residential architecture, project management, and design leadership.
             </p>
           </div>
         </RevealSection>

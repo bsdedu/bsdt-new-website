@@ -12,8 +12,8 @@ export const HeroSection: React.FC = () => {
           <div className="space-y-6">
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-bsd-gray">
-              Master Diploma in<br />
-              <span className="text-bsd-orange">Advanced Residential Design</span>
+              Post Graduate Diploma in<br />
+              <span className="text-bsd-orange">Residential Architecture and Design</span>
             </h1>
             
             <p className="text-lg text-foreground/80 max-w-xl">
@@ -49,7 +49,7 @@ export const HeroSection: React.FC = () => {
                 <div className="rounded-xl overflow-hidden">
                   <img 
                     src={masterResidentialHero} 
-                    alt="Master Diploma in Advanced Residential Design" 
+                    alt="Post Graduate Diploma in Residential Architecture and Design" 
                     className="w-full h-[350px] object-cover"
                   />
                 </div>

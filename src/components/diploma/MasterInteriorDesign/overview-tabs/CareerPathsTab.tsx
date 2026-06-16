@@ -56,7 +56,7 @@ export const CareerPathsTab: React.FC = () => {
         <div className="text-center">
           <h3 className="text-2xl font-bold text-bsd-gray mb-4">Advanced Career Opportunities</h3>
           <p className="text-foreground/70 max-w-3xl mx-auto">
-            Master Diploma graduates are positioned for senior leadership roles in interior design, with pathways to executive positions, independent practice, and industry expertise.
+            Post Graduate Diploma graduates are positioned for senior leadership roles in residential architecture and design, with pathways to executive positions, independent practice, and industry expertise.
           </p>
         </div>
 
