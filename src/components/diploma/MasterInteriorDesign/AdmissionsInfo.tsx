@@ -15,10 +15,10 @@ export const AdmissionsInfo: React.FC = () => {
               ADMISSIONS
             </Badge>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray mb-6">
-              Master Diploma Admissions Information
+              Post Graduate Diploma Admissions Information
             </h2>
             <p className="text-lg text-foreground/70">
-              Our Master Diploma in Interior Design is designed for design professionals and graduates seeking advanced expertise and leadership roles in the interior design industry.
+              Our Post Graduate Diploma in Residential Architecture and Design is designed for design professionals and graduates seeking advanced expertise and leadership roles in the residential architecture and design industry.
             </p>
           </div>
         </RevealSection>

@@ -16,7 +16,7 @@ export const IndustryFaculty: React.FC = () => {
               Learn From Industry Leaders
             </h2>
             <p className="text-lg text-foreground/70">
-              Our Master Diploma faculty consists of senior industry professionals, successful design entrepreneurs, and recognized experts who bring real-world expertise to advanced interior design education.
+              Our Post Graduate Diploma faculty consists of senior industry professionals, successful design entrepreneurs, and recognized experts who bring real-world expertise to advanced residential architecture and design education.
             </p>
           </div>
         </RevealSection>

@@ -91,8 +91,8 @@ const diplomaPrograms: Program[] = [
   },
   {
     icon: <Building2 className="w-6 h-6 text-bsd-orange" />,
-    title: "Master Diploma in Advanced Residential Design",
-    description: "An advanced master-level diploma program for comprehensive interior design expertise, covering advanced space planning, project management, and design leadership. Available in Online & Offline modes.",
+    title: "Post Graduate Diploma in Residential Architecture and Design",
+    description: "An advanced post graduate diploma program for comprehensive residential architecture and design expertise, covering advanced space planning, project management, and design leadership. Available in Online & Offline modes.",
     color: "from-bsd-orange/20 to-bsd-orange/5",
     duration: "12 months",
     addons: "Hybrid – Online & Offline",

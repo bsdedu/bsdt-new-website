@@ -17,7 +17,7 @@ export const ProgramFeatures: React.FC = () => {
               What Makes This Master Program Exceptional
             </h2>
             <p className="text-lg text-foreground/70">
-              Our Master Diploma in Interior Design is designed for design professionals seeking advanced expertise, leadership skills, and the ability to lead complex projects and design teams.
+              Our Post Graduate Diploma in Residential Architecture and Design is designed for design professionals seeking advanced expertise, leadership skills, and the ability to lead complex projects and design teams.
             </p>
           </div>
         </RevealSection>
