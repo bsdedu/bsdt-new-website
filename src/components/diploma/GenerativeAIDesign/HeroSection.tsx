@@ -28,11 +28,11 @@ export const HeroSection: React.FC = () => {
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-bsd-gray">
               Professional Diploma in<br />
-              <span className="text-bsd-orange">HCI for UI/UX</span>
+              <span className="text-bsd-orange">Generative AI for Design Practice</span>
             </h1>
             
             <p className="text-lg text-foreground/80 max-w-xl">
-              A focused 6-month weekend program designed for working professionals and graduates. Delivered through a hybrid model combining online sessions with hands-on offline engagement at our Bangalore campus.
+              A 6-month Saturday program on integrating AI into real-world design workflows across architecture, interiors, visual communication, and digital design—built for speed, scalability, and real-world application.
             </p>
             
             <div className="flex flex-wrap gap-4 pt-4">
