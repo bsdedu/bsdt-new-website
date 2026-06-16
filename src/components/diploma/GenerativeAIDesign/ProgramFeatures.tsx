@@ -76,9 +76,9 @@ export const ProgramFeatures: React.FC = () => {
                 <div className="w-12 h-12 rounded-xl bg-bsd-orange/10 flex items-center justify-center mb-4">
                   <Lightbulb className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-xl font-bold text-bsd-gray mb-3">Project-Based Learning</h3>
+                <h3 className="text-xl font-bold text-bsd-gray mb-3">Domain-Focused Tracks</h3>
                 <p className="text-foreground/70">
-                  Complete real-world UX/UI projects throughout the course to build a professional portfolio that demonstrates your abilities to potential employers.
+                  Choose a specialised application track—interiors & architecture, branding, UI/UX, or product & furniture—and build a focused portfolio.
                 </p>
               </CardContent>
             </Card>
