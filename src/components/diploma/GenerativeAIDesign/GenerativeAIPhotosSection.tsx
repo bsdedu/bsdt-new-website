@@ -5,7 +5,7 @@ import hciLearning2 from "@/assets/hci-uiux-learning-2.png";
 import hciLearning3 from "@/assets/hci-uiux-learning-3.png";
 import hciLearning4 from "@/assets/hci-uiux-learning-4.png";
 
-export const HCIUIUXPhotosSection: React.FC = () => {
+export const GenerativeAIPhotosSection: React.FC = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-6 md:px-8">
