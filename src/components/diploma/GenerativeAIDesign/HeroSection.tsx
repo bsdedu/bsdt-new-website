@@ -63,7 +63,7 @@ export const HeroSection: React.FC = () => {
                 <div className="rounded-xl overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1587440871875-191322ee64b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80" 
-                    alt="HCI for UI/UX Diploma" 
+                    alt="Generative AI for Design Practice Diploma" 
                     className="w-full h-[350px] object-cover"
                   />
                 </div>
