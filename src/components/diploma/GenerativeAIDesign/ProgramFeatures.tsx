@@ -28,9 +28,9 @@ export const ProgramFeatures: React.FC = () => {
                 <div className="w-12 h-12 rounded-xl bg-bsd-orange/10 flex items-center justify-center mb-4">
                   <Clock className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-xl font-bold text-bsd-gray mb-3">Focused Learning</h3>
+                <h3 className="text-xl font-bold text-bsd-gray mb-3">6-Month Focused Format</h3>
                 <p className="text-foreground/70">
-                  Complete a specialized HCI for UI/UX diploma in 12 months, with intensive coursework that prepares you for industry roles quickly.
+                  Complete the diploma in just 6 months with Saturday-only classes—designed for working professionals and design graduates.
                 </p>
               </CardContent>
             </Card>
