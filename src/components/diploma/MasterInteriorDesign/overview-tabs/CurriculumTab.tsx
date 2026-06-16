@@ -26,88 +26,33 @@ export const CurriculumTab: React.FC = () => {
             <CardContent>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h4 className="font-semibold text-bsd-gray mb-3">Residential Design Studio I – Fundamentals</h4>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                      <span>Design principles in housing</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                      <span>Space planning: living, bedrooms, kitchens, circulation cores</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                      <span>Ergonomics, anthropometry, daylight, ventilation</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                      <span>Introduction to Indian housing typologies (apartments, bungalows, duplexes)</span>
-                    </li>
-                  </ul>
+                  <h4 className="font-semibold text-bsd-gray mb-3">Residential Design Studio I</h4>
+                  <p className="text-sm text-foreground/80">
+                    Studio-based learning focused on human-centered design, space planning, residential concepts, and housing typologies.
+                  </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-bsd-gray mb-3">Building Materials & Construction Systems</h4>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                      <span>Bricks, blocks, stone, concrete, steel, wood, glass, eco-materials</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                      <span>Residential construction techniques: load-bearing vs. RCC frame</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                      <span>Indian material sourcing & costing basics</span>
-                    </li>
-                  </ul>
+                  <h4 className="font-semibold text-bsd-gray mb-3">Building Materials and Construction Systems</h4>
+                  <p className="text-sm text-foreground/80">
+                    Understanding construction materials, building technologies, structural basics, and practical applications in residential projects.
+                  </p>
                 </div>
               </div>
               <div className="grid md:grid-cols-2 gap-6 mt-6">
                 <div>
-                  <h4 className="font-semibold text-bsd-gray mb-3">Architectural Representation & Communication</h4>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                      <span>Freehand sketching & perspectives</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                      <span>AutoCAD for 2D drafting (plans, sections, elevations)</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                      <span>SketchUp + V-Ray for massing & basic rendering</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                      <span>Client communication methods (presentations, quick visuals)</span>
-                    </li>
-                  </ul>
+                  <h4 className="font-semibold text-bsd-gray mb-3">Architectural Representation and Communication</h4>
+                  <p className="text-sm text-foreground/80">
+                    Learning manual drafting, digital drawings, architectural graphics, presentation techniques, and design communication methods.
+                  </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-bsd-gray mb-3">Climate, Site & Professional Practice I</h4>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                      <span>Site analysis, orientation, zoning</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                      <span>Climate-responsive housing design in Indian contexts</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                      <span>Development control regulations (FAR/FSI, setbacks)</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                      <span>NBC (National Building Code) basics & RERA overview</span>
-                    </li>
-                  </ul>
+                  <h4 className="font-semibold text-bsd-gray mb-3">Climate, Site Analysis, and Professional Practice</h4>
+                  <p className="text-sm text-foreground/80">
+                    Exploring climate-responsive design, site studies, environmental factors, regulations, and professional workflows.
+                  </p>
                 </div>
               </div>
+
             </CardContent>
           </Card>
 
