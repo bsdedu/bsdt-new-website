@@ -40,9 +40,9 @@ export const ProgramFeatures: React.FC = () => {
                 <div className="w-12 h-12 rounded-xl bg-bsd-orange/10 flex items-center justify-center mb-4">
                   <Laptop className="w-6 h-6 text-bsd-orange" />
                 </div>
-                <h3 className="text-xl font-bold text-bsd-gray mb-3">Industry-Aligned Curriculum</h3>
+                <h3 className="text-xl font-bold text-bsd-gray mb-3">AI Tools Across the Stack</h3>
                 <p className="text-foreground/70">
-                  Curriculum developed with input from UX professionals to ensure you learn the most relevant and in-demand skills for today's digital product market.
+                  Hands-on training with Midjourney, DALL·E, Adobe Photoshop, SketchUp, and Autodesk Revit—integrated into real production workflows.
                 </p>
               </CardContent>
             </Card>
