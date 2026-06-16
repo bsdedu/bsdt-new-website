@@ -104,91 +104,58 @@ export const CurriculumTab: React.FC = () => {
             </CardHeader>
             <CardContent>
               <div className="mb-6">
-                <h4 className="font-semibold text-bsd-gray mb-3">Phase 1: Specialization Tracks (Months 1–4)</h4>
-                <p className="text-sm text-foreground/70 mb-4">Choose from four specialized tracks to tailor expertise:</p>
-              </div>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h5 className="font-medium text-bsd-gray mb-2">Track A: Sustainable & Affordable Housing</h5>
-                  <ul className="space-y-1 text-sm mb-4">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-3 h-3 text-bsd-orange mt-1 flex-shrink-0" />
-                      <span>Cost-effective construction techniques</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-3 h-3 text-bsd-orange mt-1 flex-shrink-0" />
-                      <span>Eco-materials, IGBC standards for green homes</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-3 h-3 text-bsd-orange mt-1 flex-shrink-0" />
-                      <span>Low-cost housing prototypes</span>
-                    </li>
-                  </ul>
-                  
-                  <h5 className="font-medium text-bsd-gray mb-2">Track B: Luxury & Contemporary Housing</h5>
-                  <ul className="space-y-1 text-sm">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-3 h-3 text-bsd-orange mt-1 flex-shrink-0" />
-                      <span>Smart homes, home automation integration</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-3 h-3 text-bsd-orange mt-1 flex-shrink-0" />
-                      <span>Premium materials, lighting, modular kitchen systems</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-3 h-3 text-bsd-orange mt-1 flex-shrink-0" />
-                      <span>Lifestyle-oriented design strategies</span>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h5 className="font-medium text-bsd-gray mb-2">Track C: Heritage & Adaptive Residential Reuse</h5>
-                  <ul className="space-y-1 text-sm mb-4">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-3 h-3 text-bsd-orange mt-1 flex-shrink-0" />
-                      <span>Restoration of old residences, adaptive reuse</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-3 h-3 text-bsd-orange mt-1 flex-shrink-0" />
-                      <span>Vernacular techniques in modern contexts</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-3 h-3 text-bsd-orange mt-1 flex-shrink-0" />
-                      <span>Cultural aesthetics in Indian housing</span>
-                    </li>
-                  </ul>
-                  
-                  <h5 className="font-medium text-bsd-gray mb-2">Track D: Furniture & Interior Architecture</h5>
-                  <ul className="space-y-1 text-sm">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-3 h-3 text-bsd-orange mt-1 flex-shrink-0" />
-                      <span>Customized furniture design for residences</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-3 h-3 text-bsd-orange mt-1 flex-shrink-0" />
-                      <span>Built-in storage solutions</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-3 h-3 text-bsd-orange mt-1 flex-shrink-0" />
-                      <span>Integration of interiors & architecture</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="mt-6 p-4 bg-bsd-orange/5 rounded-lg">
-                <h4 className="font-semibold text-bsd-gray mb-3">Phase 2: Dissertation Project (Months 5–6)</h4>
+                <h4 className="font-semibold text-bsd-gray mb-3">Specialization Track</h4>
+                <p className="text-sm text-foreground/70 mb-4">Focused learning pathways based on current industry requirements:</p>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                    <span>Independent Residential Thesis/Dissertation - self-directed major project</span>
+                    <span>Sustainable Residential Design</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                    <span>Deliverables: design proposal, full working drawings, BOQ, renders, feasibility report</span>
+                    <span>Luxury Residential Design</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
-                    <span>Viva + jury evaluation with practicing architects and industry experts</span>
+                    <span>Heritage and Context-Based Design</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
+                    <span>Interior Architecture</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="mt-6 p-4 bg-bsd-orange/5 rounded-lg">
+                <h4 className="font-semibold text-bsd-gray mb-3">Dissertation / Residential Thesis Project</h4>
+                <p className="text-sm text-foreground/70 mb-3">Development of a complete residential design project including:</p>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
+                    <span>Research and concept development</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
+                    <span>Site analysis</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
+                    <span>Space planning</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
+                    <span>Architectural drawings</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
+                    <span>Technical documentation</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
+                    <span>3D visualization</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-bsd-orange mt-0.5 flex-shrink-0" />
+                    <span>Final professional portfolio presentation</span>
                   </li>
                 </ul>
               </div>
