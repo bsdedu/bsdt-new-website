@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader } from "../ui-elements/Card";
 import { RevealSection } from "../ui-elements/RevealSection";
-import { PenTool, Code, Gamepad, Cpu, Building2, LayoutDashboard, Monitor, GraduationCap, Recycle, Bot, Armchair, Sofa } from "lucide-react";
+import { PenTool, Code, Gamepad, Cpu, Building2, LayoutDashboard, Monitor, GraduationCap, Recycle, Bot, Armchair, Sofa, HardHat } from "lucide-react";
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -128,6 +128,15 @@ const diplomaPrograms: Program[] = [
     duration: "6 months",
     addons: "Saturdays Only – Bangalore Campus",
     href: "/academics/professional-diploma-generative-ai-design-practice"
+  },
+  {
+    icon: <HardHat className="w-6 h-6 text-bsd-orange" />,
+    title: "Post Graduate Diploma in Integrated Construction Management",
+    description: "A 16-month post graduate diploma covering construction technology, project management, BIM workflows, and site execution for integrated building delivery.",
+    color: "from-bsd-gray/15 to-bsd-gray/5",
+    duration: "16 months",
+    addons: "12 + 4 Internship – Hybrid",
+    href: "/academics/post-graduate-diploma-integrated-construction-management"
   },
 ];
 
