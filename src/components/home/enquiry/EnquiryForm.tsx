@@ -104,6 +104,7 @@ export const EnquiryForm: React.FC<EnquiryFormProps> = ({ programSpecific = fals
                       <option value="PG.Diploma Landscape Design">PG.Diploma Landscape Design</option>
                       <option value="Post Graduate Diploma Residential Architecture Design">Post Graduate Diploma in Residential Architecture and Design</option>
                       <option value="P.Diploma UI UX">P.Diploma UI & UX</option>
+                      <option value="P.Diploma Generative AI Design Practice">P.Diploma Generative AI for Design Practice</option>
                       <option value="P.Diploma Fashion Design">P.Diploma Fashion Design (Coming Soon)</option>
                       <option value="P.Diploma Sustainable Circular Design">P.Diploma Sustainable & Circular Design (Coming Soon)</option>
                     </optgroup>
