@@ -16,10 +16,10 @@ export const ProgramOverviewSection: React.FC = () => {
           <div className="text-center max-w-3xl mx-auto mb-12">
             <Badge variant="bsdOrange" className="mb-4">PROGRAM OVERVIEW</Badge>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
-              Master Human-Computer Interaction for UI/UX Design
+              Integrate AI Into Real-World Design Production
             </h2>
             <p className="mt-4 text-foreground/70">
-              Our Professional Diploma in HCI for UI/UX is designed to give you a deep understanding of human behavior and psychology in digital interactions, combined with practical skills in interface design and usability testing.
+              The Professional Diploma in Generative AI for Design Practice (PD in Gen AI) is a 6-month Saturday program focused on how artificial intelligence is transforming design workflows across architecture, interiors, visual communication, and digital design.
             </p>
           </div>
         </RevealSection>
@@ -30,13 +30,13 @@ export const ProgramOverviewSection: React.FC = () => {
               <h3 className="text-2xl font-semibold text-bsd-gray">Program Highlights</h3>
               <div className="space-y-4">
                 <p className="text-foreground/70">
-                  The Professional Diploma in HCI for UI/UX is a focused 6-month weekend program that combines theoretical knowledge with practical skills in creating user-centered digital experiences. Classes are held every Saturday at our Bangalore campus. You'll learn how to research user needs, design intuitive interfaces, conduct usability testing, and implement effective UI/UX solutions.
+                  Rather than teaching isolated tools, the course is built around integrating AI into actual design production systems. Students learn how to generate ideas faster, refine them into usable outputs, and deliver projects efficiently in professional environments.
                 </p>
                 <p className="text-foreground/70">
-                  With a focus on human psychology, cognitive science, and contemporary UI/UX methodologies, this program prepares you for a career in the rapidly-evolving field of digital design, where understanding human behavior is as crucial as technical proficiency.
+                  The emphasis is on speed, scalability, and real-world application—enabling designers to increase productivity, improve client communication, and expand their earning potential.
                 </p>
                 <p className="text-foreground/70">
-                  The curriculum is regularly updated to include emerging trends and technologies in the field, ensuring that graduates are equipped with the most relevant and in-demand skills for the industry.
+                  Classes are held every Saturday at our Bangalore campus through a hybrid model that combines online sessions with hands-on offline engagement.
                 </p>
               </div>
             </div>
@@ -44,16 +44,16 @@ export const ProgramOverviewSection: React.FC = () => {
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold text-bsd-gray">What You Will Learn</h3>
               <ul className="space-y-3 list-disc pl-5 text-foreground/70">
-                <li>Principles of Human-Computer Interaction and cognitive psychology</li>
-                <li>User research methods and analysis techniques</li>
-                <li>Information architecture and content strategy</li>
-                <li>Wireframing, prototyping, and interaction design</li>
-                <li>Visual design principles for digital interfaces</li>
-                <li>Usability testing and evaluation methods</li>
-                <li>Accessibility standards and inclusive design</li>
-                <li>UI/UX design patterns and best practices</li>
-                <li>Design systems and component libraries</li>
-                <li>Portfolio development and professional presentation</li>
+                <li>AI capabilities in design and practical use cases</li>
+                <li>Prompt strategy for controlled, repeatable outputs</li>
+                <li>Generative tools such as Midjourney and DALL·E</li>
+                <li>Rapid concept generation and moodboarding</li>
+                <li>AI workflows integrated with Adobe Photoshop and SketchUp</li>
+                <li>AI integration in Autodesk Revit environments</li>
+                <li>Converting AI concepts into usable design assets</li>
+                <li>Batch generation, variation systems, and automation</li>
+                <li>Domain-focused application tracks (interiors, branding, UI/UX, product)</li>
+                <li>Portfolio creation and positioning as an AI-enabled designer</li>
               </ul>
             </div>
           </div>
