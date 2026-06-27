@@ -4,7 +4,13 @@ import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, Monitor, Users } from "lucide-react";
 
-export const BatchScheduleSection: React.FC = () => {
+interface BatchScheduleSectionProps {
+  totalDuration?: string;
+}
+
+export const BatchScheduleSection: React.FC<BatchScheduleSectionProps> = ({
+  totalDuration = "16 months (3 semesters + internship & portfolio)"
+}) => {
   const batches = [
     {
       name: "Batch 1",
