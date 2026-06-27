@@ -17,7 +17,7 @@ export const HeroSection: React.FC = () => {
             </h1>
             
             <p className="text-lg text-foreground/80 max-w-xl">
-              An advanced 16-month hybrid programme that develops comprehensive expertise in residential design, combining advanced space planning, construction detailing, and project management through online and offline learning.
+              An advanced 20-month (16+4) hybrid programme (3 days a week) that develops comprehensive expertise in residential design, combining advanced space planning, construction detailing, and project management through online and offline learning.
             </p>
             
             

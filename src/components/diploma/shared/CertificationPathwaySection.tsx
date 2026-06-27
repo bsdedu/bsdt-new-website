@@ -3,7 +3,15 @@ import { RevealSection } from '@/components/ui-elements/RevealSection';
 import { Badge } from '@/components/ui/badge';
 import { Briefcase, FileCheck, Award, ArrowRight } from 'lucide-react';
 
-export const CertificationPathwaySection: React.FC = () => {
+interface CertificationPathwaySectionProps {
+  academicMonths?: number;
+  semesterCount?: number;
+}
+
+export const CertificationPathwaySection: React.FC<CertificationPathwaySectionProps> = ({
+  academicMonths = 16,
+  semesterCount = 3
+}) => {
   return (
     <section className="py-16 bg-gradient-to-b from-white to-bsd-light-gray/30">
       <div className="container mx-auto px-6 md:px-8">
@@ -14,7 +22,7 @@ export const CertificationPathwaySection: React.FC = () => {
               The 3+1 <span className="text-bsd-orange">Advantage</span>
             </h2>
             <p className="mt-4 text-foreground/70">
-              Following the 16-month academic program (3 semesters of 4 months each), students enter the 3+1 Internship Advantage—three months of industry internship and one month of guided portfolio development. Expert portfolio reviews and dual certification ensure graduates enter the job market with professional validation and a clear competitive edge.
+              Following the {academicMonths}-month academic program ({semesterCount} semesters of 4 months each), students enter the 3+1 Internship Advantage—three months of industry internship and one month of guided portfolio development. Expert portfolio reviews and dual certification ensure graduates enter the job market with professional validation and a clear competitive edge.
             </p>
           </div>
         </RevealSection>
