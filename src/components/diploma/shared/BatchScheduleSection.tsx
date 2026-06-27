@@ -124,7 +124,7 @@ export const BatchScheduleSection: React.FC<BatchScheduleSectionProps> = ({
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-bsd-gray rounded-full"></div>
                     <span className="font-medium">Total Duration:</span>
-                    <span className="text-foreground/70">16 months (3 semesters + internship & portfolio)</span>
+                    <span className="text-foreground/70">{totalDuration}</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-bsd-gray rounded-full"></div>
