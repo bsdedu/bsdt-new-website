@@ -32,8 +32,8 @@ const DiplomaProgramMasterInteriorDesign: React.FC = () => {
         <ProgramOverviewSection />
         <MasterInteriorPhotosSection />
         <HybridLearningSection />
-        <CertificationPathwaySection />
-        <BatchScheduleSection />
+        <CertificationPathwaySection academicMonths={20} semesterCount={4} />
+        <BatchScheduleSection totalDuration="20 months (4 semesters + internship & portfolio)" />
         <ProgramFeatures />
         
         <EnquiryFormSection />
