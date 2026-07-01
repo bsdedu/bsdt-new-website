@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
-import { Bed, ShieldCheck, Wifi, Clock, CheckCircle2, Coffee } from "lucide-react";
+import { Home, Building, MapPin, Users, CheckCircle2, Phone } from "lucide-react";
 
 export const HostelSection: React.FC = () => {
   return (
@@ -18,99 +17,110 @@ export const HostelSection: React.FC = () => {
           <div className="text-center max-w-3xl mx-auto mb-12">
             <Badge variant="bsdOrange" className="mb-4">CAMPUS FACILITIES</Badge>
             <h1 className="text-4xl md:text-5xl font-display font-bold text-bsd-gray leading-tight">
-              Hostel Accommodation
+              Student Accommodation Assistance
             </h1>
             <p className="mt-4 text-lg text-foreground/80">
-              We provide comfortable and secure hostel facilities for students who need on-campus accommodation.
+              BSDT no longer offers on-campus hostel facilities directly. Instead, we assist students in finding and securing suitable accommodation through our network of trusted residential partners.
             </p>
-          </div>
-        </RevealSection>
-
-        {/* Hostel Details Image */}
-        <RevealSection delay={50}>
-          <div className="mb-16">
-            <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img 
-                src="/lovable-uploads/f448edd5-3487-45fc-a09c-a6b3493f9797.png" 
-                alt="Hostel Accommodation Details - Room Types and Facilities" 
-                className="w-full h-auto object-cover"
-              />
-            </div>
           </div>
         </RevealSection>
 
         <RevealSection delay={100}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-            <div className="rounded-2xl overflow-hidden shadow-lg h-[450px]">
-              <img 
-                src="/lovable-uploads/bef68a54-0c8f-4524-bd19-ab8bd341370a.png" 
-                alt="BSD Hostel Facility" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-
             <div className="space-y-6">
               <div className="bg-white rounded-xl p-6 shadow-sm">
-                <h3 className="text-xl font-semibold text-bsd-gray mb-4">Comfortable Living Environment</h3>
+                <h3 className="text-xl font-semibold text-bsd-gray mb-4">Accommodation Partners</h3>
                 <p className="text-foreground/70 mb-5">
-                  Our hostels provide a comfortable and supportive living environment that complements your academic journey. All rooms are fully furnished and designed to create a conducive atmosphere for both studying and relaxation.
+                  We have established tie-ups with a range of residential accommodation providers, including paying guest accommodations (PGs), hostels, and rental flats located in and around the campus.
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="flex items-start gap-3">
-                    <Bed className="h-5 w-5 text-bsd-orange mt-0.5" />
+                    <Building className="h-5 w-5 text-bsd-orange mt-0.5" />
                     <div>
-                      <p className="font-medium text-bsd-gray">Well-furnished rooms</p>
-                      <p className="text-sm text-foreground/60">Comfortable beds and study desks</p>
+                      <p className="font-medium text-bsd-gray">PG Accommodations</p>
+                      <p className="text-sm text-foreground/60">Managed stays with meals & utilities</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <ShieldCheck className="h-5 w-5 text-bsd-orange mt-0.5" />
+                    <Home className="h-5 w-5 text-bsd-orange mt-0.5" />
                     <div>
-                      <p className="font-medium text-bsd-gray">24/7 Security</p>
-                      <p className="text-sm text-foreground/60">CCTV surveillance and guards</p>
+                      <p className="font-medium text-bsd-gray">Hostels</p>
+                      <p className="text-sm text-foreground/60">Shared & independent room options</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <Wifi className="h-5 w-5 text-bsd-orange mt-0.5" />
+                    <MapPin className="h-5 w-5 text-bsd-orange mt-0.5" />
                     <div>
-                      <p className="font-medium text-bsd-gray">High-speed WiFi</p>
-                      <p className="text-sm text-foreground/60">Always stay connected</p>
+                      <p className="font-medium text-bsd-gray">Rental Flats</p>
+                      <p className="text-sm text-foreground/60">Located near the campus</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <Coffee className="h-5 w-5 text-bsd-orange mt-0.5" />
+                    <Users className="h-5 w-5 text-bsd-orange mt-0.5" />
                     <div>
-                      <p className="font-medium text-bsd-gray">Dining Facilities</p>
-                      <p className="text-sm text-foreground/60">Nutritious meals served daily</p>
+                      <p className="font-medium text-bsd-gray">Personalised Support</p>
+                      <p className="text-sm text-foreground/60">Guidance based on your preferences</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="bg-white rounded-xl p-6 shadow-sm">
-                <h3 className="text-xl font-semibold text-bsd-gray mb-3">Hostel Features</h3>
+                <h3 className="text-xl font-semibold text-bsd-gray mb-3">How We Help</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-bsd-orange mt-0.5 flex-shrink-0" />
-                    <p className="text-foreground/70">Separate wings for boys and girls with appropriate security measures</p>
+                    <p className="text-foreground/70">Personalised recommendations based on budget, proximity, and preferences</p>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-bsd-orange mt-0.5 flex-shrink-0" />
-                    <p className="text-foreground/70">Common rooms equipped with recreational facilities</p>
+                    <p className="text-foreground/70">Verified listings across multiple budget ranges and accommodation types</p>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-bsd-orange mt-0.5 flex-shrink-0" />
-                    <p className="text-foreground/70">Laundry services available for all residents</p>
+                    <p className="text-foreground/70">Support with site visits and securing the right accommodation</p>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-bsd-orange mt-0.5 flex-shrink-0" />
-                    <p className="text-foreground/70">Regular housekeeping services to maintain cleanliness</p>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-bsd-orange mt-0.5 flex-shrink-0" />
-                    <p className="text-foreground/70">First-aid facilities and medical assistance on call</p>
+                    <p className="text-foreground/70">Ongoing assistance throughout your stay for any accommodation-related queries</p>
                   </li>
                 </ul>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl p-8 shadow-sm h-full flex flex-col justify-center">
+              <h3 className="text-xl font-semibold text-bsd-gray mb-4">Accommodation Options Overview</h3>
+              <p className="text-foreground/70 mb-6">
+                Whether you prefer a structured PG environment, a shared hostel, or an independent rental flat, we help you explore and secure the right fit. All partner accommodations are located within convenient commuting distance of the campus.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center gap-4 p-4 bg-bsd-light-gray rounded-lg">
+                  <div className="w-10 h-10 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0">
+                    <Building className="h-5 w-5 text-bsd-orange" />
+                  </div>
+                  <div>
+                    <p className="font-medium text-bsd-gray">Paying Guest (PG)</p>
+                    <p className="text-sm text-foreground/60">Food, WiFi, and housekeeping included</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4 p-4 bg-bsd-light-gray rounded-lg">
+                  <div className="w-10 h-10 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0">
+                    <Home className="h-5 w-5 text-bsd-orange" />
+                  </div>
+                  <div>
+                    <p className="font-medium text-bsd-gray">Hostels</p>
+                    <p className="text-sm text-foreground/60">Community living with shared amenities</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4 p-4 bg-bsd-light-gray rounded-lg">
+                  <div className="w-10 h-10 rounded-full bg-bsd-orange/10 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="h-5 w-5 text-bsd-orange" />
+                  </div>
+                  <div>
+                    <p className="font-medium text-bsd-gray">Rental Flats</p>
+                    <p className="text-sm text-foreground/60">Independent or shared apartment units</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -118,12 +128,14 @@ export const HostelSection: React.FC = () => {
 
         <RevealSection delay={200}>
           <div className="mt-16 text-center">
-            <p className="text-bsd-gray font-medium mb-4">For more information about hostel accommodations, please contact our admissions office</p>
-            <div className="flex justify-center items-center gap-4">
-              <div className="flex items-center gap-2">
-                <Clock className="w-5 h-5 text-bsd-orange" />
-                <span className="text-sm text-foreground/70">Queries answered within 24 hours</span>
+            <div className="bg-white rounded-xl p-8 shadow-sm max-w-2xl mx-auto">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <Phone className="w-5 h-5 text-bsd-orange" />
+                <p className="text-bsd-gray font-medium text-lg">
+                  For more information or assistance with accommodation, please contact
+                </p>
               </div>
+              <p className="text-2xl font-bold text-bsd-orange">+91 7892554398</p>
             </div>
           </div>
         </RevealSection>
