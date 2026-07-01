@@ -72,7 +72,7 @@ export const navStructure: NavStructure[] = [
       { name: 'Student Experience', href: '/student-experience' },
       { name: 'Events & Activities', href: '/campus-life/events-activities' },
       { name: 'Alumni & Placement Stories', href: '/alumni-stories' },
-      { name: 'Hostel & Transport', href: '/housing-transport' }
+      { name: 'Accommodation & Transport', href: '/housing-transport' }
     ]
   },
   {

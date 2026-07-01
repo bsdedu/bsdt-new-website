@@ -79,7 +79,7 @@ export const faqData: FAQCategory[] = [
     questions: [
       {
         question: "Is accommodation available for students?",
-        answer: "Yes, BSDT offers accommodation facilities for outstation students. We have tie-ups with safe and comfortable hostels near the campus. The accommodation includes amenities like Wi-Fi, laundry services, and dining facilities. Our student affairs office can assist with finding suitable accommodation options."
+        answer: "BSDT no longer operates on-campus hostel facilities directly. However, we assist outstation students in finding and securing suitable accommodation through our network of trusted residential partners, including PGs, hostels, and rental flats located in and around the campus. Options are available across different budgets and accommodation types. For assistance, students can contact +91 7892554398."
       },
       {
         question: "What facilities are available on campus?",
