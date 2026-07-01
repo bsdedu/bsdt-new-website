@@ -11,10 +11,10 @@ const HostelTransport: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Hostel & Transport Facilities | BSD Design School</title>
+        <title>Student Accommodation & Transport Facilities | BSD Design School</title>
         <meta 
           name="description" 
-          content="Learn about the comfortable hostel accommodations and convenient transport services available to BSD students." 
+          content="Learn about BSDT's student accommodation assistance and convenient transport services available to BSD students." 
         />
       </Helmet>
       
