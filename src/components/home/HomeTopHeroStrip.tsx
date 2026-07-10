@@ -16,9 +16,9 @@ export const HomeTopHeroStrip: React.FC = () => {
   return (
     <section className="w-full bg-bsd-light-gray border-b border-black/5">
       <div className="container mx-auto px-6 md:px-8 py-10 md:py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center min-h-[420px] md:min-h-[480px]">
           {/* Left: Program info */}
-          <div className="flex flex-col justify-center space-y-5">
+          <div className="flex flex-col justify-center space-y-5 pt-6 md:pt-10 lg:pt-14">
             <span className="inline-block w-fit px-3 py-1 bg-bsd-orange/10 text-bsd-orange text-xs font-semibold tracking-wider rounded-full uppercase">
               Post-Graduate Diploma
             </span>
@@ -59,10 +59,10 @@ export const HomeTopHeroStrip: React.FC = () => {
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg bg-black">
               {playing ? (
                 <iframe
-                  src="https://www.youtube.com/embed/_VCkqNkb-44?autoplay=1&rel=0"
+                  src="https://www.youtube.com/embed/_VCkqNkb-44?autoplay=1&rel=0&playsinline=1"
                   title="BSDT Founder — Residential Architecture & Design"
                   className="absolute inset-0 w-full h-full"
-                  allow="accelerated-sensors; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allow="autoplay; encrypted-media; picture-in-picture; web-share; fullscreen"
                   allowFullScreen
                 />
               ) : (
@@ -75,9 +75,13 @@ export const HomeTopHeroStrip: React.FC = () => {
                   <img
                     src={videoThumb}
                     alt="Post-Graduate Diploma in Residential Architecture & Design — Founder message"
-                    loading="lazy"
                     className="w-full h-full object-cover"
                   />
+                  <span className="absolute inset-0 flex items-center justify-center">
+                    <span className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-bsd-orange/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                      <Play className="w-7 h-7 md:w-8 md:h-8 text-white fill-white ml-1" />
+                    </span>
+                  </span>
                 </button>
               )}
             </div>
