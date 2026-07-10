@@ -16,11 +16,6 @@ export const HeroSection: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const heroSlides: HeroSlide[] = [{
-    image: "/lovable-uploads/fc9c4875-4b4b-44a9-b8ad-3eb5db1ed2cc.png",
-    title: "2026\nUG ADMISSIONS OPEN",
-    subtitle: "Admissions Open 2026-27",
-    description: "\"Your blueprint for a successful creative career.\""
-  }, {
     image: "/lovable-uploads/0ae77c0c-8ef4-404c-abf0-bb90598dfbf4.png",
     title: "Hybrid Diploma Programs",
     subtitle: "Learn From Anywhere",
