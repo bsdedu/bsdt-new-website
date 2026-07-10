@@ -25,7 +25,7 @@ export const PGDResidentialHero: React.FC = () => {
                 <Clock className="w-4 h-4 text-bsd-orange" /> 20 Months (16 + 4)
               </span>
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-border/60 text-sm font-medium text-bsd-gray shadow-sm">
-                <Briefcase className="w-4 h-4 text-bsd-orange" /> Full-Time
+                <Briefcase className="w-4 h-4 text-bsd-orange" /> Hybrid
               </span>
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-border/60 text-sm font-medium text-bsd-gray shadow-sm">
                 <MapPin className="w-4 h-4 text-bsd-orange" /> Bangalore Campus
