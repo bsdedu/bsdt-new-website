@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
 import { HeroSection } from '../components/home/HeroSection';
+import { HomeTopHeroStrip } from '../components/home/HomeTopHeroStrip';
 import { ProgramsSection } from '../components/home/ProgramsSection';
 import { WhyChooseSection } from '../components/home/WhyChooseSection';
 import { AIEnhancedLearningSection } from '../components/home/AIEnhancedLearningSection';
@@ -116,6 +117,7 @@ const Index = () => {
             />
           </div>
           
+          <HomeTopHeroStrip />
           <HeroSection />
           <ProgramsSection />
           <WhyChooseSection />
