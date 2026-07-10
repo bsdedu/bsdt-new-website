@@ -117,6 +117,7 @@ const Index = () => {
             />
           </div>
           
+          <ResidentialProgramHeroStrip />
           <HeroSection />
           <ProgramsSection />
           <WhyChooseSection />
