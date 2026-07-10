@@ -9,16 +9,11 @@ import { EnquiryResources } from "./enquiry/EnquiryResources";
 import { EnquiryForm } from "./enquiry/EnquiryForm";
 import { EnquirySuccess } from "./enquiry/EnquirySuccess";
 
-export const EnquiryFormSection: React.FC<{ programSpecific?: boolean; useNativeForm?: boolean }> = ({
-  programSpecific = false,
-  useNativeForm = false,
-}) => {
+export const EnquiryFormSection: React.FC<{ programSpecific?: boolean }> = ({ programSpecific = false }) => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   
   // Check if form was previously submitted
   useEffect(() => {
-    if (useNativeForm) return;
-
     const script = document.createElement('script');
     script.type = 'text/javascript';
     script.async = true;
@@ -26,7 +21,7 @@ export const EnquiryFormSection: React.FC<{ programSpecific?: boolean; useNative
     document.body.appendChild(script);
     
     const hasSubmitted = localStorage.getItem('enquiryFormSubmitted') === 'true';
-    if (hasSubmitted && !useNativeForm) {
+    if (hasSubmitted) {
       setFormSubmitted(true);
     }
 
@@ -36,7 +31,7 @@ export const EnquiryFormSection: React.FC<{ programSpecific?: boolean; useNative
         document.body.removeChild(script);
       });
     };
-  }, [useNativeForm]);
+  }, []);
   
   const handleFormSubmitSuccess = () => {
     setFormSubmitted(true);
@@ -72,17 +67,8 @@ export const EnquiryFormSection: React.FC<{ programSpecific?: boolean; useNative
           
           {/* Enquiry Form */}
           <RevealSection direction="left" className="lg:col-span-3">
-            {useNativeForm ? (
-              <Card className="p-6 md:p-8">
-                {formSubmitted ? (
-                  <EnquirySuccess />
-                ) : (
-                  <EnquiryForm programSpecific={programSpecific} onSubmitSuccess={handleFormSubmitSuccess} />
-                )}
-              </Card>
-            ) : (
-              <div className="npf_wgts" data-height="500px" data-w="14fe90258f1849328c9ebb3adc9782bb"></div>
-            )}
+           
+          <div className="npf_wgts" data-height="500px" data-w="14fe90258f1849328c9ebb3adc9782bb"></div>
            
           </RevealSection>
         </div>

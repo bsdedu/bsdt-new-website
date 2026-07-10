@@ -16,6 +16,11 @@ export const HeroSection: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const heroSlides: HeroSlide[] = [{
+    image: "/lovable-uploads/fc9c4875-4b4b-44a9-b8ad-3eb5db1ed2cc.png",
+    title: "2026\nUG ADMISSIONS OPEN",
+    subtitle: "Admissions Open 2026-27",
+    description: "\"Your blueprint for a successful creative career.\""
+  }, {
     image: "/lovable-uploads/0ae77c0c-8ef4-404c-abf0-bb90598dfbf4.png",
     title: "Hybrid Diploma Programs",
     subtitle: "Learn From Anywhere",
@@ -84,7 +89,10 @@ export const HeroSection: React.FC = () => {
               </span>
               
               <h1 className="font-display font-bold text-white leading-tight mb-4">
-                <span className="text-3xl md:text-4xl lg:text-5xl whitespace-pre-line">{currentSlideData.title}</span>
+                {currentSlide === 0 ? <>
+                    <span className="block text-2xl md:text-3xl lg:text-4xl text-bsd-orange">2026</span>
+                    <span className="block text-4xl md:text-5xl lg:text-6xl">UG ADMISSIONS OPEN</span>
+                  </> : <span className="text-3xl md:text-4xl lg:text-5xl whitespace-pre-line">{currentSlideData.title}</span>}
               </h1>
               
               <p className="text-lg text-white/80 mb-6">
@@ -99,19 +107,19 @@ export const HeroSection: React.FC = () => {
                   APPLY NOW
                 </Button>
                 <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-8" onClick={() => {
-                  if (currentSlide === 1) { window.location.href = "/student-spotlight"; return; }
-                  if (currentSlide === 2) { window.location.href = "/academics/skill-enhancing-electives"; return; }
-                  if (currentSlide === 3) { window.location.href = "/design-iq"; return; }
+                  if (currentSlide === 2) { window.location.href = "/student-spotlight"; return; }
+                  if (currentSlide === 3) { window.location.href = "/academics/skill-enhancing-electives"; return; }
+                  if (currentSlide === 4) { window.location.href = "/design-iq"; return; }
                   const section = document.getElementById('programs');
                   if (section) {
-                    if (currentSlide === 0) {
+                    if (currentSlide === 1) {
                       const diplomaTab = document.querySelector('[data-value="diploma"]') as HTMLButtonElement;
                       if (diplomaTab) diplomaTab.click();
                     }
                     window.scrollTo({ top: section.offsetTop - 80, behavior: 'smooth' });
                   }
                 }}>
-                  {currentSlide === 1 ? "View Student Works" : currentSlide === 2 ? "Explore Electives" : currentSlide === 3 ? "Take the Quiz" : "Explore Programs"}
+                  {currentSlide === 2 ? "View Student Works" : currentSlide === 3 ? "Explore Electives" : currentSlide === 4 ? "Take the Quiz" : "Explore Programs"}
                 </Button>
               </div>
             </div>

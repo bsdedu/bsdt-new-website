@@ -93,7 +93,7 @@ const ApplicationProcess = () => {
           </div>
         </RevealSection>
         
-        <EnquiryFormSection useNativeForm />
+        <EnquiryFormSection />
       </main>
       
       <Footer />
