@@ -9,7 +9,10 @@ import { EnquiryResources } from "./enquiry/EnquiryResources";
 import { EnquiryForm } from "./enquiry/EnquiryForm";
 import { EnquirySuccess } from "./enquiry/EnquirySuccess";
 
-export const EnquiryFormSection: React.FC<{ programSpecific?: boolean }> = ({ programSpecific = false }) => {
+export const EnquiryFormSection: React.FC<{ programSpecific?: boolean; useNativeForm?: boolean }> = ({
+  programSpecific = false,
+  useNativeForm = false,
+}) => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   
   // Check if form was previously submitted
@@ -67,8 +70,17 @@ export const EnquiryFormSection: React.FC<{ programSpecific?: boolean }> = ({ pr
           
           {/* Enquiry Form */}
           <RevealSection direction="left" className="lg:col-span-3">
-           
-          <div className="npf_wgts" data-height="500px" data-w="14fe90258f1849328c9ebb3adc9782bb"></div>
+            {useNativeForm ? (
+              <Card className="p-6 md:p-8">
+                {formSubmitted ? (
+                  <EnquirySuccess />
+                ) : (
+                  <EnquiryForm programSpecific={programSpecific} onSubmitSuccess={handleFormSubmitSuccess} />
+                )}
+              </Card>
+            ) : (
+              <div className="npf_wgts" data-height="500px" data-w="14fe90258f1849328c9ebb3adc9782bb"></div>
+            )}
            
           </RevealSection>
         </div>

@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Clock, Briefcase, MapPin, Play } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import videoThumb from '@/assets/pgd-residential-video-thumb.jpg';
 
 export const HomeTopHeroStrip: React.FC = () => {
   const [playing, setPlaying] = useState(false);
+  const navigate = useNavigate();
 
   const handleApplyClick = () => {
-    const el = document.getElementById('enquiry-form');
-    if (el) {
-      window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
-    }
+    navigate('/admissions/application-process');
   };
 
   return (
@@ -23,7 +22,7 @@ export const HomeTopHeroStrip: React.FC = () => {
               Post-Graduate Diploma
             </span>
 
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-bsd-gray leading-tight">
+            <h2 className="text-[1.35rem] md:text-[1.7rem] lg:text-[2.1rem] font-display font-bold text-bsd-gray leading-tight">
               Post-Graduate Diploma in{' '}
               <span className="text-bsd-orange">Residential Architecture &amp; Design</span>
             </h2>
@@ -78,8 +77,8 @@ export const HomeTopHeroStrip: React.FC = () => {
                     className="w-full h-full object-cover"
                   />
                   <span className="absolute inset-0 flex items-center justify-center">
-                    <span className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-bsd-orange/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                      <Play className="w-7 h-7 md:w-8 md:h-8 text-white fill-white ml-1" />
+                    <span className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-bsd-orange/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                      <Play className="w-4 h-4 md:w-5 md:h-5 text-white fill-white ml-0.5" />
                     </span>
                   </span>
                 </button>
