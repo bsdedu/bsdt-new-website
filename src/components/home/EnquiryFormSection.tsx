@@ -17,6 +17,8 @@ export const EnquiryFormSection: React.FC<{ programSpecific?: boolean; useNative
   
   // Check if form was previously submitted
   useEffect(() => {
+    if (useNativeForm) return;
+
     const script = document.createElement('script');
     script.type = 'text/javascript';
     script.async = true;
@@ -34,7 +36,7 @@ export const EnquiryFormSection: React.FC<{ programSpecific?: boolean; useNative
         document.body.removeChild(script);
       });
     };
-  }, []);
+  }, [useNativeForm]);
   
   const handleFormSubmitSuccess = () => {
     setFormSubmitted(true);
