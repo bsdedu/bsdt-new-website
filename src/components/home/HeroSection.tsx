@@ -100,19 +100,19 @@ export const HeroSection: React.FC = () => {
                   APPLY NOW
                 </Button>
                 <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-8" onClick={() => {
-                  if (currentSlide === 2) { window.location.href = "/student-spotlight"; return; }
-                  if (currentSlide === 3) { window.location.href = "/academics/skill-enhancing-electives"; return; }
-                  if (currentSlide === 4) { window.location.href = "/design-iq"; return; }
+                  if (currentSlide === 1) { window.location.href = "/student-spotlight"; return; }
+                  if (currentSlide === 2) { window.location.href = "/academics/skill-enhancing-electives"; return; }
+                  if (currentSlide === 3) { window.location.href = "/design-iq"; return; }
                   const section = document.getElementById('programs');
                   if (section) {
-                    if (currentSlide === 1) {
+                    if (currentSlide === 0) {
                       const diplomaTab = document.querySelector('[data-value="diploma"]') as HTMLButtonElement;
                       if (diplomaTab) diplomaTab.click();
                     }
                     window.scrollTo({ top: section.offsetTop - 80, behavior: 'smooth' });
                   }
                 }}>
-                  {currentSlide === 2 ? "View Student Works" : currentSlide === 3 ? "Explore Electives" : currentSlide === 4 ? "Take the Quiz" : "Explore Programs"}
+                  {currentSlide === 1 ? "View Student Works" : currentSlide === 2 ? "Explore Electives" : currentSlide === 3 ? "Take the Quiz" : "Explore Programs"}
                 </Button>
               </div>
             </div>
