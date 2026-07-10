@@ -117,6 +117,7 @@ const Index = () => {
             />
           </div>
           
+          <PGDResidentialHero />
           <HeroSection />
           <ProgramsSection />
           <WhyChooseSection />
