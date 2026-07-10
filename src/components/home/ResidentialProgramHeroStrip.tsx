@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Clock, Briefcase, MapPin, Play } from 'lucide-react';
+import { Clock, Briefcase, MapPin } from 'lucide-react';
 import thumbnail from '@/assets/residential-hero-thumbnail.jpg';
 
 export const ResidentialProgramHeroStrip: React.FC = () => {
