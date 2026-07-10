@@ -45,7 +45,7 @@ export const PGDResidentialHero: React.FC = () => {
 
           {/* Right column */}
           <div className="w-full flex items-center justify-center">
-            <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg border border-border/40 bg-black">
+            <div className="relative w-full lg:w-[118%] aspect-video rounded-2xl overflow-hidden shadow-lg border border-border/40 bg-black">
               {playing ? (
                 <iframe
                   src="https://www.youtube.com/embed/_VCkqNkb-44?autoplay=1&playsinline=1&rel=0"
