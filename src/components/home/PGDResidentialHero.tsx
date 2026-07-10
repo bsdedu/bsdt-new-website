@@ -8,18 +8,19 @@ export const PGDResidentialHero: React.FC = () => {
   const [playing, setPlaying] = useState(false);
 
   return (
-    <section className="bg-bsd-light-gray py-10 md:py-14 lg:py-16">
+    <section className="bg-bsd-light-gray pt-16 pb-12 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
       <div className="container mx-auto px-6 md:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left column */}
-          <div className="flex flex-col justify-center space-y-6">
-            <Badge variant="bsdOrange" className="w-fit">POST-GRADUATE DIPLOMA</Badge>
+          <div className="flex flex-col justify-center max-w-[560px]">
+            <Badge variant="bsdOrange" className="w-fit mb-6">POST-GRADUATE DIPLOMA</Badge>
 
-            <h2 className="font-display font-bold text-bsd-gray text-3xl md:text-4xl lg:text-[2.75rem] leading-tight">
-              Post-Graduate Diploma in Residential Architecture &amp; Design
+            <h2 className="font-display font-bold text-3xl md:text-4xl lg:text-[2.35rem] leading-tight mb-7">
+              <span className="text-bsd-gray">Post-Graduate Diploma in</span>{' '}
+              <span className="text-bsd-orange">Residential Architecture &amp; Design</span>
             </h2>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 mb-8">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-border/60 text-sm font-medium text-bsd-gray shadow-sm">
                 <Clock className="w-4 h-4 text-bsd-orange" /> 20 Months
               </span>
@@ -43,7 +44,7 @@ export const PGDResidentialHero: React.FC = () => {
           </div>
 
           {/* Right column */}
-          <div className="w-full">
+          <div className="w-full flex items-center justify-center">
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg border border-border/40 bg-black">
               {playing ? (
                 <iframe
