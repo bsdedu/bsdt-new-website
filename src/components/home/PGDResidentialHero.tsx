@@ -10,9 +10,9 @@ export const PGDResidentialHero: React.FC = () => {
   return (
     <section className="bg-bsd-light-gray pt-16 pb-12 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
       <div className="container mx-auto px-6 md:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
           {/* Left column */}
-          <div className="flex flex-col justify-center max-w-[560px]">
+          <div className="flex flex-col justify-center max-w-[540px] lg:mt-7">
             <Badge variant="bsdOrange" className="w-fit mb-6">POST-GRADUATE DIPLOMA</Badge>
 
             <h2 className="font-display font-bold text-3xl md:text-4xl lg:text-[2.35rem] leading-tight mb-7">
@@ -45,7 +45,7 @@ export const PGDResidentialHero: React.FC = () => {
 
           {/* Right column */}
           <div className="w-full flex items-center justify-center">
-            <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg border border-border/40 bg-black">
+            <div className="relative w-full lg:w-[118%] aspect-video rounded-2xl overflow-hidden shadow-lg border border-border/40 bg-black">
               {playing ? (
                 <iframe
                   src="https://www.youtube.com/embed/_VCkqNkb-44?autoplay=1&playsinline=1&rel=0"
