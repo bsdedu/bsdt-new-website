@@ -58,7 +58,7 @@ export const HomeTopHeroStrip: React.FC = () => {
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg bg-black">
               {playing ? (
                 <iframe
-                  src="https://www.youtube.com/embed/_VCkqNkb-44?autoplay=1&rel=0&playsinline=1"
+                  src="https://www.youtube.com/embed/_VCkqNkb-44?autoplay=1&playsinline=1&rel=0"
                   title="BSDT Founder — Residential Architecture & Design"
                   className="absolute inset-0 w-full h-full"
                   allow="autoplay; encrypted-media; picture-in-picture; web-share; fullscreen"

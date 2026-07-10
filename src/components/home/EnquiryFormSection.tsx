@@ -24,7 +24,7 @@ export const EnquiryFormSection: React.FC<{ programSpecific?: boolean; useNative
     document.body.appendChild(script);
     
     const hasSubmitted = localStorage.getItem('enquiryFormSubmitted') === 'true';
-    if (hasSubmitted) {
+    if (hasSubmitted && !useNativeForm) {
       setFormSubmitted(true);
     }
 
