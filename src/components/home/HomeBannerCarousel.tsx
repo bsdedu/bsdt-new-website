@@ -95,7 +95,7 @@ export const HomeBannerCarousel: React.FC = () => {
           <img
             src={slide.image}
             alt={slide.title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
           {/* Dark overlay for better text readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
