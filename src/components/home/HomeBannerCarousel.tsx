@@ -82,7 +82,7 @@ export const HomeBannerCarousel: React.FC = () => {
 
   return (
     <section className="py-8 md:py-10 lg:py-12">
-      <div className="relative w-full overflow-hidden rounded-2xl h-[420px] md:h-[460px] lg:h-[480px] shadow-lg">
+      <div className="relative w-full overflow-hidden h-[420px] md:h-[460px] lg:h-[480px] shadow-lg">
       {/* Background Images */}
       {heroSlides.map((slide, index) => (
         <div
@@ -108,7 +108,7 @@ export const HomeBannerCarousel: React.FC = () => {
           <div className="flex justify-end">
             <div
               className={cn(
-                "max-w-xl bg-black/40 backdrop-blur-sm p-6 md:p-8 lg:p-10 rounded-lg border border-white/10 transition-all duration-700",
+                "max-w-xl bg-black/40 backdrop-blur-sm p-6 md:p-8 lg:p-10 border border-white/10 transition-all duration-700",
                 isLoaded ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
               )}
             >
