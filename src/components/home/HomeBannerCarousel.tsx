@@ -82,7 +82,7 @@ export const HomeBannerCarousel: React.FC = () => {
 
   return (
     <section className="py-8 md:py-10 lg:py-12">
-      <div className="relative w-full overflow-hidden rounded-2xl h-[360px] md:h-[400px] lg:h-[420px] shadow-lg">
+      <div className="relative w-full overflow-hidden rounded-2xl h-[420px] md:h-[460px] lg:h-[480px] shadow-lg">
       {/* Background Images */}
       {heroSlides.map((slide, index) => (
         <div
@@ -95,7 +95,7 @@ export const HomeBannerCarousel: React.FC = () => {
           <img
             src={slide.image}
             alt={slide.title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
           {/* Dark overlay for better text readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
