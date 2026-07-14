@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
-import { HeroSection } from '../components/home/HeroSection';
+import { HomeBannerCarousel } from '../components/home/HomeBannerCarousel';
 import { PGDResidentialHero } from '../components/home/PGDResidentialHero';
 import { ProgramsSection } from '../components/home/ProgramsSection';
 import { WhyChooseSection } from '../components/home/WhyChooseSection';
