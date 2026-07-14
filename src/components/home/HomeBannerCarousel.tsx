@@ -192,6 +192,7 @@ export const HomeBannerCarousel: React.FC = () => {
           />
         ))}
       </div>
+      </div>
     </section>
   );
 };
