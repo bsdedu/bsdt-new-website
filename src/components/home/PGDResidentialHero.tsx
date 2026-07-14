@@ -8,7 +8,7 @@ export const PGDResidentialHero: React.FC = () => {
   const [playing, setPlaying] = useState(false);
 
   return (
-    <section className="bg-bsd-light-gray pt-16 pb-12 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
+    <section className="bg-background pt-16 pb-12 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
       <div className="container mx-auto px-6 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
           {/* Left column */}
