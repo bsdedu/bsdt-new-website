@@ -4,12 +4,12 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Building2, Cog, Layers, ClipboardCheck, HardHat, BarChart3 } from 'lucide-react';
 
 const outcomes = [
-  { icon: <Cog className="w-6 h-6 text-bsd-orange" />, title: 'Building Services Expertise', description: 'Understand MEP systems, HVAC, electrical, plumbing, and fire safety, and their coordination in modern construction.' },
-  { icon: <Layers className="w-6 h-6 text-bsd-orange" />, title: 'BIM and Digital Workflows', description: 'Develop proficiency in Revit and Navisworks for intelligent modelling, clash detection, and digital project delivery.' },
-  { icon: <ClipboardCheck className="w-6 h-6 text-bsd-orange" />, title: 'Documentation & Standards', description: 'Produce BIM-led construction documentation aligned with industry standards and professional practices.' },
-  { icon: <BarChart3 className="w-6 h-6 text-bsd-orange" />, title: 'Cost & Quantity Management', description: 'Carry out quantity estimation, BOQ preparation, budgeting, tendering, and cost control.' },
-  { icon: <HardHat className="w-6 h-6 text-bsd-orange" />, title: 'Site Execution & Quality', description: 'Lead site operations, quality checks, coordination, and supervision across project stages.' },
-  { icon: <Building2 className="w-6 h-6 text-bsd-orange" />, title: 'Project Lifecycle Management', description: 'Manage projects from planning and design coordination to execution and successful handover.' },
+  { icon: <Layers className="w-6 h-6 text-bsd-orange" />, title: 'Technical Construction Understanding', description: 'Understand interior construction systems, materials, finishes, and construction methods used on real projects.' },
+  { icon: <ClipboardCheck className="w-6 h-6 text-bsd-orange" />, title: 'Drawing Interpretation', description: 'Read and interpret architectural, interior, structural, electrical, plumbing and MEP drawings with confidence.' },
+  { icon: <BarChart3 className="w-6 h-6 text-bsd-orange" />, title: 'BOQ, Costing & Billing', description: 'Carry out quantity take-off, rate analysis, BOQ preparation, budgeting, billing, and cost control.' },
+  { icon: <Cog className="w-6 h-6 text-bsd-orange" />, title: 'Planning & Procurement', description: 'Plan work breakdown, sequencing, schedules, procurement, contracts, and resource coordination.' },
+  { icon: <HardHat className="w-6 h-6 text-bsd-orange" />, title: 'Site Execution & Safety', description: 'Manage site operations, supervision, quality control, snagging, and construction safety procedures.' },
+  { icon: <Building2 className="w-6 h-6 text-bsd-orange" />, title: 'Professional Project Delivery', description: 'Coordinate contractors, vendors and clients, and deliver interior projects from drawings to completion.' },
 ];
 
 export const LearningOutcomesTab: React.FC = () => {
@@ -19,7 +19,9 @@ export const LearningOutcomesTab: React.FC = () => {
         <div className="text-center">
           <h3 className="text-2xl font-bold text-bsd-gray mb-4">Learning Outcomes</h3>
           <p className="text-foreground/70 max-w-3xl mx-auto">
-            Graduates of the PGD in Integrated Construction Management will be prepared to contribute effectively across residential, commercial, and infrastructure projects with strong technical, digital, and managerial capabilities.
+            Graduates of the Professional Diploma in Interior Construction &amp; Project Management (PD in ICPM) are
+            prepared to understand, coordinate, manage, and deliver interior projects across design firms, turnkey
+            companies, contractors, and project management practices.
           </p>
         </div>
 
