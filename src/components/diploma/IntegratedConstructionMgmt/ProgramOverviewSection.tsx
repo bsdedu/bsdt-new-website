@@ -19,8 +19,9 @@ export const ProgramOverviewSection: React.FC = () => {
               Course Introduction
             </h2>
             <p className="text-lg text-foreground/70">
-              The Post Graduate Diploma in Integrated Construction Management (PGD in ICM) is a comprehensive, industry-focused course designed to develop professional expertise in construction execution, building systems coordination, BIM workflows, and project management. The program enables students to understand how modern buildings are planned, coordinated, constructed, and delivered in real-world environments.
+              The Professional Diploma in Interior Construction &amp; Project Management (PD in ICPM) is a practice-oriented programme designed to develop professionals who can understand, coordinate, manage, and deliver interior construction projects from drawings to completion. It focuses on the execution side of the interior industry — construction technology, materials, drawing interpretation, quantity estimation, BOQs, costing, procurement, scheduling, site management, contractor and vendor coordination, billing, quality control, safety, and project documentation.
             </p>
+
           </div>
         </RevealSection>
 
