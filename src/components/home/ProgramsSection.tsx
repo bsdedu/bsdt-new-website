@@ -122,13 +122,14 @@ const diplomaPrograms: Program[] = [
   },
   {
     icon: <HardHat className="w-6 h-6 text-bsd-orange" />,
-    title: "Post Graduate Diploma in Integrated Construction Management",
-    description: "A 16-month post graduate diploma covering construction technology, project management, BIM workflows, and site execution for integrated building delivery.",
+    title: "Professional Diploma in Interior Construction & Project Management",
+    description: "A 16-month practice-oriented programme covering construction technology, drawing interpretation, BOQ and costing, procurement, scheduling, site execution, quality and safety.",
     color: "from-bsd-gray/15 to-bsd-gray/5",
     duration: "16 months",
-    addons: "12 + 4 Internship – Hybrid",
-    href: "/academics/post-graduate-diploma-integrated-construction-management"
+    addons: "12 + 4 Internship – 3 Days a Week",
+    href: "/academics/professional-diploma-interior-construction-project-management"
   },
+
 ];
 
 export const ProgramsSection: React.FC = () => {
