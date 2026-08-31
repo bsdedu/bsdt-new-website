@@ -51,11 +51,12 @@ export const ProgramOverviewSection: React.FC = () => {
               <h3 className="text-2xl font-bold text-bsd-gray">What You'll Learn</h3>
               <div className="space-y-4">
                 {[
-                  'Building services, MEP systems and coordination',
-                  'BIM technology, Revit and Navisworks workflows',
-                  'Construction planning, scheduling and site operations',
-                  'Cost estimation, BOQ preparation and project delivery'
+                  'Construction technology, materials and technical drawings',
+                  'BOQ preparation, quantity estimation, costing and billing',
+                  'Construction planning, scheduling, procurement and contracts',
+                  'Site operations, quality control, safety and project documentation'
                 ].map((t) => (
+
                   <div key={t} className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-bsd-orange mt-1 flex-shrink-0" />
                     <p className="text-foreground/80">{t}</p>
