@@ -121,16 +121,7 @@ const diplomaPrograms: Program[] = [
     href: "/academics/diploma-in-hci-for-ui-ux"
   },
   {
-    icon: <Bot className="w-6 h-6 text-bsd-orange" />,
-    title: "Professional Diploma in Generative AI for Design Practice",
-    description: "A 6-month Saturday program integrating AI tools like Midjourney and DALL·E into professional design workflows for production-ready outcomes.",
-    color: "from-bsd-orange/20 to-bsd-orange/5",
-    duration: "6 months",
-    addons: "Saturdays Only – Bangalore Campus",
-    href: "/academics/professional-diploma-generative-ai-design-practice"
-  },
-  {
-    icon: <HardHat className="w-6 h-6 text-bsd-orange" />,
+    icon: <HardHat className="w-6 h-6 text-bsd-orange" />
     title: "Post Graduate Diploma in Integrated Construction Management",
     description: "A 16-month post graduate diploma covering construction technology, project management, BIM workflows, and site execution for integrated building delivery.",
     color: "from-bsd-gray/15 to-bsd-gray/5",
