@@ -152,17 +152,17 @@ export const ProgramsSection: React.FC = () => {
         </RevealSection>
 
         <RevealSection delay={100}>
-          <Tabs defaultValue="undergraduate" value={activeTab} onValueChange={setActiveTab} className="w-full">
+          <Tabs defaultValue="diploma" value={activeTab} onValueChange={setActiveTab} className="w-full">
             <div className="flex justify-center mb-8">
               <TabsList className="grid grid-cols-2 w-full max-w-md">
-                <TabsTrigger value="undergraduate" data-value="undergraduate">Undergraduate</TabsTrigger>
                 <TabsTrigger value="diploma" data-value="diploma">Diploma Programs</TabsTrigger>
+                <TabsTrigger value="undergraduate" data-value="undergraduate">Undergraduate</TabsTrigger>
               </TabsList>
             </div>
 
-            <TabsContent value="undergraduate" className="mt-0">
+            <TabsContent value="diploma" className="mt-0">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
-                {undergraduatePrograms.map((program) => (
+                {diplomaPrograms.map((program) => (
                   <Link key={program.title} to={program.href} className="block h-full">
                     <Card isHoverable className={program.isFeatured ? "border-bsd-orange/20 shadow-md h-full" : "h-full"}>
                       <CardHeader className="p-4">
@@ -189,9 +189,9 @@ export const ProgramsSection: React.FC = () => {
               </div>
             </TabsContent>
 
-            <TabsContent value="diploma" className="mt-0">
+            <TabsContent value="undergraduate" className="mt-0">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
-                {diplomaPrograms.map((program) => (
+                {undergraduatePrograms.map((program) => (
                   <Link key={program.title} to={program.href} className="block h-full">
                     <Card isHoverable className={program.isFeatured ? "border-bsd-orange/20 shadow-md h-full" : "h-full"}>
                       <CardHeader className="p-4">
