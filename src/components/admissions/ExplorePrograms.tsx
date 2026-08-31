@@ -108,7 +108,7 @@ const diplomaPrograms: Program[] = [
     href: "/academics/diploma-in-hci-for-ui-ux"
   },
   {
-    icon: <HardHat className="w-6 h-6 text-bsd-orange" />
+    icon: <HardHat className="w-6 h-6 text-bsd-orange" />,
     title: "Post Graduate Diploma in Integrated Construction Management",
     description: "A 16-month post graduate diploma covering construction technology, project management, BIM workflows, and site execution for integrated building delivery.",
     color: "from-bsd-gray/15 to-bsd-gray/5",
