@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader } from "../ui-elements/Card";
 import { RevealSection } from "../ui-elements/RevealSection";
-import { PenTool, Code, Gamepad, Cpu, Building2, LayoutDashboard, Monitor, GraduationCap, Recycle, Bot, Armchair, Sofa, HardHat } from "lucide-react";
+import { PenTool, Code, Gamepad, Cpu, Building2, LayoutDashboard, Monitor, GraduationCap, Recycle, Armchair, Sofa, HardHat } from "lucide-react";
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -119,15 +119,6 @@ const diplomaPrograms: Program[] = [
     duration: "6 months",
     addons: "Saturdays Only – Bangalore Campus",
     href: "/academics/diploma-in-hci-for-ui-ux"
-  },
-  {
-    icon: <Bot className="w-6 h-6 text-bsd-orange" />,
-    title: "Professional Diploma in Generative AI for Design Practice",
-    description: "A 6-month Saturday program integrating AI tools like Midjourney and DALL·E into professional design workflows for production-ready outcomes.",
-    color: "from-bsd-orange/20 to-bsd-orange/5",
-    duration: "6 months",
-    addons: "Saturdays Only – Bangalore Campus",
-    href: "/academics/professional-diploma-generative-ai-design-practice"
   },
   {
     icon: <HardHat className="w-6 h-6 text-bsd-orange" />,
