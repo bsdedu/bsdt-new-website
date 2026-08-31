@@ -5,40 +5,47 @@ import { Badge } from '@/components/ui/badge';
 
 const careerPaths = [
   {
-    category: 'BIM & Digital Construction',
+    category: 'Interior Project Management',
     positions: [
-      { title: 'BIM Coordinator', experience: '1-3 years', salary: '₹5-9 LPA' },
-      { title: 'BIM Modeller (Revit)', experience: '0-2 years', salary: '₹4-7 LPA' },
-      { title: 'Clash Detection Engineer', experience: '2-4 years', salary: '₹6-10 LPA' },
-      { title: 'BIM Manager', experience: '5-8 years', salary: '₹10-18 LPA' },
+      { title: 'Interior Project Coordinator', experience: '0-2 years', salary: '₹4-7 LPA' },
+      { title: 'Interior Project Executive', experience: '1-3 years', salary: '₹5-8 LPA' },
+      { title: 'Junior Project Manager', experience: '3-5 years', salary: '₹7-12 LPA' },
+      { title: 'Interior Site Coordinator', experience: '1-3 years', salary: '₹4-8 LPA' },
     ],
   },
   {
-    category: 'Construction Management',
+    category: 'Site Execution & Quality',
     positions: [
-      { title: 'Site Engineer', experience: '0-3 years', salary: '₹4-7 LPA' },
-      { title: 'Project Coordinator', experience: '2-5 years', salary: '₹6-10 LPA' },
-      { title: 'Construction Manager', experience: '5-8 years', salary: '₹10-18 LPA' },
-      { title: 'Planning & Scheduling Engineer', experience: '2-5 years', salary: '₹6-12 LPA' },
+      { title: 'Site Supervisor', experience: '0-2 years', salary: '₹3.5-6 LPA' },
+      { title: 'Interior Execution Coordinator', experience: '1-3 years', salary: '₹5-8 LPA' },
+      { title: 'Fit-Out Coordinator', experience: '2-4 years', salary: '₹6-10 LPA' },
+      { title: 'QA/QC Executive', experience: '2-4 years', salary: '₹5-9 LPA' },
     ],
   },
   {
-    category: 'MEP & Building Services',
+    category: 'Costing, Billing & Procurement',
     positions: [
-      { title: 'MEP Coordinator', experience: '1-3 years', salary: '₹5-9 LPA' },
-      { title: 'MEP Design Engineer', experience: '2-5 years', salary: '₹6-11 LPA' },
-      { title: 'Services Integration Engineer', experience: '3-6 years', salary: '₹7-13 LPA' },
+      { title: 'Quantity Surveyor', experience: '1-3 years', salary: '₹4-8 LPA' },
+      { title: 'Estimation Executive', experience: '1-3 years', salary: '₹4-8 LPA' },
+      { title: 'BOQ / Billing Executive', experience: '1-3 years', salary: '₹4-7 LPA' },
+      { title: 'Procurement / Vendor Coordinator', experience: '2-4 years', salary: '₹5-9 LPA' },
     ],
   },
-  {
-    category: 'Cost & Project Delivery',
-    positions: [
-      { title: 'Quantity Surveyor', experience: '1-4 years', salary: '₹5-9 LPA' },
-      { title: 'Cost Estimator / BOQ Engineer', experience: '2-5 years', salary: '₹6-11 LPA' },
-      { title: 'Project Manager', experience: '6-10 years', salary: '₹12-22 LPA' },
-      { title: 'Contracts Manager', experience: '5-8 years', salary: '₹10-18 LPA' },
-    ],
-  },
+];
+
+const employers = [
+  'Interior Design Firms',
+  'Interior Construction Companies',
+  'Turnkey Design & Build Companies',
+  'Architecture Firms',
+  'Interior Architecture Studios',
+  'Fit-Out Contractors',
+  'Project Management Consultancies',
+  'Real Estate Developers',
+  'Residential & Commercial Fit-Out Companies',
+  'Modular Interior Companies',
+  'Construction Companies',
+  'Independent Project Management / Execution Practice',
 ];
 
 export const CareerPathsTab: React.FC = () => {
@@ -46,34 +53,45 @@ export const CareerPathsTab: React.FC = () => {
     <RevealSection>
       <div className="space-y-8">
         <div className="text-center">
-          <h3 className="text-2xl font-bold text-bsd-gray mb-4">Career Opportunities</h3>
+          <h3 className="text-2xl font-bold text-bsd-gray mb-4">Job Opportunities</h3>
           <p className="text-foreground/70 max-w-3xl mx-auto">
-            Graduates work across residential, commercial, and infrastructure projects in roles spanning BIM coordination, MEP integration, construction management, cost management, and project delivery.
+            Career pathways across interior firms, turnkey companies, contractors, developers, and project management practices.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-6">
+        <div className="grid lg:grid-cols-3 gap-6">
           {careerPaths.map((path) => (
-            <Card key={path.category}>
+            <Card key={path.category} className="h-full">
               <CardHeader>
-                <CardTitle className="text-lg text-bsd-gray">{path.category}</CardTitle>
+                <CardTitle className="text-lg">{path.category}</CardTitle>
               </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  {path.positions.map((p) => (
-                    <div key={p.title} className="flex justify-between items-center p-3 bg-background/50 rounded-lg">
-                      <div>
-                        <h4 className="font-semibold text-sm">{p.title}</h4>
-                        <p className="text-xs text-foreground/60">{p.experience}</p>
-                      </div>
-                      <Badge variant="outline" className="text-xs">{p.salary}</Badge>
+              <CardContent className="space-y-4">
+                {path.positions.map((p) => (
+                  <div key={p.title} className="border-b border-border/50 pb-3 last:border-0 last:pb-0">
+                    <h4 className="font-semibold text-sm text-bsd-gray">{p.title}</h4>
+                    <div className="flex items-center gap-2 mt-1">
+                      <Badge variant="outline" className="text-[10px]">{p.experience}</Badge>
+                      <span className="text-xs text-bsd-orange font-medium">{p.salary}</span>
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </CardContent>
             </Card>
           ))}
         </div>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-lg">Potential Employers</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="flex flex-wrap gap-2">
+              {employers.map((e) => (
+                <Badge key={e} variant="outline" className="text-xs">{e}</Badge>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </RevealSection>
   );
