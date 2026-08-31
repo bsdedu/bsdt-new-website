@@ -147,9 +147,14 @@ const App = () => {
                   element={<DiplomaProgramGenerativeAIDesign />}
                 />
                 <Route
-                  path="/academics/post-graduate-diploma-integrated-construction-management"
+                  path="/academics/professional-diploma-interior-construction-project-management"
                   element={<DiplomaProgramIntegratedConstructionMgmt />}
                 />
+                <Route
+                  path="/academics/post-graduate-diploma-integrated-construction-management"
+                  element={<Navigate to="/academics/professional-diploma-interior-construction-project-management" replace />}
+                />
+
                 {/* Admissions Routes */}
                 {/* Backwards-compatible redirect (legacy URL) */}
                 <Route path="/admissions/studio-bsd" element={<Navigate to="/studio-bsd" replace />} />
