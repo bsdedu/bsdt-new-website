@@ -132,7 +132,7 @@ const diplomaPrograms: Program[] = [
 ];
 
 export const ProgramsSection: React.FC = () => {
-  const [activeTab, setActiveTab] = useState("undergraduate");
+  const [activeTab, setActiveTab] = useState("diploma");
   
   return (
     <section id="programs" className="relative py-[20px] my-0">
