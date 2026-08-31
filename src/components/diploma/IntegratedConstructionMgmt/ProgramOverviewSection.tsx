@@ -31,10 +31,11 @@ export const ProgramOverviewSection: React.FC = () => {
               <h3 className="text-2xl font-bold text-bsd-gray">Program Highlights</h3>
               <div className="space-y-4">
                 {[
-                  'Integrates technical construction knowledge with digital tools',
-                  'Transition from drawings and BIM models to practical site execution',
-                  'Skill-building in MEP coordination, documentation, scheduling and cost management',
+                  'Complete interior project execution training from drawings to completion',
+                  'Strong focus on the design-to-execution gap in the interior industry',
+                  'Professional training in BOQ, quantity estimation, costing, billing and contracts',
                   '16 months total — 12 months coursework + 4 months internship (3 days a week)'
+
                 ].map((t) => (
                   <div key={t} className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-bsd-orange mt-1 flex-shrink-0" />
