@@ -6,12 +6,12 @@ import { Building2, Cog, Layers, ClipboardCheck, HardHat, Calendar } from 'lucid
 
 export const ProgramFeatures: React.FC = () => {
   const items = [
-    { icon: Cog, title: 'MEP & Building Services', text: 'Hands-on training in mechanical, electrical, plumbing, HVAC, and fire safety system coordination.' },
-    { icon: Layers, title: 'BIM-Led Workflows', text: 'Revit, Navisworks and BIM processes for intelligent modelling, clash detection, and coordination.' },
-    { icon: ClipboardCheck, title: 'Documentation & Standards', text: 'BIM standards, digital project delivery, and professional documentation practices.' },
-    { icon: HardHat, title: 'Site Execution Focus', text: 'Practical exposure to construction operations, quality checks, and site supervision.' },
-    { icon: Building2, title: 'Industry Internship', text: '4-month internship across residential, commercial, and infrastructure projects.' },
-    { icon: Calendar, title: 'Working-Friendly Schedule', text: '3 days a week, structured for focused learning alongside professional commitments.' },
+    { icon: Layers, title: 'Drawings to Completion', text: 'Complete interior project execution training covering the full design-to-execution gap.' },
+    { icon: ClipboardCheck, title: 'BOQ, Costing & Billing', text: 'Professional training in quantity estimation, BOQ, costing, billing, and contracts.' },
+    { icon: Cog, title: 'Planning & Procurement', text: 'Construction planning, scheduling, procurement, and resource coordination.' },
+    { icon: HardHat, title: 'Site Operations & Safety', text: 'Hands-on understanding of site operations, quality control, and construction safety.' },
+    { icon: Building2, title: '3-Month Professional Internship', text: 'Dedicated industry internship plus a capstone simulating a complete interior construction project.' },
+    { icon: Calendar, title: 'Working-Friendly Schedule', text: '16 months (12+4), three days a week — structured for students and working professionals.' },
   ];
 
   return (
@@ -24,7 +24,7 @@ export const ProgramFeatures: React.FC = () => {
               What Makes This Program Exceptional
             </h2>
             <p className="text-lg text-foreground/70">
-              An industry-focused program that integrates technical construction knowledge with BIM technology, site operations, and project delivery.
+              This is not another interior design course. ICPM teaches you how interior projects actually get built.
             </p>
           </div>
         </RevealSection>

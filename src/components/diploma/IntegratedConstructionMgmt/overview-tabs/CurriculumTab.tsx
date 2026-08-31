@@ -6,33 +6,41 @@ import { CheckCircle } from 'lucide-react';
 
 const semesters = [
   {
-    title: 'Semester 1 : Building Systems and Construction Coordination',
+    title: 'Semester 1: Foundations of Interior Construction and Technical Understanding',
     modules: [
-      { name: 'Building Services and MEP Systems', desc: 'Understanding mechanical, electrical, and plumbing systems used in modern construction projects.' },
-      { name: 'HVAC Fundamentals', desc: 'Learning heating, ventilation, and air-conditioning principles, system components, and practical building applications.' },
-      { name: 'Electrical Systems Integration', desc: 'Understanding electrical layouts, power distribution, lighting systems, and coordination requirements.' },
-      { name: 'Plumbing and Fire Safety Systems', desc: 'Exploring water supply, drainage systems, firefighting systems, safety standards, and service coordination.' },
-      { name: 'Building Services Coordination', desc: 'Learning how architectural, structural, and MEP systems are integrated for successful project execution.' },
+      { name: 'Construction Technology & Materials', desc: 'Understanding interior construction systems, building materials, construction methods, specifications, finishes, and material applications.' },
+      { name: 'Architectural & Structural Drawings', desc: 'Learning to read and interpret architectural, interior, structural, electrical, plumbing, MEP drawings, details, dimensions, scales, and drawing conventions.' },
+      { name: 'Introduction to Project Management', desc: 'Understanding project lifecycle, stakeholders, client requirements, contractors, consultants, vendors, project scope, documentation, coordination, and professional workflows.' },
+      { name: 'Workshop: Detailing & Drafting', desc: 'Practical understanding of plans, sections, elevations, construction details, joinery, material junctions, and drawing-based construction interpretation.' },
     ],
   },
   {
-    title: 'Semester 2: BIM and Digital Construction Workflows',
+    title: 'Semester 2: Planning, Quantification & Costing',
     modules: [
-      { name: 'Autodesk Revit and BIM Modelling', desc: 'Developing skills in creating intelligent building models, documentation, and construction information management.' },
-      { name: 'Navisworks and Project Coordination', desc: 'Learning model coordination, review processes, and collaborative BIM workflows.' },
-      { name: 'Clash Detection and Resolution', desc: 'Understanding interdisciplinary coordination, identifying conflicts, and solving construction challenges before execution.' },
-      { name: 'BIM Processes and Industry Workflows', desc: 'Exploring BIM standards, digital project delivery methods, documentation systems, and professional practices.' },
+      { name: 'Estimating, Costing & BOQ', desc: 'Learning quantity take-off, measurement, rate analysis, material and labour costing, BOQ preparation, budgeting, specifications, and cost control.' },
+      { name: 'Construction Planning & Scheduling', desc: 'Understanding work breakdown structures, sequencing, dependencies, resource planning, procurement planning, project schedules, CPM/PERT, progress tracking, and delay management.' },
+      { name: 'Contracts & Billing', desc: 'Understanding construction contracts, tendering, work orders, contractor bills, measurements, payment processes, variations, claims, and commercial documentation.' },
+      { name: 'Workshop: Site Layout & Planning', desc: 'Practical learning in site mobilisation, site layout, material storage, logistics, work sequencing, site planning, and project scheduling.' },
     ],
   },
   {
-    title: 'Semester 3: Construction Management and Project Execution',
+    title: 'Semester 3: Management, Coordination & Project Delivery',
     modules: [
-      { name: 'Construction Planning and Scheduling', desc: 'Learning project planning methods, timelines, resource allocation, and construction sequencing.' },
-      { name: 'Cost Estimation and BOQ Preparation', desc: 'Understanding quantity estimation, budgeting, tender documents, and cost control processes.' },
-      { name: 'Site Execution and Management', desc: 'Developing practical knowledge of construction operations, quality checks, coordination, and site supervision.' },
-      { name: 'Project Lifecycle Management', desc: 'Understanding complete project stages from planning and design coordination to execution and handover.' },
+      { name: 'Site Operations & Quality Management', desc: 'Learning site supervision, quality control, inspection processes, site reporting, workmanship, change orders, snagging, defect identification, and project completion.' },
+      { name: 'Safety Management', desc: 'Understanding construction safety, occupational health, risk identification, electrical and fire safety, working at height, material handling, PPE, and site safety procedures.' },
+      { name: 'Leadership & Communication', desc: 'Developing skills in team coordination, contractor and vendor communication, client communication, site meetings, conflict resolution, reporting, and stakeholder management.' },
+      { name: 'Capstone Project: Real-World Interior Construction Project', desc: 'A comprehensive project integrating drawing interpretation, BOQ, costing, procurement, scheduling, site planning, coordination, quality, billing, and project delivery.' },
     ],
   },
+];
+
+const outcomes = [
+  'Technical construction understanding and drawing interpretation skills',
+  'BOQ, estimation, costing, billing and scheduling knowledge',
+  'Procurement, contractor and vendor coordination skills',
+  'Site management exposure with quality-control and safety awareness',
+  'Professional communication and project documentation skills',
+  'Industry internship and a comprehensive project-management capstone',
 ];
 
 export const CurriculumTab: React.FC = () => {
@@ -40,51 +48,49 @@ export const CurriculumTab: React.FC = () => {
     <RevealSection>
       <div className="space-y-8">
         <div className="text-center">
-          <h3 className="text-2xl font-bold text-bsd-gray mb-4">Course Structure</h3>
+          <Badge variant="bsdOrange" className="mb-4">Course Structure</Badge>
+          <h3 className="text-2xl font-bold text-bsd-gray mb-4">Professional Diploma Curriculum Structure</h3>
           <p className="text-foreground/70 max-w-3xl mx-auto">
-            A 16-month (12 + 4) program delivered three days a week, structured across progressive learning modules in building services, BIM technology, construction planning, site operations, and professional project coordination, followed by a four-month industry internship.
+            A 16-month programme (12 months coursework + 4 months internship, 3 days a week) delivered across three
+            progressive semesters that take students from drawings to site execution and project completion.
           </p>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-6">
           {semesters.map((sem) => (
             <Card key={sem.title}>
               <CardHeader>
-                <div className="flex justify-between items-start gap-4">
-                  <CardTitle className="text-xl">{sem.title}</CardTitle>
-                  <Badge variant="outline">4 months</Badge>
-                </div>
+                <CardTitle className="text-xl text-bsd-gray">{sem.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="grid md:grid-cols-2 gap-6">
                   {sem.modules.map((m) => (
-                    <div key={m.name}>
-                      <h4 className="font-semibold text-bsd-gray mb-2 flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-bsd-orange mt-1 flex-shrink-0" />
-                        <span>{m.name}</span>
-                      </h4>
-                      <p className="text-sm text-foreground/70 pl-6">{m.desc}</p>
+                    <div key={m.name} className="space-y-1">
+                      <h4 className="font-semibold text-bsd-gray">{m.name}</h4>
+                      <p className="text-sm text-foreground/70">{m.desc}</p>
                     </div>
                   ))}
                 </div>
               </CardContent>
             </Card>
           ))}
-
-          <Card>
-            <CardHeader>
-              <div className="flex justify-between items-start gap-4">
-                <CardTitle className="text-xl">Industry Internship</CardTitle>
-                <Badge variant="outline">4 months</Badge>
-              </div>
-            </CardHeader>
-            <CardContent>
-              <p className="text-foreground/70">
-                A four-month on-site industry internship gives students hands-on exposure to real construction projects, BIM coordination workflows, MEP integration, and project management practices across residential, commercial, and infrastructure projects.
-              </p>
-            </CardContent>
-          </Card>
         </div>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-lg">Programme Outcomes</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid md:grid-cols-2 gap-4">
+              {outcomes.map((o) => (
+                <div key={o} className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-bsd-orange mt-0.5 flex-shrink-0" />
+                  <p className="text-sm text-foreground/80">{o}</p>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </RevealSection>
   );

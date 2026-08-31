@@ -19,8 +19,9 @@ export const ProgramOverviewSection: React.FC = () => {
               Course Introduction
             </h2>
             <p className="text-lg text-foreground/70">
-              The Post Graduate Diploma in Integrated Construction Management (PGD in ICM) is a comprehensive, industry-focused course designed to develop professional expertise in construction execution, building systems coordination, BIM workflows, and project management. The program enables students to understand how modern buildings are planned, coordinated, constructed, and delivered in real-world environments.
+              The Professional Diploma in Interior Construction &amp; Project Management (PD in ICPM) is a practice-oriented programme designed to develop professionals who can understand, coordinate, manage, and deliver interior construction projects from drawings to completion. It focuses on the execution side of the interior industry — construction technology, materials, drawing interpretation, quantity estimation, BOQs, costing, procurement, scheduling, site management, contractor and vendor coordination, billing, quality control, safety, and project documentation.
             </p>
+
           </div>
         </RevealSection>
 
@@ -30,10 +31,11 @@ export const ProgramOverviewSection: React.FC = () => {
               <h3 className="text-2xl font-bold text-bsd-gray">Program Highlights</h3>
               <div className="space-y-4">
                 {[
-                  'Integrates technical construction knowledge with digital tools',
-                  'Transition from drawings and BIM models to practical site execution',
-                  'Skill-building in MEP coordination, documentation, scheduling and cost management',
+                  'Complete interior project execution training from drawings to completion',
+                  'Strong focus on the design-to-execution gap in the interior industry',
+                  'Professional training in BOQ, quantity estimation, costing, billing and contracts',
                   '16 months total — 12 months coursework + 4 months internship (3 days a week)'
+
                 ].map((t) => (
                   <div key={t} className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-bsd-orange mt-1 flex-shrink-0" />
@@ -49,11 +51,12 @@ export const ProgramOverviewSection: React.FC = () => {
               <h3 className="text-2xl font-bold text-bsd-gray">What You'll Learn</h3>
               <div className="space-y-4">
                 {[
-                  'Building services, MEP systems and coordination',
-                  'BIM technology, Revit and Navisworks workflows',
-                  'Construction planning, scheduling and site operations',
-                  'Cost estimation, BOQ preparation and project delivery'
+                  'Construction technology, materials and technical drawings',
+                  'BOQ preparation, quantity estimation, costing and billing',
+                  'Construction planning, scheduling, procurement and contracts',
+                  'Site operations, quality control, safety and project documentation'
                 ].map((t) => (
+
                   <div key={t} className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-bsd-orange mt-1 flex-shrink-0" />
                     <p className="text-foreground/80">{t}</p>

@@ -10,11 +10,11 @@ export const HeroSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-bsd-gray">
-              Post Graduate Diploma in<br />
-              <span className="text-bsd-orange">Integrated Construction Management</span>
+              Professional Diploma in<br />
+              <span className="text-bsd-orange">Interior Construction &amp; Project Management</span>
             </h1>
             <p className="text-lg text-foreground/80 max-w-xl">
-              A 16-month (12+4) industry-focused programme that builds professional expertise in construction execution, building systems coordination, BIM workflows, and project management—delivered three days a week with a four-month internship.
+              A 16-month (12+4) practice-oriented programme, three days a week, that prepares professionals to understand, coordinate, manage, and deliver interior construction projects from drawings to completion.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <a href="#enquiry-form">
@@ -39,7 +39,7 @@ export const HeroSection: React.FC = () => {
                 <div className="rounded-xl overflow-hidden">
                   <img
                     src={masterResidentialHero}
-                    alt="Post Graduate Diploma in Integrated Construction Management"
+                    alt="Professional Diploma in Interior Construction and Project Management"
                     className="w-full h-[350px] object-cover"
                   />
                 </div>
