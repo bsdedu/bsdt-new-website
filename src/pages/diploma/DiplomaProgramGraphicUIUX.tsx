@@ -48,7 +48,7 @@ const DiplomaProgramGraphicUIUX: React.FC = () => {
           </div>
         </section>
         <HybridLearningSection />
-        <CertificationPathwaySection />
+        <CertificationPathwaySection academicMonths={8} semesterCount={2} />
         <BatchScheduleSection />
         <ProgramFeatures />
         
