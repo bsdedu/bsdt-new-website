@@ -117,9 +117,9 @@ const Index = () => {
             />
           </div>
           
+          <HomeBannerCarousel />
           <PGDResidentialHero />
           <ProgramsSection />
-          <HomeBannerCarousel />
           <WhyChooseSection />
           <InfoGraphicsSection />
           <AIEnhancedLearningSection />
