@@ -22,18 +22,6 @@ export const navStructure: NavStructure[] = [
     type: 'megamenu',
     categories: [
       {
-        title: 'UG DEGREE PROGRAMS',
-        items: [
-          { name: 'B.Sc Interior Design', href: '/academics/bsc-interior-design' },
-          { name: 'BVA Graphic & Communication Design', href: '/academics/bva-graphic-design' },
-          { name: 'BVA Interior & Spatial Design', href: '/academics/bva-interior-spatial-design' },
-          
-          { name: 'BVA Animation & Game Art', href: '/bva-animation-and-multimedia-game-design' },
-          { name: 'BCA with UI/UX & AI/ML', href: '/academics/b-computer-application-ui-ux' },
-          { name: 'BCA with Data Analytics & Cyber Security', href: '/academics/bca-data-analytics-cyber-security' }
-        ]
-      },
-      {
         title: 'DIPLOMA PROGRAMS',
         items: [
           { name: 'Professional Dip. in Interior Design', href: '/academics/professional-diploma-in-interior-design' },
@@ -42,6 +30,18 @@ export const navStructure: NavStructure[] = [
           { name: 'Professional Dip. in UI & UX', href: '/academics/diploma-in-hci-for-ui-ux' },
           { name: 'Post Graduate Diploma in Residential Architecture and Design', href: '/academics/master-diploma-in-interior-design' },
           { name: 'Professional Diploma in Interior Construction & Project Management', href: '/academics/professional-diploma-interior-construction-project-management' }
+        ]
+      },
+      {
+        title: 'UG DEGREE PROGRAMS',
+        items: [
+          { name: 'B.Sc Interior Design', href: '/academics/bsc-interior-design' },
+          { name: 'BVA Graphic & Communication Design', href: '/academics/bva-graphic-design' },
+          { name: 'BVA Interior & Spatial Design', href: '/academics/bva-interior-spatial-design' },
+
+          { name: 'BVA Animation & Game Art', href: '/bva-animation-and-multimedia-game-design' },
+          { name: 'BCA with UI/UX & AI/ML', href: '/academics/b-computer-application-ui-ux' },
+          { name: 'BCA with Data Analytics & Cyber Security', href: '/academics/bca-data-analytics-cyber-security' }
         ]
       }
     ]
