@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { RevealSection } from "../ui-elements/RevealSection";
 import { Badge } from "@/components/ui/badge";
-import { BookOpen, Palette, Globe } from "lucide-react";
+import { Plane, Palette, Globe } from "lucide-react";
 import { Card, CardHeader, CardContent } from "../ui-elements/Card";
 import { Link } from "react-router-dom";
 import advantageInternships from "@/assets/advantage-international-internships.jpg";
