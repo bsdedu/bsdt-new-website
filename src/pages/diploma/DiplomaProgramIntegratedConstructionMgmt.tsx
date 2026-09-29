@@ -32,7 +32,7 @@ const DiplomaProgramIntegratedConstructionMgmt: React.FC = () => {
         <ProgramOverviewSection />
         <MasterInteriorPhotosSection />
         <HybridLearningSection />
-        <CertificationPathwaySection />
+        <CertificationPathwaySection description="One month of structured portfolio and career development, culminating in an industry-ready portfolio, followed by a minimum three-month internship designed to help graduates transition confidently into the professional world." />
         <BatchScheduleSection />
         <ProgramFeatures />
         <EnquiryFormSection />
