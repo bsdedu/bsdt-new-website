@@ -34,44 +34,6 @@ const galleryItems: {
   description?: string;
   techniques?: string[];
 }[] = [
-  // Sports Events images
-  {
-    type: "image",
-    category: "Sports Events",
-    image: "/lovable-uploads/270f0f33-e625-4067-987a-39682c51de31.png",
-    caption: "Football match on campus with students playing in yellow and blue jerseys"
-  },
-  {
-    type: "image",
-    category: "Sports Events",
-    image: "/lovable-uploads/1cdeaa2b-5009-4a7d-b2fa-a912996acf79.png",
-    caption: "Golden Claws team resting by the sidelines during a sports event"
-  },
-  {
-    type: "image",
-    category: "Sports Events",
-    image: "/lovable-uploads/9ff3e25b-a93f-40fb-87ff-cd765e063b61.png",
-    caption: "Sports team celebration with students and faculty after a victory"
-  },
-  {
-    type: "image",
-    category: "Sports Events",
-    image: "/lovable-uploads/c0c5b503-eeb4-4331-ae7e-38ef5d9f2675.png",
-    caption: "Basketball practice in the enclosed court with Crimson Blades players"
-  },
-  {
-    type: "image",
-    category: "Sports Events",
-    image: "/lovable-uploads/c9727b90-962e-4b3e-be56-d9c05c7ddcbb.png",
-    caption: "Students posing after a sports competition with medals"
-  },
-  {
-    type: "image",
-    category: "Sports Events",
-    image: "/lovable-uploads/275a175a-0d92-43ee-b13d-136f76aa4f00.png",
-    caption: "Basketball match between students in the outdoor court"
-  },
-  
   // Campus Life images (existing)
   {
     type: "image",
