@@ -12,7 +12,7 @@ export const HeroSection: React.FC = () => {
           <div className="space-y-6">
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-bsd-gray">
-              Professional Post Graduate Diploma in<br />
+              Post Graduate Diploma in<br />
               <span className="text-bsd-orange">Landscape Design</span>
             </h1>
             
