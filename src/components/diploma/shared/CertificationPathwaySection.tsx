@@ -23,9 +23,9 @@ export const CertificationPathwaySection: React.FC<CertificationPathwaySectionPr
             <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
               The 3+1 <span className="text-bsd-orange">Advantage</span>
             </h2>
-            <p className="mt-4 text-foreground/70">
-              Following the {academicMonths}-month academic program ({semesterCount} semesters of 4 months each), students enter the 3+1 Internship Advantage—three months of industry internship and one month of guided portfolio development. Expert portfolio reviews and dual certification ensure graduates enter the job market with professional validation and a clear competitive edge.
-            </p>
+              <p className="mt-4 text-foreground/70">
+                {introText ?? `Following the ${academicMonths}-month academic program (${semesterCount} semesters of 4 months each), students enter the 3+1 Internship Advantage—three months of industry internship and one month of guided portfolio development.`} Expert portfolio reviews and dual certification ensure graduates enter the job market with professional validation and a clear competitive edge.
+              </p>
           </div>
         </RevealSection>
 
