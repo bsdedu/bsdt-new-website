@@ -25,7 +25,7 @@ export const HomeBannerCarousel: React.FC = () => {
       image: "/lovable-uploads/0ae77c0c-8ef4-404c-abf0-bb90598dfbf4.png",
       title: "Hybrid Diploma Programs",
       subtitle: "Learn From Anywhere",
-      description: "Learn From Anywhere\nSatellite Partners In Delhi, Raipur, And Coimbatore",
+      description: "Industry-focused diploma programs designed for flexible learning and professional excellence.",
       ctaLabel: "Explore Programs",
       ctaHref: "#programs"
     },
