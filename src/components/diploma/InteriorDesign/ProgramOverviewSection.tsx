@@ -77,32 +77,50 @@ export const ProgramOverviewSection: React.FC = () => {
                 <Card className="p-6">
                   <h3 className="text-xl font-bold text-bsd-gray mb-4 flex items-center">
                     <span className="w-8 h-8 rounded-full bg-bsd-orange text-white flex items-center justify-center mr-3 text-sm">1</span>
-                    Semester 1: Foundation
+                    Semester 1: Foundations of Interior Design and Design Development
                   </h3>
-                  <ul className="space-y-3">
+                  <ul className="space-y-4">
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Design Fundamentals & Colour Theory</span>
+                      <div>
+                        <span className="font-semibold text-bsd-gray">Interior Materials and Applications</span>
+                        <p className="text-sm text-foreground/70">Understanding interior materials, finishes, properties, and their practical applications in design projects.</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Space Planning & Furniture Layout</span>
+                      <div>
+                        <span className="font-semibold text-bsd-gray">History and Theory of Design</span>
+                        <p className="text-sm text-foreground/70">Exploring design movements, interior styles, historical influences, and design theories.</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Materials & Finishes</span>
+                      <div>
+                        <span className="font-semibold text-bsd-gray">Lighting Design and Interior Services</span>
+                        <p className="text-sm text-foreground/70">Learning lighting principles, interior services, and integration of technical systems within spaces.</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>AutoCAD for Interior Design</span>
+                      <div>
+                        <span className="font-semibold text-bsd-gray">Design Thinking and Prototyping</span>
+                        <p className="text-sm text-foreground/70">Developing creative problem-solving skills through concepts, models, and prototypes.</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Residential Design: Kitchens & Bathrooms</span>
+                      <div>
+                        <span className="font-semibold text-bsd-gray">Digital Design I</span>
+                        <p className="text-sm text-foreground/70">Introduction to digital tools, drafting methods, and visual presentation techniques.</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Design Studio Projects</span>
+                      <div>
+                        <span className="font-semibold text-bsd-gray">Design Studio I</span>
+                        <p className="text-sm text-foreground/70">Studio-based learning focused on space planning, concepts, and residential interior projects.</p>
+                      </div>
                     </li>
                   </ul>
                 </Card>
@@ -110,32 +128,50 @@ export const ProgramOverviewSection: React.FC = () => {
                 <Card className="p-6">
                   <h3 className="text-xl font-bold text-bsd-gray mb-4 flex items-center">
                     <span className="w-8 h-8 rounded-full bg-bsd-orange text-white flex items-center justify-center mr-3 text-sm">2</span>
-                    Semester 2: Advanced
+                    Semester 2: Advanced Interior Design and Professional Integration
                   </h3>
-                  <ul className="space-y-3">
+                  <ul className="space-y-4">
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>SketchUp & 3D Visualization</span>
+                      <div>
+                        <span className="font-semibold text-bsd-gray">Artificial Intelligence and Building Automation</span>
+                        <p className="text-sm text-foreground/70">Introduction to smart technologies, automation systems, and AI applications in interior environments.</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Residential Design: Wardrobes & Home Offices</span>
+                      <div>
+                        <span className="font-semibold text-bsd-gray">Interior Detailing and Costing</span>
+                        <p className="text-sm text-foreground/70">Learning working drawings, furniture detailing, BOQ preparation, and project costing.</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Commercial Interior Design</span>
+                      <div>
+                        <span className="font-semibold text-bsd-gray">Sustainable Design Elements</span>
+                        <p className="text-sm text-foreground/70">Understanding sustainable practices, eco-friendly materials, and responsible interior solutions.</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Industry & Vendor Walkthroughs</span>
+                      <div>
+                        <span className="font-semibold text-bsd-gray">Adaptive Temporary Environments</span>
+                        <p className="text-sm text-foreground/70">Exploring flexible spaces, temporary environments, and adaptive design approaches.</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Portfolio Development</span>
+                      <div>
+                        <span className="font-semibold text-bsd-gray">Digital Design II</span>
+                        <p className="text-sm text-foreground/70">Advanced training in 3D modelling, visualization, rendering, and professional presentations.</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Final Design Projects & Presentations</span>
+                      <div>
+                        <span className="font-semibold text-bsd-gray">Design Studio II</span>
+                        <p className="text-sm text-foreground/70">Advanced studio projects covering commercial interiors, client briefs, and portfolio development.</p>
+                      </div>
                     </li>
                   </ul>
                 </Card>
