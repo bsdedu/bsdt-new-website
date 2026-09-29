@@ -35,7 +35,6 @@ export const CollaborationsSection: React.FC = () => {
     { id: "5", name: "Le Roma Gardenia", logo: "/lovable-uploads/4618c0c6-c363-42fa-95d6-876943724e39.png" },
     { id: "6", name: "DEFA", logo: "/lovable-uploads/8b983b3f-fd59-44d3-b5cc-152eeffe62cd.png" },
     { id: "7", name: "Chhabria Tiles", logo: "/lovable-uploads/2e795579-a635-4a82-aad6-cd87ba1f0232.png" },
-    { id: "8", name: "IIID", logo: "/lovable-uploads/eab37b09-9b31-4fe2-b26c-92bdf0d74782.png" },
     { id: "9", name: "Design Studio", logo: "/lovable-uploads/4816c26c-074c-48c3-a97f-1e9c7d5a02ca.png" },
     { id: "10", name: "Slate", logo: "/lovable-uploads/e717df8a-d41c-41e2-aead-5ec816cebd6e.png" },
     { id: "11", name: "Checkered Spaces", logo: "/lovable-uploads/d71fbd34-89ed-4cbd-a417-f5c33e220758.png" },
