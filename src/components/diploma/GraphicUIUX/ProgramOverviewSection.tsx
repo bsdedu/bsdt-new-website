@@ -77,65 +77,101 @@ export const ProgramOverviewSection: React.FC = () => {
                 <Card className="p-6">
                   <h3 className="text-xl font-bold text-bsd-gray mb-4 flex items-center">
                     <span className="w-8 h-8 rounded-full bg-bsd-orange text-white flex items-center justify-center mr-3 text-sm">1</span>
-                    Semester 1: Foundation
+                    Semester 1: Foundations of Visual Communication and Digital Design
                   </h3>
-                  <ul className="space-y-3">
+                  <ul className="space-y-4">
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Visual Communication Fundamentals</span>
+                      <div>
+                        <span className="font-semibold text-bsd-gray">Theory of Visual Communication</span>
+                        <p className="text-sm text-foreground/70">Understanding visual language, communication principles, design fundamentals, composition, and how visuals influence audiences.</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Typography & Color Theory</span>
+                      <div>
+                        <span className="font-semibold text-bsd-gray">Drawing for Designers</span>
+                        <p className="text-sm text-foreground/70">Developing sketching, observation, creative thinking, and visualization skills required for professional designers.</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Branding Strategies & Identity Design</span>
+                      <div>
+                        <span className="font-semibold text-bsd-gray">Typography</span>
+                        <p className="text-sm text-foreground/70">Exploring type design, font selection, hierarchy, layouts, and effective communication through typography.</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Adobe Creative Suite (Photoshop, Illustrator)</span>
+                      <div>
+                        <span className="font-semibold text-bsd-gray">Digital Imaging & Illustration Techniques with AI</span>
+                        <p className="text-sm text-foreground/70">Learning digital design tools, image creation, illustration techniques, AI-powered workflows, and creative digital production.</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Digital Illustration & Vector Graphics</span>
+                      <div>
+                        <span className="font-semibold text-bsd-gray">Integration of Emotional Intelligence in Design Thinking</span>
+                        <p className="text-sm text-foreground/70">Developing user-focused problem-solving skills through empathy, research, creativity, and human-centered design approaches.</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Studio Projects & Critiques</span>
+                      <div>
+                        <span className="font-semibold text-bsd-gray">Design Project I</span>
+                        <p className="text-sm text-foreground/70">Studio-based learning focused on branding, visual communication, digital design projects, and portfolio development.</p>
+                      </div>
                     </li>
                   </ul>
                 </Card>
-                
+
                 <Card className="p-6">
                   <h3 className="text-xl font-bold text-bsd-gray mb-4 flex items-center">
                     <span className="w-8 h-8 rounded-full bg-bsd-orange text-white flex items-center justify-center mr-3 text-sm">2</span>
-                    Semester 2: Advanced
+                    Semester 2: Advanced Digital Media and Professional Integration
                   </h3>
-                  <ul className="space-y-3">
+                  <ul className="space-y-4">
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>UI/UX Fundamentals & Principles</span>
+                      <div>
+                        <span className="font-semibold text-bsd-gray">Theory of Marketing & Advertising</span>
+                        <p className="text-sm text-foreground/70">Understanding consumer behavior, advertising strategies, branding methods, campaigns, and creative communication.</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Wireframing & Prototyping Tools</span>
+                      <div>
+                        <span className="font-semibold text-bsd-gray">Dynamic Visuals with Motion Graphics</span>
+                        <p className="text-sm text-foreground/70">Learning animation principles, motion design, dynamic content creation, and engaging digital media production.</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Advertising & Digital Media</span>
+                      <div>
+                        <span className="font-semibold text-bsd-gray">Visual Storytelling & Video Editing</span>
+                        <p className="text-sm text-foreground/70">Exploring storytelling techniques, video production, editing workflows, and professional digital content creation.</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Design Sprints & Branding Exercises</span>
+                      <div>
+                        <span className="font-semibold text-bsd-gray">3D for Visual Communication Designers</span>
+                        <p className="text-sm text-foreground/70">Introduction to 3D modelling, visualization, digital environments, and creative applications in communication design.</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Portfolio Development</span>
+                      <div>
+                        <span className="font-semibold text-bsd-gray">Basic Principles of Photography and Videography</span>
+                        <p className="text-sm text-foreground/70">Learning camera techniques, composition, lighting, shooting methods, and visual documentation.</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Final Presentations & Design Reviews</span>
+                      <div>
+                        <span className="font-semibold text-bsd-gray">Design Project II</span>
+                        <p className="text-sm text-foreground/70">Advanced studio projects covering branding, digital campaigns, UI/UX concepts, creative portfolios, and industry-level presentations.</p>
+                      </div>
                     </li>
                   </ul>
                 </Card>
