@@ -81,7 +81,7 @@ export const HomeBannerCarousel: React.FC = () => {
   const currentSlideData = heroSlides[currentSlide];
 
   return (
-    <section className="py-8 md:py-10 lg:py-12">
+    <section className="pb-8 md:pb-10 lg:pb-12">
       <div className="relative w-full overflow-hidden h-[420px] md:h-[460px] lg:h-[480px] shadow-lg">
       {/* Background Images */}
       {heroSlides.map((slide, index) => (
