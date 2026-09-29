@@ -160,20 +160,19 @@ export const HomeBannerCarousel: React.FC = () => {
                   size="default"
                   className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-6"
                   onClick={() => {
-                    if (currentSlide === 1) { window.location.href = "/student-spotlight"; return; }
-                    if (currentSlide === 2) { window.location.href = "/academics/skill-enhancing-electives"; return; }
-                    if (currentSlide === 3) { window.location.href = "/design-iq"; return; }
-                    const section = document.getElementById('programs');
-                    if (section) {
-                      if (currentSlide === 0) {
+                    if (currentSlideData.ctaHref === "#programs") {
+                      const section = document.getElementById('programs');
+                      if (section) {
                         const diplomaTab = document.querySelector('[data-value="diploma"]') as HTMLButtonElement;
                         if (diplomaTab) diplomaTab.click();
+                        window.scrollTo({ top: section.offsetTop - 80, behavior: 'smooth' });
                       }
-                      window.scrollTo({ top: section.offsetTop - 80, behavior: 'smooth' });
+                      return;
                     }
+                    window.location.href = currentSlideData.ctaHref;
                   }}
                 >
-                  {currentSlide === 1 ? "View Student Works" : currentSlide === 2 ? "Explore Electives" : currentSlide === 3 ? "Take the Quiz" : "Explore Programs"}
+                  {currentSlideData.ctaLabel}
                 </Button>
               </div>
             </div>
