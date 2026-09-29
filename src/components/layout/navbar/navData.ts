@@ -63,7 +63,7 @@ export const navStructure: NavStructure[] = [
     ]
   },
   {
-    name: 'Campus Life',
+    name: 'Discover BSDT',
     href: '#campus-life',
     type: 'dropdown',
     items: [
