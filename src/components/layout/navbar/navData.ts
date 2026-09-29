@@ -74,7 +74,7 @@ export const navStructure: NavStructure[] = [
         ]
       },
       {
-        title: 'CAMPUS LIFE',
+        title: 'STUDENT LIFE',
         items: [
           { name: 'Student Spotlight', href: '/student-spotlight' },
           { name: 'Student Clubs', href: '/student-clubs' },
