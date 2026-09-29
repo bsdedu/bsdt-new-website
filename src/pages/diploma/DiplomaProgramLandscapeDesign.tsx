@@ -33,7 +33,7 @@ const DiplomaProgramLandscapeDesign: React.FC = () => {
         <ProgramOverviewSection />
         <LandscapePhotosSection />
         <HybridLearningSection />
-        <CertificationPathwaySection introText="Following the 16-month program (12 + 4), students enter the 3+1 Internship Advantage—three months of industry internship and one month of guided portfolio development." />
+        <CertificationPathwaySection introText="Following the 16-month program (12 + 4), students enter the 3+1 Internship Advantage—One month of structured portfolio and career development, culminating in an industry-ready portfolio, followed by a minimum three-month internship designed to help graduates transition confidently into the professional world." />
         <BatchScheduleSection />
         <ProgramFeatures />
         
