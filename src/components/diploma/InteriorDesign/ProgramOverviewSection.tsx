@@ -130,30 +130,48 @@ export const ProgramOverviewSection: React.FC = () => {
                     <span className="w-8 h-8 rounded-full bg-bsd-orange text-white flex items-center justify-center mr-3 text-sm">2</span>
                     Semester 2: Advanced Interior Design and Professional Integration
                   </h3>
-                  <ul className="space-y-3">
+                  <ul className="space-y-4">
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>SketchUp & 3D Visualization</span>
+                      <div>
+                        <span className="font-semibold text-bsd-gray">Artificial Intelligence and Building Automation</span>
+                        <p className="text-sm text-foreground/70">Introduction to smart technologies, automation systems, and AI applications in interior environments.</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Residential Design: Wardrobes & Home Offices</span>
+                      <div>
+                        <span className="font-semibold text-bsd-gray">Interior Detailing and Costing</span>
+                        <p className="text-sm text-foreground/70">Learning working drawings, furniture detailing, BOQ preparation, and project costing.</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Commercial Interior Design</span>
+                      <div>
+                        <span className="font-semibold text-bsd-gray">Sustainable Design Elements</span>
+                        <p className="text-sm text-foreground/70">Understanding sustainable practices, eco-friendly materials, and responsible interior solutions.</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Industry & Vendor Walkthroughs</span>
+                      <div>
+                        <span className="font-semibold text-bsd-gray">Adaptive Temporary Environments</span>
+                        <p className="text-sm text-foreground/70">Exploring flexible spaces, temporary environments, and adaptive design approaches.</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Portfolio Development</span>
+                      <div>
+                        <span className="font-semibold text-bsd-gray">Digital Design II</span>
+                        <p className="text-sm text-foreground/70">Advanced training in 3D modelling, visualization, rendering, and professional presentations.</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-bsd-orange mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Final Design Projects & Presentations</span>
+                      <div>
+                        <span className="font-semibold text-bsd-gray">Design Studio II</span>
+                        <p className="text-sm text-foreground/70">Advanced studio projects covering commercial interiors, client briefs, and portfolio development.</p>
+                      </div>
                     </li>
                   </ul>
                 </Card>
