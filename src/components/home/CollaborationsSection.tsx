@@ -18,6 +18,7 @@ import partnerIIID from "@/assets/partner-iiid.png";
 import partnerAICTE from "@/assets/partner-aicte.png";
 import partnerADI from "@/assets/partner-adi.png";
 import partnerUniversityOfMysore from "@/assets/partner-university-of-mysore.png";
+import partnerBaliInternships from "@/assets/partner-bali-internships.png";
 
 interface Partner {
   id: string;
