@@ -120,15 +120,15 @@ const diplomaPrograms: Program[] = [
 ];
 
 export const ExplorePrograms: React.FC = () => {
-  const [activeTab, setActiveTab] = useState("undergraduate");
+  const [activeTab, setActiveTab] = useState("diploma");
   
   return (
     <div>
-      <Tabs defaultValue="undergraduate" value={activeTab} onValueChange={setActiveTab} className="w-full">
+      <Tabs defaultValue="diploma" value={activeTab} onValueChange={setActiveTab} className="w-full">
         <div className="flex justify-center mb-8">
           <TabsList className="grid grid-cols-2 w-full max-w-md">
-            <TabsTrigger value="undergraduate">Undergraduate</TabsTrigger>
             <TabsTrigger value="diploma">Diploma Programs</TabsTrigger>
+            <TabsTrigger value="undergraduate">Undergraduate</TabsTrigger>
           </TabsList>
         </div>
 
