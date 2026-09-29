@@ -46,6 +46,7 @@ export const CollaborationsSection: React.FC = () => {
     { id: "17", name: "Lollypop Design", logo: "/lovable-uploads/9c2c1fa3-d5a1-4a00-964d-96697da1bbeb.png" },
     { id: "18", name: "Studio Tale", logo: "/lovable-uploads/95442d0d-92a2-407b-8bf3-691152ab5174.png" },
     { id: "19", name: "Parallel Studios", logo: "/lovable-uploads/1cb9ba0e-e43a-41a3-be10-2df87a94d509.png" },
+    { id: "20", name: "Bali Internships", logo: "/lovable-uploads/bali-internships.jpg" },
   ];
 
   return (
