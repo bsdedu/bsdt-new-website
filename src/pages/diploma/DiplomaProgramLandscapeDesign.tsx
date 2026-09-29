@@ -33,7 +33,7 @@ const DiplomaProgramLandscapeDesign: React.FC = () => {
         <ProgramOverviewSection />
         <LandscapePhotosSection />
         <HybridLearningSection />
-        <CertificationPathwaySection />
+        <CertificationPathwaySection academicMonths={12} semesterCount={3} />
         <BatchScheduleSection />
         <ProgramFeatures />
         

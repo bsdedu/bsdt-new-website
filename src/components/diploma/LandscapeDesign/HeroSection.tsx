@@ -17,7 +17,7 @@ export const HeroSection: React.FC = () => {
             </h1>
             
             <p className="text-lg text-foreground/80 max-w-xl">
-              A 12-month hybrid program blending live online classes with offline, real-world learning at our Bangalore campus or Satellite Partner Centres in Raipur, Hyderabad, Delhi & Coimbatore.
+              A 16-month (12 + 4) hybrid program blending live online classes with offline, real-world learning at our Bangalore campus or Satellite Partner Centres in Raipur, Hyderabad, Delhi & Coimbatore.
             </p>
             
             
