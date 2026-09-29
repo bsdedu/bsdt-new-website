@@ -13,7 +13,7 @@ export const PGDResidentialHero: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
           {/* Left column */}
           <div className="flex flex-col justify-center max-w-[540px] lg:mt-7">
-            <Badge variant="bsdOrange" className="w-fit mb-6">POST-GRADUATE DIPLOMA</Badge>
+            <Badge variant="bsdOrange" className="w-fit mb-6">OUR FLAGSHIP PROGRAM</Badge>
 
             <h2 className="font-display font-bold text-3xl md:text-4xl lg:text-[2.35rem] leading-tight mb-7">
               <span className="text-bsd-gray">Post-Graduate Diploma in</span>{' '}
