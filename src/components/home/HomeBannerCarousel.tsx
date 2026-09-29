@@ -2,7 +2,8 @@ import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { cn } from "@/lib/utils";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import electiveHero from "@/assets/advantage-electives.jpg";
+import studioHero from "@/assets/advantage-studio.jpg";
+import internshipsHero from "@/assets/advantage-international-internships.jpg";
 import designIqHero from "@/assets/quiz/design-iq-hero.jpg";
 
 interface HeroSlide {
@@ -10,6 +11,8 @@ interface HeroSlide {
   title: string;
   subtitle: string;
   description: string;
+  ctaLabel: string;
+  ctaHref: string;
 }
 
 export const HomeBannerCarousel: React.FC = () => {
@@ -22,25 +25,41 @@ export const HomeBannerCarousel: React.FC = () => {
       image: "/lovable-uploads/0ae77c0c-8ef4-404c-abf0-bb90598dfbf4.png",
       title: "Hybrid Diploma Programs",
       subtitle: "Learn From Anywhere",
-      description: "Learn From Anywhere\nSatellite Partners In Delhi, Raipur, And Coimbatore"
+      description: "Learn From Anywhere\nSatellite Partners In Delhi, Raipur, And Coimbatore",
+      ctaLabel: "Explore Programs",
+      ctaHref: "#programs"
     },
     {
       image: "/lovable-uploads/e48b8c13-052e-4d80-ada8-db3eaf003d21.png",
       title: "Student Spotlight",
       subtitle: "Celebrating Creativity",
-      description: "Explore exceptional student works across design disciplines. See how our students turn creative visions into stunning portfolios."
-    },
-    {
-      image: electiveHero,
-      title: "Skill-Enhancing Electives",
-      subtitle: "Industry-Ready Skills",
-      description: "Two mandatory certificate courses embedded in the UG curriculum — bridging academic foundations with real-world industry practice."
+      description: "Explore exceptional student works across design disciplines. See how our students turn creative visions into stunning portfolios.",
+      ctaLabel: "View Student Works",
+      ctaHref: "/student-spotlight"
     },
     {
       image: designIqHero,
       title: "Test Your Design IQ",
       subtitle: "Interactive Quiz",
-      description: "Think you know design? Take our quick 10-question quiz and discover your Design IQ score."
+      description: "Think you know design? Take our quick 10-question quiz and discover your Design IQ score.",
+      ctaLabel: "Take the Quiz",
+      ctaHref: "/design-iq"
+    },
+    {
+      image: studioHero,
+      title: "Studio BSD",
+      subtitle: "Real-World Design Experience",
+      description: "A state-of-the-art professional design studio inside the campus — digital labs, innovation spaces, and industry-grade tools for hands-on creative exploration.",
+      ctaLabel: "Explore Studio BSD",
+      ctaHref: "/studio-bsd"
+    },
+    {
+      image: internshipsHero,
+      title: "International Internships",
+      subtitle: "Global Exposure",
+      description: "Hands-on internship opportunities with global studios and industry partners — international exposure, professional networks, and real-world project experience.",
+      ctaLabel: "Discover Internships",
+      ctaHref: "/we-go-beyond-curriculum"
     }
   ];
 
@@ -141,20 +160,19 @@ export const HomeBannerCarousel: React.FC = () => {
                   size="default"
                   className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-6"
                   onClick={() => {
-                    if (currentSlide === 1) { window.location.href = "/student-spotlight"; return; }
-                    if (currentSlide === 2) { window.location.href = "/academics/skill-enhancing-electives"; return; }
-                    if (currentSlide === 3) { window.location.href = "/design-iq"; return; }
-                    const section = document.getElementById('programs');
-                    if (section) {
-                      if (currentSlide === 0) {
+                    if (currentSlideData.ctaHref === "#programs") {
+                      const section = document.getElementById('programs');
+                      if (section) {
                         const diplomaTab = document.querySelector('[data-value="diploma"]') as HTMLButtonElement;
                         if (diplomaTab) diplomaTab.click();
+                        window.scrollTo({ top: section.offsetTop - 80, behavior: 'smooth' });
                       }
-                      window.scrollTo({ top: section.offsetTop - 80, behavior: 'smooth' });
+                      return;
                     }
+                    window.location.href = currentSlideData.ctaHref;
                   }}
                 >
-                  {currentSlide === 1 ? "View Student Works" : currentSlide === 2 ? "Explore Electives" : currentSlide === 3 ? "Take the Quiz" : "Explore Programs"}
+                  {currentSlideData.ctaLabel}
                 </Button>
               </div>
             </div>
