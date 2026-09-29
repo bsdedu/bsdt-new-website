@@ -19,7 +19,7 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 // Import testimonials data to use for Student Interviews
 import { testimonials } from './TestimonialsSection';
 
-// Gallery items array with the sports events images
+// Gallery items array
 const galleryItems: {
   type: "image" | "video";
   category: string;
@@ -238,10 +238,10 @@ const studentInterviewItems = testimonials.map(testimonial => ({
 const allGalleryItems = [...galleryItems, ...studentInterviewItems];
 
 // Updated categories without "All" option
-const categories = ["Sports Events", "Campus Life", "Student Work", "Student Interviews"];
+const categories = ["Campus Life", "Student Work", "Student Interviews"];
 
 export const GallerySection: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState("Sports Events");
+  const [activeCategory, setActiveCategory] = useState("Campus Life");
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
   const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
@@ -474,13 +474,13 @@ export const GallerySection: React.FC = () => {
               Experience Our Vibrant Campus
             </h2>
             <p className="mt-4 text-foreground/70">
-              From sports activities to creative showcases and student experiences, our campus life offers a perfect blend of academics and extracurricular activities.
+              From creative showcases to student experiences, our campus life offers a perfect blend of academics and extracurricular activities.
             </p>
           </div>
         </RevealSection>
 
         <RevealSection delay={100}>
-          <Tabs defaultValue="Sports Events" className="w-full" onValueChange={setActiveCategory}>
+          <Tabs defaultValue="Campus Life" className="w-full" onValueChange={setActiveCategory}>
             <TabsList className="flex flex-wrap justify-center gap-1 mb-12 bg-transparent h-auto p-1">
               {categories.map((category) => (
                 <TabsTrigger 
