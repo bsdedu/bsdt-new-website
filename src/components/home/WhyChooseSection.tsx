@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { BookOpen, Palette, Globe } from "lucide-react";
 import { Card, CardHeader, CardContent } from "../ui-elements/Card";
 import { Link } from "react-router-dom";
-import advantageElectives from "@/assets/advantage-electives.jpg";
+import advantageInternships from "@/assets/advantage-international-internships.jpg";
 import advantageStudio from "@/assets/advantage-studio.jpg";
 import advantageBeyond from "@/assets/advantage-beyond.jpg";
 
@@ -62,11 +62,11 @@ const AdvantageCard: React.FC<AdvantageCardProps> = ({
 export const WhyChooseSection: React.FC = () => {
   const advantages = [
     {
-      icon: <BookOpen className="w-7 h-7 text-bsd-orange" />,
-      title: "Skill-Enhancing Electives",
-      description: "Industry-relevant certificate electives embedded into undergraduate programs — from Figma-based digital presentation to BIM, VFX, and design entrepreneurship.",
-      href: "/academics/skill-enhancing-electives",
-      image: advantageElectives
+      icon: <Plane className="w-7 h-7 text-bsd-orange" />,
+      title: "International Internships",
+      description: "Hands-on internship opportunities with global studios and industry partners — gaining international exposure, professional networks, and real-world project experience.",
+      href: "/we-go-beyond-curriculum",
+      image: advantageInternships
     },
     {
       icon: <Palette className="w-7 h-7 text-bsd-orange" />,
