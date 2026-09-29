@@ -65,14 +65,26 @@ export const navStructure: NavStructure[] = [
   {
     name: 'Discover BSDT',
     href: '#campus-life',
-    type: 'dropdown',
-    items: [
-      { name: 'Student Spotlight', href: '/student-spotlight' },
-      { name: 'Student Clubs', href: '/student-clubs' },
-      { name: 'Student Experience', href: '/student-experience' },
-      { name: 'Events & Activities', href: '/campus-life/events-activities' },
-      { name: 'Alumni & Placement Stories', href: '/alumni-stories' },
-      { name: 'Accommodation & Transport', href: '/housing-transport' }
+    type: 'megamenu',
+    categories: [
+      {
+        title: 'BSDT ADVANTAGE',
+        items: [
+          { name: 'Studio BSD', href: '/studio-bsd' },
+          { name: 'International Internships', href: '/we-go-beyond-curriculum' },
+          { name: 'We Go Beyond Curriculum', href: '/we-go-beyond-curriculum' }
+        ]
+      },
+      {
+        title: 'CAMPUS LIFE',
+        items: [
+          { name: 'Student Spotlight', href: '/student-spotlight' },
+          { name: 'Student Clubs', href: '/student-clubs' },
+          { name: 'Student Experience', href: '/student-experience' },
+          { name: 'Events & Activities', href: '/campus-life/events-activities' },
+          { name: 'Alumni & Placement Stories', href: '/alumni-stories' }
+        ]
+      }
     ]
   },
   {
