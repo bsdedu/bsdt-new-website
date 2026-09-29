@@ -77,7 +77,6 @@ export const navStructure: NavStructure[] = [
         title: 'STUDENT LIFE',
         items: [
           { name: 'Student Spotlight', href: '/student-spotlight' },
-          { name: 'Student Clubs', href: '/student-clubs' },
           { name: 'Student Experience', href: '/student-experience' },
           { name: 'Events & Activities', href: '/campus-life/events-activities' },
           { name: 'Alumni & Placement Stories', href: '/alumni-stories' }
