@@ -24,7 +24,7 @@ export const navStructure: NavStructure[] = [
       {
         title: 'DIPLOMA PROGRAMS',
         items: [
-          { name: 'Professional Dip. in Interior Design', href: '/academics/professional-diploma-in-interior-design' },
+          { name: 'Professional Diploma in Interior Design', href: '/academics/professional-diploma-in-interior-design' },
           { name: 'Professional Dip. Visual Communication Design + UI & UX', href: '/academics/professional-diploma-graphics-design-ui-ux' },
           { name: 'Post Grad Dip. Landscape Design', href: '/academics/post-graduate-diploma-in-landscape-design' },
           { name: 'Professional Dip. in UI & UX', href: '/academics/diploma-in-hci-for-ui-ux' },
