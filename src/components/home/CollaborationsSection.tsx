@@ -58,7 +58,7 @@ export const CollaborationsSection: React.FC = () => {
               Our Network
             </Badge>
             <h2 className="text-2xl md:text-3xl font-display font-bold tracking-tight text-bsd-gray">
-              Collaborations, Placements & Internships
+              Placements, Internships and Industry Connect
             </h2>
             <p className="mt-4 text-bsd-gray/70 max-w-2xl mx-auto">
               We work with leading industry partners to provide our students with real-world experience and opportunities.
