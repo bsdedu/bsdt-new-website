@@ -17,7 +17,7 @@ export const ProgramOverviewSection: React.FC = () => {
           <div className="text-center max-w-3xl mx-auto mb-12">
             <Badge variant="bsdOrange" className="mb-4">PROGRAM OVERVIEW</Badge>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
-              Professional Post Graduate Diploma in Landscape Design
+              Post Graduate Diploma in Landscape Design
             </h2>
             <p className="mt-4 text-foreground/70">
               This 16-month (12 + 4) hybrid program blends live online classes with offline, real-world learning at our Bangalore campus or Satellite Partner Centres in Raipur, Hyderabad, Delhi & Coimbatore. Online sessions cover core areas including design fundamentals, planting design, ecological planning, site planning, material applications, and cost estimation.

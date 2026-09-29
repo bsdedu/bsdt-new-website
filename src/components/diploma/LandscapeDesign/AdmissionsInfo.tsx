@@ -17,7 +17,7 @@ export const AdmissionsInfo: React.FC = () => {
               Program Details & Enrollment
             </h2>
             <p className="mt-4 text-foreground/70">
-              Join our Professional Post Graduate Diploma in Landscape Design program and start your journey toward becoming a skilled landscape design professional.
+              Join our Post Graduate Diploma in Landscape Design program and start your journey toward becoming a skilled landscape design professional.
             </p>
           </div>
         </RevealSection>
