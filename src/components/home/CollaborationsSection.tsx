@@ -145,6 +145,7 @@ export const CollaborationsSection: React.FC = () => {
                   { name: "AICTE", logo: partnerAICTE },
                   { name: "Association of Designers of India", logo: partnerADI },
                   { name: "University of Mysore", logo: partnerUniversityOfMysore },
+                  { name: "Bali Internships", logo: partnerBaliInternships },
                 ].map((partner) => (
                   <CarouselItem key={partner.name} className="basis-full">
                     <div className="flex items-center justify-center h-28 p-4">
