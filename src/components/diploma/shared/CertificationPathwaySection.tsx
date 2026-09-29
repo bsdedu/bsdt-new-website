@@ -6,11 +6,13 @@ import { Briefcase, FileCheck, Award, ArrowRight } from 'lucide-react';
 interface CertificationPathwaySectionProps {
   academicMonths?: number;
   semesterCount?: number;
+  introText?: string;
 }
 
 export const CertificationPathwaySection: React.FC<CertificationPathwaySectionProps> = ({
   academicMonths = 16,
-  semesterCount = 3
+  semesterCount = 3,
+  introText
 }) => {
   return (
     <section className="py-16 bg-gradient-to-b from-white to-bsd-light-gray/30">
