@@ -32,7 +32,9 @@ const DiplomaProgramIntegratedConstructionMgmt: React.FC = () => {
         <ProgramOverviewSection />
         <MasterInteriorPhotosSection />
         <HybridLearningSection />
-        <CertificationPathwaySection />
+        <CertificationPathwaySection
+          introText="Following the 16-month academic program (3 semesters of 4 months each), students enter the 3+1 Internship Advantage—One month of structured portfolio and career development, culminating in an industry-ready portfolio, followed by a minimum three-month internship designed to help graduates transition confidently into the professional world."
+        />
         <BatchScheduleSection />
         <ProgramFeatures />
         <EnquiryFormSection />
