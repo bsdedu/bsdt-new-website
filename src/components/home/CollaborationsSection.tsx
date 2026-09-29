@@ -120,7 +120,7 @@ export const CollaborationsSection: React.FC = () => {
               Our Partners & Affiliations
             </Badge>
             <h2 className="text-2xl md:text-3xl font-display font-bold tracking-tight text-bsd-gray">
-              Accreditations & Institutional Partners
+              Collaborations, Accreditations and Institutional Partners
             </h2>
             <p className="mt-4 text-bsd-gray/70 max-w-2xl mx-auto">
               We are proud to be affiliated with prestigious institutions and organizations worldwide.
