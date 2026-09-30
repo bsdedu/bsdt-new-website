@@ -18,7 +18,9 @@ export const HeroSection: React.FC = () => {
             </h1>
             
             <p className="text-lg text-foreground/80 max-w-xl">
-              The Professional Diploma in Interior Design blends creativity, technical expertise, and hands-on learning to shape refined, functional spaces. From concept to execution, explore space planning, materials, lighting, visualization, detailing, and project execution through studio-based, industry-focused learning.
+              The Professional Diploma in Interior Design (PD in ID) is a 12-month, studio-based program designed to transform creative ideas into thoughtfully designed, execution-ready spaces.
+              <br /><br />
+              Across 2 semesters, students explore space planning, materials, lighting, digital design, detailing, costing, sustainability, AI, and project execution through hands-on residential and commercial design projects.
             </p>
             
             
