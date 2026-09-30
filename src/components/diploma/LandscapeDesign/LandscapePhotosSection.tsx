@@ -2,7 +2,6 @@ import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import landscapeModel1 from "@/assets/landscape-model-1.jpg.asset.json";
 import landscapeStudio2 from "@/assets/landscape-studio-2.jpg.asset.json";
-import landscapeOrigami from "@/assets/landscape-origami.jpg.asset.json";
 
 export const LandscapePhotosSection: React.FC = () => {
   return (
