@@ -18,7 +18,10 @@ export const HeroSection: React.FC = () => {
             </h1>
             
             <p className="text-lg text-foreground/80 max-w-xl">
-              Join from anywhere. This 12-month hybrid programme combines live online learning with hands-on offline sessions at our Bangalore campus and Satellite Centres in Raipur, Hyderabad, Delhi & Coimbatore.
+              The Professional Diploma in Visual Communication Design + UI/UX is a 12-month, studio-based program that blends visual creativity with digital design and user experience.
+            </p>
+            <p className="text-lg text-foreground/80 max-w-xl">
+              Students explore branding, typography, digital design, storytelling, UI/UX, motion, photography, and visualisation, transforming ideas into engaging brand identities, digital experiences, and portfolio-ready projects.
             </p>
             
             
