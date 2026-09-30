@@ -16,9 +16,14 @@ export const HeroSection: React.FC = () => {
               <span className="text-bsd-orange">Landscape Design</span>
             </h1>
             
-            <p className="text-lg text-foreground/80 max-w-xl">
-              A 16-month (12 + 4) hybrid program blending live online classes with offline, real-world learning at our Bangalore campus or Satellite Partner Centres in Raipur, Hyderabad, Delhi & Coimbatore.
-            </p>
+            <div className="text-lg text-foreground/80 max-w-xl space-y-4">
+              <p>
+                The Post Graduate Diploma in Landscape Design is a 16-month, studio-based program focused on creating functional, sustainable, and visually engaging outdoor environments.
+              </p>
+              <p>
+                Students explore landscape planning, planting design, horticulture, ecology, landscape engineering, digital visualization, costing, and execution through hands-on projects ranging from gardens and residences to resorts and public spaces.
+              </p>
+            </div>
             
             
             <div className="flex flex-wrap gap-4 pt-4">
