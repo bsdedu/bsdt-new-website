@@ -2,7 +2,6 @@ import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
 import landscapeModel1 from "@/assets/landscape-model-1.jpg.asset.json";
 import landscapeStudio2 from "@/assets/landscape-studio-2.jpg.asset.json";
-import landscapeLearning4 from "@/assets/landscape-learning-4.png";
 
 export const LandscapePhotosSection: React.FC = () => {
   return (
@@ -36,8 +35,8 @@ export const LandscapePhotosSection: React.FC = () => {
 
             <div className="overflow-hidden rounded-xl shadow-lg">
               <img 
-                src={landscapeLearning4} 
-                alt="Student sketching landscape architectural plans with models" 
+                src="/lovable-uploads/landscape-origami.jpg" 
+                alt="Hand-crafted paper model of the Eiffel Tower with origami figures" 
                 className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
