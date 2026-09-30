@@ -18,7 +18,7 @@ export const HeroSection: React.FC = () => {
             </h1>
             
             <p className="text-lg text-foreground/80 max-w-xl">
-              Join from anywhere. This 12-month hybrid programme blends live online learning with real-world exposure through our Bangalore campus and Satellite Centres in Raipur, Hyderabad, Delhi & Coimbatore.
+              The Professional Diploma in Interior Design blends creativity, technical expertise, and hands-on learning to shape refined, functional spaces. From concept to execution, explore space planning, materials, lighting, visualization, detailing, and project execution through studio-based, industry-focused learning.
             </p>
             
             
