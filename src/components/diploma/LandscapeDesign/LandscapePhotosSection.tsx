@@ -35,7 +35,7 @@ export const LandscapePhotosSection: React.FC = () => {
 
             <div className="overflow-hidden rounded-xl shadow-lg">
               <img 
-                src={landscapeOrigami.url} 
+                src="/lovable-uploads/landscape-origami.jpg" 
                 alt="Hand-crafted paper model of the Eiffel Tower with origami figures" 
                 className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
               />
