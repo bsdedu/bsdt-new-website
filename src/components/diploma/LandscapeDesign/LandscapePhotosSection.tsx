@@ -1,7 +1,7 @@
 import React from 'react';
 import { RevealSection } from "@/components/ui-elements/RevealSection";
-import landscapeLearning1 from "@/assets/landscape-learning-1.png";
-import landscapeLearning2 from "@/assets/landscape-learning-2.png";
+import landscapeModel1 from "@/assets/landscape-model-1.jpg.asset.json";
+import landscapeStudio2 from "@/assets/landscape-studio-2.jpg.asset.json";
 import landscapeLearning4 from "@/assets/landscape-learning-4.png";
 
 export const LandscapePhotosSection: React.FC = () => {
@@ -12,16 +12,16 @@ export const LandscapePhotosSection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="overflow-hidden rounded-xl shadow-lg">
               <img 
-                src={landscapeLearning1} 
-                alt="Students in collaborative design discussion" 
+                src={landscapeModel1.url} 
+                alt="Architectural model of a residence with landscaped planting" 
                 className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
 
             <div className="overflow-hidden rounded-xl shadow-lg">
               <img 
-                src={landscapeLearning2} 
-                alt="Landscape design top-view elements and plants illustration" 
+                src={landscapeStudio2.url} 
+                alt="Students working together on a landscape design model" 
                 className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
