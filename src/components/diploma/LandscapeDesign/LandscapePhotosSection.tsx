@@ -12,16 +12,16 @@ export const LandscapePhotosSection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="overflow-hidden rounded-xl shadow-lg">
               <img 
-                src={landscapeLearning1} 
-                alt="Students in collaborative design discussion" 
+                src={landscapeModel1.url} 
+                alt="Architectural model of a residence with landscaped planting" 
                 className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
 
             <div className="overflow-hidden rounded-xl shadow-lg">
               <img 
-                src={landscapeLearning2} 
-                alt="Landscape design top-view elements and plants illustration" 
+                src={landscapeStudio2.url} 
+                alt="Students working together on a landscape design model" 
                 className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
