@@ -17,7 +17,6 @@ import partnerCresta from "@/assets/partner-cresta.png";
 import partnerIIID from "@/assets/partner-iiid.png";
 import partnerAICTE from "@/assets/partner-aicte.png";
 import partnerADI from "@/assets/partner-adi.png";
-import partnerUniversityOfMysore from "@/assets/partner-university-of-mysore.png";
 import partnerBaliInternships from "@/assets/partner-bali-internships.png";
 
 interface Partner {
@@ -142,7 +141,6 @@ export const CollaborationsSection: React.FC = () => {
                   { name: "Indian Institute of Interior Designers", logo: partnerIIID },
                   { name: "AICTE", logo: partnerAICTE },
                   { name: "Association of Designers of India", logo: partnerADI },
-                  { name: "University of Mysore", logo: partnerUniversityOfMysore },
                   { name: "Bali Internships", logo: partnerBaliInternships },
                 ].map((partner) => (
                   <CarouselItem key={partner.name} className="basis-full">
@@ -172,7 +170,6 @@ export const CollaborationsSection: React.FC = () => {
                   { name: "Indian Institute of Interior Designers", logo: partnerIIID },
                   { name: "AICTE", logo: partnerAICTE },
                   { name: "Association of Designers of India", logo: partnerADI },
-                  { name: "University of Mysore", logo: partnerUniversityOfMysore },
                   { name: "Bali Internships", logo: partnerBaliInternships },
                 ].map((partner) => (
                   <CarouselItem key={partner.name} className="basis-1/5 md:basis-1/5 lg:basis-1/6">
