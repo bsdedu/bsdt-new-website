@@ -13,6 +13,11 @@ export type TutelrProgramContent = {
   description: string;
   overview: string;
   areas: string[];
+  cta?: {
+    label: string;
+    href: string;
+    newTab?: boolean;
+  };
 };
 
 type TutelrProgramPageProps = {
