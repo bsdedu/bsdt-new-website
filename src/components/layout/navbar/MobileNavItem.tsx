@@ -105,6 +105,8 @@ export const MobileNavItem: React.FC<MobileNavItemProps> = ({ item, onItemClick 
                       ) : (
                         <a
                           href={subItem.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="block py-1 text-sm text-bsd-gray hover:text-bsd-orange hover:bg-transparent"
                           onClick={onItemClick}
                         >
