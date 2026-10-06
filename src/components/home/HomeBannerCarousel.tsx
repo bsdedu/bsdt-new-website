@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import studioHero from "@/assets/advantage-studio.jpg";
 import internshipsHero from "@/assets/advantage-international-internships.jpg";
 import designIqHero from "@/assets/quiz/design-iq-hero.jpg";
+import tutelrHero from "@/assets/tutelr-banner.jpg";
 
 interface HeroSlide {
   image: string;
@@ -60,6 +61,14 @@ export const HomeBannerCarousel: React.FC = () => {
       description: "Hands-on internship opportunities with global studios and industry partners — international exposure, professional networks, and real-world project experience.",
       ctaLabel: "Discover Internships",
       ctaHref: "/we-go-beyond-curriculum"
+    },
+    {
+      image: tutelrHero,
+      title: "Cybersecurity / AI / Embedded Robotics",
+      subtitle: "Tutelr",
+      description: "Practical, project-based learning across digital security, intelligent systems, and embedded hardware — built with Tutelr at BSDT.",
+      ctaLabel: "Know More",
+      ctaHref: "https://www.tutelr.org/home"
     }
   ];
 
@@ -167,6 +176,10 @@ export const HomeBannerCarousel: React.FC = () => {
                         if (diplomaTab) diplomaTab.click();
                         window.scrollTo({ top: section.offsetTop - 80, behavior: 'smooth' });
                       }
+                      return;
+                    }
+                    if (/^https?:\/\//.test(currentSlideData.ctaHref)) {
+                      window.open(currentSlideData.ctaHref, "_blank", "noopener noreferrer");
                       return;
                     }
                     window.location.href = currentSlideData.ctaHref;
