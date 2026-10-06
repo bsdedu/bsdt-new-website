@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import studioHero from "@/assets/advantage-studio.jpg";
 import internshipsHero from "@/assets/advantage-international-internships.jpg";
 import designIqHero from "@/assets/quiz/design-iq-hero.jpg";
-import tutelrHero from "@/assets/tutelr-banner.jpg";
+import tutelrHeroAsset from "@/assets/tutelr-cyber-banner.jpeg.asset.json";
 
 interface HeroSlide {
   image: string;
@@ -14,6 +14,7 @@ interface HeroSlide {
   description: string;
   ctaLabel: string;
   ctaHref: string;
+  overlay?: string;
 }
 
 export const HomeBannerCarousel: React.FC = () => {
@@ -63,12 +64,13 @@ export const HomeBannerCarousel: React.FC = () => {
       ctaHref: "/we-go-beyond-curriculum"
     },
     {
-      image: tutelrHero,
+      image: tutelrHeroAsset.url,
       title: "Cybersecurity / AI / Embedded Robotics",
       subtitle: "Tutelr",
       description: "Practical, project-based learning across digital security, intelligent systems, and embedded hardware — built with Tutelr at BSDT.",
       ctaLabel: "Know More",
-      ctaHref: "https://www.tutelr.org/home"
+      ctaHref: "https://www.tutelr.org/home",
+      overlay: "bg-gradient-to-l from-black/85 via-black/55 to-black/10"
     }
   ];
 
