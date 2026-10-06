@@ -64,6 +64,33 @@ const undergraduatePrograms: Program[] = [
     href: "/academics/b-computer-application-ui-ux"
   },
   {
+    icon: <ShieldCheck className="w-6 h-6 text-bsd-orange" />,
+    title: "BCA with Cybersecurity",
+    description: "A 3-year program covering network security, ethical hacking, cryptography, and cyber defense for careers in information security.",
+    color: "from-bsd-orange/20 to-bsd-orange/5",
+    duration: "3 years",
+    addons: "Cyber Security",
+    href: "https://apply.bsd.edu.in/"
+  },
+  {
+    icon: <BrainCircuit className="w-6 h-6 text-bsd-orange" />,
+    title: "BCA with Artificial Intelligence",
+    description: "A 3-year program focused on machine learning, deep learning, and AI application development for careers in intelligent systems.",
+    color: "from-bsd-gray/15 to-bsd-gray/5",
+    duration: "3 years",
+    addons: "Artificial Intelligence",
+    href: "https://apply.bsd.edu.in/"
+  },
+  {
+    icon: <Bot className="w-6 h-6 text-bsd-orange" />,
+    title: "BCA with Embedded Robotics",
+    description: "A 3-year program combining embedded systems, robotics, and programming to build smart devices and automated machines.",
+    color: "from-bsd-gray/15 to-bsd-gray/5",
+    duration: "3 years",
+    addons: "Embedded Robotics",
+    href: "https://apply.bsd.edu.in/"
+  },
+  {
     icon: <Cpu className="w-6 h-6 text-bsd-orange" />,
     title: "BCA with Data Analytics & Cyber Security",
     description: "A 3-year program focused on data analytics, cybersecurity fundamentals, and application development for tech-driven careers.",
