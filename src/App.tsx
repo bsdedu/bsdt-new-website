@@ -70,6 +70,13 @@ import AppliedAIDesignAutomation from "./pages/courses/AppliedAIDesignAutomation
 import { useEffect } from "react";
 import Contact from "./pages/Contact";
 import Tutelr from "./pages/Tutelr";
+import {
+  EthicalHackingRedTeaming,
+  CloudSecurityDevSecOps,
+  DigitalForensicsIncidentResponse,
+  SocBlueTeaming,
+  GrcControls,
+} from "./pages/TutelrPrograms";
 
 const queryClient = new QueryClient();
 
@@ -224,6 +231,11 @@ const App = () => {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/design-iq" element={<DesignIQQuiz />} />
                 <Route path="/tutelr" element={<Tutelr />} />
+                <Route path="/tutelr/ethical-hacking-red-teaming" element={<EthicalHackingRedTeaming />} />
+                <Route path="/tutelr/cloud-security-devsecops" element={<CloudSecurityDevSecOps />} />
+                <Route path="/tutelr/digital-forensics-incident-response" element={<DigitalForensicsIncidentResponse />} />
+                <Route path="/tutelr/soc-blue-teaming" element={<SocBlueTeaming />} />
+                <Route path="/tutelr/grc-controls" element={<GrcControls />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
