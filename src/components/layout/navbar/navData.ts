@@ -43,6 +43,12 @@ export const navStructure: NavStructure[] = [
           { name: 'BCA with UI/UX & AI/ML', href: '/academics/b-computer-application-ui-ux' },
           { name: 'BCA with Data Analytics & Cyber Security', href: '/academics/bca-data-analytics-cyber-security' }
         ]
+      },
+      {
+        title: 'CYBERSECURITY / AI / EMBEDDED ROBOTICS',
+        items: [
+          { name: 'Tutelr', href: '/tutelr' }
+        ]
       }
     ]
   },
