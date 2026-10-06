@@ -15,6 +15,7 @@ interface HeroSlide {
   ctaLabel: string;
   ctaHref: string;
   overlay?: string;
+  topScrim?: string;
 }
 
 export const HomeBannerCarousel: React.FC = () => {
@@ -70,7 +71,8 @@ export const HomeBannerCarousel: React.FC = () => {
       description: "Practical, project-based learning across digital security, intelligent systems, and embedded hardware — built with Tutelr at BSDT.",
       ctaLabel: "Know More",
       ctaHref: "https://www.tutelr.org/home",
-      overlay: "bg-gradient-to-l from-black/45 via-black/15 to-transparent"
+      overlay: "bg-gradient-to-l from-black/45 via-black/15 to-transparent",
+      topScrim: "bg-gradient-to-b from-background via-background/75 to-transparent"
     }
   ];
 
@@ -129,6 +131,8 @@ export const HomeBannerCarousel: React.FC = () => {
           />
           {/* Dark overlay for better text readability */}
           <div className={cn("absolute inset-0", slide.overlay ?? "bg-gradient-to-r from-black/70 via-black/40 to-transparent")} />
+          {/* Light scrim behind the top menu when a slide is dark */}
+          {slide.topScrim && <div className={cn("absolute inset-x-0 top-0 h-32 pointer-events-none", slide.topScrim)} />}
         </div>
       ))}
 
