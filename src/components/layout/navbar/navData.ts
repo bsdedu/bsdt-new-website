@@ -11,6 +11,7 @@ export type NavStructure = {
   categories?: {
     title: string;
     subtitle?: string;
+    subtitleHref?: string;
     items: SubItem[];
   }[];
 };
@@ -48,6 +49,7 @@ export const navStructure: NavStructure[] = [
       {
         title: 'CYBERSECURITY / AI / EMBEDDED ROBOTICS',
         subtitle: '@Tutelr',
+        subtitleHref: 'https://www.tutelr.org/home',
         items: [
           { name: 'Ethical Hacking and Red Teaming', href: '/tutelr/ethical-hacking-red-teaming' },
           { name: 'Cloud Security and DevSecOps', href: '/tutelr/cloud-security-devsecops' },
