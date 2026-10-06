@@ -70,7 +70,7 @@ export const HomeBannerCarousel: React.FC = () => {
       description: "Practical, project-based learning across digital security, intelligent systems, and embedded hardware — built with Tutelr at BSDT.",
       ctaLabel: "Know More",
       ctaHref: "https://www.tutelr.org/home",
-      overlay: "bg-gradient-to-l from-black/70 via-black/30 to-black/15"
+      overlay: "bg-gradient-to-l from-black/45 via-black/15 to-transparent"
     }
   ];
 
