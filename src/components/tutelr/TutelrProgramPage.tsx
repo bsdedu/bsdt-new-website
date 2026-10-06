@@ -5,7 +5,6 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import tutelrHero from '@/assets/tutelr-cyber-banner.jpeg';
 
 export type TutelrProgramContent = {
   title: string;
@@ -13,6 +12,8 @@ export type TutelrProgramContent = {
   description: string;
   overview: string;
   areas: string[];
+  bannerImage: string;
+  bannerAlt: string;
   cta?: {
     label: string;
     href: string;
@@ -47,8 +48,10 @@ const TutelrProgramPage: React.FC<TutelrProgramPageProps> = ({ program }) => {
         <main>
           <section className="relative min-h-[560px] overflow-hidden pt-28 md:min-h-[620px] md:pt-36">
             <img
-              src={tutelrHero}
-              alt="Cybersecurity operations and artificial intelligence"
+              src={program.bannerImage}
+              alt={program.bannerAlt}
+              width={1600}
+              height={912}
               className="absolute inset-0 h-full w-full object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-foreground/95 via-foreground/80 to-foreground/30" />
