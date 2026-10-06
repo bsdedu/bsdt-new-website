@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import studioHero from "@/assets/advantage-studio.jpg";
 import internshipsHero from "@/assets/advantage-international-internships.jpg";
 import designIqHero from "@/assets/quiz/design-iq-hero.jpg";
-import tutelrHeroAsset from "@/assets/tutelr-cyber-banner.jpeg.asset.json";
+import tutelrHero from "@/assets/tutelr-cyber-banner.jpeg";
 
 interface HeroSlide {
   image: string;
@@ -64,7 +64,7 @@ export const HomeBannerCarousel: React.FC = () => {
       ctaHref: "/we-go-beyond-curriculum"
     },
     {
-      image: tutelrHeroAsset.url,
+      image: tutelrHero,
       title: "Cybersecurity / AI / Embedded Robotics",
       subtitle: "Tutelr",
       description: "Practical, project-based learning across digital security, intelligent systems, and embedded hardware — built with Tutelr at BSDT.",
