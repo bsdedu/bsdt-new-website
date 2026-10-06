@@ -83,12 +83,12 @@ export const NavItem: React.FC<NavItemProps> = ({ item }) => {
                       href={category.subtitleHref}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block text-sm font-bold text-bsd-orange hover:text-bsd-orange/80 transition-colors"
+                      className="block text-sm font-bold uppercase text-foreground hover:text-foreground/70 transition-colors"
                     >
                       {category.subtitle}
                     </a>
                   ) : (
-                    <p className="text-sm font-bold text-bsd-orange">{category.subtitle}</p>
+                    <p className="text-sm font-bold uppercase text-foreground">{category.subtitle}</p>
                   )
                 )}
                 <ul className="space-y-2">
