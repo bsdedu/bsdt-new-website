@@ -17,6 +17,7 @@ type MobileNavItemProps = {
     items?: SubItem[];
     categories?: {
       title: string;
+      subtitle?: string;
       items: SubItem[];
     }[];
   };
@@ -87,6 +88,9 @@ export const MobileNavItem: React.FC<MobileNavItemProps> = ({ item, onItemClick 
                     <ChevronDown className="h-3 w-3 ml-1" />
                   }
                 </button>
+                {openCategory === category.title && category.subtitle && (
+                  <p className="ml-2 mt-2 text-sm font-semibold text-bsd-orange">{category.subtitle}</p>
+                )}
                 
                 <ul className={cn(
                   "space-y-1 mt-1 ml-2 overflow-hidden transition-all duration-300",
