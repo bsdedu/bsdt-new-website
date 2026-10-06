@@ -128,7 +128,7 @@ export const HomeBannerCarousel: React.FC = () => {
             className="w-full h-full object-cover object-center"
           />
           {/* Dark overlay for better text readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
+          <div className={cn("absolute inset-0", slide.overlay ?? "bg-gradient-to-r from-black/70 via-black/40 to-transparent")} />
         </div>
       ))}
 
