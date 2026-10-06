@@ -40,6 +40,10 @@ export const faqData: FAQCategory[] = [
         answer: "BSDT offers a range of undergraduate programs in design and technology, including Interior Design, Graphic Design, Animation & Multimedia, BCA with UI/UX specialization, and various professional diploma courses."
       },
       {
+        question: "Are you affiliated to any university?",
+        answer: "Yes, only our undergraduate programs are affiliated with Bangalore North University."
+      },
+      {
         question: "What is the 'Beyond Curriculum' approach?",
         answer: "Our Beyond Curriculum approach dedicates one full day each week to activities beyond traditional academics. This includes design studio classes, workshops, guest lectures, off-campus learning, and site visits. This approach prioritizes skill development over pure academic performance, giving our graduates a significant edge in the professional world."
       },
