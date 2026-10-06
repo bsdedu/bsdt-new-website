@@ -18,6 +18,7 @@ type MobileNavItemProps = {
     categories?: {
       title: string;
       subtitle?: string;
+      subtitleHref?: string;
       items: SubItem[];
     }[];
   };
@@ -89,7 +90,19 @@ export const MobileNavItem: React.FC<MobileNavItemProps> = ({ item, onItemClick 
                   }
                 </button>
                 {openCategory === category.title && category.subtitle && (
-                  <p className="ml-2 mt-2 text-sm font-semibold text-bsd-orange">{category.subtitle}</p>
+                  category.subtitleHref && /^https?:\/\//.test(category.subtitleHref) ? (
+                    <a
+                      href={category.subtitleHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block ml-2 mt-2 text-sm font-bold text-bsd-orange hover:text-bsd-orange/80 transition-colors"
+                      onClick={onItemClick}
+                    >
+                      {category.subtitle}
+                    </a>
+                  ) : (
+                    <p className="ml-2 mt-2 text-sm font-bold text-bsd-orange">{category.subtitle}</p>
+                  )
                 )}
                 
                 <ul className={cn(
