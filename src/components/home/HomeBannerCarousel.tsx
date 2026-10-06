@@ -137,7 +137,7 @@ export const HomeBannerCarousel: React.FC = () => {
       ))}
 
       {/* Content Overlay - Right Side */}
-      <div className="absolute inset-0 flex items-center">
+      <div className="absolute inset-0 flex items-center pt-16">
         <div className="container mx-auto px-6 md:px-8">
           <div className="flex justify-end">
             <div
