@@ -13,6 +13,11 @@ export type TutelrProgramContent = {
   description: string;
   overview: string;
   areas: string[];
+  cta?: {
+    label: string;
+    href: string;
+    newTab?: boolean;
+  };
 };
 
 type TutelrProgramPageProps = {
@@ -21,6 +26,7 @@ type TutelrProgramPageProps = {
 
 const TutelrProgramPage: React.FC<TutelrProgramPageProps> = ({ program }) => {
   const canonicalUrl = `https://bsdt-new-website.lovable.app/tutelr/${program.slug}`;
+  const cta = program.cta ?? { label: 'Know More', href: 'https://www.tutelr.org/home', newTab: true };
 
   return (
     <>
@@ -57,8 +63,12 @@ const TutelrProgramPage: React.FC<TutelrProgramPageProps> = ({ program }) => {
                   {program.description}
                 </p>
                 <Button asChild size="lg" className="mt-8 group">
-                  <a href="https://www.tutelr.org/home" target="_blank" rel="noopener noreferrer">
-                    Know More
+                  <a
+                    href={cta.href}
+                    target={cta.newTab ? '_blank' : undefined}
+                    rel={cta.newTab ? 'noopener noreferrer' : undefined}
+                  >
+                    {cta.label}
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </a>
                 </Button>
