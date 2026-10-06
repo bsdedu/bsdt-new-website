@@ -23,6 +23,7 @@ type NavItemProps = {
     categories?: {
       title: string;
       subtitle?: string;
+      subtitleHref?: string;
       items: SubItem[];
     }[];
   };
@@ -77,7 +78,18 @@ export const NavItem: React.FC<NavItemProps> = ({ item }) => {
               <div key={index} className="space-y-3">
                 <h3 className="text-sm font-bold text-bsd-gray border-b pb-1">{category.title}</h3>
                 {category.subtitle && (
-                  <p className="text-sm font-semibold text-bsd-orange">{category.subtitle}</p>
+                  category.subtitleHref && /^https?:\/\//.test(category.subtitleHref) ? (
+                    <a
+                      href={category.subtitleHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-sm font-bold text-bsd-orange hover:text-bsd-orange/80 transition-colors"
+                    >
+                      {category.subtitle}
+                    </a>
+                  ) : (
+                    <p className="text-sm font-bold text-bsd-orange">{category.subtitle}</p>
+                  )
                 )}
                 <ul className="space-y-2">
                   {category.items?.map((subItem) => (
