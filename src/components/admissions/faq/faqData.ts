@@ -37,7 +37,7 @@ export const faqData: FAQCategory[] = [
     questions: [
       {
         question: "What programs does BSDT offer?",
-        answer: "BSDT offers a range of undergraduate and postgraduate programs in design and technology, including Interior Design, Graphic Design, Animation & Multimedia, BCA with UI/UX specialization, and various professional diploma courses."
+        answer: "BSDT offers a range of undergraduate programs in design and technology, including Interior Design, Graphic Design, Animation & Multimedia, BCA with UI/UX specialization, and various professional diploma courses."
       },
       {
         question: "What is the 'Beyond Curriculum' approach?",
