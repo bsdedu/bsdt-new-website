@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader } from "../ui-elements/Card";
 import { RevealSection } from "../ui-elements/RevealSection";
-import { PenTool, Code, Gamepad, Cpu, Building2, LayoutDashboard, Monitor, GraduationCap, Recycle, Armchair, Sofa, HardHat } from "lucide-react";
+import { PenTool, Code, Gamepad, Cpu, ShieldCheck, BrainCircuit, Bot, Building2, LayoutDashboard, Monitor, GraduationCap, Recycle, Armchair, Sofa, HardHat } from "lucide-react";
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -62,6 +62,33 @@ const undergraduatePrograms: Program[] = [
     duration: "3 years",
     addons: "UI/UX & AI/ML",
     href: "/academics/b-computer-application-ui-ux"
+  },
+  {
+    icon: <ShieldCheck className="w-6 h-6 text-bsd-orange" />,
+    title: "BCA with Cybersecurity",
+    description: "A 3-year program covering network security, ethical hacking, cryptography, and cyber defense for careers in information security.",
+    color: "from-bsd-orange/20 to-bsd-orange/5",
+    duration: "3 years",
+    addons: "Cyber Security",
+    href: "https://apply.bsd.edu.in/"
+  },
+  {
+    icon: <BrainCircuit className="w-6 h-6 text-bsd-orange" />,
+    title: "BCA with Artificial Intelligence",
+    description: "A 3-year program focused on machine learning, deep learning, and AI application development for careers in intelligent systems.",
+    color: "from-bsd-gray/15 to-bsd-gray/5",
+    duration: "3 years",
+    addons: "Artificial Intelligence",
+    href: "https://apply.bsd.edu.in/"
+  },
+  {
+    icon: <Bot className="w-6 h-6 text-bsd-orange" />,
+    title: "BCA with Embedded Robotics",
+    description: "A 3-year program combining embedded systems, robotics, and programming to build smart devices and automated machines.",
+    color: "from-bsd-gray/15 to-bsd-gray/5",
+    duration: "3 years",
+    addons: "Embedded Robotics",
+    href: "https://apply.bsd.edu.in/"
   },
   {
     icon: <Cpu className="w-6 h-6 text-bsd-orange" />,
@@ -192,8 +219,20 @@ export const ProgramsSection: React.FC = () => {
 
             <TabsContent value="undergraduate" className="mt-0">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
-                {undergraduatePrograms.map((program) => (
-                  <Link key={program.title} to={program.href} className="block h-full">
+                {undergraduatePrograms.map((program) => {
+                  const isExternal = program.href.startsWith('http');
+                  const Wrapper = ({ children }: { children: React.ReactNode }) =>
+                    isExternal ? (
+                      <a href={program.href} target="_blank" rel="noopener noreferrer" className="block h-full">
+                        {children}
+                      </a>
+                    ) : (
+                      <Link to={program.href} className="block h-full">
+                        {children}
+                      </Link>
+                    );
+                  return (
+                  <Wrapper key={program.title}>
                     <Card isHoverable className={program.isFeatured ? "border-bsd-orange/20 shadow-md h-full" : "h-full"}>
                       <CardHeader className="p-4">
                         <div className={cn("w-10 h-10 rounded-lg flex items-center justify-center mb-3", "bg-gradient-to-br", program.color)}>
@@ -214,8 +253,9 @@ export const ProgramsSection: React.FC = () => {
                         <p className="text-foreground/70 text-xs line-clamp-3">{program.description}</p>
                       </CardContent>
                     </Card>
-                  </Link>
-                ))}
+                  </Wrapper>
+                  );
+                })}
               </div>
             </TabsContent>
           </Tabs>
