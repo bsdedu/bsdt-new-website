@@ -55,7 +55,14 @@ const TutelrProgramPage: React.FC<TutelrProgramPageProps> = ({ program }) => {
 
             <div className="container relative mx-auto flex min-h-[430px] items-center px-6 py-14 md:px-8">
               <div className="max-w-3xl">
-                <Badge variant="bsdOrange" className="mb-6">@TUTELR</Badge>
+                <a
+                  href="https://www.tutelr.org/home"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mb-6 inline-flex w-fit"
+                >
+                  <Badge variant="bsdOrange">@TUTELR</Badge>
+                </a>
                 <h1 className="text-4xl font-display font-bold leading-tight text-primary-foreground md:text-6xl">
                   {program.title}
                 </h1>
