@@ -95,13 +95,13 @@ export const MobileNavItem: React.FC<MobileNavItemProps> = ({ item, onItemClick 
                       href={category.subtitleHref}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block ml-2 mt-2 text-sm font-bold text-bsd-orange hover:text-bsd-orange/80 transition-colors"
+                      className="block ml-2 mt-2 text-sm font-bold uppercase text-foreground hover:text-foreground/70 transition-colors"
                       onClick={onItemClick}
                     >
                       {category.subtitle}
                     </a>
                   ) : (
-                    <p className="ml-2 mt-2 text-sm font-bold text-bsd-orange">{category.subtitle}</p>
+                    <p className="ml-2 mt-2 text-sm font-bold uppercase text-foreground">{category.subtitle}</p>
                   )
                 )}
                 
