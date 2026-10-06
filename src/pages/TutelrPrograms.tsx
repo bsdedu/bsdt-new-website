@@ -8,7 +8,6 @@ const programs: Record<string, TutelrProgramContent> = {
     description: 'Develop an attacker-aware approach to identifying vulnerabilities, testing defences, and strengthening digital systems responsibly.',
     overview: 'This program introduces the methods used to assess security from an adversarial perspective. Learners explore ethical testing, attack simulation, vulnerability analysis, and the clear reporting needed to help organisations improve their security posture.',
     areas: ['Ethical hacking foundations', 'Vulnerability assessment', 'Red team methods and simulations', 'Security testing and reporting'],
-    cta: { label: 'Apply Now', href: 'https://apply.bsd.edu.in/', newTab: false },
   },
   cloudSecurity: {
     title: 'Cloud Security and DevSecOps',

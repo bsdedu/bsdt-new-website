@@ -26,7 +26,7 @@ type TutelrProgramPageProps = {
 
 const TutelrProgramPage: React.FC<TutelrProgramPageProps> = ({ program }) => {
   const canonicalUrl = `https://bsdt-new-website.lovable.app/tutelr/${program.slug}`;
-  const cta = program.cta ?? { label: 'Know More', href: 'https://www.tutelr.org/home', newTab: true };
+  const cta = program.cta ?? { label: 'Apply Now', href: 'https://apply.bsd.edu.in/', newTab: false };
 
   return (
     <>
