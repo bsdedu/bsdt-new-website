@@ -121,7 +121,7 @@ export const CollaborationsSection: React.FC = () => {
               Collaborations, Accreditations and Institutional Partners
             </h2>
             <p className="mt-4 text-bsd-gray/70 max-w-2xl mx-auto">
-              We are proud to be affiliated with prestigious institutions and organizations worldwide. Our undergraduate programs are affiliated with Bangalore North University and Mysore University.
+              We are proud to be affiliated with prestigious institutions and organizations worldwide. Our undergraduate programs are affiliated with Bangalore North University.
             </p>
           </div>
 
