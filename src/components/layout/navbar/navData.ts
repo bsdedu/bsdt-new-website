@@ -47,7 +47,7 @@ export const navStructure: NavStructure[] = [
       {
         title: 'CYBERSECURITY / AI / EMBEDDED ROBOTICS',
         items: [
-          { name: 'Tutelr', href: 'https://www.tutelr.org/home' }
+          { name: 'Tutelr Franchise', href: 'https://www.tutelr.org/home' }
         ]
       }
     ]
