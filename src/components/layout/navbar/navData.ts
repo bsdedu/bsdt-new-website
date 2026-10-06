@@ -10,6 +10,7 @@ export type NavStructure = {
   items?: SubItem[];
   categories?: {
     title: string;
+    subtitle?: string;
     items: SubItem[];
   }[];
 };
@@ -46,8 +47,13 @@ export const navStructure: NavStructure[] = [
       },
       {
         title: 'CYBERSECURITY / AI / EMBEDDED ROBOTICS',
+        subtitle: '@Tutelr',
         items: [
-          { name: '@Tutelr', href: 'https://www.tutelr.org/home' }
+          { name: 'Ethical Hacking and Red Teaming', href: '/tutelr/ethical-hacking-red-teaming' },
+          { name: 'Cloud Security and DevSecOps', href: '/tutelr/cloud-security-devsecops' },
+          { name: 'Digital Forensics and Incident Response', href: '/tutelr/digital-forensics-incident-response' },
+          { name: 'SOC and Blue Teaming', href: '/tutelr/soc-blue-teaming' },
+          { name: 'GRC and Controls', href: '/tutelr/grc-controls' }
         ]
       }
     ]

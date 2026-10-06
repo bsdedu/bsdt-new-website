@@ -22,6 +22,7 @@ type NavItemProps = {
     items?: SubItem[];
     categories?: {
       title: string;
+      subtitle?: string;
       items: SubItem[];
     }[];
   };
@@ -75,6 +76,9 @@ export const NavItem: React.FC<NavItemProps> = ({ item }) => {
             {item.categories?.map((category, index) => (
               <div key={index} className="space-y-3">
                 <h3 className="text-sm font-bold text-bsd-gray border-b pb-1">{category.title}</h3>
+                {category.subtitle && (
+                  <p className="text-sm font-semibold text-bsd-orange">{category.subtitle}</p>
+                )}
                 <ul className="space-y-2">
                   {category.items?.map((subItem) => (
                     <li key={subItem.name}>
