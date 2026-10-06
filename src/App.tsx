@@ -69,6 +69,7 @@ import DigitalFashionTechPacks from "./pages/courses/DigitalFashionTechPacks";
 import AppliedAIDesignAutomation from "./pages/courses/AppliedAIDesignAutomation";
 import { useEffect } from "react";
 import Contact from "./pages/Contact";
+import Tutelr from "./pages/Tutelr";
 
 const queryClient = new QueryClient();
 
@@ -222,6 +223,7 @@ const App = () => {
                 <Route path="/courses/applied-ai-design-automation" element={<AppliedAIDesignAutomation />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/design-iq" element={<DesignIQQuiz />} />
+                <Route path="/tutelr" element={<Tutelr />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
