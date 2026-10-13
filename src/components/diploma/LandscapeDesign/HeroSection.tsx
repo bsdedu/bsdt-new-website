@@ -26,10 +26,10 @@ export const HeroSection: React.FC = () => {
             </div>
             
             
-            <div className="max-w-md space-y-3 rounded-xl border border-bsd-orange/15 bg-white/90 px-6 py-5 shadow-sm">
+            <div className="max-w-lg space-y-3 rounded-xl border border-bsd-orange/15 bg-white/90 px-6 py-5 shadow-sm">
               <div className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-bsd-orange mt-0.5 shrink-0" />
-                <span className="text-sm font-medium text-bsd-gray">16 (12+4) Months Duration</span>
+                <span className="text-sm font-medium text-bsd-gray">12 (8+4) Months Duration</span>
               </div>
               <div className="flex items-start gap-3">
                 <Calendar className="w-5 h-5 text-bsd-orange mt-0.5 shrink-0" />
@@ -37,7 +37,7 @@ export const HeroSection: React.FC = () => {
               </div>
               <div className="flex items-start gap-3">
                 <Award className="w-5 h-5 text-bsd-orange mt-0.5 shrink-0" />
-                <span className="text-sm font-medium text-bsd-gray">Certificate by BSDT &amp; ATMOS Design Labs</span>
+                <span className="text-sm font-medium text-bsd-gray">Post Graduate Diploma Certificate Recognised by BSDT</span>
               </div>
             </div>
 
