@@ -37,7 +37,7 @@ export const HeroSection: React.FC = () => {
               </div>
               <div className="flex items-start gap-3">
                 <Award className="w-5 h-5 text-bsd-orange mt-0.5 shrink-0" />
-                <span className="text-sm font-medium text-bsd-gray">Certificate Recognised by BSDT and ATMOS Design Labs</span>
+                <span className="text-sm font-medium text-bsd-gray">Certificate by BSDT &amp; ATMOS Design Labs</span>
               </div>
             </div>
 
