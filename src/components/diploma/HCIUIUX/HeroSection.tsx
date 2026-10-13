@@ -38,7 +38,7 @@ export const HeroSection: React.FC = () => {
             <div className="max-w-lg space-y-3 rounded-xl border border-bsd-orange/15 bg-white/90 px-6 py-5 shadow-sm">
               <div className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-bsd-orange mt-0.5 shrink-0" />
-                <span className="text-sm font-medium text-bsd-gray">6 Months Duration</span>
+                <span className="text-sm font-medium text-bsd-gray">6 Months Duration (Saturday Classes)</span>
               </div>
               <div className="flex items-start gap-3">
                 <Calendar className="w-5 h-5 text-bsd-orange mt-0.5 shrink-0" />
