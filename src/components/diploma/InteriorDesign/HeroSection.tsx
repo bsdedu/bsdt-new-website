@@ -2,7 +2,7 @@
 import React from 'react';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Monitor } from "lucide-react";
+import { Monitor, Clock, Calendar, Award } from "lucide-react";
 import { Link } from 'react-router-dom';
 
 export const HeroSection: React.FC = () => {
@@ -22,8 +22,22 @@ export const HeroSection: React.FC = () => {
               <br /><br />
               Across 2 semesters, students explore space planning, materials, lighting, digital design, detailing, costing, sustainability, AI, and project execution through hands-on residential and commercial design projects.
             </p>
-            
-            
+
+            <div className="max-w-md space-y-3 rounded-xl border border-bsd-orange/15 bg-white/90 px-6 py-5 shadow-sm">
+              <div className="flex items-start gap-3">
+                <Clock className="w-5 h-5 text-bsd-orange mt-0.5 shrink-0" />
+                <span className="text-sm font-medium text-bsd-gray">12 Months Duration</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <Calendar className="w-5 h-5 text-bsd-orange mt-0.5 shrink-0" />
+                <span className="text-sm font-medium text-bsd-gray">Intakes: Aug, Nov, Feb &amp; May</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <Award className="w-5 h-5 text-bsd-orange mt-0.5 shrink-0" />
+                <span className="text-sm font-medium text-bsd-gray">Professional Certificate Recognised by BSDT</span>
+              </div>
+            </div>
+
             <div className="flex flex-wrap gap-4 pt-4">
               <a href="#enquiry-form">
                 <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white">
