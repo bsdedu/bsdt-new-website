@@ -1,7 +1,7 @@
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Building2 } from 'lucide-react';
+import { Building2, Clock, Calendar, Award } from 'lucide-react';
 import masterResidentialHero from '@/assets/master-residential-design-hero.jpg';
 
 export const HeroSection: React.FC = () => {
@@ -21,6 +21,21 @@ export const HeroSection: React.FC = () => {
             </p>
             
             
+            <div className="max-w-lg space-y-3 rounded-xl border border-bsd-orange/15 bg-white/90 px-6 py-5 shadow-sm">
+              <div className="flex items-start gap-3">
+                <Clock className="w-5 h-5 text-bsd-orange mt-0.5 shrink-0" />
+                <span className="text-sm font-medium text-bsd-gray">20 (16+4) Months Duration</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <Calendar className="w-5 h-5 text-bsd-orange mt-0.5 shrink-0" />
+                <span className="text-sm font-medium text-bsd-gray">Intakes: Aug, Nov, Feb &amp; May</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <Award className="w-5 h-5 text-bsd-orange mt-0.5 shrink-0" />
+                <span className="text-sm font-medium text-bsd-gray">Post Graduate Diploma Certificate Recognised by BSDT</span>
+              </div>
+            </div>
+
             <div className="flex flex-wrap gap-4 pt-4">
               <a href="#enquiry-form">
                 <Button size="lg" className="bg-bsd-orange hover:bg-bsd-orange/90 text-white">
