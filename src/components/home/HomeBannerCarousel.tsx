@@ -6,6 +6,7 @@ import studioHero from "@/assets/advantage-studio.jpg";
 import internshipsHero from "@/assets/advantage-international-internships.jpg";
 import designIqHero from "@/assets/quiz/design-iq-hero.jpg";
 import tutelrHero from "@/assets/tutelr-cyber-banner.jpeg";
+import ugAdmissionsHero from "@/assets/ug-admissions-2027-28.jpg";
 
 interface HeroSlide {
   image: string;
@@ -24,6 +25,15 @@ export const HomeBannerCarousel: React.FC = () => {
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const heroSlides: HeroSlide[] = [
+    {
+      image: ugAdmissionsHero,
+      title: "UG Admissions 2027-28",
+      subtitle: "Admissions Open",
+      description: "Applications are now open for our undergraduate programs in design and technology. Explore the UG degrees, apply online, and join the 2027-28 batch at BSDT.",
+      ctaLabel: "Explore UG Programs",
+      ctaHref: "#programs-undergraduate",
+      overlay: "bg-gradient-to-l from-black/75 via-black/45 to-transparent"
+    },
     {
       image: "/lovable-uploads/0ae77c0c-8ef4-404c-abf0-bb90598dfbf4.png",
       title: "Hybrid Diploma Programs",
@@ -175,11 +185,16 @@ export const HomeBannerCarousel: React.FC = () => {
                   size="default"
                   className="bg-bsd-orange hover:bg-bsd-orange/90 text-white font-semibold px-6"
                   onClick={() => {
-                    if (currentSlideData.ctaHref === "#programs") {
+                    if (currentSlideData.ctaHref.startsWith("#programs")) {
+                      const tab = currentSlideData.ctaHref.includes("undergraduate") ? "undergraduate" : "diploma";
                       const section = document.getElementById('programs');
+                      const tabTrigger = document.querySelector(`[data-value="${tab}"]`) as HTMLElement | null;
+                      if (tabTrigger) {
+                        // Radix tabs react to mousedown, so dispatch it before the plain click.
+                        tabTrigger.dispatchEvent(new MouseEvent('mousedown', { bubbles: true, cancelable: true, button: 0 }));
+                        tabTrigger.click();
+                      }
                       if (section) {
-                        const diplomaTab = document.querySelector('[data-value="diploma"]') as HTMLButtonElement;
-                        if (diplomaTab) diplomaTab.click();
                         window.scrollTo({ top: section.offsetTop - 80, behavior: 'smooth' });
                       }
                       return;
