@@ -188,8 +188,12 @@ export const HomeBannerCarousel: React.FC = () => {
                     if (currentSlideData.ctaHref.startsWith("#programs")) {
                       const tab = currentSlideData.ctaHref.includes("undergraduate") ? "undergraduate" : "diploma";
                       const section = document.getElementById('programs');
-                      const tabTrigger = document.querySelector(`[data-value="${tab}"]`) as HTMLButtonElement | null;
-                      if (tabTrigger) tabTrigger.click();
+                      const tabTrigger = document.querySelector(`[data-value="${tab}"]`) as HTMLElement | null;
+                      if (tabTrigger) {
+                        // Radix tabs react to mousedown, so dispatch it before the plain click.
+                        tabTrigger.dispatchEvent(new MouseEvent('mousedown', { bubbles: true, cancelable: true, button: 0 }));
+                        tabTrigger.click();
+                      }
                       if (section) {
                         window.scrollTo({ top: section.offsetTop - 80, behavior: 'smooth' });
                       }
