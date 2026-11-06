@@ -78,7 +78,7 @@ const certificatePrograms: Program[] = [
   {
     icon: <Code className="w-6 h-6 text-bsd-orange" />,
     title: "Full Stack with Gen AI",
-    description: "Build full-stack apps with GenAI.",
+    description: "Build full-stack web apps.\nIntegrate GenAI & LLM APIs.",
     color: "from-bsd-orange/20 to-bsd-orange/5",
     duration: "16 weeks",
     addons: "Husky Applied Learning",
@@ -87,7 +87,7 @@ const certificatePrograms: Program[] = [
   {
     icon: <Cpu className="w-6 h-6 text-bsd-orange" />,
     title: "Software Testing & QE",
-    description: "Master manual, automation & API testing.",
+    description: "Manual, API & automation.\nHands-on quality testing.",
     color: "from-bsd-gray/15 to-bsd-gray/5",
     duration: "12 weeks",
     addons: "Husky Applied Learning",
@@ -300,7 +300,7 @@ export const ProgramsSection: React.FC = () => {
                         <p className="text-xs text-bsd-orange font-medium mt-1">{program.addons}</p>
                       </CardHeader>
                       <CardContent className="p-4 pt-0">
-                        <p className="text-foreground/70 text-xs line-clamp-3">{program.description}</p>
+                        <p className="text-foreground/70 text-xs whitespace-pre-line line-clamp-3">{program.description}</p>
                       </CardContent>
                     </Card>
                   </Link>
