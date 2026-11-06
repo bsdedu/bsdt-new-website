@@ -6,7 +6,7 @@ import studioHero from "@/assets/advantage-studio.jpg";
 import internshipsHero from "@/assets/advantage-international-internships.jpg";
 import designIqHero from "@/assets/quiz/design-iq-hero.jpg";
 import tutelrHero from "@/assets/tutelr-cyber-banner.jpeg";
-import ugAdmissionsHero from "@/assets/ug-admissions-2027-28.jpg";
+import ugAdmissionsHero from "@/assets/ug-admissions-community-2027-28.jpg";
 
 interface HeroSlide {
   image: string;
