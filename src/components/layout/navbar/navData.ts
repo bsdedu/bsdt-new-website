@@ -47,6 +47,13 @@ export const navStructure: NavStructure[] = [
         ]
       },
       {
+        title: 'CERTIFICATE PROGRAMS',
+        items: [
+          { name: 'Full Stack with Gen AI', href: 'https://apply.bsd.edu.in/' },
+          { name: 'Software Testing & QE', href: 'https://apply.bsd.edu.in/' }
+        ]
+      },
+      {
         title: 'CYBERSECURITY / AI / EMBEDDED ROBOTICS',
         subtitle: '@Tutelr',
         subtitleHref: 'https://www.tutelr.org/home',
@@ -56,13 +63,6 @@ export const navStructure: NavStructure[] = [
           { name: 'Digital Forensics and Incident Response', href: '/tutelr/digital-forensics-incident-response' },
           { name: 'SOC and Blue Teaming', href: '/tutelr/soc-blue-teaming' },
           { name: 'GRC and Controls', href: '/tutelr/grc-controls' }
-        ]
-      },
-      {
-        title: 'CERTIFICATE PROGRAMS',
-        items: [
-          { name: 'Full Stack with Gen AI', href: 'https://apply.bsd.edu.in/' },
-          { name: 'Software Testing & QE', href: 'https://apply.bsd.edu.in/' }
         ]
       }
     ]
