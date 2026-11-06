@@ -72,8 +72,8 @@ export const NavItem: React.FC<NavItemProps> = ({ item }) => {
         >
           {item.name}
         </NavigationMenuTrigger>
-        <NavigationMenuContent>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 w-[900px] max-w-[calc(100vw-3rem)] bg-white shadow-lg rounded-md">
+        <NavigationMenuContent className={item.categories.length === 4 ? "-translate-x-1/4" : undefined}>
+          <div className={cn("grid grid-cols-1 gap-6 p-6 max-w-[calc(100vw-3rem)] bg-background shadow-lg rounded-md", item.categories.length === 4 ? "md:grid-cols-4 w-[1000px]" : "md:grid-cols-3 w-[900px]")}>
             {item.categories?.map((category, index) => (
               <div key={index} className="space-y-3">
                 <h3 className="text-sm font-bold text-bsd-gray border-b pb-1">{category.title}</h3>
