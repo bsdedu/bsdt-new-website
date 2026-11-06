@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader } from "../ui-elements/Card";
 import { RevealSection } from "../ui-elements/RevealSection";
-import { PenTool, Code, Gamepad, Cpu, Building2, LayoutDashboard, Monitor, GraduationCap, Recycle, Armchair, Sofa, HardHat } from "lucide-react";
+import { PenTool, Code, Gamepad, Cpu, Building2, LayoutDashboard, Monitor, GraduationCap, Recycle, Armchair, Sofa, HardHat, Shield, Cloud, Search, ShieldCheck, ClipboardCheck } from "lucide-react";
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -92,6 +92,51 @@ const certificatePrograms: Program[] = [
     duration: "12 weeks",
     addons: "Husky Applied Learning",
     href: "https://apply.bsd.edu.in/"
+  },
+  {
+    icon: <Shield className="w-6 h-6 text-bsd-orange" />,
+    title: "Ethical Hacking and Red Teaming",
+    description: "Explore ethical hacking, security testing, and red team practices.",
+    color: "from-bsd-orange/20 to-bsd-orange/5",
+    duration: "4 weeks",
+    addons: "Tutler",
+    href: "/tutelr/ethical-hacking-red-teaming"
+  },
+  {
+    icon: <Cloud className="w-6 h-6 text-bsd-orange" />,
+    title: "Cloud Security and DevSecOps",
+    description: "Explore cloud security and security integration across development and operations.",
+    color: "from-bsd-gray/15 to-bsd-gray/5",
+    duration: "4 weeks",
+    addons: "Tutler",
+    href: "/tutelr/cloud-security-devsecops"
+  },
+  {
+    icon: <Search className="w-6 h-6 text-bsd-orange" />,
+    title: "Digital Forensics and Incident Response",
+    description: "Explore digital evidence analysis and cybersecurity incident response.",
+    color: "from-bsd-orange/20 to-bsd-orange/5",
+    duration: "4 weeks",
+    addons: "Tutler",
+    href: "/tutelr/digital-forensics-incident-response"
+  },
+  {
+    icon: <ShieldCheck className="w-6 h-6 text-bsd-orange" />,
+    title: "SOC and Blue Teaming",
+    description: "Explore security operations, threat detection, and defensive security practices.",
+    color: "from-bsd-gray/15 to-bsd-gray/5",
+    duration: "4 weeks",
+    addons: "Tutler",
+    href: "/tutelr/soc-blue-teaming"
+  },
+  {
+    icon: <ClipboardCheck className="w-6 h-6 text-bsd-orange" />,
+    title: "GRC and Controls",
+    description: "Explore cybersecurity governance, risk, compliance, and security controls.",
+    color: "from-bsd-orange/20 to-bsd-orange/5",
+    duration: "4 weeks",
+    addons: "Tutler",
+    href: "/tutelr/grc-controls"
   },
 ];
 
@@ -242,7 +287,7 @@ export const ProgramsSection: React.FC = () => {
             </TabsContent>
 
             <TabsContent value="certificate" className="mt-0">
-              <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
                 {certificatePrograms.map((program) => (
                   <Link key={program.title} to={program.href} className="block h-full">
                     <Card isHoverable className="h-full">
