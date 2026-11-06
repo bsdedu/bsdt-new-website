@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'bun:test';
-import { canPublishToCustomDomain, customDomainStatus } from './domainStatus';
+import { canPublishToCustomDomain, customDomainStatus } from './domainStatus.ts';
 
 describe('custom domain publishing status', () => {
   test('marks bsd.edu.in as not connected to this project', () => {
