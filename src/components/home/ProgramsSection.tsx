@@ -74,6 +74,27 @@ const undergraduatePrograms: Program[] = [
   },
 ];
 
+const certificatePrograms: Program[] = [
+  {
+    icon: <Code className="w-6 h-6 text-bsd-orange" />,
+    title: "Full Stack with Gen AI",
+    description: "A certificate program by Husky Applied Learning covering full-stack development with generative AI tools and workflows.",
+    color: "from-bsd-orange/20 to-bsd-orange/5",
+    duration: "16 weeks",
+    addons: "Husky Applied Learning",
+    href: "https://apply.bsd.edu.in/"
+  },
+  {
+    icon: <Cpu className="w-6 h-6 text-bsd-orange" />,
+    title: "Software Testing & QE",
+    description: "A certificate program by Husky Applied Learning focused on software testing and quality engineering practices.",
+    color: "from-bsd-gray/15 to-bsd-gray/5",
+    duration: "12 weeks",
+    addons: "Husky Applied Learning",
+    href: "https://apply.bsd.edu.in/"
+  },
+];
+
 const diplomaPrograms: Program[] = [
   {
     icon: <PenTool className="w-6 h-6 text-bsd-orange" />,
@@ -155,9 +176,10 @@ export const ProgramsSection: React.FC = () => {
         <RevealSection delay={100}>
           <Tabs defaultValue="diploma" value={activeTab} onValueChange={setActiveTab} className="w-full">
             <div className="flex justify-center mb-8">
-              <TabsList className="grid grid-cols-2 w-full max-w-md">
+              <TabsList className="grid grid-cols-3 w-full max-w-2xl">
                 <TabsTrigger value="diploma" data-value="diploma">Diploma Programs</TabsTrigger>
                 <TabsTrigger value="undergraduate" data-value="undergraduate">Undergraduate</TabsTrigger>
+                <TabsTrigger value="certificate" data-value="certificate">Certificate Programs</TabsTrigger>
               </TabsList>
             </div>
 
@@ -209,6 +231,28 @@ export const ProgramsSection: React.FC = () => {
                             {program.addons}
                           </p>
                         )}
+                      </CardHeader>
+                      <CardContent className="p-4 pt-0">
+                        <p className="text-foreground/70 text-xs line-clamp-3">{program.description}</p>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                ))}
+              </div>
+            </TabsContent>
+
+            <TabsContent value="certificate" className="mt-0">
+              <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
+                {certificatePrograms.map((program) => (
+                  <Link key={program.title} to={program.href} className="block h-full">
+                    <Card isHoverable className="h-full">
+                      <CardHeader className="p-4">
+                        <div className={cn("w-10 h-10 rounded-lg flex items-center justify-center mb-3", "bg-gradient-to-br", program.color)}>
+                          {program.icon}
+                        </div>
+                        <h3 className="text-sm font-semibold text-bsd-gray leading-tight">{program.title}</h3>
+                        <Badge variant="outline" className="text-[8px] mt-1 bg-white/50">{program.duration}</Badge>
+                        <p className="text-xs text-bsd-orange font-medium mt-1">{program.addons}</p>
                       </CardHeader>
                       <CardContent className="p-4 pt-0">
                         <p className="text-foreground/70 text-xs line-clamp-3">{program.description}</p>
