@@ -82,7 +82,7 @@ const certificatePrograms: Program[] = [
     color: "from-bsd-orange/20 to-bsd-orange/5",
     duration: "16 weeks",
     addons: "Husky Applied Learning",
-    href: "https://apply.bsd.edu.in/"
+    href: "/certificate-programs/full-stack-gen-ai"
   },
   {
     icon: <Cpu className="w-6 h-6 text-bsd-orange" />,
@@ -91,7 +91,7 @@ const certificatePrograms: Program[] = [
     color: "from-bsd-gray/15 to-bsd-gray/5",
     duration: "12 weeks",
     addons: "Husky Applied Learning",
-    href: "https://apply.bsd.edu.in/"
+    href: "/certificate-programs/software-testing-qe"
   },
   {
     icon: <Shield className="w-6 h-6 text-bsd-orange" />,
