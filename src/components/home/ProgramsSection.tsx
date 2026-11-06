@@ -240,6 +240,28 @@ export const ProgramsSection: React.FC = () => {
                 ))}
               </div>
             </TabsContent>
+
+            <TabsContent value="certificate" className="mt-0">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
+                {certificatePrograms.map((program) => (
+                  <Link key={program.title} to={program.href} className="block h-full">
+                    <Card isHoverable className="h-full">
+                      <CardHeader className="p-4">
+                        <div className={cn("w-10 h-10 rounded-lg flex items-center justify-center mb-3", "bg-gradient-to-br", program.color)}>
+                          {program.icon}
+                        </div>
+                        <h3 className="text-sm font-semibold text-bsd-gray leading-tight">{program.title}</h3>
+                        <Badge variant="outline" className="text-[8px] mt-1 bg-white/50">{program.duration}</Badge>
+                        <p className="text-xs text-bsd-orange font-medium mt-1">{program.addons}</p>
+                      </CardHeader>
+                      <CardContent className="p-4 pt-0">
+                        <p className="text-foreground/70 text-xs line-clamp-3">{program.description}</p>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                ))}
+              </div>
+            </TabsContent>
           </Tabs>
         </RevealSection>
 
