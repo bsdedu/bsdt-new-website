@@ -74,6 +74,27 @@ const undergraduatePrograms: Program[] = [
   },
 ];
 
+const certificatePrograms: Program[] = [
+  {
+    icon: <Code className="w-6 h-6 text-bsd-orange" />,
+    title: "Full Stack with Gen AI",
+    description: "A certificate program by Husky Applied Learning covering full-stack development with generative AI tools and workflows.",
+    color: "from-bsd-orange/20 to-bsd-orange/5",
+    duration: "16 weeks",
+    addons: "Husky Applied Learning",
+    href: "https://apply.bsd.edu.in/"
+  },
+  {
+    icon: <Cpu className="w-6 h-6 text-bsd-orange" />,
+    title: "Software Testing & QE",
+    description: "A certificate program by Husky Applied Learning focused on software testing and quality engineering practices.",
+    color: "from-bsd-gray/15 to-bsd-gray/5",
+    duration: "12 weeks",
+    addons: "Husky Applied Learning",
+    href: "https://apply.bsd.edu.in/"
+  },
+];
+
 const diplomaPrograms: Program[] = [
   {
     icon: <PenTool className="w-6 h-6 text-bsd-orange" />,
