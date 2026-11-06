@@ -49,8 +49,8 @@ export const navStructure: NavStructure[] = [
       {
         title: 'CERTIFICATE PROGRAMS',
         items: [
-          { name: 'Full Stack with Gen AI', href: 'https://apply.bsd.edu.in/' },
-          { name: 'Software Testing & QE', href: 'https://apply.bsd.edu.in/' }
+          { name: 'Full Stack with Gen AI', href: '/certificate-programs/full-stack-gen-ai' },
+          { name: 'Software Testing & QE', href: '/certificate-programs/software-testing-qe' }
         ]
       },
       {

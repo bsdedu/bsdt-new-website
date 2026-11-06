@@ -70,6 +70,7 @@ import AppliedAIDesignAutomation from "./pages/courses/AppliedAIDesignAutomation
 import { useEffect } from "react";
 import Contact from "./pages/Contact";
 import Tutelr from "./pages/Tutelr";
+import { FullStackGenAI, SoftwareTestingQE } from "./pages/CertificatePrograms";
 import {
   EthicalHackingRedTeaming,
   CloudSecurityDevSecOps,
@@ -231,6 +232,8 @@ const App = () => {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/design-iq" element={<DesignIQQuiz />} />
                 <Route path="/tutelr" element={<Tutelr />} />
+                <Route path="/certificate-programs/full-stack-gen-ai" element={<FullStackGenAI />} />
+                <Route path="/certificate-programs/software-testing-qe" element={<SoftwareTestingQE />} />
                 <Route path="/tutelr/ethical-hacking-red-teaming" element={<EthicalHackingRedTeaming />} />
                 <Route path="/tutelr/cloud-security-devsecops" element={<CloudSecurityDevSecOps />} />
                 <Route path="/tutelr/digital-forensics-incident-response" element={<DigitalForensicsIncidentResponse />} />
