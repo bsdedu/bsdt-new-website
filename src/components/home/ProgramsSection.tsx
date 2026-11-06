@@ -242,7 +242,7 @@ export const ProgramsSection: React.FC = () => {
             </TabsContent>
 
             <TabsContent value="certificate" className="mt-0">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
+              <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
                 {certificatePrograms.map((program) => (
                   <Link key={program.title} to={program.href} className="block h-full">
                     <Card isHoverable className="h-full">
