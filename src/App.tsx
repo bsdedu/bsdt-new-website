@@ -71,6 +71,7 @@ import { useEffect } from "react";
 import Contact from "./pages/Contact";
 import Tutelr from "./pages/Tutelr";
 import { FullStackGenAI, SoftwareTestingQE } from "./pages/CertificatePrograms";
+import DomainStatus from "./pages/DomainStatus";
 import {
   EthicalHackingRedTeaming,
   CloudSecurityDevSecOps,
@@ -234,6 +235,7 @@ const App = () => {
                 <Route path="/tutelr" element={<Tutelr />} />
                 <Route path="/certificate-programs/full-stack-gen-ai" element={<FullStackGenAI />} />
                 <Route path="/certificate-programs/software-testing-qe" element={<SoftwareTestingQE />} />
+                <Route path="/domain-status" element={<DomainStatus />} />
                 <Route path="/tutelr/ethical-hacking-red-teaming" element={<EthicalHackingRedTeaming />} />
                 <Route path="/tutelr/cloud-security-devsecops" element={<CloudSecurityDevSecOps />} />
                 <Route path="/tutelr/digital-forensics-incident-response" element={<DigitalForensicsIncidentResponse />} />
