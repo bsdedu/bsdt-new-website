@@ -176,9 +176,10 @@ export const ProgramsSection: React.FC = () => {
         <RevealSection delay={100}>
           <Tabs defaultValue="diploma" value={activeTab} onValueChange={setActiveTab} className="w-full">
             <div className="flex justify-center mb-8">
-              <TabsList className="grid grid-cols-2 w-full max-w-md">
+              <TabsList className="grid grid-cols-3 w-full max-w-2xl">
                 <TabsTrigger value="diploma" data-value="diploma">Diploma Programs</TabsTrigger>
                 <TabsTrigger value="undergraduate" data-value="undergraduate">Undergraduate</TabsTrigger>
+                <TabsTrigger value="certificate" data-value="certificate">Certificate Programs</TabsTrigger>
               </TabsList>
             </div>
 
