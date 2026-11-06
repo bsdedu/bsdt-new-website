@@ -5,5 +5,5 @@
 - [x] Create and register five standalone @Tutelr program pages.
 - [x] Verify all page routes and navigation links.
 - [x] Add Certificate Programs and the two Husky courses to the Programs menu; verify desktop and mobile.
-- [ ] Create pages for Full Stack with Gen AI and Software Testing & QE using the supplied descriptions and durations.
-- [ ] Link both pages from certificate cards and the Programs menu; verify navigation.
+- [x] Create pages for Full Stack with Gen AI and Software Testing & QE using the supplied descriptions and durations.
+- [x] Link both pages from certificate cards and the Programs menu; verify navigation.
