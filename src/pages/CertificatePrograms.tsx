@@ -10,10 +10,9 @@ import cloudImage from '@/assets/full-stack-cloud.png.asset.json';
 import aiAppImage from '@/assets/full-stack-ai-app.png.asset.json';
 import responsiveImage from '@/assets/full-stack-responsive.png.asset.json';
 import testingBanner from '@/assets/software-testing-qe-hero.png.asset.json';
-import qaVerificationImage from '@/assets/testing-qa-verification.png.asset.json';
-import apiIntegrationImage from '@/assets/testing-api-integration.png.asset.json';
-import testChecklistImage from '@/assets/testing-checklist.png.asset.json';
-import teamReviewImage from '@/assets/testing-team-review.png.asset.json';
+import aiAssistantImage from '@/assets/ai-code-assistant.png.asset.json';
+import pythonDeskImage from '@/assets/python-desk-learning.png.asset.json';
+import robotImage from '@/assets/humanoid-robot.png.asset.json';
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
 
 type Highlight = { icon: typeof Monitor; title: string; description: string };
@@ -84,10 +83,9 @@ const testing: CertificateProgram = {
   headingLead: 'Software Testing',
   headingAccent: '& QE',
   gallery: [
-    { asset: qaVerificationImage, alt: 'Quality verification checkmark glowing above a laptop being typed on' },
-    { asset: apiIntegrationImage, alt: 'API integration diagram with a glowing central hub and connected nodes' },
-    { asset: testChecklistImage, alt: 'Test case checklist floating above a laptop being typed on' },
-    { asset: teamReviewImage, alt: 'Team reviewing test results, wireframes and dashboards together at a table' },
+    { asset: aiAssistantImage, alt: 'AI assistant menu open inside a code editor showing test code' },
+    { asset: pythonDeskImage, alt: 'Learner pointing at Python code on a desk screen' },
+    { asset: robotImage, alt: 'White and blue humanoid robot with glowing LED eyes' },
   ],
   heroIcon: ShieldCheck,
   scheduleSub: 'A 12-week journey from testing fundamentals to automated, real-world applications.',
@@ -285,7 +283,7 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
             </section>
           {program.gallery.length > 0 && (
             <section className="bg-background pb-12 md:pb-16" aria-label={`${program.title} course gallery`}>
-              <div className="container mx-auto grid grid-cols-2 gap-4 px-6 md:grid-cols-4 md:px-8">
+              <div className={`container mx-auto grid grid-cols-2 gap-4 px-6 md:px-8 ${program.gallery.length >= 4 ? 'md:grid-cols-4' : 'md:grid-cols-3'}`}>
                 {program.gallery.map(({ asset, alt }) => (
                   <img key={alt} src={new URL(asset.url, 'https://bsdt-new-website.lovable.app').href} alt={alt} loading="lazy" className="aspect-[5/4] w-full rounded-lg object-cover object-center shadow-sm" />
                 ))}

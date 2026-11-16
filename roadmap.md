@@ -9,4 +9,4 @@
 - [x] Link both pages from certificate cards and the Programs menu; verify navigation.
 - [x] Shorten the Full Stack structure introduction and add the four supplied course photos.
 - [x] Add reference-style programme schedule and six programme highlight cards; verify the page.- [x] Match the Software Testing & QE hero to the Full Stack reference layout, add Online Learning, and use the supplied robot image.
-- [ ] Use the newly supplied images in place of the first Software Testing & QE gallery photo.
+- [x] Replace the four Software Testing & QE gallery photos with the three newly supplied images.

@@ -12,14 +12,13 @@ test('Software Testing & QE lasts 12 weeks', () => {
   expect(course).toContain("duration: '12 weeks'");
 });
 
-test('Software Testing & QE shows four course photos', () => {
+test('Software Testing & QE shows three course photos', () => {
   const course = source.split('const testing: CertificateProgram = {')[1]?.split('};')[0];
-  expect((course.match(/\{ asset: /g) || []).length).toBe(4);
+  expect((course.match(/\{ asset: /g) || []).length).toBe(3);
   for (const pointer of [
-    'testing-qa-verification.png.asset.json',
-    'testing-api-integration.png.asset.json',
-    'testing-checklist.png.asset.json',
-    'testing-team-review.png.asset.json',
+    'ai-code-assistant.png.asset.json',
+    'python-desk-learning.png.asset.json',
+    'humanoid-robot.png.asset.json',
   ]) {
     expect(source).toContain(pointer);
   }
