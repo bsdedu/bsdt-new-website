@@ -1,11 +1,12 @@
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle2, Clock, GraduationCap } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Clock, GraduationCap, Monitor } from 'lucide-react';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import fullStackBanner from '@/assets/tutelr-cloud-security-banner.jpg';
+import fullStackBanner from '@/assets/full-stack-gen-ai-robot.png.asset.json';
 import testingBanner from '@/assets/tutelr-digital-forensics-banner.jpg';
+import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
 
 type CertificateProgram = {
   title: string;
@@ -22,8 +23,8 @@ const fullStack: CertificateProgram = {
   slug: 'full-stack-gen-ai',
   duration: '16 weeks',
   description: 'Learn to build complete, responsive web applications using frontend, backend, databases, and cloud technologies. Integrate Generative AI, LLM APIs, and AI-powered features while developing real-world projects and industry-ready skills.',
-  image: fullStackBanner,
-  imageAlt: 'Technology specialist working with cloud infrastructure and software workflows',
+  image: new URL(fullStackBanner.url, 'https://bsdt-new-website.lovable.app').href,
+  imageAlt: 'Robotic hand holding glowing orbital paths, representing Generative AI technology',
   topics: ['Frontend and responsive web applications', 'Backend development and databases', 'Cloud technologies', 'Generative AI and LLM APIs', 'AI-powered application features', 'Real-world project development'],
 };
 
@@ -39,6 +40,7 @@ const testing: CertificateProgram = {
 
 function CertificateProgramPage({ program }: { program: CertificateProgram }) {
   const canonical = `https://bsdt-new-website.lovable.app/certificate-programs/${program.slug}`;
+  const isFullStack = program.slug === 'full-stack-gen-ai';
   return (
     <>
       <Helmet>
@@ -54,6 +56,36 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
       <div className="min-h-screen bg-background">
         <Navbar />
         <main>
+          {isFullStack ? (
+            <section className="overflow-hidden bg-gradient-to-b from-secondary to-background pt-32 pb-16 md:pb-20">
+              <div className="container mx-auto grid items-center gap-10 px-6 md:px-8 lg:grid-cols-2 lg:gap-12">
+                <div className="space-y-6">
+                  <div className="flex flex-wrap gap-2">
+                    <Badge variant="bsdOrange">Husky Applied Learning</Badge>
+                    <Badge variant="outline" className="gap-1.5 border-primary/30 text-primary"><Clock className="h-3 w-3" />{program.duration}</Badge>
+                    <Badge variant="outline" className="gap-1.5 border-primary/30 text-primary"><GraduationCap className="h-3 w-3" />Certificate Program</Badge>
+                  </div>
+                  <h1 className="font-display text-4xl font-bold leading-tight text-foreground md:text-5xl lg:text-6xl">
+                    Full Stack with<br /><span className="text-primary">Gen AI</span>
+                  </h1>
+                  <p className="max-w-xl text-lg leading-relaxed text-foreground/80">{program.description}</p>
+                  <div className="max-w-lg space-y-3 rounded-lg border border-primary/15 bg-card px-6 py-5 shadow-sm">
+                    <div className="flex items-start gap-3"><Clock className="mt-0.5 h-5 w-5 shrink-0 text-primary" /><span className="text-sm font-medium text-foreground">16 Weeks Duration</span></div>
+                    <div className="flex items-start gap-3"><GraduationCap className="mt-0.5 h-5 w-5 shrink-0 text-primary" /><span className="text-sm font-medium text-foreground">Certificate Program</span></div>
+                    <div className="flex items-start gap-3"><Monitor className="mt-0.5 h-5 w-5 shrink-0 text-primary" /><span className="text-sm font-medium text-foreground">Husky Applied Learning</span></div>
+                  </div>
+                  <div className="flex flex-wrap gap-4 pt-4">
+                    <Button asChild size="lg"><a href="#enquiry-form">Download Brochure</a></Button>
+                    <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10 hover:text-primary"><a href="https://apply.bsd.edu.in/">Apply Now</a></Button>
+                  </div>
+                </div>
+                <div className="relative mx-auto w-full max-w-lg rounded-lg border border-primary/10 bg-card p-5 shadow-xl md:p-6">
+                  <img src={program.image} alt={program.imageAlt} className="aspect-[2/3] max-h-[580px] w-full rounded-lg object-contain" />
+                  <div className="relative mx-auto -mt-7 flex h-16 w-16 items-center justify-center rounded-full border-8 border-card bg-secondary text-primary shadow-md"><Monitor className="h-7 w-7" /></div>
+                </div>
+              </div>
+            </section>
+          ) : (
           <section className="relative overflow-hidden pt-28 md:pt-36">
             <img src={program.image} alt={program.imageAlt} className="absolute inset-0 h-full w-full object-cover object-center" />
             <div className="absolute inset-0 bg-gradient-to-r from-foreground/95 via-foreground/80 to-foreground/30" />
@@ -72,6 +104,7 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
               </div>
             </div>
           </section>
+          )}
           <section className="py-14 md:py-20">
             <div className="container mx-auto grid gap-10 px-6 md:px-8 lg:grid-cols-2">
               <div>
@@ -87,6 +120,7 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
               </div>
             </div>
           </section>
+          {isFullStack && <EnquiryFormSection />}
         </main>
         <Footer />
       </div>
