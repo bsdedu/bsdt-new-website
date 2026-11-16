@@ -4,7 +4,7 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import fullStackBanner from '@/assets/full-stack-gen-ai-robot.png.asset.json';
+import fullStackBanner from '@/assets/full-stack-gen-ai-horizontal.png.asset.json';
 import testingBanner from '@/assets/tutelr-digital-forensics-banner.jpg';
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
 
