@@ -199,9 +199,9 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
       <div className="min-h-screen bg-background">
         <Navbar />
         <main>
-          <section className="overflow-hidden bg-gradient-to-b from-secondary to-background pt-28 pb-8 md:pb-10">
-            <div className="container mx-auto grid items-center gap-10 px-6 md:grid-cols-2 md:gap-8 md:px-8 lg:gap-12">
-              <div className="space-y-6">
+          <section className="overflow-hidden bg-gradient-to-b from-secondary to-background pt-24 pb-4 md:pb-6">
+            <div className="container mx-auto grid items-center gap-8 px-6 md:grid-cols-2 md:gap-6 md:px-8 lg:gap-10">
+              <div className="space-y-4">
                 <div className="flex flex-wrap gap-2">
                   <Badge variant="bsdOrange">Husky Applied Learning</Badge>
                   <Badge variant="outline" className="gap-1.5 border-primary/30 text-primary"><Monitor className="h-3 w-3" />Online Learning</Badge>
@@ -212,7 +212,7 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
                   {program.headingLead}<br /><span className="text-primary">{program.headingAccent}</span>
                 </h1>
                 <p className="max-w-xl text-lg leading-relaxed text-foreground/80">{program.description}</p>
-                <div className="max-w-lg space-y-3 rounded-lg border border-primary/15 bg-card px-6 py-5 shadow-sm">
+                <div className="max-w-lg space-y-3 rounded-lg border border-primary/15 bg-card px-5 py-4 shadow-sm">
                   <div className="flex items-start gap-3"><Clock className="mt-0.5 h-5 w-5 shrink-0 text-primary" /><span className="text-sm font-medium text-foreground">{program.durationLine}</span></div>
                   <div className="flex items-start gap-3"><GraduationCap className="mt-0.5 h-5 w-5 shrink-0 text-primary" /><span className="text-sm font-medium text-foreground">Certificate Program</span></div>
                   <div className="flex items-start gap-3"><Monitor className="mt-0.5 h-5 w-5 shrink-0 text-primary" /><span className="text-sm font-medium text-foreground">Husky Applied Learning</span></div>
@@ -228,14 +228,14 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
               </div>
             </div>
           </section>
-            <section className="bg-background pb-10 pt-8 md:pb-14 md:pt-12">
+            <section className="bg-background pb-6 pt-5 md:pb-8 md:pt-6">
               <div className="container mx-auto px-6 md:px-8">
                 <div className="mx-auto max-w-3xl text-center">
                   <Badge variant="bsdOrange" className="mb-4 uppercase">Program Overview</Badge>
                   <h2 className="font-display text-3xl font-bold text-foreground">{isFullStack ? 'Build Full-Stack Applications with Generative AI' : 'Build Reliable Software with Testing & Quality Engineering'}</h2>
                   <p className="mt-4 leading-relaxed text-foreground/70">{isFullStack ? 'The Full Stack Development with AI is a 16-week career-focused program designed to equip learners with the skills to build, develop and deploy complete web applications integrated with Artificial Intelligence. Covering frontend, backend, databases, cloud deployment and Generative AI, the program focuses on practical, hands-on learning through real-world projects. Students gain experience with modern technologies such as the MERN stack, TypeScript, Next.js and AI-powered development tools, preparing them to build industry-ready applications and transition into professional software development roles.' : 'Software Testing & QE is a 12-week career-focused program designed to develop practical skills in manual testing, automation, API testing and quality engineering. Through hands-on learning with industry tools and real-world testing scenarios, learners gain experience in evaluating software reliability, identifying defects and improving application quality. Project-based learning prepares students to apply their testing skills in professional software quality roles.'}</p>
                 </div>
-                <div className="mt-8 grid gap-6 md:grid-cols-3">
+                <div className="mt-6 grid gap-6 md:grid-cols-3">
                   {(isFullStack ? [
                     { icon: Code2, title: 'Full-Stack Foundations', description: 'Build responsive interfaces, develop backend services, and connect databases to create complete web applications.' },
                     { icon: Sparkles, title: 'Generative AI Integration', description: 'Work with Generative AI and LLM APIs to add intelligent, AI-powered features to real-world applications.' },
@@ -254,7 +254,7 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
                 </div>
               </div>
             </section>
-            <section className="bg-background pb-10 md:pb-14">
+            <section className="bg-background pb-6 md:pb-8">
               <div className="container mx-auto grid items-start gap-6 px-6 md:px-8 lg:grid-cols-3">
                 <div className="lg:col-span-2">
                   <h2 className="text-xl font-semibold text-foreground">Program Structure</h2>
@@ -284,7 +284,7 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
               </div>
             </section>
           {program.gallery.length > 0 && (
-            <section className="bg-background pb-8 md:pb-10" aria-label={`${program.title} course gallery`}>
+            <section className="bg-background pb-5 md:pb-6" aria-label={`${program.title} course gallery`}>
               <div className={`container mx-auto grid grid-cols-2 gap-4 px-6 md:px-8 ${program.gallery.length >= 4 ? 'md:grid-cols-4' : 'md:grid-cols-3'}`}>
                 {program.gallery.map(({ asset, alt }) => (
                   <img key={alt} src={new URL(asset.url, 'https://bsdt-new-website.lovable.app').href} alt={alt} loading="lazy" className="aspect-[5/4] w-full rounded-lg object-cover object-center shadow-sm" />
@@ -292,14 +292,14 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
               </div>
             </section>
           )}
-          <section className="bg-background py-10 md:py-14">
+          <section className="bg-background py-6 md:py-8">
             <div className="container mx-auto px-6 md:px-8">
               <div className="mx-auto max-w-3xl text-center">
                 <Badge variant="bsdOrange" className="mb-4 uppercase">Programme Schedule</Badge>
                 <h2 className="font-display text-3xl font-bold text-foreground">Focused Learning, Real-World Skills</h2>
                 <p className="mt-4 leading-relaxed text-foreground/70">{program.scheduleSub}</p>
               </div>
-              <div className="mx-auto mt-8 grid max-w-4xl gap-6 md:grid-cols-3">
+              <div className="mx-auto mt-6 grid max-w-4xl gap-6 md:grid-cols-3">
                 {program.schedule.map(({ icon: Icon, title, description }) => (
                   <div key={title} className="rounded-lg border border-primary/20 bg-primary/5 p-6 text-center">
                     <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary"><Icon className="h-6 w-6" /></div>
@@ -310,14 +310,14 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
               </div>
             </div>
           </section>
-          <section className="bg-muted py-10 md:py-14">
+          <section className="bg-muted py-6 md:py-8">
             <div className="container mx-auto px-6 md:px-8">
               <div className="mx-auto max-w-3xl text-center">
                 <Badge variant="bsdOrange" className="mb-4 uppercase">Programme Highlights</Badge>
                 <h2 className="font-display text-3xl font-bold text-foreground">What Makes This Program Special</h2>
                 <p className="mt-4 leading-relaxed text-foreground/70">{program.highlightsSub}</p>
               </div>
-              <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {program.highlights.map(({ icon: Icon, title, description }) => (
                   <div key={title} className="rounded-lg border border-primary/10 bg-card p-6 shadow-sm">
                     <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 text-primary"><Icon className="h-5 w-5" /></div>
