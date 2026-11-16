@@ -10,6 +10,10 @@ import cloudImage from '@/assets/full-stack-cloud.png.asset.json';
 import aiAppImage from '@/assets/full-stack-ai-app.png.asset.json';
 import responsiveImage from '@/assets/full-stack-responsive.png.asset.json';
 import testingBanner from '@/assets/software-testing-qe-hero.png.asset.json';
+import qaVerificationImage from '@/assets/testing-qa-verification.png.asset.json';
+import apiIntegrationImage from '@/assets/testing-api-integration.png.asset.json';
+import testChecklistImage from '@/assets/testing-checklist.png.asset.json';
+import teamReviewImage from '@/assets/testing-team-review.png.asset.json';
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
 
 type CertificateProgram = {
@@ -23,6 +27,7 @@ type CertificateProgram = {
   topics: string[];
   headingLead: string;
   headingAccent: string;
+  gallery: { asset: { url: string }; alt: string }[];
   heroIcon: typeof Monitor;
 };
 
@@ -37,6 +42,12 @@ const fullStack: CertificateProgram = {
   topics: ['Frontend and responsive web applications', 'Backend development and databases', 'Cloud technologies', 'Generative AI and LLM APIs', 'AI-powered application features', 'Real-world project development'],
   headingLead: 'Full Stack with',
   headingAccent: 'Gen AI',
+  gallery: [
+    { asset: codingImage, alt: 'Developer writing code on a laptop' },
+    { asset: cloudImage, alt: 'Cloud computing and connected database technology' },
+    { asset: aiAppImage, alt: 'AI-powered mobile application and smart assistant' },
+    { asset: responsiveImage, alt: 'Responsive website displayed across desktop, laptop and tablet screens' },
+  ],
   heroIcon: Monitor,
 };
 
@@ -51,6 +62,12 @@ const testing: CertificateProgram = {
   topics: ['Manual software testing', 'Test automation', 'API testing', 'Quality engineering and software reliability', 'Hands-on industry tools', 'Real-world testing scenarios and projects'],
   headingLead: 'Software Testing',
   headingAccent: '& QE',
+  gallery: [
+    { asset: qaVerificationImage, alt: 'Quality verification checkmark glowing above a laptop being typed on' },
+    { asset: apiIntegrationImage, alt: 'API integration diagram with a glowing central hub and connected nodes' },
+    { asset: testChecklistImage, alt: 'Test case checklist floating above a laptop being typed on' },
+    { asset: teamReviewImage, alt: 'Team reviewing test results, wireframes and dashboards together at a table' },
+  ],
   heroIcon: ShieldCheck,
 };
 
@@ -230,20 +247,17 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
                 </aside>
               </div>
             </section>
+          {program.gallery.length > 0 && (
+            <section className="bg-background pb-12 md:pb-16" aria-label={`${program.title} course gallery`}>
+              <div className="container mx-auto grid grid-cols-2 gap-4 px-6 md:grid-cols-4 md:px-8">
+                {program.gallery.map(({ asset, alt }) => (
+                  <img key={alt} src={new URL(asset.url, 'https://bsdt-new-website.lovable.app').href} alt={alt} loading="lazy" className="aspect-[5/4] w-full rounded-lg object-cover object-center shadow-sm" />
+                ))}
+              </div>
+            </section>
+          )}
           {isFullStack && (
             <>
-              <section className="bg-background pb-12 md:pb-16" aria-label="Full Stack course gallery">
-                <div className="container mx-auto grid grid-cols-2 gap-4 px-6 md:grid-cols-4 md:px-8">
-                  {[
-                    { asset: codingImage, alt: 'Developer writing code on a laptop' },
-                    { asset: cloudImage, alt: 'Cloud computing and connected database technology' },
-                    { asset: aiAppImage, alt: 'AI-powered mobile application and smart assistant' },
-                    { asset: responsiveImage, alt: 'Responsive website displayed across desktop, laptop and tablet screens' },
-                  ].map(({ asset, alt }) => (
-                    <img key={alt} src={new URL(asset.url, 'https://bsdt-new-website.lovable.app').href} alt={alt} loading="lazy" className="aspect-[5/4] w-full rounded-lg object-cover object-center shadow-sm" />
-                  ))}
-                </div>
-              </section>
               <section className="bg-background py-14 md:py-20">
                 <div className="container mx-auto px-6 md:px-8">
                   <div className="mx-auto max-w-3xl text-center">
