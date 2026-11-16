@@ -13,6 +13,7 @@ import testingBanner from '@/assets/software-testing-qe-hero.png.asset.json';
 import aiAssistantImage from '@/assets/ai-code-assistant.png.asset.json';
 import pythonDeskImage from '@/assets/python-desk-learning.png.asset.json';
 import robotImage from '@/assets/humanoid-robot.png.asset.json';
+import developerDeskImage from '@/assets/developer-desk-code.png.asset.json';
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
 
 type Highlight = { icon: typeof Monitor; title: string; description: string };
@@ -85,6 +86,7 @@ const testing: CertificateProgram = {
   gallery: [
     { asset: aiAssistantImage, alt: 'AI assistant menu open inside a code editor showing test code' },
     { asset: pythonDeskImage, alt: 'Learner pointing at Python code on a desk screen' },
+    { asset: developerDeskImage, alt: 'Developer reviewing code on a desktop monitor with a laptop beside it' },
     { asset: robotImage, alt: 'White and blue humanoid robot with glowing LED eyes' },
   ],
   heroIcon: ShieldCheck,
