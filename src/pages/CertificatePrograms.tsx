@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { Check, CheckCircle2, Clock, GraduationCap, Monitor, Code2, Sparkles, BriefcaseBusiness, BookOpen, ShieldCheck } from 'lucide-react';
+import { Check, Clock, GraduationCap, Monitor, Code2, Sparkles, BriefcaseBusiness, BookOpen, ShieldCheck } from 'lucide-react';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Badge } from '@/components/ui/badge';
@@ -81,6 +81,53 @@ const fullStackModules = [
   ] },
 ];
 
+const testingModules = [
+  { title: 'Module 1: Foundations of Programming and Databases', items: [
+    'Java programming fundamentals for testers',
+    'Writing basic Java programs (variables, conditions, loops, OOP basics)',
+    'Database fundamentals with MySQL',
+    'Writing SQL queries for data validation',
+    'Setting up development environments (IntelliJ IDEA / Eclipse / VS Code)',
+  ] },
+  { title: 'Module 2: Software Testing Fundamentals and Manual Testing', items: [
+    'Software Development Life Cycle (SDLC) and Software Testing Life Cycle (STLC)',
+    'Types and levels of testing',
+    'Test plans, test scenarios and test case design',
+    'Test design techniques',
+    'Defect life cycle and defect reporting',
+    'Executing manual test cases on real applications',
+  ] },
+  { title: 'Module 3: Version Control and Agile Practices', items: [
+    'Git and GitHub for version control',
+    'Branching, committing and collaboration workflows',
+    'Agile and Scrum fundamentals for testers',
+    'Defect tracking and test management using Jira',
+    'Linux essentials for testers',
+  ] },
+  { title: 'Module 4: Automation Testing with Selenium', items: [
+    'Introduction to test automation',
+    'Selenium WebDriver basics',
+    'Locators and web element handling',
+    'Writing reusable automation scripts',
+    'TestNG for test execution and reporting',
+    'Maven for build and dependency management',
+  ] },
+  { title: 'Module 5: API, Performance Testing and CI/CD', items: [
+    'API testing with Postman (REST APIs)',
+    'Performance testing with Apache JMeter',
+    'Continuous Integration with Jenkins',
+    'Integrating automation tests into CI/CD pipelines',
+  ] },
+  { title: 'Module 6: AI in Testing, Capstone Project and Job Preparation', items: [
+    'AI for software testing using ChatGPT and GitHub Copilot',
+    'Automation framework design',
+    'Capstone project: automating a real-world web application',
+    'Code review and project presentation',
+    'Resume and LinkedIn profile building',
+    'Interview preparation and placement guidance',
+  ] },
+];
+
 function CertificateProgramPage({ program }: { program: CertificateProgram }) {
   const canonical = `https://bsdt-new-website.lovable.app/certificate-programs/${program.slug}`;
   const isFullStack = program.slug === 'full-stack-gen-ai';
@@ -154,14 +201,13 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
                 </div>
               </div>
             </section>
-          {isFullStack ? (
             <section className="bg-background pb-14 md:pb-20">
               <div className="container mx-auto grid items-start gap-6 px-6 md:px-8 lg:grid-cols-3">
                 <div className="lg:col-span-2">
                   <h2 className="text-xl font-semibold text-foreground">Program Structure</h2>
-                  <p className="mt-4 leading-relaxed text-foreground/70">Eight practical modules across 16 weeks, covering full-stack development, cloud deployment and Generative AI, followed by an AI-powered capstone project.</p>
+                  <p className="mt-4 leading-relaxed text-foreground/70">{isFullStack ? 'Eight practical modules across 16 weeks, covering full-stack development, cloud deployment and Generative AI, followed by an AI-powered capstone project.' : 'Six practical modules across 12 weeks, covering programming, manual testing, automation, API testing and AI, with a real-world capstone project and job preparation.'}</p>
                   <div className="mt-6 space-y-6">
-                    {fullStackModules.map((module, index) => {
+                    {(isFullStack ? fullStackModules : testingModules).map((module, index) => {
                       const Icon = [GraduationCap, BookOpen, Code2][index % 3];
                       return (
                         <div key={module.title}>
@@ -176,26 +222,14 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
                 </div>
                 <aside className="rounded-lg border border-primary/20 bg-primary/5 p-6">
                   <h2 className="text-xl font-semibold text-foreground">Capstone Project</h2>
-                  <p className="mt-4 text-sm leading-relaxed text-foreground/70">Bring your learning together in a complete full-stack web application with AI features, demonstrating your ability to:</p>
+                  <p className="mt-4 text-sm leading-relaxed text-foreground/70">{isFullStack ? 'Bring your learning together in a complete full-stack web application with AI features, demonstrating your ability to:' : 'Bring your learning together by automating a real-world web application, demonstrating your ability to:'}</p>
                   <ul className="mt-4 space-y-3">
-                    {['Build a responsive frontend with React and modern web technologies', 'Develop backend APIs and connect application databases', 'Integrate LLM APIs and AI-powered features', 'Deploy your application using cloud technologies', 'Review your code and present your completed project', 'Showcase your work in a GitHub portfolio'].map(item => <li key={item} className="flex items-start gap-2 text-sm leading-relaxed text-foreground/80"><Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />{item}</li>)}
+                    {(isFullStack ? ['Build a responsive frontend with React and modern web technologies', 'Develop backend APIs and connect application databases', 'Integrate LLM APIs and AI-powered features', 'Deploy your application using cloud technologies', 'Review your code and present your completed project', 'Showcase your work in a GitHub portfolio'] : ['Design an automation framework', 'Write reusable Selenium automation scripts', 'Execute tests and report results with TestNG', 'Integrate automation tests into CI/CD pipelines', 'Use AI tools to support software testing', 'Review your code and present your completed project']).map(item => <li key={item} className="flex items-start gap-2 text-sm leading-relaxed text-foreground/80"><Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />{item}</li>)}
                   </ul>
-                  <p className="mt-5 text-sm leading-relaxed text-foreground/80">Your capstone adds a practical project to your portfolio, demonstrating full-stack development and AI integration skills to potential employers.</p>
+                  <p className="mt-5 text-sm leading-relaxed text-foreground/80">{isFullStack ? 'Your capstone adds a practical project to your portfolio, demonstrating full-stack development and AI integration skills to potential employers.' : 'Your capstone demonstrates practical automation and quality engineering skills, supported by resume, LinkedIn and interview preparation.'}</p>
                 </aside>
               </div>
             </section>
-          ) : (
-          <section className="py-14 md:py-20">
-            <div className="container mx-auto px-6 md:px-8">
-              <div>
-                <h2 className="text-2xl font-display font-bold text-foreground">Areas of Learning</h2>
-                <ul className="mt-5 grid gap-4">
-                  {program.topics.map(topic => <li key={topic} className="flex items-start gap-3 border-b border-border pb-4 text-foreground/80"><CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-bsd-orange" />{topic}</li>)}
-                </ul>
-              </div>
-            </div>
-          </section>
-          )}
           {isFullStack && (
             <>
               <section className="bg-background pb-12 md:pb-16" aria-label="Full Stack course gallery">
