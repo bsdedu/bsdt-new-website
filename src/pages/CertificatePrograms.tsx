@@ -232,7 +232,7 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
                     {[
                       { icon: Clock, title: '16-Week Duration', description: 'Build practical development skills through a focused, career-oriented program.' },
                       { icon: BookOpen, title: 'Eight Learning Modules', description: 'Progress through frontend, backend, databases, cloud and Generative AI.' },
-                      { icon: Code2, title: 'Capstone Project', description: 'Bring your skills together in a deployed full-stack application with AI features.' },
+                      { icon: Monitor, title: 'Online Learning', description: 'Learn online with practical coursework in full-stack development and Generative AI.' },
                     ].map(({ icon: Icon, title, description }) => (
                       <div key={title} className="rounded-lg border border-primary/20 bg-primary/5 p-6 text-center">
                         <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary"><Icon className="h-6 w-6" /></div>
