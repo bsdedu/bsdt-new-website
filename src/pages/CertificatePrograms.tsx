@@ -58,14 +58,14 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
         <main>
           {isFullStack ? (
             <section className="overflow-hidden bg-gradient-to-b from-secondary to-background pt-32 pb-16 md:pb-20">
-              <div className="container mx-auto grid items-center gap-10 px-6 md:px-8 lg:grid-cols-2 lg:gap-12">
+              <div className="container mx-auto grid items-center gap-10 px-6 md:grid-cols-2 md:gap-8 md:px-8 lg:gap-12">
                 <div className="space-y-6">
                   <div className="flex flex-wrap gap-2">
                     <Badge variant="bsdOrange">Husky Applied Learning</Badge>
                     <Badge variant="outline" className="gap-1.5 border-primary/30 text-primary"><Clock className="h-3 w-3" />{program.duration}</Badge>
                     <Badge variant="outline" className="gap-1.5 border-primary/30 text-primary"><GraduationCap className="h-3 w-3" />Certificate Program</Badge>
                   </div>
-                  <h1 className="font-display text-4xl font-bold leading-tight text-foreground md:text-5xl lg:text-6xl">
+                  <h1 className="font-display text-4xl font-bold leading-tight text-foreground xl:text-6xl">
                     Full Stack with<br /><span className="text-primary">Gen AI</span>
                   </h1>
                   <p className="max-w-xl text-lg leading-relaxed text-foreground/80">{program.description}</p>
@@ -79,8 +79,8 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
                     <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10 hover:text-primary"><a href="https://apply.bsd.edu.in/">Apply Now</a></Button>
                   </div>
                 </div>
-                <div className="relative mx-auto w-full max-w-lg rounded-lg border border-primary/10 bg-card p-5 shadow-xl md:p-6">
-                  <img src={program.image} alt={program.imageAlt} className="aspect-[2/3] max-h-[580px] w-full rounded-lg object-contain" />
+                <div className="relative mx-auto w-full rounded-lg border border-primary/10 bg-card p-5 shadow-xl md:p-6">
+                  <img src={program.image} alt={program.imageAlt} className="aspect-[16/9] w-full rounded-lg object-cover object-center" />
                   <div className="relative mx-auto -mt-7 flex h-16 w-16 items-center justify-center rounded-full border-8 border-card bg-secondary text-primary shadow-md"><Monitor className="h-7 w-7" /></div>
                 </div>
               </div>
