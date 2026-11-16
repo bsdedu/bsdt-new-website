@@ -93,6 +93,7 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
                 <div className="space-y-6">
                   <div className="flex flex-wrap gap-2">
                     <Badge variant="bsdOrange">Husky Applied Learning</Badge>
+                    <Badge variant="outline" className="gap-1.5 border-primary/30 text-primary"><Monitor className="h-3 w-3" />Online Learning</Badge>
                     <Badge variant="outline" className="gap-1.5 border-primary/30 text-primary"><Clock className="h-3 w-3" />{program.duration}</Badge>
                     <Badge variant="outline" className="gap-1.5 border-primary/30 text-primary"><GraduationCap className="h-3 w-3" />Certificate Program</Badge>
                   </div>
@@ -101,7 +102,7 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
                   </h1>
                   <p className="max-w-xl text-lg leading-relaxed text-foreground/80">{program.description}</p>
                   <div className="max-w-lg space-y-3 rounded-lg border border-primary/15 bg-card px-6 py-5 shadow-sm">
-                    <div className="flex items-start gap-3"><Clock className="mt-0.5 h-5 w-5 shrink-0 text-primary" /><span className="text-sm font-medium text-foreground">16 Weeks Duration</span></div>
+                    <div className="flex items-start gap-3"><Clock className="mt-0.5 h-5 w-5 shrink-0 text-primary" /><span className="text-sm font-medium text-foreground">16 Weeks Duration (Monday to Thursday classes)</span></div>
                     <div className="flex items-start gap-3"><GraduationCap className="mt-0.5 h-5 w-5 shrink-0 text-primary" /><span className="text-sm font-medium text-foreground">Certificate Program</span></div>
                     <div className="flex items-start gap-3"><Monitor className="mt-0.5 h-5 w-5 shrink-0 text-primary" /><span className="text-sm font-medium text-foreground">Husky Applied Learning</span></div>
                   </div>
