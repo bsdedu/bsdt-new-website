@@ -79,7 +79,7 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
                     <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10 hover:text-primary"><a href="https://apply.bsd.edu.in/">Apply Now</a></Button>
                   </div>
                 </div>
-                <div className="relative mx-auto w-full rounded-lg border border-primary/10 bg-card p-5 shadow-xl md:p-6">
+                <div className="relative mx-auto w-full rounded-lg border border-primary/10 bg-card p-5 shadow-xl md:mt-12 md:self-start md:p-6">
                   <img src={program.image} alt={program.imageAlt} className="aspect-[16/9] w-full rounded-lg object-cover object-center" />
                   <div className="relative mx-auto -mt-7 flex h-16 w-16 items-center justify-center rounded-full border-8 border-card bg-secondary text-primary shadow-md"><Monitor className="h-7 w-7" /></div>
                 </div>
