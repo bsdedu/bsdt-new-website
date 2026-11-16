@@ -128,20 +128,23 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
               </div>
             </div>
           </section>
-          {isFullStack && (
             <section className="bg-background py-14 md:py-20">
               <div className="container mx-auto px-6 md:px-8">
                 <div className="mx-auto max-w-3xl text-center">
                   <Badge variant="bsdOrange" className="mb-4 uppercase">Program Overview</Badge>
-                  <h2 className="font-display text-3xl font-bold text-foreground">Build Full-Stack Applications with Generative AI</h2>
-                  <p className="mt-4 leading-relaxed text-foreground/70">The Full Stack Development with AI is a 16-week career-focused program designed to equip learners with the skills to build, develop and deploy complete web applications integrated with Artificial Intelligence. Covering frontend, backend, databases, cloud deployment and Generative AI, the program focuses on practical, hands-on learning through real-world projects. Students gain experience with modern technologies such as the MERN stack, TypeScript, Next.js and AI-powered development tools, preparing them to build industry-ready applications and transition into professional software development roles.</p>
+                  <h2 className="font-display text-3xl font-bold text-foreground">{isFullStack ? 'Build Full-Stack Applications with Generative AI' : 'Build Reliable Software with Testing & Quality Engineering'}</h2>
+                  <p className="mt-4 leading-relaxed text-foreground/70">{isFullStack ? 'The Full Stack Development with AI is a 16-week career-focused program designed to equip learners with the skills to build, develop and deploy complete web applications integrated with Artificial Intelligence. Covering frontend, backend, databases, cloud deployment and Generative AI, the program focuses on practical, hands-on learning through real-world projects. Students gain experience with modern technologies such as the MERN stack, TypeScript, Next.js and AI-powered development tools, preparing them to build industry-ready applications and transition into professional software development roles.' : 'Software Testing & QE is a 12-week career-focused program designed to develop practical skills in manual testing, automation, API testing and quality engineering. Through hands-on learning with industry tools and real-world testing scenarios, learners gain experience in evaluating software reliability, identifying defects and improving application quality. Project-based learning prepares students to apply their testing skills in professional software quality roles.'}</p>
                 </div>
                 <div className="mt-10 grid gap-6 md:grid-cols-3">
-                  {[
+                  {(isFullStack ? [
                     { icon: Code2, title: 'Full-Stack Foundations', description: 'Build responsive interfaces, develop backend services, and connect databases to create complete web applications.' },
                     { icon: Sparkles, title: 'Generative AI Integration', description: 'Work with Generative AI and LLM APIs to add intelligent, AI-powered features to real-world applications.' },
                     { icon: BriefcaseBusiness, title: 'Projects & Industry Skills', description: 'Apply cloud technologies and hands-on development to build real-world projects and industry-ready skills.' },
-                  ].map(({ icon: Icon, title, description }) => (
+                  ] : [
+                    { icon: ShieldCheck, title: 'Software Testing Foundations', description: 'Develop manual testing skills, identify defects and evaluate software reliability through real-world testing scenarios.' },
+                    { icon: Code2, title: 'Automation & API Testing', description: 'Gain hands-on experience with industry tools to automate testing and verify application APIs.' },
+                    { icon: BriefcaseBusiness, title: 'Projects & Quality Engineering', description: 'Apply testing techniques through practical projects to improve software quality and build industry-ready skills.' },
+                  ]).map(({ icon: Icon, title, description }) => (
                     <div key={title} className="rounded-lg bg-secondary px-6 py-7 text-center">
                       <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary"><Icon className="h-6 w-6" /></div>
                       <h3 className="text-lg font-semibold text-foreground">{title}</h3>
@@ -151,7 +154,6 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
                 </div>
               </div>
             </section>
-          )}
           {isFullStack ? (
             <section className="bg-background pb-14 md:pb-20">
               <div className="container mx-auto grid items-start gap-6 px-6 md:px-8 lg:grid-cols-3">
@@ -184,13 +186,8 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
             </section>
           ) : (
           <section className="py-14 md:py-20">
-            <div className="container mx-auto grid gap-10 px-6 md:px-8 lg:grid-cols-2">
-              {!isFullStack && <div>
-                <Badge variant="bsdOrange" className="mb-4">Program Overview</Badge>
-                <h2 className="text-3xl font-display font-bold text-foreground">{program.title}</h2>
-                <p className="mt-4 text-foreground/70 leading-relaxed">{program.description}</p>
-              </div>}
-              <div className={isFullStack ? 'lg:col-span-2' : undefined}>
+            <div className="container mx-auto px-6 md:px-8">
+              <div>
                 <h2 className="text-2xl font-display font-bold text-foreground">Areas of Learning</h2>
                 <ul className="mt-5 grid gap-4">
                   {program.topics.map(topic => <li key={topic} className="flex items-start gap-3 border-b border-border pb-4 text-foreground/80"><CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-bsd-orange" />{topic}</li>)}
