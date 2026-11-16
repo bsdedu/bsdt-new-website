@@ -24,3 +24,22 @@ test('Software Testing & QE shows four course photos', () => {
     expect(source).toContain(pointer);
   }
 });
+
+test('Software Testing & QE has its own programme schedule', () => {
+  const course = source.split('const testing: CertificateProgram = {')[1]?.split('};')[0];
+  expect(course).toContain("title: '12-Week Duration'");
+  expect(course).toContain("title: 'Six Learning Modules'");
+  expect(course).toContain("title: 'Online Learning'");
+});
+
+test('Software Testing & QE has six programme highlights', () => {
+  const course = source.split('const testing: CertificateProgram = {')[1]?.split('};')[0];
+  const highlights = course?.split('highlights: [')[1]?.split(']')[0];
+  expect((highlights.match(/title: '/g) || []).length).toBe(6);
+});
+
+test('Programme schedule and highlights render for both courses', () => {
+  expect(source).toContain('program.schedule.map');
+  expect(source).toContain('program.highlights.map');
+  expect(source).not.toContain('{isFullStack && (');
+});

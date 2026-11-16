@@ -16,6 +16,8 @@ import testChecklistImage from '@/assets/testing-checklist.png.asset.json';
 import teamReviewImage from '@/assets/testing-team-review.png.asset.json';
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
 
+type Highlight = { icon: typeof Monitor; title: string; description: string };
+
 type CertificateProgram = {
   title: string;
   slug: string;
@@ -29,6 +31,10 @@ type CertificateProgram = {
   headingAccent: string;
   gallery: { asset: { url: string }; alt: string }[];
   heroIcon: typeof Monitor;
+  scheduleSub: string;
+  schedule: Highlight[];
+  highlightsSub: string;
+  highlights: Highlight[];
 };
 
 const fullStack: CertificateProgram = {
@@ -49,6 +55,21 @@ const fullStack: CertificateProgram = {
     { asset: responsiveImage, alt: 'Responsive website displayed across desktop, laptop and tablet screens' },
   ],
   heroIcon: Monitor,
+  scheduleSub: 'A 16-week journey from web foundations to a complete AI-powered application.',
+  schedule: [
+    { icon: Clock, title: '16-Week Duration', description: 'Build practical development skills through a focused, career-oriented program.' },
+    { icon: BookOpen, title: 'Eight Learning Modules', description: 'Progress through frontend, backend, databases, cloud and Generative AI.' },
+    { icon: Monitor, title: 'Online Learning', description: 'Learn online with practical coursework in full-stack development and Generative AI.' },
+  ],
+  highlightsSub: 'Practical development, Generative AI and portfolio-ready projects in one career-focused program.',
+  highlights: [
+    { icon: Clock, title: 'Focused Learning', description: 'Develop full-stack and AI skills through a structured 16-week learning journey.' },
+    { icon: Monitor, title: 'Modern Technology Stack', description: 'Work with React, TypeScript, Next.js, Node.js and databases to build complete applications.' },
+    { icon: Sparkles, title: 'Generative AI Integration', description: 'Use LLM APIs, prompt engineering and RAG to create chatbots and smart assistants.' },
+    { icon: BookOpen, title: 'AI-Powered Development Tools', description: 'Explore ChatGPT, GitHub Copilot and Cursor as part of your development workflow.' },
+    { icon: Code2, title: 'Project-Based Learning', description: 'Apply your learning through hands-on projects and a full-stack, AI-integrated capstone.' },
+    { icon: BriefcaseBusiness, title: 'Career Preparation', description: 'Build your GitHub portfolio, refine your resume and prepare for technical interviews.' },
+  ],
 };
 
 const testing: CertificateProgram = {
@@ -69,6 +90,21 @@ const testing: CertificateProgram = {
     { asset: teamReviewImage, alt: 'Team reviewing test results, wireframes and dashboards together at a table' },
   ],
   heroIcon: ShieldCheck,
+  scheduleSub: 'A 12-week journey from testing fundamentals to automated, real-world applications.',
+  schedule: [
+    { icon: Clock, title: '12-Week Duration', description: 'Build practical testing skills through a focused, career-oriented program.' },
+    { icon: BookOpen, title: 'Six Learning Modules', description: 'Progress through programming, manual testing, automation, APIs and AI.' },
+    { icon: Monitor, title: 'Online Learning', description: 'Learn online with practical coursework in software testing and quality engineering.' },
+  ],
+  highlightsSub: 'Manual testing, automation, API testing and AI in one career-focused program.',
+  highlights: [
+    { icon: Clock, title: 'Focused Learning', description: 'Build testing and quality engineering skills through a structured 12-week learning journey.' },
+    { icon: Code2, title: 'Manual & Automation Testing', description: 'Move from test case design to reusable Selenium automation scripts and TestNG reporting.' },
+    { icon: Monitor, title: 'API & Performance Testing', description: 'Verify REST APIs with Postman and measure application performance with Apache JMeter.' },
+    { icon: BookOpen, title: 'Agile & Defect Tracking', description: 'Work with Agile, Scrum and Jira for defect tracking and test management.' },
+    { icon: Sparkles, title: 'AI in Testing', description: 'Use ChatGPT and GitHub Copilot to support test design, automation and quality engineering.' },
+    { icon: BriefcaseBusiness, title: 'Career Preparation', description: 'Build your resume and LinkedIn profile and prepare for software testing interviews.' },
+  ],
 };
 
 const fullStackModules = [
@@ -256,57 +292,42 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
               </div>
             </section>
           )}
-          {isFullStack && (
-            <>
-              <section className="bg-background py-14 md:py-20">
-                <div className="container mx-auto px-6 md:px-8">
-                  <div className="mx-auto max-w-3xl text-center">
-                    <Badge variant="bsdOrange" className="mb-4 uppercase">Programme Schedule</Badge>
-                    <h2 className="font-display text-3xl font-bold text-foreground">Focused Learning, Real-World Skills</h2>
-                    <p className="mt-4 leading-relaxed text-foreground/70">A 16-week journey from web foundations to a complete AI-powered application.</p>
+          <section className="bg-background py-14 md:py-20">
+            <div className="container mx-auto px-6 md:px-8">
+              <div className="mx-auto max-w-3xl text-center">
+                <Badge variant="bsdOrange" className="mb-4 uppercase">Programme Schedule</Badge>
+                <h2 className="font-display text-3xl font-bold text-foreground">Focused Learning, Real-World Skills</h2>
+                <p className="mt-4 leading-relaxed text-foreground/70">{program.scheduleSub}</p>
+              </div>
+              <div className="mx-auto mt-10 grid max-w-4xl gap-6 md:grid-cols-3">
+                {program.schedule.map(({ icon: Icon, title, description }) => (
+                  <div key={title} className="rounded-lg border border-primary/20 bg-primary/5 p-6 text-center">
+                    <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary"><Icon className="h-6 w-6" /></div>
+                    <h3 className="text-lg font-semibold text-foreground">{title}</h3>
+                    <p className="mt-3 text-sm leading-relaxed text-foreground/70">{description}</p>
                   </div>
-                  <div className="mx-auto mt-10 grid max-w-4xl gap-6 md:grid-cols-3">
-                    {[
-                      { icon: Clock, title: '16-Week Duration', description: 'Build practical development skills through a focused, career-oriented program.' },
-                      { icon: BookOpen, title: 'Eight Learning Modules', description: 'Progress through frontend, backend, databases, cloud and Generative AI.' },
-                      { icon: Monitor, title: 'Online Learning', description: 'Learn online with practical coursework in full-stack development and Generative AI.' },
-                    ].map(({ icon: Icon, title, description }) => (
-                      <div key={title} className="rounded-lg border border-primary/20 bg-primary/5 p-6 text-center">
-                        <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary"><Icon className="h-6 w-6" /></div>
-                        <h3 className="text-lg font-semibold text-foreground">{title}</h3>
-                        <p className="mt-3 text-sm leading-relaxed text-foreground/70">{description}</p>
-                      </div>
-                    ))}
+                ))}
+              </div>
+            </div>
+          </section>
+          <section className="bg-muted py-14 md:py-20">
+            <div className="container mx-auto px-6 md:px-8">
+              <div className="mx-auto max-w-3xl text-center">
+                <Badge variant="bsdOrange" className="mb-4 uppercase">Programme Highlights</Badge>
+                <h2 className="font-display text-3xl font-bold text-foreground">What Makes This Program Special</h2>
+                <p className="mt-4 leading-relaxed text-foreground/70">{program.highlightsSub}</p>
+              </div>
+              <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {program.highlights.map(({ icon: Icon, title, description }) => (
+                  <div key={title} className="rounded-lg border border-primary/10 bg-card p-6 shadow-sm">
+                    <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 text-primary"><Icon className="h-5 w-5" /></div>
+                    <h3 className="text-lg font-semibold text-foreground">{title}</h3>
+                    <p className="mt-3 text-sm leading-relaxed text-foreground/70">{description}</p>
                   </div>
-                </div>
-              </section>
-              <section className="bg-muted py-14 md:py-20">
-                <div className="container mx-auto px-6 md:px-8">
-                  <div className="mx-auto max-w-3xl text-center">
-                    <Badge variant="bsdOrange" className="mb-4 uppercase">Programme Highlights</Badge>
-                    <h2 className="font-display text-3xl font-bold text-foreground">What Makes This Program Special</h2>
-                    <p className="mt-4 leading-relaxed text-foreground/70">Practical development, Generative AI and portfolio-ready projects in one career-focused program.</p>
-                  </div>
-                  <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                    {[
-                      { icon: Clock, title: 'Focused Learning', description: 'Develop full-stack and AI skills through a structured 16-week learning journey.' },
-                      { icon: Monitor, title: 'Modern Technology Stack', description: 'Work with React, TypeScript, Next.js, Node.js and databases to build complete applications.' },
-                      { icon: Sparkles, title: 'Generative AI Integration', description: 'Use LLM APIs, prompt engineering and RAG to create chatbots and smart assistants.' },
-                      { icon: BookOpen, title: 'AI-Powered Development Tools', description: 'Explore ChatGPT, GitHub Copilot and Cursor as part of your development workflow.' },
-                      { icon: Code2, title: 'Project-Based Learning', description: 'Apply your learning through hands-on projects and a full-stack, AI-integrated capstone.' },
-                      { icon: BriefcaseBusiness, title: 'Career Preparation', description: 'Build your GitHub portfolio, refine your resume and prepare for technical interviews.' },
-                    ].map(({ icon: Icon, title, description }) => (
-                      <div key={title} className="rounded-lg border border-primary/10 bg-card p-6 shadow-sm">
-                        <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 text-primary"><Icon className="h-5 w-5" /></div>
-                        <h3 className="text-lg font-semibold text-foreground">{title}</h3>
-                        <p className="mt-3 text-sm leading-relaxed text-foreground/70">{description}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </section>
-            </>
-          )}
+                ))}
+              </div>
+            </div>
+          </section>
           <EnquiryFormSection />
         </main>
         <Footer />
