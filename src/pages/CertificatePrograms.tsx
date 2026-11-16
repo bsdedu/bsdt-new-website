@@ -199,7 +199,7 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
       <div className="min-h-screen bg-background">
         <Navbar />
         <main>
-          <section className="overflow-hidden bg-gradient-to-b from-secondary to-background pt-32 pb-16 md:pb-20">
+          <section className="overflow-hidden bg-gradient-to-b from-secondary to-background pt-28 pb-8 md:pb-10">
             <div className="container mx-auto grid items-center gap-10 px-6 md:grid-cols-2 md:gap-8 md:px-8 lg:gap-12">
               <div className="space-y-6">
                 <div className="flex flex-wrap gap-2">
@@ -217,25 +217,25 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
                   <div className="flex items-start gap-3"><GraduationCap className="mt-0.5 h-5 w-5 shrink-0 text-primary" /><span className="text-sm font-medium text-foreground">Certificate Program</span></div>
                   <div className="flex items-start gap-3"><Monitor className="mt-0.5 h-5 w-5 shrink-0 text-primary" /><span className="text-sm font-medium text-foreground">Husky Applied Learning</span></div>
                 </div>
-                <div className="flex flex-wrap gap-4 pt-4">
+                <div className="flex flex-wrap gap-4 pt-2">
                   <Button asChild size="lg"><a href="#enquiry-form">Download Brochure</a></Button>
                   <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10 hover:text-primary"><a href="https://apply.bsd.edu.in/">Apply Now</a></Button>
                 </div>
               </div>
-              <div className="relative mx-auto w-full rounded-lg border border-primary/10 bg-card p-5 shadow-xl md:mt-12 md:self-start md:p-6">
+              <div className="relative mx-auto w-full rounded-lg border border-primary/10 bg-card p-5 shadow-xl md:mt-6 md:self-start md:p-6">
                 <img src={program.image} alt={program.imageAlt} className="aspect-[16/9] w-full rounded-lg object-cover object-center" />
                 <div className="relative mx-auto -mt-7 flex h-16 w-16 items-center justify-center rounded-full border-8 border-card bg-secondary text-primary shadow-md"><program.heroIcon className="h-7 w-7" /></div>
               </div>
             </div>
           </section>
-            <section className="bg-background py-14 md:py-20">
+            <section className="bg-background pb-10 pt-8 md:pb-14 md:pt-12">
               <div className="container mx-auto px-6 md:px-8">
                 <div className="mx-auto max-w-3xl text-center">
                   <Badge variant="bsdOrange" className="mb-4 uppercase">Program Overview</Badge>
                   <h2 className="font-display text-3xl font-bold text-foreground">{isFullStack ? 'Build Full-Stack Applications with Generative AI' : 'Build Reliable Software with Testing & Quality Engineering'}</h2>
                   <p className="mt-4 leading-relaxed text-foreground/70">{isFullStack ? 'The Full Stack Development with AI is a 16-week career-focused program designed to equip learners with the skills to build, develop and deploy complete web applications integrated with Artificial Intelligence. Covering frontend, backend, databases, cloud deployment and Generative AI, the program focuses on practical, hands-on learning through real-world projects. Students gain experience with modern technologies such as the MERN stack, TypeScript, Next.js and AI-powered development tools, preparing them to build industry-ready applications and transition into professional software development roles.' : 'Software Testing & QE is a 12-week career-focused program designed to develop practical skills in manual testing, automation, API testing and quality engineering. Through hands-on learning with industry tools and real-world testing scenarios, learners gain experience in evaluating software reliability, identifying defects and improving application quality. Project-based learning prepares students to apply their testing skills in professional software quality roles.'}</p>
                 </div>
-                <div className="mt-10 grid gap-6 md:grid-cols-3">
+                <div className="mt-8 grid gap-6 md:grid-cols-3">
                   {(isFullStack ? [
                     { icon: Code2, title: 'Full-Stack Foundations', description: 'Build responsive interfaces, develop backend services, and connect databases to create complete web applications.' },
                     { icon: Sparkles, title: 'Generative AI Integration', description: 'Work with Generative AI and LLM APIs to add intelligent, AI-powered features to real-world applications.' },
@@ -254,7 +254,7 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
                 </div>
               </div>
             </section>
-            <section className="bg-background pb-14 md:pb-20">
+            <section className="bg-background pb-10 md:pb-14">
               <div className="container mx-auto grid items-start gap-6 px-6 md:px-8 lg:grid-cols-3">
                 <div className="lg:col-span-2">
                   <h2 className="text-xl font-semibold text-foreground">Program Structure</h2>
@@ -284,7 +284,7 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
               </div>
             </section>
           {program.gallery.length > 0 && (
-            <section className="bg-background pb-12 md:pb-16" aria-label={`${program.title} course gallery`}>
+            <section className="bg-background pb-8 md:pb-10" aria-label={`${program.title} course gallery`}>
               <div className={`container mx-auto grid grid-cols-2 gap-4 px-6 md:px-8 ${program.gallery.length >= 4 ? 'md:grid-cols-4' : 'md:grid-cols-3'}`}>
                 {program.gallery.map(({ asset, alt }) => (
                   <img key={alt} src={new URL(asset.url, 'https://bsdt-new-website.lovable.app').href} alt={alt} loading="lazy" className="aspect-[5/4] w-full rounded-lg object-cover object-center shadow-sm" />
@@ -292,14 +292,14 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
               </div>
             </section>
           )}
-          <section className="bg-background py-14 md:py-20">
+          <section className="bg-background py-10 md:py-14">
             <div className="container mx-auto px-6 md:px-8">
               <div className="mx-auto max-w-3xl text-center">
                 <Badge variant="bsdOrange" className="mb-4 uppercase">Programme Schedule</Badge>
                 <h2 className="font-display text-3xl font-bold text-foreground">Focused Learning, Real-World Skills</h2>
                 <p className="mt-4 leading-relaxed text-foreground/70">{program.scheduleSub}</p>
               </div>
-              <div className="mx-auto mt-10 grid max-w-4xl gap-6 md:grid-cols-3">
+              <div className="mx-auto mt-8 grid max-w-4xl gap-6 md:grid-cols-3">
                 {program.schedule.map(({ icon: Icon, title, description }) => (
                   <div key={title} className="rounded-lg border border-primary/20 bg-primary/5 p-6 text-center">
                     <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary"><Icon className="h-6 w-6" /></div>
@@ -310,14 +310,14 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
               </div>
             </div>
           </section>
-          <section className="bg-muted py-14 md:py-20">
+          <section className="bg-muted py-10 md:py-14">
             <div className="container mx-auto px-6 md:px-8">
               <div className="mx-auto max-w-3xl text-center">
                 <Badge variant="bsdOrange" className="mb-4 uppercase">Programme Highlights</Badge>
                 <h2 className="font-display text-3xl font-bold text-foreground">What Makes This Program Special</h2>
                 <p className="mt-4 leading-relaxed text-foreground/70">{program.highlightsSub}</p>
               </div>
-              <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {program.highlights.map(({ icon: Icon, title, description }) => (
                   <div key={title} className="rounded-lg border border-primary/10 bg-card p-6 shadow-sm">
                     <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 text-primary"><Icon className="h-5 w-5" /></div>
