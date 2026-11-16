@@ -8,4 +8,4 @@
 - [x] Create pages for Full Stack with Gen AI and Software Testing & QE using the supplied descriptions and durations.
 - [x] Link both pages from certificate cards and the Programs menu; verify navigation.
 - [x] Shorten the Full Stack structure introduction and add the four supplied course photos.
-- [x] Add reference-style programme schedule and six programme highlight cards; verify the page.
+- [x] Add reference-style programme schedule and six programme highlight cards; verify the page.- [x] Match the Software Testing & QE hero to the Full Stack reference layout, add Online Learning, and use the supplied robot image.
