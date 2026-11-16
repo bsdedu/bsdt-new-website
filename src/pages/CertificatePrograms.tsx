@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle2, Clock, GraduationCap, Monitor } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Clock, GraduationCap, Monitor, Code2, Sparkles, BriefcaseBusiness } from 'lucide-react';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Badge } from '@/components/ui/badge';
@@ -105,14 +105,38 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
             </div>
           </section>
           )}
-          <section className="py-14 md:py-20">
+          {isFullStack && (
+            <section className="bg-background py-14 md:py-20">
+              <div className="container mx-auto px-6 md:px-8">
+                <div className="mx-auto max-w-3xl text-center">
+                  <Badge variant="bsdOrange" className="mb-4 uppercase">Program Overview</Badge>
+                  <h2 className="font-display text-3xl font-bold text-foreground">Build Full-Stack Applications with Generative AI</h2>
+                  <p className="mt-4 leading-relaxed text-foreground/70">Develop complete web applications through hands-on learning in frontend, backend, databases, and cloud technologies. Bring Generative AI into your projects with LLM APIs and AI-powered features.</p>
+                </div>
+                <div className="mt-10 grid gap-6 md:grid-cols-3">
+                  {[
+                    { icon: Code2, title: 'Full-Stack Foundations', description: 'Build responsive interfaces, develop backend services, and connect databases to create complete web applications.' },
+                    { icon: Sparkles, title: 'Generative AI Integration', description: 'Work with Generative AI and LLM APIs to add intelligent, AI-powered features to real-world applications.' },
+                    { icon: BriefcaseBusiness, title: 'Projects & Industry Skills', description: 'Apply cloud technologies and hands-on development to build real-world projects and industry-ready skills.' },
+                  ].map(({ icon: Icon, title, description }) => (
+                    <div key={title} className="rounded-lg bg-secondary px-6 py-7 text-center">
+                      <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary"><Icon className="h-6 w-6" /></div>
+                      <h3 className="text-lg font-semibold text-foreground">{title}</h3>
+                      <p className="mt-3 text-sm leading-relaxed text-foreground/70">{description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+          )}
+          <section className={isFullStack ? 'pb-14 md:pb-20' : 'py-14 md:py-20'}>
             <div className="container mx-auto grid gap-10 px-6 md:px-8 lg:grid-cols-2">
-              <div>
+              {!isFullStack && <div>
                 <Badge variant="bsdOrange" className="mb-4">Program Overview</Badge>
                 <h2 className="text-3xl font-display font-bold text-foreground">{program.title}</h2>
                 <p className="mt-4 text-foreground/70 leading-relaxed">{program.description}</p>
-              </div>
-              <div>
+              </div>}
+              <div className={isFullStack ? 'lg:col-span-2' : undefined}>
                 <h2 className="text-2xl font-display font-bold text-foreground">Areas of Learning</h2>
                 <ul className="mt-5 grid gap-4">
                   {program.topics.map(topic => <li key={topic} className="flex items-start gap-3 border-b border-border pb-4 text-foreground/80"><CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-bsd-orange" />{topic}</li>)}
