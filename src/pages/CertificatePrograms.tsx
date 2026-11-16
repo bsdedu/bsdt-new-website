@@ -111,7 +111,7 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
                 <div className="mx-auto max-w-3xl text-center">
                   <Badge variant="bsdOrange" className="mb-4 uppercase">Program Overview</Badge>
                   <h2 className="font-display text-3xl font-bold text-foreground">Build Full-Stack Applications with Generative AI</h2>
-                  <p className="mt-4 leading-relaxed text-foreground/70">Develop complete web applications through hands-on learning in frontend, backend, databases, and cloud technologies. Bring Generative AI into your projects with LLM APIs and AI-powered features.</p>
+                  <p className="mt-4 leading-relaxed text-foreground/70">The Full Stack Development with AI is a 16-week career-focused program designed to equip learners with the skills to build, develop and deploy complete web applications integrated with Artificial Intelligence. Covering frontend, backend, databases, cloud deployment and Generative AI, the program focuses on practical, hands-on learning through real-world projects. Students gain experience with modern technologies such as the MERN stack, TypeScript, Next.js and AI-powered development tools, preparing them to build industry-ready applications and transition into professional software development roles.</p>
                 </div>
                 <div className="mt-10 grid gap-6 md:grid-cols-3">
                   {[
