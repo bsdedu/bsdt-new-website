@@ -206,7 +206,7 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
                 <div className="lg:col-span-2">
                   <h2 className="text-xl font-semibold text-foreground">Program Structure</h2>
                   <p className="mt-4 leading-relaxed text-foreground/70">{isFullStack ? 'Eight practical modules across 16 weeks, covering full-stack development, cloud deployment and Generative AI, followed by an AI-powered capstone project.' : 'Six practical modules across 12 weeks, covering programming, manual testing, automation, API testing and AI, with a real-world capstone project and job preparation.'}</p>
-                  <div className="mt-6 space-y-6">
+                  <div className={isFullStack ? 'mt-6 space-y-6' : 'mt-6 grid gap-x-8 gap-y-8 md:grid-cols-2'}>
                     {(isFullStack ? fullStackModules : testingModules).map((module, index) => {
                       const Icon = [GraduationCap, BookOpen, Code2][index % 3];
                       return (
