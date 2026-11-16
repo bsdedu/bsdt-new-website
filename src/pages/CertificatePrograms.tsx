@@ -5,6 +5,10 @@ import { Footer } from '@/components/layout/Footer';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import fullStackBanner from '@/assets/full-stack-gen-ai-horizontal.png.asset.json';
+import codingImage from '@/assets/full-stack-coding.png.asset.json';
+import cloudImage from '@/assets/full-stack-cloud.png.asset.json';
+import aiAppImage from '@/assets/full-stack-ai-app.png.asset.json';
+import responsiveImage from '@/assets/full-stack-responsive.png.asset.json';
 import testingBanner from '@/assets/tutelr-digital-forensics-banner.jpg';
 import { EnquiryFormSection } from '@/components/home/EnquiryFormSection';
 
@@ -161,7 +165,7 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
               <div className="container mx-auto grid items-start gap-6 px-6 md:px-8 lg:grid-cols-3">
                 <div className="lg:col-span-2">
                   <h2 className="text-xl font-semibold text-foreground">Program Structure</h2>
-                  <p className="mt-4 leading-relaxed text-foreground/70">The Full Stack Development with AI program spans 16 weeks across eight modules that build on one another. From web foundations and modern full-stack development to cloud deployment and Generative AI, each module combines practical skills with hands-on projects, culminating in an AI-integrated capstone and preparation for professional software development roles.</p>
+                  <p className="mt-4 leading-relaxed text-foreground/70">Eight practical modules across 16 weeks, covering full-stack development, cloud deployment and Generative AI, followed by an AI-powered capstone project.</p>
                   <div className="mt-6 space-y-6">
                     {fullStackModules.map((module, index) => {
                       const Icon = [GraduationCap, BookOpen, Code2][index % 3];
@@ -202,6 +206,69 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
               </div>
             </div>
           </section>
+          )}
+          {isFullStack && (
+            <>
+              <section className="bg-background pb-12 md:pb-16" aria-label="Full Stack course gallery">
+                <div className="container mx-auto grid grid-cols-2 gap-4 px-6 md:grid-cols-4 md:px-8">
+                  {[
+                    { asset: codingImage, alt: 'Developer writing code on a laptop' },
+                    { asset: cloudImage, alt: 'Cloud computing and connected database technology' },
+                    { asset: aiAppImage, alt: 'AI-powered mobile application and smart assistant' },
+                    { asset: responsiveImage, alt: 'Responsive website displayed across desktop, laptop and tablet screens' },
+                  ].map(({ asset, alt }) => (
+                    <img key={alt} src={new URL(asset.url, 'https://bsdt-new-website.lovable.app').href} alt={alt} loading="lazy" className="aspect-[5/4] w-full rounded-lg object-cover object-center shadow-sm" />
+                  ))}
+                </div>
+              </section>
+              <section className="bg-background py-14 md:py-20">
+                <div className="container mx-auto px-6 md:px-8">
+                  <div className="mx-auto max-w-3xl text-center">
+                    <Badge variant="bsdOrange" className="mb-4 uppercase">Programme Schedule</Badge>
+                    <h2 className="font-display text-3xl font-bold text-foreground">Focused Learning, Real-World Skills</h2>
+                    <p className="mt-4 leading-relaxed text-foreground/70">A 16-week journey from web foundations to a complete AI-powered application.</p>
+                  </div>
+                  <div className="mx-auto mt-10 grid max-w-4xl gap-6 md:grid-cols-3">
+                    {[
+                      { icon: Clock, title: '16-Week Duration', description: 'Build practical development skills through a focused, career-oriented program.' },
+                      { icon: BookOpen, title: 'Eight Learning Modules', description: 'Progress through frontend, backend, databases, cloud and Generative AI.' },
+                      { icon: Code2, title: 'Capstone Project', description: 'Bring your skills together in a deployed full-stack application with AI features.' },
+                    ].map(({ icon: Icon, title, description }) => (
+                      <div key={title} className="rounded-lg border border-primary/20 bg-primary/5 p-6 text-center">
+                        <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary"><Icon className="h-6 w-6" /></div>
+                        <h3 className="text-lg font-semibold text-foreground">{title}</h3>
+                        <p className="mt-3 text-sm leading-relaxed text-foreground/70">{description}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </section>
+              <section className="bg-muted py-14 md:py-20">
+                <div className="container mx-auto px-6 md:px-8">
+                  <div className="mx-auto max-w-3xl text-center">
+                    <Badge variant="bsdOrange" className="mb-4 uppercase">Programme Highlights</Badge>
+                    <h2 className="font-display text-3xl font-bold text-foreground">What Makes This Program Special</h2>
+                    <p className="mt-4 leading-relaxed text-foreground/70">Practical development, Generative AI and portfolio-ready projects in one career-focused program.</p>
+                  </div>
+                  <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    {[
+                      { icon: Clock, title: 'Focused Learning', description: 'Develop full-stack and AI skills through a structured 16-week learning journey.' },
+                      { icon: Monitor, title: 'Modern Technology Stack', description: 'Work with React, TypeScript, Next.js, Node.js and databases to build complete applications.' },
+                      { icon: Sparkles, title: 'Generative AI Integration', description: 'Use LLM APIs, prompt engineering and RAG to create chatbots and smart assistants.' },
+                      { icon: BookOpen, title: 'AI-Powered Development Tools', description: 'Explore ChatGPT, GitHub Copilot and Cursor as part of your development workflow.' },
+                      { icon: Code2, title: 'Project-Based Learning', description: 'Apply your learning through hands-on projects and a full-stack, AI-integrated capstone.' },
+                      { icon: BriefcaseBusiness, title: 'Career Preparation', description: 'Build your GitHub portfolio, refine your resume and prepare for technical interviews.' },
+                    ].map(({ icon: Icon, title, description }) => (
+                      <div key={title} className="rounded-lg border border-primary/10 bg-card p-6 shadow-sm">
+                        <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 text-primary"><Icon className="h-5 w-5" /></div>
+                        <h3 className="text-lg font-semibold text-foreground">{title}</h3>
+                        <p className="mt-3 text-sm leading-relaxed text-foreground/70">{description}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </section>
+            </>
           )}
           {isFullStack && <EnquiryFormSection />}
         </main>

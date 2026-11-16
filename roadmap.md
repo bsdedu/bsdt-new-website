@@ -7,3 +7,5 @@
 - [x] Add Certificate Programs and the two Husky courses to the Programs menu; verify desktop and mobile.
 - [x] Create pages for Full Stack with Gen AI and Software Testing & QE using the supplied descriptions and durations.
 - [x] Link both pages from certificate cards and the Programs menu; verify navigation.
+- [x] Shorten the Full Stack structure introduction and add the four supplied course photos.
+- [x] Add reference-style programme schedule and six programme highlight cards; verify the page.
