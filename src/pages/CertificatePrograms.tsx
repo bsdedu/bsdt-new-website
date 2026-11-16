@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle2, Clock, GraduationCap, Monitor, Code2, Sparkles, BriefcaseBusiness } from 'lucide-react';
+import { ArrowRight, Check, CheckCircle2, Clock, GraduationCap, Monitor, Code2, Sparkles, BriefcaseBusiness, BookOpen } from 'lucide-react';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Badge } from '@/components/ui/badge';
@@ -37,6 +37,33 @@ const testing: CertificateProgram = {
   imageAlt: 'Technology analyst examining software and digital data at a workstation',
   topics: ['Manual software testing', 'Test automation', 'API testing', 'Quality engineering and software reliability', 'Hands-on industry tools', 'Real-world testing scenarios and projects'],
 };
+
+const fullStackModules = [
+  { title: 'Module 1: Web Foundations and Responsive Design', items: [
+    'HTML5 and semantic page structure', 'CSS3, Flexbox, and Grid layouts', 'Bootstrap for rapid UI development', 'Responsive web design principles', 'Building and styling multi-page websites',
+  ] },
+  { title: 'Module 2: JavaScript Programming', items: [
+    'JavaScript fundamentals (variables, functions, loops, arrays, objects)', 'ES6+ features', 'DOM manipulation and event handling', 'Asynchronous JavaScript (Promises, async/await, Fetch API)', 'TypeScript basics (types, interfaces, and type-safe code)', 'Debugging and problem-solving practice',
+  ] },
+  { title: 'Module 3: Frontend Development with React.js', items: [
+    'React components, props, and state', 'Hooks (useState, useEffect)', 'Routing in React applications', 'Forms and API integration', 'Building interactive single-page applications', 'Next.js fundamentals (routing, server-side rendering, and API routes)',
+  ] },
+  { title: 'Module 4: Databases', items: [
+    'Relational database fundamentals with MySQL and PostgreSQL, and SQL queries', 'NoSQL database fundamentals with MongoDB', 'Data modeling and schema design', 'CRUD operations with MongoDB and Mongoose',
+  ] },
+  { title: 'Module 5: Backend Development and APIs', items: [
+    'Node.js fundamentals', 'Express.js server development', 'REST API design and development', 'Testing APIs with Postman', 'Authentication and authorization using JWT', 'Application security basics', 'Building complete MERN stack applications',
+  ] },
+  { title: 'Module 6: Version Control, Cloud Deployment and DevOps', items: [
+    'Git and GitHub for collaborative development', 'Cloud deployment fundamentals with AWS', 'CI/CD workflows with GitHub Actions', 'Docker basics for packaging applications', 'Environment configuration and deployment best practices',
+  ] },
+  { title: 'Module 7: Generative AI for Developers', items: [
+    'Introduction to Generative AI and Large Language Models', 'Python basics for AI development', 'Prompt engineering techniques', 'AI coding tools: ChatGPT, GitHub Copilot, and Cursor', 'Integrating ChatGPT / LLM APIs into web applications', 'Building AI features such as chatbots and smart assistants', 'Retrieval-Augmented Generation (RAG): building a chatbot on your own data', 'Responsible and effective use of AI in development',
+  ] },
+  { title: 'Module 8: Capstone Project and Job Preparation', items: [
+    'Capstone project: a complete full-stack web application with AI features', 'Code review and project presentation', 'GitHub portfolio development', 'Resume and LinkedIn profile building', 'Interview preparation and placement guidance',
+  ] },
+];
 
 function CertificateProgramPage({ program }: { program: CertificateProgram }) {
   const canonical = `https://bsdt-new-website.lovable.app/certificate-programs/${program.slug}`;
@@ -129,7 +156,38 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
               </div>
             </section>
           )}
-          <section className={isFullStack ? 'pb-14 md:pb-20' : 'py-14 md:py-20'}>
+          {isFullStack ? (
+            <section className="bg-background pb-14 md:pb-20">
+              <div className="container mx-auto grid items-start gap-6 px-6 md:px-8 lg:grid-cols-3">
+                <div className="lg:col-span-2">
+                  <h2 className="text-xl font-semibold text-foreground">Program Structure</h2>
+                  <p className="mt-4 leading-relaxed text-foreground/70">The Full Stack Development with AI program spans 16 weeks across eight modules that build on one another. From web foundations and modern full-stack development to cloud deployment and Generative AI, each module combines practical skills with hands-on projects, culminating in an AI-integrated capstone and preparation for professional software development roles.</p>
+                  <div className="mt-6 space-y-6">
+                    {fullStackModules.map((module, index) => {
+                      const Icon = [GraduationCap, BookOpen, Code2][index % 3];
+                      return (
+                        <div key={module.title}>
+                          <h3 className="flex items-start gap-2 font-medium text-foreground">{Icon && <Icon className="mt-0.5 h-5 w-5 shrink-0 text-primary" />}{module.title}</h3>
+                          <ul className="mt-3 space-y-2">
+                            {module.items.map(item => <li key={item} className="flex items-start gap-2 text-sm leading-relaxed text-foreground/80"><Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />{item}</li>)}
+                          </ul>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+                <aside className="rounded-lg border border-primary/20 bg-primary/5 p-6">
+                  <h2 className="text-xl font-semibold text-foreground">Capstone Project</h2>
+                  <p className="mt-4 text-sm leading-relaxed text-foreground/70">Bring your learning together in a complete full-stack web application with AI features, demonstrating your ability to:</p>
+                  <ul className="mt-4 space-y-3">
+                    {['Build a responsive frontend with React and modern web technologies', 'Develop backend APIs and connect application databases', 'Integrate LLM APIs and AI-powered features', 'Deploy your application using cloud technologies', 'Review your code and present your completed project', 'Showcase your work in a GitHub portfolio'].map(item => <li key={item} className="flex items-start gap-2 text-sm leading-relaxed text-foreground/80"><Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />{item}</li>)}
+                  </ul>
+                  <p className="mt-5 text-sm leading-relaxed text-foreground/80">Your capstone adds a practical project to your portfolio, demonstrating full-stack development and AI integration skills to potential employers.</p>
+                </aside>
+              </div>
+            </section>
+          ) : (
+          <section className="py-14 md:py-20">
             <div className="container mx-auto grid gap-10 px-6 md:px-8 lg:grid-cols-2">
               {!isFullStack && <div>
                 <Badge variant="bsdOrange" className="mb-4">Program Overview</Badge>
@@ -144,6 +202,7 @@ function CertificateProgramPage({ program }: { program: CertificateProgram }) {
               </div>
             </div>
           </section>
+          )}
           {isFullStack && <EnquiryFormSection />}
         </main>
         <Footer />
