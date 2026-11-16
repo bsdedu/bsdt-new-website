@@ -47,7 +47,7 @@ const testing: CertificateProgram = {
   description: 'Develop industry-ready skills in manual testing, automation, API testing, and quality engineering to ensure software reliability. Gain hands-on experience with industry tools, real-world testing scenarios, and project-based learning.',
   image: new URL(testingBanner.url, 'https://bsdt-new-website.lovable.app').href,
   imageAlt: 'Friendly robot above a glowing digital platform surrounded by connected technology icons, representing software testing and quality engineering',
-  durationLine: '12 Weeks Duration',
+  durationLine: '12 Weeks Duration (Monday to Thursday classes)',
   topics: ['Manual software testing', 'Test automation', 'API testing', 'Quality engineering and software reliability', 'Hands-on industry tools', 'Real-world testing scenarios and projects'],
   headingLead: 'Software Testing',
   headingAccent: '& QE',
