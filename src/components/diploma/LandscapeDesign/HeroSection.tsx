@@ -18,7 +18,7 @@ export const HeroSection: React.FC = () => {
             
             <div className="text-lg text-foreground/80 max-w-xl space-y-4">
               <p>
-                The Post Graduate Diploma in Landscape Design is a 16-month, studio-based program focused on creating functional, sustainable, and visually engaging outdoor environments.
+                The Post Graduate Diploma in Landscape Design is a 12-month, studio-based program focused on creating functional, sustainable, and visually engaging outdoor environments.
               </p>
               <p>
                 Students explore landscape planning, planting design, horticulture, ecology, landscape engineering, digital visualization, costing, and execution through hands-on projects ranging from gardens and residences to resorts and public spaces.

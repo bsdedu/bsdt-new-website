@@ -10,3 +10,5 @@
 - [x] Shorten the Full Stack structure introduction and add the four supplied course photos.
 - [x] Add reference-style programme schedule and six programme highlight cards; verify the page.- [x] Match the Software Testing & QE hero to the Full Stack reference layout, add Online Learning, and use the supplied robot image.
 - [x] Replace the four Software Testing & QE gallery photos with the three newly supplied images.
+- [x] Set the Landscape Design 3+1 Advantage intro to the 12-month program (8 + 4).
+- [x] Update every remaining 16-month mention on the Landscape Design page to 12 months (8 + 4); verify the page.
