@@ -135,7 +135,7 @@ export const HostelSection: React.FC = () => {
                   For more information or assistance with accommodation, please contact
                 </p>
               </div>
-              <p className="text-2xl font-bold text-bsd-orange">+91 7892554398</p>
+              <p className="text-2xl font-bold text-bsd-orange">+91 9845779000</p>
             </div>
           </div>
         </RevealSection>

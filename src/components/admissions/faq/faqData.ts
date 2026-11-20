@@ -83,7 +83,7 @@ export const faqData: FAQCategory[] = [
     questions: [
       {
         question: "Is accommodation available for students?",
-        answer: "BSDT no longer operates on-campus hostel facilities directly. However, we assist outstation students in finding and securing suitable accommodation through our network of trusted residential partners, including PGs, hostels, and rental flats located in and around the campus. Options are available across different budgets and accommodation types. For assistance, students can contact +91 7892554398."
+        answer: "BSDT no longer operates on-campus hostel facilities directly. However, we assist outstation students in finding and securing suitable accommodation through our network of trusted residential partners, including PGs, hostels, and rental flats located in and around the campus. Options are available across different budgets and accommodation types. For assistance, students can contact +91 9845779000."
       },
       {
         question: "What facilities are available on campus?",
