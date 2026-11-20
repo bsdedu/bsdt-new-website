@@ -32,7 +32,7 @@ export const HeroSection: React.FC = () => {
                 B.Sc Interior Design
               </h1>
               <p className="text-lg text-foreground/80">
-                Transform spaces into functional, aesthetic environments. Our B.Sc. Interior Design program develops creative professionals who combine artistic vision with technical expertise to design innovative interior spaces.
+                Transform spaces into functional, aesthetic environments. Our B.Sc. Interior Design &amp; Decoration program develops creative professionals who combine artistic vision with technical expertise to design innovative interior spaces.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
                 <AnimatedButton 
