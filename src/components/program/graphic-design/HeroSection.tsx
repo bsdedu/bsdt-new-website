@@ -66,7 +66,7 @@ export const HeroSection: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <BookOpen className="w-4 h-4 text-bsd-orange" />
-                  <span>Next Batch: July 2025</span>
+                  <span>Next Batch: June 2027</span>
                 </div>
               </div>
             </div>
