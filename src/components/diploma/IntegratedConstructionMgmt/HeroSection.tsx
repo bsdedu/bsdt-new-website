@@ -10,7 +10,7 @@ export const HeroSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-bsd-gray">
-              Professional Diploma in<br />
+              Post Graduate Diploma in<br />
               <span className="text-bsd-orange">Interior Construction &amp; Project Management</span>
             </h1>
             <p className="text-lg text-foreground/80 max-w-xl">
@@ -27,7 +27,7 @@ export const HeroSection: React.FC = () => {
               </div>
               <div className="flex items-start gap-3">
                 <Award className="w-5 h-5 text-bsd-orange mt-0.5 shrink-0" />
-                <span className="text-sm font-medium text-bsd-gray">Professional Diploma Certificate Recognised by BSDT</span>
+                <span className="text-sm font-medium text-bsd-gray">Post Graduate Diploma Certificate Recognised by BSDT</span>
               </div>
             </div>
 
@@ -54,7 +54,7 @@ export const HeroSection: React.FC = () => {
                 <div className="rounded-xl overflow-hidden">
                   <img
                     src={masterResidentialHero}
-                    alt="Professional Diploma in Interior Construction and Project Management"
+                    alt="Post Graduate Diploma in Interior Construction and Project Management"
                     className="w-full h-[350px] object-cover"
                   />
                 </div>

@@ -24,7 +24,7 @@ export const ProgramFeatures: React.FC = () => {
               What Makes This Program Exceptional
             </h2>
             <p className="text-lg text-foreground/70">
-              This is not another interior design course. ICPM teaches you how interior projects actually get built.
+              This is not another interior design course. PGD in ICPM teaches you how interior projects actually get built.
             </p>
           </div>
         </RevealSection>

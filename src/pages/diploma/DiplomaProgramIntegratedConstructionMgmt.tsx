@@ -15,12 +15,12 @@ const DiplomaProgramIntegratedConstructionMgmt: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Professional Diploma in Interior Construction & Project Management | BSD</title>
+        <title>Post Graduate Diploma in Interior Construction & Project Management | BSD</title>
         <meta
           name="description"
-          content="A 16-month (12+4) Professional Diploma in Interior Construction & Project Management covering construction technology, drawing interpretation, BOQ, costing, procurement, scheduling, site execution, quality and safety."
+          content="A 16-month (12+4) Post Graduate Diploma in Interior Construction & Project Management covering construction technology, drawing interpretation, BOQ, costing, procurement, scheduling, site execution, quality and safety."
         />
-        <meta name="keywords" content="PD in ICPM, interior construction, interior project management, BOQ, estimation, costing, site execution, turnkey interiors, BSD Design School" />
+        <meta name="keywords" content="PGD in ICPM, interior construction, interior project management, BOQ, estimation, costing, site execution, turnkey interiors, BSD Design School" />
         <link rel="canonical" href="/academics/professional-diploma-interior-construction-project-management" />
       </Helmet>
 

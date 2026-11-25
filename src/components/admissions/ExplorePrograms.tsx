@@ -109,7 +109,7 @@ const diplomaPrograms: Program[] = [
   },
   {
     icon: <HardHat className="w-6 h-6 text-bsd-orange" />,
-    title: "Professional Diploma in Interior Construction & Project Management",
+    title: "Post Graduate Diploma in Interior Construction & Project Management",
     description: "A 16-month practice-oriented programme covering construction technology, drawing interpretation, BOQ and costing, procurement, scheduling, site execution, quality and safety.",
     color: "from-bsd-gray/15 to-bsd-gray/5",
     duration: "16 months",

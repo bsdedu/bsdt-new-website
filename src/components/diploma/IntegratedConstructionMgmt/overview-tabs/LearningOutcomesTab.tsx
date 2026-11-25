@@ -19,7 +19,7 @@ export const LearningOutcomesTab: React.FC = () => {
         <div className="text-center">
           <h3 className="text-2xl font-bold text-bsd-gray mb-4">Learning Outcomes</h3>
           <p className="text-foreground/70 max-w-3xl mx-auto">
-            Graduates of the Professional Diploma in Interior Construction &amp; Project Management (PD in ICPM) are
+            Graduates of the Post Graduate Diploma in Interior Construction &amp; Project Management (PGD in ICPM) are
             prepared to understand, coordinate, manage, and deliver interior projects across design firms, turnkey
             companies, contractors, and project management practices.
           </p>

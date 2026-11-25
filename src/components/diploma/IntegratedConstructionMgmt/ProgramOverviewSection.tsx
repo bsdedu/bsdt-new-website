@@ -19,7 +19,7 @@ export const ProgramOverviewSection: React.FC = () => {
               Course Introduction
             </h2>
             <p className="text-lg text-foreground/70">
-              The Professional Diploma in Interior Construction &amp; Project Management (PD in ICPM) is a practice-oriented programme designed to develop professionals who can understand, coordinate, manage, and deliver interior construction projects from drawings to completion. It focuses on the execution side of the interior industry — construction technology, materials, drawing interpretation, quantity estimation, BOQs, costing, procurement, scheduling, site management, contractor and vendor coordination, billing, quality control, safety, and project documentation.
+              The Post Graduate Diploma in Interior Construction &amp; Project Management (PGD in ICPM) is a practice-oriented programme designed to develop professionals who can understand, coordinate, manage, and deliver interior construction projects from drawings to completion. It focuses on the execution side of the interior industry — construction technology, materials, drawing interpretation, quantity estimation, BOQs, costing, procurement, scheduling, site management, contractor and vendor coordination, billing, quality control, safety, and project documentation.
             </p>
 
           </div>
