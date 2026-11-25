@@ -143,7 +143,7 @@ const certificatePrograms: Program[] = [
 const diplomaPrograms: Program[] = [
   {
     icon: <PenTool className="w-6 h-6 text-bsd-orange" />,
-    title: "Professional Diploma in Interior Design",
+    title: "Professional / Post Graduate Diploma in Interior Design",
     description: "A professional diploma program focused on teaching interior design principles, space planning, and material selection for various environments. Available in Online & Offline modes.",
     color: "from-bsd-orange/20 to-bsd-orange/5",
     duration: "12 months",
@@ -152,7 +152,7 @@ const diplomaPrograms: Program[] = [
   },
   {
     icon: <Monitor className="w-6 h-6 text-bsd-orange" />,
-    title: "Professional Diploma in Visual Communication + UI & UX",
+    title: "Professional / Post Graduate Diploma in Visual Communication + UI & UX",
     description: "An integrated program combining visual communication fundamentals with user interface and experience design principles for digital platforms. Available in Online & Offline modes.",
     color: "from-bsd-orange/20 to-bsd-orange/5",
     duration: "12 months",
@@ -161,7 +161,7 @@ const diplomaPrograms: Program[] = [
   },
   {
     icon: <GraduationCap className="w-6 h-6 text-bsd-orange" />,
-    title: "Professional Diploma in Landscape Design",
+    title: "Professional / Post Graduate Diploma in Landscape Design",
     description: "A professional diploma program focused on sustainable landscape design, environmental planning, and outdoor space development. Available in Online & Offline modes.",
     color: "from-bsd-gray/15 to-bsd-gray/5",
     duration: "12 months",
