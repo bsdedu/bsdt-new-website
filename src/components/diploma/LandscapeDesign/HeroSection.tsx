@@ -12,13 +12,13 @@ export const HeroSection: React.FC = () => {
           <div className="space-y-6">
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-bsd-gray">
-              Post Graduate Diploma in<br />
+              Professional / Post Graduate Diploma in<br />
               <span className="text-bsd-orange">Landscape Design</span>
             </h1>
             
             <div className="text-lg text-foreground/80 max-w-xl space-y-4">
               <p>
-                The Post Graduate Diploma in Landscape Design is a 12-month, studio-based program focused on creating functional, sustainable, and visually engaging outdoor environments.
+                The Professional / Post Graduate Diploma in Landscape Design is a 12-month, studio-based program focused on creating functional, sustainable, and visually engaging outdoor environments.
               </p>
               <p>
                 Students explore landscape planning, planting design, horticulture, ecology, landscape engineering, digital visualization, costing, and execution through hands-on projects ranging from gardens and residences to resorts and public spaces.
@@ -37,7 +37,7 @@ export const HeroSection: React.FC = () => {
               </div>
               <div className="flex items-start gap-3">
                 <Award className="w-5 h-5 text-bsd-orange mt-0.5 shrink-0" />
-                <span className="text-sm font-medium text-bsd-gray">Post Graduate Diploma Certificate Recognised by BSDT</span>
+                <span className="text-sm font-medium text-bsd-gray">Professional / Post Graduate Diploma Certificate Recognised by BSDT</span>
               </div>
             </div>
 

@@ -30,12 +30,12 @@ export const testimonials: Testimonial[] = [{
 }, {
   id: "1",
   name: "Radhika",
-  course: "Professional Diploma in LD",
+  course: "Professional / Post Graduate Diploma in LD",
   videoId: "tNYpgfevzwc"
 }, {
   id: "2",
   name: "Monika",
-  course: "Professional Diploma in Interior Design",
+  course: "Professional / Post Graduate Diploma in Interior Design",
   videoId: "Vxo4Sbdbx_8"
 }, {
   id: "3",

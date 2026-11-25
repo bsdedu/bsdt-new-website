@@ -14,7 +14,7 @@ export const ProgramOverviewSection: React.FC = () => {
           <div className="text-center max-w-3xl mx-auto mb-12">
             <Badge variant="bsdOrange" className="mb-4">PROGRAM OVERVIEW</Badge>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
-              Professional Diploma in Visual Communication + UI UX
+              Professional / Post Graduate Diploma in Visual Communication + UI UX
             </h2>
             <p className="mt-4 text-foreground/70">
               This 12-month hybrid programme combines live online learning with hands-on offline sessions, covering visual communication, typography, branding, advertising, digital media, and UI/UX fundamentals.

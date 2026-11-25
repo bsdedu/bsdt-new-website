@@ -54,14 +54,14 @@ export const feeStructureData: FeeStructure = {
       semesterFees: [15833, 45833, 45833, 45833, 45833, 45833, null, null]
     },
     {
-      name: "Professional Diploma in Interior Design",
+      name: "Professional / Post Graduate Diploma in Interior Design",
       duration: "1 Year",
       semesters: 2,
       totalFee: 177000,
       semesterFees: [58500, 88500, null, null, null, null, null, null]
     },
     {
-      name: "Professional Diploma in Visual Communication + UI/UX",
+      name: "Professional / Post Graduate Diploma in Visual Communication + UI/UX",
       duration: "1 Year",
       semesters: 2,
       totalFee: 147500,
@@ -75,7 +75,7 @@ export const feeStructureData: FeeStructure = {
       semesterFees: [40800, null, null, null, null, null, null, null]
     },
     {
-      name: "Professional Diploma in Landscape Design",
+      name: "Professional / Post Graduate Diploma in Landscape Design",
       duration: "1 Year",
       semesters: 2,
       totalFee: 147500,

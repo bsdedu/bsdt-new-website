@@ -13,12 +13,12 @@ export const HeroSection: React.FC = () => {
           <div className="space-y-6">
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-bsd-gray">
-              Professional Diploma in<br />
+              Professional / Post Graduate Diploma in<br />
               <span className="text-bsd-orange">Visual Communication + UI UX</span>
             </h1>
             
             <p className="text-lg text-foreground/80 max-w-xl">
-              The Professional Diploma in Visual Communication Design + UI/UX is a 12-month, studio-based program that blends visual creativity with digital design and user experience.
+              The Professional / Post Graduate Diploma in Visual Communication Design + UI/UX is a 12-month, studio-based program that blends visual creativity with digital design and user experience.
             </p>
             <p className="text-lg text-foreground/80 max-w-xl">
               Students explore branding, typography, digital design, storytelling, UI/UX, motion, photography, and visualisation, transforming ideas into engaging brand identities, digital experiences, and portfolio-ready projects.
@@ -36,7 +36,7 @@ export const HeroSection: React.FC = () => {
               </div>
               <div className="flex items-start gap-3">
                 <Award className="w-5 h-5 text-bsd-orange mt-0.5 shrink-0" />
-                <span className="text-sm font-medium text-bsd-gray">Professional Diploma Certificate Recognised by BSDT</span>
+                <span className="text-sm font-medium text-bsd-gray">Professional / Post Graduate Diploma Certificate Recognised by BSDT</span>
               </div>
             </div>
 

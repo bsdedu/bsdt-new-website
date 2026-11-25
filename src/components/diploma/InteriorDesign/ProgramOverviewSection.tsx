@@ -14,7 +14,7 @@ export const ProgramOverviewSection: React.FC = () => {
           <div className="text-center max-w-3xl mx-auto mb-12">
             <Badge variant="bsdOrange" className="mb-4">PROGRAM OVERVIEW</Badge>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
-              Professional Diploma in Interior Design
+              Professional / Post Graduate Diploma in Interior Design
             </h2>
             <p className="mt-4 text-foreground/70">
               This 12-month hybrid programme blends live online learning with essential real-world exposure through our Bangalore campus and Satellite Partner Centres in Raipur, Hyderabad, Delhi, and Coimbatore.

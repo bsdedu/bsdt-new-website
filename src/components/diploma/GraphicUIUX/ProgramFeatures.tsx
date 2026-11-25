@@ -16,7 +16,7 @@ export const ProgramFeatures: React.FC = () => {
               What Makes This Program Special
             </h2>
             <p className="mt-4 text-foreground/70">
-              Our Professional Diploma in Graphic Design + UI/UX offers unique advantages designed to fast-track your career in the design industry.
+              Our Professional / Post Graduate Diploma in Visual Communication + UI/UX offers unique advantages designed to fast-track your career in the design industry.
             </p>
           </div>
         </RevealSection>

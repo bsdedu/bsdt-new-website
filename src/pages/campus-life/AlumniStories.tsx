@@ -54,7 +54,7 @@ const alumniVideos: AlumniVideo[] = [
   {
     name: "Sakshi Deshpande",
     batch: "2021",
-    program: "Professional Diploma in Interior Design",
+    program: "Professional / Post Graduate Diploma in Interior Design",
     currentRole: "Interior Designer",
     company: "",
     videoSrc: "/videos/alumni-4.mp4",

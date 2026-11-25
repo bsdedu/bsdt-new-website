@@ -14,7 +14,7 @@ export const AdmissionsInfo: React.FC = () => {
           <div className="text-center max-w-2xl mx-auto mb-12">
             <Badge variant="bsdOrange" className="mb-4">ADMISSIONS INFORMATION</Badge>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-bsd-gray">
-              Join Our Professional Diploma Program
+              Join Our Professional / Post Graduate Diploma Program
             </h2>
             <p className="mt-4 text-foreground/70">
               Everything you need to know about admissions, eligibility, and the application process.

@@ -89,10 +89,10 @@ export const ContactSection: React.FC = () => {
                     <option value="">Select a course</option>
                     <option value="UG Interior Design">UG Interior Design</option>
                     <option value="UG Fashion Design">UG Fashion Design</option>
-                    <option value="P.Diploma Interior Design">P.Diploma Interior Design</option>
-                    <option value="P.Diploma Graphic Design">P.Diploma Graphic Design + UI & UX</option>
+                    <option value="Professional / Post Graduate Diploma in Interior Design">Professional / Post Graduate Diploma in Interior Design</option>
+                    <option value="Professional / Post Graduate Diploma in Visual Communication + UI & UX">Professional / Post Graduate Diploma in Visual Communication + UI &amp; UX</option>
                     <option value="P.Diploma UI UX">P.Diploma UI & UX</option>
-                    <option value="PG.Diploma Landscape Design">PG.Diploma Landscape Design</option>
+                    <option value="Professional / Post Graduate Diploma in Landscape Design">Professional / Post Graduate Diploma in Landscape Design</option>
                   </select>
                 </div>
               </div>

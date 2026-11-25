@@ -22,10 +22,10 @@ const DiplomaProgramInteriorDesign: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Professional Diploma in Interior Design | BSD Design School</title>
+        <title>Professional / Post Graduate Diploma in Interior Design | BSD Design School</title>
         <meta 
           name="description" 
-          content="A comprehensive professional diploma program in interior design that equips students with space planning, material selection, and visualization skills for creating functional and aesthetic spaces." 
+          content="A comprehensive professional / post graduate diploma program in interior design that equips students with space planning, material selection, and visualization skills for creating functional and aesthetic spaces."
         />
       </Helmet>
       

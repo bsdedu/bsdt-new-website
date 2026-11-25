@@ -16,7 +16,7 @@ export const ProgramFeatures: React.FC = () => {
               What Makes This Program Special
             </h2>
             <p className="mt-4 text-foreground/70">
-              Our Professional Diploma in Interior Design offers unique advantages designed to fast-track your career in the interior design industry.
+              Our Professional / Post Graduate Diploma in Interior Design offers unique advantages designed to fast-track your career in the interior design industry.
             </p>
           </div>
         </RevealSection>

@@ -13,12 +13,12 @@ export const HeroSection: React.FC = () => {
           <div className="space-y-6">
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-bsd-gray">
-              Professional Diploma in<br />
+              Professional / Post Graduate Diploma in<br />
               <span className="text-bsd-orange">Interior Design</span>
             </h1>
             
             <p className="text-lg text-foreground/80 max-w-xl">
-              The Professional Diploma in Interior Design (PD in ID) is a 12-month, studio-based program designed to transform creative ideas into thoughtfully designed, execution-ready spaces.
+              The Professional / Post Graduate Diploma in Interior Design is a 12-month, studio-based program designed to transform creative ideas into thoughtfully designed, execution-ready spaces.
               <br /><br />
               Across 2 semesters, students explore space planning, materials, lighting, digital design, detailing, costing, sustainability, AI, and project execution through hands-on residential and commercial design projects.
             </p>
@@ -34,7 +34,7 @@ export const HeroSection: React.FC = () => {
               </div>
               <div className="flex items-start gap-3">
                 <Award className="w-5 h-5 text-bsd-orange mt-0.5 shrink-0" />
-                <span className="text-sm font-medium text-bsd-gray">Professional Diploma Certificate Recognised by BSDT</span>
+                <span className="text-sm font-medium text-bsd-gray">Professional / Post Graduate Diploma Certificate Recognised by BSDT</span>
               </div>
             </div>
 

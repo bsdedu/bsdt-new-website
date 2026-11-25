@@ -22,10 +22,10 @@ const DiplomaProgramGraphicUIUX: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Professional Diploma in Visual Communication + UI/UX | BSD Design School</title>
+        <title>Professional / Post Graduate Diploma in Visual Communication + UI/UX | BSD Design School</title>
         <meta 
           name="description" 
-          content="A comprehensive professional diploma program that combines visual communication fundamentals with user interface and experience design principles for digital platforms." 
+          content="A comprehensive professional / post graduate diploma program that combines visual communication fundamentals with user interface and experience design principles for digital platforms."
         />
       </Helmet>
       
