@@ -11,6 +11,11 @@ describe("Diploma program headings", () => {
       expect(diplomas).not.toContain(`title: "Professional Diploma in ${name}"`);
     });
   }
+
+  test("Interior Construction & Project Management is listed as Post Graduate Diploma", () => {
+    expect(diplomas).toContain('title: "Post Graduate Diploma in Interior Construction & Project Management"');
+    expect(diplomas).not.toContain('title: "Professional Diploma in Interior Construction & Project Management"');
+  });
 });
 
 describe("Tutler certificate durations", () => {
